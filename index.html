@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Dial - All Killer, All CanCon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        .player-section {
+            margin-bottom: 60px;
+        }
+
+        .content-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 70px;
+        }
+
+        .column {
+            background: rgba(255, 255, 255, 0.7);
+            border: 4px solid #1a1a1a;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .column h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            color: #C33;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        .column p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .shows-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            letter-spacing: 8px;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 0 #C33;
+        }
+
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .show-card {
+            background: #1a1a1a;
+            border: 5px solid #C33;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        }
+
+        .show-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+
+        .show-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 3px solid #C33;
+        }
+
+        .show-content {
+            padding: 25px;
+        }
+
+        .show-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #F0F0F0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .show-description {
+            color: #F0F0F0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .show-time {
+            color: #C33;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            background: rgba(195, 51, 51, 0.2);
+            padding: 10px 14px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid rgba(195, 51, 51, 0.4);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .content-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .shows-title {
+                font-size: 2.5rem;
+            }
+
+            .logo-image {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Logo -->
+        <header class="header">
+            <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
+        </header>
+        
+        <!-- Player -->
+        <section class="player-section">
+            <iframe src="https://a10.asurahosting.com/public/northern_dial/embed" width="100%" height="200" frameborder="0" allowtransparency="true" allow="autoplay" style="border:none; display:block;"></iframe>
+        </section>
+        
+        <!-- Two Column Content -->
+        <div class="content-columns">
+            
+            <!-- About -->
+            <div class="column">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p style="margin-top: 15px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <!-- Recently Played -->
+            <div class="column">
+                <h2>Recently Played</h2>
+                <iframe src="https://a10.asurahosting.com/public/northern_dial/history?theme=light" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 300px; border: 0;"></iframe>
+            </div>
+            
+        </div>
+        
+        <!-- Show Schedule -->
+        <section class="shows-section">
+            <h2 class="shows-title">On Air Daily</h2>
+            <div class="shows-grid">
+                
+                <!-- Open Roads -->
+                <div class="show-card">
+                    <img src="https://i.imgur.com/LJFSC1l.jpeg" alt="Open Roads" class="show-image">
+                    <div class="show-content">
+                        <h3 class="show-title">Open Roads</h3>
+                        <p class="show-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                        <div class="show-time">6:00 AM - 10:00 AM</div>
+                    </div>
+                </div>
+                
+                <!-- Northern Bars -->
+                <div class="show-card">
+                    <img src="https://i.imgur.com/38QC8zh.jpeg" alt="Northern Bars" class="show-image">
+                    <div class="show-content">
+                        <h3 class="show-title">Northern Bars</h3>
+                        <p class="show-description">Cras pulvinar mattis nunc sed blandit libero. Suspendisse potenti. Morbi ac felis nec massa tincidunt.</p>
+                        <div class="show-time">10:00 AM - 2:00 PM</div>
+                    </div>
+                </div>
+                
+                <!-- After Hours -->
+                <div class="show-card">
+                    <img src="https://i.imgur.com/7X7rN10.jpeg" alt="After Hours" class="show-image">
+                    <div class="show-content">
+                        <h3 class="show-title">After Hours</h3>
+                        <p class="show-description">Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Proin eget tortor risus.</p>
+                        <div class="show-time">6:00 PM - 12:00 AM</div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
