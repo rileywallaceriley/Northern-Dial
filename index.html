@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,454 +13,462 @@
             box-sizing: border-box;
         }
 
-        html {
-            background-color: #ffffff;
-        }
+```
+    html {
+        background-color: #ffffff;
+    }
 
-        body {
-            font-family: 'Roboto Condensed', sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
+    body {
+        font-family: 'Roboto Condensed', sans-serif;
+        background-color: #ffffff;
+        color: #1a1a1a;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #ffffff;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-        .logo-image {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-        }
+    .logo-image {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+    }
 
-        /* Custom Player Styles */
-        .player-section {
-            margin-bottom: 60px;
-        }
+    /* Custom Player Styles */
+    .player-section {
+        margin-bottom: 60px;
+    }
 
-        .custom-player {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border: 5px solid #C33;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
-        }
+    .custom-player {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        border: 5px solid #C33;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
+    }
 
-        .player-controls {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .player-controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
-        .play-pause-btn {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #C33, #8B2323);
-            border: 3px solid #fff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
+    .play-pause-btn {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #C33, #8B2323);
+        border: 3px solid #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
 
-        .play-pause-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(195, 51, 51, 0.8);
-        }
+    .play-pause-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(195, 51, 51, 0.8);
+    }
 
-        .play-pause-btn:active {
-            transform: scale(0.95);
-        }
+    .play-pause-btn:active {
+        transform: scale(0.95);
+    }
 
-        .play-icon, .pause-icon {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .play-icon, .pause-icon {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
 
-        .pause-icon {
-            display: none;
-        }
+    .pause-icon {
+        display: none;
+    }
 
-        .play-pause-btn.playing .play-icon {
-            display: none;
-        }
+    .play-pause-btn.playing .play-icon {
+        display: none;
+    }
 
-        .play-pause-btn.playing .pause-icon {
-            display: block;
-        }
+    .play-pause-btn.playing .pause-icon {
+        display: block;
+    }
 
-        .player-info {
-            flex: 1;
-            min-width: 200px;
-        }
+    .player-info {
+        flex: 1;
+        min-width: 200px;
+    }
 
-        .status-text {
-            font-size: 0.9rem;
-            color: #C33;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
+    .status-text {
+        font-size: 0.9rem;
+        color: #C33;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
 
-        .now-playing-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
+    .now-playing-text {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
 
-        .artist-text {
-            font-size: 1.2rem;
-            color: #cccccc;
-        }
+    .artist-text {
+        font-size: 1.2rem;
+        color: #cccccc;
+    }
 
-        .volume-control {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-width: 150px;
-        }
+    .volume-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 150px;
+    }
 
-        .volume-icon {
-            color: #C33;
-            font-size: 20px;
-        }
+    .volume-icon {
+        color: #C33;
+        font-size: 20px;
+    }
 
-        .volume-slider {
-            flex: 1;
-            height: 6px;
-            -webkit-appearance: none;
-            appearance: none;
-            background: #444;
-            border-radius: 5px;
-            outline: none;
-        }
+    .volume-slider {
+        flex: 1;
+        height: 6px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #444;
+        border-radius: 5px;
+        outline: none;
+    }
 
-        .volume-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            background: #C33;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: #C33;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-        .volume-slider::-webkit-slider-thumb:hover {
-            background: #ff4444;
-            transform: scale(1.2);
-        }
+    .volume-slider::-webkit-slider-thumb:hover {
+        background: #ff4444;
+        transform: scale(1.2);
+    }
 
-        .volume-slider::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
-            background: #C33;
-            border-radius: 50%;
-            cursor: pointer;
-            border: none;
-        }
+    .volume-slider::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: #C33;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+    }
 
+    .content-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+
+    .column {
+        background: rgba(255, 255, 255, 0.7);
+        border: 4px solid #1a1a1a;
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .column h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        color: #C33;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #1a1a1a;
+        padding-bottom: 10px;
+    }
+
+    .column p {
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    .shows-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3.5rem;
+        text-align: center;
+        letter-spacing: 8px;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 0 #C33;
+    }
+
+    .shows-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    .show-card {
+        background: #1a1a1a;
+        border: 5px solid #C33;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    }
+
+    .show-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    }
+
+    .show-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 3px solid #C33;
+    }
+
+    .show-content {
+        padding: 25px;
+    }
+
+    .show-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.8rem;
+        color: #F0F0F0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .show-description {
+        color: #F0F0F0;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        opacity: 0.9;
+    }
+
+    .show-time {
+        color: #C33;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        background: rgba(195, 51, 51, 0.2);
+        padding: 10px 14px;
+        border-radius: 4px;
+        display: inline-block;
+        border: 1px solid rgba(195, 51, 51, 0.4);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
         .content-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 70px;
-        }
-
-        .column {
-            background: rgba(255, 255, 255, 0.7);
-            border: 4px solid #1a1a1a;
-            padding: 35px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        }
-
-        .column h2 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
-            color: #C33;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #1a1a1a;
-            padding-bottom: 10px;
-        }
-
-        .column p {
-            line-height: 1.8;
-            font-size: 1.05rem;
+            grid-template-columns: 1fr;
         }
 
         .shows-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            text-align: center;
-            letter-spacing: 8px;
-            margin-bottom: 50px;
-            text-shadow: 2px 2px 0 #C33;
+            font-size: 2.5rem;
         }
 
-        .shows-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
+        .logo-image {
+            max-width: 90%;
         }
 
-        .show-card {
-            background: #1a1a1a;
-            border: 5px solid #C33;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        .player-controls {
+            justify-content: center;
         }
 
-        .show-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        .now-playing-text {
+            font-size: 1.4rem;
         }
 
-        .show-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 3px solid #C33;
+        .artist-text {
+            font-size: 1rem;
         }
+    }
+</style>
+```
 
-        .show-content {
-            padding: 25px;
-        }
-
-        .show-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
-            color: #F0F0F0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .show-description {
-            color: #F0F0F0;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .show-time {
-            color: #C33;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            background: rgba(195, 51, 51, 0.2);
-            padding: 10px 14px;
-            border-radius: 4px;
-            display: inline-block;
-            border: 1px solid rgba(195, 51, 51, 0.4);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .content-columns {
-                grid-template-columns: 1fr;
-            }
-
-            .shows-title {
-                font-size: 2.5rem;
-            }
-
-            .logo-image {
-                max-width: 90%;
-            }
-
-            .player-controls {
-                justify-content: center;
-            }
-
-            .now-playing-text {
-                font-size: 1.4rem;
-            }
-
-            .artist-text {
-                font-size: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
+
+```
+    <!-- Logo -->
+    <header class="header">
+        <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
+    </header>
+    
+    <!-- Custom Player -->
+    <section class="player-section">
+        <div class="custom-player">
+            <div class="player-controls">
+                <button class="play-pause-btn" id="playPauseBtn">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">❚❚</span>
+                </button>
+                
+                <div class="player-info">
+                    <div class="status-text" id="statusText">NOW PLAYING</div>
+                    <div class="now-playing-text" id="songTitle">Northern Dial Radio</div>
+                    <div class="artist-text" id="artistName">All Killer, All CanCon</div>
+                </div>
+                
+                <div class="volume-control">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
+                </div>
+            </div>
+        </div>
         
-        <!-- Logo -->
-        <header class="header">
-            <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
-        </header>
+        <audio id="radioStream" preload="none">
+            <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    
+    <!-- Two Column Content -->
+    <div class="content-columns">
         
-        <!-- Custom Player -->
-        <section class="player-section">
-            <div class="custom-player">
-                <div class="player-controls">
-                    <button class="play-pause-btn" id="playPauseBtn">
-                        <span class="play-icon">▶</span>
-                        <span class="pause-icon">❚❚</span>
-                    </button>
-                    
-                    <div class="player-info">
-                        <div class="status-text" id="statusText">NOW PLAYING</div>
-                        <div class="now-playing-text" id="songTitle">Northern Dial Radio</div>
-                        <div class="artist-text" id="artistName">All Killer, All CanCon</div>
-                    </div>
-                    
-                    <div class="volume-control">
-                        <span class="volume-icon">🔊</span>
-                        <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
-                    </div>
+        <!-- About -->
+        <div class="column">
+            <h2>About</h2>
+            <p>Northern Dial is an independent Canadian radio station built for people who actually care about music.</p>
+            <p style="margin-top: 15px;">We're not an algorithm, not a corporate playlist, and not trying to sound like everything else. Northern Dial is programmed by time of day, mood, and intention — the way radio used to feel — but with a modern, all-Canadian lens.</p>
+            <p style="margin-top: 15px;">From morning commutes to late-night drives, we spin pop, hip-hop, R&B, indie, rock, deep cuts, and new music from across the country. Some of it's familiar. Some of it's niche. All of it belongs here.</p>
+            <p style="margin-top: 15px;">This station exists because Canadian music deserves space — not just in quotas, but in context. We believe the best songs hit differently depending on the hour, the season, and where you are. So we built a station that moves with you.</p>
+        </div>
+        
+        <!-- Recently Played -->
+        <div class="column">
+            <h2>Recently Played</h2>
+            <iframe src="https://a10.asurahosting.com/public/northern_dial/history?theme=light" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 300px; border: 0;"></iframe>
+        </div>
+        
+    </div>
+    
+    <!-- Show Schedule -->
+    <section class="shows-section">
+        <h2 class="shows-title">On Air Daily</h2>
+        <div class="shows-grid">
+            
+            <!-- Open Roads -->
+            <div class="show-card">
+                <img src="https://i.imgur.com/LJFSC1l.jpeg" alt="Open Roads" class="show-image">
+                <div class="show-content">
+                    <h3 class="show-title">Open Roads</h3>
+                    <p class="show-description">A playlist that feels like sunrise and highways — pop, indie, rock, R&B that moves with the morning.</p>
+                    <div class="show-time">6:00 AM - 10:00 AM</div>
                 </div>
             </div>
             
-            <audio id="radioStream" preload="none">
-                <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
-            </audio>
-        </section>
-        
-        <!-- Two Column Content -->
-        <div class="content-columns">
-            
-            <!-- About -->
-            <div class="column">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p style="margin-top: 15px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- Northern Bars -->
+            <div class="show-card">
+                <img src="https://i.imgur.com/38QC8zh.jpeg" alt="Northern Bars" class="show-image">
+                <div class="show-content">
+                    <h3 class="show-title">Northern Bars</h3>
+                    <p class="show-description">A hip-hop forward block rooted in Canadian voices — from golden era hits to new rap chemistry.</p>
+                    <div class="show-time">10:00 AM - 2:00 PM</div>
+                </div>
             </div>
             
-            <!-- Recently Played -->
-            <div class="column">
-                <h2>Recently Played</h2>
-                <iframe src="https://a10.asurahosting.com/public/northern_dial/history?theme=light" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 300px; border: 0;"></iframe>
+            <!-- After Hours -->
+            <div class="show-card">
+                <img src="https://i.imgur.com/7X7rN10.jpeg" alt="After Hours" class="show-image">
+                <div class="show-content">
+                    <h3 class="show-title">After Hours</h3>
+                    <p class="show-description">Late night vibes for deeper listening — mellow beats, smooth grooves, edge-of-town energy.</p>
+                    <div class="show-time">6:00 PM - 12:00 AM</div>
+                </div>
             </div>
             
         </div>
-        
-        <!-- Show Schedule -->
-        <section class="shows-section">
-            <h2 class="shows-title">On Air Daily</h2>
-            <div class="shows-grid">
-                
-                <!-- Open Roads -->
-                <div class="show-card">
-                    <img src="https://i.imgur.com/LJFSC1l.jpeg" alt="Open Roads" class="show-image">
-                    <div class="show-content">
-                        <h3 class="show-title">Open Roads</h3>
-                        <p class="show-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-                        <div class="show-time">6:00 AM - 10:00 AM</div>
-                    </div>
-                </div>
-                
-                <!-- Northern Bars -->
-                <div class="show-card">
-                    <img src="https://i.imgur.com/38QC8zh.jpeg" alt="Northern Bars" class="show-image">
-                    <div class="show-content">
-                        <h3 class="show-title">Northern Bars</h3>
-                        <p class="show-description">Cras pulvinar mattis nunc sed blandit libero. Suspendisse potenti. Morbi ac felis nec massa tincidunt.</p>
-                        <div class="show-time">10:00 AM - 2:00 PM</div>
-                    </div>
-                </div>
-                
-                <!-- After Hours -->
-                <div class="show-card">
-                    <img src="https://i.imgur.com/7X7rN10.jpeg" alt="After Hours" class="show-image">
-                    <div class="show-content">
-                        <h3 class="show-title">After Hours</h3>
-                        <p class="show-description">Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Proin eget tortor risus.</p>
-                        <div class="show-time">6:00 PM - 12:00 AM</div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        
-    </div>
+    </section>
+    
+</div>
 
-    <script>
-        const audio = document.getElementById('radioStream');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const volumeSlider = document.getElementById('volumeSlider');
-        const statusText = document.getElementById('statusText');
-        const songTitle = document.getElementById('songTitle');
-        const artistName = document.getElementById('artistName');
+<script>
+    const audio = document.getElementById('radioStream');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const statusText = document.getElementById('statusText');
+    const songTitle = document.getElementById('songTitle');
+    const artistName = document.getElementById('artistName');
 
-        // Set initial volume
-        audio.volume = 0.7;
+    // Set initial volume
+    audio.volume = 0.7;
 
-        // Play/Pause functionality
-        playPauseBtn.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.classList.add('playing');
-                statusText.textContent = 'LIVE NOW';
-            } else {
-                audio.pause();
-                playPauseBtn.classList.remove('playing');
-                statusText.textContent = 'PAUSED';
-            }
-        });
-
-        // Volume control
-        volumeSlider.addEventListener('input', function() {
-            audio.volume = this.value / 100;
-        });
-
-        // Fetch current song info
-        async function updateNowPlaying() {
-            try {
-                const response = await fetch('https://a10.asurahosting.com/api/nowplaying/northern_dial');
-                const data = await response.json();
-                
-                if (data && data.now_playing && data.now_playing.song) {
-                    const song = data.now_playing.song;
-                    songTitle.textContent = song.title || 'Unknown Track';
-                    artistName.textContent = song.artist || 'Unknown Artist';
-                }
-            } catch (error) {
-                console.log('Error fetching now playing:', error);
-            }
-        }
-
-        // Update now playing every 10 seconds
-        updateNowPlaying();
-        setInterval(updateNowPlaying, 10000);
-
-        // Update status when playing
-        audio.addEventListener('playing', function() {
+    // Play/Pause functionality
+    playPauseBtn.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.classList.add('playing');
             statusText.textContent = 'LIVE NOW';
-        });
-
-        audio.addEventListener('pause', function() {
-            if (!audio.ended) {
-                statusText.textContent = 'PAUSED';
-            }
-        });
-
-        audio.addEventListener('error', function() {
-            statusText.textContent = 'CONNECTION ERROR';
+        } else {
+            audio.pause();
             playPauseBtn.classList.remove('playing');
-        });
-    </script>
+            statusText.textContent = 'PAUSED';
+        }
+    });
+
+    // Volume control
+    volumeSlider.addEventListener('input', function() {
+        audio.volume = this.value / 100;
+    });
+
+    // Fetch current song info
+    async function updateNowPlaying() {
+        try {
+            const response = await fetch('https://a10.asurahosting.com/api/nowplaying/northern_dial');
+            const data = await response.json();
+            
+            if (data && data.now_playing && data.now_playing.song) {
+                const song = data.now_playing.song;
+                songTitle.textContent = song.title || 'Unknown Track';
+                artistName.textContent = song.artist || 'Unknown Artist';
+            }
+        } catch (error) {
+            console.log('Error fetching now playing:', error);
+        }
+    }
+
+    // Update now playing every 10 seconds
+    updateNowPlaying();
+    setInterval(updateNowPlaying, 10000);
+
+    // Update status when playing
+    audio.addEventListener('playing', function() {
+        statusText.textContent = 'LIVE NOW';
+    });
+
+    audio.addEventListener('pause', function() {
+        if (!audio.ended) {
+            statusText.textContent = 'PAUSED';
+        }
+    });
+
+    audio.addEventListener('error', function() {
+        statusText.textContent = 'CONNECTION ERROR';
+        playPauseBtn.classList.remove('playing');
+    });
+</script>
+```
+
 </body>
 </html>
