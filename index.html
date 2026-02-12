@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northern Dial - All Killer, All CanCon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="description" content="Northern Dial - All Killer, All CanCon. Independent Canadian radio station.">
+    <meta name="theme-color" content="#CC3333">
+
+```
+<!-- PWA Meta Tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Northern Dial">
+<link rel="apple-touch-icon" href="https://i.imgur.com/XIAPd0N.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<title>Northern Dial - All Killer, All CanCon</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
     html {
         background-color: #ffffff;
@@ -303,11 +316,13 @@
         }
     }
 </style>
+```
 
 </head>
 <body>
     <div class="container">
 
+```
     <!-- Logo -->
     <header class="header">
         <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
@@ -401,6 +416,13 @@
 </div>
 
 <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed'));
+    }
+
     const audio = document.getElementById('radioStream');
     const playPauseBtn = document.getElementById('playPauseBtn');
     const volumeSlider = document.getElementById('volumeSlider');
@@ -410,6 +432,29 @@
 
     // Set initial volume
     audio.volume = 0.7;
+
+    // Update Media Session API
+    function updateMediaSession(title, artist) {
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: title,
+                artist: artist,
+                album: 'Northern Dial Radio',
+                artwork: [
+                    { src: 'https://i.imgur.com/XIAPd0N.png', sizes: '512x512', type: 'image/png' }
+                ]
+            });
+
+            // Set up media session action handlers
+            navigator.mediaSession.setActionHandler('play', () => {
+                audio.play();
+            });
+
+            navigator.mediaSession.setActionHandler('pause', () => {
+                audio.pause();
+            });
+        }
+    }
 
     // Play/Pause functionality
     playPauseBtn.addEventListener('click', function() {
@@ -437,8 +482,14 @@
             
             if (data && data.now_playing && data.now_playing.song) {
                 const song = data.now_playing.song;
-                songTitle.textContent = song.title || 'Unknown Track';
-                artistName.textContent = song.artist || 'Unknown Artist';
+                const title = song.title || 'Unknown Track';
+                const artist = song.artist || 'Unknown Artist';
+                
+                songTitle.textContent = title;
+                artistName.textContent = artist;
+                
+                // Update lock screen controls
+                updateMediaSession(title, artist);
             }
         } catch (error) {
             console.log('Error fetching now playing:', error);
@@ -452,6 +503,7 @@
     // Update status when playing
     audio.addEventListener('playing', function() {
         statusText.textContent = 'LIVE NOW';
+        updateMediaSession(songTitle.textContent, artistName.textContent);
     });
 
     audio.addEventListener('pause', function() {
