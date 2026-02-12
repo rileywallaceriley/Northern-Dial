@@ -1,20 +1,20 @@
 {
-“name”: “Northern Dial Radio”,
-“short_name”: “Northern Dial”,
-“description”: “All Killer, All CanCon - Independent Canadian Radio”,
-“start_url”: “./”,
-“display”: “standalone”,
-“background_color”: “#ffffff”,
-“theme_color”: “#CC3333”,
-“orientation”: “portrait-primary”,
-“icons”: [
-{
-“src”: “https://i.imgur.com/XIAPd0N.png”,
-“sizes”: “512x512”,
-“type”: “image/png”,
-“purpose”: “any maskable”
-}
-],
-“categories”: [“music”, “entertainment”],
-“lang”: “en-CA”
+  "name": "Northern Dial Radio",
+  "short_name": "Northern Dial",
+  "description": "All Killer, All CanCon - Independent Canadian Radio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#CC3333",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/XIAPd0N.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "lang": "en-CA"
 }
