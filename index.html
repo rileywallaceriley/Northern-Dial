@@ -9,6 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#CC3333">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#CC3333">
 
+```
 <!-- PWA Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -290,6 +291,256 @@
         border: 1px solid rgba(195, 51, 51, 0.4);
     }
 
+    /* Blog Section */
+    .blog-section {
+        margin-top: 70px;
+    }
+
+    .blog-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3.5rem;
+        text-align: center;
+        letter-spacing: 8px;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 0 #C33;
+    }
+
+    .blog-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .blog-post {
+        display: flex;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 4px solid #1a1a1a;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .blog-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .blog-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .blog-content {
+        flex: 1;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .blog-post-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.8rem;
+        color: #1a1a1a;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .blog-excerpt {
+        color: #1a1a1a;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .read-more-btn {
+        background: linear-gradient(135deg, #C33, #8B2323);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        align-self: flex-start;
+    }
+
+    .read-more-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(195, 51, 51, 0.4);
+    }
+
+    /* Install Banner */
+    .install-banner {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #C33, #8B2323);
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(195, 51, 51, 0.6);
+        z-index: 10000;
+        display: none;
+        animation: slideUp 0.4s ease;
+    }
+
+    .install-banner.show {
+        display: block;
+    }
+
+    .install-banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .install-banner-text {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .install-banner-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .install-banner-subtitle {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .install-banner-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .install-btn, .dismiss-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .install-btn {
+        background: white;
+        color: #C33;
+    }
+
+    .install-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+    }
+
+    .dismiss-btn {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+
+    .dismiss-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Install Instructions Modal */
+    .install-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10001;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .install-modal.show {
+        display: flex;
+    }
+
+    .install-modal-content {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .install-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .install-modal-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.8rem;
+        color: #C33;
+        text-transform: uppercase;
+    }
+
+    .close-modal-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #999;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .install-modal-steps {
+        margin-top: 20px;
+    }
+
+    .install-step {
+        margin-bottom: 15px;
+        padding: 15px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        border-left: 4px solid #C33;
+    }
+
+    .install-step-number {
+        font-weight: 700;
+        color: #C33;
+        margin-bottom: 5px;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
     /* Mobile Responsive */
     @media (max-width: 768px) {
         .content-columns {
@@ -315,13 +566,61 @@
         .artist-text {
             font-size: 1rem;
         }
+
+        .install-banner {
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            padding: 15px;
+        }
+
+        .install-banner-content {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .install-banner-buttons {
+            width: 100%;
+            justify-content: stretch;
+        }
+
+        .install-btn, .dismiss-btn {
+            flex: 1;
+        }
+
+        .install-modal-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+        }
+
+        .blog-post {
+            flex-direction: column;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-post-title {
+            font-size: 1.4rem;
+        }
     }
 </style>
+```
 
 </head>
 <body>
     <div class="container">
 
+```
     <!-- Logo -->
     <header class="header">
         <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
@@ -411,7 +710,72 @@
             
         </div>
     </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h2 class="blog-title">Latest Posts</h2>
+        <div class="blog-posts">
+            
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img src="blog-muchmusic-img.png" alt="MuchMusic Blog Post" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-post-title">Before Algorithms, There Was MuchMusic</h3>
+                    <p class="blog-excerpt">In the 1990s and early 2000s, MuchMusic functioned as more than a music channel. It was one of the few spaces where Canadian music felt centralized — visible, audible and collectively experienced.</p>
+                    <a href="blog-muchmusic.html"><button class="read-more-btn">Read More</button></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <img src="blog-algorithms-img.png" alt="Algorithms Blog Post" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-post-title">Why Your Playlist Feels Like a Loop</h3>
+                    <p class="blog-excerpt">Streaming platforms are built on algorithms that analyze listening habits and recommend more of what users already prefer. But efficiency is not the same as intention.</p>
+                    <a href="blog-algorithms.html"><button class="read-more-btn">Read More</button></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img src="blog-programming-img.png" alt="Programming Blog Post" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-post-title">What Time-of-Day Programming Actually Means</h3>
+                    <p class="blog-excerpt">Morning leans accessible. Afternoon widens. Evening centers hip-hop. Late night slows down and deepens. Here's why the hour matters as much as the song.</p>
+                    <a href="blog-programming.html"><button class="read-more-btn">Read More</button></a>
+                </div>
+            </article>
+            
+        </div>
+    </section>
     
+</div>
+
+<!-- Install Banner -->
+<div class="install-banner" id="installBanner">
+    <div class="install-banner-content">
+        <div class="install-banner-text">
+            <div class="install-banner-title">Install Northern Dial</div>
+            <div class="install-banner-subtitle">Add to your home screen for quick access</div>
+        </div>
+        <div class="install-banner-buttons">
+            <button class="install-btn" id="installBtn">Install</button>
+            <button class="dismiss-btn" id="dismissBtn">Later</button>
+        </div>
+    </div>
+</div>
+
+<!-- Install Instructions Modal -->
+<div class="install-modal" id="installModal">
+    <div class="install-modal-content">
+        <div class="install-modal-header">
+            <h2 class="install-modal-title">Install App</h2>
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="install-modal-steps" id="installSteps">
+            <!-- Steps will be inserted by JavaScript -->
+        </div>
+    </div>
 </div>
 
 <script>
@@ -514,6 +878,121 @@
     audio.addEventListener('error', function() {
         statusText.textContent = 'CONNECTION ERROR';
         playPauseBtn.classList.remove('playing');
+    });
+
+    // Install Banner Logic
+    let deferredPrompt;
+    const installBanner = document.getElementById('installBanner');
+    const installModal = document.getElementById('installModal');
+    const installBtn = document.getElementById('installBtn');
+    const dismissBtn = document.getElementById('dismissBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const installSteps = document.getElementById('installSteps');
+
+    // Detect if already installed or dismissed
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    const bannerDismissed = localStorage.getItem('installBannerDismissed');
+
+    // Show banner if not installed and not dismissed
+    if (!isStandalone && !bannerDismissed) {
+        setTimeout(() => {
+            installBanner.classList.add('show');
+        }, 3000); // Show after 3 seconds
+    }
+
+    // Capture the beforeinstallprompt event (Android/Chrome)
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+
+    // Detect platform and show appropriate instructions
+    function getInstallInstructions() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isIOS = /iphone|ipad|ipod/.test(userAgent);
+        const isAndroid = /android/.test(userAgent);
+        const isSafari = /safari/.test(userAgent) && !/chrome/.test(userAgent);
+
+        if (isIOS || isSafari) {
+            return `
+                <div class="install-step">
+                    <div class="install-step-number">Step 1</div>
+                    <div>Tap the Share button <strong>⎘</strong> in Safari</div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 2</div>
+                    <div>Scroll down and tap <strong>"Add to Home Screen"</strong></div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 3</div>
+                    <div>Tap <strong>"Add"</strong> in the top right</div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 4</div>
+                    <div>Find Northern Dial on your home screen!</div>
+                </div>
+            `;
+        } else if (isAndroid) {
+            return `
+                <div class="install-step">
+                    <div class="install-step-number">Step 1</div>
+                    <div>Tap the menu button <strong>⋮</strong> in Chrome</div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 2</div>
+                    <div>Tap <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong></div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 3</div>
+                    <div>Tap <strong>"Install"</strong></div>
+                </div>
+                <div class="install-step">
+                    <div class="install-step-number">Step 4</div>
+                    <div>Northern Dial will appear on your home screen!</div>
+                </div>
+            `;
+        } else {
+            return `
+                <div class="install-step">
+                    <div class="install-step-number">Desktop</div>
+                    <div>Look for an install icon <strong>⊕</strong> in your browser's address bar, or check the browser menu for "Install Northern Dial" option.</div>
+                </div>
+            `;
+        }
+    }
+
+    // Install button click
+    installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            // Android native install prompt
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            deferredPrompt = null;
+            installBanner.classList.remove('show');
+        } else {
+            // Show manual instructions
+            installSteps.innerHTML = getInstallInstructions();
+            installModal.classList.add('show');
+            installBanner.classList.remove('show');
+        }
+    });
+
+    // Dismiss button
+    dismissBtn.addEventListener('click', () => {
+        installBanner.classList.remove('show');
+        localStorage.setItem('installBannerDismissed', 'true');
+    });
+
+    // Close modal
+    closeModalBtn.addEventListener('click', () => {
+        installModal.classList.remove('show');
+    });
+
+    // Close modal on backdrop click
+    installModal.addEventListener('click', (e) => {
+        if (e.target === installModal) {
+            installModal.classList.remove('show');
+        }
     });
 </script>
 ```
