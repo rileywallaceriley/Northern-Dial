@@ -9,6 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#CC3333">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#CC3333">
 
+```
 <!-- PWA Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -290,93 +291,6 @@
         border: 1px solid rgba(195, 51, 51, 0.4);
     }
 
-    /* Blog Section */
-    .blog-section {
-        margin-top: 70px;
-    }
-
-    .blog-title {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 3.5rem;
-        text-align: center;
-        letter-spacing: 8px;
-        margin-bottom: 50px;
-        text-shadow: 2px 2px 0 #C33;
-    }
-
-    .blog-posts {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .blog-post {
-        display: flex;
-        gap: 20px;
-        background: rgba(255, 255, 255, 0.7);
-        border: 4px solid #1a1a1a;
-        border-radius: 8px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-
-    .blog-post:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-    }
-
-    .blog-image {
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-        flex-shrink: 0;
-    }
-
-    .blog-content {
-        flex: 1;
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .blog-post-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.8rem;
-        color: #1a1a1a;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-    }
-
-    .blog-excerpt {
-        color: #1a1a1a;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-size: 1rem;
-    }
-
-    .read-more-btn {
-        background: linear-gradient(135deg, #C33, #8B2323);
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 6px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 0.9rem;
-        align-self: flex-start;
-    }
-
-    .read-more-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(195, 51, 51, 0.4);
-    }
-
     /* Install Banner */
     .install-banner {
         position: fixed;
@@ -590,34 +504,15 @@
         .install-modal-content {
             padding: 20px;
         }
-
-        .blog-title {
-            font-size: 2.5rem;
-        }
-
-        .blog-post {
-            flex-direction: column;
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 250px;
-        }
-
-        .blog-content {
-            padding: 20px;
-        }
-
-        .blog-post-title {
-            font-size: 1.4rem;
-        }
     }
 </style>
+```
 
 </head>
 <body>
     <div class="container">
 
+```
     <!-- Logo -->
     <header class="header">
         <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
@@ -704,44 +599,6 @@
                     <div class="show-time">10:00 PM - 2:00 AM</div>
                 </div>
             </div>
-            
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <h2 class="blog-title">Latest Posts</h2>
-        <div class="blog-posts">
-            
-            <!-- Blog Post 1 -->
-            <article class="blog-post">
-                <img src="blog-muchmusic-img.png" alt="MuchMusic Blog Post" class="blog-image">
-                <div class="blog-content">
-                    <h3 class="blog-post-title">Before Algorithms, There Was MuchMusic</h3>
-                    <p class="blog-excerpt">In the 1990s and early 2000s, MuchMusic functioned as more than a music channel. It was one of the few spaces where Canadian music felt centralized — visible, audible and collectively experienced.</p>
-                    <a href="blog-muchmusic.html"><button class="read-more-btn">Read More</button></a>
-                </div>
-            </article>
-
-            <!-- Blog Post 2 -->
-            <article class="blog-post">
-                <img src="blog-algorithms-img.png" alt="Algorithms Blog Post" class="blog-image">
-                <div class="blog-content">
-                    <h3 class="blog-post-title">Why Your Playlist Feels Like a Loop</h3>
-                    <p class="blog-excerpt">Streaming platforms are built on algorithms that analyze listening habits and recommend more of what users already prefer. But efficiency is not the same as intention.</p>
-                    <a href="blog-algorithms.html"><button class="read-more-btn">Read More</button></a>
-                </div>
-            </article>
-
-            <!-- Blog Post 3 -->
-            <article class="blog-post">
-                <img src="blog-programming-img.png" alt="Programming Blog Post" class="blog-image">
-                <div class="blog-content">
-                    <h3 class="blog-post-title">What Time-of-Day Programming Actually Means</h3>
-                    <p class="blog-excerpt">Morning leans accessible. Afternoon widens. Evening centers hip-hop. Late night slows down and deepens. Here's why the hour matters as much as the song.</p>
-                    <a href="blog-programming.html"><button class="read-more-btn">Read More</button></a>
-                </div>
-            </article>
             
         </div>
     </section>
