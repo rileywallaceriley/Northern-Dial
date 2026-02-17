@@ -9,6 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#CC3333">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#CC3333">
 
+```
 <!-- PWA Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -505,11 +506,13 @@
         }
     }
 </style>
+```
 
 </head>
 <body>
     <div class="container">
 
+```
     <!-- Logo -->
     <header class="header">
         <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
@@ -926,21 +929,36 @@
     async function requestSong(requestUrl) {
         const status = document.getElementById('requestStatus');
 
+        // Make sure it's a full URL
+        const fullUrl = requestUrl.startsWith('http') 
+            ? requestUrl 
+            : 'https://a10.asurahosting.com' + requestUrl;
+
         try {
-            const response = await fetch(requestUrl, {
+            const response = await fetch(fullUrl, {
                 method: 'POST',
-                mode: 'no-cors'
+                headers: { 'Accept': 'application/json' }
             });
 
-            // no-cors returns opaque response - we can't read it but if no error thrown it worked
-            status.style.display = 'block';
-            status.style.background = 'rgba(0, 180, 0, 0.2)';
-            status.style.color = '#00cc00';
-            status.style.border = '2px solid #00cc00';
-            status.textContent = '✓ Request submitted! Your song will play soon.';
-            document.getElementById('requestResults').innerHTML = '';
-            document.getElementById('requestSearch').value = '';
+            const text = await response.text();
+            let message = '';
+            try { message = JSON.parse(text).message || ''; } catch {}
 
+            status.style.display = 'block';
+
+            if (response.ok) {
+                status.style.background = 'rgba(0, 180, 0, 0.2)';
+                status.style.color = '#00cc00';
+                status.style.border = '2px solid #00cc00';
+                status.textContent = '✓ Request submitted! Your song will play soon.';
+                document.getElementById('requestResults').innerHTML = '';
+                document.getElementById('requestSearch').value = '';
+            } else {
+                status.style.background = 'rgba(195, 51, 51, 0.2)';
+                status.style.color = '#C33';
+                status.style.border = '2px solid #C33';
+                status.textContent = message || 'Error ' + response.status;
+            }
         } catch (error) {
             status.style.display = 'block';
             status.style.background = 'rgba(195, 51, 51, 0.2)';
@@ -950,6 +968,7 @@
         }
     }
 </script>
+```
 
 </body>
 </html>
