@@ -934,12 +934,14 @@
             : 'https://a10.asurahosting.com' + requestUrl;
 
         try {
-            await fetch(fullUrl, {
+            const response = await fetch(fullUrl, {
                 method: 'POST',
-                mode: 'no-cors'
+                headers: { 'Accept': 'application/json' }
             });
 
-            // no-cors means we can't read the response, but we know it works
+            // Try to read response but don't let CORS failure stop us
+            try { await response.text(); } catch {}
+
             status.style.display = 'block';
             status.style.background = 'rgba(0, 180, 0, 0.2)';
             status.style.color = '#00cc00';
@@ -949,7 +951,6 @@
             document.getElementById('requestSearch').value = '';
 
         } catch (error) {
-            // Only a true network failure lands here
             status.style.display = 'block';
             status.style.background = 'rgba(195, 51, 51, 0.2)';
             status.style.color = '#C33';
