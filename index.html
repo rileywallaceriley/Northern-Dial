@@ -893,10 +893,11 @@
             }
 
             const data = await response.json();
-            console.log('API response:', data);
+            console.log('Full API response:', JSON.stringify(data));
 
-            // AzuraCast can return results as data.result or just an array
-            const songs = data.result || data.rows || data || [];
+            // AzuraCast paginates - results are usually in data.rows
+            const songs = data.rows || data.result || data.results || (Array.isArray(data) ? data : []);
+            console.log('Songs found:', songs.length, songs);
 
             if (!Array.isArray(songs) || songs.length === 0) {
                 results.innerHTML = '<div style="color:#ccc; text-align:center; padding:20px;">No results found. Try a different search.</div>';
