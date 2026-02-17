@@ -9,7 +9,6 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#CC3333">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#CC3333">
 
-```
 <!-- PWA Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -506,13 +505,11 @@
         }
     }
 </style>
-```
 
 </head>
 <body>
     <div class="container">
 
-```
     <!-- Logo -->
     <header class="header">
         <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
@@ -602,34 +599,7 @@
             
         </div>
     </section>
-
-    <!-- Request Widget -->
-    <section style="margin-top: 70px;">
-        <h2 style="font-family:'Bebas Neue',sans-serif; font-size:3.5rem; text-align:center; letter-spacing:8px; margin-bottom:50px; text-shadow:2px 2px 0 #C33;">Request A Song</h2>
-        
-        <div style="background:#1a1a1a; border:5px solid #C33; border-radius:12px; padding:30px; box-shadow:0 8px 30px rgba(195,51,51,0.4); overflow:hidden;">
-            
-            <!-- Search Bar -->
-            <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
-                <input type="text" id="requestSearch" placeholder="Search for a song or artist..." 
-                    onkeydown="if(event.key==='Enter') searchSongs()"
-                    style="width:100%; padding:15px 20px; font-size:1.1rem; font-family:'Roboto Condensed',sans-serif; border:3px solid #C33; border-radius:8px; background:#2a2a2a; color:#ffffff; outline:none; box-sizing:border-box;">
-                <button onclick="searchSongs()" 
-                    style="width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 25px; border-radius:8px; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer;">
-                    Search
-                </button>
-            </div>
-
-            <!-- Status Message -->
-            <div id="requestStatus" style="display:none; padding:12px 20px; border-radius:8px; margin-bottom:20px; font-weight:700; text-align:center;"></div>
-
-            <!-- Results -->
-            <div id="requestResults" style="display:flex; flex-direction:column; gap:10px; max-height:500px; overflow-y:auto;"></div>
-
-        </div>
-    </section>
     
-</div>
 
 <!-- Install Banner -->
 <div class="install-banner" id="installBanner">
@@ -967,7 +937,6 @@
         }
     }
 </script>
-```
 
 </body>
 </html>
