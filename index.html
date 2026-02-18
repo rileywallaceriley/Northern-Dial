@@ -549,8 +549,28 @@
 
         </div>
     </section>
+    
+</div>
 
-    <!-- Request Modal -->
+<!-- Submit Music Banner - Full Width -->
+<section style="margin: 70px 0; padding: 0 20px; background:#ffffff;">
+    <div onclick="document.getElementById('submitModal').classList.add('show')" 
+        style="background:linear-gradient(135deg, #C33, #8B2323); border:5px solid #1a1a1a; border-radius:12px; padding:50px 40px; text-align:center; cursor:pointer; transition:all 0.3s ease; box-shadow:0 8px 30px rgba(195,51,51,0.4);"
+        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(195,51,51,0.6)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(195,51,51,0.4)'">
+        <h2 style="font-family:'Bebas Neue',sans-serif; font-size:3.5rem; color:white; text-transform:uppercase; letter-spacing:8px; margin-bottom:15px; text-shadow:2px 2px 4px rgba(0,0,0,0.3);">Submit Your Music</h2>
+        <p style="color:rgba(255,255,255,0.95); font-size:1.2rem; margin-bottom:25px; line-height:1.6; max-width:800px; margin-left:auto; margin-right:auto;">Canadian artist? Share your tracks with us for potential airplay on Northern Dial.</p>
+        <button style="background:white; color:#C33; border:none; padding:15px 40px; border-radius:8px; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.2);"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">
+            Submit Now
+        </button>
+    </div>
+</section>
+
+<div style="height:40px;"></div>
+
+<!-- Modals -->
     <div class="install-modal" id="requestModal">
         <div class="install-modal-content" style="max-width:600px;">
             <div class="install-modal-header">
@@ -568,6 +588,37 @@
             </div>
             <div id="requestStatus" style="display:none; padding:12px 20px; border-radius:8px; margin-bottom:20px; font-weight:700; text-align:center;"></div>
             <div id="requestResults" style="display:flex; flex-direction:column; gap:10px; max-height:400px; overflow-y:auto;"></div>
+        </div>
+    </div>
+
+    <!-- Submit Music Modal -->
+    <div class="install-modal" id="submitModal">
+        <div class="install-modal-content" style="max-width:600px;">
+            <div class="install-modal-header">
+                <h2 class="install-modal-title">Submit Music</h2>
+                <button class="close-modal-btn" onclick="document.getElementById('submitModal').classList.remove('show')">&times;</button>
+            </div>
+            <form id="submitForm" onsubmit="handleSubmitMusic(event)" style="display:flex; flex-direction:column; gap:15px;">
+                <input type="text" id="artistName" placeholder="Artist/Band Name *" required
+                    style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+                
+                <input type="email" id="artistEmail" placeholder="Your Email *" required
+                    style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+                
+                <input type="text" id="trackLinks" placeholder="Track Links (SoundCloud, Spotify, YouTube, etc.) *" required
+                    style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+                
+                <input type="text" id="socialLinks" placeholder="Social Media (Instagram, Twitter, Website, etc.)"
+                    style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+                
+                <textarea id="artistMessage" placeholder="Tell us about your music, your sound, where you're from..." rows="5"
+                    style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box; resize:vertical;"></textarea>
+                
+                <button type="submit"
+                    style="width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 25px; border-radius:8px; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer;">
+                    Submit Music
+                </button>
+            </form>
         </div>
     </div>
 
@@ -801,6 +852,50 @@
             document.getElementById('requestModal').classList.remove('show');
         }
     });
+
+    document.getElementById('submitModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('submitModal')) {
+            document.getElementById('submitModal').classList.remove('show');
+        }
+    });
+
+    // Handle Submit Music Form
+    function handleSubmitMusic(event) {
+        event.preventDefault();
+        
+        const artistName = document.getElementById('artistName').value;
+        const artistEmail = document.getElementById('artistEmail').value;
+        const trackLinks = document.getElementById('trackLinks').value;
+        const socialLinks = document.getElementById('socialLinks').value;
+        const artistMessage = document.getElementById('artistMessage').value;
+
+        const subject = `Music Submission: ${artistName}`;
+        const body = `
+```
+
+Artist/Band Name: ${artistName}
+Email: ${artistEmail}
+
+Track Links:
+${trackLinks}
+
+Social Media:
+${socialLinks}
+
+Message:
+${artistMessage}
+`.trim();
+
+```
+        // Open email client with pre-filled data
+        window.location.href = `mailto:submissions@northerndial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Close modal and reset form
+        setTimeout(() => {
+            document.getElementById('submitModal').classList.remove('show');
+            document.getElementById('submitForm').reset();
+        }, 500);
+    }
 
     async function searchSongs() {
         const query = document.getElementById('requestSearch').value.trim();
