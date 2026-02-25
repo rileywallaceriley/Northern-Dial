@@ -10,12 +10,14 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#CC3333">
 
 <!-- PWA Meta Tags -->
+
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Northern Dial">
 <link rel="apple-touch-icon" href="https://i.imgur.com/XIAPd0N.png">
 
 <!-- Manifest -->
+
 <link rel="manifest" href="./manifest.json">
 
 <title>Northern Dial - All Killer, All CanCon</title>
@@ -27,543 +29,561 @@
         box-sizing: border-box;
     }
 
-    html {
-        background-color: #ffffff;
-    }
+```
+html {
+    background-color: #ffffff;
+}
 
-    body {
-        font-family: 'Roboto Condensed', sans-serif;
-        background-color: #ffffff;
-        color: #1a1a1a;
-    }
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        background-color: #ffffff;
-    }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
 
-    .header {
-        text-align: center;
-        margin-bottom: 30px;
-    }
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-    .logo-image {
-        max-width: 500px;
-        width: 100%;
-        height: auto;
-    }
+.logo-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
 
-    .player-section {
-        margin-bottom: 60px;
-    }
+.player-section {
+    margin-bottom: 60px;
+}
 
-    .custom-player {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-        border: 5px solid #C33;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
-    }
+.custom-player {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 5px solid #C33;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
+}
 
-    .player-controls {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    .play-pause-btn {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #C33, #8B2323);
-        border: 3px solid #fff;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        flex-shrink: 0;
-    }
+.play-pause-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C33, #8B2323);
+    border: 3px solid #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
 
-    .play-pause-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px rgba(195, 51, 51, 0.8);
-    }
+.play-pause-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(195, 51, 51, 0.8);
+}
 
-    .play-pause-btn:active {
-        transform: scale(0.95);
-    }
+.play-pause-btn:active {
+    transform: scale(0.95);
+}
 
-    .play-icon, .pause-icon {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-    }
+.play-icon, .pause-icon {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
 
-    .pause-icon {
-        display: none;
-    }
+.pause-icon {
+    display: none;
+}
 
-    .play-pause-btn.playing .play-icon {
-        display: none;
-    }
+.play-pause-btn.playing .play-icon {
+    display: none;
+}
 
-    .play-pause-btn.playing .pause-icon {
-        display: block;
-    }
+.play-pause-btn.playing .pause-icon {
+    display: block;
+}
 
-    .player-info {
-        flex: 1;
-        min-width: 200px;
-    }
+.player-info {
+    flex: 1;
+    min-width: 200px;
+}
 
-    .status-text {
-        font-size: 0.9rem;
-        color: #C33;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
-        font-weight: 700;
-    }
+.status-text {
+    font-size: 0.9rem;
+    color: #C33;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
 
-    .now-playing-text {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 5px;
-    }
+.now-playing-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
 
-    .artist-text {
-        font-size: 1.2rem;
-        color: #cccccc;
-    }
+.artist-text {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
 
-    .volume-control {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 150px;
-    }
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+}
 
-    .volume-icon {
-        color: #C33;
-        font-size: 20px;
-    }
+.volume-icon {
+    color: #C33;
+    font-size: 20px;
+}
 
-    .volume-slider {
-        flex: 1;
-        height: 6px;
-        -webkit-appearance: none;
-        appearance: none;
-        background: #444;
-        border-radius: 5px;
-        outline: none;
-    }
+.volume-slider {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+}
 
-    .volume-slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 18px;
-        height: 18px;
-        background: #C33;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #C33;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-    .volume-slider::-webkit-slider-thumb:hover {
-        background: #ff4444;
-        transform: scale(1.2);
-    }
+.volume-slider::-webkit-slider-thumb:hover {
+    background: #ff4444;
+    transform: scale(1.2);
+}
 
-    .volume-slider::-moz-range-thumb {
-        width: 18px;
-        height: 18px;
-        background: #C33;
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
-    }
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #C33;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
 
-    .content-columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        margin-bottom: 70px;
-    }
+.content-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 70px;
+}
 
-    .column {
-        background: rgba(255, 255, 255, 0.7);
-        border: 4px solid #1a1a1a;
-        padding: 35px;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+.column {
+    background: rgba(255, 255, 255, 0.7);
+    border: 4px solid #1a1a1a;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
 
-    .column h2 {
-        font-family: 'Oswald', sans-serif;
-        font-size: 2rem;
-        color: #C33;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-        border-bottom: 3px solid #1a1a1a;
-        padding-bottom: 10px;
-    }
+.column h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #C33;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 10px;
+}
 
-    .column p {
-        line-height: 1.8;
-        font-size: 1.05rem;
-    }
+.column p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
 
-    .shows-title {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 3.5rem;
-        text-align: center;
-        letter-spacing: 8px;
-        margin-bottom: 50px;
-        text-shadow: 2px 2px 0 #C33;
-    }
+.shows-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 0 #C33;
+}
 
-    .shows-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 30px;
-    }
+.shows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
 
-    .show-card {
-        background: #1a1a1a;
-        border: 5px solid #C33;
-        border-radius: 8px;
-        overflow: hidden;
-        transition: all 0.4s ease;
-        box-shadow: 0 5px 25px rgba(0,0,0,0.3);
-    }
+.show-card {
+    background: #1a1a1a;
+    border: 5px solid #C33;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
 
-    .show-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-    }
+.show-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
 
-    .show-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-bottom: 3px solid #C33;
-    }
+.show-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #C33;
+}
 
-    .show-content {
-        padding: 25px;
-    }
+.show-content {
+    padding: 25px;
+}
 
-    .show-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.8rem;
-        color: #F0F0F0;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-    }
+.show-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #F0F0F0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
 
-    .show-description {
-        color: #F0F0F0;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-        opacity: 0.9;
-    }
+.show-description {
+    color: #F0F0F0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
 
-    .show-time {
-        color: #C33;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.9rem;
-        background: rgba(195, 51, 51, 0.2);
-        padding: 10px 14px;
-        border-radius: 4px;
-        display: inline-block;
-        border: 1px solid rgba(195, 51, 51, 0.4);
-    }
+.show-time {
+    color: #C33;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    background: rgba(195, 51, 51, 0.2);
+    padding: 10px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid rgba(195, 51, 51, 0.4);
+}
 
-    .install-banner {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        background: linear-gradient(135deg, #C33, #8B2323);
-        color: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 30px rgba(195, 51, 51, 0.6);
-        z-index: 10000;
-        display: none;
-        animation: slideUp 0.4s ease;
-    }
+.install-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #C33, #8B2323);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(195, 51, 51, 0.6);
+    z-index: 10000;
+    display: none;
+    animation: slideUp 0.4s ease;
+}
 
-    .install-banner.show {
-        display: block;
-    }
+.install-banner.show {
+    display: block;
+}
 
-    .install-banner-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
+.install-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-    .install-banner-text {
-        flex: 1;
-        min-width: 200px;
-    }
+.install-banner-text {
+    flex: 1;
+    min-width: 200px;
+}
 
-    .install-banner-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+.install-banner-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    .install-banner-subtitle {
-        font-size: 0.9rem;
-        opacity: 0.9;
-    }
+.install-banner-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
 
-    .install-banner-buttons {
-        display: flex;
-        gap: 10px;
-    }
+.install-banner-buttons {
+    display: flex;
+    gap: 10px;
+}
 
-    .install-btn, .dismiss-btn {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 6px;
-        font-weight: 700;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-    }
+.install-btn, .dismiss-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
 
-    .install-btn {
-        background: white;
-        color: #C33;
-    }
+.install-btn {
+    background: white;
+    color: #C33;
+}
 
-    .install-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(255,255,255,0.3);
-    }
+.install-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
 
-    .dismiss-btn {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-    }
+.dismiss-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
 
-    .dismiss-btn:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
+.dismiss-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
 
-    .install-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 10001;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
+.install-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-    .install-modal.show {
-        display: flex;
-    }
+.install-modal.show {
+    display: flex;
+}
 
-    .install-modal-content {
-        background: white;
-        border-radius: 12px;
-        padding: 30px;
-        max-width: 500px;
-        width: 100%;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
+.install-modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
 
-    .install-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+.install-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-    .install-modal-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.8rem;
-        color: #C33;
-        text-transform: uppercase;
-    }
+.install-modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #C33;
+    text-transform: uppercase;
+}
 
-    .close-modal-btn {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #999;
-        cursor: pointer;
-        line-height: 1;
-    }
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+}
 
-    .install-modal-steps {
-        margin-top: 20px;
-    }
+.install-modal-steps {
+    margin-top: 20px;
+}
 
-    .install-step {
-        margin-bottom: 15px;
-        padding: 15px;
-        background: #f5f5f5;
-        border-radius: 8px;
-        border-left: 4px solid #C33;
-    }
+.install-step {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    border-left: 4px solid #C33;
+}
 
-    .install-step-number {
-        font-weight: 700;
-        color: #C33;
-        margin-bottom: 5px;
-    }
+.install-step-number {
+    font-weight: 700;
+    color: #C33;
+    margin-bottom: 5px;
+}
 
-    @keyframes slideUp {
-        from { transform: translateY(100px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-    @media (max-width: 768px) {
-        .content-columns { grid-template-columns: 1fr; }
-        .shows-title { font-size: 2.5rem; }
-        .logo-image { max-width: 90%; }
-        .player-controls { justify-content: center; }
-        .now-playing-text { font-size: 1.4rem; }
-        .artist-text { font-size: 1rem; }
-        .install-banner { bottom: 10px; left: 10px; right: 10px; padding: 15px; }
-        .install-banner-content { flex-direction: column; align-items: stretch; }
-        .install-banner-buttons { width: 100%; justify-content: stretch; }
-        .install-btn, .dismiss-btn { flex: 1; }
-        .install-modal-content { padding: 20px; }
-    }
+@media (max-width: 768px) {
+    .content-columns { grid-template-columns: 1fr; }
+    .shows-title { font-size: 2.5rem; }
+    .logo-image { max-width: 90%; }
+    .player-controls { justify-content: center; }
+    .now-playing-text { font-size: 1.4rem; }
+    .artist-text { font-size: 1rem; }
+    .install-banner { bottom: 10px; left: 10px; right: 10px; padding: 15px; }
+    .install-banner-content { flex-direction: column; align-items: stretch; }
+    .install-banner-buttons { width: 100%; justify-content: stretch; }
+    .install-btn, .dismiss-btn { flex: 1; }
+    .install-modal-content { padding: 20px; }
+}
+```
+
 </style>
 
 </head>
 <body>
     <div class="container">
 
-    <header class="header">
-        <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
-    </header>
+```
+<header class="header">
+    <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
+</header>
 
-    <section class="player-section">
-        <div class="custom-player">
-            <div class="player-controls">
-                <button class="play-pause-btn" id="playPauseBtn">
-                    <span class="play-icon">▶</span>
-                    <span class="pause-icon">❚❚</span>
-                </button>
-                <div class="player-info">
-                    <div class="status-text" id="statusText">NOW PLAYING</div>
-                    <div class="now-playing-text" id="songTitle">Northern Dial Radio</div>
-                    <div class="artist-text" id="artistName">All Killer, All CanCon</div>
-                </div>
-                <div class="volume-control">
-                    <span class="volume-icon">🔊</span>
-                    <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
-                </div>
+<section class="player-section">
+    <div class="custom-player">
+        <div class="player-controls">
+            <button class="play-pause-btn" id="playPauseBtn">
+                <span class="play-icon">▶</span>
+                <span class="pause-icon">❚❚</span>
+            </button>
+            <div class="player-info">
+                <div class="status-text" id="statusText">NOW PLAYING</div>
+                <div class="now-playing-text" id="songTitle">Northern Dial Radio</div>
+                <div class="artist-text" id="artistName">All Killer, All CanCon</div>
             </div>
-        </div>
-        <audio id="radioStream" preload="none">
-            <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
-        </audio>
-    </section>
-
-    <div class="content-columns">
-        <div class="column">
-            <h2>About</h2>
-            <p>Northern Dial is an independent Canadian radio station built for people who actually care about music.</p>
-            <p style="margin-top: 15px;">This station exists because Canadian music deserves space — not just in quotas, but in context. We believe the best songs hit differently depending on the hour, the season, and where you are. So we built a station that moves with you.</p>
-            <p style="margin-top: 15px;">We stream 24/7 and add new music into rotation constantly. Interested in having your music  or podcast played? Scroll down and click our submission box.</p>
-        </div>
-        <div class="column">
-            <h2>Recently Played</h2>
-            <div id="recentlyPlayed" style="max-height: 400px; overflow-y: auto;">
-                <div style="color:#999; text-align:center; padding:20px;">Loading...</div>
+            <div class="volume-control">
+                <span class="volume-icon">🔊</span>
+                <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
             </div>
         </div>
     </div>
+    <audio id="radioStream" preload="none">
+        <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
+    </audio>
+</section>
 
-    <section class="shows-section">
-        <h2 class="shows-title">On Air Daily</h2>
-        <div class="shows-grid">
-            <div class="show-card">
-                <img src="https://i.imgur.com/LJFSC1l.jpeg" alt="Open Roads" class="show-image">
-                <div class="show-content">
-                    <h3 class="show-title">Open Roads</h3>
-                    <p class="show-description">A playlist that feels like sunrise and highways — pop, indie, rock, R&B that moves with the morning.</p>
-                    <div class="show-time">10:00 AM - 2:00 PM</div>
-                </div>
-            </div>
-            <div class="show-card">
-                <img src="https://i.imgur.com/38QC8zh.jpeg" alt="Northern Bars" class="show-image">
-                <div class="show-content">
-                    <h3 class="show-title">Northern Bars</h3>
-                    <p class="show-description">A hip-hop forward block rooted in Canadian voices — from golden era hits to new rap chemistry.</p>
-                    <div class="show-time">2:00 PM - 10:00 PM</div>
-                </div>
-            </div>
-            <div class="show-card">
-                <img src="https://i.imgur.com/7X7rN10.jpeg" alt="After Hours" class="show-image">
-                <div class="show-content">
-                    <h3 class="show-title">After Hours</h3>
-                    <p class="show-description">Late night vibes for deeper listening — mellow beats, smooth grooves, edge-of-town energy.</p>
-                    <div class="show-time">10:00 PM - 2:00 AM</div>
-                </div>
-            </div>
-
-            <div class="show-card" style="cursor:pointer;" onclick="document.getElementById('requestModal').classList.add('show')">
-                <img src="request-card.png" alt="Request A Song" class="show-image">
-                <div class="show-content">
-                    <h3 class="show-title">Request A Song</h3>
-                    <p class="show-description">Got a track in mind? Submit a request and we'll add it to the rotation.</p>
-                    <div class="show-time" style="cursor:pointer;">Submit A Request</div>
-                </div>
-            </div>
-
+<div class="content-columns">
+    <div class="column">
+        <h2>About</h2>
+        <p>Northern Dial is an independent Canadian radio station built for people who actually care about music.</p>
+        <p style="margin-top: 15px;">This station exists because Canadian music deserves space not just in quotas, but in context. We believe the best songs hit differently depending on the hour, the season, and where you are. So we built a station that moves with you.</p>
+        <p style="margin-top: 15px;">We stream 24/7 and add new music into rotation constantly. Interested in having your music  or podcast played? Scroll down and click our submission box.</p>
+    </div>
+    <div class="column">
+        <h2>Recently Played</h2>
+        <div id="recentlyPlayed" style="max-height: 400px; overflow-y: auto;">
+            <div style="color:#999; text-align:center; padding:20px;">Loading...</div>
         </div>
-    </section>
-
-    <!-- Submit Music Banner -->
-    <section style="margin-top: 70px;">
-        <div onclick="document.getElementById('submitModal').classList.add('show')" 
-            style="background:linear-gradient(135deg, #C33, #8B2323); border:5px solid #1a1a1a; border-radius:12px; padding:40px; text-align:center; cursor:pointer; transition:all 0.3s ease; box-shadow:0 8px 30px rgba(195,51,51,0.4);"
-            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(195,51,51,0.6)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(195,51,51,0.4)'">
-            <h2 style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:white; text-transform:uppercase; letter-spacing:6px; margin-bottom:15px; text-shadow:2px 2px 4px rgba(0,0,0,0.3);">Submit Your Music</h2>
-            <p style="color:rgba(255,255,255,0.95); font-size:1.2rem; margin-bottom:25px; line-height:1.6;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p>
-            <button style="background:white; color:#C33; border:none; padding:15px 40px; border-radius:8px; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.2);"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">
-                Submit Now
-            </button>
-        </div>
-    </section>
-    
+    </div>
 </div>
 
-<!-- Modals -->
+<section class="shows-section">
+    <h2 class="shows-title">On Air Daily</h2>
+    <div class="shows-grid">
+        <div class="show-card">
+            <img src="https://i.imgur.com/LJFSC1l.jpeg" alt="Open Roads" class="show-image">
+            <div class="show-content">
+                <h3 class="show-title">Open Roads</h3>
+                <p class="show-description">A playlist that feels like sunrise and highways — pop, indie, rock, R&B that moves with the morning.</p>
+                <div class="show-time">10:00 AM - 2:00 PM</div>
+            </div>
+        </div>
+        <div class="show-card">
+            <img src="https://i.imgur.com/38QC8zh.jpeg" alt="Northern Bars" class="show-image">
+            <div class="show-content">
+                <h3 class="show-title">Northern Bars</h3>
+                <p class="show-description">A hip-hop forward block rooted in Canadian voices — from golden era hits to new rap chemistry.</p>
+                <div class="show-time">2:00 PM - 10:00 PM</div>
+            </div>
+        </div>
+        <div class="show-card">
+            <img src="https://i.imgur.com/7X7rN10.jpeg" alt="After Hours" class="show-image">
+            <div class="show-content">
+                <h3 class="show-title">After Hours</h3>
+                <p class="show-description">Late night vibes for deeper listening — mellow beats, smooth grooves, edge-of-town energy.</p>
+                <div class="show-time">10:00 PM - 2:00 AM</div>
+            </div>
+        </div>
+
+        <div class="show-card" style="cursor:pointer;" onclick="document.getElementById('requestModal').classList.add('show')">
+            <img src="request-card.png" alt="Request A Song" class="show-image">
+            <div class="show-content">
+                <h3 class="show-title">Request A Song</h3>
+                <p class="show-description">Got a track in mind? Submit a request and we'll add it to the rotation.</p>
+                <div class="show-time" style="cursor:pointer;">Submit A Request</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section style="margin-top: 70px;">
+    <div onclick="document.getElementById('submitModal').classList.add('show')" 
+        style="background:linear-gradient(135deg, #C33, #8B2323); border:5px solid #1a1a1a; border-radius:12px; padding:40px; text-align:center; cursor:pointer; transition:all 0.3s ease; box-shadow:0 8px 30px rgba(195,51,51,0.4);"
+        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(195,51,51,0.6)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(195,51,51,0.4)'">
+        <h2 style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:white; text-transform:uppercase; letter-spacing:6px; margin-bottom:15px; text-shadow:2px 2px 4px rgba(0,0,0,0.3);">Submit Your Music</h2>
+        <p style="color:rgba(255,255,255,0.95); font-size:1.2rem; margin-bottom:25px; line-height:1.6;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p>
+        <button style="background:white; color:#C33; border:none; padding:15px 40px; border-radius:8px; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.2);"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">
+            Submit Now
+        </button>
+    </div>
+</section>
+
+<section style="margin-top: 40px;">
+    <div onclick="document.getElementById('involvedModal').classList.add('show')" 
+        style="background:#1a1a1a; border:5px solid #C33; border-radius:12px; padding:40px; text-align:center; cursor:pointer; transition:all 0.3s ease; box-shadow:0 8px 30px rgba(0,0,0,0.3);"
+        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.5)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)'">
+        <h2 style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:#C33; text-transform:uppercase; letter-spacing:6px; margin-bottom:15px; text-shadow:2px 2px 4px rgba(0,0,0,0.3);">Open-Source Community Project</h2>
+        <p style="color:rgba(255,255,255,0.95); font-size:1.2rem; margin-bottom:25px; line-height:1.6;">Explore our bigger picture and discover how you can get involved in building the future of Canadian independent radio.</p>
+        <button style="background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 40px; border-radius:8px; font-weight:700; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(195,51,51,0.3);"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(195,51,51,0.5)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(195,51,51,0.3)'">
+            Learn More
+        </button>
+    </div>
+</section>
+```
+
+</div>
+
 <div class="install-modal" id="requestModal">
     <div class="install-modal-content" style="max-width:600px;">
         <div class="install-modal-header">
@@ -584,7 +604,6 @@
     </div>
 </div>
 
-<!-- Submit Music Modal -->
 <div class="install-modal" id="submitModal">
     <div class="install-modal-content" style="max-width:600px;">
         <div class="install-modal-header">
@@ -594,28 +613,104 @@
         <form id="submitForm" onsubmit="handleSubmitMusic(event)" style="display:flex; flex-direction:column; gap:15px;">
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
-            
-            <input type="email" id="artistEmail" placeholder="Your Email *" required
-                style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
-            
-            <input type="text" id="trackLinks" placeholder="Track Links (SoundCloud, Spotify, YouTube, etc.) *" required
-                style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
-            
-            <input type="text" id="socialLinks" placeholder="Social Media (Instagram, Twitter, Website, etc.)"
-                style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
-            
-            <textarea id="artistMessage" placeholder="Tell us about your music, your sound, where you're from..." rows="5"
-                style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box; resize:vertical;"></textarea>
-            
-            <button type="submit"
-                style="width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 25px; border-radius:8px; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer;">
-                Submit Music
-            </button>
-        </form>
-    </div>
+
+```
+        <input type="email" id="artistEmail" placeholder="Your Email *" required
+            style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+        
+        <input type="text" id="trackLinks" placeholder="Track Links (SoundCloud, Spotify, YouTube, etc.) *" required
+            style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+        
+        <input type="text" id="socialLinks" placeholder="Social Media (Instagram, Twitter, Website, etc.)"
+            style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
+        
+        <textarea id="artistMessage" placeholder="Tell us about your music, your sound, where you're from..." rows="5"
+            style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box; resize:vertical;"></textarea>
+        
+        <button type="submit"
+            style="width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 25px; border-radius:8px; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer;">
+            Submit Music
+        </button>
+    </form>
+</div>
+```
+
 </div>
 
-<!-- Install Banner -->
+<div class="install-modal" id="involvedModal">
+    <div class="install-modal-content" style="max-width:700px;">
+        <div class="install-modal-header">
+            <h2 class="install-modal-title">The Northern Dial Project</h2>
+            <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
+        </div>
+
+```
+    <div style="line-height:1.8; color:#333;">
+        <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
+        <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
+
+        <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:25px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Where We Are Now</h3>
+        <p>This is v1: a homegrown, open-source passion project built from scratch. We're streaming 24/7 with curated blocks of Canadian music across genres, constantly adding new tracks to rotation, and developing the infrastructure for what comes next.</p>
+
+        <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:25px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">The Vision</h3>
+        <p style="margin-bottom:10px;">Northern Dial is positioning to become a comprehensive Canadian music and culture platform with:</p>
+        <ul style="margin-left:20px; margin-bottom:15px;">
+            <li style="margin-bottom:8px;"><strong>Hyper-local niche programming:</strong> city-specific shows, regional spotlights, and genre-focused blocks</li>
+            <li style="margin-bottom:8px;"><strong>Weekly shows and segments:</strong> hosted programs with personalities, guest mixes, artist interviews</li>
+            <li style="margin-bottom:8px;"><strong>Community news integration:</strong> local music scene coverage, event promotion, grassroots storytelling</li>
+            <li style="margin-bottom:8px;"><strong>Personality development:</strong> cultivating hosts and voices that connect with listeners</li>
+            <li style="margin-bottom:8px;"><strong>Exclusive and live content:</strong> live DJ sets, in-studio sessions, premiere releases</li>
+            <li style="margin-bottom:8px;"><strong>Complementary media website:</strong> reviews, features, news, and longform content supporting what's on air</li>
+        </ul>
+        <p>This isn't just a radio station. It's a movement to reclaim space for independent Canadian voices in a landscape dominated by corporate consolidation and algorithmic curation.</p>
+
+        <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:25px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">How You Can Contribute</h3>
+        <p style="margin-bottom:10px;">Northern Dial is community-powered. We welcome contributions in any capacity:</p>
+        <ul style="margin-left:20px; margin-bottom:15px;">
+            <li style="margin-bottom:8px;"><strong>Sponsorship and Funding:</strong> Help us expand infrastructure, commission content, and compensate contributors</li>
+            <li style="margin-bottom:8px;"><strong>Grassroots Promotion:</strong> Share the station, spread the word, build the community</li>
+            <li style="margin-bottom:8px;"><strong>Content Submission:</strong> Submit music, podcasts, mixes, or ideas for programming</li>
+            <li style="margin-bottom:8px;"><strong>Development and Design:</strong> Contribute code, design assets, or technical expertise</li>
+            <li style="margin-bottom:8px;"><strong>Hosting and Production:</strong> Pitch show concepts, volunteer to host, produce segments</li>
+            <li style="margin-bottom:8px;"><strong>Writing and Journalism:</strong> Contribute to the future media platform with reviews, features, and reporting</li>
+        </ul>
+
+        <div style="margin-top:30px; padding:25px; background:#f5f5f5; border-left:4px solid #C33; border-radius:8px;">
+            <h4 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.3rem; margin-bottom:15px; text-transform:uppercase; letter-spacing:1px;">Get Involved</h4>
+            <form id="involvedForm" onsubmit="handleInvolvedForm(event)" style="display:flex; flex-direction:column; gap:12px;">
+                <input type="text" id="involvedName" placeholder="Your Name *" required
+                    style="width:100%; padding:12px 15px; font-size:0.95rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:6px; outline:none; box-sizing:border-box;">
+                
+                <input type="email" id="involvedEmail" placeholder="Your Email *" required
+                    style="width:100%; padding:12px 15px; font-size:0.95rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:6px; outline:none; box-sizing:border-box;">
+                
+                <select id="involvedInterest" required
+                    style="width:100%; padding:12px 15px; font-size:0.95rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:6px; outline:none; box-sizing:border-box; background:white;">
+                    <option value="">I'm interested in... *</option>
+                    <option value="Sponsorship and Funding">Sponsorship and Funding</option>
+                    <option value="Grassroots Promotion">Grassroots Promotion</option>
+                    <option value="Content Submission">Content Submission</option>
+                    <option value="Development and Design">Development and Design</option>
+                    <option value="Hosting and Production">Hosting and Production</option>
+                    <option value="Writing and Journalism">Writing and Journalism</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <textarea id="involvedMessage" placeholder="Tell us about your interest and how you'd like to contribute..." rows="4" required
+                    style="width:100%; padding:12px 15px; font-size:0.95rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:6px; outline:none; box-sizing:border-box; resize:vertical;"></textarea>
+                
+                <button type="submit"
+                    style="width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:12px 20px; border-radius:6px; font-weight:700; font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer;">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+```
+
+</div>
+
 <div class="install-banner" id="installBanner">
     <div class="install-banner-content">
         <div class="install-banner-text">
@@ -629,7 +724,6 @@
     </div>
 </div>
 
-<!-- Install Instructions Modal -->
 <div class="install-modal" id="installModal">
     <div class="install-modal-content">
         <div class="install-modal-header">
@@ -705,7 +799,6 @@
     updateNowPlaying();
     setInterval(updateNowPlaying, 10000);
 
-    // Recently Played - uses same API endpoint as now playing
     async function updateRecentlyPlayed() {
         try {
             const response = await fetch('https://a10.asurahosting.com/api/nowplaying/northern_dial');
@@ -850,6 +943,12 @@
         }
     });
 
+    document.getElementById('involvedModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('involvedModal')) {
+            document.getElementById('involvedModal').classList.remove('show');
+        }
+    });
+
     function handleSubmitMusic(event) {
         event.preventDefault();
         
@@ -861,7 +960,6 @@
 
         const subject = `Music Submission: ${artistName}`;
         const body = `
-
 Artist/Band Name/Podcast: ${artistName}
 Email: ${artistEmail}
 
@@ -880,6 +978,32 @@ ${artistMessage}
         setTimeout(() => {
             document.getElementById('submitModal').classList.remove('show');
             document.getElementById('submitForm').reset();
+        }, 500);
+    }
+
+    function handleInvolvedForm(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('involvedName').value;
+        const email = document.getElementById('involvedEmail').value;
+        const interest = document.getElementById('involvedInterest').value;
+        const message = document.getElementById('involvedMessage').value;
+
+        const subject = `Get Involved: ${interest}`;
+        const body = `
+Name: ${name}
+Email: ${email}
+Interest: ${interest}
+
+Message:
+${message}
+`.trim();
+
+        window.location.href = `mailto:rileywallace@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        setTimeout(() => {
+            document.getElementById('involvedModal').classList.remove('show');
+            document.getElementById('involvedForm').reset();
         }, 500);
     }
 
