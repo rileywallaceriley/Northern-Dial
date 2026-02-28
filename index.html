@@ -928,6 +928,51 @@ body {
 
 </div>
 
+<!-- Mobile Debug Console -->
+
+<div id="mobileDebug" style="position:fixed; bottom:0; left:0; right:0; background:rgba(0,0,0,0.9); color:#0f0; font-family:monospace; font-size:10px; max-height:200px; overflow-y:auto; z-index:99999; padding:10px; display:none; border-top:2px solid #0f0;">
+    <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+        <strong>DEBUG CONSOLE</strong>
+        <button onclick="document.getElementById('mobileDebug').style.display='none'" style="background:#f00; color:#fff; border:none; padding:2px 8px; font-size:10px;">Close</button>
+    </div>
+    <div id="debugLog"></div>
+</div>
+
+<script>
+    // Mobile debug logger
+    const debugLog = document.getElementById('debugLog');
+    const mobileDebug = document.getElementById('mobileDebug');
+    const originalLog = console.log;
+    const originalError = console.error;
+    const originalWarn = console.warn;
+    
+    function addDebugLine(msg, type = 'log') {
+        const colors = { log: '#0f0', error: '#f00', warn: '#ff0' };
+        const line = document.createElement('div');
+        line.style.color = colors[type];
+        line.style.marginBottom = '3px';
+        line.textContent = `[${type.toUpperCase()}] ${msg}`;
+        debugLog.appendChild(line);
+        debugLog.scrollTop = debugLog.scrollHeight;
+        mobileDebug.style.display = 'block';
+    }
+    
+    console.log = function(...args) {
+        originalLog.apply(console, args);
+        addDebugLine(args.join(' '), 'log');
+    };
+    
+    console.error = function(...args) {
+        originalError.apply(console, args);
+        addDebugLine(args.join(' '), 'error');
+    };
+    
+    console.warn = function(...args) {
+        originalWarn.apply(console, args);
+        addDebugLine(args.join(' '), 'warn');
+    };
+</script>
+
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js')
