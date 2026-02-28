@@ -607,7 +607,7 @@ body {
     .visualizer-artist { font-size: 1.2rem; }
     .visualizer-canvas-container { height: 250px; }
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
-    .visualizer-style-btn { font-size: 0.75rem; padding: 8px 16px; }
+    .visualizer-style-btn { font-size: 0.7rem; padding: 8px 12px; }
 }
 ```
 
@@ -918,11 +918,11 @@ body {
     <div class="visualizer-artist" id="visualizerArtist">All Killer, All CanCon</div>
 </div>
 
-<div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+<div style="margin-top: 30px; display: flex; gap: 10px; justify-content: center; flex-wrap: nowrap;">
     <button class="visualizer-style-btn active" data-style="bars">Bars</button>
-    <button class="visualizer-style-btn" data-style="wave">Waveform</button>
-    <button class="visualizer-style-btn" data-style="circular">Circular</button>
-    <button class="visualizer-style-btn" data-style="particles">Particles</button>
+    <button class="visualizer-style-btn" data-style="wave">Wave</button>
+    <button class="visualizer-style-btn" data-style="circular">Circle</button>
+    <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
 ```
 
@@ -1351,24 +1351,34 @@ body {
     function initAudioContext() {
         if (!audioContext) {
             try {
+                console.log('Creating audio context...');
                 audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                console.log('Audio context state:', audioContext.state);
+                
                 analyser = audioContext.createAnalyser();
                 analyser.fftSize = 512;
                 analyser.smoothingTimeConstant = 0.8;
                 bufferLength = analyser.frequencyBinCount;
                 dataArray = new Uint8Array(bufferLength);
+                
+                console.log('Analyser created, buffer length:', bufferLength);
 
                 // Connect audio element to analyser
                 if (!audioSource) {
+                    console.log('Creating media element source...');
                     audioSource = audioContext.createMediaElementSource(audio);
                     audioSource.connect(analyser);
                     analyser.connect(audioContext.destination);
+                    console.log('Audio source connected');
                 }
 
-                console.log('Audio context initialized');
+                console.log('Audio context initialized successfully');
             } catch (error) {
                 console.error('Error initializing audio context:', error);
+                alert('Audio analysis failed: ' + error.message + '\n\nThe visualizer may not work due to browser restrictions.');
             }
+        } else {
+            console.log('Audio context already exists, state:', audioContext.state);
         }
     }
 
@@ -1380,6 +1390,11 @@ body {
 
     function drawBars() {
         analyser.getByteFrequencyData(dataArray);
+        
+        // Debug: log first few values
+        if (Math.random() < 0.01) { // Log occasionally
+            console.log('Audio data sample:', dataArray.slice(0, 10));
+        }
 
         // Clear with gradient
         const gradient = ctx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
@@ -1507,6 +1522,16 @@ body {
     function drawVisualizer() {
         animationId = requestAnimationFrame(drawVisualizer);
 
+        // Check if we're actually getting audio data
+        if (dataArray) {
+            analyser.getByteFrequencyData(dataArray);
+            const hasData = dataArray.some(val => val > 0);
+            
+            if (!hasData && Math.random() < 0.01) {
+                console.warn('No audio data detected - may be CORS issue or audio not playing');
+            }
+        }
+
         switch(currentStyle) {
             case 'bars':
                 drawBars();
@@ -1532,18 +1557,41 @@ body {
     visualizerBtn.addEventListener('click', function() {
         if (!audio.paused) {
             try {
+                console.log('Opening visualizer...');
+                console.log('Audio paused:', audio.paused);
+                console.log('Audio volume:', audio.volume);
+                
                 initAudioContext();
                 resizeCanvas();
+                
+                console.log('Canvas size:', visualizerCanvas.width, 'x', visualizerCanvas.height);
+                
                 visualizerOverlay.classList.add('show');
                 updateVisualizerInfo();
-                drawVisualizer();
+                
+                // Draw test pattern first to verify canvas works
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+                ctx.fillStyle = '#C33';
+                ctx.fillRect(50, 50, 100, 100);
+                ctx.fillStyle = '#fff';
+                ctx.font = '20px Arial';
+                ctx.fillText('Initializing...', visualizerCanvas.width/2 - 50, visualizerCanvas.height/2);
+                
+                // Start actual visualizer after short delay
+                setTimeout(() => {
+                    console.log('Starting visualizer animation...');
+                    drawVisualizer();
 
-                if (audioContext.state === 'suspended') {
-                    audioContext.resume();
-                }
+                    if (audioContext && audioContext.state === 'suspended') {
+                        console.log('Resuming audio context...');
+                        audioContext.resume();
+                    }
+                }, 500);
+                
             } catch (error) {
                 console.error('Visualizer error:', error);
-                alert('Visualizer failed to start. Try refreshing the page.');
+                alert('Visualizer failed to start: ' + error.message);
             }
         } else {
             alert('Please start playing the radio first!');
