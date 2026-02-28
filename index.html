@@ -1318,7 +1318,16 @@ body {
     const visualizerSong = document.getElementById('visualizerSong');
     const visualizerArtist = document.getElementById('visualizerArtist');
     const visualizerStatus = document.getElementById('visualizerStatus');
-    const ctx = visualizerCanvas.getContext('2d');
+    
+    let ctx;
+    try {
+        ctx = visualizerCanvas.getContext('2d');
+        if (!ctx) {
+            console.error('Could not get 2d context from canvas');
+        }
+    } catch (e) {
+        console.error('Error getting canvas context:', e);
+    }
 
     class Particle {
         constructor(x, y) {
@@ -1346,9 +1355,16 @@ body {
         const container = visualizerCanvas.parentElement;
         visualizerCanvas.width = container.clientWidth;
         visualizerCanvas.height = container.clientHeight;
+        console.log('Canvas sized:', visualizerCanvas.width, 'x', visualizerCanvas.height);
     }
 
     function drawBars() {
+        if (!ctx || !visualizerCanvas.width || !visualizerCanvas.height) {
+            console.warn('Canvas not ready:', visualizerCanvas.width, visualizerCanvas.height);
+            return;
+        }
+        
+        // Always draw gradient background first
         const gradient = ctx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
         gradient.addColorStop(0, '#1a1a1a');
         gradient.addColorStop(1, '#000000');
@@ -1356,7 +1372,7 @@ body {
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
         const numBars = 64;
-        const barWidth = visualizerCanvas.width / numBars - 2;
+        const barWidth = Math.max(visualizerCanvas.width / numBars - 2, 5);
         
         for (let i = 0; i < numBars; i++) {
             const barHeight = (Math.sin(animationTime / 200 + i / 5) * 0.3 + 
@@ -1461,6 +1477,10 @@ body {
     }
 
     function drawVisualizer() {
+        if (!animationTime) {
+            console.log('First frame of visualizer, style:', currentStyle);
+        }
+        
         animationId = requestAnimationFrame(drawVisualizer);
         animationTime++;
 
@@ -1469,6 +1489,9 @@ body {
             case 'wave': drawWaveform(); break;
             case 'circular': drawCircular(); break;
             case 'particles': drawParticles(); break;
+            default: 
+                console.warn('Unknown style:', currentStyle);
+                drawBars();
         }
     }
 
@@ -1480,11 +1503,30 @@ body {
 
     visualizerBtn.addEventListener('click', function() {
         if (!audio.paused) {
-            resizeCanvas();
+            console.log('Opening visualizer');
             visualizerOverlay.classList.add('show');
-            updateVisualizerInfo();
-            animationTime = 0;
-            drawVisualizer();
+            
+            // Wait for overlay to be visible, then initialize canvas
+            setTimeout(() => {
+                resizeCanvas();
+                console.log('Canvas resized to:', visualizerCanvas.width, 'x', visualizerCanvas.height);
+                
+                // Verify canvas context
+                if (!ctx) {
+                    console.error('Canvas context not available!');
+                    return;
+                }
+                
+                updateVisualizerInfo();
+                animationTime = 0;
+                
+                // Start animation loop
+                console.log('Starting animation loop...');
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                }
+                drawVisualizer();
+            }, 100);
         } else {
             alert('Please start playing the radio first!');
         }
