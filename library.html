@@ -446,25 +446,71 @@
         return div.innerHTML;
     }
 
-    function updateCatalogCount(count) {
+    function updateCatalogCount(count, isSearch = false) {
         const countEl = document.getElementById('catalogCount');
-        countEl.textContent = `${count.toLocaleString()} recently played tracks`;
+        if (isSearch) {
+            countEl.textContent = count === 0 ? 'No results' : `${count.toLocaleString()} results`;
+        } else {
+            countEl.textContent = `${count.toLocaleString()} recently played tracks`;
+        }
     }
 
     function searchCatalog(query) {
         const searchTerm = query.toLowerCase().trim();
 
         if (!searchTerm) {
-            filteredTracks = [...allTracks];
-        } else {
-            filteredTracks = allTracks.filter(track => 
-                track.title.toLowerCase().includes(searchTerm) ||
-                track.artist.toLowerCase().includes(searchTerm)
-            );
+            // No search - reload initial 5 recent songs
+            loadCatalog();
+            return;
         }
 
-        displayCatalog(filteredTracks);
-        updateCatalogCount(filteredTracks.length);
+        // Dynamic search of full catalog (like request modal)
+        document.getElementById('catalogGrid').innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#999;">Searching catalog...</div>';
+
+        fetch(`https://a10.asurahosting.com/api/station/northern_dial/requests?searchPhrase=${encodeURIComponent(searchTerm)}&rowCount=100&current=1`)
+            .then(response => {
+                if (!response.ok) throw new Error('Search failed');
+                return response.json();
+            })
+            .then(data => {
+                const songs = data.rows || data.result || data.results || [];
+                console.log(`Search results for "${searchTerm}": ${songs.length}`);
+
+                if (songs.length === 0) {
+                    displayCatalog([]);
+                    updateCatalogCount(0, true);
+                    return;
+                }
+
+                // Convert to track format
+                const searchResults = [];
+                const seenIds = new Set();
+
+                songs.forEach(item => {
+                    const song = item.song || item;
+                    const songId = song.song_id || song.id;
+                    
+                    if (!seenIds.has(songId)) {
+                        seenIds.add(songId);
+                        searchResults.push({
+                            id: songId,
+                            title: song.title || 'Unknown Title',
+                            artist: song.artist || 'Unknown Artist',
+                            art: song.art || song.album_art || '',
+                            request_url: item.request_url
+                        });
+                    }
+                });
+
+                filteredTracks = searchResults;
+                displayCatalog(filteredTracks);
+                updateCatalogCount(filteredTracks.length, true);
+            })
+            .catch(error => {
+                console.error('Search error:', error);
+                document.getElementById('catalogGrid').innerHTML = 
+                    '<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#C33;">Search failed. Please try again.</div>';
+            });
     }
 
     async function requestTrack(requestUrl, button) {
