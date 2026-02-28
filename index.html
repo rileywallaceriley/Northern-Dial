@@ -310,6 +310,30 @@ body {
     font-weight: 700;
 }
 
+.visualizer-style-btn {
+    background: rgba(195, 51, 51, 0.2);
+    color: white;
+    border: 2px solid #C33;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.visualizer-style-btn:hover {
+    background: rgba(195, 51, 51, 0.4);
+    transform: translateY(-2px);
+}
+
+.visualizer-style-btn.active {
+    background: #C33;
+    box-shadow: 0 0 20px rgba(195, 51, 51, 0.8);
+}
+
 .content-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -583,6 +607,7 @@ body {
     .visualizer-artist { font-size: 1.2rem; }
     .visualizer-canvas-container { height: 250px; }
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
+    .visualizer-style-btn { font-size: 0.75rem; padding: 8px 16px; }
 }
 ```
 
@@ -891,6 +916,13 @@ body {
     <div class="visualizer-status" id="visualizerStatus">LIVE NOW</div>
     <div class="visualizer-song" id="visualizerSong">Northern Dial Radio</div>
     <div class="visualizer-artist" id="visualizerArtist">All Killer, All CanCon</div>
+</div>
+
+<div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+    <button class="visualizer-style-btn active" data-style="bars">Bars</button>
+    <button class="visualizer-style-btn" data-style="wave">Waveform</button>
+    <button class="visualizer-style-btn" data-style="circular">Circular</button>
+    <button class="visualizer-style-btn" data-style="particles">Particles</button>
 </div>
 ```
 
@@ -1279,6 +1311,8 @@ body {
     let bufferLength;
     let animationId;
     let audioSource;
+    let currentStyle = 'bars';
+    let particles = [];
 
     const visualizerBtn = document.getElementById('visualizerBtn');
     const visualizerOverlay = document.getElementById('visualizerOverlay');
@@ -1289,19 +1323,51 @@ body {
     const visualizerStatus = document.getElementById('visualizerStatus');
     const ctx = visualizerCanvas.getContext('2d');
 
+    // Particle class for particle visualizer
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 3 - 1.5;
+            this.speedY = Math.random() * 3 - 1.5;
+            this.life = 1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.life -= 0.01;
+        }
+
+        draw() {
+            ctx.fillStyle = `rgba(195, 51, 51, ${this.life})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
     function initAudioContext() {
         if (!audioContext) {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioContext.createAnalyser();
-            analyser.fftSize = 256;
-            bufferLength = analyser.frequencyBinCount;
-            dataArray = new Uint8Array(bufferLength);
+            try {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                analyser.fftSize = 512;
+                analyser.smoothingTimeConstant = 0.8;
+                bufferLength = analyser.frequencyBinCount;
+                dataArray = new Uint8Array(bufferLength);
 
-            // Connect audio element to analyser
-            if (!audioSource) {
-                audioSource = audioContext.createMediaElementSource(audio);
-                audioSource.connect(analyser);
-                analyser.connect(audioContext.destination);
+                // Connect audio element to analyser
+                if (!audioSource) {
+                    audioSource = audioContext.createMediaElementSource(audio);
+                    audioSource.connect(analyser);
+                    analyser.connect(audioContext.destination);
+                }
+
+                console.log('Audio context initialized');
+            } catch (error) {
+                console.error('Error initializing audio context:', error);
             }
         }
     }
@@ -1312,12 +1378,10 @@ body {
         visualizerCanvas.height = container.clientHeight;
     }
 
-    function drawVisualizer() {
-        animationId = requestAnimationFrame(drawVisualizer);
-
+    function drawBars() {
         analyser.getByteFrequencyData(dataArray);
 
-        // Clear canvas with gradient background
+        // Clear with gradient
         const gradient = ctx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
         gradient.addColorStop(0, '#1a1a1a');
         gradient.addColorStop(1, '#000000');
@@ -1325,29 +1389,138 @@ body {
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
         const barWidth = (visualizerCanvas.width / bufferLength) * 2.5;
-        let barHeight;
         let x = 0;
 
         for (let i = 0; i < bufferLength; i++) {
-            barHeight = (dataArray[i] / 255) * visualizerCanvas.height * 0.8;
+            const barHeight = (dataArray[i] / 255) * visualizerCanvas.height * 0.9;
 
-            // Create gradient for each bar
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
             barGradient.addColorStop(0, '#ff6666');
             barGradient.addColorStop(0.5, '#C33');
             barGradient.addColorStop(1, '#8B2323');
 
             ctx.fillStyle = barGradient;
-            ctx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
-
-            // Add glow effect
             ctx.shadowBlur = 15;
             ctx.shadowColor = '#C33';
+            ctx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
 
             x += barWidth + 2;
         }
 
         ctx.shadowBlur = 0;
+    }
+
+    function drawWaveform() {
+        analyser.getByteTimeDomainData(dataArray);
+
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#C33';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#C33';
+        ctx.beginPath();
+
+        const sliceWidth = visualizerCanvas.width / bufferLength;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const v = dataArray[i] / 128.0;
+            const y = (v * visualizerCanvas.height) / 2;
+
+            if (i === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+
+            x += sliceWidth;
+        }
+
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+    }
+
+    function drawCircular() {
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+
+        const centerX = visualizerCanvas.width / 2;
+        const centerY = visualizerCanvas.height / 2;
+        const radius = Math.min(centerX, centerY) - 50;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = (dataArray[i] / 255) * 100;
+            const angle = (i / bufferLength) * Math.PI * 2;
+
+            const x1 = centerX + Math.cos(angle) * radius;
+            const y1 = centerY + Math.sin(angle) * radius;
+            const x2 = centerX + Math.cos(angle) * (radius + barHeight);
+            const y2 = centerY + Math.sin(angle) * (radius + barHeight);
+
+            const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
+            gradient.addColorStop(0, '#8B2323');
+            gradient.addColorStop(0.5, '#C33');
+            gradient.addColorStop(1, '#ff6666');
+
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 2;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#C33';
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+        }
+
+        ctx.shadowBlur = 0;
+    }
+
+    function drawParticles() {
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+
+        // Create particles based on audio
+        const average = dataArray.reduce((a, b) => a + b) / bufferLength;
+        if (average > 50 && particles.length < 200) {
+            for (let i = 0; i < 3; i++) {
+                particles.push(new Particle(
+                    Math.random() * visualizerCanvas.width,
+                    Math.random() * visualizerCanvas.height
+                ));
+            }
+        }
+
+        // Update and draw particles
+        particles = particles.filter(particle => particle.life > 0);
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+    }
+
+    function drawVisualizer() {
+        animationId = requestAnimationFrame(drawVisualizer);
+
+        switch(currentStyle) {
+            case 'bars':
+                drawBars();
+                break;
+            case 'wave':
+                drawWaveform();
+                break;
+            case 'circular':
+                drawCircular();
+                break;
+            case 'particles':
+                drawParticles();
+                break;
+        }
     }
 
     function updateVisualizerInfo() {
@@ -1358,15 +1531,19 @@ body {
 
     visualizerBtn.addEventListener('click', function() {
         if (!audio.paused) {
-            initAudioContext();
-            resizeCanvas();
-            visualizerOverlay.classList.add('show');
-            updateVisualizerInfo();
-            drawVisualizer();
+            try {
+                initAudioContext();
+                resizeCanvas();
+                visualizerOverlay.classList.add('show');
+                updateVisualizerInfo();
+                drawVisualizer();
 
-            // Resume audio context if suspended
-            if (audioContext.state === 'suspended') {
-                audioContext.resume();
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+            } catch (error) {
+                console.error('Visualizer error:', error);
+                alert('Visualizer failed to start. Try refreshing the page.');
             }
         } else {
             alert('Please start playing the radio first!');
@@ -1379,9 +1556,9 @@ body {
             cancelAnimationFrame(animationId);
             animationId = null;
         }
+        particles = [];
     });
 
-    // Click outside to close
     visualizerOverlay.addEventListener('click', function(e) {
         if (e.target === visualizerOverlay) {
             visualizerOverlay.classList.remove('show');
@@ -1389,17 +1566,26 @@ body {
                 cancelAnimationFrame(animationId);
                 animationId = null;
             }
+            particles = [];
         }
     });
 
-    // Update visualizer info when song changes
+    // Style switcher
+    document.querySelectorAll('.visualizer-style-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.visualizer-style-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentStyle = this.dataset.style;
+            particles = []; // Reset particles when switching
+        });
+    });
+
     setInterval(function() {
         if (visualizerOverlay.classList.contains('show')) {
             updateVisualizerInfo();
         }
     }, 5000);
 
-    // Add pulse effect to visualizer button when playing
     audio.addEventListener('playing', function() {
         visualizerBtn.classList.add('playing');
     });
@@ -1408,7 +1594,6 @@ body {
         visualizerBtn.classList.remove('playing');
     });
 
-    // Resize canvas when window resizes
     window.addEventListener('resize', function() {
         if (visualizerOverlay.classList.contains('show')) {
             resizeCanvas();
