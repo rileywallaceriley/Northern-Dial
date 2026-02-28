@@ -29,6 +29,7 @@
         box-sizing: border-box;
     }
 
+```
 html {
     background-color: #ffffff;
 }
@@ -608,6 +609,7 @@ body {
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
     .visualizer-style-btn { font-size: 0.7rem; padding: 8px 12px; }
 }
+```
 
 </style>
 
@@ -615,6 +617,7 @@ body {
 <body>
     <div class="container">
 
+```
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
@@ -747,6 +750,7 @@ body {
         </button>
     </div>
 </section>
+```
 
 </div>
 
@@ -780,6 +784,7 @@ body {
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
 
+```
         <input type="email" id="artistEmail" placeholder="Your Email *" required
             style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
         
@@ -798,6 +803,7 @@ body {
         </button>
     </form>
 </div>
+```
 
 </div>
 
@@ -808,6 +814,7 @@ body {
             <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
         </div>
 
+```
     <div style="line-height:1.8; color:#333;">
         <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
         <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
@@ -870,6 +877,7 @@ body {
         </div>
     </div>
 </div>
+```
 
 </div>
 
@@ -899,6 +907,7 @@ body {
 <div class="visualizer-overlay" id="visualizerOverlay">
     <button class="visualizer-close" id="visualizerClose">&times;</button>
 
+```
 <div class="visualizer-canvas-container">
     <canvas id="visualizerCanvas"></canvas>
 </div>
@@ -915,6 +924,7 @@ body {
     <button class="visualizer-style-btn" data-style="circular">Circle</button>
     <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
+```
 
 </div>
 
@@ -1360,10 +1370,10 @@ body {
         const barWidth = Math.max(visualizerCanvas.width / numBars - 2, 5);
         
         for (let i = 0; i < numBars; i++) {
-            // Faster, smooth, and lively!
-            const barHeight = (Math.sin(animationTime / 250 + i / 10) * 0.3 + 
-                              Math.sin(animationTime / 180 + i / 7) * 0.3 +
-                              Math.sin(animationTime / 320 + i / 12) * 0.15 +
+            // Fast and smooth - matches music energy!
+            const barHeight = (Math.sin(animationTime / 150 + i / 10) * 0.3 + 
+                              Math.sin(animationTime / 110 + i / 7) * 0.3 +
+                              Math.sin(animationTime / 200 + i / 12) * 0.15 +
                               0.55) * visualizerCanvas.height * 0.75;
 
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
@@ -1393,12 +1403,12 @@ body {
         for (let i = 0; i < points; i++) {
             const x = (i / points) * visualizerCanvas.width;
             
-            // Multiple overlapping waves for more variation and complexity
+            // Faster waves with variation - matches music energy!
             const y = visualizerCanvas.height / 2 + 
-                     Math.sin(animationTime / 80 + i / 15) * 60 +
-                     Math.sin(animationTime / 50 + i / 8) * 40 +
-                     Math.sin(animationTime / 120 + i / 25) * 30 +
-                     Math.cos(animationTime / 90 + i / 12) * 25;
+                     Math.sin(animationTime / 40 + i / 15) * 60 +
+                     Math.sin(animationTime / 25 + i / 8) * 40 +
+                     Math.sin(animationTime / 60 + i / 25) * 30 +
+                     Math.cos(animationTime / 45 + i / 12) * 25;
 
             if (i === 0) {
                 ctx.moveTo(x, y);
@@ -1420,8 +1430,9 @@ body {
         const numBars = 128;
 
         for (let i = 0; i < numBars; i++) {
-            const barHeight = (Math.sin(animationTime / 150 + i / 8) * 0.4 + 
-                              Math.sin(animationTime / 80 + i / 4) * 0.4 +
+            // Faster circular animation - matches music energy!
+            const barHeight = (Math.sin(animationTime / 80 + i / 8) * 0.4 + 
+                              Math.sin(animationTime / 50 + i / 4) * 0.4 +
                               0.5) * 100;
             const angle = (i / numBars) * Math.PI * 2;
 
