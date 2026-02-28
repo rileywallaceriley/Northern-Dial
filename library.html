@@ -29,7 +29,7 @@
         background: white;
         backdrop-filter: blur(10px);
         border-bottom: 4px solid #C33;
-        padding: 20px;
+        padding: 15px 20px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
@@ -38,7 +38,8 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        gap: 30px;
+        justify-content: space-between;
+        gap: 20px;
         flex-wrap: wrap;
     }
 
@@ -59,14 +60,15 @@
     }
 
     .back-arrow {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-right: 10px;
         color: #C33;
     }
 
     .search-container {
         flex: 1;
-        min-width: 250px;
+        min-width: 200px;
+        max-width: 500px;
         position: relative;
     }
 
@@ -260,23 +262,39 @@
     }
 
     @media (max-width: 639px) {
+        .header {
+            padding: 15px;
+        }
+
         .header-content {
             flex-direction: column;
-            align-items: stretch;
-            gap: 15px;
+            align-items: center;
+            gap: 12px;
         }
 
         .logo-link {
             justify-content: center;
-            font-size: 1.2rem;
+            width: 100%;
         }
 
         .logo-link img {
-            height: 40px !important;
+            height: 60px !important;
+            margin: 0 10px !important;
+        }
+
+        .back-arrow {
+            font-size: 1.5rem !important;
+        }
+
+        .search-container {
+            width: 100%;
+            order: 2;
         }
 
         .catalog-info {
             text-align: center;
+            width: 100%;
+            order: 3;
         }
 
         .status-message {
@@ -285,12 +303,21 @@
             bottom: 20px;
         }
 
+        .container > div:first-child {
+            padding: 20px 15px !important;
+        }
+
         .container > div:first-child h1 {
-            font-size: 2rem !important;
+            font-size: 1.8rem !important;
+            letter-spacing: 2px !important;
         }
 
         .container > div:first-child p {
-            font-size: 0.9rem !important;
+            font-size: 0.85rem !important;
+        }
+
+        .container {
+            padding: 20px 15px;
         }
     }
 </style>
@@ -302,7 +329,7 @@
         <div class="header-content">
             <a href="index.html" class="logo-link">
                 <span class="back-arrow">←</span>
-                <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" style="height: 150px; vertical-align: middle; margin: 0 10px;">
+                <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" style="height: 120px; vertical-align: middle; margin: 0 15px;">
             </a>
             <div class="search-container">
                 <input type="text" 
