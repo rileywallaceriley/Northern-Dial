@@ -928,51 +928,6 @@ body {
 
 </div>
 
-<!-- Mobile Debug Console -->
-
-<div id="mobileDebug" style="position:fixed; bottom:0; left:0; right:0; background:rgba(0,0,0,0.9); color:#0f0; font-family:monospace; font-size:10px; max-height:200px; overflow-y:auto; z-index:99999; padding:10px; display:none; border-top:2px solid #0f0;">
-    <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-        <strong>DEBUG CONSOLE</strong>
-        <button onclick="document.getElementById('mobileDebug').style.display='none'" style="background:#f00; color:#fff; border:none; padding:2px 8px; font-size:10px;">Close</button>
-    </div>
-    <div id="debugLog"></div>
-</div>
-
-<script>
-    // Mobile debug logger
-    const debugLog = document.getElementById('debugLog');
-    const mobileDebug = document.getElementById('mobileDebug');
-    const originalLog = console.log;
-    const originalError = console.error;
-    const originalWarn = console.warn;
-    
-    function addDebugLine(msg, type = 'log') {
-        const colors = { log: '#0f0', error: '#f00', warn: '#ff0' };
-        const line = document.createElement('div');
-        line.style.color = colors[type];
-        line.style.marginBottom = '3px';
-        line.textContent = `[${type.toUpperCase()}] ${msg}`;
-        debugLog.appendChild(line);
-        debugLog.scrollTop = debugLog.scrollHeight;
-        mobileDebug.style.display = 'block';
-    }
-    
-    console.log = function(...args) {
-        originalLog.apply(console, args);
-        addDebugLine(args.join(' '), 'log');
-    };
-    
-    console.error = function(...args) {
-        originalError.apply(console, args);
-        addDebugLine(args.join(' '), 'error');
-    };
-    
-    console.warn = function(...args) {
-        originalWarn.apply(console, args);
-        addDebugLine(args.join(' '), 'warn');
-    };
-</script>
-
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js')
@@ -1367,11 +1322,8 @@ body {
     let ctx;
     try {
         ctx = visualizerCanvas.getContext('2d');
-        if (!ctx) {
-            console.error('Could not get 2d context from canvas');
-        }
     } catch (e) {
-        console.error('Error getting canvas context:', e);
+        // Canvas context failed
     }
 
     class Particle {
@@ -1400,12 +1352,10 @@ body {
         const container = visualizerCanvas.parentElement;
         visualizerCanvas.width = container.clientWidth;
         visualizerCanvas.height = container.clientHeight;
-        console.log('Canvas sized:', visualizerCanvas.width, 'x', visualizerCanvas.height);
     }
 
     function drawBars() {
         if (!ctx || !visualizerCanvas.width || !visualizerCanvas.height) {
-            console.warn('Canvas not ready:', visualizerCanvas.width, visualizerCanvas.height);
             return;
         }
         
@@ -1420,9 +1370,10 @@ body {
         const barWidth = Math.max(visualizerCanvas.width / numBars - 2, 5);
         
         for (let i = 0; i < numBars; i++) {
-            const barHeight = (Math.sin(animationTime / 200 + i / 5) * 0.3 + 
-                              Math.sin(animationTime / 100 + i / 3) * 0.4 +
-                              Math.random() * 0.3 + 0.5) * visualizerCanvas.height * 0.8;
+            // Slower, smoother animation - reduced frequencies and less randomness
+            const barHeight = (Math.sin(animationTime / 400 + i / 8) * 0.35 + 
+                              Math.sin(animationTime / 250 + i / 5) * 0.35 +
+                              Math.random() * 0.1 + 0.6) * visualizerCanvas.height * 0.75;
 
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
             barGradient.addColorStop(0, '#ff6666');
@@ -1522,10 +1473,6 @@ body {
     }
 
     function drawVisualizer() {
-        if (!animationTime) {
-            console.log('First frame of visualizer, style:', currentStyle);
-        }
-        
         animationId = requestAnimationFrame(drawVisualizer);
         animationTime++;
 
@@ -1534,9 +1481,7 @@ body {
             case 'wave': drawWaveform(); break;
             case 'circular': drawCircular(); break;
             case 'particles': drawParticles(); break;
-            default: 
-                console.warn('Unknown style:', currentStyle);
-                drawBars();
+            default: drawBars();
         }
     }
 
@@ -1548,25 +1493,19 @@ body {
 
     visualizerBtn.addEventListener('click', function() {
         if (!audio.paused) {
-            console.log('Opening visualizer');
             visualizerOverlay.classList.add('show');
             
-            // Wait for overlay to be visible, then initialize canvas
             setTimeout(() => {
                 resizeCanvas();
-                console.log('Canvas resized to:', visualizerCanvas.width, 'x', visualizerCanvas.height);
                 
-                // Verify canvas context
                 if (!ctx) {
-                    console.error('Canvas context not available!');
+                    alert('Visualizer failed to initialize. Please refresh the page.');
                     return;
                 }
                 
                 updateVisualizerInfo();
                 animationTime = 0;
                 
-                // Start animation loop
-                console.log('Starting animation loop...');
                 if (animationId) {
                     cancelAnimationFrame(animationId);
                 }
