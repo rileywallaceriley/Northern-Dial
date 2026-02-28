@@ -1370,10 +1370,11 @@ body {
         const barWidth = Math.max(visualizerCanvas.width / numBars - 2, 5);
         
         for (let i = 0; i < numBars; i++) {
-            // Much slower, gentle wave motion - smooth and hypnotic, not seizure-inducing
-            const barHeight = (Math.sin(animationTime / 800 + i / 12) * 0.25 + 
-                              Math.sin(animationTime / 600 + i / 8) * 0.25 +
-                              0.65) * visualizerCanvas.height * 0.7;
+            // Perfect balance - smooth but not boring
+            const barHeight = (Math.sin(animationTime / 500 + i / 10) * 0.3 + 
+                              Math.sin(animationTime / 350 + i / 7) * 0.3 +
+                              Math.sin(animationTime / 600 + i / 12) * 0.15 +
+                              0.55) * visualizerCanvas.height * 0.75;
 
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
             barGradient.addColorStop(0, '#ff6666');
