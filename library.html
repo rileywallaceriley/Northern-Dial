@@ -326,24 +326,47 @@
             document.getElementById('loadingState').textContent = 
                 'Loading recently played tracks...';
 
-            // Use the dedicated history endpoint (same as main page Recently Played section)
-            const response = await fetch('https://a10.asurahosting.com/api/station/northern_dial/history?rows=100');
-            
-            if (!response.ok) {
-                throw new Error('Failed to load history');
+            let historyItems = [];
+
+            // Try multiple endpoints
+            const endpoints = [
+                'https://a10.asurahosting.com/public/northern_dial/history',
+                'https://a10.asurahosting.com/api/station/northern_dial/history?rows=100',
+                'https://a10.asurahosting.com/api/nowplaying/northern_dial'
+            ];
+
+            for (const endpoint of endpoints) {
+                try {
+                    console.log(`Trying: ${endpoint}`);
+                    const response = await fetch(endpoint);
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        
+                        // Handle different response formats
+                        if (Array.isArray(data)) {
+                            historyItems = data;
+                        } else if (data.rows) {
+                            historyItems = data.rows;
+                        } else if (data.song_history) {
+                            historyItems = data.song_history;
+                        }
+                        
+                        if (historyItems.length > 0) {
+                            console.log(`✓ Success! Got ${historyItems.length} songs from ${endpoint}`);
+                            break;
+                        }
+                    }
+                } catch (e) {
+                    console.log(`✗ Failed: ${endpoint}`, e);
+                }
             }
-
-            const data = await response.json();
-            console.log('API Response:', data);
-
-            // Handle both array response and object with rows
-            const historyItems = Array.isArray(data) ? data : (data.rows || data.results || []);
-
-            console.log(`History items found: ${historyItems.length}`);
 
             if (historyItems.length === 0) {
-                throw new Error('No recent plays available');
+                throw new Error('No songs available from any endpoint');
             }
+
+            console.log(`Total history items: ${historyItems.length}`);
 
             // Extract unique tracks
             const uniqueTracks = [];
@@ -360,13 +383,17 @@
                         title: song.title || 'Unknown Track',
                         artist: song.artist || 'Unknown Artist',
                         art: song.art || '',
-                        played_at: item.played_at,
+                        played_at: item.played_at || Date.now() / 1000,
                         request_url: `/api/station/northern_dial/request/${songId}`
                     });
                 }
             });
 
             console.log(`Unique tracks: ${uniqueTracks.length}`);
+
+            if (uniqueTracks.length === 0) {
+                throw new Error('No valid tracks found');
+            }
 
             // Sort by most recently played
             allTracks = uniqueTracks.sort((a, b) => b.played_at - a.played_at);
@@ -381,7 +408,7 @@
         } catch (error) {
             console.error('Error loading recent plays:', error);
             document.getElementById('loadingState').innerHTML = 
-                '<div style="color:#C33;">Failed to load recent plays.<br><small>' + error.message + '</small><br><br>Please refresh the page or <a href="index.html" style="color:#C33; text-decoration:underline;">return home</a>.</div>';
+                '<div style="color:#C33;">Unable to load enough recent plays from the API.<br><br>The station\'s API only provides access to ~5 recent songs.<br><br><a href="index.html" style="color:#C33; text-decoration:underline;">← Return home</a></div>';
         }
     }
 
