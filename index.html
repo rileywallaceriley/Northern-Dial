@@ -29,6 +29,7 @@
         box-sizing: border-box;
     }
 
+```
 html {
     background-color: #ffffff;
 }
@@ -188,6 +189,125 @@ body {
     border-radius: 50%;
     cursor: pointer;
     border: none;
+}
+
+.visualizer-btn {
+    background: linear-gradient(135deg, #C33, #8B2323);
+    color: white;
+    border: 3px solid white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.visualizer-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(195, 51, 51, 0.8);
+}
+
+.visualizer-btn.playing {
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(195, 51, 51, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(195, 51, 51, 0.9); }
+}
+
+.visualizer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.98);
+    z-index: 10000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.visualizer-overlay.show {
+    display: flex;
+}
+
+.visualizer-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #C33;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.visualizer-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    background: #ff4444;
+}
+
+.visualizer-canvas-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+    border-radius: 12px;
+    border: 5px solid #C33;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+#visualizerCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.visualizer-info {
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.visualizer-song {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: #C33;
+    margin-bottom: 15px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 30px rgba(195, 51, 51, 0.8);
+    line-height: 1.2;
+}
+
+.visualizer-artist {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.visualizer-status {
+    font-size: 1rem;
+    color: #C33;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 .content-columns {
@@ -458,7 +578,13 @@ body {
     .install-banner-buttons { width: 100%; justify-content: stretch; }
     .install-btn, .dismiss-btn { flex: 1; }
     .install-modal-content { padding: 20px; }
+    .visualizer-btn { font-size: 0.8rem; padding: 10px 18px; }
+    .visualizer-song { font-size: 2rem; letter-spacing: 3px; }
+    .visualizer-artist { font-size: 1.2rem; }
+    .visualizer-canvas-container { height: 250px; }
+    .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
 }
+```
 
 </style>
 
@@ -466,6 +592,7 @@ body {
 <body>
     <div class="container">
 
+```
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
@@ -486,6 +613,10 @@ body {
                 <span class="volume-icon">🔊</span>
                 <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
             </div>
+            <button class="visualizer-btn" id="visualizerBtn">
+                <span style="margin-right: 8px;">🎵</span>
+                Visualizer
+            </button>
         </div>
     </div>
     <audio id="radioStream" preload="none">
@@ -594,6 +725,7 @@ body {
         </button>
     </div>
 </section>
+```
 
 </div>
 
@@ -627,6 +759,7 @@ body {
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
 
+```
         <input type="email" id="artistEmail" placeholder="Your Email *" required
             style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
         
@@ -645,6 +778,7 @@ body {
         </button>
     </form>
 </div>
+```
 
 </div>
 
@@ -655,6 +789,7 @@ body {
             <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
         </div>
 
+```
     <div style="line-height:1.8; color:#333;">
         <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
         <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
@@ -717,6 +852,7 @@ body {
         </div>
     </div>
 </div>
+```
 
 </div>
 
@@ -741,6 +877,23 @@ body {
         </div>
         <div class="install-modal-steps" id="installSteps"></div>
     </div>
+</div>
+
+<div class="visualizer-overlay" id="visualizerOverlay">
+    <button class="visualizer-close" id="visualizerClose">&times;</button>
+
+```
+<div class="visualizer-canvas-container">
+    <canvas id="visualizerCanvas"></canvas>
+</div>
+
+<div class="visualizer-info">
+    <div class="visualizer-status" id="visualizerStatus">LIVE NOW</div>
+    <div class="visualizer-song" id="visualizerSong">Northern Dial Radio</div>
+    <div class="visualizer-artist" id="visualizerArtist">All Killer, All CanCon</div>
+</div>
+```
+
 </div>
 
 <script>
@@ -1118,6 +1271,149 @@ body {
             document.getElementById('requestSearch').value = '';
         }
     }
+
+    // Visualizer functionality
+    let audioContext;
+    let analyser;
+    let dataArray;
+    let bufferLength;
+    let animationId;
+    let audioSource;
+
+    const visualizerBtn = document.getElementById('visualizerBtn');
+    const visualizerOverlay = document.getElementById('visualizerOverlay');
+    const visualizerClose = document.getElementById('visualizerClose');
+    const visualizerCanvas = document.getElementById('visualizerCanvas');
+    const visualizerSong = document.getElementById('visualizerSong');
+    const visualizerArtist = document.getElementById('visualizerArtist');
+    const visualizerStatus = document.getElementById('visualizerStatus');
+    const ctx = visualizerCanvas.getContext('2d');
+
+    function initAudioContext() {
+        if (!audioContext) {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            analyser.fftSize = 256;
+            bufferLength = analyser.frequencyBinCount;
+            dataArray = new Uint8Array(bufferLength);
+
+            // Connect audio element to analyser
+            if (!audioSource) {
+                audioSource = audioContext.createMediaElementSource(audio);
+                audioSource.connect(analyser);
+                analyser.connect(audioContext.destination);
+            }
+        }
+    }
+
+    function resizeCanvas() {
+        const container = visualizerCanvas.parentElement;
+        visualizerCanvas.width = container.clientWidth;
+        visualizerCanvas.height = container.clientHeight;
+    }
+
+    function drawVisualizer() {
+        animationId = requestAnimationFrame(drawVisualizer);
+
+        analyser.getByteFrequencyData(dataArray);
+
+        // Clear canvas with gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
+        gradient.addColorStop(0, '#1a1a1a');
+        gradient.addColorStop(1, '#000000');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+
+        const barWidth = (visualizerCanvas.width / bufferLength) * 2.5;
+        let barHeight;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            barHeight = (dataArray[i] / 255) * visualizerCanvas.height * 0.8;
+
+            // Create gradient for each bar
+            const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
+            barGradient.addColorStop(0, '#ff6666');
+            barGradient.addColorStop(0.5, '#C33');
+            barGradient.addColorStop(1, '#8B2323');
+
+            ctx.fillStyle = barGradient;
+            ctx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
+
+            // Add glow effect
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = '#C33';
+
+            x += barWidth + 2;
+        }
+
+        ctx.shadowBlur = 0;
+    }
+
+    function updateVisualizerInfo() {
+        visualizerSong.textContent = songTitle.textContent;
+        visualizerArtist.textContent = artistName.textContent;
+        visualizerStatus.textContent = statusText.textContent;
+    }
+
+    visualizerBtn.addEventListener('click', function() {
+        if (!audio.paused) {
+            initAudioContext();
+            resizeCanvas();
+            visualizerOverlay.classList.add('show');
+            updateVisualizerInfo();
+            drawVisualizer();
+
+            // Resume audio context if suspended
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+        } else {
+            alert('Please start playing the radio first!');
+        }
+    });
+
+    visualizerClose.addEventListener('click', function() {
+        visualizerOverlay.classList.remove('show');
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+    });
+
+    // Click outside to close
+    visualizerOverlay.addEventListener('click', function(e) {
+        if (e.target === visualizerOverlay) {
+            visualizerOverlay.classList.remove('show');
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+    });
+
+    // Update visualizer info when song changes
+    setInterval(function() {
+        if (visualizerOverlay.classList.contains('show')) {
+            updateVisualizerInfo();
+        }
+    }, 5000);
+
+    // Add pulse effect to visualizer button when playing
+    audio.addEventListener('playing', function() {
+        visualizerBtn.classList.add('playing');
+    });
+
+    audio.addEventListener('pause', function() {
+        visualizerBtn.classList.remove('playing');
+    });
+
+    // Resize canvas when window resizes
+    window.addEventListener('resize', function() {
+        if (visualizerOverlay.classList.contains('show')) {
+            resizeCanvas();
+        }
+    });
 </script>
 
 </body>
