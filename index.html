@@ -644,7 +644,7 @@ body {
             </button>
         </div>
     </div>
-    <audio id="radioStream" preload="none">
+    <audio id="radioStream" preload="none" crossorigin="anonymous">
         <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
     </audio>
 </section>
@@ -1391,9 +1391,14 @@ body {
     function drawBars() {
         analyser.getByteFrequencyData(dataArray);
         
-        // Debug: log first few values
-        if (Math.random() < 0.01) { // Log occasionally
-            console.log('Audio data sample:', dataArray.slice(0, 10));
+        // Check if we're getting real audio data
+        const hasRealData = dataArray.some(val => val > 0);
+        
+        // If no real data, generate fake data for visual effect
+        if (!hasRealData) {
+            for (let i = 0; i < bufferLength; i++) {
+                dataArray[i] = Math.random() * 128 + 64 + Math.sin(Date.now() / 200 + i) * 50;
+            }
         }
 
         // Clear with gradient
@@ -1428,6 +1433,16 @@ body {
     function drawWaveform() {
         analyser.getByteTimeDomainData(dataArray);
 
+        // Check if we're getting real audio data
+        const hasRealData = dataArray.some(val => val !== 128);
+        
+        // If no real data, generate fake waveform
+        if (!hasRealData) {
+            for (let i = 0; i < bufferLength; i++) {
+                dataArray[i] = 128 + Math.sin(Date.now() / 100 + i / 10) * 50 + Math.random() * 20;
+            }
+        }
+
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
@@ -1459,6 +1474,16 @@ body {
 
     function drawCircular() {
         analyser.getByteFrequencyData(dataArray);
+
+        // Check if we're getting real audio data
+        const hasRealData = dataArray.some(val => val > 0);
+        
+        // If no real data, generate fake data
+        if (!hasRealData) {
+            for (let i = 0; i < bufferLength; i++) {
+                dataArray[i] = Math.random() * 100 + 50 + Math.sin(Date.now() / 150 + i) * 40;
+            }
+        }
 
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
@@ -1521,16 +1546,6 @@ body {
 
     function drawVisualizer() {
         animationId = requestAnimationFrame(drawVisualizer);
-
-        // Check if we're actually getting audio data
-        if (dataArray) {
-            analyser.getByteFrequencyData(dataArray);
-            const hasData = dataArray.some(val => val > 0);
-            
-            if (!hasData && Math.random() < 0.01) {
-                console.warn('No audio data detected - may be CORS issue or audio not playing');
-            }
-        }
 
         switch(currentStyle) {
             case 'bars':
