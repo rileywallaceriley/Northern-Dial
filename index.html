@@ -919,8 +919,7 @@ body {
 </div>
 
 <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: center; flex-wrap: nowrap;">
-    <button class="visualizer-style-btn active" data-style="bars">Bars</button>
-    <button class="visualizer-style-btn" data-style="wave">Wave</button>
+    <button class="visualizer-style-btn active" data-style="wave">Wave</button>
     <button class="visualizer-style-btn" data-style="circular">Circle</button>
     <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
@@ -1307,7 +1306,7 @@ body {
 
     // Simple Animated Visualizer (no real audio analysis - avoids CORS issues)
     let animationId;
-    let currentStyle = 'bars';
+    let currentStyle = 'wave';
     let particles = [];
     let animationTime = 0;
 
@@ -1483,11 +1482,10 @@ body {
         animationTime++;
 
         switch(currentStyle) {
-            case 'bars': drawBars(); break;
             case 'wave': drawWaveform(); break;
             case 'circular': drawCircular(); break;
             case 'particles': drawParticles(); break;
-            default: drawBars();
+            default: drawWaveform();
         }
     }
 
