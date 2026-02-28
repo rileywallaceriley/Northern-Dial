@@ -1370,10 +1370,10 @@ body {
         const barWidth = Math.max(visualizerCanvas.width / numBars - 2, 5);
         
         for (let i = 0; i < numBars; i++) {
-            // Slower, smoother animation - reduced frequencies and less randomness
-            const barHeight = (Math.sin(animationTime / 400 + i / 8) * 0.35 + 
-                              Math.sin(animationTime / 250 + i / 5) * 0.35 +
-                              Math.random() * 0.1 + 0.6) * visualizerCanvas.height * 0.75;
+            // Much slower, gentle wave motion - smooth and hypnotic, not seizure-inducing
+            const barHeight = (Math.sin(animationTime / 800 + i / 12) * 0.25 + 
+                              Math.sin(animationTime / 600 + i / 8) * 0.25 +
+                              0.65) * visualizerCanvas.height * 0.7;
 
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
             barGradient.addColorStop(0, '#ff6666');
@@ -1401,9 +1401,13 @@ body {
         const points = 200;
         for (let i = 0; i < points; i++) {
             const x = (i / points) * visualizerCanvas.width;
+            
+            // Multiple overlapping waves for more variation and complexity
             const y = visualizerCanvas.height / 2 + 
-                     Math.sin(animationTime / 50 + i / 10) * 80 +
-                     Math.sin(animationTime / 30 + i / 5) * 40;
+                     Math.sin(animationTime / 80 + i / 15) * 60 +
+                     Math.sin(animationTime / 50 + i / 8) * 40 +
+                     Math.sin(animationTime / 120 + i / 25) * 30 +
+                     Math.cos(animationTime / 90 + i / 12) * 25;
 
             if (i === 0) {
                 ctx.moveTo(x, y);
