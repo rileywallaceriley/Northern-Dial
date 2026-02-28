@@ -324,84 +324,84 @@
     async function loadCatalog() {
         try {
             let allApiTracks = [];
-            const rowCount = 100;
-            
-            // Search patterns: alphabet + numbers + special characters
-            const searchPatterns = [
-                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                '!', '@', '#', '$', '%', '&', '(', ')', '-', '_', '=', '+', '[', ']'
-            ];
+            const rowCount = 500;
+            let currentPage = 1;
+            let totalAvailable = null;
 
             document.getElementById('loadingState').textContent = 
-                'Loading full catalog... (this may take a moment)';
+                'Loading full music library...';
 
-            // Fetch songs for each search pattern
-            for (let i = 0; i < searchPatterns.length; i++) {
-                const pattern = searchPatterns[i];
-                let currentPage = 1;
-                let keepFetching = true;
-
-                while (keepFetching) {
-                    const response = await fetch(
-                        `https://a10.asurahosting.com/api/station/northern_dial/requests?searchPhrase=${encodeURIComponent(pattern)}&rowCount=${rowCount}&current=${currentPage}`
-                    );
-                    
-                    if (!response.ok) break;
-
-                    const data = await response.json();
-                    const tracks = data.rows || data.result || data.results || [];
-
-                    if (tracks.length > 0) {
-                        allApiTracks = allApiTracks.concat(tracks);
-                        
-                        document.getElementById('loadingState').textContent = 
-                            `Loading catalog... (${allApiTracks.length} tracks, searching "${pattern.toUpperCase()}")`;
-                        
-                        // If we got fewer tracks than requested, this is the last page for this pattern
-                        if (tracks.length < rowCount) {
-                            keepFetching = false;
-                        } else {
-                            currentPage++;
-                        }
-                    } else {
-                        keepFetching = false;
-                    }
-
-                    // Safety limit per pattern
-                    if (currentPage > 50) {
-                        console.warn(`Reached page limit for pattern "${pattern}"`);
-                        keepFetching = false;
-                    }
-                }
-
-                console.log(`Pattern "${pattern}": ${allApiTracks.length} total tracks so far`);
+            // Try the files endpoint for full library
+            const firstResponse = await fetch(
+                `https://a10.asurahosting.com/api/station/northern_dial/files?currentDirectory=&rowCount=${rowCount}&current=1`
+            );
+            
+            if (!firstResponse.ok) {
+                throw new Error('Failed to load library');
             }
 
-            console.log(`Total tracks fetched: ${allApiTracks.length}`);
+            const firstData = await firstResponse.json();
+            const firstTracks = firstData.rows || [];
+            totalAvailable = firstData.total || firstTracks.length;
+            
+            allApiTracks = firstTracks;
+            
+            console.log(`Total files in library: ${totalAvailable}`);
+            console.log(`Page 1: ${firstTracks.length} tracks`);
 
-            // Extract unique tracks (deduplicate by song ID)
+            const totalPages = Math.ceil(totalAvailable / rowCount);
+            
+            document.getElementById('loadingState').textContent = 
+                `Loading library... (${allApiTracks.length} of ${totalAvailable})`;
+
+            // Fetch remaining pages
+            for (let page = 2; page <= totalPages; page++) {
+                const response = await fetch(
+                    `https://a10.asurahosting.com/api/station/northern_dial/files?currentDirectory=&rowCount=${rowCount}&current=${page}`
+                );
+                
+                if (!response.ok) continue;
+
+                const data = await response.json();
+                const tracks = data.rows || [];
+                
+                console.log(`Page ${page}: ${tracks.length} tracks`);
+                
+                if (tracks.length > 0) {
+                    allApiTracks = allApiTracks.concat(tracks);
+                    
+                    document.getElementById('loadingState').textContent = 
+                        `Loading library... (${allApiTracks.length} of ${totalAvailable})`;
+                }
+
+                // Small delay to avoid rate limiting
+                await new Promise(resolve => setTimeout(resolve, 50));
+            }
+
+            console.log(`Total files fetched: ${allApiTracks.length}`);
+
+            // Extract unique tracks from files
             const uniqueTracks = [];
             const seenIds = new Set();
 
             allApiTracks.forEach(item => {
-                const song = item.song || item;
-                const songId = song.song_id || song.id;
+                // Files endpoint has different structure
+                const songId = item.unique_id || item.id;
                 
-                if (!seenIds.has(songId)) {
+                if (!seenIds.has(songId) && item.title) {
                     seenIds.add(songId);
                     uniqueTracks.push({
                         id: songId,
-                        title: song.title || 'Unknown Title',
-                        artist: song.artist || 'Unknown Artist',
-                        art: song.art || song.album_art || '',
-                        request_url: item.request_url
+                        title: item.title || 'Unknown Title',
+                        artist: item.artist || 'Unknown Artist',
+                        art: item.art || item.album_art || '',
+                        // Files endpoint may not have request_url, construct it
+                        request_url: item.request_url || `/api/station/northern_dial/request/${songId}`
                     });
                 }
             });
 
-            console.log(`Unique tracks after deduplication: ${uniqueTracks.length}`);
+            console.log(`Unique tracks after processing: ${uniqueTracks.length}`);
 
             // Sort alphabetically by title
             allTracks = uniqueTracks.sort((a, b) => 
@@ -416,9 +416,9 @@
             document.getElementById('catalogGrid').style.display = 'grid';
 
         } catch (error) {
-            console.error('Error loading catalog:', error);
+            console.error('Error loading library:', error);
             document.getElementById('loadingState').innerHTML = 
-                '<div style="color:#C33;">Failed to load catalog. Please refresh the page.</div>';
+                '<div style="color:#C33;">Failed to load library. Please refresh the page.</div>';
         }
     }
 
