@@ -29,7 +29,7 @@
         box-sizing: border-box;
     }
 
-
+```
 html {
     background-color: #ffffff;
 }
@@ -460,7 +460,7 @@ body {
     .install-btn, .dismiss-btn { flex: 1; }
     .install-modal-content { padding: 20px; }
 }
-
+```
 
 </style>
 
@@ -468,7 +468,7 @@ body {
 <body>
     <div class="container">
 
-
+```
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
@@ -494,6 +494,23 @@ body {
     <audio id="radioStream" preload="none">
         <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
     </audio>
+</section>
+
+<!-- Explore Recent Songs Banner -->
+<section style="margin-bottom: 60px;">
+    <a href="catalog.html" style="text-decoration: none; display: block;">
+        <div style="background:linear-gradient(135deg, #1a1a1a, #2a2a2a); border:5px solid #C33; border-radius:12px; padding:30px; text-align:center; cursor:pointer; transition:all 0.3s ease; box-shadow:0 6px 25px rgba(195,51,51,0.3);"
+            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 35px rgba(195,51,51,0.5)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 25px rgba(195,51,51,0.3)'">
+            <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#C33; text-transform:uppercase; letter-spacing:5px; margin-bottom:12px; text-shadow:2px 2px 4px rgba(0,0,0,0.3);">Explore Recent Songs</h2>
+            <p style="color:rgba(255,255,255,0.9); font-size:1.1rem; margin-bottom:20px; line-height:1.5;">Browse recently played tracks and search our catalog</p>
+            <button style="background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:12px 35px; border-radius:8px; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(195,51,51,0.3);"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(195,51,51,0.5)'"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(195,51,51,0.3)'">
+                Browse Now →
+            </button>
+        </div>
+    </a>
 </section>
 
 <div class="content-columns">
@@ -580,7 +597,7 @@ body {
         </button>
     </div>
 </section>
-
+```
 
 </div>
 
@@ -614,7 +631,7 @@ body {
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
 
-
+```
         <input type="email" id="artistEmail" placeholder="Your Email *" required
             style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
         
@@ -633,7 +650,7 @@ body {
         </button>
     </form>
 </div>
-
+```
 
 </div>
 
@@ -644,7 +661,7 @@ body {
             <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
         </div>
 
-    
+```
     <div style="line-height:1.8; color:#333;">
         <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
         <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
@@ -707,7 +724,7 @@ body {
         </div>
     </div>
 </div>
-
+```
 
 </div>
 
@@ -801,12 +818,16 @@ body {
 
     async function updateRecentlyPlayed() {
         try {
-            const response = await fetch('https://a10.asurahosting.com/api/nowplaying/northern_dial');
+            // Fetch from history endpoint to get more songs
+            const response = await fetch('https://a10.asurahosting.com/api/station/northern_dial/history?rows=20');
             const data = await response.json();
             const recentlyPlayed = document.getElementById('recentlyPlayed');
 
-            if (data && data.song_history && Array.isArray(data.song_history)) {
-                recentlyPlayed.innerHTML = data.song_history.map(item => {
+            // Handle both array response and object with rows
+            const historyItems = Array.isArray(data) ? data : (data.rows || data.results || []);
+
+            if (historyItems && historyItems.length > 0) {
+                recentlyPlayed.innerHTML = historyItems.map(item => {
                     const song = item.song || {};
                     const title = song.title || 'Unknown Track';
                     const artist = song.artist || 'Unknown Artist';
@@ -958,27 +979,35 @@ body {
         const socialLinks = document.getElementById('socialLinks').value;
         const artistMessage = document.getElementById('artistMessage').value;
 
-        const subject = `Music Submission: ${artistName}`;
-        const body = `
-Artist/Band Name/Podcast: ${artistName}
-Email: ${artistEmail}
+        const formData = {
+            formType: 'Music Submission',
+            artistName: artistName,
+            email: artistEmail,
+            trackLinks: trackLinks,
+            socialLinks: socialLinks,
+            message: artistMessage
+        };
 
-Track Links:
-${trackLinks}
-
-Social Media:
-${socialLinks}
-
-Message:
-${artistMessage}
-`.trim();
-
-        window.location.href = `mailto:rileywallace@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        setTimeout(() => {
-            document.getElementById('submitModal').classList.remove('show');
-            document.getElementById('submitForm').reset();
-        }, 500);
+        fetch('https://submit-form.com/xNHkj978w', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('✓ Submission received! We\'ll be in touch soon.');
+                document.getElementById('submitModal').classList.remove('show');
+                document.getElementById('submitForm').reset();
+            } else {
+                alert('Something went wrong. Please try again or email us directly at rileywallace@gmail.com');
+            }
+        })
+        .catch(error => {
+            alert('Something went wrong. Please try again or email us directly at rileywallace@gmail.com');
+        });
     }
 
     function handleInvolvedForm(event) {
@@ -989,22 +1018,34 @@ ${artistMessage}
         const interest = document.getElementById('involvedInterest').value;
         const message = document.getElementById('involvedMessage').value;
 
-        const subject = `Get Involved: ${interest}`;
-        const body = `
-Name: ${name}
-Email: ${email}
-Interest: ${interest}
+        const formData = {
+            formType: 'Get Involved',
+            name: name,
+            email: email,
+            interest: interest,
+            message: message
+        };
 
-Message:
-${message}
-`.trim();
-
-        window.location.href = `mailto:rileywallace@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        setTimeout(() => {
-            document.getElementById('involvedModal').classList.remove('show');
-            document.getElementById('involvedForm').reset();
-        }, 500);
+        fetch('https://submit-form.com/xNHkj978w', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('✓ Thanks for your interest! We\'ll be in touch soon.');
+                document.getElementById('involvedModal').classList.remove('show');
+                document.getElementById('involvedForm').reset();
+            } else {
+                alert('Something went wrong. Please try again or email us directly at rileywallace@gmail.com');
+            }
+        })
+        .catch(error => {
+            alert('Something went wrong. Please try again or email us directly at rileywallace@gmail.com');
+        });
     }
 
     async function searchSongs() {
