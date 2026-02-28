@@ -29,6 +29,7 @@
         box-sizing: border-box;
     }
 
+```
 html {
     background-color: #ffffff;
 }
@@ -608,6 +609,7 @@ body {
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
     .visualizer-style-btn { font-size: 0.7rem; padding: 8px 12px; }
 }
+```
 
 </style>
 
@@ -615,6 +617,7 @@ body {
 <body>
     <div class="container">
 
+```
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
@@ -641,7 +644,7 @@ body {
             </button>
         </div>
     </div>
-    <audio id="radioStream" preload="none" crossorigin="anonymous">
+    <audio id="radioStream" preload="none">
         <source src="https://a10.asurahosting.com:7220/radio.mp3" type="audio/mpeg">
     </audio>
 </section>
@@ -747,6 +750,7 @@ body {
         </button>
     </div>
 </section>
+```
 
 </div>
 
@@ -780,6 +784,7 @@ body {
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
 
+```
         <input type="email" id="artistEmail" placeholder="Your Email *" required
             style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
         
@@ -798,6 +803,7 @@ body {
         </button>
     </form>
 </div>
+```
 
 </div>
 
@@ -808,6 +814,7 @@ body {
             <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
         </div>
 
+```
     <div style="line-height:1.8; color:#333;">
         <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
         <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
@@ -870,6 +877,7 @@ body {
         </div>
     </div>
 </div>
+```
 
 </div>
 
@@ -899,6 +907,7 @@ body {
 <div class="visualizer-overlay" id="visualizerOverlay">
     <button class="visualizer-close" id="visualizerClose">&times;</button>
 
+```
 <div class="visualizer-canvas-container">
     <canvas id="visualizerCanvas"></canvas>
 </div>
@@ -915,6 +924,7 @@ body {
     <button class="visualizer-style-btn" data-style="circular">Circle</button>
     <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
+```
 
 </div>
 
@@ -1294,15 +1304,12 @@ body {
         }
     }
 
-    // Visualizer functionality
-    let audioContext;
-    let analyser;
-    let dataArray;
-    let bufferLength;
+
+    // Simple Animated Visualizer (no real audio analysis - avoids CORS issues)
     let animationId;
-    let audioSource;
     let currentStyle = 'bars';
     let particles = [];
+    let animationTime = 0;
 
     const visualizerBtn = document.getElementById('visualizerBtn');
     const visualizerOverlay = document.getElementById('visualizerOverlay');
@@ -1313,7 +1320,6 @@ body {
     const visualizerStatus = document.getElementById('visualizerStatus');
     const ctx = visualizerCanvas.getContext('2d');
 
-    // Particle class for particle visualizer
     class Particle {
         constructor(x, y) {
             this.x = x;
@@ -1323,52 +1329,16 @@ body {
             this.speedY = Math.random() * 3 - 1.5;
             this.life = 1;
         }
-
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
             this.life -= 0.01;
         }
-
         draw() {
             ctx.fillStyle = `rgba(195, 51, 51, ${this.life})`;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
-        }
-    }
-
-    function initAudioContext() {
-        if (!audioContext) {
-            try {
-                console.log('Creating audio context...');
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                console.log('Audio context state:', audioContext.state);
-                
-                analyser = audioContext.createAnalyser();
-                analyser.fftSize = 512;
-                analyser.smoothingTimeConstant = 0.8;
-                bufferLength = analyser.frequencyBinCount;
-                dataArray = new Uint8Array(bufferLength);
-                
-                console.log('Analyser created, buffer length:', bufferLength);
-
-                // Connect audio element to analyser
-                if (!audioSource) {
-                    console.log('Creating media element source...');
-                    audioSource = audioContext.createMediaElementSource(audio);
-                    audioSource.connect(analyser);
-                    analyser.connect(audioContext.destination);
-                    console.log('Audio source connected');
-                }
-
-                console.log('Audio context initialized successfully');
-            } catch (error) {
-                console.error('Error initializing audio context:', error);
-                alert('Audio analysis failed: ' + error.message + '\n\nThe visualizer may not work due to browser restrictions.');
-            }
-        } else {
-            console.log('Audio context already exists, state:', audioContext.state);
         }
     }
 
@@ -1379,30 +1349,19 @@ body {
     }
 
     function drawBars() {
-        analyser.getByteFrequencyData(dataArray);
-        
-        // Check if we're getting real audio data
-        const hasRealData = dataArray.some(val => val > 0);
-        
-        // If no real data, generate fake data for visual effect
-        if (!hasRealData) {
-            for (let i = 0; i < bufferLength; i++) {
-                dataArray[i] = Math.random() * 128 + 64 + Math.sin(Date.now() / 200 + i) * 50;
-            }
-        }
-
-        // Clear with gradient
         const gradient = ctx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
         gradient.addColorStop(0, '#1a1a1a');
         gradient.addColorStop(1, '#000000');
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
-        const barWidth = (visualizerCanvas.width / bufferLength) * 2.5;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = (dataArray[i] / 255) * visualizerCanvas.height * 0.9;
+        const numBars = 64;
+        const barWidth = visualizerCanvas.width / numBars - 2;
+        
+        for (let i = 0; i < numBars; i++) {
+            const barHeight = (Math.sin(animationTime / 200 + i / 5) * 0.3 + 
+                              Math.sin(animationTime / 100 + i / 3) * 0.4 +
+                              Math.random() * 0.3 + 0.5) * visualizerCanvas.height * 0.8;
 
             const barGradient = ctx.createLinearGradient(0, visualizerCanvas.height - barHeight, 0, visualizerCanvas.height);
             barGradient.addColorStop(0, '#ff6666');
@@ -1412,27 +1371,12 @@ body {
             ctx.fillStyle = barGradient;
             ctx.shadowBlur = 15;
             ctx.shadowColor = '#C33';
-            ctx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
-
-            x += barWidth + 2;
+            ctx.fillRect(i * (barWidth + 2), visualizerCanvas.height - barHeight, barWidth, barHeight);
         }
-
         ctx.shadowBlur = 0;
     }
 
     function drawWaveform() {
-        analyser.getByteTimeDomainData(dataArray);
-
-        // Check if we're getting real audio data
-        const hasRealData = dataArray.some(val => val !== 128);
-        
-        // If no real data, generate fake waveform
-        if (!hasRealData) {
-            for (let i = 0; i < bufferLength; i++) {
-                dataArray[i] = 128 + Math.sin(Date.now() / 100 + i / 10) * 50 + Math.random() * 20;
-            }
-        }
-
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
@@ -1442,49 +1386,37 @@ body {
         ctx.shadowColor = '#C33';
         ctx.beginPath();
 
-        const sliceWidth = visualizerCanvas.width / bufferLength;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            const v = dataArray[i] / 128.0;
-            const y = (v * visualizerCanvas.height) / 2;
+        const points = 200;
+        for (let i = 0; i < points; i++) {
+            const x = (i / points) * visualizerCanvas.width;
+            const y = visualizerCanvas.height / 2 + 
+                     Math.sin(animationTime / 50 + i / 10) * 80 +
+                     Math.sin(animationTime / 30 + i / 5) * 40;
 
             if (i === 0) {
                 ctx.moveTo(x, y);
             } else {
                 ctx.lineTo(x, y);
             }
-
-            x += sliceWidth;
         }
-
         ctx.stroke();
         ctx.shadowBlur = 0;
     }
 
     function drawCircular() {
-        analyser.getByteFrequencyData(dataArray);
-
-        // Check if we're getting real audio data
-        const hasRealData = dataArray.some(val => val > 0);
-        
-        // If no real data, generate fake data
-        if (!hasRealData) {
-            for (let i = 0; i < bufferLength; i++) {
-                dataArray[i] = Math.random() * 100 + 50 + Math.sin(Date.now() / 150 + i) * 40;
-            }
-        }
-
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
         const centerX = visualizerCanvas.width / 2;
         const centerY = visualizerCanvas.height / 2;
         const radius = Math.min(centerX, centerY) - 50;
+        const numBars = 128;
 
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = (dataArray[i] / 255) * 100;
-            const angle = (i / bufferLength) * Math.PI * 2;
+        for (let i = 0; i < numBars; i++) {
+            const barHeight = (Math.sin(animationTime / 150 + i / 8) * 0.4 + 
+                              Math.sin(animationTime / 80 + i / 4) * 0.4 +
+                              0.5) * 100;
+            const angle = (i / numBars) * Math.PI * 2;
 
             const x1 = centerX + Math.cos(angle) * radius;
             const y1 = centerY + Math.sin(angle) * radius;
@@ -1505,19 +1437,14 @@ body {
             ctx.lineTo(x2, y2);
             ctx.stroke();
         }
-
         ctx.shadowBlur = 0;
     }
 
     function drawParticles() {
-        analyser.getByteFrequencyData(dataArray);
-
         ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
         ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
 
-        // Create particles based on audio
-        const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-        if (average > 50 && particles.length < 200) {
+        if (animationTime % 5 === 0 && particles.length < 200) {
             for (let i = 0; i < 3; i++) {
                 particles.push(new Particle(
                     Math.random() * visualizerCanvas.width,
@@ -1526,7 +1453,6 @@ body {
             }
         }
 
-        // Update and draw particles
         particles = particles.filter(particle => particle.life > 0);
         particles.forEach(particle => {
             particle.update();
@@ -1536,20 +1462,13 @@ body {
 
     function drawVisualizer() {
         animationId = requestAnimationFrame(drawVisualizer);
+        animationTime++;
 
         switch(currentStyle) {
-            case 'bars':
-                drawBars();
-                break;
-            case 'wave':
-                drawWaveform();
-                break;
-            case 'circular':
-                drawCircular();
-                break;
-            case 'particles':
-                drawParticles();
-                break;
+            case 'bars': drawBars(); break;
+            case 'wave': drawWaveform(); break;
+            case 'circular': drawCircular(); break;
+            case 'particles': drawParticles(); break;
         }
     }
 
@@ -1561,43 +1480,11 @@ body {
 
     visualizerBtn.addEventListener('click', function() {
         if (!audio.paused) {
-            try {
-                console.log('Opening visualizer...');
-                console.log('Audio paused:', audio.paused);
-                console.log('Audio volume:', audio.volume);
-                
-                initAudioContext();
-                resizeCanvas();
-                
-                console.log('Canvas size:', visualizerCanvas.width, 'x', visualizerCanvas.height);
-                
-                visualizerOverlay.classList.add('show');
-                updateVisualizerInfo();
-                
-                // Draw test pattern first to verify canvas works
-                ctx.fillStyle = '#1a1a1a';
-                ctx.fillRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
-                ctx.fillStyle = '#C33';
-                ctx.fillRect(50, 50, 100, 100);
-                ctx.fillStyle = '#fff';
-                ctx.font = '20px Arial';
-                ctx.fillText('Initializing...', visualizerCanvas.width/2 - 50, visualizerCanvas.height/2);
-                
-                // Start actual visualizer after short delay
-                setTimeout(() => {
-                    console.log('Starting visualizer animation...');
-                    drawVisualizer();
-
-                    if (audioContext && audioContext.state === 'suspended') {
-                        console.log('Resuming audio context...');
-                        audioContext.resume();
-                    }
-                }, 500);
-                
-            } catch (error) {
-                console.error('Visualizer error:', error);
-                alert('Visualizer failed to start: ' + error.message);
-            }
+            resizeCanvas();
+            visualizerOverlay.classList.add('show');
+            updateVisualizerInfo();
+            animationTime = 0;
+            drawVisualizer();
         } else {
             alert('Please start playing the radio first!');
         }
@@ -1623,13 +1510,12 @@ body {
         }
     });
 
-    // Style switcher
     document.querySelectorAll('.visualizer-style-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.visualizer-style-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             currentStyle = this.dataset.style;
-            particles = []; // Reset particles when switching
+            particles = [];
         });
     });
 
