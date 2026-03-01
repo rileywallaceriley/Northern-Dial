@@ -29,6 +29,7 @@
         box-sizing: border-box;
     }
 
+```
 html {
     background-color: #ffffff;
 }
@@ -285,11 +286,44 @@ body {
     width: 100%;
 }
 
+.visualizer-live-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.visualizer-live-dot {
+    width: 12px;
+    height: 12px;
+    background: #C33;
+    border-radius: 50%;
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(195, 51, 51, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(195, 51, 51, 0); }
+}
+
+.visualizer-status {
+    font-size: 0.9rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
 .visualizer-song {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
     color: #C33;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     letter-spacing: 6px;
     text-shadow: 0 0 30px rgba(195, 51, 51, 0.8);
     line-height: 1.2;
@@ -299,14 +333,6 @@ body {
     font-size: 2rem;
     color: #fff;
     margin-bottom: 10px;
-}
-
-.visualizer-status {
-    font-size: 1rem;
-    color: #C33;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
 }
 
 .visualizer-style-btn {
@@ -604,10 +630,14 @@ body {
     .visualizer-btn { font-size: 0.8rem; padding: 10px 18px; }
     .visualizer-song { font-size: 2rem; letter-spacing: 3px; }
     .visualizer-artist { font-size: 1.2rem; }
+    .visualizer-status { font-size: 0.75rem; letter-spacing: 1px; }
+    .visualizer-live-box { padding: 6px 15px; margin-bottom: 20px; }
+    .visualizer-live-dot { width: 10px; height: 10px; }
     .visualizer-canvas-container { height: 250px; }
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
     .visualizer-style-btn { font-size: 0.7rem; padding: 8px 12px; }
 }
+```
 
 </style>
 
@@ -615,6 +645,7 @@ body {
 <body>
     <div class="container">
 
+```
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
@@ -747,6 +778,7 @@ body {
         </button>
     </div>
 </section>
+```
 
 </div>
 
@@ -780,6 +812,7 @@ body {
             <input type="text" id="artistName" placeholder="Artist/Band Name *" required
                 style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
 
+```
         <input type="email" id="artistEmail" placeholder="Your Email *" required
             style="width:100%; padding:15px 20px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box;">
         
@@ -798,6 +831,7 @@ body {
         </button>
     </form>
 </div>
+```
 
 </div>
 
@@ -808,6 +842,7 @@ body {
             <button class="close-modal-btn" onclick="document.getElementById('involvedModal').classList.remove('show')">&times;</button>
         </div>
 
+```
     <div style="line-height:1.8; color:#333;">
         <h3 style="font-family:'Oswald',sans-serif; color:#C33; font-size:1.5rem; margin-top:20px; margin-bottom:15px; text-transform:uppercase; letter-spacing:2px;">Our Mantra</h3>
         <p>Northern Dial exists to prove that independent, community-driven radio can thrive in the streaming era. We believe Canadian music deserves better than algorithm playlists and quota-filling: it deserves context, curation, and a platform built by people who actually care.</p>
@@ -870,6 +905,7 @@ body {
         </div>
     </div>
 </div>
+```
 
 </div>
 
@@ -899,12 +935,16 @@ body {
 <div class="visualizer-overlay" id="visualizerOverlay">
     <button class="visualizer-close" id="visualizerClose">&times;</button>
 
+```
 <div class="visualizer-canvas-container">
     <canvas id="visualizerCanvas"></canvas>
 </div>
 
 <div class="visualizer-info">
-    <div class="visualizer-status" id="visualizerStatus">LIVE NOW</div>
+    <div class="visualizer-live-box">
+        <div class="visualizer-live-dot"></div>
+        <div class="visualizer-status" id="visualizerStatus">LIVE NOW</div>
+    </div>
     <div class="visualizer-song" id="visualizerSong">Northern Dial Radio</div>
     <div class="visualizer-artist" id="visualizerArtist">All Killer, All CanCon</div>
 </div>
@@ -914,6 +954,7 @@ body {
     <button class="visualizer-style-btn" data-style="circular">Circle</button>
     <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
+```
 
 </div>
 
