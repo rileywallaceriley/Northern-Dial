@@ -3,7 +3,7 @@ name: Instagram Post Generator
 on:
   schedule:
     # Run every hour at minute 0
-    - cron: '30 * * * *'
+    - cron: '*/30 * * * *'
   
   # Allow manual trigger from GitHub UI
   workflow_dispatch:
