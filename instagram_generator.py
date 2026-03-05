@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-“””
+
 Northern Dial Instagram Post Generator
 Monitors AzuraCast API and generates Instagram carousel posts every 5 songs
-“””
+
 
 import os
 import json
