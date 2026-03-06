@@ -13,8 +13,15 @@
       "artist": "FTG Reggie",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/640fb8373e2104079f2ca129-1770858702.jpg",
       "timestamp": "2026-03-06T05:06:13.308338"
+    },
+    {
+      "id": "2e33fa3fb8dc10e1d1e651f3f75658fb",
+      "title": "Kill My Mind",
+      "artist": "Sean Leon",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8b7f146ea5f42c7231c99257-1770653244.jpg",
+      "timestamp": "2026-03-06T06:03:41.009833"
     }
   ],
-  "last_song_id": "f1680b35eaf6f32a78fc3d4f36ff468d",
+  "last_song_id": "2e33fa3fb8dc10e1d1e651f3f75658fb",
   "post_count": 5
 }
