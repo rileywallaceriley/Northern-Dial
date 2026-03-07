@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "163b57f6e300e5ba5a2f6e97cd32b16a",
-      "title": "revenge body (denton, tx)",
-      "artist": "The Golden Age of Wrestling",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/68538ccc331a1991ac2ac83d-1771081687.jpg",
-      "timestamp": "2026-03-07T21:41:31.924485"
-    },
-    {
-      "id": "46dcd6f62bbd27801879895feb9e76d6",
-      "title": "M.I.n.a.Y. (feat. Salia Joseph)",
-      "artist": "Snotty Nose Rez Kids/Salia Joseph",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ff715540078e56f71af1d5bf-1770665792.jpg",
-      "timestamp": "2026-03-07T22:15:32.990046"
-    },
-    {
-      "id": "caa294b3fe67606dab65ef2be0c69276",
-      "title": "The Eternal Now",
-      "artist": "DJ Muggs/ Raz Fresco",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/17cc4d16fe0cad493647d37d-1770666884.jpg",
-      "timestamp": "2026-03-07T22:46:14.875667"
-    },
-    {
-      "id": "a5bf583d5a6b82e90f60c507615c6fdf",
-      "title": "Toronto Icons",
-      "artist": "Maestro, Ghetto Concept, Infinite",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/990ef23edeb390f793957f62-1770654556.jpg",
-      "timestamp": "2026-03-07T23:15:04.827317"
-    }
-  ],
-  "last_song_id": "a5bf583d5a6b82e90f60c507615c6fdf",
-  "post_count": 17
+  "tracked_songs": [],
+  "last_song_id": "cfa19f04cac86c681f2fa251611635a3",
+  "post_count": 18
 }
