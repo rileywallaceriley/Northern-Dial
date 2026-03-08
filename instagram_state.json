@@ -20,8 +20,15 @@
       "artist": "Jarvis Church",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/83e82bfcfc217256d7a4d4f4-1770647923.jpg",
       "timestamp": "2026-03-08T11:14:39.623671"
+    },
+    {
+      "id": "5f43e656633340a3535e9a39e501d2d7",
+      "title": "Faded (Album Version)",
+      "artist": "SoulDecision",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/00ed1f566c077a59a0690102-1770643969.jpg",
+      "timestamp": "2026-03-08T11:41:51.641870"
     }
   ],
-  "last_song_id": "c128e7e16267ecb2812f50e743008ab1",
+  "last_song_id": "5f43e656633340a3535e9a39e501d2d7",
   "post_count": 20
 }
