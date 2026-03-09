@@ -20,8 +20,15 @@
       "artist": "Jazz Cartier/KTOE",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8cc1580ae3b943630f041c5d-1770664404.jpg",
       "timestamp": "2026-03-09T03:54:38.507497"
+    },
+    {
+      "id": "369f03100518f30e514101b7688c0bc2",
+      "title": "Best Friends",
+      "artist": "X-Quisite, Zo\u00eb",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d294f8f98d90447b5a02734d-1770651240.jpg",
+      "timestamp": "2026-03-09T05:16:49.954487"
     }
   ],
-  "last_song_id": "d09207e9a98adff52b420f8222bf82f2",
+  "last_song_id": "369f03100518f30e514101b7688c0bc2",
   "post_count": 25
 }
