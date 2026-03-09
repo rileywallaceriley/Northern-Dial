@@ -13,8 +13,15 @@
       "artist": "Alyssa Reid, P Reign",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3ef598eec654f0cc90a1a586-1770653865.jpg",
       "timestamp": "2026-03-09T08:35:20.222220"
+    },
+    {
+      "id": "f3dcf327a6a6b108d2e9529cae6e1638",
+      "title": "Raw",
+      "artist": "Sage Harris, Vandalizm",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cad82705d8a677c5931b138c-1770645621.jpg",
+      "timestamp": "2026-03-09T09:40:41.977907"
     }
   ],
-  "last_song_id": "2b77cdc4d3ebd8617ec224873b8fb069",
+  "last_song_id": "f3dcf327a6a6b108d2e9529cae6e1638",
   "post_count": 26
 }
