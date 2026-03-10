@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "165a633dd6df421a5333d91702290e56",
-      "title": "Cha-Ching (Album Version)",
-      "artist": "Hedley",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/44d2376786d82d0ba485b908-1770653992.jpg",
-      "timestamp": "2026-03-10T16:50:43.971017"
-    },
-    {
-      "id": "90f138dfce7df1af8444d017bdd21561",
-      "title": "For The Record",
-      "artist": "Kelsi Mayne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/895d48827c83828901642b94-1770645657.jpg",
-      "timestamp": "2026-03-10T17:40:35.609466"
-    },
-    {
-      "id": "0a0f394faa5cbcfcce47de65824638aa",
-      "title": "the punisher",
-      "artist": "L\u00d8L\u00d8",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6b54b24cea5dcc8c4763dedf-1772631418.jpg",
-      "timestamp": "2026-03-10T18:38:25.845933"
-    },
-    {
-      "id": "b43f31bf792d75f44419fd3dbfd27662",
-      "title": "Patience",
-      "artist": "Western Motel",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f984c3177531624a0dec5865-1772631411.jpg",
-      "timestamp": "2026-03-10T19:33:25.690517"
-    }
-  ],
-  "last_song_id": "b43f31bf792d75f44419fd3dbfd27662",
-  "post_count": 33
+  "tracked_songs": [],
+  "last_song_id": "e89bfa81b916fa75303f1dd10b41a295",
+  "post_count": 34
 }
