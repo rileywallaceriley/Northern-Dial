@@ -6,8 +6,15 @@
       "artist": "Ghetto Concept, Cli-N-Tel",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e36d678e9667ed39e55c1403-1770654589.jpg",
       "timestamp": "2026-03-12T18:41:54.302610"
+    },
+    {
+      "id": "bf5c9255e32a53cc7db13e685c361ade",
+      "title": "First Love",
+      "artist": "The Halfsizegiants",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/33947fced66972c34006046c",
+      "timestamp": "2026-03-12T19:37:56.607557"
     }
   ],
-  "last_song_id": "bc73b4c111fca61371b4a56458eda17e",
+  "last_song_id": "bf5c9255e32a53cc7db13e685c361ade",
   "post_count": 44
 }
