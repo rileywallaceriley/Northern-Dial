@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "ac1cbbc037624cec33163ac130fb322a",
-      "title": "Cimeti\u00e8re",
-      "artist": "Grand Eugene",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8368ce12ec679efa610d799a-1772631429.jpg",
-      "timestamp": "2026-03-13T09:04:01.006592"
-    },
-    {
-      "id": "4d04eccdd975318156fa7767c74b309a",
-      "title": "If This Is Love",
-      "artist": "Xavier Om\u00e4r",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0f141a72ad103a0f34c29b11-1770652711.jpg",
-      "timestamp": "2026-03-13T10:00:40.330809"
-    },
-    {
-      "id": "88ee7e6a42a944fc3eda98e6a808611f",
-      "title": "Red",
-      "artist": "Treble Charger",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1fdae48317c9157c07230860-1770644104.jpg",
-      "timestamp": "2026-03-13T11:02:13.601844"
-    },
-    {
-      "id": "ae051e1218a955ae3cda1434f6557e26",
-      "title": "Paint It Black",
-      "artist": "Gob",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c8d4b2f44ef26a6a733942b3-1770644097.jpg",
-      "timestamp": "2026-03-13T11:51:12.182374"
-    }
-  ],
-  "last_song_id": "ae051e1218a955ae3cda1434f6557e26",
-  "post_count": 47
+  "tracked_songs": [],
+  "last_song_id": "faf5b259f3ebd0ed3cf53ebc1446b23f",
+  "post_count": 48
 }
