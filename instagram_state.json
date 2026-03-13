@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "647a923cc5d780777aa88aa350f33287",
-      "title": "Windigo",
-      "artist": "Anachnid",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1b9802a10f4d56cb1e56ca17-1770645730.jpg",
-      "timestamp": "2026-03-13T03:41:07.500172"
-    },
-    {
-      "id": "3f98a10f30e17dbf688dc5292613abf2",
-      "title": "(I Just) Died In Your Arms",
-      "artist": "Toby Rose, One Trick Pony, Filip Anthony",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e773134e6ad3d1c931dbfefa-1770644377.jpg",
-      "timestamp": "2026-03-13T05:09:36.896798"
-    },
-    {
-      "id": "e7947cc242621535502f0214455aa75a",
-      "title": "Home",
-      "artist": "Eternia, Rel McCoy, Shad, SHEAL",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6990af0f66a29541819b51e2-1770655090.jpg",
-      "timestamp": "2026-03-13T06:07:26.799223"
-    },
-    {
-      "id": "a9341c542d8df356590c14161d74b788",
-      "title": "Sk8er Boi",
-      "artist": "Avril Lavigne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f58d9539db122d09021e942d-1770646013.jpg",
-      "timestamp": "2026-03-13T07:26:53.551385"
-    }
-  ],
-  "last_song_id": "a9341c542d8df356590c14161d74b788",
-  "post_count": 46
+  "tracked_songs": [],
+  "last_song_id": "ba96171cdf77728004ff7ea548fe72ed",
+  "post_count": 47
 }
