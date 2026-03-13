@@ -6,8 +6,15 @@
       "artist": "Anachnid",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1b9802a10f4d56cb1e56ca17-1770645730.jpg",
       "timestamp": "2026-03-13T03:41:07.500172"
+    },
+    {
+      "id": "3f98a10f30e17dbf688dc5292613abf2",
+      "title": "(I Just) Died In Your Arms",
+      "artist": "Toby Rose, One Trick Pony, Filip Anthony",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e773134e6ad3d1c931dbfefa-1770644377.jpg",
+      "timestamp": "2026-03-13T05:09:36.896798"
     }
   ],
-  "last_song_id": "647a923cc5d780777aa88aa350f33287",
+  "last_song_id": "3f98a10f30e17dbf688dc5292613abf2",
   "post_count": 46
 }
