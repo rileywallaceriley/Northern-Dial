@@ -6,8 +6,15 @@
       "artist": "The BLK LT$",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0862864231aada349ecab099-1770645759.jpg",
       "timestamp": "2026-03-16T18:52:17.118236"
+    },
+    {
+      "id": "39573e8c7c3fea695278d481b5955cee",
+      "title": "Northern Lights (feat. Mob Bounce)",
+      "artist": "Snotty Nose Rez Kids/Mob Bounce",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8f6a67b8798f264f4da64204-1770665726.jpg",
+      "timestamp": "2026-03-16T19:49:43.163956"
     }
   ],
-  "last_song_id": "5cb3d4b6e6e9dce023a5c3c59f154735",
+  "last_song_id": "39573e8c7c3fea695278d481b5955cee",
   "post_count": 67
 }
