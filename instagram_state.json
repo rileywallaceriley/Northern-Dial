@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "ab194ab5e5533e3c63b0d866863dbf5b",
-      "title": "Temptation",
-      "artist": "Rascalz",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/551a62e8a46ebb2e841188c7-1770659402.jpg",
-      "timestamp": "2026-03-17T06:37:16.014787"
-    },
-    {
-      "id": "e990db23b5cdf6da83eccab906abd096",
-      "title": "Start a New Day (feat. DL Incognito & Jordan Croucher aka JRDN)",
-      "artist": "Spesh K, DL Incognito, Jordan Croucher aka JRDN",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/484b28ec1ca94526b6a96592-1770656584.jpg",
-      "timestamp": "2026-03-17T07:50:20.576404"
-    },
-    {
-      "id": "c4ced70a99e36a320684b1fb5dc0ae58",
-      "title": "Shipwreck",
-      "artist": "Uss",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9244fd061a655a0612460d2c-1770643927.jpg",
-      "timestamp": "2026-03-17T08:42:02.131355"
-    },
-    {
-      "id": "42cae43e35b7f1bd2298d98606d49e11",
-      "title": "Little Rosie (LP Version Album Version)",
-      "artist": "The Philosopher Kings",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1c68527f06a307e668e8f1d5-1770646312.jpg",
-      "timestamp": "2026-03-17T09:47:41.256373"
-    }
-  ],
-  "last_song_id": "42cae43e35b7f1bd2298d98606d49e11",
-  "post_count": 69
+  "tracked_songs": [],
+  "last_song_id": "5593c372923953609f61608360e47303",
+  "post_count": 70
 }
