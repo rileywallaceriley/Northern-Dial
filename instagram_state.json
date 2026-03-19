@@ -20,8 +20,15 @@
       "artist": "Big Sproxx, Sayzee, Richie Sosa, Tona, DJ Grouch",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/66b0d70a74b7e83da355a8eb-1770656114.jpg",
       "timestamp": "2026-03-19T22:53:41.288157"
+    },
+    {
+      "id": "e868884d17b2b428cf2289afbe7e0c3a",
+      "title": "DEVIL'S CLUB (feat. Rezcoast Grizz)",
+      "artist": "Snotty Nose Rez Kids/ Rezcoast Grizz",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a7b191a64aef695fe5c4632c-1770665853.jpg",
+      "timestamp": "2026-03-19T23:22:42.095738"
     }
   ],
-  "last_song_id": "c5320c1059ef3a09c575401823347b14",
+  "last_song_id": "e868884d17b2b428cf2289afbe7e0c3a",
   "post_count": 81
 }
