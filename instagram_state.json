@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "e5d7575f47db9938aa200d9966a72aff",
-      "title": "Sing Your Heart Out (Acoustic Re-Mastered)",
-      "artist": "The Trews",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/dd418e6ed448aa0ecb47a61f-1770645049.jpg",
-      "timestamp": "2026-03-19T17:30:07.743258"
-    },
-    {
-      "id": "cf6a197f81be72520a7d0c4c9ba6642d",
-      "title": "Thinking Over",
-      "artist": "Junia-T, Benjamin A.D",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f85e0c77c2d6c431db022929-1770652108.jpg",
-      "timestamp": "2026-03-19T18:09:49.068180"
-    },
-    {
-      "id": "55cf4791efba83dc2e15c0c8568eb977",
-      "title": "I'm Still Thinking",
-      "artist": "Myles Lloyd",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6695fb9b0b3c4bac367dc060-1770645648.jpg",
-      "timestamp": "2026-03-19T19:26:22.698482"
-    },
-    {
-      "id": "ba96171cdf77728004ff7ea548fe72ed",
-      "title": "Rush The Floor",
-      "artist": "Massari/ Belly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/77a448b4bf9e421e9f4c0270-1770656915.jpg",
-      "timestamp": "2026-03-19T19:59:07.829304"
-    }
-  ],
-  "last_song_id": "ba96171cdf77728004ff7ea548fe72ed",
-  "post_count": 80
+  "tracked_songs": [],
+  "last_song_id": "9f55ff6633befa232f7495d155895148",
+  "post_count": 81
 }
