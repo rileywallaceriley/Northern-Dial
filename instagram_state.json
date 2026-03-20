@@ -20,8 +20,15 @@
       "artist": "NITAP",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7cb5d74059fff940f0dc9b70-1772509300.jpg",
       "timestamp": "2026-03-20T10:02:30.802278"
+    },
+    {
+      "id": "ded05d7faf666a7119f5c67193ba517c",
+      "title": "DuRO",
+      "artist": "Bebeboy",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8b24b6fa1c743c39863119bd-1772508580.jpg",
+      "timestamp": "2026-03-20T11:02:17.089635"
     }
   ],
-  "last_song_id": "6d4c482980c5bf3c6c089bfe3fb1c90d",
+  "last_song_id": "ded05d7faf666a7119f5c67193ba517c",
   "post_count": 83
 }
