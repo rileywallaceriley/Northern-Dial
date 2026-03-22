@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "b76856df169838d646c831bb535a139a",
-      "title": "Kintsukuroi",
-      "artist": "Hey Rosetta!",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9930256559eb1bc1f7e2fada-1770645027.jpg",
-      "timestamp": "2026-03-22T08:56:53.947925"
-    },
-    {
-      "id": "34c75c79eab987f7b1bccafab3295d8a",
-      "title": "Take Some Time",
-      "artist": "Seth Dyer",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/60c0af965e030b7ba7874e11-1770856581.jpg",
-      "timestamp": "2026-03-22T09:29:09.380902"
-    },
-    {
-      "id": "d5199cb6e184b2cc131394caa2f37511",
-      "title": "Wish You Were Here",
-      "artist": "Avril Lavigne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f40710c34e9f01539a41c755-1770646086.jpg",
-      "timestamp": "2026-03-22T09:55:37.763119"
-    },
-    {
-      "id": "8d6fceba4acc6fc242b30fdc84b757f2",
-      "title": "Still Waiting",
-      "artist": "Sum 41",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/21bd0ac0538343e7351b584d-1770646666.jpg",
-      "timestamp": "2026-03-22T10:20:24.951826"
-    }
-  ],
-  "last_song_id": "8d6fceba4acc6fc242b30fdc84b757f2",
-  "post_count": 96
+  "tracked_songs": [],
+  "last_song_id": "9eb370113b6cc8efb90e99fb2f49a910",
+  "post_count": 97
 }
