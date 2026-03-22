@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "c1ad22fb5f6618928d4916f125c7ceb5",
-      "title": "No More Violence",
-      "artist": "Alysha Brilla",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/02f91024583fd4daa1a2985d-1770648584.jpg",
-      "timestamp": "2026-03-22T14:51:46.236971"
-    },
-    {
-      "id": "8eb02e7dc93b04d00c9bb71bd6567d0d",
-      "title": "Bout Your Love ( Remaster 2024)",
-      "artist": "2Rude/ Glenn Lewis",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d67b9efc4ffcb5fccde9c53b-1770650899.jpg",
-      "timestamp": "2026-03-22T15:18:51.109742"
-    },
-    {
-      "id": "1ab40b10090aba0872ba655721b36add",
-      "title": "Never Gonna Be Alone",
-      "artist": "Nickelback",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ce8d4ef93cfa7f4fe991556f-1770653735.jpg",
-      "timestamp": "2026-03-22T15:46:35.472169"
-    },
-    {
-      "id": "bfad8b8ca8004b4a32ae7b31c87683e9",
-      "title": "Thug U",
-      "artist": "Mayhem Morearty, JRDN",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8016e55b36547f4a6c69882c-1771052513.jpg",
-      "timestamp": "2026-03-22T16:20:44.662404"
-    }
-  ],
-  "last_song_id": "bfad8b8ca8004b4a32ae7b31c87683e9",
-  "post_count": 98
+  "tracked_songs": [],
+  "last_song_id": "07543ce27e7e119e105cd9c31041f485",
+  "post_count": 99
 }
