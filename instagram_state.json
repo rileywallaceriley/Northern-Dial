@@ -20,8 +20,15 @@
       "artist": "Snotty Nose Rez Kids",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/67d256c38da07df499bfe7d5-1770665761.jpg",
       "timestamp": "2026-03-21T23:45:32.692537"
+    },
+    {
+      "id": "c0bd8cd54a1d4951f987cbfa4a407432",
+      "title": "2 secondes",
+      "artist": "VINCENT KHOUNI",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cf45f71ddab2b0582b6c6596-1770644227.jpg",
+      "timestamp": "2026-03-22T01:25:14.601926"
     }
   ],
-  "last_song_id": "87ffa8e7529b6200c6b80f5067101934",
+  "last_song_id": "c0bd8cd54a1d4951f987cbfa4a407432",
   "post_count": 94
 }
