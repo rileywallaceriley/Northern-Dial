@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "f04b3c9407a3570c4327d9d98c98186a",
-      "title": "Africvillean Funk",
-      "artist": "Aquakultre/TROBIZ",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/246595bf67d6614a3381f4cf-1770667278.jpg",
-      "timestamp": "2026-03-24T03:55:18.623956"
-    },
-    {
-      "id": "58fdcdb780b378c18278255c9f4501a7",
-      "title": "Cool Kids",
-      "artist": "Toby Rose/TWOPILOTS",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1222d72d34d3d4ab46eaad16-1770644386.jpg",
-      "timestamp": "2026-03-24T05:20:10.111518"
-    },
-    {
-      "id": "0a306583fb31f5c667253cdb97e42c14",
-      "title": "Soul pleureur",
-      "artist": "Dubmatique",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6287884986acfd241fae896e-1770656302.jpg",
-      "timestamp": "2026-03-24T06:36:53.774617"
-    },
-    {
-      "id": "e40277b22460c91f24b199e84d76255b",
-      "title": "EVERYTHING CHANGES",
-      "artist": "Lilyisthatyou",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/346774eaf7ef690a7fb4fb3b-1770645668.jpg",
-      "timestamp": "2026-03-24T07:50:11.890213"
-    }
-  ],
-  "last_song_id": "e40277b22460c91f24b199e84d76255b",
-  "post_count": 106
+  "tracked_songs": [],
+  "last_song_id": "fec934f65134e74aaaa8e8ec38dd469d",
+  "post_count": 107
 }
