@@ -20,8 +20,15 @@
       "artist": "The Tragically Hip",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6689a858b2d75057bf186aa2-1770643847.jpg",
       "timestamp": "2026-03-25T15:42:17.400957"
+    },
+    {
+      "id": "4f1b46094a113c92bb44a79ea51af1ea",
+      "title": "Foreign",
+      "artist": "City Fidelia",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/21b3cda25992f31c821e9964-1770855791.jpg",
+      "timestamp": "2026-03-25T16:55:21.643610"
     }
   ],
-  "last_song_id": "e9b8b358b183eae24a71fe1aef4a4e7e",
+  "last_song_id": "4f1b46094a113c92bb44a79ea51af1ea",
   "post_count": 112
 }
