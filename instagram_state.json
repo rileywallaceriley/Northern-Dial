@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "e6c96f4cc13bb1893bcd4ae366dc058a",
-      "title": "Couch Surfer",
-      "artist": "Bran Van 3000",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/57885f7d2b4b88bdf2e1ef70-1770645409.jpg",
-      "timestamp": "2026-03-26T07:00:57.406664"
-    },
-    {
-      "id": "33119368b8fc38375f47f845cf4deff3",
-      "title": "Closer",
-      "artist": "Tegan and Sara",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9249f30dfb96b3b68771e2e8-1770646243.jpg",
-      "timestamp": "2026-03-26T08:10:46.145420"
-    },
-    {
-      "id": "53b2cf689f7a352f63a565da93a1592d",
-      "title": "Infinite Program",
-      "artist": "Maylee Todd",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4ed3460e87ac56a6eb787ed6-1770644548.jpg",
-      "timestamp": "2026-03-26T09:31:52.416670"
-    },
-    {
-      "id": "0015ba10caf1ae645f482e867384735f",
-      "title": "Strange Days",
-      "artist": "Matthew Good Band",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ca0e5e7bc4b2abb31e4f0460-1770643822.jpg",
-      "timestamp": "2026-03-26T10:45:10.108292"
-    }
-  ],
-  "last_song_id": "0015ba10caf1ae645f482e867384735f",
-  "post_count": 115
+  "tracked_songs": [],
+  "last_song_id": "11099c121c1f7eaaec424385448f598a",
+  "post_count": 116
 }
