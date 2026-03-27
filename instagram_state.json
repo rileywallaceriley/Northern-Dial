@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "6bdb7e312b1d55b29fc8e2524221c7c0",
-      "title": "Leather Jacket",
-      "artist": "Arkells",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6360692d96a44fb12f2d43c0-1770643865.jpg",
-      "timestamp": "2026-03-27T10:09:52.068789"
-    },
-    {
-      "id": "a051de5b56f1c9fda59c37cf4e697d24",
-      "title": "Crash (feat. Jonah Johnson)",
-      "artist": "Esthero",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e0314df20a5949dd821aee6f-1770645855.jpg",
-      "timestamp": "2026-03-27T11:11:02.620697"
-    },
-    {
-      "id": "c6819df7370cbac0e8c76fda1190d5c2",
-      "title": "Naveed",
-      "artist": "Our Lady Peace",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d97b27e0a450d404e4b8e184-1770643891.jpg",
-      "timestamp": "2026-03-27T12:00:42.393109"
-    },
-    {
-      "id": "c3bd252c8bcd42a91b31d0ca70ca8175",
-      "title": "Thank You",
-      "artist": "McMaster & James",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f5b6002188095d38c98a34c2-1770647328.jpg",
-      "timestamp": "2026-03-27T13:47:34.352069"
-    }
-  ],
-  "last_song_id": "c3bd252c8bcd42a91b31d0ca70ca8175",
-  "post_count": 120
+  "tracked_songs": [],
+  "last_song_id": "1f10f8f12c69172c68708196718b1bca",
+  "post_count": 121
 }
