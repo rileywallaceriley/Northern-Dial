@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "1d582b62f764811c12a5b9c6057f0723",
-      "title": "just busiNESS (feat. Kalisway)",
-      "artist": "Skip Waiters, Kalisway",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2a8718cabfe81852668b7c73-1770645566.jpg",
-      "timestamp": "2026-03-28T07:39:55.161800"
-    },
-    {
-      "id": "5f77181e9139a4e1e0a39cb216f6e542",
-      "title": "Suburbia",
-      "artist": "Matthew Good Band",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/53af3311eb25981c82bc07b8-1770643704.jpg",
-      "timestamp": "2026-03-28T08:29:55.894408"
-    },
-    {
-      "id": "7c9bd8f80e71503182e5fff68ea79760",
-      "title": "Anywayz (Album Version)",
-      "artist": "Esthero",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0c0fcab1e7070341451adada-1770645929.jpg",
-      "timestamp": "2026-03-28T09:05:33.910027"
-    },
-    {
-      "id": "42c20c859f3e23eea3d199145db99f08",
-      "title": "Dopamine",
-      "artist": "A l l i e",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d08793cb5571381a46f43143-1770644374.jpg",
-      "timestamp": "2026-03-28T09:57:52.478149"
-    }
-  ],
-  "last_song_id": "42c20c859f3e23eea3d199145db99f08",
-  "post_count": 124
+  "tracked_songs": [],
+  "last_song_id": "dfa5da6f1c2865e3974c095cbbe95113",
+  "post_count": 125
 }
