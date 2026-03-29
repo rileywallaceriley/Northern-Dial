@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d7ed033c47ac694c8d4feb2e1ae043e6",
-      "title": "Fleeting Trust",
-      "artist": "The Trews",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/24a6d03f98d9d1c11873166a-1770644967.jpg",
-      "timestamp": "2026-03-29T06:07:45.441215"
-    },
-    {
-      "id": "9e1e09e3a7ec0dfdea407da5427b8b8b",
-      "title": "Towers",
-      "artist": "Lia Pappas-Kemps",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b96976be009406fe83cc8b2c-1772509350.jpg",
-      "timestamp": "2026-03-29T07:31:41.057926"
-    },
-    {
-      "id": "53b690767eb179e52e18752db67e7743",
-      "title": "It's You (from \"Heated Rivalry\")",
-      "artist": "Peter Peter",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/440bff13dc800dedac87ac60-1770645483.jpg",
-      "timestamp": "2026-03-29T08:31:45.173515"
-    },
-    {
-      "id": "bb9e38f5a3c29f27054811ac0bf138df",
-      "title": "(Trag\u00e9die)",
-      "artist": "blesse",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f5d839a70f39ce2e93a5fccf-1770645482.jpg",
-      "timestamp": "2026-03-29T09:29:30.322890"
-    }
-  ],
-  "last_song_id": "bb9e38f5a3c29f27054811ac0bf138df",
-  "post_count": 130
+  "tracked_songs": [],
+  "last_song_id": "ee3c164077240d8aea1927adf7bac8be",
+  "post_count": 131
 }
