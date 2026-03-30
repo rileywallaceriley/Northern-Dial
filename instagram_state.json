@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "64132ccc27ced773446841b5d2b2e4f6",
-      "title": "Fame and Fortune",
-      "artist": "JD ERA",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fadde8a608a35491f14d845c-1770654976.jpg",
-      "timestamp": "2026-03-30T16:48:40.167765"
-    },
-    {
-      "id": "1fbb210c93c3cb0a0e86f7a19f95152e",
-      "title": "Up & Down",
-      "artist": "Deborah Cox",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/81a86d436d49535900e143d4-1770650582.jpg",
-      "timestamp": "2026-03-30T17:45:47.068277"
-    },
-    {
-      "id": "0516927874449edee756a4ba523a8e10",
-      "title": "Memoire",
-      "artist": "Dubmatique",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/15c841fe23ff8034b38bc66b-1770656298.jpg",
-      "timestamp": "2026-03-30T18:49:46.263011"
-    },
-    {
-      "id": "43820593ffd94418b881351dab89c4d8",
-      "title": "Never Say Goodbye",
-      "artist": "jacksoul",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7b3c27a64516c9b988f9640d-1770664777.jpg",
-      "timestamp": "2026-03-30T19:50:49.458549"
-    }
-  ],
-  "last_song_id": "43820593ffd94418b881351dab89c4d8",
-  "post_count": 137
+  "tracked_songs": [],
+  "last_song_id": "dca8d199e52ba6419b7b99f58ad74f7e",
+  "post_count": 138
 }
