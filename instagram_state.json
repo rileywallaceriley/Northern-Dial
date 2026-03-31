@@ -6,8 +6,15 @@
       "artist": "AR Paisley",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2b5936095059edd306c77e7f-1770664238.jpg",
       "timestamp": "2026-03-31T04:38:58.381917"
+    },
+    {
+      "id": "26f80c09d234e40b4c457e3be8f8caf3",
+      "title": "Someone I Could Love",
+      "artist": "Charlotte Cardin",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d4a9606a80fc4746e7be1252-1770644535.jpg",
+      "timestamp": "2026-03-31T06:12:14.711172"
     }
   ],
-  "last_song_id": "a38e3705eabba0f6e899da8be98cc144",
+  "last_song_id": "26f80c09d234e40b4c457e3be8f8caf3",
   "post_count": 139
 }
