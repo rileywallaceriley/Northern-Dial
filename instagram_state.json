@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "4b1881279f4e876627f95dab39d33560",
-      "title": "Sweetest Kill",
-      "artist": "Broken Social Scene",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4776ad70ca9ee74768e76ff8-1770644820.jpg",
-      "timestamp": "2026-03-31T10:51:18.216503"
-    },
-    {
-      "id": "2819808acc406798de5fec26df1a1137",
-      "title": "Let 'em Talk",
-      "artist": "Rosie and the Riveters",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1800a854e591a3b46519a185-1770648694.jpg",
-      "timestamp": "2026-03-31T11:42:28.863603"
-    },
-    {
-      "id": "8c31421ce7eb3f213a3ef5beef27a37a",
-      "title": "Full Circle",
-      "artist": "Half Moon Run",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0e67c29330d0fa4ddc6a96d2-1770643627.jpg",
-      "timestamp": "2026-03-31T12:58:50.060608"
-    },
-    {
-      "id": "23c1d488e1b939ec6f7d5508b8984fcf",
-      "title": "Supernova",
-      "artist": "Quinn Pickering",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/aa1a98576d340725ae804dd8-1770645728.jpg",
-      "timestamp": "2026-03-31T14:27:01.894921"
-    }
-  ],
-  "last_song_id": "23c1d488e1b939ec6f7d5508b8984fcf",
-  "post_count": 140
+  "tracked_songs": [],
+  "last_song_id": "2f9702818f6cff552e43bbc2ae1d3824",
+  "post_count": 141
 }
