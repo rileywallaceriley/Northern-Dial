@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "873b45618a0e06d60d0301591a7b37a0",
-      "title": "Epic",
-      "artist": "Nicole Holness Aka X-quisite & Nicole Holness",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1a574310e689f56816bd6309-1770653080.jpg",
-      "timestamp": "2026-03-31T16:50:43.420391"
-    },
-    {
-      "id": "1bf735069c863abe4d15f873e953349a",
-      "title": "Born Again",
-      "artist": "Owen Riegling",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d30010b3dba97add0fd67baf-1770645532.jpg",
-      "timestamp": "2026-03-31T17:50:02.458222"
-    },
-    {
-      "id": "6767f64a736e769a44f59b3d3ebfda1e",
-      "title": "Ghetto Boy (feat. Singing Diva)",
-      "artist": "Ghetto Concept, Singing Diva",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/651db8f24a73d6bd57749597-1770654452.jpg",
-      "timestamp": "2026-03-31T18:50:57.252084"
-    },
-    {
-      "id": "b7fa05a70401ea29091b0fb612646451",
-      "title": "Whole Life",
-      "artist": "EverythingOShauN",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4e5d21aa5ae40b9e16546a53-1770668318.jpg",
-      "timestamp": "2026-03-31T19:50:53.735930"
-    }
-  ],
-  "last_song_id": "b7fa05a70401ea29091b0fb612646451",
-  "post_count": 141
+  "tracked_songs": [],
+  "last_song_id": "12ce51665784ad13ada6146749afdfcf",
+  "post_count": 142
 }
