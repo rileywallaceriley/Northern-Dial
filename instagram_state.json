@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "8a4ee5eaf307fb54b805cf8cb0efbbb5",
-      "title": "Tol\u00e9rance z\u00e9ro (Da-P Remix)",
-      "artist": "ANJXLXE",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cfc65ee09a6cc4b7009280d8-1771123102.jpg",
-      "timestamp": "2026-03-31T21:31:52.732956"
-    },
-    {
-      "id": "b9bea2cf03d87802bf84f8e8790f4b90",
-      "title": "Martini.",
-      "artist": "Sajaa.",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/13f3c5a95f04a6f37edf2404-1770855800.jpg",
-      "timestamp": "2026-03-31T22:26:56.871187"
-    },
-    {
-      "id": "afc6564de08f716f74ec8e8da047011d",
-      "title": "HOT PLANET",
-      "artist": "Snotty Nose Rez Kids",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fa7f83b629c0e3f500665a13-1770665753.jpg",
-      "timestamp": "2026-03-31T22:57:58.412687"
-    },
-    {
-      "id": "11939ed8af222411958ede6c7ea59e9b",
-      "title": "Ignant Shit",
-      "artist": "Drake/Lil Wayne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/abd6e43ff52c2bac3f2ed040-1770667676.jpg",
-      "timestamp": "2026-03-31T23:33:41.310133"
-    }
-  ],
-  "last_song_id": "11939ed8af222411958ede6c7ea59e9b",
-  "post_count": 142
+  "tracked_songs": [],
+  "last_song_id": "970f9458a1b645969acc8b479c311024",
+  "post_count": 143
 }
