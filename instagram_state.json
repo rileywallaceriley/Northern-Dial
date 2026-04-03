@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "547d581e02ced3560ac3edfb141c8166",
-      "title": "auburn",
-      "artist": "livingthing",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/11d89d892b1459c0a179dac9-1775179736.jpg",
-      "timestamp": "2026-04-03T06:07:30.054249"
-    },
-    {
-      "id": "8bcfb5c051b36724d1d4ea0dd6a36dbe",
-      "title": "Shadows of My Trauma",
-      "artist": "Puma June",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f93dc1d182ac5a2173b4a022-1775179762.jpg",
-      "timestamp": "2026-04-03T07:41:29.549221"
-    },
-    {
-      "id": "65c39c8c51c94af4a4b700cd84f6fd7f",
-      "title": "On Me (feat. Blac Youngsta, Hooks & Wave Chapelle) [CMG Mix]",
-      "artist": "Harvey Stripes",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0ce8efe906297a4687b8b908-1770658590.jpg",
-      "timestamp": "2026-04-03T08:43:08.970642"
-    },
-    {
-      "id": "6f35e9ad59aeda89be54be7e2ef20a3c",
-      "title": "Joey Bats",
-      "artist": "Buck 65",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/997098aa60cae56142797fe6-1770655444.jpg",
-      "timestamp": "2026-04-03T09:45:45.336140"
-    }
-  ],
-  "last_song_id": "6f35e9ad59aeda89be54be7e2ef20a3c",
-  "post_count": 151
+  "tracked_songs": [],
+  "last_song_id": "390314a99a011316ed0a855e937bcfc2",
+  "post_count": 152
 }
