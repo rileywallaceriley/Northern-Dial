@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "0ac5af60ba9ce719dd7cf59d1a43d632",
-      "title": "Smoke",
-      "artist": "vbnd/ Katie Tupper",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d538145a46f377793075aa78-1770644940.jpg",
-      "timestamp": "2026-04-03T17:27:41.251560"
-    },
-    {
-      "id": "f197488c54e47d7d4c0663a1e84531b3",
-      "title": "The Hard Way",
-      "artist": "Shantel May",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/78718b19b82161ad56a8ef00-1770651566.jpg",
-      "timestamp": "2026-04-03T17:59:48.013134"
-    },
-    {
-      "id": "8bcfb5c051b36724d1d4ea0dd6a36dbe",
-      "title": "Shadows of My Trauma",
-      "artist": "Puma June",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f93dc1d182ac5a2173b4a022-1775179762.jpg",
-      "timestamp": "2026-04-03T18:55:25.557073"
-    },
-    {
-      "id": "35a5aeb2ab942f5305cd240dda97477d",
-      "title": "Only Underground (feat. Casey MQ & a l l i e)",
-      "artist": "2nd Son, Casey MQ, A l l i e",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b119dd4455583e1f00183abd-1770644393.jpg",
-      "timestamp": "2026-04-03T19:33:42.726643"
-    }
-  ],
-  "last_song_id": "35a5aeb2ab942f5305cd240dda97477d",
-  "post_count": 153
+  "tracked_songs": [],
+  "last_song_id": "b34a79039f1574673c4cfec13f32df1c",
+  "post_count": 154
 }
