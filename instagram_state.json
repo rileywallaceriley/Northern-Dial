@@ -13,8 +13,15 @@
       "artist": "Citizen Kane",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/53f1b71fb75ea324e168801e",
       "timestamp": "2026-04-04T22:20:50.058671"
+    },
+    {
+      "id": "f3c964811e76fab9ddd7d18db71304d2",
+      "title": "The Legacy",
+      "artist": "UBAD",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cb7fce7110a9b111476df3d9",
+      "timestamp": "2026-04-04T22:55:07.393881"
     }
   ],
-  "last_song_id": "83ed5135492c3aee6f24c0f6732e02f9",
+  "last_song_id": "f3c964811e76fab9ddd7d18db71304d2",
   "post_count": 160
 }
