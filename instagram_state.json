@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "cdc6e728121e537bf53fd62d5bc60267",
-      "title": "Stop Desire",
-      "artist": "Tegan and Sara",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/5a0884c271612385a3c282e3-1770644706.jpg",
-      "timestamp": "2026-04-04T08:32:00.270954"
-    },
-    {
-      "id": "fbbce7f68f588821887fdee4d6e952af",
-      "title": "ELEVATE",
-      "artist": "The BLK LT$",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7f802effa6d06507082e14c1-1770645762.jpg",
-      "timestamp": "2026-04-04T09:29:51.126817"
-    },
-    {
-      "id": "a9341c542d8df356590c14161d74b788",
-      "title": "Sk8er Boi",
-      "artist": "Avril Lavigne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f58d9539db122d09021e942d-1770646013.jpg",
-      "timestamp": "2026-04-04T10:02:31.690640"
-    },
-    {
-      "id": "9b0af4b47821cc637779f2c055315d9a",
-      "title": "Everybody Wants To Be Like You",
-      "artist": "Snow",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/07be3de751ddb46da97f726e-1770644016.jpg",
-      "timestamp": "2026-04-04T10:57:38.756204"
-    }
-  ],
-  "last_song_id": "9b0af4b47821cc637779f2c055315d9a",
-  "post_count": 156
+  "tracked_songs": [],
+  "last_song_id": "c04f9cc459dfa8caf832f4ec6002627d",
+  "post_count": 157
 }
