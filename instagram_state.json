@@ -13,8 +13,15 @@
       "artist": "jacksoul",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ad6a62e12e49b3ed6c49037f-1770650488.jpg",
       "timestamp": "2026-04-04T16:26:10.399638"
+    },
+    {
+      "id": "1d0a93e6dd5c840c2c04396cb3a90677",
+      "title": "Curse Your Fail",
+      "artist": "Broken Social Scene/Sebastien Grainger",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6de20202cf3789d65fb26610-1770644719.jpg",
+      "timestamp": "2026-04-04T17:00:49.831301"
     }
   ],
-  "last_song_id": "61bbfe763c09e5dbb7501599bd3c636a",
+  "last_song_id": "1d0a93e6dd5c840c2c04396cb3a90677",
   "post_count": 158
 }
