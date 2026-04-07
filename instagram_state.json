@@ -6,8 +6,15 @@
       "artist": "Tory Lanez/Chris Brown",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e1dcf65d669c1bcdf88e814d-1770664704.jpg",
       "timestamp": "2026-04-07T21:36:09.874335"
+    },
+    {
+      "id": "45ce32a24d6f724cc7c237ff8bb6f404",
+      "title": "Far From God",
+      "artist": "88GLAM/WondaGurl",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/aff33d2428aa8bea606cdcd6-1770663846.jpg",
+      "timestamp": "2026-04-07T22:30:48.964083"
     }
   ],
-  "last_song_id": "f0e413d66d24e1abc6642681b6b09fd8",
+  "last_song_id": "45ce32a24d6f724cc7c237ff8bb6f404",
   "post_count": 173
 }
