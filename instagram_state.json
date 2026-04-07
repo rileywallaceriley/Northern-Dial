@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "e6d5fb847bbffdaaf9005255c9a6f59f",
-      "title": "Take Me Home",
-      "artist": "Divo, Sumeet, Andrew Ranxx",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/80ab99aa654a5f583e44fd1d-1770655902.jpg",
-      "timestamp": "2026-04-07T10:01:06.954100"
-    },
-    {
-      "id": "cb4806c2f85373c8a6e46b86d6bb6012",
-      "title": "Can't Do Without You",
-      "artist": "Caribou",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/33e5cd7bf623442776ef0e9f-1770646274.jpg",
-      "timestamp": "2026-04-07T11:27:54.236643"
-    },
-    {
-      "id": "1ab40b10090aba0872ba655721b36add",
-      "title": "Never Gonna Be Alone",
-      "artist": "Nickelback",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ce8d4ef93cfa7f4fe991556f-1770653735.jpg",
-      "timestamp": "2026-04-07T12:07:27.760928"
-    },
-    {
-      "id": "e1e6cdacf1b10829c1502aa936ee7077",
-      "title": "Hotel Motel",
-      "artist": "Spirit Josh",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8cb0bd95a159052ce41fbb76-1775451303.jpg",
-      "timestamp": "2026-04-07T14:05:56.350714"
-    }
-  ],
-  "last_song_id": "e1e6cdacf1b10829c1502aa936ee7077",
-  "post_count": 171
+  "tracked_songs": [],
+  "last_song_id": "7139428a29fa95f9c77ed03e4786c827",
+  "post_count": 172
 }
