@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d6832ab6ac0ccd7924b2f0215db58ab9",
-      "title": "Before You",
-      "artist": "Chantal Kreviazuk",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/368ad90344acd47692904d78-1770644019.jpg",
-      "timestamp": "2026-04-09T10:38:38.684874"
-    },
-    {
-      "id": "5f614435cf01693fa0b4d0c915ccfb30",
-      "title": "Dead Hearts",
-      "artist": "Stars",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6008c3b49ced5d9008051d12-1770643635.jpg",
-      "timestamp": "2026-04-09T11:48:18.402576"
-    },
-    {
-      "id": "90ef1b81468f63f1a9595d0829e3f319",
-      "title": "Imposter",
-      "artist": "Jaye Woods",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/326e8d888877af592941585b-1771091164.jpg",
-      "timestamp": "2026-04-09T13:04:19.782767"
-    },
-    {
-      "id": "969a87fb58cfd6c112e9873eb3d522e5",
-      "title": "! MAVIS BEACON",
-      "artist": "Saya Gray",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0e086bbb3d02312a705d2e88-1770644593.jpg",
-      "timestamp": "2026-04-09T15:03:12.216405"
-    }
-  ],
-  "last_song_id": "969a87fb58cfd6c112e9873eb3d522e5",
-  "post_count": 178
+  "tracked_songs": [],
+  "last_song_id": "c030ef6d5c857925b3bd20cb6b24b3e2",
+  "post_count": 179
 }
