@@ -39,6 +39,18 @@
       padding: 24px 24px 20px;
       text-align: center;
       border-bottom: 3px solid #CC3333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+    header.scrolled {
+      padding: 10px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+    header.scrolled .site-logo img {
+      max-width: 180px;
+      transition: max-width 0.3s ease;
     }
 
     .site-logo img {
@@ -47,6 +59,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
+      transition: max-width 0.3s ease;
     }
 
 
@@ -233,6 +246,81 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ── SUBMIT MODAL ── */
+    .nd-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 10001;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .nd-modal.show { display: flex; }
+    .nd-modal-content {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+    .nd-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 3px solid #CC3333;
+    }
+    .nd-modal-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      color: #CC3333;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .nd-close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #999;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .nd-modal input,
+    .nd-modal textarea {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+    }
+    .nd-modal input:focus,
+    .nd-modal textarea:focus { border-color: #CC3333; }
+    .nd-modal textarea { resize: vertical; }
+    .nd-submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #C33, #8B2323);
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+    }
+    .nd-submit-btn:hover { background: linear-gradient(135deg, #a82828, #6e1a1a); }
   </style>
 </head>
 <body>
@@ -248,6 +336,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../library.html">Songs</a></li>
       <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="#" onclick="document.getElementById('submitModal').classList.add('show'); return false;">Submit</a></li>
     </ul>
   </nav>
 
@@ -278,6 +367,30 @@
   <footer>
     <p><strong>Northern Dial</strong> — All Killer, All CanCon</p>
   </footer>
+
+<div class="nd-modal" id="submitModal">
+  <div class="nd-modal-content">
+    <div class="nd-modal-header">
+      <h2 class="nd-modal-title">Submit Your Music</h2>
+      <button class="nd-close-btn" onclick="document.getElementById('submitModal').classList.remove('show')">&times;</button>
+    </div>
+    <p style="font-family:'Roboto Condensed',sans-serif; color:#555; margin-bottom:20px;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p>
+    <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); document.getElementById('submitModal').classList.remove('show');">
+      <input type="text" placeholder="Artist / Band Name *" required />
+      <input type="email" placeholder="Your Email *" required />
+      <input type="text" placeholder="Track Links (Spotify, SoundCloud, YouTube...) *" required />
+      <input type="text" placeholder="Social Media (Instagram, website...)" />
+      <textarea rows="4" placeholder="Tell us about your music, your sound, where you're from..."></textarea>
+      <button type="submit" class="nd-submit-btn">Submit Music</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
 
 </body>
 </html>
