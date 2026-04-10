@@ -44,8 +44,8 @@ const KNOWN_HANDLES = {
   "hedley": "@hedleyband",
   "casey mq": "@caseymq",
   "hailey blake": "@haileyblakeofficial",
-  "löv": "@lovband",
-  "lov": "@lovband",
+  "löv": "@lovxofficial",
+  "lov": "@lovxofficial",
 };
 
 // ── Genre hashtag sets ─────────────────────────────────────────────────────

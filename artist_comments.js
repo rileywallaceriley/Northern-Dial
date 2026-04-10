@@ -33,7 +33,7 @@ const WATCH_HANDLES = [
   "katietupper", "shantelmay", "pumajune", "_2ndson_", "unotopicmusica",
   "apollobrown", "eterniamc", "maestrofreshwes", "88glam", "melaniefiona",
   "livingthingmusic", "harveystripes", "buck65", "serenaryder", "hedleyband",
-  "haileyblakeofficial", "lovband"
+  "haileyblakeofficial", "lovxofficial"
 ];
 
 // Comment templates — rotated to avoid spam detection

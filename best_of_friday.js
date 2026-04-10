@@ -23,7 +23,7 @@ const KNOWN_HANDLES = {
   "88glam": "@88glam", "melanie fiona": "@melaniefiona", "livingthing": "@livingthingmusic",
   "harvey stripes": "@harveystripes", "buck 65": "@buck65", "snow": "@snow",
   "la sécurité": "@lasecurite", "serena ryder": "@serenaryder", "hedley": "@hedleyband",
-  "hailey blake": "@haileyblakeofficial", "löv": "@lovband", "lov": "@lovband",
+  "hailey blake": "@haileyblakeofficial", "löv": "@lovxofficial", "lov": "@lovxofficial",
 };
 
 function log(msg) {

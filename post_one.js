@@ -44,8 +44,8 @@ const KNOWN_HANDLES = {
   "jacksoul": "@jacksoul",
   "deborah cox": "@deborahcox",
   "hailey blake": "@haileyblakeofficial",
-  "löv": "@lovband",
-  "lov": "@lovband",
+  "löv": "@lovxofficial",
+  "lov": "@lovxofficial",
 };
 
 const BASE_TAGS = ["#CanadianMusic", "#CanCon", "#NorthernDial", "#IndieRadio", "#DiscoverMusic", "#SupportCanadianArtists"];
