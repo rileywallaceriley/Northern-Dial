@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.northerndial.ca/sitemap.xml

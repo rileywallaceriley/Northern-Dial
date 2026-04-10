@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist Feature: Puma June — Northern Dial</title>
+  <meta name="description" content="Toronto-based singer, songwriter, producer, and multi-instrumentalist Puma June is building one of the most distinctive voices in Canadian alt-R&B." />
+  <meta name="keywords" content="Puma June, Canadian music, alt-R&B, CanCon, Northern Dial, artist feature, Toronto music" />
+  <meta property="og:title" content="Artist Feature: Puma June — Northern Dial" />
+  <meta property="og:description" content="Toronto-based singer, songwriter, producer, and multi-instrumentalist Puma June is building one of the most distinctive voices in Canadian alt-R&B." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.northerndial.ca/blog/puma-june.html" />
+  <link rel="canonical" href="https://www.northerndial.ca/blog/puma-june.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1a1a1a;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      padding: 28px 24px 20px;
+      text-align: center;
+    }
+
+    .site-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      display: inline-block;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .site-logo::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: #CC3333;
+      margin-top: 6px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #1a1a1a;
+      border-bottom: 2px solid #CC3333;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 28px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #CC3333;
+    }
+
+    nav ul li a.active {
+      color: #CC3333;
+      border-bottom: 3px solid #CC3333;
+    }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 3px solid #CC3333;
+    }
+
+    .article-category {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #CC3333;
+      margin-bottom: 14px;
+    }
+
+    .article-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.05em;
+      color: #1a1a1a;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .article-date {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.85rem;
+      color: #888888;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body p {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      margin-bottom: 1.5em;
+    }
+
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── POST-ARTICLE ACTIONS ── */
+    .article-actions {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .back-link {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s, gap 0.2s;
+    }
+
+    .back-link::before {
+      content: '←';
+    }
+
+    .back-link:hover {
+      color: #CC3333;
+      gap: 10px;
+    }
+
+    .cta-button {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #CC3333;
+      padding: 12px 28px;
+      border-radius: 3px;
+      display: inline-block;
+      box-shadow: 0 4px 16px rgba(195, 51, 51, 0.35);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    .cta-button:hover {
+      background: #a82828;
+      box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      border-top: 3px solid #CC3333;
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    footer p {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      color: #aaaaaa;
+      text-transform: uppercase;
+    }
+
+    footer p strong {
+      color: #ffffff;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav ul li a {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+      }
+
+      .article-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="site-logo">Northern Dial</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../library.html">Songs</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="article-wrapper">
+
+      <header class="article-header">
+        <p class="article-category">Artist Feature</p>
+        <h1 class="article-title">Artist Feature: Puma June</h1>
+        <p class="article-date">April 10, 2026</p>
+      </header>
+
+      <div class="article-body">
+        <p>There's a moment in Puma June's music where you can't quite place the genre — and that's exactly the point.</p>
+
+        <p>The Toronto-based singer, songwriter, producer, and multi-instrumentalist has spent the past few years building one of the most distinctive voices in Canadian alt-R&amp;B. Her sound weaves together pop, jazz, hip-hop, and R&amp;B into something that feels both intimate and cinematic — a quality she brings to her visuals just as deliberately as her music.</p>
+
+        <p>It might surprise you to learn she started as a classically trained violinist, playing in orchestras in Barrie, Ontario — including the Huronia Symphony Orchestra — and indie-rock bands before completing the Independent Music Production program at Seneca College. That breadth shows. There's a structural sophistication in her arrangements that most pop-adjacent artists simply don't have.</p>
+
+        <p>2024 was a breakthrough year. She earned the RBCxMusic x Prism Prize MVP Project Grant, was selected for RBCxMusic's First Up initiative, and joined the SOCAN Foundation's EquityXProduction program. Her music video for "My Body, My Problem" was selected for the Canadian Showcase at the Toronto International Music Video Festival. CBC, Earmilk, and Canadian Beats all covered her work.</p>
+
+        <p>Then in March 2025 — timed to International Women's Day — she released her debut EP <em>A Woman That They Want</em>. It's a project with a feminist and queer edge, built on juxtapositions of vulnerability and strength, charting self-discovery through love, sexuality, fear, and freedom. The kind of debut that announces an artist, not just a collection of songs.</p>
+
+        <p>Her single "Shadows of My Trauma" is exactly the kind of CanCon that Northern Dial exists to amplify — honest, original, and impossible to box in.</p>
+
+        <p>Puma June is in rotation on Northern Dial. Tune in at <a href="https://www.northerndial.ca" style="color: #CC3333;">northerndial.ca</a>.</p>
+      </div>
+
+      <div class="article-actions">
+        <a href="index.html" class="back-link">Back to Blog</a>
+        <a href="https://www.northerndial.ca" class="cta-button">Listen to Northern Dial</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Northern Dial</strong> — All Killer, All CanCon</p>
+  </footer>
+
+</body>
+</html>
