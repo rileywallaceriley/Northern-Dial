@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "466950315e1ef3ca99d7d3d3c456575e",
-      "title": "Get Ready (Remix) [feat. Ghetto Concept]",
-      "artist": "Shawn Desman",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/852d3909cc1d82f7c5635cce-1770860281.jpg",
-      "timestamp": "2026-04-11T15:26:07.222022"
-    },
-    {
-      "id": "0a0f394faa5cbcfcce47de65824638aa",
-      "title": "the punisher",
-      "artist": "L\u00d8L\u00d8",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6b54b24cea5dcc8c4763dedf-1772631418.jpg",
-      "timestamp": "2026-04-11T15:53:58.635390"
-    },
-    {
-      "id": "ccedcf1659c9449b84c4f4b6b7570fd3",
-      "title": "Sad Songs",
-      "artist": "Melanie Fiona",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/60ba08e6edc0b9b8fa78c6dc-1770651390.jpg",
-      "timestamp": "2026-04-11T16:27:38.560966"
-    },
-    {
-      "id": "05bcc1f8ff8f80294f07cc4fff787290",
-      "title": "Matches",
-      "artist": "Haley Smalls",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2993bf5e5aacaf64be41dc9b-1775654315.jpg",
-      "timestamp": "2026-04-11T17:03:43.567061"
-    }
-  ],
-  "last_song_id": "05bcc1f8ff8f80294f07cc4fff787290",
-  "post_count": 187
+  "tracked_songs": [],
+  "last_song_id": "f2dda84cf32e0f2f1504ae569aba4cf5",
+  "post_count": 188
 }
