@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "c2c5b3f934f3ba265c6e6ea613e6029c",
-      "title": "Crabbuckit",
-      "artist": "k-os",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/16db42762ab56e27191c204a-1770649478.jpg",
-      "timestamp": "2026-04-12T10:31:46.446586"
-    },
-    {
-      "id": "652e610374a5a9429f6205a11f9ae6e0",
-      "title": "Deserted Paths",
-      "artist": "Ackerly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1d30e231ae5471b9e08a602c-1770648719.jpg",
-      "timestamp": "2026-04-12T11:28:17.046932"
-    },
-    {
-      "id": "dea3da9c23e14628339863ff223756dc",
-      "title": "Help I'm Alive",
-      "artist": "Metric",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0d7e6b3c8c24637b84e65d97-1770643804.jpg",
-      "timestamp": "2026-04-12T11:56:53.456455"
-    },
-    {
-      "id": "28bce343cba79a219d14e405fb176d55",
-      "title": "Million Ways",
-      "artist": "Shawn Hook",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a1e68d176ad7c4c859bb96c7-1770646589.jpg",
-      "timestamp": "2026-04-12T12:55:38.628016"
-    }
-  ],
-  "last_song_id": "28bce343cba79a219d14e405fb176d55",
-  "post_count": 191
+  "tracked_songs": [],
+  "last_song_id": "c609e54ade21ae3cb179f1c37859ed19",
+  "post_count": 192
 }
