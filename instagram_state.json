@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "717671b4efd866c2209197695dd5f224",
-      "title": "Swing",
-      "artist": "Connor Price/Nic D/4korners",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/140e266f9eacfd67bf2f1117-1770645771.jpg",
-      "timestamp": "2026-04-12T14:36:22.698740"
-    },
-    {
-      "id": "630e428079da49ab9c104fa11cf851ee",
-      "title": "Bloody Eyes",
-      "artist": "Passion Mango, EKKSTACY",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/41e7ee103531debf04718283-1770645465.jpg",
-      "timestamp": "2026-04-12T15:29:33.433173"
-    },
-    {
-      "id": "6e33907cce40df81c63aa80d900c70ae",
-      "title": "90s Hip-Hop Gems: Beat Factory Rap Essentials Vol. 1",
-      "artist": "ScrewfaceCapital",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0be9ba4a63f905f19298b0e0-1770644324.jpg",
-      "timestamp": "2026-04-12T16:01:36.668456"
-    },
-    {
-      "id": "c035c16fcc78d20f6f80ef8d885af465",
-      "title": "Machine",
-      "artist": "The Tragically Hip",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/dc319c4304159112af14fec3-1770643792.jpg",
-      "timestamp": "2026-04-12T17:02:48.595147"
-    }
-  ],
-  "last_song_id": "c035c16fcc78d20f6f80ef8d885af465",
-  "post_count": 192
+  "tracked_songs": [],
+  "last_song_id": "8fbf30af9a8df0e5e72e7fe89f2e54f0",
+  "post_count": 193
 }
