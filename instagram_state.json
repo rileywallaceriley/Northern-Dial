@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "a086c4f17262e964f500f69fddf7607d",
-      "title": "Enchanted Waterfall",
-      "artist": "Tory Lanez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f3e2d826ba347d61a948a5eb-1770664695.jpg",
-      "timestamp": "2026-04-12T22:28:43.630771"
-    },
-    {
-      "id": "0c79b27902285b120e8a7996fd972bd3",
-      "title": "Heat",
-      "artist": "AR Paisley",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/161a4c8085c3bae5daee97d8-1770664128.jpg",
-      "timestamp": "2026-04-12T23:03:08.397241"
-    },
-    {
-      "id": "78e08040330c8db8369349296fea292b",
-      "title": "Built Like This",
-      "artist": "Rochester",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ac4bfb446c2896e46e35ac92-1770659207.jpg",
-      "timestamp": "2026-04-12T23:58:33.810384"
-    },
-    {
-      "id": "9c91f6c0abd993cfa83dffd03df21e2b",
-      "title": "H.E.R.//Are You Dumb",
-      "artist": "Tory Lanez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/433bfe849d42b126c7a16fb8-1770664518.jpg",
-      "timestamp": "2026-04-13T02:49:12.947634"
-    }
-  ],
-  "last_song_id": "9c91f6c0abd993cfa83dffd03df21e2b",
-  "post_count": 194
+  "tracked_songs": [],
+  "last_song_id": "3b993ef8a3d7f2e779afb70fdbe0af91",
+  "post_count": 195
 }
