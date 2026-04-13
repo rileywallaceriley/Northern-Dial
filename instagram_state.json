@@ -20,8 +20,15 @@
       "artist": "Rochester",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ac4bfb446c2896e46e35ac92-1770659207.jpg",
       "timestamp": "2026-04-12T23:58:33.810384"
+    },
+    {
+      "id": "9c91f6c0abd993cfa83dffd03df21e2b",
+      "title": "H.E.R.//Are You Dumb",
+      "artist": "Tory Lanez",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/433bfe849d42b126c7a16fb8-1770664518.jpg",
+      "timestamp": "2026-04-13T02:49:12.947634"
     }
   ],
-  "last_song_id": "78e08040330c8db8369349296fea292b",
+  "last_song_id": "9c91f6c0abd993cfa83dffd03df21e2b",
   "post_count": 194
 }
