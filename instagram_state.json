@@ -13,8 +13,15 @@
       "artist": "Point Blank",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/78088ef52b195cc830f260d6-1770657699.jpg",
       "timestamp": "2026-04-17T01:51:27.255610"
+    },
+    {
+      "id": "cfd99745ab4147557d50cc6c2147021e",
+      "title": "L.O.V.E.",
+      "artist": "Melanie Fiona, John Legend",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4089a5bde352145a0670e469-1770651421.jpg",
+      "timestamp": "2026-04-17T04:43:47.029330"
     }
   ],
-  "last_song_id": "f940ba150fdff7637c5a2c247453601d",
+  "last_song_id": "cfd99745ab4147557d50cc6c2147021e",
   "post_count": 207
 }
