@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "64436ac3f06262aad54174d9f26dcbba",
-      "title": "Sacrifice",
-      "artist": "Black Atlass/ Jessie Reyez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/76a0c224ff83b42d5e1283fd-1770651832.jpg",
-      "timestamp": "2026-04-18T21:57:08.317097"
-    },
-    {
-      "id": "8b23d76458d2e04fd9890e50d4114456",
-      "title": "Much Luv (feat. Infinite)",
-      "artist": "Ghetto Concept/INFINITE",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/bc0f0b44fc8c5870b795e4c0-1770654623.jpg",
-      "timestamp": "2026-04-18T22:31:49.365374"
-    },
-    {
-      "id": "661ed1057b3a38318f11a3811debe0dc",
-      "title": "Wish I Could (feat. JRDN, Maestro Fresh Wes, JD Era, Bizz Loc, Turk, Roney & Jelleestone)",
-      "artist": "Dub J, JRDN, Jelleestone, Roney, TURK, Bizz loc, JD ERA, Maestro",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fbd272bf8d6071023cb23400-1770654972.jpg",
-      "timestamp": "2026-04-18T23:27:15.375694"
-    },
-    {
-      "id": "edc21e94fcc1e5a1ee5bd4f01a6e771d",
-      "title": "cups of coffee",
-      "artist": "Jamie Fine",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b708b5f15cc0292ac97fd330-1775425883.jpg",
-      "timestamp": "2026-04-19T00:00:00.171356"
-    }
-  ],
-  "last_song_id": "edc21e94fcc1e5a1ee5bd4f01a6e771d",
-  "post_count": 215
+  "tracked_songs": [],
+  "last_song_id": "372479cc1e8193c9fe5ae7f4275cfbfe",
+  "post_count": 216
 }
