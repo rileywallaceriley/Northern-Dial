@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "e62524b09d11a373a1fe19cdfe24298f",
-      "title": "Man In His Pomp",
-      "artist": "Yves Jarvis",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/072cb46959b611ef68828c74-1770644642.jpg",
-      "timestamp": "2026-04-20T17:34:02.209350"
-    },
-    {
-      "id": "b020d29946855f0bb8679b41640bc9b2",
-      "title": "Antisocial (feat. Old Man Saxon)",
-      "artist": "Haviah Mighty, Old Man Saxon",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c1b3c6a4aaed7d6d98691b3a-1770664005.jpg",
-      "timestamp": "2026-04-20T18:54:39.997186"
-    },
-    {
-      "id": "cd8eff00a79ce63cb80435848f5e8b6c",
-      "title": "I'm Not Here To Make Friends",
-      "artist": "Sam Smith/ Calvin Harris/ Jessie Reyez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1dba058b26d99e27ebe9b4e5-1770651826.jpg",
-      "timestamp": "2026-04-20T19:56:39.031108"
-    },
-    {
-      "id": "3d104e37c51e74e009cafb8fd7f89d89",
-      "title": "U Look So Good In Fall",
-      "artist": "Sorisa",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6477f6ef876215c4643bdca7-1770856646.jpg",
-      "timestamp": "2026-04-20T20:40:58.060652"
-    }
-  ],
-  "last_song_id": "3d104e37c51e74e009cafb8fd7f89d89",
-  "post_count": 222
+  "tracked_songs": [],
+  "last_song_id": "a49ea1bf8ae9ac57b2efacf87c696180",
+  "post_count": 223
 }
