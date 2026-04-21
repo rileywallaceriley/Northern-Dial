@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "2744219ac2a9a46ee3370f36bdc69e0a",
-      "title": "I Came Here to Leave You",
-      "artist": "Charlotte Cardin",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c718b13b2b4b5e5ac923e174-1770644446.jpg",
-      "timestamp": "2026-04-21T16:11:09.077593"
-    },
-    {
-      "id": "33bdbaddef649413b3893106dd5266aa",
-      "title": "U.L. Style (feat. Madlocks, Infinite & Jelleestone)",
-      "artist": "Ghetto Concept, Madlocks, INFINITE, Jelleestone",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/bd47771dbf80d87e5fda724b-1770654472.jpg",
-      "timestamp": "2026-04-21T17:32:14.725359"
-    },
-    {
-      "id": "874816ca2cfb7efe27c512e4184867fc",
-      "title": "No Option",
-      "artist": "Belly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/76564e76c9f3848618d7aa02-1770656747.jpg",
-      "timestamp": "2026-04-21T19:00:38.931938"
-    },
-    {
-      "id": "713f89643499cc2415908c3f14d2ee69",
-      "title": "Bound For Nowhere (Junia-T Remix)",
-      "artist": "Mirror Gazer",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ae8fef5f7f0af1e743e22238-1770651993.jpg",
-      "timestamp": "2026-04-21T20:13:09.311228"
-    }
-  ],
-  "last_song_id": "713f89643499cc2415908c3f14d2ee69",
-  "post_count": 225
+  "tracked_songs": [],
+  "last_song_id": "5e9a58e751ba0c0fb15ff6c0cafe486a",
+  "post_count": 226
 }
