@@ -20,8 +20,15 @@
       "artist": "88GLAM",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/bc3d23fb6069af971e65bb77-1770665646.jpg",
       "timestamp": "2026-04-21T23:58:10.200760"
+    },
+    {
+      "id": "20f31a6e3463147e8a6ebcf38cce0388",
+      "title": "Birdz",
+      "artist": "88GLAM/Quando Rondo",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8691c872436d1df1ab74e21a-1770665666.jpg",
+      "timestamp": "2026-04-22T02:35:22.333826"
     }
   ],
-  "last_song_id": "1c30133e6dc6afe01a9dc856b015686a",
+  "last_song_id": "20f31a6e3463147e8a6ebcf38cce0388",
   "post_count": 226
 }
