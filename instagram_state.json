@@ -20,8 +20,15 @@
       "artist": "K-Rec, Casual",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f8d22ac2f4d243cb7e04ecfa-1772509253.jpg",
       "timestamp": "2026-04-25T21:29:31.444296"
+    },
+    {
+      "id": "3fc65d4f194019f5e35c163254f77f65",
+      "title": "Guala",
+      "artist": "NXSTY, Seb C, Kid Sharif",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e7c47214b2a4af3d47480a8e-1770645706.jpg",
+      "timestamp": "2026-04-25T22:01:56.020748"
     }
   ],
-  "last_song_id": "55e3395d840c62e833f1939f2f4d39ae",
+  "last_song_id": "3fc65d4f194019f5e35c163254f77f65",
   "post_count": 239
 }
