@@ -20,8 +20,15 @@
       "artist": "Arcade Fire",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/98e4ec61812b72bdae9651dc-1770646561.jpg",
       "timestamp": "2026-04-26T06:22:20.251410"
+    },
+    {
+      "id": "804beab7511baf6b5e1c43d248eba6f8",
+      "title": "Love Song",
+      "artist": "Jarvis Church, C4",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/11dde8d8d912d1b61a446e5f-1770649304.jpg",
+      "timestamp": "2026-04-26T07:58:28.896400"
     }
   ],
-  "last_song_id": "e358c7134c2e52eb0e0c018b2500e285",
+  "last_song_id": "804beab7511baf6b5e1c43d248eba6f8",
   "post_count": 240
 }
