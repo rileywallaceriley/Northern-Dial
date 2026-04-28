@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d68c0f770452d5976399fb84582d3cc7",
-      "title": "Can't Be Beat",
-      "artist": "Mood Ruff",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/189fb5cf30d45843018bd92c-1770663171.jpg",
-      "timestamp": "2026-04-27T22:42:24.834567"
-    },
-    {
-      "id": "c010f92bf38fbbb7cc4e72836dda2ab5",
-      "title": "Fill The Void (feat. Amir Ob\u00e8 & Daniel Caesar)",
-      "artist": "Stwo, Amir Obe, Daniel Caesar",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b7ab5baefcc780061da1cefc-1770652730.jpg",
-      "timestamp": "2026-04-27T23:44:18.551375"
-    },
-    {
-      "id": "6d3ef3f02605d10004a81f16d208a4ca",
-      "title": "Off My Chest",
-      "artist": "Yung Lava",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/491dafc103c74a4360de9c12-1770661014.jpg",
-      "timestamp": "2026-04-28T02:07:49.139680"
-    },
-    {
-      "id": "dcf638275f6c7c338c0f077c746998e6",
-      "title": "Pickup Truck (feat. Mary & Adelaide)",
-      "artist": "Spirit Josh",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/66b0fe9d00602fd9b6c95d0a-1775451291.jpg",
-      "timestamp": "2026-04-28T05:43:01.169253"
-    }
-  ],
-  "last_song_id": "dcf638275f6c7c338c0f077c746998e6",
-  "post_count": 246
+  "tracked_songs": [],
+  "last_song_id": "859267882f3288e8e9f37449d8c36d60",
+  "post_count": 247
 }
