@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d33c98cb8b37587e90da98240fb44388",
-      "title": "window shopping",
-      "artist": "Tone Mason",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/61e736f6459db91ab712b6bf-1770666146.jpg",
-      "timestamp": "2026-05-02T03:56:57.953507"
-    },
-    {
-      "id": "6c3d0a7f96a6a38303050e1d4fadad69",
-      "title": "Washing Machine",
-      "artist": "Bibi Club",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fc3949a0180fe79a3156f315",
-      "timestamp": "2026-05-02T06:04:44.769930"
-    },
-    {
-      "id": "4078f428a9e1f137c1ae48223ef2fabc",
-      "title": "Bow Down",
-      "artist": "STORRY",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fb386772b863799cefcda07a-1770856657.jpg",
-      "timestamp": "2026-05-02T08:03:45.031451"
-    },
-    {
-      "id": "b4d33baa152e4c0db986d5f6df0ca3cc",
-      "title": "Ultra Villain",
-      "artist": "Maara",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3baa6b2595c7bb6994327783-1771081700.jpg",
-      "timestamp": "2026-05-02T09:38:05.618081"
-    }
-  ],
-  "last_song_id": "b4d33baa152e4c0db986d5f6df0ca3cc",
-  "post_count": 257
+  "tracked_songs": [],
+  "last_song_id": "77558d5415e69e7fc878ccbe2335c0c8",
+  "post_count": 258
 }
