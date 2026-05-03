@@ -20,8 +20,15 @@
       "artist": "The Philosopher Kings",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ba40387cebd5501efcf4d320-1770648869.jpg",
       "timestamp": "2026-05-03T11:12:18.518766"
+    },
+    {
+      "id": "5eebc0729e1516b65d4135886da948bd",
+      "title": "Si tu reviens",
+      "artist": "Louis-Jean Cormier",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a48bd5bca447f4cdc11a417a-1770646189.jpg",
+      "timestamp": "2026-05-03T12:03:11.855639"
     }
   ],
-  "last_song_id": "913b86c1a327e386c7338efdab716cf2",
+  "last_song_id": "5eebc0729e1516b65d4135886da948bd",
   "post_count": 261
 }
