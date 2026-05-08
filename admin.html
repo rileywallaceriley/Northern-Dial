@@ -284,7 +284,7 @@ async function changePassword() {
 // SETTINGS
 // ═══════════════════════════════════════════════════════
 function loadSettings() {
-  document.getElementById('githubPat').value = localStorage.getItem(STORAGE_KEYS.pat) || ['gith','ub_p','at_1','1AQF','LDEQ','03TW','ff54','kAJJ','Z_w4','RkaC','uhZj','Wi9S','j6hw','oMxV','0Xj0','8XZU','ctQq','jITM','XYpf','dCPA','NJX3','6eJZ','ediS','M'].join('');
+  document.getElementById('githubPat').value = localStorage.getItem(STORAGE_KEYS.pat) || '';
   document.getElementById('githubUser').value = localStorage.getItem(STORAGE_KEYS.user) || 'rileywallaceriley';
   document.getElementById('githubRepo').value = localStorage.getItem(STORAGE_KEYS.repo) || 'Northern-Dial';
 }
@@ -299,7 +299,7 @@ function saveSettings() {
 
 function updatePatStatus() {
   const el = document.getElementById('patStatus');
-  const pat = localStorage.getItem(STORAGE_KEYS.pat) || ['gith','ub_p','at_1','1AQF','LDEQ','03TW','ff54','kAJJ','Z_w4','RkaC','uhZj','Wi9S','j6hw','oMxV','0Xj0','8XZU','ctQq','jITM','XYpf','dCPA','NJX3','6eJZ','ediS','M'].join('');
+  const pat = localStorage.getItem(STORAGE_KEYS.pat) || '';
   if (pat) {
     el.textContent = '✅ GitHub connected';
     el.className = 'pat-status connected';
@@ -541,7 +541,7 @@ function updatePreview() {
 // ═══════════════════════════════════════════════════════
 function getGitHubConfig() {
   return {
-    pat: localStorage.getItem(STORAGE_KEYS.pat) || ['gith','ub_p','at_1','1AQF','LDEQ','03TW','ff54','kAJJ','Z_w4','RkaC','uhZj','Wi9S','j6hw','oMxV','0Xj0','8XZU','ctQq','jITM','XYpf','dCPA','NJX3','6eJZ','ediS','M'].join(''),
+    pat: localStorage.getItem(STORAGE_KEYS.pat) || '',
     user: localStorage.getItem(STORAGE_KEYS.user) || 'rileywallaceriley',
     repo: localStorage.getItem(STORAGE_KEYS.repo) || 'Northern-Dial'
   };
