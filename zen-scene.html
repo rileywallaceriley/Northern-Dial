@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cottage Lake</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a1a; font-family: 'Helvetica Neue', sans-serif; }
+  canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+  #sky { z-index: 1; }
+  #stars { z-index: 2; }
+  #mountains { z-index: 3; }
+  #cottage { z-index: 4; }
+  #water { z-index: 5; }
+  #particles { z-index: 6; }
+
+  .clock {
+    position: fixed;
+    top: 32px;
+    right: 36px;
+    z-index: 10;
+    text-align: right;
+    user-select: none;
+  }
+  .clock .time {
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 200;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 0 0 30px rgba(0,0,0,0.5);
+  }
+  .clock .date {
+    font-size: clamp(11px, 1.3vw, 15px);
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-top: 4px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  .clock .location {
+    font-size: clamp(9px, 1vw, 12px);
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-top: 8px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+<canvas id="sky"></canvas>
+<canvas id="stars"></canvas>
+<canvas id="mountains"></canvas>
+<canvas id="cottage"></canvas>
+<canvas id="water"></canvas>
+<canvas id="particles"></canvas>
+
+<div class="clock">
+  <div class="time" id="timeDisplay"></div>
+  <div class="date" id="dateDisplay"></div>
+  <div class="location">🇨🇦 Cottage Lake, Ontario</div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// SETUP
+// ═══════════════════════════════════════════
+const canvases = {};
+const ctxs = {};
+['sky', 'stars', 'mountains', 'cottage', 'water', 'particles'].forEach(id => {
+  canvases[id] = document.getElementById(id);
+  ctxs[id] = canvases[id].getContext('2d');
+});
+
+function resize() {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  Object.values(canvases).forEach(c => { c.width = w; c.height = h; });
+  drawMountains();
+  drawCottage();
+}
+window.addEventListener('resize', resize);
+resize();
+
+// ═══════════════════════════════════════════
+// TIME-BASED SKY (real sunrise/sunset)
+// ═══════════════════════════════════════════
+// Get "nightness" from 0 (noon) to 1 (midnight) based on current time
+// Sunrise ~5:30 AM, Sunset ~9:00 PM (Canadian summer)
+function getTimeOfDay() {
+  const now = new Date();
+  const hours = now.getHours() + now.getMinutes() / 60;
+
+  // Night: 9 PM - 5 AM (hours 21-5)
+  // Day: 5 AM - 9 PM (hours 5-21)
+  if (hours >= 5 && hours < 21) {
+    // Daytime: 0 at noon, gradually increases at dawn/dusk
+    const noonDist = Math.abs(hours - 14) / 9; // 0 at 2PM, 1 at 5AM/9PM
+    return noonDist * 0.3; // never fully dark during day
+  } else {
+    // Nighttime
+    const nightHours = hours >= 21 ? hours - 21 : hours + 3; // 0 at 9PM, 6 at 3AM
+    return 0.3 + Math.min(nightHours / 6, 1) * 0.7; // 0.3 at dusk, 1.0 at 3AM
+  }
+}
+
+function getSkyColors(nightness) {
+  // Interpolate between day and night palettes
+  const dayTop = [70, 130, 200];    // Blue sky
+  const dayBot = [160, 200, 230];   // Light horizon
+  const nightTop = [5, 5, 25];      // Deep night
+  const nightBot = [15, 15, 40];    // Night horizon
+
+  // Dawn/dusk transitions
+  const dawnColors = [
+    { t: 0.25, top: [120, 60, 80], bot: [220, 120, 60] },    // Dawn
+    { t: 0.75, top: [80, 40, 60], bot: [200, 100, 40] },      // Dusk
+  ];
+
+  let top, bot;
+  if (nightness < 0.3) {
+    // Full day
+    top = dayTop; bot = dayBot;
+  } else if (nightness < 0.5) {
+    // Day to dusk
+    const t = (nightness - 0.3) / 0.2;
+    top = dayTop.map((c, i) => c + (dawnColors[1].top[i] - c) * t);
+    bot = dayBot.map((c, i) => c + (dawnColors[1].bot[i] - c) * t);
+  } else if (nightness < 0.6) {
+    // Dusk to night
+    const t = (nightness - 0.5) / 0.1;
+    top = dawnColors[1].top.map((c, i) => c + (nightTop[i] - c) * t);
+    bot = dawnColors[1].bot.map((c, i) => c + (nightBot[i] - c) * t);
+  } else if (nightness < 0.7) {
+    // Night
+    top = nightTop; bot = nightBot;
+  } else if (nightness < 0.85) {
+    // Night to dawn
+    const t = (nightness - 0.7) / 0.15;
+    top = nightTop.map((c, i) => c + (dawnColors[0].top[i] - c) * (1 - t));
+    bot = nightBot.map((c, i) => c + (dawnColors[0].bot[i] - c) * (1 - t));
+  } else {
+    // Dawn to day
+    const t = (nightness - 0.85) / 0.15;
+    top = dawnColors[0].top.map((c, i) => c + (dayTop[i] - c) * t);
+    bot = dawnColors[0].bot.map((c, i) => c + (dayBot[i] - c) * t);
+  }
+
+  return {
+    top: top.map(Math.round),
+    bot: bot.map(Math.round),
+  };
+}
+
+function drawSky() {
+  const ctx = ctxs.sky;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  const nightness = getTimeOfDay();
+  const colors = getSkyColors(nightness);
+
+  const grad = ctx.createLinearGradient(0, 0, 0, h * 0.75);
+  grad.addColorStop(0, `rgb(${colors.top[0]},${colors.top[1]},${colors.top[2]})`);
+  grad.addColorStop(0.5, `rgb(${Math.round((colors.top[0] + colors.bot[0]) / 2)},${Math.round((colors.top[1] + colors.bot[1]) / 2)},${Math.round((colors.top[2] + colors.bot[2]) / 2)})`);
+  grad.addColorStop(1, `rgb(${colors.bot[0]},${colors.bot[1]},${colors.bot[2]})`);
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, w, h);
+
+  // Sun/Moon
+  const celestialX = w * (0.3 + Math.sin(nightness * Math.PI) * 0.4);
+  if (nightness < 0.5) {
+    // Sun
+    const sunY = h * 0.15 + nightness * h * 0.3;
+    const sunGrad = ctx.createRadialGradient(celestialX, sunY, 0, celestialX, sunY, 80);
+    sunGrad.addColorStop(0, 'rgba(255,240,180,1)');
+    sunGrad.addColorStop(0.2, 'rgba(255,220,100,0.8)');
+    sunGrad.addColorStop(0.5, 'rgba(255,180,60,0.2)');
+    sunGrad.addColorStop(1, 'rgba(255,180,60,0)');
+    ctx.fillStyle = sunGrad;
+    ctx.beginPath();
+    ctx.arc(celestialX, sunY, 80, 0, Math.PI * 2);
+    ctx.fill();
+  } else {
+    // Moon
+    const moonY = h * 0.1 + (nightness - 0.5) * h * 0.2;
+    const moonGrad = ctx.createRadialGradient(celestialX, moonY, 0, celestialX, moonY, 40);
+    moonGrad.addColorStop(0, 'rgba(220,225,255,0.9)');
+    moonGrad.addColorStop(0.3, 'rgba(180,190,230,0.3)');
+    moonGrad.addColorStop(1, 'rgba(180,190,230,0)');
+    ctx.fillStyle = moonGrad;
+    ctx.beginPath();
+    ctx.arc(celestialX, moonY, 40, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Moon body
+    ctx.fillStyle = 'rgba(220,225,255,0.85)';
+    ctx.beginPath();
+    ctx.arc(celestialX, moonY, 18, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+// ═══════════════════════════════════════════
+// STARS
+// ═══════════════════════════════════════════
+const stars = [];
+for (let i = 0; i < 400; i++) {
+  stars.push({
+    x: Math.random(),
+    y: Math.random() * 0.6,
+    size: Math.random() * 2 + 0.3,
+    twinkleSpeed: Math.random() * 0.004 + 0.001,
+    phase: Math.random() * Math.PI * 2,
+  });
+}
+
+function drawStars(time) {
+  const ctx = ctxs.stars;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const nightness = getTimeOfDay();
+  if (nightness < 0.5) return;
+
+  const alpha = Math.min(1, (nightness - 0.5) * 3);
+
+  stars.forEach(s => {
+    const twinkle = Math.sin(time * s.twinkleSpeed + s.phase) * 0.5 + 0.5;
+    const a = alpha * (0.2 + twinkle * 0.8);
+    ctx.beginPath();
+    ctx.arc(s.x * w, s.y * h, s.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,240,${a * twinkle})`;
+    ctx.fill();
+
+    if (s.size > 1.8) {
+      ctx.beginPath();
+      ctx.arc(s.x * w, s.y * h, s.size * 4, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,240,${a * twinkle * 0.1})`;
+      ctx.fill();
+    }
+  });
+}
+
+// ═══════════════════════════════════════════
+// MOUNTAINS (Canadian Shield)
+// ═══════════════════════════════════════════
+function drawMountains() {
+  const ctx = ctxs.mountains;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const nightness = getTimeOfDay();
+  const brightness = 1 - nightness * 0.8;
+  const baseY = h * 0.55;
+
+  // Far hills (Canadian Shield)
+  drawMountainLayer(ctx, w, h, baseY + 30, [
+    { freq: 0.002, amp: 50 },
+    { freq: 0.006, amp: 25 },
+    { freq: 0.015, amp: 12 },
+  ], 25 * brightness, 30 * brightness, 50 * brightness);
+
+  // Mid hills
+  drawMountainLayer(ctx, w, h, baseY + 70, [
+    { freq: 0.004, amp: 35 },
+    { freq: 0.01, amp: 18 },
+    { freq: 0.025, amp: 8 },
+  ], 15 * brightness, 20 * brightness, 35 * brightness);
+
+  // Shore treeline
+  drawMountainLayer(ctx, w, h, baseY + 120, [
+    { freq: 0.008, amp: 20 },
+    { freq: 0.02, amp: 10 },
+  ], 5 * brightness, 8 * brightness, 15 * brightness);
+
+  // Pine trees
+  for (let i = 0; i < 50; i++) {
+    const tx = (i / 50) * w + Math.sin(i * 3.7) * 25;
+    const treeY = baseY + 110 + Math.sin(tx * 0.008) * 20 + Math.sin(tx * 0.02) * 10;
+    const treeH = 20 + Math.sin(i * 2.3) * 15;
+    drawPineTree(ctx, tx, treeY, treeH, brightness);
+  }
+}
+
+function drawMountainLayer(ctx, w, h, baseY, layers, r, g, b) {
+  ctx.beginPath();
+  ctx.moveTo(0, h);
+  for (let x = 0; x <= w; x += 2) {
+    let y = baseY;
+    layers.forEach(l => {
+      y -= Math.sin(x * l.freq + l.freq * 100) * l.amp;
+    });
+    ctx.lineTo(x, y);
+  }
+  ctx.lineTo(w, h);
+  ctx.closePath();
+  ctx.fillStyle = `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+  ctx.fill();
+}
+
+function drawPineTree(ctx, x, y, height, brightness) {
+  const d = 1 - brightness * 0.5;
+  ctx.fillStyle = `rgb(${Math.round(5 * d)},${Math.round(10 * d)},${Math.round(15 * d)})`;
+  ctx.fillRect(x - 2, y - height * 0.3, 4, height * 0.3);
+  for (let i = 0; i < 4; i++) {
+    const ly = y - height * 0.2 - i * height * 0.22;
+    const lw = (6 - i * 1.2) * (height / 25);
+    ctx.beginPath();
+    ctx.moveTo(x - lw, ly);
+    ctx.lineTo(x, ly - height * 0.28);
+    ctx.lineTo(x + lw, ly);
+    ctx.closePath();
+    ctx.fill();
+  }
+}
+
+// ═══════════════════════════════════════════
+// COTTAGE + DOCK
+// ═══════════════════════════════════════════
+function drawCottage() {
+  const ctx = ctxs.cottage;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const nightness = getTimeOfDay();
+  const brightness = 1 - nightness * 0.8;
+  const baseY = h * 0.67;
+
+  // Dock
+  const dockX = w * 0.5;
+  const dockY = baseY + 5;
+  const dockW = 120;
+  const dockH = 8;
+
+  // Dock posts
+  ctx.fillStyle = `rgb(${Math.round(30 * brightness)},${Math.round(25 * brightness)},${Math.round(15 * brightness)})`;
+  for (let i = 0; i < 4; i++) {
+    ctx.fillRect(dockX - dockW / 2 + 20 * i, dockY, 4, 40);
+  }
+  // Dock surface
+  ctx.fillRect(dockX - dockW / 2, dockY, dockW, dockH);
+
+  // Canoe (beside dock)
+  ctx.fillStyle = `rgb(${Math.round(120 * brightness)},${Math.round(40 * brightness)},${Math.round(20 * brightness)})`;
+  ctx.beginPath();
+  ctx.ellipse(dockX - 30, dockY + 25, 35, 6, -0.1, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Cabin (on left shore)
+  const cabinX = w * 0.15;
+  const cabinY = baseY - 10;
+  const cabinW = 60;
+  const cabinH = 45;
+
+  // Walls
+  ctx.fillStyle = `rgb(${Math.round(45 * brightness)},${Math.round(35 * brightness)},${Math.round(20 * brightness)})`;
+  ctx.fillRect(cabinX, cabinY - cabinH, cabinW, cabinH);
+
+  // Roof
+  ctx.fillStyle = `rgb(${Math.round(25 * brightness)},${Math.round(20 * brightness)},${Math.round(15 * brightness)})`;
+  ctx.beginPath();
+  ctx.moveTo(cabinX - 10, cabinY - cabinH);
+  ctx.lineTo(cabinX + cabinW / 2, cabinY - cabinH - 30);
+  ctx.lineTo(cabinX + cabinW + 10, cabinY - cabinH);
+  ctx.closePath();
+  ctx.fill();
+
+  // Window glow at night
+  if (nightness > 0.5) {
+    const glowAlpha = (nightness - 0.5) * 2;
+    ctx.fillStyle = `rgba(255,200,80,${glowAlpha * 0.8})`;
+    ctx.fillRect(cabinX + 10, cabinY - cabinH + 15, 15, 12);
+    ctx.fillRect(cabinX + 35, cabinY - cabinH + 15, 15, 12);
+
+    // Window light spill
+    const windowGlow = ctx.createRadialGradient(cabinX + 17, cabinY - cabinH + 21, 0, cabinX + 17, cabinY - cabinH + 21, 40);
+    windowGlow.addColorStop(0, `rgba(255,200,80,${glowAlpha * 0.3})`);
+    windowGlow.addColorStop(1, 'rgba(255,200,80,0)');
+    ctx.fillStyle = windowGlow;
+    ctx.beginPath();
+    ctx.arc(cabinX + 17, cabinY - cabinH + 21, 40, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Canadian flag on cabin
+  const flagX = cabinX + cabinW / 2;
+  const flagY = cabinY - cabinH - 30;
+  ctx.fillStyle = `rgb(${Math.round(60 * brightness)},${Math.round(50 * brightness)},${Math.round(40 * brightness)})`;
+  ctx.fillRect(flagX - 1, flagY - 25, 2, 25);
+  // Flag
+  ctx.fillStyle = '#FF0000';
+  ctx.fillRect(flagX + 1, flagY - 25, 20, 14);
+  // Maple leaf (simplified)
+  ctx.fillStyle = '#FFF';
+  ctx.fillRect(flagX + 9, flagY - 22, 4, 8);
+}
+
+// ═══════════════════════════════════════════
+// WATER (Lake)
+// ═══════════════════════════════════════════
+function drawWater(time) {
+  const ctx = ctxs.water;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const nightness = getTimeOfDay();
+  const waterStart = h * 0.67;
+  const colors = getSkyColors(nightness);
+
+  // Water gradient
+  const grad = ctx.createLinearGradient(0, waterStart, 0, h);
+  grad.addColorStop(0, `rgba(${Math.round(colors.bot[0] * 0.6)},${Math.round(colors.bot[1] * 0.6)},${Math.round(colors.bot[2] * 0.7)},0.8)`);
+  grad.addColorStop(0.5, `rgba(${Math.max(0, Math.round(colors.top[0] * 0.3))},${Math.max(0, Math.round(colors.top[1] * 0.3))},${Math.round(colors.top[2] * 0.5)},0.9)`);
+  grad.addColorStop(1, `rgba(${Math.max(0, Math.round(colors.top[0] * 0.2))},${Math.max(0, Math.round(colors.top[1] * 0.2))},${Math.round(colors.top[2] * 0.4)},1)`);
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, waterStart, w, h - waterStart);
+
+  // Ripples
+  for (let y = waterStart; y < h; y += 2) {
+    const progress = (y - waterStart) / (h - waterStart);
+    const alpha = 0.02 + progress * 0.05;
+    ctx.beginPath();
+    for (let x = 0; x <= w; x += 3) {
+      const wave = Math.sin(x * 0.015 + time * 0.0008 + y * 0.03) * (1 + progress * 4)
+                 + Math.sin(x * 0.03 + time * 0.0012) * progress * 2;
+      if (x === 0) ctx.moveTo(x, y + wave);
+      else ctx.lineTo(x, y + wave);
+    }
+    ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  }
+
+  // Moon/sun reflection
+  const reflX = w * (0.3 + Math.sin(nightness * Math.PI) * 0.4);
+  for (let y = waterStart; y < waterStart + 80; y += 2) {
+    const progress = (y - waterStart) / 80;
+    const shimmer = Math.sin(y * 0.08 + time * 0.002) * 0.5 + 0.5;
+    const width = 30 + Math.sin(time * 0.0008 + y * 0.04) * 15;
+    ctx.beginPath();
+    ctx.moveTo(reflX - width * (1 - progress), y);
+    ctx.lineTo(reflX + width * (1 - progress), y);
+    if (nightness < 0.5) {
+      ctx.strokeStyle = `rgba(255,220,100,${shimmer * 0.2 * (1 - progress)})`;
+    } else {
+      ctx.strokeStyle = `rgba(200,210,255,${shimmer * 0.15 * (1 - progress)})`;
+    }
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  // Dock reflection
+  const dockX = w * 0.5;
+  const dockY = waterStart + 5;
+  ctx.fillStyle = `rgba(30,25,15,${0.3 * (1 - nightness * 0.5)})`;
+  ctx.fillRect(dockX - 60, dockY + 10, 120, 4);
+  for (let i = 0; i < 4; i++) {
+    ctx.fillRect(dockX - 60 + 20 * i, dockY + 10, 3, 20 + i * 5);
+  }
+}
+
+// ═══════════════════════════════════════════
+// FIREFLIES (night only)
+// ═══════════════════════════════════════════
+const fireflies = [];
+for (let i = 0; i < 25; i++) {
+  fireflies.push({
+    x: 0.2 + Math.random() * 0.6,
+    y: 0.35 + Math.random() * 0.3,
+    vx: (Math.random() - 0.5) * 0.0004,
+    vy: (Math.random() - 0.5) * 0.0003,
+    size: Math.random() * 2 + 1,
+    phase: Math.random() * Math.PI * 2,
+    speed: Math.random() * 0.002 + 0.001,
+  });
+}
+
+function drawParticles(time) {
+  const ctx = ctxs.particles;
+  const w = ctx.canvas.width;
+  const h = ctx.canvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const nightness = getTimeOfDay();
+  if (nightness < 0.5) return;
+  const alpha = (nightness - 0.5) * 2;
+
+  fireflies.forEach(f => {
+    f.x += f.vx + Math.sin(time * f.speed + f.phase) * 0.0003;
+    f.y += f.vy + Math.cos(time * f.speed * 0.7 + f.phase) * 0.0002;
+
+    if (f.x < 0.05) f.x = 0.95;
+    if (f.x > 0.95) f.x = 0.05;
+    if (f.y < 0.3) f.y = 0.65;
+    if (f.y > 0.65) f.y = 0.3;
+
+    const glow = Math.sin(time * f.speed * 3 + f.phase) * 0.5 + 0.5;
+    const a = alpha * glow * 0.7;
+
+    const grad = ctx.createRadialGradient(f.x * w, f.y * h, 0, f.x * w, f.y * h, f.size * 5);
+    grad.addColorStop(0, `rgba(255,255,150,${a * 0.5})`);
+    grad.addColorStop(0.3, `rgba(255,220,100,${a * 0.15})`);
+    grad.addColorStop(1, 'rgba(255,220,100,0)');
+    ctx.beginPath();
+    ctx.arc(f.x * w, f.y * h, f.size * 5, 0, Math.PI * 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(f.x * w, f.y * h, f.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,200,${a})`;
+    ctx.fill();
+  });
+}
+
+// ═══════════════════════════════════════════
+// CLOCK
+// ═══════════════════════════════════════════
+const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const h12 = hours % 12 || 12;
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  document.getElementById('timeDisplay').textContent =
+    `${h12}:${String(minutes).padStart(2, '0')} ${ampm}`;
+  document.getElementById('dateDisplay').textContent =
+    `${dayNames[now.getDay()]} · ${monthNames[now.getMonth()]} ${now.getDate()}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ═══════════════════════════════════════════
+// ANIMATION
+// ═══════════════════════════════════════════
+function animate(time) {
+  drawSky();
+  drawStars(time);
+  drawWater(time);
+  drawParticles(time);
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+</script>
+</body>
+</html>

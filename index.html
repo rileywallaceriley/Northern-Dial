@@ -667,6 +667,10 @@ body {
                 <span style="margin-right: 8px;">🎵</span>
                 Visualizer
             </button>
+            <button class="visualizer-btn" id="cottageBtn" style="margin-left: 8px;">
+                <span style="margin-right: 8px;">🏡</span>
+                Cottage Mode
+            </button>
         </div>
     </div>
     <audio id="radioStream" preload="none">
@@ -1008,6 +1012,12 @@ body {
     <button class="visualizer-style-btn" data-style="particles">Dots</button>
 </div>
 
+</div>
+
+<!-- Cottage Mode Overlay -->
+<div class="visualizer-overlay" id="cottageOverlay" style="background:#000;">
+    <button class="visualizer-close" id="cottageClose" style="z-index:100;">&times;</button>
+    <iframe id="cottageFrame" src="" style="width:100%;height:100%;border:none;"></iframe>
 </div>
 
 <script>
@@ -1649,6 +1659,29 @@ body {
     window.addEventListener('resize', function() {
         if (visualizerOverlay.classList.contains('show')) {
             resizeCanvas();
+        }
+    });
+
+    // Cottage Mode
+    const cottageBtn = document.getElementById('cottageBtn');
+    const cottageOverlay = document.getElementById('cottageOverlay');
+    const cottageClose = document.getElementById('cottageClose');
+    const cottageFrame = document.getElementById('cottageFrame');
+
+    cottageBtn.addEventListener('click', function() {
+        cottageFrame.src = 'https://rileywallaceriley.github.io/Northern-Dial/zen-scene.html';
+        cottageOverlay.classList.add('show');
+    });
+
+    cottageClose.addEventListener('click', function() {
+        cottageOverlay.classList.remove('show');
+        cottageFrame.src = '';
+    });
+
+    cottageOverlay.addEventListener('click', function(e) {
+        if (e.target === cottageOverlay) {
+            cottageOverlay.classList.remove('show');
+            cottageFrame.src = '';
         }
     });
 </script>
