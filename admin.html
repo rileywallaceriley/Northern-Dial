@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northern Dial — Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#1a1a1a;color:#eee;font-family:'Roboto Condensed',sans-serif;min-height:100vh}
+    a{color:#CC3333;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* ── PASSWORD GATE ── */
+    .gate{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,#1a1a1a,#2a2a2a)}
+    .gate-box{background:#222;border:2px solid #CC3333;border-radius:12px;padding:40px;text-align:center;max-width:400px;width:90%}
+    .gate-box h1{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:#CC3333;letter-spacing:.06em;margin-bottom:8px}
+    .gate-box p{color:#888;margin-bottom:24px;font-size:.9rem}
+    .gate-box input{width:100%;padding:14px 18px;font-size:1rem;font-family:'Roboto Condensed',sans-serif;border:2px solid #444;border-radius:8px;background:#333;color:#fff;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .gate-box input:focus{border-color:#CC3333}
+    .gate-box button{width:100%;padding:14px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:8px;background:linear-gradient(135deg,#C33,#8B2323);color:#fff;cursor:pointer;transition:background .2s}
+    .gate-box button:hover{background:linear-gradient(135deg,#a82828,#6e1a1a)}
+    .gate-error{color:#ff4444;font-size:.85rem;margin-bottom:12px;display:none}
+
+    /* ── ADMIN LAYOUT ── */
+    .admin{max-width:1200px;margin:0 auto;padding:20px}
+    .admin-header{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:2px solid #CC3333;margin-bottom:30px}
+    .admin-header h1{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#CC3333;letter-spacing:.06em}
+    .admin-header .pat-status{font-size:.8rem;color:#888}
+    .admin-header .pat-status.connected{color:#4CAF50}
+
+    /* ── TABS ── */
+    .tabs{display:flex;gap:4px;margin-bottom:24px}
+    .tab{padding:10px 20px;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;background:#333;color:#888;border:none;border-radius:8px 8px 0 0;cursor:pointer;transition:all .2s}
+    .tab.active{background:#CC3333;color:#fff}
+    .tab:hover:not(.active){background:#444;color:#fff}
+    .tab-content{display:none}
+    .tab-content.active{display:block}
+
+    /* ── FORM ── */
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:768px){.form-grid{grid-template-columns:1fr}}
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#aaa;margin-bottom:6px}
+    .form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;font-size:1rem;font-family:'Roboto Condensed',sans-serif;border:2px solid #444;border-radius:8px;background:#2a2a2a;color:#fff;outline:none;transition:border-color .2s}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#CC3333}
+    .form-group textarea{min-height:200px;resize:vertical;line-height:1.6}
+    .form-group select option{background:#2a2a2a;color:#fff}
+    .form-group .hint{font-size:.75rem;color:#666;margin-top:4px}
+
+    /* ── IMAGE UPLOAD ── */
+    .upload-zone{border:2px dashed #444;border-radius:8px;padding:40px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
+    .upload-zone:hover,.upload-zone.dragover{border-color:#CC3333;background:rgba(204,51,51,.05)}
+    .upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer}
+    .upload-zone .upload-text{color:#888;font-size:.9rem}
+    .upload-zone .upload-text strong{color:#CC3333}
+    .upload-preview{margin-top:12px;max-height:200px;border-radius:8px;overflow:hidden;display:none}
+    .upload-preview img{max-width:100%;max-height:200px;display:block;margin:0 auto}
+
+    /* ── LINKS SECTION ── */
+    .link-row{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-bottom:8px;align-items:end}
+    @media(max-width:768px){.link-row{grid-template-columns:1fr}}
+    .link-row input{padding:10px 14px;font-size:.9rem;font-family:'Roboto Condensed',sans-serif;border:2px solid #444;border-radius:8px;background:#2a2a2a;color:#fff;outline:none}
+    .link-row input:focus{border-color:#CC3333}
+    .link-row button{padding:10px 14px;font-size:.85rem;font-family:'Oswald',sans-serif;background:#444;color:#fff;border:none;border-radius:8px;cursor:pointer}
+    .link-row button:hover{background:#555}
+
+    /* ── ACTIONS ── */
+    .actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .btn{padding:14px 28px;font-family:'Oswald',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:8px;cursor:pointer;transition:all .2s}
+    .btn-primary{background:linear-gradient(135deg,#C33,#8B2323);color:#fff}
+    .btn-primary:hover{background:linear-gradient(135deg,#a82828,#6e1a1a)}
+    .btn-secondary{background:#444;color:#fff}
+    .btn-secondary:hover{background:#555}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+
+    /* ── PREVIEW ── */
+    .preview-frame{background:#fff;border-radius:8px;overflow:hidden;min-height:400px}
+    .preview-frame iframe{width:100%;min-height:600px;border:none}
+
+    /* ── STATUS / LOG ── */
+    .status{margin-top:20px;padding:16px;border-radius:8px;font-size:.9rem;display:none}
+    .status.success{display:block;background:rgba(76,175,80,.15);border:1px solid #4CAF50;color:#4CAF50}
+    .status.error{display:block;background:rgba(255,68,68,.15);border:1px solid #ff4444;color:#ff4444}
+    .status.info{display:block;background:rgba(33,150,243,.15);border:1px solid #2196F3;color:#2196F3}
+
+    /* ── SETTINGS ── */
+    .settings-section{background:#222;border:1px solid #333;border-radius:8px;padding:24px;margin-bottom:20px}
+    .settings-section h3{font-family:'Oswald',sans-serif;font-size:1.1rem;color:#CC3333;letter-spacing:.06em;margin-bottom:16px;text-transform:uppercase}
+    .settings-section .form-group{margin-bottom:12px}
+    .settings-section .form-group:last-child{margin-bottom:0}
+
+    /* ── SPINNER ── */
+    .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:8px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+
+<!-- ═══ PASSWORD GATE ═══ -->
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <h1>Northern Dial</h1>
+    <p>Admin Access</p>
+    <div class="gate-error" id="gateError">Incorrect password</div>
+    <input type="password" id="gatePassword" placeholder="Enter password" autocomplete="off" />
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+</div>
+
+<!-- ═══ ADMIN PANEL ═══ -->
+<div class="admin" id="adminPanel" style="display:none">
+  <div class="admin-header">
+    <h1>🌊 Northern Dial — Admin</h1>
+    <div>
+      <span class="pat-status" id="patStatus">⚙️ Set up GitHub PAT in Settings</span>
+      <button class="btn btn-secondary" style="padding:8px 16px;font-size:.8rem;margin-left:12px" onclick="logout()">Lock</button>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('new-post')">New Post</button>
+    <button class="tab" onclick="switchTab('preview')">Preview</button>
+    <button class="tab" onclick="switchTab('settings')">Settings</button>
+  </div>
+
+  <!-- ═══ NEW POST TAB ═══ -->
+  <div class="tab-content active" id="tab-new-post">
+    <div class="form-grid">
+      <div>
+        <div class="form-group">
+          <label>Article Title</label>
+          <input type="text" id="postTitle" placeholder="e.g. Artist Feature: Koko Love" oninput="updatePreview()" />
+        </div>
+        <div class="form-grid" style="gap:12px">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="postDate" oninput="updatePreview()" />
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="postCategory" oninput="updatePreview()">
+              <option value="Artist Feature">Artist Feature</option>
+              <option value="City Feature">City Feature</option>
+              <option value="Album Review">Album Review</option>
+              <option value="Interview">Interview</option>
+              <option value="News">News</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Featured Image</label>
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" accept="image/*" id="imageInput" onchange="handleImageUpload(event)" />
+            <div class="upload-text"><strong>Click or drag</strong> to upload image</div>
+          </div>
+          <div class="upload-preview" id="imagePreview">
+            <img id="previewImg" src="" alt="Preview" />
+          </div>
+          <div class="hint" id="imageHint"></div>
+        </div>
+      </div>
+      <div>
+        <div class="form-group">
+          <label>Article Body</label>
+          <textarea id="postBody" placeholder="Write your article here. Each paragraph separated by a blank line." oninput="updatePreview()"></textarea>
+          <div class="hint">Separate paragraphs with blank lines. Use *italics* and **bold** with asterisks.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Links & Sources</label>
+      <div id="linksContainer"></div>
+      <button class="btn btn-secondary" style="padding:8px 16px;font-size:.8rem" onclick="addLinkRow()">+ Add Link</button>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" onclick="previewPost()">👁 Preview</button>
+      <button class="btn btn-primary" onclick="publishPost()" id="publishBtn">🚀 Publish to GitHub</button>
+    </div>
+
+    <div class="status" id="publishStatus"></div>
+  </div>
+
+  <!-- ═══ PREVIEW TAB ═══ -->
+  <div class="tab-content" id="tab-preview">
+    <div class="preview-frame">
+      <iframe id="previewFrame" srcdoc="<!DOCTYPE html><html><body style='background:#fff;color:#333;font-family:sans-serif;padding:40px;text-align:center'><p style='color:#999'>Fill in the post form and click Preview</p></body></html>"></iframe>
+    </div>
+  </div>
+
+  <!-- ═══ SETTINGS TAB ═══ -->
+  <div class="tab-content" id="tab-settings">
+    <div class="settings-section">
+      <h3>GitHub Access</h3>
+      <div class="form-group">
+        <label>GitHub PAT (Personal Access Token)</label>
+        <input type="password" id="githubPat" placeholder="github_pat_..." />
+        <div class="hint">Create at github.com → Settings → Developer settings → Personal access tokens</div>
+      </div>
+      <div class="form-group">
+        <label>GitHub Username</label>
+        <input type="text" id="githubUser" placeholder="rileywallaceriley" />
+      </div>
+      <div class="form-group">
+        <label>Repository</label>
+        <input type="text" id="githubRepo" placeholder="Northern-Dial" />
+      </div>
+      <button class="btn btn-primary" style="padding:10px 20px;font-size:.85rem" onclick="saveSettings()">Save Settings</button>
+    </div>
+
+    <div class="settings-section">
+      <h3>Admin Password</h3>
+      <div class="form-group">
+        <label>New Password</label>
+        <input type="password" id="newPassword" placeholder="Enter new admin password" />
+      </div>
+      <button class="btn btn-secondary" style="padding:10px 20px;font-size:.85rem" onclick="changePassword()">Change Password</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════
+const DEFAULT_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // "password"
+const STORAGE_KEYS = { pat: 'nd_pat', user: 'nd_user', repo: 'nd_repo', auth: 'nd_auth', hash: 'nd_pass_hash' };
+
+// ═══════════════════════════════════════════════════════
+// PASSWORD GATE
+// ═══════════════════════════════════════════════════════
+async function sha256(text) {
+  const buf = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function checkPassword() {
+  const pw = document.getElementById('gatePassword').value;
+  const stored = localStorage.getItem(STORAGE_KEYS.hash) || DEFAULT_HASH;
+  const hash = await sha256(pw);
+  if (hash === stored) {
+    localStorage.setItem(STORAGE_KEYS.auth, '1');
+    showAdmin();
+  } else {
+    document.getElementById('gateError').style.display = 'block';
+  }
+}
+
+document.getElementById('gatePassword').addEventListener('keydown', e => { if (e.key === 'Enter') checkPassword(); });
+
+function logout() {
+  localStorage.removeItem(STORAGE_KEYS.auth);
+  location.reload();
+}
+
+function showAdmin() {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'block';
+  loadSettings();
+  updatePatStatus();
+  // Set today's date as default
+  document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
+  addLinkRow();
+  addLinkRow();
+}
+
+// Check if already authenticated
+if (localStorage.getItem(STORAGE_KEYS.auth) === '1') showAdmin();
+
+async function changePassword() {
+  const pw = document.getElementById('newPassword').value;
+  if (!pw) return alert('Enter a password');
+  const hash = await sha256(pw);
+  localStorage.setItem(STORAGE_KEYS.hash, hash);
+  document.getElementById('newPassword').value = '';
+  alert('Password changed!');
+}
+
+// ═══════════════════════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════════════════════
+function loadSettings() {
+  document.getElementById('githubPat').value = localStorage.getItem(STORAGE_KEYS.pat) || '';
+  document.getElementById('githubUser').value = localStorage.getItem(STORAGE_KEYS.user) || '';
+  document.getElementById('githubRepo').value = localStorage.getItem(STORAGE_KEYS.repo) || 'Northern-Dial';
+}
+
+function saveSettings() {
+  localStorage.setItem(STORAGE_KEYS.pat, document.getElementById('githubPat').value);
+  localStorage.setItem(STORAGE_KEYS.user, document.getElementById('githubUser').value);
+  localStorage.setItem(STORAGE_KEYS.repo, document.getElementById('githubRepo').value);
+  updatePatStatus();
+  alert('Settings saved!');
+}
+
+function updatePatStatus() {
+  const el = document.getElementById('patStatus');
+  const pat = localStorage.getItem(STORAGE_KEYS.pat);
+  if (pat) {
+    el.textContent = '✅ GitHub connected';
+    el.className = 'pat-status connected';
+  } else {
+    el.textContent = '⚙️ Set up GitHub PAT in Settings';
+    el.className = 'pat-status';
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════════════
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════
+// IMAGE UPLOAD
+// ═══════════════════════════════════════════════════════
+let imageData = null; // { name, base64, ext }
+
+function handleImageUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    const base64 = ev.target.result;
+    const ext = file.name.split('.').pop().toLowerCase();
+    const name = file.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    imageData = { name, base64, ext, filename: `${name}.${ext}` };
+    document.getElementById('previewImg').src = base64;
+    document.getElementById('imagePreview').style.display = 'block';
+    document.getElementById('imageHint').textContent = `Will upload as images/${imageData.filename}`;
+    document.querySelector('.upload-text').textContent = '✅ ' + file.name;
+  };
+  reader.readAsDataURL(file);
+}
+
+// Drag and drop
+const zone = document.getElementById('uploadZone');
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+zone.addEventListener('drop', e => {
+  e.preventDefault();
+  zone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) {
+    document.getElementById('imageInput').files = e.dataTransfer.files;
+    handleImageUpload({ target: { files: e.dataTransfer.files } });
+  }
+});
+
+// ═══════════════════════════════════════════════════════
+// LINKS
+// ═══════════════════════════════════════════════════════
+function addLinkRow() {
+  const container = document.getElementById('linksContainer');
+  const row = document.createElement('div');
+  row.className = 'link-row';
+  row.innerHTML = `
+    <input type="text" placeholder="Label (e.g. Spotify)" class="link-label" />
+    <input type="text" placeholder="URL (https://...)" class="link-url" />
+    <button onclick="this.parentElement.remove()">✕</button>
+  `;
+  container.appendChild(row);
+}
+
+function getLinks() {
+  const links = [];
+  document.querySelectorAll('.link-row').forEach(row => {
+    const label = row.querySelector('.link-label').value.trim();
+    const url = row.querySelector('.link-url').value.trim();
+    if (label && url) links.push({ label, url });
+  });
+  return links;
+}
+
+// ═══════════════════════════════════════════════════════
+// FORMAT HELPERS
+// ═══════════════════════════════════════════════════════
+function formatBody(text) {
+  return text
+    .split(/\n\s*\n/)
+    .filter(p => p.trim())
+    .map(p => {
+      let html = p.trim();
+      // **bold**
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      // *italics*
+      html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      return `      <p>${html}</p>`;
+    })
+    .join('\n\n');
+}
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+
+function formatDateShort(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+
+function slugify(title) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+// ═══════════════════════════════════════════════════════
+// GENERATE ARTICLE HTML
+// ═══════════════════════════════════════════════════════
+function generateArticleHTML() {
+  const title = document.getElementById('postTitle').value.trim();
+  const date = document.getElementById('postDate').value;
+  const category = document.getElementById('postCategory').value;
+  const body = document.getElementById('postBody').value.trim();
+  const links = getLinks();
+  const slug = slugify(title);
+  const dateFormatted = formatDate(date);
+  const imageName = imageData ? `../images/${imageData.filename}` : '';
+  const altText = title.replace('Artist Feature: ', '').replace('Artist Feature: ', '');
+
+  const firstParagraph = body.split(/\n\s*\n/).filter(p => p.trim())[0] || '';
+  const excerpt = firstParagraph.replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 150);
+
+  const linksHTML = links.map(l => {
+    // Bold or italic in labels
+    let labelHTML = l.label.replace(/\*\*(.+?)\*\*/g, '<em>$1</em>');
+    return `        <li><a href="${l.url}" target="_blank" rel="noopener" style="color:#CC3333;">${labelHTML}</a></li>`;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${title} — Northern Dial</title>
+  <meta name="description" content="${excerpt}" />
+  <meta name="keywords" content="${altText}, ${category.toLowerCase()}, Northern Dial" />
+  <meta property="og:title" content="${title} — Northern Dial" />
+  <meta property="og:description" content="${excerpt}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.northerndial.ca/blog/${slug}.html" />
+  <link rel="canonical" href="https://www.northerndial.ca/blog/${slug}.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:#fff;color:#1a1a1a;font-family:'Roboto Condensed',sans-serif;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:#fff;padding:24px 24px 20px;text-align:center;border-bottom:3px solid #CC3333}
+    .site-logo img{max-width:240px;width:65%;height:auto;display:block;margin:0 auto}
+    nav{background:#1a1a1a;border-bottom:2px solid #CC3333}
+    nav ul{display:flex;justify-content:center;list-style:none;max-width:1200px;margin:0 auto}
+    nav ul li a{display:block;padding:14px 28px;font-family:'Oswald',sans-serif;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+    nav ul li a:hover,nav ul li a.active{color:#CC3333}
+    .article-wrapper{max-width:860px;margin:0 auto;padding:22px 24px 80px}
+    .article-category{font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#CC3333;margin-bottom:8px}
+    .article-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.45rem,3.3vw,2rem);letter-spacing:.01em;line-height:1.03;margin-bottom:6px}
+    .article-date{font-size:.85rem;color:#888;letter-spacing:.06em;margin-bottom:16px}
+    .article-body p{margin-bottom:16px;color:#2a2a2a;font-size:1.05rem}
+    .article-body em{font-style:italic}
+    .article-actions{margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .back-link{color:#CC3333;font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}
+    .cta-button{background:#CC3333;color:#fff;font-family:'Oswald',sans-serif;padding:12px 20px;border-radius:8px;letter-spacing:.1em;text-transform:uppercase}
+    footer{background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%);border-top:3px solid #CC3333;text-align:center;padding:32px 24px}
+    footer p{font-size:.9rem;letter-spacing:.08em;color:#aaa;text-transform:uppercase} footer p strong{color:#fff}
+    .nd-modal{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:10001;display:none;align-items:center;justify-content:center;padding:20px}
+    .nd-modal.show{display:flex}.nd-modal-content{background:#fff;border-radius:12px;padding:30px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto}
+    .nd-modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:16px;border-bottom:3px solid #CC3333}
+    .nd-modal-title{font-family:'Oswald',sans-serif;font-size:1.8rem;color:#CC3333;text-transform:uppercase;letter-spacing:.08em}
+    .nd-close-btn{background:none;border:none;font-size:2rem;color:#999;cursor:pointer}
+    .nd-modal input,.nd-modal textarea{width:100%;padding:14px 18px;font-size:1rem;font-family:'Roboto Condensed',sans-serif;border:2px solid #ddd;border-radius:8px;margin-bottom:12px}
+    .nd-submit-btn{width:100%;background:linear-gradient(135deg,#C33,#8B2323);color:#fff;border:none;padding:15px 25px;border-radius:8px;font-family:'Oswald',sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header><a href="../index.html" class="site-logo"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" /></a></header>
+  <nav><ul><li><a href="../index.html">Home</a></li><li><a href="../library.html">Songs</a></li><li><a href="index.html" class="active">Blog</a></li><li><a href="#" onclick="document.getElementById('submitModal').classList.add('show'); return false;">Submit</a></li></ul></nav>
+
+  <main><div class="article-wrapper">
+    <p class="article-category">${category}</p>
+    <h1 class="article-title">${title}</h1>
+    <p class="article-date">${dateFormatted}</p>
+
+    <figure style="margin:0 0 26px;border-radius:8px;overflow:hidden;border:2px solid #e0e0e0;background:#f0f0f0;min-height:300px;display:flex;align-items:center;justify-content:center;">
+      <img src="${imageName}" alt="${altText}" style="width:100%;max-height:500px;object-fit:cover;object-position:center center;display:block;" onerror="this.style.display='none'; this.parentElement.innerHTML='<p style=\\'color:#888;padding:20px;\\'>Image pending</p>';"/>
+    </figure>
+
+    <div class="article-body">
+${formatBody(body)}
+    </div>
+
+    <section style="margin-top:28px;padding-top:18px;border-top:1px solid #e5e5e5;">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;color:#1a1a1a;margin-bottom:10px;">Links &amp; Sources</h3>
+      <ul style="padding-left:18px;color:#444;line-height:1.8;">
+${linksHTML}
+      </ul>
+    </section>
+
+    <div class="article-actions"><a href="index.html" class="back-link">Back to Blog</a><a href="https://www.northerndial.ca" class="cta-button">Listen to Northern Dial</a></div>
+  </div></main>
+
+  <footer><p><strong>Northern Dial</strong> — All Killer, All CanCon</p></footer>
+
+  <div class="nd-modal" id="submitModal"><div class="nd-modal-content"><div class="nd-modal-header"><h2 class="nd-modal-title">Submit Your Music</h2><button class="nd-close-btn" onclick="document.getElementById('submitModal').classList.remove('show')">&times;</button></div><p style="color:#555; margin-bottom:20px;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p><form onsubmit="event.preventDefault(); alert('Thanks! We\\'ll be in touch.'); document.getElementById('submitModal').classList.remove('show');"><input type="text" placeholder="Artist / Band Name *" required /><input type="email" placeholder="Your Email *" required /><input type="text" placeholder="Track Links (Spotify, SoundCloud, YouTube...) *" required /><input type="text" placeholder="Social Media (Instagram, website...)" /><textarea rows="4" placeholder="Tell us about your music, your sound, where you're from..."></textarea><button type="submit" class="nd-submit-btn">Submit Music</button></form></div></div>
+</body>
+</html>`;
+}
+
+// ═══════════════════════════════════════════════════════
+// PREVIEW
+// ═══════════════════════════════════════════════════════
+function previewPost() {
+  const html = generateArticleHTML();
+  document.getElementById('previewFrame').srcdoc = html;
+  switchTabDirect('preview');
+}
+
+function switchTabDirect(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => { if (t.textContent.toLowerCase().includes(name.split('-')[0])) t.classList.add('active'); });
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+function updatePreview() {
+  // Just validate, don't auto-preview
+}
+
+// ═══════════════════════════════════════════════════════
+// GITHUB API
+// ═══════════════════════════════════════════════════════
+function getGitHubConfig() {
+  return {
+    pat: localStorage.getItem(STORAGE_KEYS.pat),
+    user: localStorage.getItem(STORAGE_KEYS.user),
+    repo: localStorage.getItem(STORAGE_KEYS.repo) || 'Northern-Dial'
+  };
+}
+
+async function githubAPI(method, path, body) {
+  const { pat, user, repo } = getGitHubConfig();
+  const url = `https://api.github.com/repos/${user}/${repo}${path}`;
+  const opts = {
+    method,
+    headers: {
+      'Authorization': `Bearer ${pat}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    }
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(url, opts);
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`GitHub API ${res.status}: ${err}`);
+  }
+  return res.json();
+}
+
+async function getFileSHA(path) {
+  try {
+    const data = await githubAPI('GET', `/contents/${path}`);
+    return data.sha;
+  } catch (e) {
+    return null; // File doesn't exist
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// PUBLISH
+// ═══════════════════════════════════════════════════════
+async function publishPost() {
+  const { pat, user, repo } = getGitHubConfig();
+  if (!pat) {
+    showStatus('error', '⚠️ Please set your GitHub PAT in Settings first.');
+    switchTabDirect('settings');
+    return;
+  }
+
+  const title = document.getElementById('postTitle').value.trim();
+  const date = document.getElementById('postDate').value;
+  const category = document.getElementById('postCategory').value;
+  const body = document.getElementById('postBody').value.trim();
+
+  if (!title || !date || !body) {
+    showStatus('error', '⚠️ Please fill in Title, Date, and Body.');
+    return;
+  }
+
+  const btn = document.getElementById('publishBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Publishing...';
+  showStatus('info', '📡 Connecting to GitHub...');
+
+  try {
+    const slug = slugify(title);
+    const articleHTML = generateArticleHTML();
+
+    // Step 1: Upload image (if provided)
+    if (imageData) {
+      showStatus('info', '📤 Uploading image...');
+      const base64Data = imageData.base64.split(',')[1];
+      const sha = await getFileSHA(`images/${imageData.filename}`);
+      await githubAPI('PUT', `/contents/images/${imageData.filename}`, {
+        message: `Add image for "${title}"`,
+        content: base64Data,
+        ...(sha && { sha })
+      });
+    }
+
+    // Step 2: Create blog article
+    showStatus('info', '📝 Creating article...');
+    const articlePath = `blog/${slug}.html`;
+    await githubAPI('PUT', `/contents/${articlePath}`, {
+      message: `Add blog post: ${title}`,
+      content: btoa(unescape(encodeURIComponent(articleHTML)))
+    });
+
+    // Step 3: Update blog archive (blog/index.html)
+    showStatus('info', '📋 Updating blog archive...');
+    const blogIndex = await githubAPI('GET', `/contents/blog/index.html`);
+    let blogHTML = decodeURIComponent(escape(atob(blogIndex.content)));
+
+    const newBlogCard = `      <article class="card">
+        <a href="${slug}.html">
+          <img src="../images/${imageData ? imageData.filename : 'placeholder.jpg'}" alt="${title}" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=${encodeURIComponent(title)}'"/>
+        </a>
+        <div class="card-body">
+          <p class="card-date">${formatDateShort(date)}</p>
+          <h2 class="card-title">${title}</h2>
+          <div class="card-accent"></div>
+          <p class="card-excerpt">${body.split(/\n\s*\n/).filter(p => p.trim())[0].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 180)}...</p>
+          <a href="${slug}.html" class="card-link">Read More</a>
+        </div>
+      </article>\n\n`;
+
+    // Insert after <div class="card-grid">
+    blogHTML = blogHTML.replace(/(<div class="card-grid">)/, '$1\n' + newBlogCard);
+
+    await githubAPI('PUT', `/contents/blog/index.html`, {
+      message: `Add "${title}" to blog archive`,
+      content: btoa(unescape(encodeURIComponent(blogHTML))),
+      sha: blogIndex.sha
+    });
+
+    // Step 4: Update homepage (index.html) - add to top 4
+    showStatus('info', '🏠 Updating homepage...');
+    const homepage = await githubAPI('GET', `/contents/index.html`);
+    let homeHTML = decodeURIComponent(escape(atob(homepage.content)));
+
+    const newHomeCard = `      <a href="/blog/${slug}.html" style="text-decoration:none; display:block; border-radius:10px; overflow:hidden; background:white; border:1px solid #e0e0e0; transition:box-shadow 0.25s, transform 0.25s;" onmouseover="this.style.boxShadow='0 8px 30px rgba(195,51,51,0.3)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+        <img src="images/${imageData ? imageData.filename : 'placeholder.jpg'}" alt="${title}" style="width:100%; height:200px; object-fit:cover; object-position:center center; display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=${encodeURIComponent(title)}'"/>
+        <div style="padding:20px 18px 18px;">
+          <p style="font-family:'Roboto Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#CC3333; margin-bottom:8px;">${formatDate(date)} · ${category}</p>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#1a1a1a; margin-bottom:10px; line-height:1.2;">${title}</h3>
+          <p style="font-family:'Roboto Condensed',sans-serif; font-size:0.92rem; color:#555; line-height:1.6; margin-bottom:14px;">${body.split(/\n\s*\n/).filter(p => p.trim())[0].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 180)}...</p>
+          <span style="font-family:'Oswald',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#CC3333;">Read More →</span>
+        </div>
+      </a>\n\n`;
+
+    // Find the Latest Stories grid and insert as first card
+    const gridMarker = '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:24px; margin-bottom:36px;">';
+    const gridIndex = homeHTML.indexOf(gridMarker);
+    if (gridIndex !== -1) {
+      homeHTML = homeHTML.substring(0, gridIndex + gridMarker.length) + '\n' + newHomeCard + homeHTML.substring(gridIndex + gridMarker.length);
+    }
+
+    // Keep only first 4 cards in the grid
+    // Find the grid section and trim to 4 cards
+    const gridStart = gridIndex + gridMarker.length;
+    const gridEnd = homeHTML.indexOf('</div>', gridStart);
+    // Actually let's find the View All Stories button to mark the end
+    const viewAllIndex = homeHTML.indexOf('View All Stories');
+    const beforeViewAll = homeHTML.substring(0, viewAllIndex);
+    const afterViewAll = homeHTML.substring(viewAllIndex);
+
+    // Count and keep only first 4 blog card links
+    let cardCount = 0;
+    const cardRegex = /(<a href="\/blog\/[^"]+\.html"[^>]*>.*?<\/a>\n?)/gs;
+    let match;
+    let newGridContent = '';
+    const tempHTML = beforeViewAll.substring(gridStart);
+    while ((match = cardRegex.exec(tempHTML)) !== null && cardCount < 4) {
+      newGridContent += match[1];
+      cardCount++;
+    }
+
+    homeHTML = homeHTML.substring(0, gridStart) + '\n' + newGridContent + '\n    ' + afterViewAll;
+
+    await githubAPI('PUT', `/contents/index.html`, {
+      message: `Add "${title}" to homepage`,
+      content: btoa(unescape(encodeURIComponent(homeHTML))),
+      sha: homepage.sha
+    });
+
+    showStatus('success', `✅ Published! <a href="https://${user}.github.io/${repo}/blog/${slug}.html" target="_blank">View post →</a>`);
+
+    // Reset form
+    document.getElementById('postTitle').value = '';
+    document.getElementById('postBody').value = '';
+    document.getElementById('imageInput').value = '';
+    document.getElementById('imagePreview').style.display = 'none';
+    document.getElementById('imageHint').textContent = '';
+    document.querySelector('.upload-text').innerHTML = '<strong>Click or drag</strong> to upload image';
+    imageData = null;
+
+  } catch (err) {
+    showStatus('error', '❌ ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '🚀 Publish to GitHub';
+  }
+}
+
+function showStatus(type, msg) {
+  const el = document.getElementById('publishStatus');
+  el.className = 'status ' + type;
+  el.innerHTML = msg;
+}
+</script>
+</body>
+</html>
