@@ -205,17 +205,7 @@
 // ═══════════════════════════════════════════════════════
 // CONFIG
 // ═══════════════════════════════════════════════════════
-const DEFAULT_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // "password"
 const STORAGE_KEYS = { pat: 'nd_pat', user: 'nd_user', repo: 'nd_repo', plainpass: 'nd_pass' };
-
-// ═══════════════════════════════════════════════════════
-// PASSWORD GATE
-  loadSettings();
-  updatePatStatus();
-  document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
-  addLinkRow();
-  addLinkRow();
-}
 
 function showAdmin() {
   loadSettings();
