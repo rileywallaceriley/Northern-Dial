@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "bd54401ca1e0289ddb11234aaa0b04b6",
-      "title": "Go With It",
-      "artist": "OLIVER, Chromeo",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/86f470592ee52ed1b11b3fb0-1770649037.jpg",
-      "timestamp": "2026-05-09T12:58:05.781228"
-    },
-    {
-      "id": "c1c8440472120d60c0d911cbe502755f",
-      "title": "Donna's 407",
-      "artist": "Yoko Gold",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/96db9839d3de68d8c498b381-1770645619.jpg",
-      "timestamp": "2026-05-09T14:16:34.313530"
-    },
-    {
-      "id": "390314a99a011316ed0a855e937bcfc2",
-      "title": "Beat Factory Rap Essentials Volume Two [1997]",
-      "artist": "Potlood",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/278343dc3234a30cd9b0f1eb-1770644305.jpg",
-      "timestamp": "2026-05-09T15:28:22.000758"
-    },
-    {
-      "id": "b8c1f34c77860ffdb826ae8556bd0989",
-      "title": "Basement",
-      "artist": "Seth Dyer",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c59af18d89049bf750329671-1770856743.jpg",
-      "timestamp": "2026-05-09T16:27:25.573825"
-    }
-  ],
-  "last_song_id": "b8c1f34c77860ffdb826ae8556bd0989",
-  "post_count": 278
+  "tracked_songs": [],
+  "last_song_id": "f6725763691896b0397bdf9b7147d429",
+  "post_count": 279
 }
