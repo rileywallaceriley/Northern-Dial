@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Chain Explorer</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a0a;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+  
+  .container{max-width:800px;margin:0 auto;padding:40px 20px}
+  
+  h1{font-size:2rem;font-weight:700;color:#fff;margin-bottom:8px;text-align:center}
+  .subtitle{color:#666;text-align:center;margin-bottom:40px;font-size:0.9rem}
+  
+  .search-box{display:flex;gap:12px;margin-bottom:30px}
+  .search-box input{flex:1;padding:14px 18px;border:1px solid #333;border-radius:10px;background:#1a1a1a;color:#fff;font-size:1rem;outline:none;transition:border-color 0.2s}
+  .search-box input:focus{border-color:#CC3333}
+  .search-box input::placeholder{color:#555}
+  .search-box button{padding:14px 24px;border:none;border-radius:10px;background:linear-gradient(135deg,#CC3333,#8B2323);color:#fff;font-weight:600;font-size:0.95rem;cursor:pointer;transition:opacity 0.2s;white-space:nowrap}
+  .search-box button:hover{opacity:0.9}
+  .search-box button:disabled{opacity:0.4;cursor:not-allowed}
+  
+  .status{text-align:center;padding:20px;color:#888;font-size:0.9rem}
+  .status.error{color:#ff4444}
+  
+  .song-header{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:20px;margin-bottom:24px}
+  .song-header h2{font-size:1.3rem;color:#fff;margin-bottom:4px}
+  .song-header .artist{color:#CC3333;font-size:0.95rem;margin-bottom:8px}
+  .song-header .meta{color:#666;font-size:0.8rem}
+  
+  .section{margin-bottom:24px}
+  .section-title{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#CC3333;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222}
+  
+  .sample-list{list-style:none}
+  .sample-item{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#141414;border:1px solid #222;border-radius:8px;margin-bottom:8px;transition:border-color 0.2s}
+  .sample-item:hover{border-color:#444}
+  
+  .sample-info{flex:1;min-width:0}
+  .sample-title{font-size:0.95rem;color:#fff;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sample-artist{font-size:0.8rem;color:#888}
+  .sample-type{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+  
+  .yt-link{padding:8px 14px;background:#FF0000;color:#fff;text-decoration:none;border-radius:6px;font-size:0.8rem;font-weight:600;white-space:nowrap;margin-left:12px;transition:opacity 0.2s}
+  .yt-link:hover{opacity:0.8}
+  
+  .empty{color:#555;font-size:0.9rem;text-align:center;padding:30px}
+  
+  .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.2);border-top-color:#fff;border-radius:50%;animation:spin 0.6s linear infinite;vertical-align:middle;margin-right:8px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  
+  .depth-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.65rem;font-weight:600;margin-right:6px}
+  .depth-0{background:#333;color:#aaa}
+  .depth-1{background:#CC3333;color:#fff}
+  .depth-2{background:#666;color:#ddd}
+  
+  .toggle-btn{background:none;border:1px solid #444;color:#888;padding:4px 10px;border-radius:6px;font-size:0.75rem;cursor:pointer;margin-left:8px;transition:all 0.2s}
+  .toggle-btn:hover{border-color:#CC3333;color:#CC3333}
+  .toggle-btn.active{background:#CC3333;border-color:#CC3333;color:#fff}
+  
+  .depth-controls{text-align:center;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Sample Chain Explorer</h1>
+  <p class="subtitle">Find every song connected by samples — powered by MusicBrainz + YouTube</p>
+  
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Enter song name (e.g. Amen Break, NWA Fuck tha Police)" />
+    <button id="searchBtn" onclick="searchSong()">Search</button>
+  </div>
+  
+  <div id="status" class="status" style="display:none"></div>
+  <div id="results"></div>
+</div>
+
+<script>
+const MB = 'https://musicbrainz.org/ws/2';
+const YT_SEARCH = 'https://www.youtube.com/results?search_query=';
+
+let currentResults = [];
+
+function showStatus(msg, isError) {
+  const el = document.getElementById('status');
+  el.style.display = 'block';
+  el.className = 'status' + (isError ? ' error' : '');
+  el.innerHTML = msg;
+}
+
+function hideStatus() {
+  document.getElementById('status').style.display = 'none';
+}
+
+async function mbFetch(path) {
+  const res = await fetch(`${MB}${path}`, {
+    headers: { 'Accept': 'application/json' }
+  });
+  if (!res.ok) throw new Error(`MusicBrainz error: ${res.status}`);
+  return res.json();
+}
+
+async function searchSong() {
+  const query = document.getElementById('searchInput').value.trim();
+  if (!query) return;
+  
+  const btn = document.getElementById('searchBtn');
+  btn.disabled = true;
+  showStatus('<span class="spinner"></span> Searching...');
+  document.getElementById('results').innerHTML = '';
+  
+  try {
+    // Search for recordings
+    const data = await mbFetch(`/recording?query="${encodeURIComponent(query)}"&limit=5&fmt=json`);
+    
+    if (!data.recordings || data.recordings.length === 0) {
+      showStatus('No results found. Try a different search.', true);
+      btn.disabled = false;
+      return;
+    }
+    
+    // Use first result
+    const recording = data.recordings[0];
+    await fetchSampleChain(recording);
+    
+  } catch (err) {
+    showStatus(`Error: ${err.message}`, true);
+  }
+  
+  btn.disabled = false;
+}
+
+async function fetchSampleChain(recording) {
+  showStatus('<span class="spinner"></span> Finding sample connections...');
+  
+  try {
+    // Get full recording with relationships
+    const full = await mbFetch(`/recording/${recording.id}?inc=work-rels+artist-rels+url-rels&fmt=json`);
+    
+    // Get the work(s) this recording belongs to
+    const workIds = (full['work-rels'] || []).map(r => r.work.id);
+    
+    let allSamples = [];
+    let sampledBy = [];
+    
+    // For each work, find recordings that sample it or are sampled by it
+    for (const workId of workIds) {
+      const work = await mbFetch(`/work/${workId}?inc=recording-rels&fmt=json`);
+      
+      for (const rel of (work['recording-rels'] || [])) {
+        const relType = rel.direction === 'backward' ? 'samples' : 'sampled_by';
+        if (relType === 'samples' && rel.recording.id !== recording.id) {
+          allSamples.push({ ...rel.recording, relType, depth: 0 });
+        }
+      }
+    }
+    
+    // Also check recording-level relationships
+    for (const rel of (full['recording-rels'] || [])) {
+      if (rel.type === 'sample' || rel.type === 'medley') {
+        if (rel.direction === 'backward') {
+          allSamples.push({ ...rel.recording, relType: 'samples', depth: 0 });
+        } else {
+          sampledBy.push({ ...rel.recording, relType: 'sampled_by', depth: 0 });
+        }
+      }
+    }
+    
+    // Remove duplicates by ID
+    const seen = new Set();
+    allSamples = allSamples.filter(s => {
+      if (seen.has(s.id)) return false;
+      seen.add(s.id);
+      return true;
+    });
+    
+    // Build results
+    const html = buildResults(recording, allSamples, sampledBy);
+    document.getElementById('results').innerHTML = html;
+    hideStatus();
+    
+  } catch (err) {
+    showStatus(`Error exploring samples: ${err.message}`, true);
+  }
+}
+
+function buildResults(original, samples, sampledBy) {
+  let html = '';
+  
+  // Original song header
+  const origArtist = original['artist-credit'] ? original['artist-credit'].map(c => c.name).join(', ') : 'Unknown';
+  html += `<div class="song-header">
+    <h2>${original.title}</h2>
+    <div class="artist">${origArtist}</div>
+    <div class="meta">MusicBrainz ID: ${original.id.substring(0, 8)}...</div>
+  </div>`;
+  
+  // Controls
+  html += `<div class="depth-controls">
+    <button class="toggle-btn active" onclick="setDepth(0,this)">Direct only</button>
+    <button class="toggle-btn" onclick="setDepth(1,this)">+ 1 level</button>
+    <button class="toggle-btn" onclick="setDepth(2,this)">+ 2 levels</button>
+  </div>`;
+  
+  // Songs this song samples
+  if (samples.length > 0) {
+    html += `<div class="section">
+      <div class="section-title">🎵 Songs this track samples (${samples.length})</div>
+      <ul class="sample-list" id="samples-list">
+        ${samples.map(s => renderItem(s, 0)).join('')}
+      </ul>
+    </div>`;
+  }
+  
+  // Songs that sample this song
+  if (sampledBy.length > 0) {
+    html += `<div class="section">
+      <div class="section-title">🔊 Songs that sample this track (${sampledBy.length})</div>
+      <ul class="sample-list" id="sampled-by-list">
+        ${sampledBy.map(s => renderItem(s, 0)).join('')}
+      </ul>
+    </div>`;
+  }
+  
+  if (samples.length === 0 && sampledBy.length === 0) {
+    html += `<div class="empty">No sample connections found in MusicBrainz.<br><small>Try searching for well-known sampled tracks (e.g. "Amen Break", "Think About It", "Funky Drummer")</small></div>`;
+  }
+  
+  // Store for depth toggle
+  currentResults = { samples, sampledBy };
+  
+  return html;
+}
+
+function renderItem(rec, depth) {
+  const artist = rec['artist-credit'] ? rec['artist-credit'].map(c => c.name).join(', ') : 'Unknown';
+  const query = encodeURIComponent(`${rec.title} ${artist}`);
+  const typeLabel = rec.relType === 'samples' ? 'Sampled by this track' : 'Samples this track';
+  
+  return `<li class="sample-item" data-depth="${depth}">
+    <div class="sample-info">
+      <div class="sample-title">${rec.title}</div>
+      <div class="sample-artist">${artist}</div>
+      <div class="sample-type"><span class="depth-badge depth-${depth}">Level ${depth}</span> ${typeLabel}</div>
+    </div>
+    <a href="${YT_SEARCH}${query}" target="_blank" rel="noopener" class="yt-link">▶ YouTube</a>
+  </li>`;
+}
+
+async function setDepth(level, btn) {
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  
+  if (level === 0) {
+    // Just show direct connections
+    document.getElementById('results').innerHTML = buildResults(
+      { title: document.querySelector('.song-header h2').textContent, id: '...' },
+      currentResults.samples,
+      currentResults.sampledBy
+    );
+    return;
+  }
+  
+  // Fetch deeper levels
+  showStatus('<span class="spinner"></span> Exploring deeper connections...');
+  
+  const allTracks = [...currentResults.samples, ...currentResults.sampledBy];
+  const depth1Samples = [];
+  const depth1SampledBy = [];
+  
+  for (const track of allTracks.slice(0, 10)) { // Limit to avoid rate limiting
+    try {
+      await new Promise(r => setTimeout(r, 1200)); // Rate limit
+      const full = await mbFetch(`/recording/${track.id}?inc=work-rels+recording-rels&fmt=json`);
+      
+      const workIds = (full['work-rels'] || []).map(r => r.work.id);
+      for (const workId of workIds) {
+        const work = await mbFetch(`/work/${workId}?inc=recording-rels&fmt=json`);
+        for (const rel of (work['recording-rels'] || [])) {
+          if (rel.recording.id !== track.id && !currentResults.samples.find(s => s.id === rel.recording.id) && !currentResults.sampledBy.find(s => s.id === rel.recording.id)) {
+            if (rel.direction === 'backward') {
+              depth1Samples.push({ ...rel.recording, relType: 'samples', depth: level });
+            }
+          }
+        }
+      }
+    } catch (e) { /* skip */ }
+  }
+  
+  // Merge and deduplicate
+  const seen = new Set([...currentResults.samples.map(s => s.id), ...currentResults.sampledBy.map(s => s.id)]);
+  const newSamples = depth1Samples.filter(s => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
+  
+  const allDirect = [...currentResults.samples, ...currentResults.sampledBy, ...newSamples];
+  
+  // Rebuild header
+  const origTitle = document.querySelector('.song-header h2').textContent;
+  const origArtist = document.querySelector('.song-header .artist').textContent;
+  
+  let html = `<div class="song-header">
+    <h2>${origTitle}</h2>
+    <div class="artist">${origArtist}</div>
+  </div>`;
+  
+  html += `<div class="depth-controls">
+    <button class="toggle-btn" onclick="setDepth(0,this)">Direct only</button>
+    <button class="toggle-btn ${level >= 1 ? 'active' : ''}" onclick="setDepth(1,this)">+ 1 level</button>
+    <button class="toggle-btn ${level >= 2 ? 'active' : ''}" onclick="setDepth(2,this)">+ 2 levels</button>
+  </div>`;
+  
+  if (allDirect.length > 0) {
+    html += `<div class="section">
+      <div class="section-title">🎵 All sample connections (${allDirect.length})</div>
+      <ul class="sample-list">
+        ${allDirect.map(s => renderItem(s, s.depth || 0)).join('')}
+      </ul>
+    </div>`;
+  }
+  
+  document.getElementById('results').innerHTML = html;
+  hideStatus();
+}
+
+// Enter key triggers search
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') searchSong();
+});
+</script>
+</body>
+</html>
