@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "bcb0b07e86d14e2b99a62679832b4e2b",
-      "title": "I'd Rather Be Yours Than Mine",
-      "artist": "Sophia Stel",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cc2e7625962bba0dfa52e36d-1772630780.jpg",
-      "timestamp": "2026-05-29T10:39:04.404995"
-    },
-    {
-      "id": "9e370f05d1c67d305949cde990068668",
-      "title": "Does He Love Me (feat. Foxy Brown)",
-      "artist": "Keshia Chant\u00e9/Foxy Brown",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3ed6e05f423151bb5596a894-1770649871.jpg",
-      "timestamp": "2026-05-29T13:53:21.848497"
-    },
-    {
-      "id": "100a429cc107f7618986e23dfb538afe",
-      "title": "One Week",
-      "artist": "Barenaked Ladies",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1097a22b05100dcc062f1e36-1770644063.jpg",
-      "timestamp": "2026-05-29T17:28:18.377142"
-    },
-    {
-      "id": "80df89acb5a0626318b470528bd3627d",
-      "title": "Die Alone",
-      "artist": "Belly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8bef6807a7d76d0df75cbe6a-1770664837.jpg",
-      "timestamp": "2026-05-29T19:52:41.499807"
-    }
-  ],
-  "last_song_id": "80df89acb5a0626318b470528bd3627d",
-  "post_count": 323
+  "tracked_songs": [],
+  "last_song_id": "c330ebef36efe11a78a6556025c43bd3",
+  "post_count": 324
 }
