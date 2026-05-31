@@ -6,8 +6,15 @@
       "artist": "Shawn Desman",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/5822298c2fb418d9f3e1a3f0-1770786294.jpg",
       "timestamp": "2026-05-31T02:41:33.083741"
+    },
+    {
+      "id": "0cb1c8a695b2c3f5a89d89474d19eb6b",
+      "title": "The Bloody Light",
+      "artist": "The Trews",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/63af938e3efc36d08866bef9-1770644985.jpg",
+      "timestamp": "2026-05-31T06:52:34.737742"
     }
   ],
-  "last_song_id": "be93401c0c494ac5a2aedce784bbad60",
+  "last_song_id": "0cb1c8a695b2c3f5a89d89474d19eb6b",
   "post_count": 327
 }
