@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "e13588ebaaa92e6bce96836a1b73c0ef",
-      "title": "Don't Stop",
-      "artist": "SonReal & Rich Kidd",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0cf939ef232a665d9386811d-1770660501.jpg",
-      "timestamp": "2026-06-14T17:54:49.599148"
-    },
-    {
-      "id": "5ef8ada3f522f5fa3889dea5fefca550",
-      "title": "Supreme",
-      "artist": "Dan-e-o, Nish",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1833d6d381f7e96a5647d7cd-1770663396.jpg",
-      "timestamp": "2026-06-14T19:12:20.705550"
-    },
-    {
-      "id": "82dd3a6008bfc71b502097159eb4dac2",
-      "title": "Really Livin'",
-      "artist": "Rascalz",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8ce7e1834805cbecc4cfcc80-1770663139.jpg",
-      "timestamp": "2026-06-14T20:44:47.172695"
-    },
-    {
-      "id": "ebeb40195fa456b0ccdf488e899ce2c8",
-      "title": "THE PORTAL",
-      "artist": "The BLK LT$",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b3a700455d8f0323cdb7d598-1770645761.jpg",
-      "timestamp": "2026-06-14T22:02:36.884525"
-    }
-  ],
-  "last_song_id": "ebeb40195fa456b0ccdf488e899ce2c8",
-  "post_count": 353
+  "tracked_songs": [],
+  "last_song_id": "e5a433532901b21777672f3b0eecaaf8",
+  "post_count": 354
 }
