@@ -6,8 +6,15 @@
       "artist": "Potlood",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/278343dc3234a30cd9b0f1eb-1770644305.jpg",
       "timestamp": "2026-06-17T14:07:02.576816"
+    },
+    {
+      "id": "be3deed377bb7da0a18f3a5860496ada",
+      "title": "Let's Make A Record Deal Episode 3 (feat. Citizen Kane)",
+      "artist": "Mastermind, Citizen Kane",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/18762e590100f4e93d244903-1770655664.jpg",
+      "timestamp": "2026-06-17T17:27:36.260861"
     }
   ],
-  "last_song_id": "390314a99a011316ed0a855e937bcfc2",
+  "last_song_id": "be3deed377bb7da0a18f3a5860496ada",
   "post_count": 357
 }
