@@ -13,8 +13,15 @@
       "artist": "Ouri",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/77c5d9069c998506e6378d66-1770645520.jpg",
       "timestamp": "2026-06-27T11:09:07.165766"
+    },
+    {
+      "id": "33346320e7bc2f14b8213fcd6b8a0e62",
+      "title": "WEIGHT OF TRUTH",
+      "artist": "ZIG MENTALITY, cleopatrick",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1d6d2d0ad937159d2079a190-1770644166.jpg",
+      "timestamp": "2026-06-27T12:49:20.703703"
     }
   ],
-  "last_song_id": "ebdca8a65da1dbeb680e7f12dc0d6449",
+  "last_song_id": "33346320e7bc2f14b8213fcd6b8a0e62",
   "post_count": 375
 }
