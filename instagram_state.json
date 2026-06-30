@@ -6,8 +6,15 @@
       "artist": "Gob",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c8d4b2f44ef26a6a733942b3-1770644097.jpg",
       "timestamp": "2026-06-30T15:10:38.509534"
+    },
+    {
+      "id": "b60c3c046d68a28cf71694d1f67e99a7",
+      "title": "Plastic Trees",
+      "artist": "Tia Wood",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9f3c2254078b03b607e413c7-1770650849.jpg",
+      "timestamp": "2026-06-30T17:21:20.894056"
     }
   ],
-  "last_song_id": "ae051e1218a955ae3cda1434f6557e26",
+  "last_song_id": "b60c3c046d68a28cf71694d1f67e99a7",
   "post_count": 382
 }
