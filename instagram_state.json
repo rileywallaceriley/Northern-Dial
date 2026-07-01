@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "77a8b988c25ef7138a468c8da657df80",
-      "title": "Who's Better",
-      "artist": "Sofia Ly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a01044608837196bea9b8d1a-1770645644.jpg",
-      "timestamp": "2026-07-01T16:42:34.924542"
-    },
-    {
-      "id": "6c6a1004f97e7a2122ea2776ac2aaf34",
-      "title": "War Club (feat. Snotty Nose Rez Kids)",
-      "artist": "DJ Shub, Snotty Nose Rez Kids",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b98acbefc31942462da0bc79-1770645726.jpg",
-      "timestamp": "2026-07-01T18:55:27.139962"
-    },
-    {
-      "id": "ba48e6f9c7386419a0a12593d93d584e",
-      "title": "Good Bagels",
-      "artist": "Raz Fresco",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7ceef0f164430d896370b3e5-1770666914.jpg",
-      "timestamp": "2026-07-01T20:45:36.532005"
-    },
-    {
-      "id": "35216b2d7fd53e681e819ba3c9d4516b",
-      "title": "LUV",
-      "artist": "Tory Lanez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/32853a44a75231cc73221d68-1770664640.jpg",
-      "timestamp": "2026-07-01T22:13:34.860664"
-    }
-  ],
-  "last_song_id": "35216b2d7fd53e681e819ba3c9d4516b",
-  "post_count": 384
+  "tracked_songs": [],
+  "last_song_id": "4ddcfe368d7fbebd2c748431fd732648",
+  "post_count": 385
 }
