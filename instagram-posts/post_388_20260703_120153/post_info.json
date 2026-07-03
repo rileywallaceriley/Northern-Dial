@@ -1,0 +1,49 @@
+{
+  "post_number": 388,
+  "created_at": "2026-07-03T12:01:58.586720",
+  "songs": [
+    {
+      "id": "873b45618a0e06d60d0301591a7b37a0",
+      "title": "Epic",
+      "artist": "Nicole Holness Aka X-quisite & Nicole Holness",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1a574310e689f56816bd6309-1770653080.jpg",
+      "timestamp": "2026-07-02T23:57:04.002304"
+    },
+    {
+      "id": "7a28202fca361f5a67ed2ca11c8c6b27",
+      "title": "What You Make of It",
+      "artist": "Psychic Armour",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/caf2d16c7b94844b9b3421b9-1771081650.jpg",
+      "timestamp": "2026-07-03T02:37:27.420102"
+    },
+    {
+      "id": "8af71d30b5943c6bfda55c7407abc037",
+      "title": "don't stop",
+      "artist": "RL",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a99a3ce695a5af241001eea5-1770644234.jpg",
+      "timestamp": "2026-07-03T06:23:11.121330"
+    },
+    {
+      "id": "e782e00fd9009c51617990db58952152",
+      "title": "Puzzle Pop",
+      "artist": "cootie catcher",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b6bf281b15588be36815a2e1-1772630750.jpg",
+      "timestamp": "2026-07-03T09:40:03.072288"
+    },
+    {
+      "id": "6e457819ab570a2f33af2730a52fe876",
+      "title": "Manos Al Aire",
+      "artist": "Nelly Furtado",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3f35838c0ff5c88a7e3dc73a-1770649725.jpg",
+      "timestamp": "2026-07-03T12:01:53.411019"
+    }
+  ],
+  "caption": "\ud83c\udfb5 RECENTLY PLAYED ON NORTHERN DIAL\n\n1. Nicole Holness Aka X-quisite & Nicole Holness - \"Epic\"\n2. Psychic Armour - \"What You Make of It\"\n3. RL - \"don't stop\"\n4. cootie catcher - \"Puzzle Pop\"\n5. Nelly Furtado - \"Manos Al Aire\"\n\nAll Killer, All CanCon \ud83c\udf41\nTune in: northerndial.ca\n\n#CanadianMusic #IndieRadio #CanCon #NorthernDial #DiscoverMusic",
+  "images": [
+    "image_1.jpg",
+    "image_2.jpg",
+    "image_3.jpg",
+    "image_4.jpg",
+    "image_5.jpg"
+  ]
+}
