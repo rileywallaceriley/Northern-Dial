@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d712101a383c8d464646d72871144c91",
-      "title": "Spread My Wings (Remix)",
-      "artist": "Shawn Desman",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f6806d145dccdb81ae466178-1770786317.jpg",
-      "timestamp": "2026-07-08T05:14:01.500975"
-    },
-    {
-      "id": "b664d995a5343024b799c6e411e8b246",
-      "title": "Just Life",
-      "artist": "Leith",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4deb3e19f6a0896f38ffdf70-1770646349.jpg",
-      "timestamp": "2026-07-08T07:44:07.321188"
-    },
-    {
-      "id": "a563211cdf6f256b2ed0277a8260602f",
-      "title": "Uh-Oh",
-      "artist": "Jeremy Fisher, Serena Ryder",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9c0cb1218f56974c2a2286e8-1770644525.jpg",
-      "timestamp": "2026-07-08T10:08:50.904054"
-    },
-    {
-      "id": "18188151812187fec864046fd98a01f7",
-      "title": "Big Wheels",
-      "artist": "Down With Webster",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/524fae815534173b48efc729-1770645959.jpg",
-      "timestamp": "2026-07-08T12:00:37.621896"
-    }
-  ],
-  "last_song_id": "18188151812187fec864046fd98a01f7",
-  "post_count": 399
+  "tracked_songs": [],
+  "last_song_id": "9c938aeb24633b733db4ab8fe61e428e",
+  "post_count": 400
 }
