@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d628d2169a8c57515ce1fae693849bd1",
-      "title": "Leopold the Apostle",
-      "artist": "Josh Martinez, Buck 65",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ec5936243f3501bff5d1bab0-1770655343.jpg",
-      "timestamp": "2026-07-14T01:45:06.881578"
-    },
-    {
-      "id": "045b8b77c9e0c8b5bf5f962c3564e472",
-      "title": "bad hackers",
-      "artist": "Jamvvis, Shanic",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0139723a280ae9967536f2eb-1770645469.jpg",
-      "timestamp": "2026-07-14T04:43:27.618123"
-    },
-    {
-      "id": "561b571a1a2c0d36dfa75d42a3190380",
-      "title": "Swordfish",
-      "artist": "Nic D/Connor Price",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c997aab8650fef92812c4886-1770645792.jpg",
-      "timestamp": "2026-07-14T07:05:00.891397"
-    },
-    {
-      "id": "00efb287111fadde33acf4a590a7d1d3",
-      "title": "Gunnfinga (feat. Kardinal Offishall)",
-      "artist": "Rascalz/Kardinal Offishall",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e07d082e1fa43fb7a7582e0f-1770659615.jpg",
-      "timestamp": "2026-07-14T09:21:39.116208"
-    }
-  ],
-  "last_song_id": "00efb287111fadde33acf4a590a7d1d3",
-  "post_count": 414
+  "tracked_songs": [],
+  "last_song_id": "d6ac3d412fb2a08ef31ec6050abfcdf1",
+  "post_count": 415
 }
