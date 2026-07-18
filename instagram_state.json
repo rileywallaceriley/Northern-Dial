@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "f188e023051851d0631e8e6781109630",
-      "title": "Sorry",
-      "artist": "Justin Bieber",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4c38d987f6be60c073eefa3a-1770646128.jpg",
-      "timestamp": "2026-07-18T08:43:53.133499"
-    },
-    {
-      "id": "70d1e9c255ab955bbc31872ea2f06fbe",
-      "title": "Dear Love",
-      "artist": "Rachel Ann Weiss",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/546842d18f0f977663a75bd9-1770648643.jpg",
-      "timestamp": "2026-07-18T10:11:27.508411"
-    },
-    {
-      "id": "2a94e2b952f7ca2594fd88e1476c5818",
-      "title": "COME GET YOUR GIRL",
-      "artist": "Lights",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4c709280d66505d67abba327-1770645693.jpg",
-      "timestamp": "2026-07-18T11:27:50.562602"
-    },
-    {
-      "id": "4f1b46094a113c92bb44a79ea51af1ea",
-      "title": "Foreign",
-      "artist": "City Fidelia",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/21b3cda25992f31c821e9964-1770855791.jpg",
-      "timestamp": "2026-07-18T12:11:34.434005"
-    }
-  ],
-  "last_song_id": "4f1b46094a113c92bb44a79ea51af1ea",
-  "post_count": 426
+  "tracked_songs": [],
+  "last_song_id": "3d7d42226831686ff8c8fea6825d91d3",
+  "post_count": 427
 }
