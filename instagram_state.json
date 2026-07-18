@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "cbae7289afb0b4b7010ae4b3fa7b2dc2",
-      "title": "LOVE YOU",
-      "artist": "cleopatrick",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/55cc63203b935338ba0d4a03-1770644134.jpg",
-      "timestamp": "2026-07-18T14:44:03.492425"
-    },
-    {
-      "id": "12e2563d9c41dc5d669697dd9300de24",
-      "title": "Complicated",
-      "artist": "Avril Lavigne",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/65250fef86dc17f5f03a2c79-1770646806.jpg",
-      "timestamp": "2026-07-18T15:46:17.579097"
-    },
-    {
-      "id": "3762d0616cc81b617267114d3fd4bbaf",
-      "title": "Love It Here (feat. Lola Brooke)",
-      "artist": "Shantel May, Lola Brooke",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c41956989339ed8a6b06cca2-1770651570.jpg",
-      "timestamp": "2026-07-18T16:46:07.118299"
-    },
-    {
-      "id": "57fd908dbb49ab2eccce9e7a6bd80b5d",
-      "title": "WYAT?",
-      "artist": "Junia-T, STORRY, Only1KNG",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/eb895e987320446e5a621812-1770856553.jpg",
-      "timestamp": "2026-07-18T17:48:50.882079"
-    }
-  ],
-  "last_song_id": "57fd908dbb49ab2eccce9e7a6bd80b5d",
-  "post_count": 427
+  "tracked_songs": [],
+  "last_song_id": "8f1afbcbb9cc0275e5ab793c7a6803ea",
+  "post_count": 428
 }
