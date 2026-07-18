@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "260c3f22a6f9d96cc793cd16ad71174e",
-      "title": "Old School Games",
-      "artist": "Ghetto Concept",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4fd38a9544dd94cbc38831ea-1770654605.jpg",
-      "timestamp": "2026-07-17T22:41:08.536221"
-    },
-    {
-      "id": "fb5855c156a495a159cd1167eb631688",
-      "title": "New beginning",
-      "artist": "prince ali pa",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/530bf763c8938e2675fdc60b",
-      "timestamp": "2026-07-17T23:43:59.919904"
-    },
-    {
-      "id": "504f48f1daba9c450b1064c988cb95c5",
-      "title": "Who Hurt You",
-      "artist": "Belly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/12cfe30bf6366a8822517274-1770667192.jpg",
-      "timestamp": "2026-07-18T01:45:01.343980"
-    },
-    {
-      "id": "eb08df46d1c876cb9585be12eaba24e7",
-      "title": "**NYB**",
-      "artist": "Jessie Reyez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0ac35564399eefffe7f5b539-1770644394.jpg",
-      "timestamp": "2026-07-18T04:41:25.245025"
-    }
-  ],
-  "last_song_id": "eb08df46d1c876cb9585be12eaba24e7",
-  "post_count": 425
+  "tracked_songs": [],
+  "last_song_id": "cb3e1fc4943f1389b215f6a440e8f0e6",
+  "post_count": 426
 }
