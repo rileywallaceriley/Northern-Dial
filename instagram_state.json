@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "1beffedf3aefa9f290ff1aafed51805b",
-      "title": "IYKYK",
-      "artist": "TheRa11n, Shub",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a64b9d1a23f5c7ae58724340-1770645733.jpg",
-      "timestamp": "2026-07-19T17:51:33.661760"
-    },
-    {
-      "id": "412f2d72da9ac3120bbc75b6cc5f5627",
-      "title": "STACEY DASH",
-      "artist": "ARDN, FRVRFRIDAY",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4ad38531f5cbc9a447311ebb-1770665551.jpg",
-      "timestamp": "2026-07-19T18:53:47.656802"
-    },
-    {
-      "id": "febef4ff014a2ec32cc399a418a0f39f",
-      "title": "Self Conscious",
-      "artist": "City Fidelia, Carpe DM",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b1b510ceee33565c8a078525-1770855814.jpg",
-      "timestamp": "2026-07-19T20:03:34.638010"
-    },
-    {
-      "id": "d712101a383c8d464646d72871144c91",
-      "title": "Spread My Wings (Remix)",
-      "artist": "Shawn Desman",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f6806d145dccdb81ae466178-1770786317.jpg",
-      "timestamp": "2026-07-19T21:12:35.623019"
-    }
-  ],
-  "last_song_id": "d712101a383c8d464646d72871144c91",
-  "post_count": 431
+  "tracked_songs": [],
+  "last_song_id": "04cb273e50a23302906b787ff3096c30",
+  "post_count": 432
 }
