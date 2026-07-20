@@ -6,8 +6,15 @@
       "artist": "Loviet",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e884c3dbb95c20680665341f-1770644191.jpg",
       "timestamp": "2026-07-20T21:38:50.097346"
+    },
+    {
+      "id": "5bb90a2eabe11d406a6661fb0ccf7ea2",
+      "title": "On My Face",
+      "artist": "Rich Kidd",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d5fbb5a4194996adc3d905f5-1770660444.jpg",
+      "timestamp": "2026-07-20T22:50:14.449577"
     }
   ],
-  "last_song_id": "357f644df9814561bb53293327c3b89b",
+  "last_song_id": "5bb90a2eabe11d406a6661fb0ccf7ea2",
   "post_count": 434
 }
