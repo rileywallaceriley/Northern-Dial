@@ -6,8 +6,15 @@
       "artist": "cleopatrick",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7d448ac5fd30543324d1f997-1770644143.jpg",
       "timestamp": "2026-07-20T13:22:56.960670"
+    },
+    {
+      "id": "5f90a7baae3f920ffdda191c75c69137",
+      "title": "I Hate Everything About You",
+      "artist": "Three Days Grace",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/00768a07ae7f3d22b362889e-1770647020.jpg",
+      "timestamp": "2026-07-20T15:25:44.864643"
     }
   ],
-  "last_song_id": "8d81bd535ab5d707680947b2a3ce2ae5",
+  "last_song_id": "5f90a7baae3f920ffdda191c75c69137",
   "post_count": 433
 }
