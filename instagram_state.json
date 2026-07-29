@@ -13,8 +13,15 @@
       "artist": "Divo, D-Sisive, N.I.F.T.Y.",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/52b6e91051822137f4e82a68-1770655866.jpg",
       "timestamp": "2026-07-29T08:02:25.275497"
+    },
+    {
+      "id": "0a926d1dc0f729a146a40040c69d333c",
+      "title": "Hang Ten (Album Version)",
+      "artist": "Edwin",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/772135872a05d589e484c927-1770643688.jpg",
+      "timestamp": "2026-07-29T11:00:04.825833"
     }
   ],
-  "last_song_id": "88f9243fd3077c2b1a5a10db343f4ae9",
+  "last_song_id": "0a926d1dc0f729a146a40040c69d333c",
   "post_count": 456
 }
