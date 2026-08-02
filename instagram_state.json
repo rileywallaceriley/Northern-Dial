@@ -13,8 +13,15 @@
       "artist": "STORRY",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6b21a6f9653e185ef7d44532-1770856903.jpg",
       "timestamp": "2026-08-02T17:55:14.704730"
+    },
+    {
+      "id": "70345ee3e6995e6540bb2e9fa32d90c0",
+      "title": "LEGENDARY",
+      "artist": "ThisIsScribe",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ebc6e0156180550e1d4a8e60-1771080827.jpg",
+      "timestamp": "2026-08-02T18:57:39.471113"
     }
   ],
-  "last_song_id": "c24be73757161d6d047cc65ab15ebc10",
+  "last_song_id": "70345ee3e6995e6540bb2e9fa32d90c0",
   "post_count": 468
 }
