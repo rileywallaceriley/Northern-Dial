@@ -20,8 +20,15 @@
       "artist": "Seth Dyer",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/19f6b82f032d893c3ca7d550-1770856697.jpg",
       "timestamp": "2026-08-07T23:55:42.064893"
+    },
+    {
+      "id": "9a2038262433c427cb70c2e13ee75f69",
+      "title": "Proppa",
+      "artist": "Richie Sosa",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/44632fecbb407ae74c39c312-1770667149.jpg",
+      "timestamp": "2026-08-08T01:02:20.704694"
     }
   ],
-  "last_song_id": "057778cd50e32f475a1cc7ce0e1309bd",
+  "last_song_id": "9a2038262433c427cb70c2e13ee75f69",
   "post_count": 481
 }
