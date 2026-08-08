@@ -6,8 +6,15 @@
       "artist": "Rich Kidd",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/bdc306bff258697463cc97a7-1770660471.jpg",
       "timestamp": "2026-08-08T19:06:51.238086"
+    },
+    {
+      "id": "30e8fe2e3558d4121c733ecbf10086dd",
+      "title": "BIGGER BADA BOOM (Frank Delour Remix)",
+      "artist": "EverythingOShauN, Aiza, Frank Delour",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/360c7b9f9c9851c4e7053395-1770666477.jpg",
+      "timestamp": "2026-08-08T19:50:47.090043"
     }
   ],
-  "last_song_id": "f07ae5348eaee8b57577c3528c43f58b",
+  "last_song_id": "30e8fe2e3558d4121c733ecbf10086dd",
   "post_count": 486
 }
