@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "ccedcf1659c9449b84c4f4b6b7570fd3",
-      "title": "Sad Songs",
-      "artist": "Melanie Fiona",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/60ba08e6edc0b9b8fa78c6dc-1770651390.jpg",
-      "timestamp": "2026-08-08T04:32:58.541518"
-    },
-    {
-      "id": "0ac78a8baa36ae31388fd9a9ac1c8dae",
-      "title": "Sentimental",
-      "artist": "Deborah Cox",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1e1e95902dcd15c3c1b1c3aa-1770650785.jpg",
-      "timestamp": "2026-08-08T05:35:50.195194"
-    },
-    {
-      "id": "336e9a6053f01ee74d697d54a340d1a0",
-      "title": "Munyam Jam (Bunnin Break)",
-      "artist": "IRS",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4389fea07df4ad6f1fc91641-1770656046.jpg",
-      "timestamp": "2026-08-08T06:36:17.824999"
-    },
-    {
-      "id": "ca4ce8b75f7a6cd96a03ea17de529119",
-      "title": "Past Life",
-      "artist": "Maddee Ritter",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4504eb03122584a7de9ec76a-1770644238.jpg",
-      "timestamp": "2026-08-08T07:41:19.433820"
-    }
-  ],
-  "last_song_id": "ca4ce8b75f7a6cd96a03ea17de529119",
-  "post_count": 482
+  "tracked_songs": [],
+  "last_song_id": "4661807fd401176210804c458b91f6e1",
+  "post_count": 483
 }
