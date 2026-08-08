@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "6b564ba0e4e118325beb4be8190d826b",
-      "title": "Twisted",
-      "artist": "SadBoi",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4fe361b076f343fa05fee373-1770645669.jpg",
-      "timestamp": "2026-08-08T15:54:07.839656"
-    },
-    {
-      "id": "aaaca786092f118b1650e6d401f09c43",
-      "title": "D\u00e9sert",
-      "artist": "Ms. Bella",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/64f957ebb6fdc7faf0823a5d-1772509340.jpg",
-      "timestamp": "2026-08-08T16:21:55.995835"
-    },
-    {
-      "id": "3eff881b5815d62d3e88ecbd4af175ab",
-      "title": "Call Cain",
-      "artist": "STORRY",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/5a944550254581b1caabea43-1770855781.jpg",
-      "timestamp": "2026-08-08T17:00:15.292653"
-    },
-    {
-      "id": "3744edaccae61e5527d548fd4636a75e",
-      "title": "Soar",
-      "artist": "Aqyila",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8b25610b77fe25e5249c0455-1770645539.jpg",
-      "timestamp": "2026-08-08T17:34:47.224988"
-    }
-  ],
-  "last_song_id": "3744edaccae61e5527d548fd4636a75e",
-  "post_count": 485
+  "tracked_songs": [],
+  "last_song_id": "99bfa66e6f41b011d2d3692e97ce991f",
+  "post_count": 486
 }
