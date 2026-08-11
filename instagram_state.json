@@ -6,8 +6,15 @@
       "artist": "Snotty Nose Rez Kids/ Travis Thompson",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/790b1d08aa691306a8e5a0e3-1770665857.jpg",
       "timestamp": "2026-08-11T19:55:48.206048"
+    },
+    {
+      "id": "dfc40cbcd4ca232fa3a5df5912b745a3",
+      "title": "Inside My Love",
+      "artist": "Phoenix Pagliacci",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/84123d55fde4d1a58f58cca7-1771081675.jpg",
+      "timestamp": "2026-08-11T20:35:48.569113"
     }
   ],
-  "last_song_id": "b44921fa89d5b6a15e6476116fdfc62d",
+  "last_song_id": "dfc40cbcd4ca232fa3a5df5912b745a3",
   "post_count": 501
 }
