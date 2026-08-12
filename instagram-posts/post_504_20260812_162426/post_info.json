@@ -1,0 +1,49 @@
+{
+  "post_number": 504,
+  "created_at": "2026-08-12T16:24:31.232758",
+  "songs": [
+    {
+      "id": "e8bd32c264ba636a5161600555410bb1",
+      "title": "Charms",
+      "artist": "The Philosopher Kings",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4a6e778eb60153537731bdda-1770643744.jpg",
+      "timestamp": "2026-08-12T11:40:14.978937"
+    },
+    {
+      "id": "b3940738510df4d25ad44185dbfbb7f3",
+      "title": "Smoke",
+      "artist": "Phoenix Pagliacci",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/865d707e15b39a8d265eeeda-1771081668.jpg",
+      "timestamp": "2026-08-12T12:49:10.096874"
+    },
+    {
+      "id": "f422820689694bcd8343182faea33ca2",
+      "title": "SAFE SPACE",
+      "artist": "Justin Bieber, Lil B",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e9eed8b74adff78d9091b63d-1770645872.jpg",
+      "timestamp": "2026-08-12T14:14:55.330011"
+    },
+    {
+      "id": "53c5b48942d0661ce03a6746c7b7f8cd",
+      "title": "Mountain of Madness",
+      "artist": "City and Colour",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/45904bb889c8497452caa875-1770645362.jpg",
+      "timestamp": "2026-08-12T15:26:58.080700"
+    },
+    {
+      "id": "1e8444e8feb4cabe4dfaa012c838d1d8",
+      "title": "Gasoline",
+      "artist": "Liza",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/88d795ba7c65b1e63002a47b-1771123184.jpg",
+      "timestamp": "2026-08-12T16:24:26.087452"
+    }
+  ],
+  "caption": "\ud83c\udfb5 RECENTLY PLAYED ON NORTHERN DIAL\n\n1. The Philosopher Kings - \"Charms\"\n2. Phoenix Pagliacci - \"Smoke\"\n3. Justin Bieber, Lil B - \"SAFE SPACE\"\n4. City and Colour - \"Mountain of Madness\"\n5. Liza - \"Gasoline\"\n\nAll Killer, All CanCon \ud83c\udf41\nTune in: northerndial.ca\n\n#CanadianMusic #IndieRadio #CanCon #NorthernDial #DiscoverMusic",
+  "images": [
+    "image_1.jpg",
+    "image_2.jpg",
+    "image_3.jpg",
+    "image_4.jpg",
+    "image_5.jpg"
+  ]
+}
