@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "c1febde91adfe4877cde5536ad325cbe",
-      "title": "One Day",
-      "artist": "Tory Lanez",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9ad8174b8e055129634bbfd4-1770652604.jpg",
-      "timestamp": "2026-08-12T05:24:32.670087"
-    },
-    {
-      "id": "5ff282a774fd9479a0d5ffa255354fdc",
-      "title": "Words Are Spells",
-      "artist": "Witch Prophet",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/5e343dc6c7e1bc53c0566f27",
-      "timestamp": "2026-08-12T06:50:52.087509"
-    },
-    {
-      "id": "9f0e0a4425edf95b94b916c0f62e4f89",
-      "title": "Pluto (feat. JC and Mayhem Morearty)",
-      "artist": "Harvey Stripes",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/69c491f3b68b78ea0d28719b-1770660253.jpg",
-      "timestamp": "2026-08-12T08:09:26.446894"
-    },
-    {
-      "id": "930edf76c6b70a070dae3f017043c8a4",
-      "title": "Some More",
-      "artist": "T\u00d6ME",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ffa931a5e3a93a2b4dc0591b-1770645579.jpg",
-      "timestamp": "2026-08-12T09:36:47.671418"
-    }
-  ],
-  "last_song_id": "930edf76c6b70a070dae3f017043c8a4",
-  "post_count": 502
+  "tracked_songs": [],
+  "last_song_id": "ef9044c84adf8209f5a809381aec8e8e",
+  "post_count": 503
 }
