@@ -20,8 +20,15 @@
       "artist": "88GLAM",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7becdec295647d47b1c533f0-1770665632.jpg",
       "timestamp": "2026-08-11T21:36:57.064196"
+    },
+    {
+      "id": "44208f736109d457c44449e59978b6a9",
+      "title": "Effortless",
+      "artist": "Justo the MC, DK",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/deaa568995feecb47ea87646-1770663714.jpg",
+      "timestamp": "2026-08-12T01:11:58.183014"
     }
   ],
-  "last_song_id": "b02b9602339075335b7f50df0309672a",
+  "last_song_id": "44208f736109d457c44449e59978b6a9",
   "post_count": 501
 }
