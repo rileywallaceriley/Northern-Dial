@@ -13,8 +13,15 @@
       "artist": "Daniel Caesar, Sampha",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0d85ced03e7b6c29ac9b99a0-1770652130.jpg",
       "timestamp": "2026-08-15T22:11:52.476460"
+    },
+    {
+      "id": "5e32ca733aeb3e30cc1fe9d9c381c2f5",
+      "title": "Young Assassins",
+      "artist": "Northside Archives",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0676239f4bca28de88910395-1770663518.jpg",
+      "timestamp": "2026-08-15T22:44:33.532796"
     }
   ],
-  "last_song_id": "9ac30c740098a392c24a0ff10c4cc0cf",
+  "last_song_id": "5e32ca733aeb3e30cc1fe9d9c381c2f5",
   "post_count": 521
 }
