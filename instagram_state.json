@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "ffd0d6cb8b64d68cc92cdbde006af0f1",
-      "title": "Amani",
-      "artist": "Saukrates",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/46b83f957c760b67429a1acd-1775451284.jpg",
-      "timestamp": "2026-08-16T08:18:34.308370"
-    },
-    {
-      "id": "a8330768ba51695c30dc31734b374f8a",
-      "title": "I'll Rock Your Body",
-      "artist": "Jarvis Church, Cecile",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4b20df0e0da479ee8fc8af65-1770649279.jpg",
-      "timestamp": "2026-08-16T08:54:15.865232"
-    },
-    {
-      "id": "46046e1f1380e225522b808504f056c6",
-      "title": "Take A Minute",
-      "artist": "K'NAAN",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e4cf9950733d8442c93109be-1770646054.jpg",
-      "timestamp": "2026-08-16T09:18:42.404398"
-    },
-    {
-      "id": "51f1936cc83b5ebf20337dd7aab6bb6b",
-      "title": "Look Pt 1",
-      "artist": "Shad, Raz Fresco",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0f93dbda6cc0f7bc7f7b0cbe-1771081713.jpg",
-      "timestamp": "2026-08-16T09:49:11.476307"
-    }
-  ],
-  "last_song_id": "51f1936cc83b5ebf20337dd7aab6bb6b",
-  "post_count": 524
+  "tracked_songs": [],
+  "last_song_id": "5f36059017ce60787359fbb044ab4639",
+  "post_count": 525
 }
