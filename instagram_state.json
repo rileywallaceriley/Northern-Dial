@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "f3dcf327a6a6b108d2e9529cae6e1638",
-      "title": "Raw",
-      "artist": "Sage Harris, Vandalizm",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cad82705d8a677c5931b138c-1770645621.jpg",
-      "timestamp": "2026-08-18T08:00:32.278802"
-    },
-    {
-      "id": "b8e3a657f6d9f43dc78fa890d8e652d9",
-      "title": "Supposed To Be My Lover",
-      "artist": "Roy Woods",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/dbb53d2ebfc7838e9f9fd81c-1770645626.jpg",
-      "timestamp": "2026-08-18T08:41:58.784892"
-    },
-    {
-      "id": "7c3e3ba71795fc4466afc1bf464a5b8f",
-      "title": "Hieroglyphics",
-      "artist": "Maylee Todd",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/de87da5f0ee59b1618f195dc-1770644545.jpg",
-      "timestamp": "2026-08-18T09:23:25.368038"
-    },
-    {
-      "id": "2ff3a6297dafbea0931a19418be9f6ee",
-      "title": "Cosmopolitan (feat. E3)",
-      "artist": "Ro Dolla, E3",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4ffb70a387441fc90e7d3596-1770657586.jpg",
-      "timestamp": "2026-08-18T09:56:01.428380"
-    }
-  ],
-  "last_song_id": "2ff3a6297dafbea0931a19418be9f6ee",
-  "post_count": 539
+  "tracked_songs": [],
+  "last_song_id": "46046e1f1380e225522b808504f056c6",
+  "post_count": 540
 }
