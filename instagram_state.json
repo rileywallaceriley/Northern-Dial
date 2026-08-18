@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "3d128288a3232639fbcd415bc85e38e7",
-      "title": "nightlife",
-      "artist": "Divine Lightbody, savvan",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/392e9e7b0db19c01ca2dbfee-1770645612.jpg",
-      "timestamp": "2026-08-18T20:13:47.960473"
-    },
-    {
-      "id": "896ba9632a8efeca5bba0ebd55501838",
-      "title": "Who Loves You Now? (Frances The Mute Remix)",
-      "artist": "Frances The Mute, STORRY, Ali Hennessey",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7815a971ca3770e9a30e8779-1770855821.jpg",
-      "timestamp": "2026-08-18T20:46:12.321618"
-    },
-    {
-      "id": "1daacd2ade7d545fdacaf3dacb566c40",
-      "title": "Mood Swings",
-      "artist": "Rascalz",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/611c148011e4cc84f70729f0-1770659529.jpg",
-      "timestamp": "2026-08-18T21:14:55.198985"
-    },
-    {
-      "id": "c1a0272aa675dc78e6ba056a928fb9b1",
-      "title": "FULL OF IT",
-      "artist": "Runway the Catwalker, Chris LaRocca",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c1e94c96a43f055fe9fab491-1772508664.jpg",
-      "timestamp": "2026-08-18T21:44:48.671518"
-    }
-  ],
-  "last_song_id": "c1a0272aa675dc78e6ba056a928fb9b1",
-  "post_count": 543
+  "tracked_songs": [],
+  "last_song_id": "3f98a10f30e17dbf688dc5292613abf2",
+  "post_count": 544
 }
