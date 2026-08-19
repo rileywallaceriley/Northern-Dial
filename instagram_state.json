@@ -6,8 +6,15 @@
       "artist": "I Mother Earth",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/63884ecab52e9c5b724d43e5-1770643977.jpg",
       "timestamp": "2026-08-19T16:54:28.658818"
+    },
+    {
+      "id": "e4fb5bd50400cd404df9c1ddf3df92c1",
+      "title": "Du Vent Des Mots",
+      "artist": "Garou/ Charlotte Cardin",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1f549860aca5af19c126c548-1770644396.jpg",
+      "timestamp": "2026-08-19T17:19:07.262674"
     }
   ],
-  "last_song_id": "43fa8cfd61d3ace9153c74f4d9bb6b2c",
+  "last_song_id": "e4fb5bd50400cd404df9c1ddf3df92c1",
   "post_count": 549
 }
