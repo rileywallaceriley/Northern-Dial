@@ -13,8 +13,15 @@
       "artist": "DK/ Rasheed Chappell/ Ktas",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/23ed403142bed465dcde9447-1770663651.jpg",
       "timestamp": "2026-08-20T02:12:04.491830"
+    },
+    {
+      "id": "91fcfb9ef1ee4d7cca5fe5c3f0cc0ad7",
+      "title": "No Boo",
+      "artist": "JID",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/12b6c278f09f5280e4f8cadf-1770651981.jpg",
+      "timestamp": "2026-08-20T03:22:47.911162"
     }
   ],
-  "last_song_id": "4194dd7d3e07bc006e1b7528fdd56a1c",
+  "last_song_id": "91fcfb9ef1ee4d7cca5fe5c3f0cc0ad7",
   "post_count": 552
 }
