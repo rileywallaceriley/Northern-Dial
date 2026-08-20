@@ -6,8 +6,15 @@
       "artist": "LEN",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3c6780ca5dac99cd1d8a6e5f-1770647897.jpg",
       "timestamp": "2026-08-20T16:28:10.324394"
+    },
+    {
+      "id": "bbac38777e18f02a88bb3d53128ee2ca",
+      "title": "letstalkaboutit",
+      "artist": "KAYTRAMIN\u00c9, Amin\u00e9, KAYTRANADA, Freddie Gibbs",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d59fe1a77eb617ca96a77ead-1770645179.jpg",
+      "timestamp": "2026-08-20T17:00:38.811419"
     }
   ],
-  "last_song_id": "9261611839f2e2a88e0f4197ebd0c9e8",
+  "last_song_id": "bbac38777e18f02a88bb3d53128ee2ca",
   "post_count": 556
 }
