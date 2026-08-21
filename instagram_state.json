@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "dd7fd85ce62fa4d6857a2c767d566bf1",
-      "title": "Creator Made an Animal",
-      "artist": "Snotty Nose Rez Kids, Boslen",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3fc66fae427620d2459c9373-1770665830.jpg",
-      "timestamp": "2026-08-20T22:51:44.227655"
-    },
-    {
-      "id": "504f48f1daba9c450b1064c988cb95c5",
-      "title": "Who Hurt You",
-      "artist": "Belly",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/12cfe30bf6366a8822517274-1770667192.jpg",
-      "timestamp": "2026-08-20T23:17:41.881808"
-    },
-    {
-      "id": "3744edaccae61e5527d548fd4636a75e",
-      "title": "Soar",
-      "artist": "Aqyila",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8b25610b77fe25e5249c0455-1770645539.jpg",
-      "timestamp": "2026-08-20T23:47:37.850138"
-    },
-    {
-      "id": "5cb3d4b6e6e9dce023a5c3c59f154735",
-      "title": "REAL TALK",
-      "artist": "The BLK LT$",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0862864231aada349ecab099-1770645759.jpg",
-      "timestamp": "2026-08-21T00:48:36.892800"
-    }
-  ],
-  "last_song_id": "5cb3d4b6e6e9dce023a5c3c59f154735",
-  "post_count": 558
+  "tracked_songs": [],
+  "last_song_id": "d8933baaed96d803300b619508e3804c",
+  "post_count": 559
 }
