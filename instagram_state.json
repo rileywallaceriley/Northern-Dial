@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "b34d57a3c4db58f4a330fc29ec050b6a",
-      "title": "Feel Something",
-      "artist": "Jazz Cartier",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/55e0c91438b3d64afece6845-1770664311.jpg",
-      "timestamp": "2026-08-21T20:16:08.335473"
-    },
-    {
-      "id": "5f1aca3f97ba876f1ac046dab7abbf76",
-      "title": "This Year",
-      "artist": "Bless",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4a8fc7aac4fc3b029df6bc84-1770654230.jpg",
-      "timestamp": "2026-08-21T20:46:44.430369"
-    },
-    {
-      "id": "7c8fe0d44fcbc46e15448b7fca06acc4",
-      "title": "Outta Debt",
-      "artist": "Seth Dyer",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b952c12dc9861f085ab94bef-1770856678.jpg",
-      "timestamp": "2026-08-21T21:15:11.953906"
-    },
-    {
-      "id": "6faff8ac56bbeefab01235462bc9d490",
-      "title": "SELENA",
-      "artist": "Rochester, Private Name Private Number",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/5c5cb808fbe8f359c7d04e10-1770659198.jpg",
-      "timestamp": "2026-08-21T21:45:51.575468"
-    }
-  ],
-  "last_song_id": "6faff8ac56bbeefab01235462bc9d490",
-  "post_count": 564
+  "tracked_songs": [],
+  "last_song_id": "437571777a0f721cbf1c90ffc4cd73e5",
+  "post_count": 565
 }
