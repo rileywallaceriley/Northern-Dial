@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "d421b9a77cf07a456f88f462127d0c7d",
-      "title": "Narcissist",
-      "artist": "Tallulah Argue",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b2d8311127f6ed47d3bcda6f-1772509335.jpg",
-      "timestamp": "2026-08-22T14:44:44.875418"
-    },
-    {
-      "id": "892529c094143624c348c3d682ce5035",
-      "title": "LINE BACK 22",
-      "artist": "Saya Gray",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fd0d37736a61c907f4f57972-1770644595.jpg",
-      "timestamp": "2026-08-22T15:12:13.320483"
-    },
-    {
-      "id": "efad97eb291444a1cd79a2ae61428531",
-      "title": "G.O.S",
-      "artist": "L\u00d6V",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1f59f631ac16488954ef18af-1775688635.jpg",
-      "timestamp": "2026-08-22T15:42:58.265462"
-    },
-    {
-      "id": "11bda26dbaa817ccbf76b50c864dcdd8",
-      "title": "Fantasy (feat. GL Rari & Seth Dyer)",
-      "artist": "Anthony Bezel, GL Rari, Seth Dyer",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b31338f28bf8449c267dcd2c-1770857314.jpg",
-      "timestamp": "2026-08-22T16:13:49.099761"
-    }
-  ],
-  "last_song_id": "11bda26dbaa817ccbf76b50c864dcdd8",
-  "post_count": 570
+  "tracked_songs": [],
+  "last_song_id": "c5b42cbb2980a9b798b23c70b3d0e504",
+  "post_count": 571
 }
