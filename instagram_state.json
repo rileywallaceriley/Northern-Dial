@@ -20,8 +20,15 @@
       "artist": "Metric",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/33fd9d711c0615c688cb4080-1770643492.jpg",
       "timestamp": "2026-08-22T10:14:01.415029"
+    },
+    {
+      "id": "c4b403899a701e144bd9230e24c67a34",
+      "title": "JUMZZZ",
+      "artist": "Loukeman",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/80217e495f4c531410417ac5-1770645391.jpg",
+      "timestamp": "2026-08-22T10:46:48.858973"
     }
   ],
-  "last_song_id": "71947f9397888615b573bd0b01c66f9e",
+  "last_song_id": "c4b403899a701e144bd9230e24c67a34",
   "post_count": 568
 }
