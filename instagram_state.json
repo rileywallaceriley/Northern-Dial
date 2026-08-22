@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "5d6437e6ec81924e296ea82e396208a3",
-      "title": "Sex on the Beach",
-      "artist": "PARTYNEXTDOOR",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4d22b6fc6ea8b4564a92846c-1770652376.jpg",
-      "timestamp": "2026-08-21T22:47:49.201311"
-    },
-    {
-      "id": "de86ff389f228660baf73170e49884a2",
-      "title": "Hood Stop (Remix)",
-      "artist": "Gangis Khan",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b078df0a9ac80f7856de2e5e-1770660175.jpg",
-      "timestamp": "2026-08-21T23:15:19.636855"
-    },
-    {
-      "id": "0cfa129aaa5bf737d6f16e8902caee9c",
-      "title": "Personal Trainer (Move)",
-      "artist": "Rochester, EverythingOShauN",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8ed1ec2536db5157be27a4bc-1770666428.jpg",
-      "timestamp": "2026-08-21T23:45:33.305605"
-    },
-    {
-      "id": "ae5431ab445e8ab27796716ec630415d",
-      "title": "Monday Jam",
-      "artist": "Phoenix Pagliacci",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d8ace5f42e2701e71daaf78f-1771081681.jpg",
-      "timestamp": "2026-08-22T00:44:15.854636"
-    }
-  ],
-  "last_song_id": "ae5431ab445e8ab27796716ec630415d",
-  "post_count": 565
+  "tracked_songs": [],
+  "last_song_id": "2b8ebcd0ba76794c6bf78021118402d8",
+  "post_count": 566
 }
