@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "947ceadb7ed0bf34502075a82456a394",
-      "title": "Kipling",
-      "artist": "DillanPonders",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/616adbcd76e35fe29c6bc64e-1770668770.jpg",
-      "timestamp": "2026-08-22T22:13:00.357237"
-    },
-    {
-      "id": "2c6fd05d4e366f67025af32521d35e44",
-      "title": "Game Got Deep",
-      "artist": "Point Blank",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1e749155bd80ee059b0603c7-1770656472.jpg",
-      "timestamp": "2026-08-22T22:45:09.298072"
-    },
-    {
-      "id": "c09054e281f53fa3625bc4cfbcbd235e",
-      "title": "No Hesitation",
-      "artist": "IRS, Planet Asia",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/dd5465c12d14b2ed9f044e1f-1770656020.jpg",
-      "timestamp": "2026-08-22T23:12:16.982927"
-    },
-    {
-      "id": "1ccb44a3a8846885981d71eca1ec3a92",
-      "title": "Deluxe Nightmare",
-      "artist": "ARK IDENTITY",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6c0be5dfe7841823a2cf2769-1772630976.jpg",
-      "timestamp": "2026-08-22T23:42:24.640591"
-    }
-  ],
-  "last_song_id": "1ccb44a3a8846885981d71eca1ec3a92",
-  "post_count": 573
+  "tracked_songs": [],
+  "last_song_id": "1b9d67004153916f3f3bdd30bdf7b082",
+  "post_count": 574
 }
