@@ -13,8 +13,15 @@
       "artist": "Soul Attorneys",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/c95267d51a8fb81fbf94586c-1770648966.jpg",
       "timestamp": "2026-08-23T07:09:35.092522"
+    },
+    {
+      "id": "63805bf8a97cf373ea9e5e8f6f45c50a",
+      "title": ".. YOU, A FOOL",
+      "artist": "Saya Gray",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7786156b40a06831d0a71d47-1770644609.jpg",
+      "timestamp": "2026-08-23T07:54:18.768049"
     }
   ],
-  "last_song_id": "c5856d2062c3a0ff0552e6012cb28620",
+  "last_song_id": "63805bf8a97cf373ea9e5e8f6f45c50a",
   "post_count": 575
 }
