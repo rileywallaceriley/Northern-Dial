@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "5ddf28a2bcc522755902a5581ffbeff9",
-      "title": "Riptide",
-      "artist": "Anna Katarina",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/db8144d0705a39833de284ad-1772630637.jpg",
-      "timestamp": "2026-08-23T09:19:21.659508"
-    },
-    {
-      "id": "84734a7cf0cb54bd15019b78ad3c29cc",
-      "title": "Even the Darkness Has Arms",
-      "artist": "The Barr Brothers",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0b249e794ac66f0008b71313-1770643656.jpg",
-      "timestamp": "2026-08-23T09:49:57.667443"
-    },
-    {
-      "id": "10aaf0d19665ae6c7b98753c18764d42",
-      "title": "O Siem",
-      "artist": "Susan Aglukark",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1e741aefc8931df16b40d6d7-1770644073.jpg",
-      "timestamp": "2026-08-23T10:14:31.725560"
-    },
-    {
-      "id": "ae2796ba87c36309b75728a1b5977c74",
-      "title": "DEVOTION",
-      "artist": "Justin Bieber, Dijon",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/97ff8cd3edcb8876bc82ee20-1770645924.jpg",
-      "timestamp": "2026-08-23T10:47:30.485777"
-    }
-  ],
-  "last_song_id": "ae2796ba87c36309b75728a1b5977c74",
-  "post_count": 576
+  "tracked_songs": [],
+  "last_song_id": "57377773dec81f477e54f16a9408245d",
+  "post_count": 577
 }
