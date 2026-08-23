@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "b845b12b6bd92f54590d278deae3c83e",
-      "title": "Under The Lighthouse",
-      "artist": "Big Wreck",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cc047fdf1f08bc5420026e81-1770643928.jpg",
-      "timestamp": "2026-08-23T17:13:25.796768"
-    },
-    {
-      "id": "daa28aeef52c7516e45111a2a00211f2",
-      "title": "Waiting",
-      "artist": "Shantel May",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2005cdfd06bb9b939864a69d-1770650824.jpg",
-      "timestamp": "2026-08-23T17:42:32.837309"
-    },
-    {
-      "id": "9b703e21bccf142e0aa809ca0ab0a85b",
-      "title": "Personal",
-      "artist": "Plaza",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/70682d4906503686b4dc8f91-1770652571.jpg",
-      "timestamp": "2026-08-23T18:17:12.140934"
-    },
-    {
-      "id": "88446c850333837e5ce16418c818bdf4",
-      "title": "EVERYTHING IS FINE",
-      "artist": "EverythingOShauN, Charmaine",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e9607ef99d9349b762e93007-1770666342.jpg",
-      "timestamp": "2026-08-23T18:54:36.192595"
-    }
-  ],
-  "last_song_id": "88446c850333837e5ce16418c818bdf4",
-  "post_count": 579
+  "tracked_songs": [],
+  "last_song_id": "f15f99f0bb8389d82141eace1cc7c63f",
+  "post_count": 580
 }
