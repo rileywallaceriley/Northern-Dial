@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "bea8fd6c8f8c0980893de51ea6186867",
-      "title": "FLAWS",
-      "artist": "CHINO WAWA, YessirXD",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cc9b2af9b371f08c27082012-1770644233.jpg",
-      "timestamp": "2026-08-24T11:50:47.236441"
-    },
-    {
-      "id": "f1bdaa8712a46a7d93f16581714ddb56",
-      "title": "personally",
-      "artist": "Vibi",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/68cc617e017c1ee6a178c91a-1770950982.jpg",
-      "timestamp": "2026-08-24T12:30:22.046667"
-    },
-    {
-      "id": "89b6d3ca7757dcf02b4fe3eb876b8d30",
-      "title": "Sweet Sensation",
-      "artist": "Rochelle Jordan",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9b374fd2c23b985e5eddc2fa-1770645623.jpg",
-      "timestamp": "2026-08-24T13:31:29.735284"
-    },
-    {
-      "id": "87090a328c86333a29213bb7988fbcc2",
-      "title": "Run It Back (feat. Jr. Rhodes & SEKAWNEE)",
-      "artist": "NorthSideBaby, Jr. Rhodes, Sekawnee",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cc66b1ee6531611230fe4ac4-1770645750.jpg",
-      "timestamp": "2026-08-24T14:33:17.777158"
-    }
-  ],
-  "last_song_id": "87090a328c86333a29213bb7988fbcc2",
-  "post_count": 584
+  "tracked_songs": [],
+  "last_song_id": "da96dbcabedea0bda07cc8f7c7ee7ffe",
+  "post_count": 585
 }
