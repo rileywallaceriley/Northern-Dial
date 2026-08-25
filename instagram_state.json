@@ -20,8 +20,15 @@
       "artist": "Jessie Reyez",
       "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8af8634b8748601814e39cfa-1770651985.jpg",
       "timestamp": "2026-08-25T19:53:09.296507"
+    },
+    {
+      "id": "c8c1a7f87c4863cf664d615aa21db4ef",
+      "title": "Ogwula",
+      "artist": "4Korners, EverythingOShauN",
+      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2e7328be759e34b874173b8a-1770666400.jpg",
+      "timestamp": "2026-08-25T20:20:55.983575"
     }
   ],
-  "last_song_id": "cc522f784033d7f30c3c9237eebf1428",
+  "last_song_id": "c8c1a7f87c4863cf664d615aa21db4ef",
   "post_count": 592
 }
