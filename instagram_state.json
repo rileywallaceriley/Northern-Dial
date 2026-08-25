@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "f9e48a8a6e2c01141c21d324022e48b2",
-      "title": "Northern Touch",
-      "artist": "Rascalz/Kardinal Offishall/Thrust/Choclair/Checkmate",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b3a267a1becb86c4d50a2fc0-1770660020.jpg",
-      "timestamp": "2026-08-25T21:19:36.765010"
-    },
-    {
-      "id": "372e98b0a5c3b5145de33e73b9ca92fa",
-      "title": "Born Twice/Way of Life",
-      "artist": "Point Blank",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/81234b71d8e1dad8f6f03a3a-1770657710.jpg",
-      "timestamp": "2026-08-25T21:50:43.594680"
-    },
-    {
-      "id": "39a412c04041b2fc3c6aa76376a5cd87",
-      "title": "GG",
-      "artist": "Sean Leon",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/74bcba06f5f7bf1cc498cd65-1770653170.jpg",
-      "timestamp": "2026-08-25T22:17:37.453844"
-    },
-    {
-      "id": "cf83a7abbe69c32db11a746b2bbd24be",
-      "title": "Couldn't Be (feat. Tachichi)",
-      "artist": "Aquakultre, Uncle Fester, Tachichi",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/47a0d1692707a56fba0fac4c-1770667310.jpg",
-      "timestamp": "2026-08-25T22:51:52.958547"
-    }
-  ],
-  "last_song_id": "cf83a7abbe69c32db11a746b2bbd24be",
-  "post_count": 593
+  "tracked_songs": [],
+  "last_song_id": "130573a32394a739cf12ccbe1eedf87d",
+  "post_count": 594
 }
