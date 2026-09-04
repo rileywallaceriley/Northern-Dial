@@ -1,34 +1,5 @@
 {
-  "tracked_songs": [
-    {
-      "id": "18f9ecb16594a0f325ea5ea7bf667622",
-      "title": "POPSTAR",
-      "artist": "Magi Merlin",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/14920122dd580f84155c1355-1774272016.jpg",
-      "timestamp": "2026-09-03T19:58:59.642053"
-    },
-    {
-      "id": "90d02659266c530843ecf491748c1474",
-      "title": "I'll Be Damned",
-      "artist": "Aquakultre",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/28a803deff5d2494e4e44426-1770665969.jpg",
-      "timestamp": "2026-09-03T22:21:57.456973"
-    },
-    {
-      "id": "4fe46f051d87306881e3b3514f9c6957",
-      "title": "Private Island (feat. a l l i e)",
-      "artist": "2nd Son, A l l i e",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6c2b3b98c21b6bffe99b1c27-1770644372.jpg",
-      "timestamp": "2026-09-04T00:13:18.642135"
-    },
-    {
-      "id": "53c289081972b9ac899947f5492718e8",
-      "title": "Time Warped (Interlude)",
-      "artist": "A l l i e",
-      "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d0dc3c7f192bcfe18abc15c8-1770644366.jpg",
-      "timestamp": "2026-09-04T04:50:08.132372"
-    }
-  ],
-  "last_song_id": "53c289081972b9ac899947f5492718e8",
-  "post_count": 606
+  "tracked_songs": [],
+  "last_song_id": "9c30905a0dca8e6a3d62b6ccd88e5397",
+  "post_count": 607
 }
