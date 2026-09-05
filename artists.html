@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse artists and songs in the Northern Dial Canadian music library, then request a track to hear on the station.">
+  <link rel="canonical" href="https://www.northerndial.ca/artists.html">
+  <title>Artists &amp; Songs in the Northern Dial Library</title>
+  <style>
+    :root { --red:#c33; --ink:#1a1a1a; --paper:#fff; --muted:#666; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#fff; color:var(--ink); font-family:Arial,sans-serif; }
+    header, main, footer { max-width:1100px; margin:0 auto; padding:24px 20px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:4px solid var(--red); }
+    header img { width:180px; height:auto; }
+    nav a, .request-link, .social-link { color:var(--red); font-weight:700; }
+    h1 { font-size:clamp(2rem,5vw,3.8rem); margin:18px 0 10px; }
+    .intro { max-width:760px; font-size:1.15rem; line-height:1.6; }
+    .controls { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+    input { flex:1 1 280px; padding:14px; border:2px solid #ccc; border-radius:6px; font-size:1rem; }
+    #status { color:var(--muted); margin:16px 0; }
+    details { border-top:1px solid #ddd; padding:14px 0; }
+    details:last-child { border-bottom:1px solid #ddd; }
+    summary { cursor:pointer; font-size:1.25rem; font-weight:700; }
+    .artist-meta { color:var(--muted); font-size:.9rem; margin:8px 0 12px; }
+    .social-note { display:inline-block; margin-bottom:12px; color:var(--muted); font-size:.9rem; }
+    .track { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:10px 0; border-top:1px solid #eee; }
+    .track-title { font-weight:700; }
+    .track-album { color:var(--muted); font-size:.9rem; }
+    .request-link { white-space:nowrap; }
+    .error { color:#9b1c1c; }
+    footer { border-top:1px solid #ddd; color:var(--muted); }
+    @media (max-width:650px) { header { align-items:flex-start; flex-direction:column; } .track { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="./"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial logo"></a>
+    <nav><a href="./">Listen live</a> &nbsp;·&nbsp; <a href="./library.html">Song library</a> &nbsp;·&nbsp; <a href="./blog/">Stories</a></nav>
+  </header>
+  <main>
+    <h1>Artists in the Northern Dial Library</h1>
+    <p class="intro">Browse artists and requestable songs from Northern Dial’s Canadian and independent music catalogue. Expand an artist to see the tracks currently available for request. Social links will be added only after they are verified against an official artist source.</p>
+    <div class="controls">
+      <input id="artistSearch" type="search" placeholder="Filter artists or songs…" aria-label="Filter artists or songs">
+    </div>
+    <div id="status" role="status">Loading the requestable catalogue…</div>
+    <section id="artistList" aria-label="Artist catalogue"></section>
+  </main>
+  <footer><a href="./">Northern Dial</a> · Independent Canadian music radio · <a href="./index.html?request=">Request a song</a></footer>
+  <script>
+    const API = 'https://a10.asurahosting.com/api/station/northern_dial/requests';
+    const artists = new Map();
+    const list = document.getElementById('artistList');
+    const status = document.getElementById('status');
+    const filter = document.getElementById('artistSearch');
+
+    function cleanArtist(value) {
+      return String(value || 'Unknown Artist').replace(/^\s*\d{1,3}\s*[.-]\s*/, '').trim() || 'Unknown Artist';
+    }
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    }
+    function render() {
+      const query = filter.value.trim().toLowerCase();
+      const groups = [...artists.values()].filter(a => !query || a.name.toLowerCase().includes(query) || a.songs.some(s => `${s.title} ${s.album}`.toLowerCase().includes(query)));
+      list.innerHTML = groups.length ? groups.map((artist, index) => {
+        const songs = artist.songs.filter(s => !query || artist.name.toLowerCase().includes(query) || `${s.title} ${s.album}`.toLowerCase().includes(query));
+        return `<details ${index === 0 && groups.length === 1 ? 'open' : ''}><summary>${escapeHtml(artist.name)} <span class="artist-meta">(${songs.length} track${songs.length === 1 ? '' : 's'})</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>${songs.map(song => `<div class="track"><div><div class="track-title">${escapeHtml(song.title)}</div><div class="track-album">${escapeHtml(song.album || song.genre || 'Northern Dial library')}</div></div><a class="request-link" href="./index.html?request=${encodeURIComponent(artist.name)}">Request this artist</a></div>`).join('')}</details>`;
+      }).join('') : '<p>No matching artists or songs.</p>';
+      status.textContent = `${groups.length.toLocaleString()} artist${groups.length === 1 ? '' : 's'} · ${[...artists.values()].reduce((n,a)=>n+a.songs.length,0).toLocaleString()} songs`;
+    }
+    async function fetchPage(page) {
+      const response = await fetch(`${API}?searchPhrase=&rowCount=25&current=1&page=${page}`);
+      if (!response.ok) throw new Error(`Catalogue request failed (${response.status})`);
+      return response.json();
+    }
+    async function loadCatalogue() {
+      try {
+        const first = await fetchPage(1);
+        const pages = Number(first.total_pages || 1);
+        const all = [...(first.rows || [])];
+        for (let start = 2; start <= pages; start += 8) {
+          const batch = await Promise.all(Array.from({length: Math.min(8, pages - start + 1)}, (_, i) => fetchPage(start + i)));
+          batch.forEach(page => all.push(...(page.rows || [])));
+        }
+        all.forEach(item => {
+          const song = item.song || item;
+          const name = cleanArtist(song.artist);
+          if (!artists.has(name.toLowerCase())) artists.set(name.toLowerCase(), {name, songs:[]});
+          const group = artists.get(name.toLowerCase());
+          const key = song.id || `${name}:${song.title}`;
+          if (!group.songs.some(existing => existing.id === key)) group.songs.push({id:key,title:song.title || 'Unknown title',album:song.album || '',genre:song.genre || ''});
+        });
+        render();
+      } catch (error) {
+        status.className = 'error';
+        status.textContent = `${error.message}. Try the live search on the homepage instead.`;
+      }
+    }
+    filter.addEventListener('input', render);
+    loadCatalogue();
+  </script>
+</body>
+</html>
