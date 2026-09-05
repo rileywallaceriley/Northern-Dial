@@ -20,6 +20,10 @@ CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
 NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
+CREDIT_SEPARATOR = re.compile(
+    r"\s*(?:,|/|&|\+|×|\bx\b|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
+    re.IGNORECASE,
+)
 
 
 def fetch_page(page):
@@ -32,6 +36,13 @@ def clean_artist(value):
     name = str(value or "Unknown Artist")
     name = re.sub(r"^\s*\d{1,3}\s*[.-]\s*", "", name).strip()
     return name or "Unknown Artist"
+
+
+def split_artists(value):
+    """Return individual artist credits from a collaboration string."""
+    credit = clean_artist(value)
+    parts = [clean_artist(part) for part in CREDIT_SEPARATOR.split(credit)]
+    return list(dict.fromkeys(part for part in parts if part))
 
 
 def catalogue_rows():
@@ -48,14 +59,14 @@ def build_groups(rows):
     groups = {}
     for item in rows:
         song = item.get("song") or item
-        name = clean_artist(song.get("artist"))
-        key = name.casefold()
-        group = groups.setdefault(key, {"name": name, "songs": {}})
-        song_key = song.get("id") or f"{name}:{song.get('title', '')}"
-        group["songs"].setdefault(song_key, {
-            "title": song.get("title") or "Unknown title",
-            "album": song.get("album") or song.get("genre") or "Northern Dial library",
-        })
+        song_key = song.get("id") or f"{song.get('artist', 'Unknown Artist')}:{song.get('title', '')}"
+        for name in split_artists(song.get("artist")):
+            key = name.casefold()
+            group = groups.setdefault(key, {"name": name, "songs": {}})
+            group["songs"].setdefault(song_key, {
+                "title": song.get("title") or "Unknown title",
+                "album": song.get("album") or song.get("genre") or "Northern Dial library",
+            })
     return sorted(groups.values(), key=lambda group: group["name"].casefold())
 
 
