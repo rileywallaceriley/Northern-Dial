@@ -19,9 +19,10 @@
     .controls { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
     input { flex:1 1 280px; padding:14px; border:2px solid #ccc; border-radius:6px; font-size:1rem; }
     #status { color:var(--muted); margin:16px 0; min-height:24px; }
-    .letter-nav { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 26px; }
-    .letter-nav a { border:1px solid #ccc; border-radius:4px; color:var(--red); font-weight:700; min-width:32px; padding:7px 9px; text-align:center; text-decoration:none; }
-    .letter-nav a:hover, .letter-nav a:focus { background:var(--red); color:#fff; }
+    .letter-nav { align-items:center; background:#fff; border-bottom:1px solid #ddd; display:flex; flex-wrap:wrap; gap:12px; margin:20px 0 26px; padding:12px 0; position:sticky; top:0; z-index:5; }
+    .letter-nav label { font-weight:700; }
+    .letter-nav select { border:2px solid var(--red); border-radius:6px; color:var(--ink); font-size:1rem; max-width:100%; padding:9px 34px 9px 10px; }
+    .top-link { color:var(--red); font-weight:700; margin-left:auto; white-space:nowrap; }
     .letter-anchor { scroll-margin-top:20px; }
     details { border-top:1px solid #ddd; padding:14px 0; }
     details:last-child { border-bottom:1px solid #ddd; }
@@ -37,7 +38,7 @@
     @media (max-width:650px) { header { align-items:flex-start; flex-direction:column; } .track { align-items:flex-start; flex-direction:column; } }
   </style>
 </head>
-<body>
+<body id="top">
   <header>
     <a href="./"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial logo"></a>
     <nav><a href="./">Listen live</a> &nbsp;·&nbsp; <a href="./library.html">Song library</a> &nbsp;·&nbsp; <a href="./blog/">Stories</a></nav>
@@ -50,7 +51,7 @@
     </div>
     <div id="status" role="status" aria-live="polite">Browse the complete catalogue below.</div>
     <!-- STATIC_ARTIST_LETTER_NAV_START -->
-    <nav class="letter-nav" aria-label="Jump to artist letter"><a href="#artistList">All</a><a href="#letter-0">#</a><a href="#letter-a">A</a><a href="#letter-b">B</a><a href="#letter-c">C</a><a href="#letter-d">D</a><a href="#letter-e">E</a><a href="#letter-f">F</a><a href="#letter-g">G</a><a href="#letter-h">H</a><a href="#letter-i">I</a><a href="#letter-j">J</a><a href="#letter-k">K</a><a href="#letter-l">L</a><a href="#letter-m">M</a><a href="#letter-n">N</a><a href="#letter-o">O</a><a href="#letter-p">P</a><a href="#letter-q">Q</a><a href="#letter-r">R</a><a href="#letter-s">S</a><a href="#letter-t">T</a><a href="#letter-u">U</a><a href="#letter-v">V</a><a href="#letter-w">W</a><a href="#letter-x">X</a><a href="#letter-y">Y</a><a href="#letter-z">Z</a><a href="#letter-é">É</a><a href="#letter-т">Т</a></nav>
+    <nav class="letter-nav" aria-label="Catalogue navigation"><label for="letterJump">Jump to:</label><select id="letterJump"><optgroup label="Artist sections"><option value="">Jump to a letter…</option><option value="artistList">All artists</option><option value="letter-0">#</option><option value="letter-a">A</option><option value="letter-b">B</option><option value="letter-c">C</option><option value="letter-d">D</option><option value="letter-e">E</option><option value="letter-f">F</option><option value="letter-g">G</option><option value="letter-h">H</option><option value="letter-i">I</option><option value="letter-j">J</option><option value="letter-k">K</option><option value="letter-l">L</option><option value="letter-m">M</option><option value="letter-n">N</option><option value="letter-o">O</option><option value="letter-p">P</option><option value="letter-q">Q</option><option value="letter-r">R</option><option value="letter-s">S</option><option value="letter-t">T</option><option value="letter-u">U</option><option value="letter-v">V</option><option value="letter-w">W</option><option value="letter-x">X</option><option value="letter-y">Y</option><option value="letter-z">Z</option><option value="letter-é">É</option><option value="letter-т">Т</option></optgroup></select><a class="top-link" href="#top">Back to top ↑</a></nav>
     <!-- STATIC_ARTIST_LETTER_NAV_END -->
     <section id="artistList" aria-label="Artist catalogue">
       <!-- STATIC_ARTIST_CATALOGUE_START -->
@@ -3569,8 +3570,9 @@
         <div class="track" data-search="justin bieber, druski therapy session swag ii"><div><div class="track-title">THERAPY SESSION</div><div class="track-album">SWAG II</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Druski">Request this artist</a></div></details>
       <details data-search="justin bieber, eddie benjamin"><summary>Justin Bieber, Eddie Benjamin <span class="artist-meta">(1 track)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
         <div class="track" data-search="justin bieber, eddie benjamin open up your heart swag ii"><div><div class="track-title">OPEN UP YOUR HEART</div><div class="track-album">SWAG II</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Eddie%20Benjamin">Request this artist</a></div></details>
-      <details data-search="justin bieber, gunna"><summary>Justin Bieber, Gunna <span class="artist-meta">(1 track)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
-        <div class="track" data-search="justin bieber, gunna way it is swag"><div><div class="track-title">WAY IT IS</div><div class="track-album">SWAG</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Gunna">Request this artist</a></div></details>
+      <details data-search="justin bieber, gunna"><summary>Justin Bieber, Gunna <span class="artist-meta">(2 tracks)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
+        <div class="track" data-search="justin bieber, gunna way it is swag"><div><div class="track-title">WAY IT IS</div><div class="track-album">SWAG</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Gunna">Request this artist</a></div>
+        <div class="track" data-search="justin bieber, gunna way it is swag ii"><div><div class="track-title">WAY IT IS</div><div class="track-album">SWAG II</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Gunna">Request this artist</a></div></details>
       <details data-search="justin bieber, hurricane chris"><summary>Justin Bieber, Hurricane Chris <span class="artist-meta">(1 track)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
         <div class="track" data-search="justin bieber, hurricane chris poppin&#x27; my s*** swag ii"><div><div class="track-title">POPPIN&#x27; MY S***</div><div class="track-album">SWAG II</div></div><a class="request-link" href="./index.html?request=Justin%20Bieber%2C%20Hurricane%20Chris">Request this artist</a></div></details>
       <details data-search="justin bieber, lil b"><summary>Justin Bieber, Lil B <span class="artist-meta">(3 tracks)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
@@ -4334,9 +4336,8 @@
         <div class="track" data-search="matthew dear bad ones (feat. tegan and sara) bad ones (feat. tegan and sara)"><div><div class="track-title">Bad Ones (feat. Tegan and Sara)</div><div class="track-album">Bad Ones (feat. Tegan and Sara)</div></div><a class="request-link" href="./index.html?request=Matthew%20Dear">Request this artist</a></div></details>
       <details data-search="matthew good"><summary>Matthew Good <span class="artist-meta">(1 track)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
         <div class="track" data-search="matthew good alert status red (album version) in a coma - the best of matthew good 1995 - 2005"><div><div class="track-title">Alert Status Red (Album Version)</div><div class="track-album">In A Coma - The Best of Matthew Good 1995 - 2005</div></div><a class="request-link" href="./index.html?request=Matthew%20Good">Request this artist</a></div></details>
-      <details data-search="matthew good band"><summary>Matthew Good Band <span class="artist-meta">(8 tracks)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
+      <details data-search="matthew good band"><summary>Matthew Good Band <span class="artist-meta">(7 tracks)</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>
         <div class="track" data-search="matthew good band apparitions in a coma - the best of matthew good 1995 - 2005"><div><div class="track-title">Apparitions</div><div class="track-album">In A Coma - The Best of Matthew Good 1995 - 2005</div></div><a class="request-link" href="./index.html?request=Matthew%20Good%20Band">Request this artist</a></div>
-        <div class="track" data-search="matthew good band apparitions underdogs"><div><div class="track-title">Apparitions</div><div class="track-album">Underdogs</div></div><a class="request-link" href="./index.html?request=Matthew%20Good%20Band">Request this artist</a></div>
         <div class="track" data-search="matthew good band hello time bomb (album version) in a coma - the best of matthew good 1995 - 2005"><div><div class="track-title">Hello Time Bomb (Album Version)</div><div class="track-album">In A Coma - The Best of Matthew Good 1995 - 2005</div></div><a class="request-link" href="./index.html?request=Matthew%20Good%20Band">Request this artist</a></div>
         <div class="track" data-search="matthew good band load me up (album version) in a coma - the best of matthew good 1995 - 2005"><div><div class="track-title">Load Me Up (Album Version)</div><div class="track-album">In A Coma - The Best of Matthew Good 1995 - 2005</div></div><a class="request-link" href="./index.html?request=Matthew%20Good%20Band">Request this artist</a></div>
         <div class="track" data-search="matthew good band strange days beautiful midnight"><div><div class="track-title">Strange Days</div><div class="track-album">Beautiful Midnight</div></div><a class="request-link" href="./index.html?request=Matthew%20Good%20Band">Request this artist</a></div>
@@ -7104,6 +7105,15 @@
         : `${list.querySelectorAll('details').length.toLocaleString()} artists · ${list.querySelectorAll('.track').length.toLocaleString()} songs`;
     }
     filter.addEventListener('input', updateFilter);
+    document.getElementById('letterJump').addEventListener('change', event => {
+      const targetId = event.target.value;
+      if (!targetId) return;
+      const target = document.getElementById(targetId);
+      if (filter.value) { filter.value = ''; updateFilter(); }
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null, '', `#${targetId}`);
+      event.target.value = '';
+    });
     updateFilter();
   </script>
 </body>

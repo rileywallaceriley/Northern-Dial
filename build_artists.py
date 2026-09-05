@@ -101,9 +101,13 @@ def render_letter_nav(groups):
         letter = group["name"][0].casefold() if group["name"] and group["name"][0].isalpha() else "0"
         if letter not in letters:
             letters.append(letter)
-    links = ['<a href="#artistList">All</a>']
-    links.extend(f'<a href="#letter-{letter}">{"#" if letter == "0" else letter.upper()}</a>' for letter in letters)
-    return '    <nav class="letter-nav" aria-label="Jump to artist letter">' + "".join(links) + "</nav>"
+    options = ['<option value="">Jump to a letter…</option>', '<option value="artistList">All artists</option>']
+    options.extend(f'<option value="letter-{letter}">{"#" if letter == "0" else letter.upper()}</option>' for letter in letters)
+    return ('    <nav class="letter-nav" aria-label="Catalogue navigation">'
+            '<label for="letterJump">Jump to:</label>'
+            '<select id="letterJump"><optgroup label="Artist sections">'
+            + "".join(options) + '</optgroup></select>'
+            '<a class="top-link" href="#top">Back to top ↑</a></nav>')
 
 
 def replace_block(template, start_marker, end_marker, content):
