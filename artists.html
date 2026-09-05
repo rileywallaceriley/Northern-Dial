@@ -18,7 +18,10 @@
     .intro { max-width:760px; font-size:1.15rem; line-height:1.6; }
     .controls { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
     input { flex:1 1 280px; padding:14px; border:2px solid #ccc; border-radius:6px; font-size:1rem; }
-    #status { color:var(--muted); margin:16px 0; }
+    #status { align-items:center; color:var(--muted); display:flex; gap:10px; margin:16px 0; min-height:24px; }
+    .loading-indicator { animation:spin .8s linear infinite; border:3px solid #ddd; border-radius:50%; border-top-color:var(--red); display:inline-block; height:20px; width:20px; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @media (prefers-reduced-motion:reduce) { .loading-indicator { animation:none; } }
     details { border-top:1px solid #ddd; padding:14px 0; }
     details:last-child { border-bottom:1px solid #ddd; }
     summary { cursor:pointer; font-size:1.25rem; font-weight:700; }
@@ -44,8 +47,8 @@
     <div class="controls">
       <input id="artistSearch" type="search" placeholder="Filter artists or songs…" aria-label="Filter artists or songs">
     </div>
-    <div id="status" role="status">Loading the requestable catalogue…</div>
-    <section id="artistList" aria-label="Artist catalogue"></section>
+    <div id="status" role="status" aria-live="polite"><span class="loading-indicator" aria-hidden="true"></span><span>Loading the requestable catalogue…</span></div>
+    <section id="artistList" aria-label="Artist catalogue" aria-busy="true"></section>
   </main>
   <footer><a href="./">Northern Dial</a> · Independent Canadian music radio · <a href="./index.html?request=">Request a song</a></footer>
   <script>
@@ -69,9 +72,10 @@
         return `<details ${index === 0 && groups.length === 1 ? 'open' : ''}><summary>${escapeHtml(artist.name)} <span class="artist-meta">(${songs.length} track${songs.length === 1 ? '' : 's'})</span></summary><div class="artist-meta"><span class="social-note">Instagram / official links: to be verified</span></div>${songs.map(song => `<div class="track"><div><div class="track-title">${escapeHtml(song.title)}</div><div class="track-album">${escapeHtml(song.album || song.genre || 'Northern Dial library')}</div></div><a class="request-link" href="./index.html?request=${encodeURIComponent(artist.name)}">Request this artist</a></div>`).join('')}</details>`;
       }).join('') : '<p>No matching artists or songs.</p>';
       status.textContent = `${groups.length.toLocaleString()} artist${groups.length === 1 ? '' : 's'} · ${[...artists.values()].reduce((n,a)=>n+a.songs.length,0).toLocaleString()} songs`;
+      list.setAttribute('aria-busy', 'false');
     }
     async function fetchPage(page) {
-      const response = await fetch(`${API}?searchPhrase=&rowCount=25&current=1&page=${page}`);
+      const response = await fetch(`${API}?searchPhrase=&rowCount=25&current=${page}&page=1`);
       if (!response.ok) throw new Error(`Catalogue request failed (${response.status})`);
       return response.json();
     }
@@ -94,6 +98,7 @@
         });
         render();
       } catch (error) {
+        list.setAttribute('aria-busy', 'false');
         status.className = 'error';
         status.textContent = `${error.message}. Try the live search on the homepage instead.`;
       }
