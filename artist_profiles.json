@@ -1,0 +1,58 @@
+{
+  "haley smalls": {
+    "bio": "Toronto-born singer-songwriter Haley Smalls has built an independent Canadian R&B catalogue around expressive vocals, emotional clarity, and a direct-to-fan release approach.",
+    "website": "",
+    "instagram": "https://www.instagram.com/haleysmalls/",
+    "feature": "./blog/haley-smalls.html",
+    "sources": ["https://www.northerndial.ca/blog/haley-smalls.html", "https://www.instagram.com/haleysmalls/"]
+  },
+  "livingthing": {
+    "bio": "Toronto-based indie electronic artist livingthing blends glitchy production, dreamy synth-pop, ethereal vocals, and introspective writing.",
+    "website": "https://www.livingthing.art/",
+    "instagram": "https://www.instagram.com/livingthinglivingthing/",
+    "feature": "./blog/livingthing.html",
+    "sources": ["https://www.northerndial.ca/blog/livingthing.html", "https://www.livingthing.art/", "https://www.instagram.com/livingthinglivingthing/"]
+  },
+  "tauro": {
+    "bio": "TAURO is a Toronto collaboration between pianist and singer-songwriter Cynthia Tauro and Broken Social Scene co-founder Brendan Canning, drawing from indie, soul, jazz, R&B, and trip-hop.",
+    "website": "",
+    "instagram": "https://www.instagram.com/wearetauro/",
+    "feature": "./blog/tauro.html",
+    "sources": ["https://www.northerndial.ca/blog/tauro.html", "https://www.instagram.com/wearetauro/"]
+  },
+  "puma june": {
+    "bio": "Toronto-based Canadian artist Puma June is a multi-instrumentalist, vocalist, songwriter, and producer whose pop, jazz, hip-hop, and R&B influences meet in a cinematic alt-R&B sound.",
+    "website": "https://www.pumajune.com/",
+    "instagram": "https://www.instagram.com/pumajune/",
+    "feature": "./blog/puma-june.html",
+    "sources": ["https://www.pumajune.com/bio", "https://www.instagram.com/pumajune/", "https://www.northerndial.ca/blog/puma-june.html"]
+  },
+  "lia pappas-kemps": {
+    "bio": "Lia Pappas-Kemps is a Canadian singer-songwriter whose debut album Winged follows the Gleam EP with restrained guitar work, intimate vocals, and carefully paced writing.",
+    "website": "https://www.liapappaskemps.com/",
+    "instagram": "https://www.instagram.com/liapappaskemps/",
+    "feature": "./blog/lia-pappas-kemps.html",
+    "sources": ["https://www.liapappaskemps.com/", "https://www.instagram.com/liapappaskemps/", "https://www.northerndial.ca/blog/lia-pappas-kemps.html"]
+  },
+  "löv": {
+    "bio": "LÖV is a Treaty 6 Territory Cree R&B and soul singer-songwriter whose emotionally direct music centres independence, matriarchal strength, and self-definition.",
+    "website": "https://lovxofficial.com/",
+    "instagram": "https://www.instagram.com/lovxofficial/",
+    "feature": "./blog/lov.html",
+    "sources": ["https://lovxofficial.com/lov/", "https://www.instagram.com/lovxofficial/", "https://www.northerndial.ca/blog/lov.html"]
+  },
+  "koko love": {
+    "bio": "Montreal artist and producer Koko Love emerged from years of busking and an earlier Miko project with a stripped-back sound spanning soul, alt-pop, and indie.",
+    "website": "https://www.koko.love/",
+    "instagram": "https://www.instagram.com/itskokolove/",
+    "feature": "./blog/koko-love.html",
+    "sources": ["https://www.koko.love/", "https://www.instagram.com/itskokolove/", "https://www.northerndial.ca/blog/koko-love.html"]
+  },
+  "ghostboyrj": {
+    "bio": "Ghostboyrj (Rohan White) is a Toronto-born, Brampton-raised hip-hop artist and producer whose sample-forward work connects sharp lyricism with underground album-making.",
+    "website": "https://ghostboyrj.bandcamp.com/",
+    "instagram": "",
+    "feature": "./blog/ghostboyrj.html",
+    "sources": ["https://ghostboyrj.bandcamp.com/", "https://www.northerndial.ca/blog/ghostboyrj.html"]
+  }
+}

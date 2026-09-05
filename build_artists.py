@@ -16,6 +16,7 @@ import re
 API = "https://a10.asurahosting.com/api/station/northern_dial/requests"
 PAGE_SIZE = 25
 TEMPLATE = "artists.html"
+PROFILE_FILE = "artist_profiles.json"
 CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
@@ -79,7 +80,7 @@ def build_groups(rows):
     )
 
 
-def render_groups(groups):
+def render_groups(groups, profiles):
     rendered = []
     previous_letter = None
     for group in groups:
@@ -103,16 +104,32 @@ def render_groups(groups):
                 f'<div class="track-album">{escape(album)}</div></div>'
                 f'<a class="request-link" href="{request_url}">Request this artist</a></div>'
             )
+        profile = profiles.get(name.casefold(), {})
+        profile_html = render_profile(profile)
         rendered.append(
             anchor + f'      <details data-search="{search}">'
             f'<summary>{escape(name)} <span class="artist-meta">'
             f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
-            '<div class="artist-meta"><span class="social-note">'
-            'Instagram / official links: to be verified</span></div>\n'
+            + profile_html + "\n"
             + "\n".join(tracks)
             + "</details>"
         )
     return "\n".join(rendered)
+
+
+def render_profile(profile):
+    if not profile:
+        return '<div class="artist-meta"><span class="social-note">Profile links and bio: to be verified</span></div>'
+    bio = escape(profile.get("bio", ""))
+    links = []
+    if profile.get("website"):
+        links.append(f'<a href="{escape(profile["website"], quote=True)}" target="_blank" rel="noopener">Official site</a>')
+    if profile.get("instagram"):
+        links.append(f'<a href="{escape(profile["instagram"], quote=True)}" target="_blank" rel="noopener">Instagram</a>')
+    if profile.get("feature"):
+        links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
+    link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
+    return f'<div class="artist-profile"><p class="profile-bio">{bio}</p>{link_html}</div>'
 
 
 def render_letter_nav(groups):
@@ -139,11 +156,13 @@ def replace_block(template, start_marker, end_marker, content):
 def main():
     rows = catalogue_rows()
     groups = build_groups(rows)
+    with open(PROFILE_FILE, "r", encoding="utf-8") as handle:
+        profiles = {key.casefold(): value for key, value in json.load(handle).items()}
     with open(TEMPLATE, "r", encoding="utf-8") as handle:
         template = handle.read()
     if CATALOGUE_START not in template or CATALOGUE_END not in template:
         raise SystemExit(f"Catalogue markers not found in {TEMPLATE}")
-    output = replace_block(template, CATALOGUE_START, CATALOGUE_END, render_groups(groups))
+    output = replace_block(template, CATALOGUE_START, CATALOGUE_END, render_groups(groups, profiles))
     if NAV_START not in output or NAV_END not in output:
         raise SystemExit(f"Letter navigation markers not found in {TEMPLATE}")
     output = replace_block(output, NAV_START, NAV_END, render_letter_nav(groups))
