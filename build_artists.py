@@ -20,6 +20,9 @@ CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
 NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
+# Verified single-track collaborators whose standalone sections should be hidden.
+# Their songs remain listed under the principal artist(s).
+HIDDEN_SINGLE_TRACK_COLLABORATORS = {"mario winans"}
 CREDIT_SEPARATOR = re.compile(
     r"\s*(?:,|/|&|\+|×|\bx\b|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
     re.IGNORECASE,
@@ -67,7 +70,13 @@ def build_groups(rows):
                 "title": song.get("title") or "Unknown title",
                 "album": song.get("album") or song.get("genre") or "Northern Dial library",
             })
-    return sorted(groups.values(), key=lambda group: group["name"].casefold())
+    return sorted(
+        (
+            group for key, group in groups.items()
+            if not (key in HIDDEN_SINGLE_TRACK_COLLABORATORS and len(group["songs"]) == 1)
+        ),
+        key=lambda group: group["name"].casefold(),
+    )
 
 
 def render_groups(groups):
