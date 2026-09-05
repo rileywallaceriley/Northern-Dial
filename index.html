@@ -62,6 +62,20 @@ body {
     background-color: transparent;
 }
 
+    /* Keeps the semantic page heading available to crawlers and assistive technology
+       without changing the visual homepage composition. */
+    .visually-hidden {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
 .header {
     text-align: center;
     margin-bottom: 30px;
@@ -658,6 +672,8 @@ body {
 </head>
 <body>
     <div class="container">
+
+<h1 class="visually-hidden">Independent Canadian Music Radio</h1>
 
 <header class="header">
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
