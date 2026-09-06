@@ -1,0 +1,74 @@
+{
+  "rheostatics": {
+    "bio": "Toronto art-rock band Rheostatics has spent decades pushing Canadian rock through progressive, orchestral, psychedelic and experimental songwriting while drawing deeply on Canadian culture and landscape.",
+    "website": "https://rheostatics.ca/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://rheostatics.ca/band/", "https://rheostatics.bandcamp.com/music"]
+  },
+  "river tiber": {
+    "bio": "Toronto singer, songwriter, multi-instrumentalist and producer River Tiber, born Tommy Paxton-Beesley, makes textured alternative R&B and has contributed to music by artists including Drake, Travis Scott and BADBADNOTGOOD.",
+    "website": "https://rivertiber.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://rivertiber.bandcamp.com/", "https://www.allmusic.com/artist/river-tiber-mn0003456799"]
+  },
+  "ruby waters": {
+    "bio": "Shelburne, Ontario singer-songwriter Ruby Waters mixes raw, bluesy alternative rock with folk and pop, pairing commanding vocals with introspective writing.",
+    "website": "https://rubywatersmusic.com/",
+    "instagram": "",
+    "city": "Shelburne, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/ruby-waters-mn0003919885", "https://en.wikipedia.org/wiki/Ruby_Waters"]
+  },
+  "ruben young": {
+    "bio": "Calgary R&B and soul singer-songwriter Ruben Young has built an independent Canadian catalogue around smooth vocals, contemporary soul and collaborations with artists and producers across hip-hop and R&B.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Ruben_Young"]
+  },
+  "shantel may": {
+    "bio": "Toronto-born R&B singer-songwriter Shantel May pairs soulful vocals with contemporary production and candid relationship writing across a growing independent catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/3dLvESWiG5LWozJmdvk6D0"]
+  },
+  "snow": {
+    "bio": "Toronto-born Canadian reggae and hip-hop artist Snow, born Darrin O'Brien, became an international crossover figure with the 1993 No. 1 hit Informer and later continued working across reggae, dancehall and rap.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.cshf.ca/song/informer/", "https://www.socanmagazine.ca/features/canadian-classics-informer-1993/"]
+  },
+  "sofia camara": {
+    "bio": "Portuguese-Canadian singer-songwriter Sofia Camara, raised in Toronto, makes emotionally direct pop and R&B built around guitar, vocals and confessional songwriting.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sofia_Camara"]
+  },
+  "swamp thing": {
+    "bio": "Toronto hip-hop trio Swamp Thing brings together Timbuktu, Chokeules and Savilion for dark, B-movie-inspired underground rap built around boom-bap production and horror and sci-fi imagery.",
+    "website": "https://swampthing-urbnet.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://swampthing-urbnet.bandcamp.com/", "https://handsolorecords.com/swamp-thing/"]
+  }
+}
