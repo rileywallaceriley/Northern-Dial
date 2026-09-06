@@ -1,0 +1,5 @@
+# Verified non-artist/platform/parser entries that should not render as standalone Canadian artists.
+The Bangin' Rackettes
+Mixtape Madness
+On the Radar
+Tape Notes
