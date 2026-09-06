@@ -9,6 +9,7 @@ on:
       - 'artist_removals.txt'
       - 'library_artists.txt'
       - 'audit_artist_enrichment.py'
+      - '.github/workflows/audit-artist-enrichment.yml'
   workflow_dispatch:
 
 permissions:
