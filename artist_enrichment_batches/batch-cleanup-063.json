@@ -1,0 +1,38 @@
+{
+  "every last chance": {
+    "bio": "Every Last Chance is a Canadian pop and electronic studio project built around rhythmic, radio-ready songwriting and rotating featured vocalists. The project broke through in the mid-2010s with singles including Spotlight featuring Marissa Dattoli and Roll the Credits, then released its self-titled debut EP in 2016.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.fritzmedia.ca/news?offset=1490823781034", "https://musiccanada.wordpress.com/2016/08/27/edm-at-top-form-with-every-last-chance-debut-ep/"]
+  },
+  "khadijah lopez": {
+    "bio": "Toronto singer-songwriter Khadijah Lopez brings classic soul and contemporary R&B together through warm vocals and emotionally direct writing. A Remix Project alum, she has participated in songwriting camps and mentorship programs, contributed songs to television and continued building her independent catalogue through releases and collaborations including Over, Again with pHoenix Pagliacci.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.ellecanada.com/culture/music/canadian-artists-to-watch-in-2023", "https://niacentre.org/events/the-mixtape-vol-1/", "https://music.amazon.ca/tracks/B0FPPSH6JJ"]
+  },
+  "sheal": {
+    "bio": "Halifax-born, Toronto-based indie-pop singer-songwriter SHEAL, the stage name of Sheilagh McNab, makes piano-led songs built around intimate writing and emotive vocals. Her releases include the golden hours EP and the home-going project, while her music has received national CBC radio play and collaborations with Canadian artists including Eternia, Rel McCoy and Shad.",
+    "website": "https://sheal.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecarleton.ca/events/sheal-ep-release/", "https://eternia.bandcamp.com/track/home-feat-shad-sheal", "https://music.amazon.ca/tracks/B099GJZV8P"]
+  },
+  "st-prince": {
+    "bio": "Québec City rapper St-Prince, born Brandon Truong, is part of the new generation of francophone urban artists blending melodic trap, contemporary R&B and pop. After emerging with the Sosluv collective, he moved into solo work, signed with Disques 7ième Ciel and released the 2026 EP rien de saint, alongside collaborations with Koriass, FouKi, High Klassified and others.",
+    "website": "",
+    "instagram": "",
+    "city": "Québec City, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://7iemeciel.ca/nouvel-ep-st-prince-rien-de-saint/", "https://sixmedia.ca/communiques/st-prince-3/", "https://koriass.bandcamp.com/track/d-tour-ft-st-prince"]
+  }
+}
