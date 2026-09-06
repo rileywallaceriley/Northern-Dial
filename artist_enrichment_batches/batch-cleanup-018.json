@@ -1,0 +1,56 @@
+{
+  "sean leon": {
+    "bio": "Toronto rapper, singer, songwriter and producer Sean Leon is an independent Canadian artist whose IXXI Initiative helped foster Toronto talent and whose writing credits extend to major international releases.",
+    "website": "https://seanleon.co/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sean_Leon"]
+  },
+  "super duty tough work": {
+    "bio": "Winnipeg art-rap ensemble Super Duty Tough Work recreates the dusty jazz-sample feel of 1990s East Coast hip-hop with a live band, politically charged writing and meticulously arranged performances.",
+    "website": "https://sdtw.ca/",
+    "instagram": "",
+    "city": "Winnipeg, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://sdtw.ca/epk", "https://www.socanmagazine.ca/features/winnipeg-live-hip-hop-band-super-duty-tough-work/"]
+  },
+  "susan aglukark": {
+    "bio": "Inuk singer-songwriter Susan Aglukark blends Inuit musical traditions with pop and country songwriting, becoming a groundbreaking Canadian recording artist and the first Inuk performer to win a Juno Award.",
+    "website": "https://www.susanaglukark.com/",
+    "instagram": "",
+    "city": "Arviat, Nunavut",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/susan-aglukark", "https://www.canada.ca/en/women-gender-equality/commemorations-celebrations/women-impact/arts/susan-aglukark.html"]
+  },
+  "suzie mcneil": {
+    "bio": "Mississauga-born singer-songwriter Suzie McNeil is a Canadian pop-rock vocalist and multi-instrumentalist whose solo career followed national exposure on Rock Star: INXS.",
+    "website": "https://suziemcneil.com/",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Suzie_McNeil"]
+  },
+  "swollen members": {
+    "bio": "Vancouver hip-hop group Swollen Members, founded by Madchild and Prevail, became one of Canada's most successful underground rap acts through the independent Battle Axe movement and a run of Juno-winning releases.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/swollen-members-mn0000041428", "https://en.wikipedia.org/wiki/Swollen_Members"]
+  },
+  "sylvain cossette": {
+    "bio": "Québec singer-songwriter Sylvain Cossette is a long-running French-Canadian pop and rock artist whose solo career followed his years with the English-language band Paradox.",
+    "website": "",
+    "instagram": "",
+    "city": "Shawinigan, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/sylvain-cossette-mn0001789697", "https://fr.wikipedia.org/wiki/Sylvain_Cossette"]
+  }
+}
