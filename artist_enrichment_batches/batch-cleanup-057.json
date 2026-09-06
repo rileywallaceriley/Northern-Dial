@@ -1,0 +1,65 @@
+{
+  "arcee": {
+    "bio": "Toronto rapper and radio host Arcee was a fixture of the city’s underground hip-hop scene in the late 1990s and early 2000s. Alongside co-hosting The Real Frequency, he built a catalogue of independent singles and collaborations with producers including Jake One, Da Grassroots and DJ Serious, later collected on the MixedWell mixtape.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/arcee-mixedwell", "https://www.rapreviews.com/2004/11/arcee-mixedwell-mixtape/"]
+  },
+  "j-wyze": {
+    "bio": "Toronto hip-hop artist J Wyze, also credited as J-Wyze, is a longtime independent MC whose catalogue includes Proverbs and Herbs, Short Cutz 2 The End and later solo releases. His work connects Toronto rap with reggae, soul and more recent electronic collaborations, including music with producer Ron Allen.",
+    "website": "https://jwyze.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://jwyze.bandcamp.com/album/proverbs-and-herbs", "https://stroberecords.com/pages/ron-allen-j-wyze-melody", "https://music.apple.com/us/album/westend-story-feat-j-wyze-manchi-ray-smoove-madlocks/1541849314"]
+  },
+  "k fresh the knemesis": {
+    "bio": "Toronto rapper, songwriter and producer K-Fresh, later known as Knemesis, has worked across music and visual production in the city’s hip-hop scene. His early credits include the posse cut Get It Right from JB’s My Environment before he continued releasing solo material and directing music videos under the Knemesis name.",
+    "website": "https://soundcloud.com/theknemesis",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/im-the-one-knemesis-previews-ep-with-self-directed-video/", "https://soundcloud.com/theknemesis", "https://music.amazon.com.au/albums/B0DG6BM2LB"]
+  },
+  "black cat": {
+    "bio": "Scarborough rapper and producer Black Cat is a member of the Canadian hip-hop group IRS and the larger Monolith collective. Alongside Korry Deez and producer T.R.A.C.K.S., he helped shape IRS’s Welcome to Planet IRS era and Toronto underground records connected to Monolith and Mastermind.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nowtoronto.com/music/album-reviews/irs/", "https://soundcloud.com/the-monol1th", "https://www.worldradiohistory.com/Archive-All-Music/Billboard/00s/2003/BB-2003-12-20.pdf"]
+  },
+  "karisma": {
+    "bio": "Scarborough MC Karisma is a member of Monolith, the long-running Canadian hip-hop collective formed from Toronto crews Lyrical Coalition and The Horde. His recorded appearances include Monolith material and the Mastermind posse cut Let’s Make A Record Deal Episode 2 alongside Dan-e-o, Korry Deez, Grimace Love and Black Cat.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/the-monol1th", "https://open.spotify.com/intl-pt/track/2rOebJz5lsxTOVJHAYJlMt"]
+  },
+  "charisma": {
+    "bio": "Scarborough producer and MC Charisma, also known as Charisma aka Skizzz, is a member of the Canadian hip-hop collective Monolith. In addition to appearing on Monolith records, he has become a frequent producer for fellow Toronto artists including Dan-e-o and J Shiltz.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/the-monol1th", "https://j-shiltz.bandcamp.com/album/forever-the-artist", "https://music.apple.com/ca/song/1814713972"]
+  },
+  "charisma aka skizz": {
+    "bio": "Scarborough producer and MC Charisma, also known as Charisma aka Skizzz, is a member of the Canadian hip-hop collective Monolith. In addition to appearing on Monolith records, he has become a frequent producer for fellow Toronto artists including Dan-e-o and J Shiltz.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/the-monol1th", "https://j-shiltz.bandcamp.com/album/forever-the-artist", "https://music.apple.com/ca/song/1814713972"]
+  }
+}
