@@ -1,0 +1,56 @@
+{
+  "cipher": {
+    "bio": "Vancouver hip-hop duo Cipher paired producer Clean’s hazy, jazz-leaning production with rapper G2’s lyricism on the underground album 360 Degrees. The mid-1990s project, including the track Peeps, became part of the city’s early independent rap catalogue and was later distributed by Bomb Hip-Hop.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.beatport.com/release/360-degrees/92663", "https://music.amazon.ca/tracks/B000QWWSHK"]
+  },
+  "nowfolk": {
+    "bio": "Nowfolk is the Vancouver underground hip-hop duo of Moka Only and Ishkan. Emerging from the City Planners/Torchlight Commission orbit, the pair began recording together in the late 1990s and released projects including Style Gangstas, The Moon, The Winter. From 2001 and Magnesium Opium.",
+    "website": "https://mokaonly.bandcamp.com/album/the-moon",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mokaonly.bandcamp.com/album/the-moon", "https://mokaonly.bandcamp.com/album/the-winter-from-2001", "https://music.apple.com/us/artist/moka-only/29509665"]
+  },
+  "irs": {
+    "bio": "Scarborough hip-hop trio IRS, short for Instinctive Reaction to Struggle, brought together rappers Korry Deez and Black Cat with producer T.R.A.C.K.S. after their work in the Monolith collective. Their 2003 album Welcome to Planet IRS earned a Juno nomination for Rap Recording of the Year and cemented them as part of Toronto’s early-2000s rap wave.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/nxne_2003-june_5_to_7_toronto_on", "https://www.yorku.ca/aconline/m_rap.html", "https://soundcloud.com/the-monol1th"]
+  },
+  "i.r.s.": {
+    "bio": "Scarborough hip-hop trio IRS, also styled I.R.S., brought together rappers Korry Deez and Black Cat with producer T.R.A.C.K.S. after their work in the Monolith collective. Their 2003 album Welcome to Planet IRS earned a Juno nomination and became a landmark of Toronto’s early-2000s underground rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/nxne_2003-june_5_to_7_toronto_on", "https://www.yorku.ca/aconline/m_rap.html", "https://soundcloud.com/the-monol1th"]
+  },
+  "monolith: irs": {
+    "bio": "Monolith: IRS refers to Scarborough rappers Korry Deez and Black Cat in their role as members of Toronto’s Monolith collective and the hip-hop group IRS. The pair appear under this credit on Wio-K’s posse cut Ten alongside other Monolith members.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/the-monol1th", "https://music.amazon.ca/tracks/B009SU6LFG", "https://exclaim.ca/music/article/nxne_2003-june_5_to_7_toronto_on"]
+  },
+  "ubad": {
+    "bio": "Toronto hip-hop group UBAD, also known as Ubad Missive, formed in the 1980s around members Groovy, Rugged, Tyson and Ebony. Their mid-1990s independent catalogue includes The Legacy, Life’s Gettin’ Rough and Rugged & Nasty, placing them among the city’s early generation of recorded rap crews.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.yorku.ca/aconline/m_rap.html", "https://www.last.fm/music/UBAD"]
+  }
+}
