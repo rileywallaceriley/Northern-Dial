@@ -1,0 +1,38 @@
+{
+  "j-soul": {
+    "bio": "Toronto rapper and R&B artist J-Soul emerged from the city's west end and signed with Cash Money Records after building momentum around melodic records including Slow Wine and Toronto Plaza Hotel.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://globalnews.ca/news/4191495/8-emerging-canadian-artists-2018/", "https://hiphopcanada.com/j-soul-usually-video/"]
+  },
+  "junny": {
+    "bio": "Korean-Canadian singer-songwriter and producer JUNNY grew up in Vancouver before relocating to South Korea, where his smooth R&B-pop work expanded into songwriting for major K-pop artists including NCT, IU and Baekhyun.",
+    "website": "",
+    "instagram": "https://www.instagram.com/jnkmsc/",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/0lgENJQUkqkDbpsTYEayOr", "https://rollingstoneindia.com/junny-your-new-sonic-solace/amp/"]
+  },
+  "josh martinez": {
+    "bio": "Canadian alternative hip-hop artist Josh Martinez is a rapper, producer and label founder whose independent career grew through Halifax and Vancouver and includes solo work as well as the duo The Chicharones.",
+    "website": "http://www.joshmartinez.ca",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Josh_Martinez", "https://www.mvremix.com/urban/interviews/joshmartinez.shtml"]
+  },
+  "k-rec": {
+    "bio": "Vancouver producer and DJ K-Rec, born Kent Stephany, is a longtime figure in Canadian underground hip-hop whose sample-driven production and turntablism have connected generations of West Coast rap artists.",
+    "website": "https://djkrec.bandcamp.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://oldtothenew.wordpress.com/2026/01/23/new-joint-k-rec-casual/", "https://djkrec.bandcamp.com/album/k-rec-and-checkmate-the-method"]
+  }
+}
