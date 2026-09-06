@@ -1,0 +1,92 @@
+{
+  "elysia biro": {
+    "bio": "Vancouver Island-raised Canadian singer-songwriter and pianist Elysia Biro blends classical technique, jazz improvisation and contemporary pop songwriting in a polished, piano-led sound.",
+    "website": "https://elysiabiro.com/",
+    "instagram": "",
+    "city": "Vancouver Island, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.universalmusic.ca/2026/01/16/rising-jazz-pop-artist-elysia-biro-announces-debut-ep-running-from-nothing-out-april-24th/", "https://ca.billboard.com/business/record-labels/elysia-biro-universal-music-canada"]
+  },
+  "fame holiday": {
+    "bio": "Mississauga-based rapper Fame Holiday is a Canadian hip-hop artist known for melodic hooks, independent releases and storytelling rooted in life outside Toronto's downtown core.",
+    "website": "",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.cimamusic.ca/news/canada-house-returns-to-new-skool-rules-2023/", "https://canadanewsmedia.ca/fame-holiday-sheds-light-on-mental-illness-with-new-single-what-a-year/"]
+  },
+  "famous": {
+    "bio": "Montréal-born rapper and broadcaster Famous, born Ashton Bishop, is a Canadian hip-hop artist whose debut EP I Rap Now earned a Juno Award nomination before he expanded his career internationally.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Famous_(rapper)", "https://famous.bandcamp.com/music"]
+  },
+  "fionn": {
+    "bio": "Vancouver-area twin sisters Alanna and Brianne Finn-Morris perform as Fionn, a Canadian indie-pop duo whose harmony-rich songwriting has evolved from folk-pop toward alternative rock.",
+    "website": "https://www.fionnband.com/",
+    "instagram": "",
+    "city": "White Rock, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.fionnband.com/", "https://www.socanmagazine.ca/news/socan-honours-fionn-with-no-1-song-award/"]
+  },
+  "fito blanko": {
+    "bio": "Panamanian-Canadian singer, songwriter and producer Fito Blanko is a Mississauga-rooted tropical urban artist whose music combines reggaeton, dancehall and North American pop and hip-hop influences.",
+    "website": "https://fitoblanko.vip/",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Fito_Blanko", "https://www.allmusic.com/artist/fito-blanko-mn0000229983"]
+  },
+  "gangis khan": {
+    "bio": "Scarborough rapper Gangis Khan, also known as Camoflauge, is a Canadian hip-hop artist whose independent career grew out of Toronto's street-rap scene and collaborations across the city's rap community.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.last.fm/music/Gangis%2BKhan%2BAKA%2BCamoflauge/%2Bwiki", "https://torontorappers.com/tag/gangis-khan-aka-camoflauge/"]
+  },
+  "genevieve fisher": {
+    "bio": "London, Ontario singer-songwriter Genevieve Fisher is a Canadian country artist with multiple national radio hits and repeated Country Music Association of Ontario award nominations.",
+    "website": "",
+    "instagram": "",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://cmaontario.ca/in-the-news-april-2025/"]
+  },
+  "gurinder gill": {
+    "bio": "Indian-born Canadian rapper and singer Gurinder Gill is a Victoria-rooted Punjabi artist whose global catalogue blends Punjabi vocals with hip-hop, R&B, pop rap and trap.",
+    "website": "",
+    "instagram": "",
+    "city": "Victoria, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Gurinder_Gill", "https://open.spotify.com/artist/0eNaOpaEW5Eaivvip9ArRO"]
+  },
+  "haley smalls": {
+    "bio": "Toronto singer-songwriter and recording engineer Haley Smalls is a Canadian R&B artist whose independent catalogue pairs classically trained vocals with contemporary, melody-driven production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/haley-smalls-mn0003451502", "https://open.spotify.com/artist/5uTsMjH1CdE81ncmOnE4WY"]
+  },
+  "harvey stripes": {
+    "bio": "Ottawa-raised, Toronto-based rapper Harvey Stripes is a Canadian hip-hop artist whose independent career has included national touring and collaborations with artists from both Canadian and U.S. rap scenes.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.xxlmag.com/the-break-presents-harvey-stripes/"]
+  }
+}
