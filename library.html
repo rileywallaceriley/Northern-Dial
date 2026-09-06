@@ -15,9 +15,17 @@
             box-sizing: border-box;
         }
 
+    html {
+        background: #ffffff;
+        overscroll-behavior-y: none;
+    }
+
     body {
         font-family: 'Roboto Condensed', sans-serif;
         color: #1a1a1a;
+        background: #ffffff;
+        transition: background-color 120ms linear;
+        overscroll-behavior-y: none;
         transition: background 0.3s ease;
     }
 
@@ -738,11 +746,11 @@
     function updateBackgroundGradient() {
         const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
         const clampedPercent = Math.min(Math.max(scrollPercent, 0), 1);
-        
-        // Gradient from deep red to white
-        const r = Math.round(204 + (255 - 204) * clampedPercent);
-        const g = Math.round(51 + (255 - 51) * clampedPercent);
-        const b = Math.round(51 + (255 - 51) * clampedPercent);
+
+        // Match the homepage: white at the top, Northern Dial red at the bottom.
+        const r = Math.round(255 - (255 - 204) * clampedPercent);
+        const g = Math.round(255 - (255 - 51) * clampedPercent);
+        const b = Math.round(255 - (255 - 51) * clampedPercent);
         
         document.body.style.background = `rgb(${r}, ${g}, ${b})`;
     }

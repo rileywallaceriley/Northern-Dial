@@ -595,6 +595,21 @@
   </div>
 </div>
 
+<script>
+  function updateArchiveGradient() {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollableHeight > 0
+      ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
+      : 0;
+    const r = Math.round(255 - (255 - 204) * scrollPercent);
+    const g = Math.round(255 - (255 - 51) * scrollPercent);
+    const b = Math.round(255 - (255 - 51) * scrollPercent);
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  }
+
+  window.addEventListener('scroll', updateArchiveGradient, { passive: true });
+  updateArchiveGradient();
+</script>
 
 </body>
 </html>
