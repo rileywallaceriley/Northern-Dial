@@ -1,0 +1,191 @@
+{
+  "lilyisthatyou": {
+    "bio": "Toronto-born singer-songwriter Lilyisthatyou, born Lily Davies, is a Canadian pop artist whose irreverent, sex-positive music blends dance-pop, indie rock and hip-hop influence.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/lilyisthatyou-mn0004135473"]
+  },
+  "loviet": {
+    "bio": "Nova Scotia-bred, Toronto-based singer-songwriter Loviet, born Natalie Lynn, is a Canadian indie-rock and alternative-pop artist whose sound pairs 1990s guitar grit with polished melodic hooks.",
+    "website": "https://www.loviet.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.loviet.com/bio"]
+  },
+  "luna elle": {
+    "bio": "Mississauga singer-songwriter Luna Elle is a Ghanaian-Canadian R&B and soul artist known for a deep vocal tone, emotionally direct writing and multiple Juno Award nominations.",
+    "website": "",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://macleans.ca/culture/luna-elle-musician/", "https://open.spotify.com/artist/76FMyQJ8BGZA762QQc0X8Q"]
+  },
+  "luu breeze": {
+    "bio": "Toronto rapper Luu Breeze is a Canadian hip-hop artist whose mixtape-era catalogue helped document the city's mid-2000s independent rap scene through street-oriented lyricism and Southern-influenced production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/luu_breeze-prince_of_dot_vol_2", "https://www.reverbnation.com/luubreeze"]
+  },
+  "léonie gray": {
+    "bio": "Lavaltrie-born, Montréal-based singer-songwriter Léonie Gray is a Québec soul and R&B artist whose music combines jazz-influenced vocals, bilingual songwriting and contemporary pop production.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/leonie-gray/", "https://torpille.ca/artistes/leonie-gray/"]
+  },
+  "maestro": {
+    "bio": "Toronto rapper Maestro is an alternate credit for Maestro Fresh Wes, the pioneering Canadian MC whose platinum-selling debut and landmark single Let Your Backbone Slide helped establish hip-hop nationally.",
+    "website": "https://maestrofreshwes.net/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/profile/maestro-fresh-wes", "https://en.wikipedia.org/wiki/Maestro_Fresh_Wes"]
+  },
+  "marie-ève janvier": {
+    "bio": "Roxton Pond singer and radio host Marie-Ève Janvier is a Canadian francophone vocalist whose career spans musical theatre, solo recordings and popular Québec media.",
+    "website": "",
+    "instagram": "",
+    "city": "Roxton Pond, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Marie-%C3%88ve_Janvier"]
+  },
+  "martine st-clair": {
+    "bio": "Montréal-born singer Martine St-Clair is a Canadian francophone pop artist whose career began in Starmania before expanding into a long run of successful Québec solo albums.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Martine_St._Clair"]
+  },
+  "matt epp": {
+    "bio": "Manitoba-born singer-songwriter Matt Epp is a Canadian roots, rock and soul artist known for confessional writing, international touring and award-winning songwriting.",
+    "website": "https://www.mattepp.com/",
+    "instagram": "",
+    "city": "Winnipeg, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.mattepp.com/about", "https://en.wikipedia.org/wiki/Matt_Epp"]
+  },
+  "matthew progress": {
+    "bio": "Toronto multidisciplinary artist Matthew Progress creates Canadian experimental hip-hop, electronic music, film and performance work shaped by surrealism, Black culture and social commentary.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ago.ca/events/art-spotlight-matthew-progress-txn", "https://freshmenfriday.squarespace.com/headcount/matthewprogress"]
+  },
+  "maxime landry": {
+    "bio": "Saint-Georges, Québec singer-songwriter Maxime Landry is a Canadian francophone artist who broke nationally after winning Star Académie in 2009 and went on to earn multiple Félix awards.",
+    "website": "https://maximelandry.com/",
+    "instagram": "",
+    "city": "Saint-Georges, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://maximelandry.com/biographie/", "https://fr.wikipedia.org/wiki/Maxime_Landry"]
+  },
+  "merna": {
+    "bio": "Toronto-based Palestinian-Canadian singer, songwriter and producer Merna Bishouty, formerly known as Ayah, makes soul and R&B and has collaborated across Canadian and international hip-hop.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Merna_(singer)"]
+  },
+  "mia kelly": {
+    "bio": "Gatineau singer-songwriter Mia Kelly is a Canadian bilingual folk, rock and blues artist known for poetic writing, a versatile voice and extensive touring in Canada and abroad.",
+    "website": "https://miakellymusic.com/",
+    "instagram": "",
+    "city": "Gatineau, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/mia-kelly", "https://miakellymusic.com/home"]
+  },
+  "mob bounce": {
+    "bio": "Northern British Columbia duo Mob Bounce is an Indigenous Canadian hip-hop group formed by Gitxsan artist The Northwest Kid and Cree-Métis artist EarthChild, blending electronic beats with culture, healing and social justice.",
+    "website": "",
+    "instagram": "",
+    "city": "Northern British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ago.ca/agoinsider/meet-mob-bounce", "https://open.spotify.com/artist/0GZPhbmyaC9Mk4mRFuLnxU"]
+  },
+  "nicky mackenzie": {
+    "bio": "Salt Spring Island singer-songwriter Nicky MacKenzie is a Canadian R&B and soul artist whose jazzy vocals and pop songwriting developed through British Columbia's emerging-artist scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Victoria, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://arcprogrambc.com/participants/"]
+  },
+  "nicola ciccone": {
+    "bio": "Montréal singer-songwriter Nicola Ciccone is an Italian-Canadian francophone artist whose multilingual pop catalogue has produced dozens of Québec radio hits across more than two decades.",
+    "website": "https://www.nicolaciccone.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nicolaciccone.com/", "https://en.wikipedia.org/wiki/Nicola_Ciccone"]
+  },
+  "o'sound": {
+    "bio": "Toronto-born artist, musician, songwriter and producer O'Sound, born Owen Lee, is a Canadian R&B, soul and gospel vocalist whose career also includes extensive work in Nova Scotia's music community.",
+    "website": "https://www.osoundmusic.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.osoundmusic.com/bio-1"]
+  },
+  "ob obrien": {
+    "bio": "Hamilton-born rapper, producer and comedian OB OBrien, born Matthew O'Brien, is a Canadian hip-hop artist best known for his longtime association with Drake and OVO.",
+    "website": "",
+    "instagram": "",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/ob-obrien-mn0003329846", "https://open.spotify.com/artist/4thGcsymOK5oc43gJVtAqZ"]
+  },
+  "osé": {
+    "bio": "Toronto-based Nigerian-Canadian singer Osé blends Afrobeat, alternative R&B, soul and gospel and broke through with the viral 2024 single Makaveli.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.billboard.com/ose"]
+  },
+  "quinn pickering": {
+    "bio": "New Westminster singer-songwriter Quinn Pickering is a British Columbia indie artist whose melodic songwriting and guitar-led recordings emerged through Canada's West Coast independent music scene.",
+    "website": "",
+    "instagram": "",
+    "city": "New Westminster, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.fritzmedia.ca/", "https://music.apple.com/ca/artist/quinn-pickering/1118629366"]
+  },
+  "romy lightman": {
+    "bio": "Toronto-born Canadian musician Romy Lightman is an experimental singer-songwriter and visual artist known for Tasseomancy, Lightman & Lightman and Lightman Jarvis Ecstatic Band.",
+    "website": "https://lightmanandlightman.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Tasseomancy_(band)", "https://www.thetreemuseum.ca/pages/artist_pg.php?a=121"]
+  }
+}
