@@ -1,0 +1,92 @@
+{
+  "smiley": {
+    "bio": "Toronto rapper Smiley is an OVO Sound artist known for a distinctive laid-back cadence, gritty street narratives and an unconventional vocal style that helped make him one of the city's most recognizable contemporary rappers.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/smiley-mn0004152116", "https://en.wikipedia.org/wiki/Smiley_(rapper)"]
+  },
+  "softcult": {
+    "bio": "Kitchener twin-sister duo Softcult blends grunge, shoegaze, riot grrrl and alternative rock in a heavy, melodic sound shaped by DIY production and outspoken social themes.",
+    "website": "",
+    "instagram": "",
+    "city": "Kitchener, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/softcult-mn0004473273"]
+  },
+  "solitair": {
+    "bio": "Toronto rapper and producer Solitair is a foundational figure in Canadian hip-hop whose work as an MC, songwriter and producer helped shape major records by Kardinal Offishall, Choclair, Jully Black and others.",
+    "website": "https://www.solitairmusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.solitairmusic.com/", "https://harthouse.ca/profile/solitair"]
+  },
+  "sonreal": {
+    "bio": "Vernon, British Columbia-born rapper and singer SonReal built a Canadian hip-hop career around melodic songwriting, energetic performances and an alternative-rap sound influenced by classic East Coast hip-hop.",
+    "website": "",
+    "instagram": "",
+    "city": "Vernon, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/sonreal-mn0002659987"]
+  },
+  "souldecision": {
+    "bio": "Vancouver pop trio soulDecision combined pop, R&B and dance production in a late-1990s and early-2000s catalogue led by Canadian chart hits including Faded.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/souldecision-mn0000042188"]
+  },
+  "stars": {
+    "bio": "Montréal-based Canadian band Stars helped define the 2000s indie-pop scene with lush chamber-pop arrangements, boy-girl vocal interplay, electronic undercurrents and emotionally detailed songwriting.",
+    "website": "https://youarestars.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/stars-mn0000018828", "https://en.wikipedia.org/wiki/Stars_(Canadian_band)"]
+  },
+  "state of shock": {
+    "bio": "Vancouver rock band State of Shock broke nationally with melodic alternative-rock and pop-rock records including Money Honey, building a Canadian catalogue around big hooks and radio-ready guitar music.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/state-of-shock-mn0001000780", "https://en.wikipedia.org/wiki/State_of_Shock_(band)"]
+  },
+  "stabilo": {
+    "bio": "Maple Ridge, British Columbia rock band Stabilo built a Canadian acoustic-rock and alternative catalogue around dual vocalists, melodic songwriting and radio hits including Everybody and Flawed Design.",
+    "website": "",
+    "instagram": "",
+    "city": "Maple Ridge, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Stabilo_(band)"]
+  },
+  "stereos": {
+    "bio": "Edmonton pop-rock band Stereos blends pop, electronic and hip-hop influences in a high-energy sound that broke nationally after the group appeared on MuchMusic's disBAND.",
+    "website": "",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/stereos-mn0002075431", "https://en.wikipedia.org/wiki/Stereos"]
+  },
+  "storry": {
+    "bio": "Toronto singer-songwriter and visual artist STORRY is a multidisciplinary Canadian performer whose genre-fluid work moves through R&B, soul, opera, reggae and independent conceptual storytelling.",
+    "website": "https://www.storrymusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.storrymusic.com/about", "https://www.storrymusic.com/press"]
+  }
+}
