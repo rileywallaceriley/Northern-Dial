@@ -1,0 +1,119 @@
+{
+  "jarvis church": {
+    "bio": "Jamaican-Canadian singer, songwriter and producer Jarvis Church, born Gerald Eaton, is best known as the lead vocalist of Toronto band The Philosopher Kings and for his solo R&B and pop work.",
+    "website": "http://www.jarvischurch.ca/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Jarvis_Church", "https://www.allmusic.com/artist/jarvis-church-mn0000178527"]
+  },
+  "joel plaskett": {
+    "bio": "Halifax-based singer-songwriter and multi-instrumentalist Joel Plaskett is a Juno-winning Canadian artist whose work spans indie rock, power pop, folk, country and solo acoustic songwriting.",
+    "website": "https://joelplaskett.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Joel_Plaskett", "https://www.allmusic.com/artist/joel-plaskett-mn0000215600"]
+  },
+  "kinnie starr": {
+    "bio": "Calgary-born Canadian singer-songwriter Kinnie Starr blends indie rock with hip-hop, spoken word and electronic music in a multidisciplinary career spanning music, film and visual art.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/kinnie-starr-mn0000771524"]
+  },
+  "kreesha turner": {
+    "bio": "Edmonton-born Canadian singer-songwriter Kreesha Turner blends R&B, pop, dance and reggae influences and is known for singles including Don't Call Me Baby and Bounce With Me.",
+    "website": "http://www.kreeshaturner.com/",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Kreesha_Turner"]
+  },
+  "len": {
+    "bio": "Toronto alternative group Len, founded by siblings Marc and Sharon Costanzo, mixed indie rock and hip-hop influences and became internationally known for the 1999 hit Steal My Sunshine.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/len-mn0000120163"]
+  },
+  "les colocs": {
+    "bio": "Montréal band Les Colocs became one of Québec's defining 1990s rock groups by combining alternative rock, blues, swing, folk and global influences with socially observant French-language songwriting.",
+    "website": "https://www.colocs.qc.ca/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.colocs.qc.ca/", "https://en.wikipedia.org/wiki/Les_Colocs"]
+  },
+  "les cowboys fringants": {
+    "bio": "Repentigny, Québec band Les Cowboys Fringants is a major francophone folk-rock group known for energetic néo-trad music and socially and environmentally engaged songwriting.",
+    "website": "https://www.cowboysfringants.com/",
+    "instagram": "",
+    "city": "Repentigny, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.cowboysfringants.com/biographie/", "https://en.wikipedia.org/wiki/Les_Cowboys_Fringants"]
+  },
+  "les louanges": {
+    "bio": "Les Louanges is the project of Lévis-born Québec multi-instrumentalist Vincent Roberge, whose music blends alternative pop, contemporary R&B and electronic production.",
+    "website": "https://www.leslouanges.com/",
+    "instagram": "",
+    "city": "Lévis, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://fr.wikipedia.org/wiki/Les_Louanges"]
+  },
+  "limblifter": {
+    "bio": "Vancouver alternative-rock band Limblifter, founded by brothers Ryan and Kurt Dahle, emerged in the 1990s with melodic guitar-driven Canadian rock and later continued through several lineups.",
+    "website": "https://limblifter.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Limblifter"]
+  },
+  "lou phelps": {
+    "bio": "Saint-Hubert, Québec rapper and producer Lou Phelps, born Louis-Philippe Celestin, makes groove-heavy hip-hop and is also known for collaborating with his brother Kaytranada in The Celestics.",
+    "website": "",
+    "instagram": "",
+    "city": "Saint-Hubert, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Lou_Phelps"]
+  },
+  "loud": {
+    "bio": "Montréal rapper Loud, born Simon Cliche Trudeau, is a leading Québec hip-hop artist whose solo work combines polished rap songwriting with a distinctly francophone voice.",
+    "website": "http://www.uneanneerecord.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Loud_(rapper)"]
+  },
+  "love inc.": {
+    "bio": "Toronto dance group Love Inc., formed by producers Chris Sheppard and Brad Daymond with vocalist Simone Denny, helped define late-1990s Canadian Eurodance with hits including Broken Bones and You're a Superstar.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Love_Inc._(group)", "https://simonedenny.com/bio"]
+  },
+  "luce dufault": {
+    "bio": "Orléans, Ontario-born singer Luce Dufault is a prominent francophone Canadian vocalist whose career spans pop recordings, major Québec stage productions and long-running live performance.",
+    "website": "",
+    "instagram": "",
+    "city": "Orléans, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Luce_Dufault", "https://www.allmusic.com/artist/luce-dufault-mn0001530749"]
+  }
+}
