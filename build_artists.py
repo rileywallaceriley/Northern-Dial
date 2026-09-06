@@ -119,7 +119,7 @@ def render_groups(groups, profiles):
 
 def render_profile(profile):
     if not profile:
-        return '<div class="artist-meta"><span class="social-note">Profile links and bio: to be verified</span></div>'
+        return ""
     bio = escape(profile.get("bio", ""))
     links = []
     if profile.get("website"):
