@@ -1,0 +1,55 @@
+{
+  "tika": {
+    "bio": "Toronto singer, songwriter and curator TiKA is a Canadian R&B and soul artist whose work combines rich vocals, Black queer storytelling and a long-running role in the city's independent music community.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Tika_Simone", "https://www.sonymusic.ca/press_release/artistscan-lean-on-me"]
+  },
+  "vibi": {
+    "bio": "Canadian singer-songwriter VIBI blends raspy vocals, confessional pop writing and polished pop production, building an international career that has included opening for Bryan Adams and songwriting recognition.",
+    "website": "https://www.shesvibi.com/",
+    "instagram": "",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.shesvibi.com/"]
+  },
+  "victoria staff": {
+    "bio": "Toronto-born and raised singer-songwriter Victoria Staff makes Canadian indie pop built around intimate storytelling, folk-leaning melodies and candid writing about relationships and mental health.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://canadianbeats.ca/2024/11/15/victoria-staff-shares-new-ep-wake-up-smiling/", "https://musicotfuture.com/2024/05/06/born-and-raised-in-toronto-let-us-introduce-indie-pop-artist-victoria-staff-who-takes-us-on-her-journey-new-single-and-live-shows-coming-up-read-our-chat-below/"]
+  },
+  "wio k": {
+    "bio": "Malvern emcee Wio-K is a veteran Canadian hip-hop artist whose laid-back patois-tinged flow appeared on the landmark Rap Essentials compilation, Kardinal Offishall's Ol' Time Killin' and recordings with the Monolith crew.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/profile/wio-k", "https://dalspaceb.library.dal.ca/server/api/core/bitstreams/c8b2825b-f73d-4bd1-beba-d9f1c6353f59/content"]
+  },
+  "wio-k": {
+    "bio": "Malvern emcee Wio-K is a veteran Canadian hip-hop artist whose laid-back patois-tinged flow appeared on the landmark Rap Essentials compilation, Kardinal Offishall's Ol' Time Killin' and recordings with the Monolith crew.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/profile/wio-k", "https://dalspaceb.library.dal.ca/server/api/core/bitstreams/c8b2825b-f73d-4bd1-beba-d9f1c6353f59/content"]
+  },
+  "young stitch": {
+    "bio": "Toronto rapper Young Stitch is a Canadian freestyle specialist and independent hip-hop artist known for winning BET Freestyle Friday's world championship and for his work with Stealth Bomb Records and Lunch Room Poetz.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/young-stitch-interview/", "https://hiphopcanada.com/stealth-bomb-records-2020-roster/"]
+  }
+}
