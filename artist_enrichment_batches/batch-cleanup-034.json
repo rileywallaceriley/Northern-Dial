@@ -1,0 +1,119 @@
+{
+  "dévah quartet": {
+    "bio": "Toronto electric string ensemble DÉVAH Quartet combines classical training with rock, progressive music and effects-driven electric performance, including original work and a full-length tribute to Rush's 2112.",
+    "website": "https://www.devahquartet.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.devahquartet.com/", "https://ca.yamaha.com/fr/artists/d/devah_quartet.html"]
+  },
+  "edwin": {
+    "bio": "Toronto singer Edwin Ghazal is a Canadian alternative-rock vocalist known for fronting I Mother Earth, his successful solo career and later work with the supergroup Crash Karma.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Edwin_(musician)", "https://www.allmusic.com/artist/edwin-mn0001792339"]
+  },
+  "eleven past one": {
+    "bio": "Bowmanville, Ontario group Eleven Past One was a Canadian pop band best known for the radio single The World Is Ours and melodic, harmony-driven pop-rock.",
+    "website": "",
+    "instagram": "",
+    "city": "Bowmanville, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Eleven_Past_One"]
+  },
+  "emmanuel jal": {
+    "bio": "South Sudanese-Canadian rapper, author and activist Emmanuel Jal is based in Toronto and uses hip-hop, storytelling and humanitarian work to address war, resilience and peacebuilding.",
+    "website": "https://www.emmanueljal.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Emmanuel_Jal", "https://article22.com/pages/emmanuel-jal"]
+  },
+  "face-t": {
+    "bio": "Montréal-born French-Canadian singer Face-T blends reggae, dancehall and electronic music, drawing on childhood years in Jamaica and collaborations across Québec's bass-music scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://cultmtl.com/2015/03/face-t-interview/"]
+  },
+  "farm fresh": {
+    "bio": "Brandon, Manitoba group Farm Fresh was a pioneering Canadian independent hip-hop trio formed by Mcenroe, Pip Skid and DJ Hunnicutt and closely tied to the Peanuts & Corn label.",
+    "website": "",
+    "instagram": "",
+    "city": "Brandon, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Farm_Fresh_(band)"]
+  },
+  "frankie payne": {
+    "bio": "Toronto rapper Frankie Payne is a veteran of the city's underground hip-hop scene and a member of the Freedom Writers collective, known for reflective lyricism rooted in his Jane-Finch community.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/frankie_payne-clarity", "https://freedomwritersmusic.bandcamp.com/album/soon"]
+  },
+  "futurewave": {
+    "bio": "Toronto-born Canadian producer Futurewave, born Martin Budik, is a leading underground boom-bap beatmaker known for rugged sampling and collaborations across independent hip-hop.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://spherama.com/musique/artistes/f/futurewave.php", "https://www.backseatmafia.com/droppin-knowledge-behind-the-boards-with-futurewave/"]
+  },
+  "glenn morrison": {
+    "bio": "Toronto DJ, producer and composer Glenn Morrison is a Canadian electronic artist known for progressive house, melodic dance production and the international singles Contact and Goodbye.",
+    "website": "https://glennmorrison.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Glenn_Morrison_(DJ)"]
+  },
+  "grandson": {
+    "bio": "American-Canadian singer, songwriter and rapper grandson, born Jordan Benjamin, grew up in Toronto and blends alternative rock, hip-hop and electronic production with politically charged songwriting.",
+    "website": "https://grandsonmusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Grandson_(musician)"]
+  },
+  "hedley": {
+    "bio": "Abbotsford, British Columbia group Hedley was a Canadian pop-rock band active from 2003 to 2018, with a commercially successful catalogue spanning pop-punk and polished mainstream rock.",
+    "website": "",
+    "instagram": "",
+    "city": "Abbotsford, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Hedley_(band)", "https://www.allmusic.com/artist/hedley-mn0000513860"]
+  },
+  "hey rosetta!": {
+    "bio": "St. John's, Newfoundland and Labrador band Hey Rosetta! was a Canadian indie-rock ensemble led by Tim Baker, known for emotionally expansive songs built around rock instrumentation, strings and piano.",
+    "website": "https://heyrosetta.com/",
+    "instagram": "",
+    "city": "St. John's, Newfoundland and Labrador",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://heyrosetta.bandcamp.com/music", "https://en.wikipedia.org/wiki/Hey_Rosetta!"]
+  },
+  "hubert lenoir": {
+    "bio": "Québec City singer-songwriter, producer and actor Hubert Lenoir is a French-Canadian art-pop and experimental-rock artist whose debut solo album Darlène was shortlisted for the Polaris Music Prize.",
+    "website": "https://darlenedarling.com/",
+    "instagram": "",
+    "city": "Québec City, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Hubert_Lenoir"]
+  }
+}
