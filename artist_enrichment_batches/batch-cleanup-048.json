@@ -1,0 +1,29 @@
+{
+  "tlo": {
+    "bio": "Toronto turntablist, producer and touring DJ TLO is a Canadian hip-hop figure who won the Canadian DMC Supremacy title, represented Canada at the DMC World Finals and became Shad's longtime DJ.",
+    "website": "https://tlomusic.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ugsmag.com/tlo/", "https://open.spotify.com/artist/54gvNxIqZl0rHnWwEIXPEB"]
+  },
+  "william dinero": {
+    "bio": "Toronto recording artist and producer William Dinero, born William Grajeda, makes hip-hop, R&B, Latin and crossover production alongside soundtrack work for film and television.",
+    "website": "https://www.williamdinero.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.williamdinero.com/portfolio.html"]
+  },
+  "zayo": {
+    "bio": "Zayo is a Québec rapper whose French-language catalogue sits within contemporary rap québécois, pairing direct street-rap writing with melodic modern production.",
+    "website": "",
+    "instagram": "",
+    "city": "Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musiqc.ca/artistes/zayo"]
+  }
+}
