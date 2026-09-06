@@ -22,9 +22,8 @@
     }
 
     .header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+        position: relative;
+        z-index: 1;
         background: white;
         backdrop-filter: blur(10px);
         border-bottom: 4px solid #C33;
@@ -101,6 +100,9 @@
         display: flex;
         justify-content: center;
         margin: 15px -20px -15px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
     .page-nav a {
