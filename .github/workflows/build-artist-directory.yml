@@ -1,0 +1,64 @@
+name: Build artist directory
+
+on:
+  push:
+    paths:
+      - 'artist_enrichment_batches/**'
+      - 'artist_profiles.json'
+      - 'artist_removals.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge reviewed enrichment batches
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import glob
+          import json
+
+          enrichment_path = Path('artist_enrichment.json')
+          manifest_path = Path('artist_publish_manifest.json')
+
+          enrichment = json.loads(enrichment_path.read_text(encoding='utf-8')) if enrichment_path.exists() else {}
+          published = set(json.loads(manifest_path.read_text(encoding='utf-8'))) if manifest_path.exists() else set()
+
+          for filename in sorted(glob.glob('artist_enrichment_batches/*.json')):
+              batch = json.loads(Path(filename).read_text(encoding='utf-8'))
+              for key, value in batch.items():
+                  normalized = str(key).casefold()
+                  enrichment[normalized] = value
+                  if value.get('reviewed'):
+                      published.add(normalized)
+
+          enrichment_path.write_text(json.dumps(enrichment, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          manifest_path.write_text(json.dumps(sorted(published), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          PY
+
+      - name: Build directory
+        run: python3 build_artists.py
+
+      - name: Keep enrichment batches as source of truth
+        run: git checkout -- artist_enrichment.json artist_publish_manifest.json
+
+      - name: Commit generated directory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artists.html
+          if git diff --cached --quiet; then
+            echo 'No directory changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Rebuild artist directory from enrichment batches'
+          git push
