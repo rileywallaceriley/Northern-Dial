@@ -17,6 +17,8 @@ API = "https://a10.asurahosting.com/api/station/northern_dial/requests"
 PAGE_SIZE = 25
 TEMPLATE = "artists.html"
 PROFILE_FILE = "artist_profiles.json"
+ENRICHMENT_FILE = "artist_enrichment.json"
+PUBLISH_MANIFEST_FILE = "artist_publish_manifest.json"
 CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
@@ -83,7 +85,7 @@ def build_groups(rows):
     )
 
 
-def render_groups(groups, profiles):
+def render_groups(groups, profiles, enrichments):
     rendered = []
     previous_letter = None
     for group in groups:
@@ -108,7 +110,8 @@ def render_groups(groups, profiles):
                 f'<a class="request-link" href="{request_url}">Request this artist</a></div>'
             )
         profile = profiles.get(name.casefold(), {})
-        profile_html = render_profile(profile)
+        enrichment = enrichments.get(name.casefold(), {})
+        profile_html = render_profile(profile, enrichment)
         rendered.append(
             anchor + f'      <details data-search="{search}">'
             f'<summary>{escape(name)} <span class="artist-meta">'
@@ -120,8 +123,9 @@ def render_groups(groups, profiles):
     return "\n".join(rendered)
 
 
-def render_profile(profile):
-    if not profile:
+def render_profile(profile, enrichment=None):
+    enrichment = enrichment or {}
+    if not profile and not enrichment.get("reviewed"):
         return ""
     bio = escape(profile.get("bio", ""))
     links = []
@@ -131,8 +135,22 @@ def render_profile(profile):
         links.append(f'<a href="{escape(profile["instagram"], quote=True)}" target="_blank" rel="noopener">Instagram</a>')
     if profile.get("feature"):
         links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
+    if enrichment.get("musicbrainz_artist_id"):
+        mbid = escape(enrichment["musicbrainz_artist_id"], quote=True)
+        links.append(f'<a href="https://musicbrainz.org/artist/{mbid}" target="_blank" rel="noopener">MusicBrainz</a>')
+    sources = [url for url in enrichment.get("sources", []) if url]
+    source_html = ""
+    if sources:
+        source_links = " · ".join(
+            f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener">Source {index}</a>'
+            for index, url in enumerate(sources, 1)
+        )
+        source_html = f'<div class="profile-sources"><span>Sources:</span> {source_links}</div>'
+    location = enrichment.get("city") or enrichment.get("country")
+    location_html = f'<p class="profile-location">{escape(location)}</p>' if location else ""
     link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
-    return f'<div class="artist-profile"><p class="profile-bio">{bio}</p>{link_html}</div>'
+    bio_html = f'<p class="profile-bio">{bio}</p>' if bio else ""
+    return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
 
 
 def render_letter_nav(groups):
@@ -161,11 +179,25 @@ def main():
     groups = build_groups(rows)
     with open(PROFILE_FILE, "r", encoding="utf-8") as handle:
         profiles = {key.casefold(): value for key, value in json.load(handle).items()}
+    try:
+        with open(ENRICHMENT_FILE, "r", encoding="utf-8") as handle:
+            enrichments = {key.casefold(): value for key, value in json.load(handle).items()}
+    except FileNotFoundError:
+        enrichments = {}
+    try:
+        with open(PUBLISH_MANIFEST_FILE, "r", encoding="utf-8") as handle:
+            published = {str(key).casefold() for key in json.load(handle)}
+        enrichments = {
+            key: value for key, value in enrichments.items()
+            if key in published
+        }
+    except FileNotFoundError:
+        pass
     with open(TEMPLATE, "r", encoding="utf-8") as handle:
         template = handle.read()
     if CATALOGUE_START not in template or CATALOGUE_END not in template:
         raise SystemExit(f"Catalogue markers not found in {TEMPLATE}")
-    output = replace_block(template, CATALOGUE_START, CATALOGUE_END, render_groups(groups, profiles))
+    output = replace_block(template, CATALOGUE_START, CATALOGUE_END, render_groups(groups, profiles, enrichments))
     if NAV_START not in output or NAV_END not in output:
         raise SystemExit(f"Letter navigation markers not found in {TEMPLATE}")
     output = replace_block(output, NAV_START, NAV_END, render_letter_nav(groups))

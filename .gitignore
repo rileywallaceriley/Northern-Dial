@@ -1,0 +1,4 @@
+.musicbrainz-cache.json
+.musicbrainz-progress.json
+artist_match_review.json
+__pycache__/

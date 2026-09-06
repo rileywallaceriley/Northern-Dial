@@ -1,0 +1,219 @@
+{
+  "backxwash": {
+    "bio": "Zambian-Canadian rapper and producer Ashanti Mutinta, known as Backxwash, is based in Montréal and makes dark, boundary-pushing doom rap.",
+    "website": "https://www.backxwash.com/",
+    "instagram": "https://www.instagram.com/backxwash/",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.backxwash.com/", "https://www.instagram.com/backxwash/", "https://en.wikipedia.org/wiki/Backxwash"]
+  },
+  "charlotte day wilson": {
+    "bio": "Toronto-born Canadian contemporary R&B singer-songwriter known for the song Work, the album Cyan Blue, and collaborations across Toronto's jazz, soul, and alternative-R&B scenes.",
+    "website": "https://charlottedaywilson.com/",
+    "instagram": "https://www.instagram.com/charlottedaywilson/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://charlottedaywilson.com/", "https://www.instagram.com/charlottedaywilson/", "https://en.wikipedia.org/wiki/Charlotte_Day_Wilson"]
+  },
+  "daniel caesar": {
+    "bio": "Toronto-born Canadian singer-songwriter whose gospel-rooted, atmospheric R&B helped make him one of the country's most internationally recognized contemporary voices.",
+    "website": "",
+    "instagram": "https://www.instagram.com/danielcaesar/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.instagram.com/danielcaesar/", "https://www.allmusic.com/artist/daniel-caesar-mn0003531947", "https://en.wikipedia.org/wiki/Daniel_Caesar"]
+  },
+  "feist": {
+    "bio": "Leslie Feist is a Canadian indie-pop singer-songwriter, solo artist, and member of Broken Social Scene, recognized for intimate songwriting and distinctive vocal work.",
+    "website": "",
+    "instagram": "https://www.instagram.com/feistmusic/",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.instagram.com/feistmusic/", "https://www.highroadtouring.com/feist/", "https://en.wikipedia.org/wiki/Feist_(singer)"]
+  },
+  "haviah mighty": {
+    "bio": "Toronto-born, Brampton-based hip-hop artist known for incisive lyricism, forceful delivery, and work that challenges gendered expectations in Canadian rap.",
+    "website": "https://haviahmighty.ca/",
+    "instagram": "https://www.instagram.com/haviahmighty/",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://haviahmighty.ca/", "https://www.instagram.com/haviahmighty/", "https://www.harthouse.ca/people/haviah-mighty"]
+  },
+  "jessie reyez": {
+    "bio": "Toronto-based Colombian-Canadian singer-songwriter recognized for raw, emotionally direct vocals and genre-blending R&B and pop songwriting.",
+    "website": "https://www.jessiereyez.com/",
+    "instagram": "https://www.instagram.com/jessiereyez/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.jessiereyez.com/", "https://www.instagram.com/jessiereyez/", "https://en.wikipedia.org/wiki/Jessie_Reyez"]
+  },
+  "kaytranada": {
+    "bio": "Haitian-Canadian producer and DJ Louis Kevin Celestin, raised in Montréal, whose groove-heavy production bridges house, hip-hop, funk, R&B, and electronic music.",
+    "website": "https://www.kaytranada.com/",
+    "instagram": "https://www.instagram.com/kaytranada/",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.kaytranada.com/", "https://www.instagram.com/kaytranada/", "https://en.wikipedia.org/wiki/Kaytranada"]
+  },
+  "nelly furtado": {
+    "bio": "Canadian singer-songwriter whose multilingual, genre-fluid catalogue spans pop, R&B, hip-hop, dance, and Portuguese-influenced sounds.",
+    "website": "https://www.nellyfurtado.com/",
+    "instagram": "https://www.instagram.com/nellyfurtado/",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nellyfurtado.com/", "https://www.instagram.com/nellyfurtado/", "https://www.thecanadianencyclopedia.ca/en/article/nelly-furtado"]
+  },
+  "snotty nose rez kids": {
+    "bio": "Indigenous Canadian hip-hop duo Yung Tryz and Young D, known for sharp storytelling, West Coast perspective, cultural pride, and socially conscious rap.",
+    "website": "https://snottynoserezkids.com/",
+    "instagram": "https://www.instagram.com/snottynoserezkids/",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://snottynoserezkids.com/", "https://www.instagram.com/snottynoserezkids/", "https://www.sonymusic.ca/artist/snotty-nose-rez-kids"]
+  },
+  "the halluci nation": {
+    "bio": "Ottawa-founded Indigenous electronic and hip-hop collective formerly known as A Tribe Called Red, blending powwow music with club production and political, community-rooted expression.",
+    "website": "https://thehallucination.com/",
+    "instagram": "https://www.instagram.com/atribecalledred/",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://thehallucination.com/", "https://www.instagram.com/atribecalledred/", "https://www.thecanadianencyclopedia.ca/en/article/a-tribe-called-red"]
+  },
+  "drake": {
+    "bio": "Toronto-born rapper, singer, songwriter, and actor whose work has made him one of the most commercially influential Canadian artists of the streaming era.",
+    "website": "",
+    "instagram": "https://www.instagram.com/champagnepapi/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/drake", "https://www.britannica.com/biography/Drake", "https://www.instagram.com/champagnepapi/"]
+  },
+  "the weeknd": {
+    "bio": "Scarborough-born Canadian singer-songwriter Abel Tesfaye, known for atmospheric R&B, pop songwriting, and a distinctive falsetto.",
+    "website": "",
+    "instagram": "https://www.instagram.com/theweeknd/",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://thecanadianencyclopedia.ca/en/article/the-weeknd", "https://www.britannica.com/biography/the-Weeknd", "https://www.instagram.com/theweeknd/"]
+  },
+  "justin bieber": {
+    "bio": "London, Ontario-born Canadian singer and songwriter who became a global pop figure after emerging online as a teenager.",
+    "website": "",
+    "instagram": "https://www.instagram.com/justinbieber/",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/justin-drew-bieber-emc", "https://www.britannica.com/biography/Justin-Bieber", "https://www.instagram.com/justinbieber/"]
+  },
+  "alessia cara": {
+    "bio": "Mississauga-born Canadian singer-songwriter whose candid pop and R&B helped establish her as an important contemporary Canadian voice.",
+    "website": "",
+    "instagram": "https://www.instagram.com/alessiasmusic/",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/alessia-cara", "https://www.canadaswalkoffame.com/honourees/alessia-cara/", "https://www.instagram.com/alessiasmusic/"]
+  },
+  "shawn mendes": {
+    "bio": "Pickering-born Canadian singer-songwriter who built an early online following before becoming an internationally recognized pop artist.",
+    "website": "",
+    "instagram": "https://www.instagram.com/shawnmendes/",
+    "city": "Pickering, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/shawn-mendes", "https://www.instagram.com/shawnmendes/"]
+  },
+  "arcade fire": {
+    "bio": "Montréal-founded Canadian indie-rock band known for expansive arrangements, energetic performances, and internationally acclaimed albums.",
+    "website": "",
+    "instagram": "https://www.instagram.com/arcadefire/",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.britannica.com/topic/Arcade-Fire", "https://www.thecanadianencyclopedia.ca/en/article/arcade-fire", "https://www.instagram.com/arcadefire/"]
+  },
+  "chromeo": {
+    "bio": "Montréal electro-funk duo formed by Dave 1 and P-Thugg, blending funk, synth-pop, disco, and R&B influences.",
+    "website": "",
+    "instagram": "https://www.instagram.com/chromeo/",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/chromeo-mn0000116425", "https://en.wikipedia.org/wiki/Chromeo", "https://www.instagram.com/chromeo/"]
+  },
+  "arkells": {
+    "bio": "Hamilton-formed Canadian rock band whose catalogue combines arena-ready songwriting with a strong hometown identity and community focus.",
+    "website": "https://www.arkellsmusic.com/band/",
+    "instagram": "https://www.instagram.com/arkellsmusic/",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/arkells", "https://www.arkellsmusic.com/band/", "https://www.instagram.com/arkellsmusic/"]
+  },
+  "city and colour": {
+    "bio": "The solo project of Canadian singer-songwriter Dallas Green, known for introspective acoustic songwriting and work connected to Alexisonfire.",
+    "website": "",
+    "instagram": "https://www.instagram.com/cityandcolour/",
+    "city": "St. Catharines, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dinealonerecords.com/artists/city-and-colour/", "https://www.allmusic.com/artist/city-and-colour-mn0001387690", "https://www.instagram.com/cityandcolour/"]
+  },
+  "carly rae jepsen": {
+    "bio": "Mission, British Columbia-born Canadian singer-songwriter known for bright, meticulously crafted pop and the global hit Call Me Maybe.",
+    "website": "",
+    "instagram": "https://www.instagram.com/carlyraejepsen/",
+    "city": "Mission, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/carly-rae-jepsen", "https://www.britannica.com/biography/Carly-Rae-Jepsen", "https://www.instagram.com/carlyraejepsen/"]
+  },
+  "alanis morissette": {"bio": "Ottawa-born singer-songwriter, producer, actor, and activist known for confessional rock songwriting.", "website": "", "instagram": "https://www.instagram.com/alanis/", "city": "Ottawa, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/alanis-morissette", "https://www.instagram.com/alanis/"]},
+  "avril lavigne": {"bio": "Belleville-born Canadian singer-songwriter whose pop-punk catalogue made her an international star.", "website": "", "instagram": "https://www.instagram.com/avrillavigne/", "city": "Belleville, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/avril-lavigne", "https://www.instagram.com/avrillavigne/"]},
+  "bryan adams": {"bio": "Kingston-born Canadian singer-songwriter, guitarist, and photographer with a career spanning rock and pop.", "website": "", "instagram": "https://www.instagram.com/bryanadams/", "city": "Kingston, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/bryan-adams", "https://www.instagram.com/bryanadams/"]},
+  "céline dion": {"bio": "Charlemagne, Québec-born singer recognized for powerful vocals and one of the most successful international careers in popular music.", "website": "", "instagram": "https://www.instagram.com/celinedion/", "city": "Charlemagne, Québec", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/celine-dion", "https://www.instagram.com/celinedion/"]},
+  "shania twain": {"bio": "Canadian singer-songwriter whose country-pop catalogue made her one of the best-selling artists in music history.", "website": "", "instagram": "https://www.instagram.com/shaniatwain/", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/shania-twain", "https://www.instagram.com/shaniatwain/"]},
+  "sarah mclachlan": {"bio": "Halifax-born singer-songwriter known for emotionally direct pop, adult contemporary, and folk-influenced music.", "website": "", "instagram": "https://www.instagram.com/officialsarahmclachlan/", "city": "Halifax, Nova Scotia", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/sarah-mclachlan", "https://www.instagram.com/officialsarahmclachlan/"]},
+  "tegan and sara": {"bio": "Calgary-born twin sisters whose indie-rock and pop songwriting has earned a lasting international audience.", "website": "", "instagram": "https://www.instagram.com/teganandsara/", "city": "Calgary, Alberta", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/tegan-and-sara", "https://www.instagram.com/teganandsara/"]},
+  "metric": {"bio": "Toronto-based Canadian alternative-rock band led by Emily Haines and James Shaw.", "website": "", "instagram": "https://www.instagram.com/metric/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/metric", "https://www.instagram.com/metric/"]},
+  "billy talent": {"bio": "Mississauga-formed Canadian rock band known for its melodic, high-energy punk and alternative-rock sound.", "website": "https://www.billytalent.com/", "instagram": "https://www.instagram.com/billytalentband/", "city": "Mississauga, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.billytalent.com/", "https://www.instagram.com/billytalentband/"]},
+  "blue rodeo": {"bio": "Toronto country-rock band whose rootsy songwriting and long-running catalogue are central to Canadian popular music.", "website": "", "instagram": "https://www.instagram.com/bluerodeo/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/blue-rodeo", "https://www.instagram.com/bluerodeo/"]},
+  "the tragically hip": {"bio": "Kingston-formed Canadian rock band celebrated for distinctive storytelling and deep national cultural impact.", "website": "", "instagram": "https://www.instagram.com/thetrakh/", "city": "Kingston, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/the-tragically-hip", "https://www.instagram.com/thetrakh/"]},
+  "our lady peace": {"bio": "Toronto alternative-rock band fronted by Raine Maida, known for a catalogue spanning post-grunge, alternative rock, and art rock.", "website": "", "instagram": "https://www.instagram.com/ourladypeace/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/our-lady-peace", "https://www.instagram.com/ourladypeace/"]},
+  "mother mother": {"bio": "Vancouver-formed Canadian alternative-rock band known for layered vocal harmonies and genre-blending songwriting.", "website": "https://www.mothermothersite.com/", "instagram": "https://www.instagram.com/mothermothermusic/", "city": "Vancouver, British Columbia", "country": "Canada", "reviewed": true, "sources": ["https://www.mothermothersite.com/", "https://www.instagram.com/mothermothermusic/"]},
+  "the beaches": {"bio": "Toronto rock band whose sharp, energetic songs have made them one of Canada's prominent contemporary guitar acts.", "website": "https://www.thebeachesband.com/", "instagram": "https://www.instagram.com/thebeachesband/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thebeachesband.com/", "https://www.instagram.com/thebeachesband/"]},
+  "simple plan": {"bio": "Montréal-formed pop-punk band known for melodic, emotionally direct songs and a global fanbase.", "website": "https://www.simpleplan.com/", "instagram": "https://www.instagram.com/simpleplan/", "city": "Montréal, Québec", "country": "Canada", "reviewed": true, "sources": ["https://www.simpleplan.com/", "https://www.instagram.com/simpleplan/"]},
+  "sum 41": {"bio": "Ajax, Ontario-formed rock band that combined pop-punk, punk, and metal influences across an internationally successful catalogue.", "website": "", "instagram": "https://www.instagram.com/sum41/", "city": "Ajax, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/sum-41", "https://www.instagram.com/sum41/"]},
+  "k-os": {"bio": "Canadian rapper, singer, songwriter, and producer known for combining hip-hop with rock, soul, reggae, and pop.", "website": "", "instagram": "https://www.instagram.com/kosmusic/", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/k-os", "https://www.instagram.com/kosmusic/"]},
+  "classified": {"bio": "Enfield, Nova Scotia-born rapper and producer whose work is rooted in Canadian hip-hop and East Coast identity.", "website": "https://www.classifiedofficial.com/", "instagram": "https://www.instagram.com/classified/", "city": "Enfield, Nova Scotia", "country": "Canada", "reviewed": true, "sources": ["https://www.classifiedofficial.com/", "https://www.instagram.com/classified/"]},
+  "maestro fresh wes": {"bio": "Toronto rapper and producer widely regarded as a foundational figure in Canadian hip-hop.", "website": "", "instagram": "https://www.instagram.com/maestro_fresh_wes/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/maestro-fresh-wes", "https://www.instagram.com/maestro_fresh_wes/"]},
+  "lights": {"bio": "Canadian singer-songwriter, multi-instrumentalist, and visual artist known for electronic pop and alternative music.", "website": "https://music.iamlights.com/", "instagram": "https://www.instagram.com/lights/", "country": "Canada", "reviewed": true, "sources": ["https://music.iamlights.com/", "https://www.instagram.com/lights/"]}
+  ,"a-trak": {"bio": "Montréal-born DJ, producer, and label founder known for bridging turntablism, hip-hop, house, and electronic music.", "website": "", "instagram": "https://www.instagram.com/atrak/", "city": "Montréal, Québec", "country": "Canada", "reviewed": true, "sources": ["https://en.wikipedia.org/wiki/A-Trak", "https://www.instagram.com/atrak/"]}
+  ,"amanda marshall": {"bio": "Toronto singer-songwriter known for powerful pop-rock vocals and emotionally direct songs.", "website": "", "instagram": "https://www.instagram.com/amandamarshall/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://en.wikipedia.org/wiki/Amanda_Marshall", "https://www.instagram.com/amandamarshall/"]}
+  ,"andy shauf": {"bio": "Regina-born Canadian singer-songwriter whose detailed narrative writing blends indie folk and alternative pop.", "website": "https://andyshauf.com/", "instagram": "https://www.instagram.com/andyshauf/", "city": "Regina, Saskatchewan", "country": "Canada", "reviewed": true, "sources": ["https://andyshauf.com/", "https://www.instagram.com/andyshauf/"]}
+  ,"badbadnotgood": {"bio": "Toronto instrumental group known for combining jazz with hip-hop, electronic, and alternative influences.", "website": "https://badbadnotgood.com/", "instagram": "https://www.instagram.com/badbadnotgood/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://badbadnotgood.com/", "https://www.instagram.com/badbadnotgood/"]}
+  ,"bahamas": {"bio": "The musical project of Toronto singer-songwriter Afie Jurvanen, known for understated, guitar-led indie and folk-pop.", "website": "https://bahamasmusic.net/", "instagram": "https://www.instagram.com/bahamasbaby/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://bahamasmusic.net/", "https://www.instagram.com/bahamasbaby/"]}
+  ,"basia bulat": {"bio": "Montréal-based Canadian singer-songwriter known for intimate folk-pop songwriting and expressive vocals.", "website": "https://basiabulat.com/", "instagram": "https://www.instagram.com/basiabulat/", "city": "Montréal, Québec", "country": "Canada", "reviewed": true, "sources": ["https://basiabulat.com/", "https://www.instagram.com/basiabulat/"]}
+  ,"bif naked": {"bio": "Canadian singer-songwriter, poet, actor, and author associated with alternative rock and punk.", "website": "https://bifnaked.com/", "instagram": "https://www.instagram.com/bifnaked/", "country": "Canada", "reviewed": true, "sources": ["https://bifnaked.com/", "https://www.instagram.com/bifnaked/"]}
+  ,"big wreck": {"bio": "Toronto-formed rock band led by singer-songwriter and guitarist Ian Thornley.", "website": "https://www.bigwreckmusic.com/", "instagram": "https://www.instagram.com/bigwreckmusic/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.bigwreckmusic.com/", "https://www.instagram.com/bigwreckmusic/"]}
+  ,"broken social scene": {"bio": "Toronto indie-rock collective known for expansive arrangements and a collaborative Canadian music community.", "website": "https://brokensocialscene.ca/", "instagram": "https://www.instagram.com/brokensocialscene/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://brokensocialscene.ca/", "https://www.instagram.com/brokensocialscene/"]}
+  ,"buck 65": {"bio": "Canadian rapper, producer, and broadcaster known for inventive storytelling and roots-oriented hip-hop.", "website": "", "instagram": "https://www.instagram.com/buck65/", "country": "Canada", "reviewed": true, "sources": ["https://en.wikipedia.org/wiki/Buck_65", "https://www.instagram.com/buck65/"]}
+  ,"cadence weapon": {"bio": "Edmonton-born rapper and author known for socially observant lyrics and inventive electronic hip-hop.", "website": "https://cadenceweapon.com/", "instagram": "https://www.instagram.com/cadenceweapon/", "city": "Edmonton, Alberta", "country": "Canada", "reviewed": true, "sources": ["https://cadenceweapon.com/", "https://www.instagram.com/cadenceweapon/"]}
+  ,"chantal kreviazuk": {"bio": "Winnipeg-born Canadian singer-songwriter and pianist known for pop, adult contemporary, and film songwriting.", "website": "https://chantalkreviazuk.com/", "instagram": "https://www.instagram.com/chantalkreviazuk/", "city": "Winnipeg, Manitoba", "country": "Canada", "reviewed": true, "sources": ["https://chantalkreviazuk.com/", "https://www.instagram.com/chantalkreviazuk/"]}
+  ,"coeur de pirate": {"bio": "Québec singer-songwriter Béatrice Martin, known for French-language piano-pop and intimate songwriting.", "website": "https://coeurdepirate.com/", "instagram": "https://www.instagram.com/coeurdepirate/", "city": "Montréal, Québec", "country": "Canada", "reviewed": true, "sources": ["https://coeurdepirate.com/", "https://www.instagram.com/coeurdepirate/"]}
+  ,"connor price": {"bio": "Canadian rapper and songwriter known for concise, high-energy hip-hop releases and short-form music content.", "website": "https://www.connorprice.com/", "instagram": "https://www.instagram.com/connorprice/", "country": "Canada", "reviewed": true, "sources": ["https://www.connorprice.com/", "https://www.instagram.com/connorprice/"]}
+  ,"deborah cox": {"bio": "Toronto-born Canadian singer, songwriter, and actor known for powerhouse R&B and soul vocals.", "website": "", "instagram": "https://www.instagram.com/deborahcox/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/deborah-cox", "https://www.instagram.com/deborahcox/"]}
+  ,"dear rouge": {"bio": "Vancouver husband-and-wife alternative-pop duo known for synth-driven songwriting and energetic performances.", "website": "https://dearrouge.com/", "instagram": "https://www.instagram.com/dearrouge/", "city": "Vancouver, British Columbia", "country": "Canada", "reviewed": true, "sources": ["https://dearrouge.com/", "https://www.instagram.com/dearrouge/"]}
+  ,"dragonette": {"bio": "Toronto electro-pop group founded by Martina Sorbara and Dan Kurtz, known for dance-pop songwriting.", "website": "https://dragonetteonline.com/", "instagram": "https://www.instagram.com/dragonette/", "city": "Toronto, Ontario", "country": "Canada", "reviewed": true, "sources": ["https://dragonetteonline.com/", "https://www.instagram.com/dragonette/"]}
+  ,"esthero": {"bio": "Canadian singer-songwriter and producer whose work blends trip-hop, soul, jazz, and alternative pop.", "website": "", "instagram": "https://www.instagram.com/esthero/", "country": "Canada", "reviewed": true, "sources": ["https://en.wikipedia.org/wiki/Esthero", "https://www.instagram.com/esthero/"]}
+  ,"great big sea": {"bio": "Newfoundland and Labrador folk-rock band known for bringing traditional Atlantic Canadian influences to a broad audience.", "website": "", "instagram": "https://www.instagram.com/greatbigsea/", "city": "St. John's, Newfoundland and Labrador", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/great-big-sea", "https://www.instagram.com/greatbigsea/"]}
+  ,"grimes": {"bio": "Vancouver-born Canadian musician, singer-songwriter, producer, and visual artist associated with electronic and experimental pop.", "website": "", "instagram": "https://www.instagram.com/grimes/", "city": "Vancouver, British Columbia", "country": "Canada", "reviewed": true, "sources": ["https://www.thecanadianencyclopedia.ca/en/article/grimes", "https://www.instagram.com/grimes/"]}
+}
