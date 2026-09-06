@@ -1,0 +1,38 @@
+{
+  "boomtang": {
+    "bio": "Boomtang refers to Toronto dance-pop production team The Boomtang Boys, formed by Tony Grace, Paul Grace and Rob DeBoer. The Canadian trio built a major remix catalogue before scoring their own late-1990s hits, including Squeeze Toy, Pictures and Movin’ On, with their work spanning club music, pop and radio dance production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/the-boomtang-boys-mn0000619819", "https://ca.billboard.com/fyi/music-news-digest-aug-12-2019"]
+  },
+  "duck sauce": {
+    "bio": "Duck Sauce is the Canadian-American house duo of Montréal DJ A-Trak and American producer Armand Van Helden. Formed in 2009, the pair fused disco-house hooks with playful club production on records including aNYway and the global hit Barbra Streisand.",
+    "website": "https://www.ducksaucenyc.com/",
+    "instagram": "",
+    "city": "Montréal / New York City",
+    "country": "Canada / United States",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/trak_armand_van_helden_become_duck_sauce", "https://www.nts.live/artists/139088-duck-sauce"]
+  },
+  "kaytraminé": {
+    "bio": "KAYTRAMINÉ is the Canadian-American duo of Montréal-raised producer Kaytranada and Portland rapper Aminé. After years of earlier collaborations, the pair formalized the project for their 2023 self-titled album, blending Kaytranada’s house and funk production with Aminé’s melodic hip-hop and earning a Juno nomination for Rap Album/EP of the Year.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal / Portland",
+    "country": "Canada / United States",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/kaytramine/", "https://en.wikipedia.org/wiki/Kaytramin%C3%A9"]
+  },
+  "hampton the hampster": {
+    "bio": "Hampton the Hampster is the fictional Canadian novelty-dance act spun out of Deidre LaCarte’s pioneering Hampster Dance website. The musical project was developed with Toronto production team The Boomtang Boys, whose 2000 single The Hampsterdance Song became a Canadian chart-topper before expanding into albums and follow-up singles.",
+    "website": "",
+    "instagram": "",
+    "city": "Nanaimo / Toronto",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://medium.com/@HamptonETH/the-oral-history-of-the-hampsterdance-the-twisted-true-story-of-one-of-the-worlds-first-memes-5810fbeef724", "https://en.wikipedia.org/wiki/The_Hampsterdance_Song"]
+  }
+}
