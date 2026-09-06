@@ -1,0 +1,135 @@
+# Verified non-Canadian artists whose standalone sections should be hidden.
+# Matching is case-insensitive. Collaborative songs remain available under retained artists.
+# Keep Canadian, Canadian-based/dual-national and genuinely ambiguous cases out of this file until reviewed.
+
+Adrian Sina
+Adriatique
+AFROJACK
+Alejandro Fernández
+Aluna
+AlunaGeorge
+amaarae
+Anderson .Paak
+Andrea Bocelli
+Arctic Monkeys
+Armin van Buuren
+Bad Bunny
+Bakar
+Barrington Levy
+Blessd
+Blood Orange
+Bomba Estéreo
+Bryant Myers
+Calvin Harris
+Camilo
+Casper Magico
+Central Cee
+Chicane
+Chronixx
+Cidade Verde
+Craig David
+Daddy Yankee
+Daft Punk
+David Guetta
+Dinos
+DJ Kawasaki
+DJ Mehdi
+Dj Mitsu The Beats
+DJ Snake
+Dom Dolla
+Donae'o
+Edward Maya
+Eladio Carrion
+Elephant Man
+Elissa
+Elyanna
+Four Tet
+Franglish
+Girl Ultra
+Giveon
+GoldLink
+Hermitage Green
+Hot Chip
+J Hus
+Jah9
+James Blake
+Jesse Royal
+Jhené Aiko
+JID
+Joell Ortiz
+John Mayer
+Jorja Smith
+Josh Groban
+Joss Stone
+Juan Magan
+Juanes
+Junior Reid
+Justice
+KAROL G
+Keane
+Kehlani
+Koffee
+Konshens
+KR$NA
+La Roux
+Laidback Luke
+Lewis Capaldi
+Lucky Daye
+Luidji
+M.anifest
+M.I.A.
+M1llionz
+Major Lazer
+Mala Rodríguez
+Mando Diao
+Martin Solveig
+Mura Masa
+Nadia Rose
+Nadine Sutherland
+Nio Garcia
+November Ultra
+Obongjayar
+ODUMODUBLVCK
+Pink Sweat$
+PinkPantheress
+Planet Asia
+Popcaan
+Portugal. The Man
+Purple Disco Machine
+Quando Rondo
+Rema
+Reik
+Residente
+Rihanna
+RIIZE
+Riva Starr
+Romeo Santos
+Saint Levant
+Sam Gellaitry
+Sam Smith
+Sampha
+Santana
+SBTRKT
+SCH
+Sean Kingston
+Sean Paul
+SG Lewis
+Shenseea
+Shurik'n d'Iam
+Sia
+Skrillex
+Stormzy
+Sufjan Stevens
+Summer Walker
+Tame Impala
+Tash Sultana
+Tems
+Tiësto
+Tove Lo
+Waka Flocka
+Wale
+Wisin
+WizKid
+Yandel
+Young Thug
+Zedd
