@@ -46,13 +46,18 @@
 
 html {
     background-color: #ffffff;
+    overscroll-behavior-y: none;
 }
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #ffffff;
     color: #1a1a1a;
-    transition: background-color 120ms linear;
+    overscroll-behavior-y: none;
+}
+
+#stories {
+    padding-bottom: 24px !important;
 }
 
 .container {
@@ -1784,22 +1789,6 @@ body {
             resizeCanvas();
         }
     });
-
-    // Reverse of the Recently Played effect: white at the top, Northern Dial red at the bottom.
-    function updateHomepageGradient() {
-        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = scrollableHeight > 0
-            ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
-            : 0;
-
-        const r = Math.round(255 - (255 - 204) * scrollPercent);
-        const g = Math.round(255 - (255 - 51) * scrollPercent);
-        const b = Math.round(255 - (255 - 51) * scrollPercent);
-        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    }
-
-    window.addEventListener('scroll', updateHomepageGradient, { passive: true });
-    updateHomepageGradient();
 
     // Keep the navigation out of the opening hero view, then make it sticky
     // once the player/hero has scrolled away.
