@@ -1,0 +1,56 @@
+{
+  "t.r.a.c.k.s": {
+    "bio": "Toronto producer T.R.A.C.K.S. is a Canadian hip-hop beatmaker and former member of IRS and the Monolith collective whose production work helped shape Scarborough's late-1990s and early-2000s rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/IRS_(band)"]
+  },
+  "t.r.a.c.k.s.": {
+    "bio": "Toronto producer T.R.A.C.K.S. is a Canadian hip-hop beatmaker and former member of IRS and the Monolith collective whose production work helped shape Scarborough's late-1990s and early-2000s rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/IRS_(band)"]
+  },
+  "the barr brothers": {
+    "bio": "Montréal-formed The Barr Brothers is a Canadian-American indie-folk band whose layered sound combines Americana, blues, harp, experimental textures and roots songwriting.",
+    "website": "https://thebarrbrothers.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/The_Barr_Brothers", "https://www.allmusic.com/artist/the-barr-brothers-mn0002774652"]
+  },
+  "the dream warriors": {
+    "bio": "Toronto duo Dream Warriors is a pioneering Canadian hip-hop group whose jazz-sampled 1990 debut And Now the Legacy Begins became one of the country's first internationally successful rap albums.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Dream_Warriors"]
+  },
+  "thrust": {
+    "bio": "Toronto rapper Thrust, born Christopher France, is a Canadian hip-hop veteran best known as one of the MCs on the landmark 1998 Rascalz posse cut Northern Touch.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Thrust_(rapper)"]
+  },
+  "trp.p": {
+    "bio": "Toronto duo TRP.P, formed by producer Truss and singer-songwriter pHoenix Pagliacci, is a Canadian R&B and hip-hop project known for queer love songs, soul-jazz influence and playful live performances.",
+    "website": "https://www.wearetrpp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.wearetrpp.com/bio", "https://en.wikipedia.org/wiki/TRP.P"]
+  }
+}
