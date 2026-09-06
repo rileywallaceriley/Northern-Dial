@@ -1,0 +1,38 @@
+{
+  "thehonestguy": {
+    "bio": "Toronto R&B singer-songwriter THEHONESTGUY, born Mubarak Adeyemi, is a Nigerian-Canadian artist whose warm, groove-led soul blends classic R&B, gospel, jazz and Nigerian musical influence.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/TheHonestGuy", "https://leministere.ca/evenements/thehonestguy"]
+  },
+  "thisisscribe": {
+    "bio": "Scarborough-born poet and rapper Joshua 'Scribe' Watkis is a Canadian hip-hop and spoken-word artist, educator and national poetry champion whose work centers storytelling and community engagement.",
+    "website": "https://thisisscribe.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/joshua-scribe-watkis", "https://thisisscribe.bandcamp.com/"]
+  },
+  "uncle fester": {
+    "bio": "Nova Scotia DJ and producer Uncle Fester is a veteran of Canadian hip-hop whose work spans beatmaking, engineering, touring, the Backburner collective and production for artists across the East Coast underground scene.",
+    "website": "https://djunclefester.bandcamp.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://djunclefester.bandcamp.com/album/the-uncle-fester-show-hip-hop-mixtape", "https://en.wikipedia.org/wiki/Backburner_(hip-hop_group)"]
+  },
+  "édouard tremblay-grenier": {
+    "bio": "Québec musician, singer-songwriter and actor Édouard Tremblay-Grenier makes French-language alternative pop and rock rooted in the province's contemporary songwriting tradition.",
+    "website": "https://www.edouardtremblaygrenier.com/",
+    "instagram": "",
+    "city": "Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.edouardtremblaygrenier.com/", "https://lecanalauditif.ca/artistes/edouard-tremblay-grenier/"]
+  }
+}
