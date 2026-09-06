@@ -1,0 +1,36 @@
+name: Bulk artist enrichment
+
+on:
+  push:
+    paths:
+      - 'bulk_profile_enricher.py'
+      - '.github/workflows/bulk-artist-enrichment.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enrich next artist batch
+        run: python3 bulk_profile_enricher.py --target 125 --max-attempts 350
+
+      - name: Commit enrichment batch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artist_enrichment_batches artist_enrichment_bulk_state.json
+          if git diff --cached --quiet; then
+            echo 'No enrichment changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add automated artist enrichment batch'
+          git push
