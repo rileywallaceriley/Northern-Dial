@@ -1,0 +1,56 @@
+{
+  "yukon blonde": {
+    "bio": "Vancouver indie-rock band Yukon Blonde makes harmony-rich guitar pop and rock that has expanded over time into synth-heavy, psychedelic and dance-oriented songwriting.",
+    "website": "https://yukonblonde.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://yukonblonde.bandcamp.com/"]
+  },
+  "yves jarvis": {
+    "bio": "Montréal-based singer-songwriter and multi-instrumentalist Yves Jarvis makes genre-bending experimental music that moves through indie rock, R&B, folk, soul and home-recorded abstraction.",
+    "website": "https://yvesjarvis.bandcamp.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://thecbma.com/artists/yves-jarvis/", "https://yvesjarvis.bandcamp.com/"]
+  },
+  "zach zoya": {
+    "bio": "Rouyn-Noranda-born, Montréal-rooted singer, rapper and songwriter Zach Zoya blends melodic rap, alternative R&B and pop with a cross-cultural perspective shaped by South African and French-Canadian influences.",
+    "website": "https://zachzoya.ca/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://zachzoya.ca/", "https://www.allmusic.com/artist/zach-zoya-mn0003757622"]
+  },
+  "zeds dead": {
+    "bio": "Toronto electronic duo Zeds Dead, formed by Dylan Mamid and Zachary Rapp-Rovan, has built an international bass-music career around dubstep, drum and bass, house, hip-hop sampling and the Deadbeats label.",
+    "website": "https://www.zedsdead.net/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.zedsdead.net/", "https://www.universalmusic.ca/2026/07/02/zeds-dead-surprise-release-new-albumreturn-to-the-return-of-the-spectrum-of-intergalactic-happiness/"]
+  },
+  "zeina": {
+    "bio": "Montréal-raised singer-songwriter Zeina blends contemporary R&B and pop with Arabic musical influence, writing and performing across English, French and Arabic.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Zeina_(singer)", "https://open.spotify.com/artist/5XfVZpuveymAI6m6ZKLQX9"]
+  },
+  "zig mentality": {
+    "bio": "Toronto independent band ZIG MENTALITY makes immersive, self-produced rock built around a studio-focused approach and a tightly controlled DIY aesthetic.",
+    "website": "https://zigmentality.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://zigmentality.bandcamp.com/"]
+  }
+}
