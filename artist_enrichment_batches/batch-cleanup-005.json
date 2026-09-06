@@ -1,0 +1,61 @@
+{
+  "city natives": {
+    "bio": "East Coast Canadian hip-hop group City Natives brings Indigenous perspectives into a hard-edged rap catalogue built by members Shelby Sappier, Brandon Arnold and Blake Francis.",
+    "website": "",
+    "instagram": "",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://open.spotify.com/artist/7GWd504iMjuUD15xvZEHvQ"
+    ]
+  },
+  "cri": {
+    "bio": "Québec producer Christophe Dubé, known as CRi, makes melodic electronic music that blends house, future-facing bass production and dreamy pop textures.",
+    "website": "https://www.crimusic.net/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.liaisonartists.com/artists/cri/",
+      "https://www.allmusic.com/artist/cri-mn0003519254",
+      "https://www.socanmagazine.ca/features/cri-controlled-chaos/"
+    ]
+  },
+  "d.o. gibson": {
+    "bio": "Canadian rapper, author and motivational speaker D.O. Gibson, born Duane Gibson, pairs hip-hop with youth outreach and is known for once holding a Guinness World Record for longest freestyle rap.",
+    "website": "https://iamdogibson.com/home",
+    "instagram": "",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/D.O._(rapper)"
+    ]
+  },
+  "dijahsb": {
+    "bio": "Toronto rapper DijahSB pairs warm, agile flows with candid writing about identity, work, mental health and perseverance over jazz-rooted and electronic hip-hop production.",
+    "website": "https://dijahsb.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://nac-cna.ca/en/bio/dijahsb",
+      "https://harthouse.ca/profile/dijahsb",
+      "https://en.wikipedia.org/wiki/DijahSB"
+    ]
+  },
+  "dillanponders": {
+    "bio": "Toronto rapper DillanPonders is a prolific independent artist whose versatile hip-hop moves between trap, introspection and high-energy performance.",
+    "website": "https://www.dillanponders.co/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.factor.ca/success-stories/dillanponders/",
+      "https://www.allmusic.com/artist/dillanponders-mn0003558002",
+      "https://en.wikipedia.org/wiki/DillanPonders"
+    ]
+  }
+}
