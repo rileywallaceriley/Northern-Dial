@@ -1,0 +1,38 @@
+{
+  "loukeman": {
+    "bio": "Toronto-born and raised producer, multi-instrumentalist and DJ Loukeman, born Luke Fenton, makes sample-heavy electronic music that blurs house, R&B, indie and ambient textures. His Sd mixtape trilogy built a cult following before collaborations with artists including PinkPantheress, A$AP Rocky, Aminé and MIKE pushed his production into a wider international spotlight.",
+    "website": "https://loukeman.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mixmag.net/feature/the-mix-115-loukeman-interview-sd-3", "https://ca.billboard.com/music/loukeman-sd3-interview", "https://loukeman.bandcamp.com/"]
+  },
+  "louke man": {
+    "bio": "Louke Man is an earlier styling of Toronto producer and DJ Loukeman, born Luke Fenton. His catalogue under the name includes the Sd-1 era and other early releases that helped establish his lo-fi, sample-heavy approach before he consolidated the spelling as Loukeman.",
+    "website": "https://loukeman.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mixmag.net/feature/the-mix-115-loukeman-interview-sd-3", "https://www.allmusic.com/artist/loukeman-mn0004571527", "https://loukeman.bandcamp.com/"]
+  },
+  "sophia stel": {
+    "bio": "Saanich-born Canadian singer-songwriter and producer Sophia Stel makes hazy, experimental alternative pop shaped by club music, ambient textures and diaristic songwriting. Raised in British Columbia and associated with Vancouver’s creative scene, she broke through with the 2024 EP Object Permanence and followed it with How to Win at Solitaire.",
+    "website": "https://www.sophiastel.net/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sophia_Stel", "https://www.wallpaper.com/art/music/sophia-stel-is-part-of-palaces-creative-universe"]
+  },
+  "leila dey": {
+    "bio": "Jamaican-born, Toronto-raised Canadian R&B singer-songwriter Leila Dey blends soulful vocals with hip-hop, reggae and jazz influences. A longtime fixture in Toronto’s R&B scene, she has released projects including DETOUR, opened for artists such as Jessie Reyez and built a catalogue rooted in vulnerable, cinematic songwriting.",
+    "website": "https://leiladey.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.billboard.com/partner/smirnoffwedowe", "https://leiladey.bandcamp.com/album/detour", "https://www.nxne.com/2026-artists/leila-dey"]
+  }
+}
