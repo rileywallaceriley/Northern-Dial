@@ -3,10 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse artists and songs in the Northern Dial Canadian music library, then request a track to hear on the station.">
+  <meta name="description" content="Browse Canadian artists, independent musicians, and requestable songs in Northern Dial’s searchable music library.">
   <link rel="canonical" href="https://www.northerndial.ca/artists.html">
+  <meta property="og:title" content="Canadian Artists &amp; Songs | Northern Dial">
+  <meta property="og:description" content="Explore Canadian artists, independent musicians, and requestable songs in Northern Dial’s music library.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.northerndial.ca/artists.html">
+  <meta property="og:image" content="https://i.imgur.com/XIAPd0N.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Canadian Artists &amp; Songs | Northern Dial">
+  <meta name="twitter:description" content="Explore Canadian artists, independent musicians, and requestable songs in Northern Dial’s music library.">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-  <title>Artists &amp; Songs in the Northern Dial Library</title>
+  <title>Canadian Artists &amp; Songs | Northern Dial Music Library</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.northerndial.ca/artists.html#collection",
+    "url": "https://www.northerndial.ca/artists.html",
+    "name": "Canadian Artists and Songs in the Northern Dial Music Library",
+    "description": "A searchable collection of Canadian artists, independent musicians, and requestable songs played by Northern Dial.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Northern Dial",
+      "url": "https://www.northerndial.ca/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.northerndial.ca/"},
+        {"@type": "ListItem", "position": 2, "name": "Songs", "item": "https://www.northerndial.ca/library.html"},
+        {"@type": "ListItem", "position": 3, "name": "Artist Library", "item": "https://www.northerndial.ca/artists.html"}
+      ]
+    }
+  }
+  </script>
   <style>
     :root { --red:#c33; --ink:#1a1a1a; --paper:#fff; --muted:#666; }
     * { box-sizing:border-box; }
@@ -62,7 +93,7 @@
     <a href="./index.html#submit">Submit</a>
   </nav>
   <main>
-    <h1>Artists in the Northern Dial Library</h1>
+    <h1 id="page-title">Canadian Artists &amp; Songs in the Northern Dial Music Library</h1>
     <p class="intro">Browse artists and requestable songs from Northern Dial’s Canadian and independent music catalogue. Expand an artist to see the tracks currently available for request.</p>
     <div class="controls">
       <input id="artistSearch" type="search" placeholder="Filter artists or songs…" aria-label="Filter artists or songs">
@@ -71,7 +102,7 @@
     <!-- STATIC_ARTIST_LETTER_NAV_START -->
     <nav class="letter-nav" aria-label="Catalogue navigation"><label for="letterJump">Jump to:</label><select id="letterJump"><optgroup label="Artist sections"><option value="">Jump to a letter…</option><option value="artistList">All artists</option><option value="letter-0">#</option><option value="letter-a">A</option><option value="letter-b">B</option><option value="letter-c">C</option><option value="letter-d">D</option><option value="letter-e">E</option><option value="letter-f">F</option><option value="letter-g">G</option><option value="letter-h">H</option><option value="letter-i">I</option><option value="letter-j">J</option><option value="letter-k">K</option><option value="letter-l">L</option><option value="letter-m">M</option><option value="letter-n">N</option><option value="letter-o">O</option><option value="letter-p">P</option><option value="letter-q">Q</option><option value="letter-r">R</option><option value="letter-s">S</option><option value="letter-t">T</option><option value="letter-u">U</option><option value="letter-v">V</option><option value="letter-w">W</option><option value="letter-x">X</option><option value="letter-y">Y</option><option value="letter-z">Z</option><option value="letter-é">É</option><option value="letter-т">Т</option><option value="letter-ア">ア</option></optgroup></select><a class="top-link" href="#top">Back to top ↑</a></nav>
     <!-- STATIC_ARTIST_LETTER_NAV_END -->
-    <section id="artistList" aria-label="Artist catalogue">
+    <section id="artistList" aria-labelledby="page-title">
       <!-- STATIC_ARTIST_CATALOGUE_START -->
       <div id="letter-0" class="letter-anchor" aria-hidden="true"></div>
       <details data-search="$enor$uplex"><summary>$enor$uplex <span class="artist-meta">(1 track)</span></summary>
