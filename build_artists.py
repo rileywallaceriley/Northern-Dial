@@ -21,8 +21,10 @@ CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
 NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
+# Verified U.S. artists whose standalone sections should be hidden. Their songs
+# remain available under any retained principal artist(s) on the same credit.
+HIDDEN_AMERICAN_ARTISTS = {"21 savage", "migos", "sadat"}
 # Verified single-track collaborators whose standalone sections should be hidden.
-# Their songs remain listed under the principal artist(s).
 HIDDEN_SINGLE_TRACK_COLLABORATORS = {"mario winans"}
 CREDIT_SEPARATOR = re.compile(
     r"\s*(?:,|/|&|\+|×|\bx\b|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
@@ -74,7 +76,8 @@ def build_groups(rows):
     return sorted(
         (
             group for key, group in groups.items()
-            if not (key in HIDDEN_SINGLE_TRACK_COLLABORATORS and len(group["songs"]) == 1)
+            if key not in HIDDEN_AMERICAN_ARTISTS
+            and not (key in HIDDEN_SINGLE_TRACK_COLLABORATORS and len(group["songs"]) == 1)
         ),
         key=lambda group: group["name"].casefold(),
     )
