@@ -1,0 +1,74 @@
+{
+  "redlife": {
+    "bio": "Rexdale group Redlife was a Canadian 1990s hip-hop act produced by DJ K-Note, known for hard-edged Toronto street rap and a Juno-nominated catalogue including Who's Talkin' Weight.",
+    "website": "",
+    "instagram": "",
+    "city": "Rexdale, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://djknote.com/discography", "https://flipnjayrecords.com/products/fnj-036-redlife-yagga-yaw-yaw-b-w-who-s-talking-weight"]
+  },
+  "robin banks": {
+    "bio": "Toronto rapper Robin Banks, born Liban Randall, is a Canadian hip-hop artist whose melodic street rap and collaborations with Pressa helped define the city's mid-2010s Jane-Finch sound.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.shazam.com/artist/robin-banks/1380317273"]
+  },
+  "russell peters": {
+    "bio": "Toronto-born comedian, actor and producer Russell Peters is a Canadian recording artist whose platinum-selling stand-up albums document a career built around multicultural observational comedy.",
+    "website": "https://www.russellpeters.com/",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Russell_Peters", "https://en.wikipedia.org/wiki/Outsourced_(album)"]
+  },
+  "savilion": {
+    "bio": "Toronto producer, rapper and engineer Savilion is a Canadian underground hip-hop artist whose career spans the group Creature Box, solo releases, production work and membership in Swamp Thing.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://handsolorecords.com/rift-savilion/"]
+  },
+  "savannah jade": {
+    "bio": "Québec-born country singer Savannah Jade is a Canadian artist whose solo career followed her work in the duo Five Roses and blends polished contemporary country with a performance background in figure skating.",
+    "website": "https://savannahjademusic.com/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mdmrecordings.net/artists/savannah-jade/", "https://savannahjademusic.com/"]
+  },
+  "sayzee": {
+    "bio": "St. Catharines rapper Sayzee, formerly known as Sese, is a Canadian underground hip-hop artist known for intricate lyricism, anime references and the long-running Your Favourite Rapper's Worst Nightmare series.",
+    "website": "https://sayzee.bandcamp.com/",
+    "instagram": "",
+    "city": "St. Catharines, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://sayzee.bandcamp.com/album/smoke-wave", "https://rapolympus.com/2024/11/09/interview-with-sayzee-2-part-album-yfrwn-x-a-side-b-side-out-now/"]
+  },
+  "shiloh": {
+    "bio": "Abbotsford-born singer-songwriter Shiloh Hoganson, now known as Lyldoll, is a Canadian pop-punk and alternative-pop artist whose 2009 debut album reached Canada's Top 10.",
+    "website": "",
+    "instagram": "",
+    "city": "Abbotsford, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/shiloh-mn0001771932", "https://en.wikipedia.org/wiki/Lyldoll"]
+  },
+  "skip waiters": {
+    "bio": "Toronto-born, Brampton-raised rapper and producer Skip Waiters is a Canadian hip-hop artist whose self-produced work blends poetry, soul, alternative rap and eclectic contemporary production.",
+    "website": "https://skipwaiters.com/",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://skipwaiters.com/live"]
+  }
+}
