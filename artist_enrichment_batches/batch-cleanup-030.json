@@ -1,0 +1,173 @@
+{
+  "calling all captains": {
+    "bio": "Edmonton band Calling All Captains is a Canadian punk-rock group that combines post-hardcore grit, pop-punk melody and emotionally direct alternative-rock songwriting.",
+    "website": "https://callingallcaptainsband.com/",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://newdamagerecords.com/artists/calling-all-captains/", "https://www.earshotmedia.com/calling-all-captains"]
+  },
+  "cindy lee": {
+    "bio": "Cindy Lee is the experimental pop and songwriting project of Canadian musician Patrick Flegel, formerly of Women, combining lo-fi pop, doo-wop, noise and glam-inflected performance.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Cindy_Lee_(band)"]
+  },
+  "citizen kane": {
+    "bio": "Toronto duo Citizen Kane is a Canadian underground hip-hop group whose late-1990s releases earned back-to-back Juno nominations and documented the city's emerging independent rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://thecbma.com/artists/citizen-kane/", "https://en.wikipedia.org/wiki/Citizen_Kane_(band)"]
+  },
+  "city fidelia": {
+    "bio": "Ottawa rapper, community builder and entrepreneur City Fidelia, born Luigi Fidelia, pairs Canadian hip-hop with a strong focus on independent creative infrastructure and community development.",
+    "website": "https://www.cityfidelia.com/",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.cityfidelia.com/", "https://nac-cna.ca/en/bio/city-fidelia"]
+  },
+  "clairmont the second": {
+    "bio": "Toronto rapper, producer and director Clairmont The Second is a self-produced Canadian hip-hop artist whose independent albums have earned Juno, Polaris and SOCAN recognition.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Clairmont_the_Second"]
+  },
+  "da grass roots music": {
+    "bio": "Toronto production team Da Grassroots helped shape Canadian hip-hop through sample-driven production for artists including Ghetto Concept, Choclair and Saukrates and the album Passage Through Time.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Da_Grassroots"]
+  },
+  "da grassroots": {
+    "bio": "Toronto production team Da Grassroots helped shape Canadian hip-hop through sample-driven production for artists including Ghetto Concept, Choclair and Saukrates and the album Passage Through Time.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Da_Grassroots"]
+  },
+  "dan-e-o": {
+    "bio": "Toronto rapper, producer and actor Dan-e-o, born Daniel Faraldo, is a veteran of Canadian hip-hop and a member of the Scarborough collectives Monolith and Perfeck Strangers.",
+    "website": "https://urbnet.com/dan-e-o",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Dan-e-o"]
+  },
+  "dan kanter": {
+    "bio": "Ottawa-born, Toronto-based musician Dan Kanter is a Canadian multi-instrumentalist, songwriter, producer and musical director known for extensive work with Justin Bieber and other major artists.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Dan_Kanter"]
+  },
+  "dan talevski": {
+    "bio": "Georgetown, Ontario-born singer-songwriter Dan Talevski is a Canadian pop artist who first developed an audience online before breaking through with polished romantic pop and dance-pop singles.",
+    "website": "",
+    "instagram": "",
+    "city": "Georgetown, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/dan-talevski-mn0003408704"]
+  },
+  "dallas smith": {
+    "bio": "Langley-born singer Dallas Smith is a Canadian vocalist who moved from fronting the rock band Default into a highly successful contemporary-country solo career.",
+    "website": "",
+    "instagram": "",
+    "city": "Langley, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/dallas-smith-mn0002948162"]
+  },
+  "daniela andrade": {
+    "bio": "Honduran-Canadian singer, songwriter and producer Daniela Andrade blends intimate vocals, bilingual writing, R&B, jazz and experimental electronic production in an independent catalogue.",
+    "website": "https://danielaandrade.com/",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://danielaandrade.com/"]
+  },
+  "death from above 1979": {
+    "bio": "Toronto duo Death From Above 1979 combines distorted bass, drums and vocals in a high-impact Canadian mix of dance-punk, noise rock and hard rock.",
+    "website": "https://deathfromabove1979.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Death_from_Above_1979"]
+  },
+  "default": {
+    "bio": "Vancouver band Default is a Canadian hard-rock and post-grunge group best known for the early-2000s hit Wasting My Time and for launching singer Dallas Smith's later country career.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Default_(band)"]
+  },
+  "divine brown": {
+    "bio": "Toronto singer Divine Brown is a Canadian R&B, soul and jazz vocalist known for the radio hit Old Skool Love and an award-winning career spanning music and theatre.",
+    "website": "https://divinebrown.ca/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Divine_Brown"]
+  },
+  "dizzy": {
+    "bio": "Oshawa indie-pop band Dizzy is a Canadian group led by vocalist Katie Munshaw whose debut album Baby Teeth won the Juno Award for Alternative Album of the Year.",
+    "website": "https://www.dizzy-music.com/",
+    "instagram": "",
+    "city": "Oshawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Dizzy_(band)"]
+  },
+  "dj grouch": {
+    "bio": "Toronto DJ and producer DJ Grouch is a longtime Canadian hip-hop figure whose career spans club culture, touring, production, music education and work with Maestro Fresh Wes and Los Poetas.",
+    "website": "https://djgrouch.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://djgrouch.com/bio"]
+  },
+  "djkemo": {
+    "bio": "Vancouver DJ and producer Kemo is a Juno-winning co-founder of Rascalz and a central architect of West Coast Canadian hip-hop, including production on Northern Touch.",
+    "website": "https://djkemo.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://djkemo.com/"]
+  },
+  "dru": {
+    "bio": "Toronto singer-songwriter Dru, born Andrew Grange, is a Canadian R&B vocalist who first fronted In Essence before building a Juno-winning solo career.",
+    "website": "http://www.druofficial.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Dru_(singer)"]
+  }
+}
