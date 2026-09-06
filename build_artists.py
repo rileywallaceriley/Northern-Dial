@@ -23,7 +23,7 @@ NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
 NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
 # Verified U.S. artists whose standalone sections should be hidden. Their songs
 # remain available under any retained principal artist(s) on the same credit.
-HIDDEN_AMERICAN_ARTISTS = {"21 savage", "migos", "sadat"}
+HIDDEN_AMERICAN_ARTISTS = {"!llmind", "21 savage", "migos", "sadat"}
 # Verified single-track collaborators whose standalone sections should be hidden.
 HIDDEN_SINGLE_TRACK_COLLABORATORS = {"mario winans"}
 CREDIT_SEPARATOR = re.compile(
