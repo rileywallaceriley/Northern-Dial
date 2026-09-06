@@ -127,12 +127,14 @@ def render_profile(profile, enrichment=None):
     enrichment = enrichment or {}
     if not profile and not enrichment.get("reviewed"):
         return ""
-    bio = escape(profile.get("bio", ""))
+    bio = escape(profile.get("bio") or enrichment.get("bio", ""))
     links = []
-    if profile.get("website"):
-        links.append(f'<a href="{escape(profile["website"], quote=True)}" target="_blank" rel="noopener">Official site</a>')
-    if profile.get("instagram"):
-        links.append(f'<a href="{escape(profile["instagram"], quote=True)}" target="_blank" rel="noopener">Instagram</a>')
+    website = profile.get("website") or enrichment.get("website")
+    instagram = profile.get("instagram") or enrichment.get("instagram")
+    if website:
+        links.append(f'<a href="{escape(website, quote=True)}" target="_blank" rel="noopener">Official site</a>')
+    if instagram:
+        links.append(f'<a href="{escape(instagram, quote=True)}" target="_blank" rel="noopener">Instagram</a>')
     if profile.get("feature"):
         links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
     if enrichment.get("musicbrainz_artist_id"):
