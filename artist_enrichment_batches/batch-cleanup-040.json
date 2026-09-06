@@ -1,0 +1,128 @@
+{
+  "rhyan douglas": {
+    "bio": "Brampton singer-songwriter Rhyan Douglas is a Canadian artist whose atmospheric music blends contemporary R&B, folk and soul around guitar, ethereal production and a flexible falsetto.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sonymusic.ca/press_release/brampton-native-rhyan-douglas-drops-spin-the-block-announces-debut-ep-release", "https://www.allmusic.com/artist/rhyan-douglas-mn0004420774"]
+  },
+  "ryland james": {
+    "bio": "Deseronto, Ontario singer-songwriter and pianist Ryland James is a Canadian pop and soul vocalist whose powerful delivery draws on gospel roots and contemporary songwriting.",
+    "website": "https://rylandjamesmusic.com/",
+    "instagram": "",
+    "city": "Deseronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://rylandjamesmusic.com/bio/", "https://en.wikipedia.org/wiki/Ryland_James"]
+  },
+  "sadboi": {
+    "bio": "Toronto singer and songwriter SadBoi, formerly known as Ebhoni, is a Canadian alternative-R&B artist whose music draws on dancehall, reggae, soca and contemporary pop.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/SadBoi"]
+  },
+  "sean jones": {
+    "bio": "Toronto singer-songwriter Sean Jones is a Canadian R&B vocalist who first broke through with the Juno-winning group In Essence before developing a solo career rooted in classic soul.",
+    "website": "https://www.seanjonesmusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.seanjonesmusic.com/"]
+  },
+  "sebutones": {
+    "bio": "Halifax duo Sebutones was an early Canadian experimental hip-hop project formed by Buck 65 and Sixtoo, pushing the city's 1990s underground rap scene toward abstract production and left-field lyricism.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/halifax_hip-hop-anticipates_big_bang"]
+  },
+  "shaqisdope": {
+    "bio": "Toronto-born rapper ShaqIsDope is a Canadian hip-hop artist whose introspective lyricism and polished independent releases grew from the city's competitive underground rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://karencivil.com/2017/12/05/civil-scope-shaqisdope/"]
+  },
+  "sky": {
+    "bio": "Montréal group Sky was a Canadian R&B-influenced pop-rock act whose self-produced debut Piece of Paradise produced major national radio hits and a Juno Award for New Group of the Year.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sky_(Canadian_band)", "https://www.allmusic.com/artist/sky-mn0001806583"]
+  },
+  "softcult": {
+    "bio": "Kitchener twin duo Softcult is a Canadian alternative-rock project combining grunge, shoegaze, dream pop and riot-grrrl-inspired DIY values with socially conscious songwriting.",
+    "website": "https://softcult.band/",
+    "instagram": "",
+    "city": "Kitchener, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.paquinentertainment.com/artist/softcult", "https://en.wikipedia.org/wiki/Softcult"]
+  },
+  "sofia camara": {
+    "bio": "Portugal-born, Toronto-raised singer-songwriter Sofia Camara is a Portuguese-Canadian pop artist known for powerhouse vocals and emotionally direct ballads that have built a rapidly growing international audience.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.universalmusic.ca/2026/08/14/sofia-camara-shares-best-friend-her-most-devastating-song-yet/", "https://www.allmusic.com/artist/sofia-camara-mn0003989367"]
+  },
+  "sofia ly": {
+    "bio": "Montréal singer-songwriter Sofia Ly is a Canadian pop and R&B artist whose powerful vocals gained early attention through The Voice before she began releasing original music.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.pulserecords.com/artists"]
+  },
+  "sophie powers": {
+    "bio": "Toronto-born singer-songwriter and designer Sophie Powers is a Canadian artist whose genre-blurring music combines hyperpop, pop-punk, electropop and hip-hop.",
+    "website": "https://sophiepowers.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sophie_Powers"]
+  },
+  "spitty": {
+    "bio": "Brampton rapper and community leader Spitty is an Indian-Canadian hip-hop artist whose music blends South Asian samples and instrumentation with North American rap influences.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/3o4GlelHWI6tlB04MACpS6"]
+  },
+  "sugar jones": {
+    "bio": "Toronto group Sugar Jones was a Canadian pop and R&B girl group created through the first season of Popstars, scoring national radio hits and a platinum-certified debut album in 2001.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sugar_Jones"]
+  },
+  "sunny malton": {
+    "bio": "Toronto-born Punjabi-Canadian rapper and singer Sunny Malton is a major figure in modern Punjabi hip-hop, known for his work with Sidhu Moose Wala and the Brown Boys collective.",
+    "website": "",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Sunny_Malton", "https://open.spotify.com/artist/2ScEhgArBEdKyU4vNHSyiY"]
+  }
+}
