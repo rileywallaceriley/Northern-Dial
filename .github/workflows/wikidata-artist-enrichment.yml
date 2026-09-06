@@ -20,6 +20,19 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Normalize Wikidata entity response handling
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('wikidata_profile_enricher.py')
+          text = path.read_text(encoding='utf-8')
+          old = '        for entity in data.get("entities") or []:\n            if entity.get("id"):\n                result[entity["id"]] = entity\n'
+          new = '        entities = data.get("entities") or {}\n        iterator = entities.values() if isinstance(entities, dict) else entities\n        for entity in iterator:\n            if entity.get("id"):\n                result[entity["id"]] = entity\n'
+          if old in text:
+              text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
+          PY
+
       - name: Enrich all remaining exact Wikidata music matches
         run: python3 wikidata_profile_enricher.py --workers 10
 
