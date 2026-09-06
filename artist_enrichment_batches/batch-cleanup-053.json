@@ -1,0 +1,101 @@
+{
+  "champion": {
+    "bio": "Montreal electronic musician, producer and multi-instrumentalist Maxime Morin performs as Champion, also known as DJ Champion, blending programmed beats with live guitar and rock energy. His 2004 debut Chill 'Em All produced the signature track No Heaven and earned major Quebec and Juno recognition.",
+    "website": "https://djchampion.ca/",
+    "instagram": "https://www.instagram.com/ledjchampion/",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.bonsound.com/en/artist/dj-champion/", "https://en.wikipedia.org/wiki/DJ_Champion"]
+  },
+  "chase the bear": {
+    "bio": "Vancouver six-piece Chase the Bear is a Canadian rock band known for high-energy, hook-heavy songs and a hard-driving live show. Signed to Rock Is Dead Records/604 Records, the group released its debut album Honey in 2023 and followed it with new singles and the Demons EP.",
+    "website": "https://chasethebearmusic.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://chasethebearmusic.com/", "https://604records.com/2023/02/17/chase-the-bear-release-debut-album-honey/"]
+  },
+  "black bear": {
+    "bio": "Black Bear, also known as the Black Bear Singers, is an Atikamekw powwow drum group from Manawan, Quebec. Formed in 2000, the group performs northern contemporary music in Atikamekw and has collaborated extensively with The Halluci Nation, including on R.E.D.",
+    "website": "https://www.blackbearsingers.tribalspirit.ca/",
+    "instagram": "",
+    "city": "Manawan, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.blackbearsingers.tribalspirit.ca/", "https://pitchfork.com/reviews/albums/22384-we-are-the-halluci-nation/"]
+  },
+  "seth dyer": {
+    "bio": "Toronto-based Canadian rapper Seth Dyer built momentum through a prolific independent release schedule and playlist breakthroughs, with tracks including What You Need helping expand his audience during the Dyer Days project.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://artists.spotify.com/blog/the-stars-of-the-spotify-playlists"]
+  },
+  "kennedy rd.": {
+    "bio": "Toronto native Kennedy Rd. is an R&B singer-songwriter whose atmospheric, emotionally direct sound draws on 1990s and early-2000s R&B influences. Her catalogue includes the Feelings Cafe EP and collaborations across Toronto's contemporary R&B scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/1ZtRTibAPAEbO8iydpyzWu", "https://theknockturnal.com/introducing-kennedy-rd-rb-heroine-youve-waiting/"]
+  },
+  "patrik kabongo": {
+    "bio": "Montreal-born, Toronto-raised rapper and multidisciplinary artist Patrik Kabongo brings together hip-hop, pop and independent entrepreneurship through his X10 creative platform. His work reflects both his Congolese family roots and the Canadian cities that shaped him.",
+    "website": "",
+    "instagram": "https://www.instagram.com/x10pk/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://sidedoormag.com/blog/2022/8/31/exclusive-interview-patrik-kabongo-discusses-how-pooh-shiesty-inspired-his-single-limelight-as-well-as-how-he-knows-its-time-for-his-debut-album/", "https://music.apple.com/us/artist/patrik-kabongo/1813013929"]
+  },
+  "liinks": {
+    "bio": "British Columbia electronic-pop duo LIINKS pairs Georgia Murray's vocals and songwriting with producer Tony Day's beat-driven production. The pair met in Victoria and developed a sound that blends R&B, pop and electronic music, earning Canadian radio play and millions of streams.",
+    "website": "",
+    "instagram": "https://www.instagram.com/weareliinks/",
+    "city": "Victoria, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://westwoodrecordings.com/collections/liinks", "https://sunshinemusicfest.ca/performer-bios/liinks/"]
+  },
+  "kalisway": {
+    "bio": "Toronto native Kalisway is an alternative R&B and funk artist, songwriter and producer whose bright, groove-heavy music draws on soul, funk and hip-hop. Her catalogue includes HIT 'EM WITH THE FUNK and the album A Kid From Toronto.",
+    "website": "https://kalisway.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/36w05i5hz4ktQ9sWnmKgtK", "https://www.thefader.com/2021/10/18/kalisway-new-song-hit-em-with-the-funk", "https://kalisway.bandcamp.com/music"]
+  },
+  "naïma frank": {
+    "bio": "Montreal singer-songwriter Naïma Frank is a rising voice in Quebec's francophone R&B scene, blending alternative R&B, pop, electro, hip-hop and jazz influences with writing shaped by her Haitian heritage. Her debut album 18 ans et + arrived in 2026 after the acclaimed EP Petite fille devient grande.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/na%C3%AFma-frank/1468023189", "https://www.indiemontreal.ca/en/naima-frank"]
+  },
+  "j shiltz": {
+    "bio": "Toronto-based Canadian hip-hop artist J Shiltz is known for introspective, punchline-driven writing over jazzy, boom-bap production. His catalogue stretches from the 2011 album What I Stand For through later solo work and collaborations with artists including Junia-T, Rel McCoy and members of Monolith.",
+    "website": "https://j-shiltz.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/05QE90j1FX5ZyCuLNfLHOh", "https://j-shiltz.bandcamp.com/album/forever-the-artist"]
+  },
+  "chippewa travellers": {
+    "bio": "Chippewa Travellers is an Anishinaabeg family drum group originally from Neyaashiinigmiing (Cape Croker), Ontario. The group has recorded traditional powwow music and reached wider audiences through collaborations with The Halluci Nation, including Ba Na Na and other releases.",
+    "website": "",
+    "instagram": "",
+    "city": "Neyaashiinigmiing, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://anishinabeknews.ca/wp-content/uploads/2013/04/2010-3.pdf", "https://thehallucination.bandcamp.com/album/one-more-saturday-night", "https://ca.billboard.com/fyi/tribe-called-red-ba-na-na-ft-odario-haviah-mighty-chippewa-travellers"]
+  }
+}
