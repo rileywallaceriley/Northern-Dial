@@ -1,0 +1,60 @@
+name: Merge artist removals
+
+on:
+  push:
+    paths:
+      - 'artist_removal_batches/**'
+      - '.github/workflows/merge-artist-removals.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: artist-removal-merge
+      cancel-in-progress: false
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge removal batches
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import glob
+
+          target = Path('artist_removals.txt')
+          lines = target.read_text(encoding='utf-8').splitlines() if target.exists() else []
+          header = [line for line in lines if line.lstrip().startswith('#')]
+          names = [line.strip() for line in lines if line.strip() and not line.lstrip().startswith('#')]
+          seen = {name.casefold() for name in names}
+
+          for filename in sorted(glob.glob('artist_removal_batches/*.txt')):
+              for line in Path(filename).read_text(encoding='utf-8').splitlines():
+                  name = line.strip()
+                  if not name or name.startswith('#') or name.casefold() in seen:
+                      continue
+                  names.append(name)
+                  seen.add(name.casefold())
+
+          target.write_text('\n'.join(header + names) + '\n', encoding='utf-8')
+          print(f'Merged {len(names)} removal names.')
+          PY
+
+      - name: Commit merged removal list
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artist_removals.txt
+          if git diff --cached --quiet; then
+            echo 'No removal changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Merge verified non-Canadian artist removals'
+          git pull --rebase origin main
+          git push
