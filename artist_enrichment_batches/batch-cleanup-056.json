@@ -1,0 +1,47 @@
+{
+  "dan only": {
+    "bio": "Toronto native Dan Only, born Danny Vee, is a producer, musician and DJ whose hardware-driven electronic music moves through house, techno, breaks and dub. A Juno-nominated artist and one half of Cloudsteppers with Ciel, he has released music through labels including 3024, X-Kalay, Dirt Crew, New Kanada and Hâws.",
+    "website": "https://justdanonly.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://justdanonly.bandcamp.com/music", "https://ra.co/dj/danonly"]
+  },
+  "ayah": {
+    "bio": "Palestinian-Canadian singer, songwriter and producer Merna Bishouty first released music under the name Ayah before continuing her career as Merna. After settling in Toronto, she built a soulful R&B catalogue that included collaborations with DJ Jazzy Jeff, Slakah the Beatchild and Toronto rapper Adam Bomb.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/merna-bishouty-mn0003234370", "https://therealfrequency.bandcamp.com/album/the-new-north", "https://songwriters.ca/people/merna-bishouty/"]
+  },
+  "calamine": {
+    "bio": "Calamine, the stage name of Julie Gagnon, is a Quebec rapper, beatmaker and DJ whose francophone hip-hop pairs feminist, queer and anti-capitalist writing with self-produced beats. Originally from Sainte-Foy in Quebec City and now associated with Montreal’s scene, she was named a Radio-Canada Revelation and won the Prix Félix-Leclerc de la chanson.",
+    "website": "https://linktr.ee/Calamine",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/calamine/", "https://calaminemtl.bandcamp.com/track/mercure-2"]
+  },
+  "david campana": {
+    "bio": "Montreal artist David Campana makes francophone trap and R&B that mixes melodic vocals, soul textures and contemporary rap production. His independent catalogue includes Bonjour, Hi, Trop de Love and the Saint-Henri-era single PAUSE, with his work regularly appearing in Quebec rap playlists and media.",
+    "website": "https://davidcampana.ca/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://davidcampana.bandcamp.com/", "https://45tours.ca/single/pause3", "https://musiqc.ca/artistes/david-campana"]
+  },
+  "angelica appelman": {
+    "bio": "Kitchener-born Angelica Appelman is a Canadian country singer-songwriter based in Stratford, Ontario. Her contemporary country sound draws on the 1990s artists she grew up with while pairing hook-driven production with personal storytelling across releases including A Reason or A Season and Half Hearted.",
+    "website": "",
+    "instagram": "",
+    "city": "Stratford, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.albertaagsocieties.ca/industry_partners/stratford-1/angelica-appelman/", "https://completecountry.ca/interview-angelica-appelman-on-her-new-song-half-hearted-and-career/", "https://www.stratfordtoday.ca/local-news/appelman-turning-devastation-into-inspiration-10126530"]
+  }
+}
