@@ -93,12 +93,10 @@ body {
 
 .site-nav {
     align-items: center;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 3px solid #C33;
-    border-top: 1px solid #e5e5e5;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    background: #1a1a1a;
+    border-bottom: 2px solid #C33;
     display: flex;
-    gap: 8px;
+    gap: 0;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
@@ -118,19 +116,25 @@ body {
 }
 
 .site-nav a {
-    border-radius: 5px;
-    color: #1a1a1a;
-    font-size: 0.9rem;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
     font-weight: 700;
-    padding: 8px 12px;
+    letter-spacing: 0.12em;
+    padding: 14px 28px;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    text-transform: uppercase;
+    transition: color 0.2s ease, background-color 0.2s ease;
     flex: 0 0 auto;
 }
 
-.site-nav a:hover, .site-nav a:focus {
-    background: #C33;
-    color: #fff;
+.site-nav a:hover, .site-nav a:focus, .site-nav a.active {
+    background: #262626;
+    color: #C33;
+}
+
+.site-nav a.active {
+    border-bottom: 3px solid #C33;
 }
 
 .custom-player {
@@ -698,7 +702,8 @@ body {
 
     .site-nav a {
         font-size: 0.82rem;
-        padding: 8px 10px;
+        letter-spacing: 0.06em;
+        padding: 10px 6px;
         text-align: center;
     }
 
@@ -779,12 +784,10 @@ body {
 </div>
 
 <nav class="site-nav" aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="./artists.html">Library</a>
-    <a href="#shows">Shows</a>
-    <a href="./blog/">Stories</a>
-    <a href="./requests.html">Requests</a>
-    <a href="#submit">Submit</a>
+    <a href="./" class="active" aria-current="page">Home</a>
+    <a href="./library.html">Songs</a>
+    <a href="./blog/">Blog</a>
+    <a href="./#submit">Submit</a>
 </nav>
 
 <!-- Explore Recent Songs Banner -->
