@@ -1,0 +1,109 @@
+{
+  "valaire": {
+    "bio": "Montréal group VALAIRE blends electronic music, jazz, funk, hip-hop and pop in a playful, groove-heavy catalogue that evolved from the band's earlier Misteur Valaire name.",
+    "website": "https://valaire.mu/",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://valaire.bandcamp.com/music"]
+  },
+  "vita chambers": {
+    "bio": "Vancouver-born Barbadian-Canadian singer-songwriter Vita Chambers makes pop-rock and electropop, building an independent career after early major-label releases and touring with Justin Bieber.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Vita_Chambers"]
+  },
+  "walk off the earth": {
+    "bio": "Burlington, Ontario band Walk Off the Earth is a Canadian pop-rock and indie-pop group known for inventive multi-instrumental arrangements, viral performance videos and a broad international touring career.",
+    "website": "https://www.walkofftheearth.com/",
+    "instagram": "",
+    "city": "Burlington, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.walkofftheearth.com/"]
+  },
+  "whipped cream": {
+    "bio": "Toronto-born, Vancouver Island-based producer and DJ WHIPPED CREAM, born Caroline Cecil, makes bass-heavy electronic music spanning trap, house and festival-oriented club production.",
+    "website": "https://www.whippedcreammusic.com/",
+    "instagram": "",
+    "city": "Nanaimo, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Whipped_Cream_(DJ)"]
+  },
+  "wide mouth mason": {
+    "bio": "Saskatoon-formed Canadian blues-rock band Wide Mouth Mason has built a decades-long catalogue around dynamic guitar playing, soulful vocals and improvisational live performances.",
+    "website": "https://widemouthmason.com/",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://widemouthmason.com/", "https://widemouthmasonsk.bandcamp.com/"]
+  },
+  "wild strawberries": {
+    "bio": "Canadian husband-and-wife duo Wild Strawberries, formed by Roberta Carter-Harrison and Ken Harrison, makes moody, introspective pop-rock and alternative music through a long-running independent catalogue.",
+    "website": "https://www.wildstrawberries.com/",
+    "instagram": "",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/wild-strawberries-mn0000684437", "https://en.wikipedia.org/wiki/Wild_Strawberries_(band)"]
+  },
+  "william prince": {
+    "bio": "Peguis First Nation singer-songwriter William Prince makes warm, resonant folk and country music built around a deep baritone, spare arrangements and reflective storytelling.",
+    "website": "https://www.williamprincemusic.com/",
+    "instagram": "",
+    "city": "Peguis First Nation, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.williamprincemusic.com/", "https://www.williamprincemusic.com/music"]
+  },
+  "wintersleep": {
+    "bio": "Nova Scotia band Wintersleep makes expansive Canadian indie rock that combines atmospheric guitars, rhythmic experimentation and melodic songwriting across a catalogue dating to the early 2000s.",
+    "website": "https://wintersleep.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://wintersleep.bandcamp.com/"]
+  },
+  "witch prophet": {
+    "bio": "Toronto-based Ethiopian-Eritrean artist Witch Prophet, born Etmet Musa, blends experimental R&B, soul, jazz, hip-hop and electronic music with layered vocals and self-produced, identity-driven songwriting.",
+    "website": "https://www.witchprophet.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/witch-prophet/", "https://en.wikipedia.org/wiki/Witch_Prophet"]
+  },
+  "wolf castle": {
+    "bio": "Mi'kmaq rapper and producer Wolf Castle is a New Brunswick artist whose energetic hip-hop mixes sharp bars, self-produced beats and Indigenous perspective.",
+    "website": "https://www.wolfcastle.ca/",
+    "instagram": "",
+    "city": "New Brunswick",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.wolfcastle.ca/"]
+  },
+  "wondagurl": {
+    "bio": "Toronto-born, Brampton-raised producer, songwriter and record executive WondaGurl is one of Canada's most influential contemporary hip-hop producers, with credits for Jay-Z, Travis Scott, Rihanna and Drake.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/profile/wondagurl", "https://ca.billboard.com/wondagurl"]
+  },
+  "wordburglar": {
+    "bio": "Halifax-born, Toronto-based rapper Wordburglar, born Sean Jordan, makes upbeat alternative hip-hop built around dense wordplay, humour, pop-culture references and his work with the Backburner collective.",
+    "website": "https://wordburglar.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Wordburglar"]
+  }
+}
