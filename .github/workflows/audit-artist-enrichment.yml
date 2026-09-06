@@ -18,11 +18,17 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    concurrency:
+      group: artist-enrichment-audit
+      cancel-in-progress: true
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
 
       - name: Generate enrichment gap report
         run: python3 audit_artist_enrichment.py
@@ -31,12 +37,14 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git pull --rebase origin main
-          python3 audit_artist_enrichment.py
           git add artist_enrichment_audit.json artist_unresolved.txt
           if git diff --cached --quiet; then
             echo 'No audit changes to commit.'
             exit 0
           fi
           git commit -m 'Update artist enrichment gap audit'
+          git pull --rebase origin main
+          python3 audit_artist_enrichment.py
+          git add artist_enrichment_audit.json artist_unresolved.txt
+          git commit --amend --no-edit
           git push
