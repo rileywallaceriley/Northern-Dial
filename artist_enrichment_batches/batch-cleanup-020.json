@@ -1,0 +1,92 @@
+{
+  "tenille arts": {
+    "bio": "Weyburn, Saskatchewan singer-songwriter Tenille Arts is a Canadian country artist whose melodic, contemporary songwriting has produced platinum-certified singles and a growing international career.",
+    "website": "https://www.tenillearts.com/",
+    "instagram": "",
+    "city": "Weyburn, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.tenillearts.com/", "https://en.wikipedia.org/wiki/Tenille_Arts"]
+  },
+  "tenille townes": {
+    "bio": "Grande Prairie, Alberta singer-songwriter Tenille Townes is an award-winning Canadian country artist known for vivid storytelling, intimate vocals and self-produced, emotionally direct songwriting.",
+    "website": "https://www.tenilletownes.com/",
+    "instagram": "",
+    "city": "Grande Prairie, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.tenilletownes.com/", "https://www.sonymusic.ca/press_release/tenille-townes-announces-landmark-new-album-the-acrobat-out-april-10-title-track-the-acrobat-feat-lori-mckenna-out-now"]
+  },
+  "teon gibbs": {
+    "bio": "Vancouver-based artist Teon Gibbs blends R&B, soul and hip-hop with smooth vocals, relatable writing and community-building work through his 100 Collective platform.",
+    "website": "https://teongibbs.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://teongibbs.com/"]
+  },
+  "tia wood": {
+    "bio": "Saddle Lake Cree Nation singer-songwriter Tia Wood is a Plains Cree and Coast Salish Canadian artist whose soulful pop and R&B carries the musical traditions and contemporary experiences of her community.",
+    "website": "https://tiawood.ca/",
+    "instagram": "",
+    "city": "Saddle Lake Cree Nation, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://tiawood.ca/", "https://www.sonymusic.ca/en/artists/tia-wood"]
+  },
+  "timbuktu": {
+    "bio": "London, Ontario-born, Toronto-based rapper and producer Timbuktu is a veteran of Canadian underground hip-hop whose work spans solo releases, Backburner and groups including Swamp Thing and Teenburger.",
+    "website": "https://timbukturaps.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://timbukturaps.com/", "https://en.wikipedia.org/wiki/Timbuktu_(hip-hop_artist)"]
+  },
+  "tona": {
+    "bio": "Toronto rapper Tona is a veteran Canadian MC known for densely written underground hip-hop, independent releases and collaborations with producers and lyricists across the country's rap scene.",
+    "website": "https://bigtona.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://bigtona.bandcamp.com/album/sunna"]
+  },
+  "tone mason": {
+    "bio": "Toronto production team Tone Mason makes hip-hop and R&B built around sample-based production, drum programming and songwriting, with credits spanning Canadian music, film and television.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Tone_Mason"]
+  },
+  "tre mission": {
+    "bio": "Toronto rapper and producer Tre Mission is a Canadian grime pioneer whose music connects North American hip-hop with the U.K. grime scene through rapid-fire lyricism and bass-heavy production.",
+    "website": "https://tremission.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Tre_Mission"]
+  },
+  "tyler shaw": {
+    "bio": "Vancouver-born Chinese-Canadian singer-songwriter and producer Tyler Shaw makes polished pop built around melodic hooks, romantic songwriting and a string of platinum-certified Canadian singles.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sonymusic.ca/en/artists/tyler-shaw"]
+  },
+  "töme": {
+    "bio": "Montréal-born Nigerian-French Canadian singer-songwriter TÖME blends alternative R&B, Afrobeats and pop in a global-facing catalogue that has earned Juno recognition.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/T%C3%B6me"]
+  }
+}
