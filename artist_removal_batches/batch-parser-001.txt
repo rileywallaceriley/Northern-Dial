@@ -1,0 +1,12 @@
+# Non-artist and parser-artifact entries that should never render as standalone artists.
+Northern Dial
+Northern Dial Drop
+Northern Drop
+Various Artists
+The Rodeo Kings
+Nicole Holness Aka
+Karisma)
+Monolith (Dan-E-O
+Esthero (Performed by Jemeni)
+Jordan Croucher aka JRDN
+Rishaard a.k.a. Shamon Harage
