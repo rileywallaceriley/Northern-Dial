@@ -1,6 +1,6 @@
 # Editorial removal list: verified non-Canadian artist standalone sections.
 # Matching is case-insensitive. Credits remain available on retained artists' pages.
-# Canadian, Canadian-based/dual-national and genuinely ambiguous cases stay until reviewed.
+# Keep Canadian artists, including dual-national Canadians. Canada-based non-Canadian artists are removed once verified.
 !llmind
 21 savage
 migos
@@ -402,3 +402,27 @@ WizKid
 Yandel
 Young Thug
 Zedd
+Amir Obe
+Andrew Wyatt
+Apathy
+Apollo Brown
+AZ
+Bishop Lamont
+Cesar Comanche
+Cookin Soul
+Deyaz
+Don Diablo
+DRAM
+Drakeo the Ruler
+DreamDoll
+Druski
+The 2 Bears
+The Herbaliser
+The Internet
+The Paper Kites
+Timbaland
+Tinashe
+Tropkillaz
+Young Money
+Yung Bleu
+Yxng Bane
