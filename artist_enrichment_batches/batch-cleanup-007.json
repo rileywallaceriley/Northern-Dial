@@ -1,0 +1,110 @@
+{
+  "drezus": {
+    "bio": "Saskatoon-born Indigenous rapper Drezus, from Muskowekwan and Cote First Nations, combines Anishinaabe and Nehiyaw teachings with hip-hop, storytelling and community-rooted expression.",
+    "website": "",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/drezus"]
+  },
+  "dvsn": {
+    "bio": "Toronto R&B duo dvsn pairs vocalist Daniel Daley with producer Nineteen85, balancing falsetto-led songwriting with atmospheric, contemporary production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://press.warnerrecords.com/sites/g/files/g2000014901/files/2022-07/dvsn-Bio.pdf", "https://music.apple.com/us/artist/dvsn/1036952578"]
+  },
+  "dylan sinclair": {
+    "bio": "Toronto singer-songwriter Dylan Sinclair makes contemporary R&B built around restrained production, intimate writing and a poised vocal style that earned his debut album Proverb a Juno nomination.",
+    "website": "https://www.dylansinclair.ca/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.dylansinclair.ca/", "https://www.allmusic.com/artist/dylan-sinclair-mn0003961986"]
+  },
+  "emma beko": {
+    "bio": "Montréal artist Emma Beko blends abstract hip-hop, grunge and emotionally raw songwriting, drawing on a multicultural upbringing and years in the duo Heartstreets.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://phi.ca/en/events/emma-beko/", "https://acpublishing.ca/artists/emma-beko/"]
+  },
+  "everythingoshaun": {
+    "bio": "Brampton-based recording artist EverythingOShauN, also known as Joseph Njoku, makes genre-fluid hip-hop and has placed his music in major television series while building an independent Canadian catalogue.",
+    "website": "https://www.everythingoshaun.com/",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/jay-njoku", "https://linktr.ee/everythingoshaun"]
+  },
+  "eva avila": {
+    "bio": "Gatineau singer-songwriter and actor Eva Avila rose nationally after winning Canadian Idol in 2006 and went on to release two albums with Sony BMG.",
+    "website": "https://www.evaavila.net/",
+    "instagram": "",
+    "city": "Gatineau, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.evaavila.net/about-me", "https://www.evaavila.net/"]
+  },
+  "eva shaw": {
+    "bio": "Toronto-born Canadian DJ, songwriter and producer Eva Shaw works across electronic music and hip-hop, building a catalogue that spans club records, production and artist collaborations.",
+    "website": "https://www.evashawmusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.evashawmusic.com/", "https://en.wikipedia.org/wiki/Eva_Shaw"]
+  },
+  "evil ebenezer": {
+    "bio": "Vancouver-based rapper and singer Evil Ebenezer is a longtime Western Canadian hip-hop artist known for darkly comic writing, extensive touring and a prolific independent catalogue.",
+    "website": "https://www.evilebenezer.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.evilebenezer.com/about", "https://www.camobearrecords.com/artist/evil-ebenezer/"]
+  },
+  "faber drive": {
+    "bio": "Mission, British Columbia band Faber Drive built a Canadian pop-rock and pop-punk catalogue around melodic hooks, radio-ready songwriting and energetic live performances.",
+    "website": "https://www.faberdrive.ca/",
+    "instagram": "",
+    "city": "Mission, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/3SziwNj6JCnqd2ajUdXlIT", "https://en.wikipedia.org/wiki/Faber_Drive"]
+  },
+  "fefe dobson": {
+    "bio": "Scarborough-born singer-songwriter Fefe Dobson is a Canadian pop-rock and pop-punk trailblazer whose early-2000s catalogue helped broaden representation in guitar-driven mainstream pop.",
+    "website": "https://fefemusic.com/",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://fefemusic.com/biography", "https://en.wikipedia.org/wiki/Fefe_Dobson"]
+  },
+  "felix cartal": {
+    "bio": "Vancouver producer and DJ Felix Cartal makes melodic electronic and house music, pairing club-focused production with pop songwriting and collaborations across Canada's music scene.",
+    "website": "https://www.felixcartal.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.felixcartal.com/", "https://ago.ca/art-bash-2025/felix-cartal", "https://www.allmusic.com/artist/felix-cartal-mn0002400569"]
+  },
+  "finger eleven": {
+    "bio": "Burlington, Ontario rock band Finger Eleven evolved from its early Rainbow Butt Monkeys incarnation into a long-running alternative-rock act with platinum-selling records in Canada and the United States.",
+    "website": "https://fingereleven.com/",
+    "instagram": "",
+    "city": "Burlington, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://fingereleven.com/"]
+  }
+}
