@@ -1,0 +1,84 @@
+{
+  "dream warriors": {
+    "bio": "Toronto hip-hop group Dream Warriors, formed by King Lou and Capital Q, became a pioneering force in Canadian jazz rap with an inventive blend of hip-hop, jazz and reggae influences.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://thecbma.com/artists/dream-warriors/",
+      "https://harthouse.ca/profile/dream-warriors",
+      "https://www.allmusic.com/artist/dream-warriors-mn0000203208"
+    ]
+  },
+  "dubmatique": {
+    "bio": "Montréal group Dubmatique is a foundational francophone Canadian hip-hop act whose platinum-selling work helped open the mainstream Québec market to rap in the 1990s.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dubmatique"
+    ]
+  },
+  "econoline crush": {
+    "bio": "Vancouver industrial-rock band Econoline Crush blends hard rock with electronic production, carrying a Canadian alternative-rock catalogue that stretches from the 1990s into new material today.",
+    "website": "https://econolinecrushmusic.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://econolinecrushmusic.com/about",
+      "https://econolinecrush.bandcamp.com/"
+    ]
+  },
+  "elaquent": {
+    "bio": "Guelph, Ontario producer Elaquent, born Sona Elango, is a leading figure in Canadian beat music whose sample-rich instrumental hip-hop draws from J Dilla, DJ Premier and electronic experimentation.",
+    "website": "https://www.mellomusicgroup.com/pages/elaquent",
+    "instagram": "",
+    "city": "Guelph, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.mellomusicgroup.com/pages/elaquent"
+    ]
+  },
+  "elise estrada": {
+    "bio": "Filipino-Canadian singer Elise Estrada built a pop and R&B career after moving to Vancouver, releasing a catalogue of radio-friendly solo music beginning in the 2000s.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://open.spotify.com/artist/2YXSkQ0ZcXbIttcvsnbKQ5"
+    ]
+  },
+  "enima": {
+    "bio": "Algerian-born Montréal rapper Enima, born Samir Slimani, developed a francophone street-rap catalogue shaped by Québec hip-hop, drill and French rap influences.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Algeria",
+    "reviewed": true,
+    "sources": [
+      "https://fr.wikipedia.org/wiki/Enima"
+    ]
+  },
+  "eternia": {
+    "bio": "Ottawa-born Canadian rapper Eternia is a two-time Juno-nominated lyricist whose independent career spans solo work, collaborations and a long-running presence in Toronto's hip-hop community.",
+    "website": "https://eternia.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://harthouse.ca/profile/eternia",
+      "https://eternia.bandcamp.com/",
+      "https://en.wikipedia.org/wiki/Eternia_(rapper)"
+    ]
+  }
+}
