@@ -100,11 +100,21 @@ body {
     display: flex;
     gap: 8px;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
     margin: 0 -20px 50px;
     padding: 12px 20px;
     position: sticky;
     top: 0;
+    transform: translateY(-110%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
     z-index: 20;
+}
+
+.site-nav.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .site-nav a {
@@ -115,19 +125,12 @@ body {
     padding: 8px 12px;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
+    flex: 0 0 auto;
 }
 
 .site-nav a:hover, .site-nav a:focus {
     background: #C33;
     color: #fff;
-}
-
-.site-nav .nav-brand {
-    color: #C33;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.25rem;
-    letter-spacing: 0.08em;
-    margin-right: 8px;
 }
 
 .custom-player {
@@ -684,6 +687,21 @@ body {
 }
 
 @media (max-width: 768px) {
+    .site-nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4px;
+        margin-left: -12px;
+        margin-right: -12px;
+        padding: 10px 12px;
+    }
+
+    .site-nav a {
+        font-size: 0.82rem;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
     .content-columns { grid-template-columns: 1fr; }
     .shows-title { font-size: 2.5rem; }
     .logo-image { max-width: 90%; }
@@ -704,6 +722,18 @@ body {
     .visualizer-canvas-container { height: 250px; }
     .visualizer-close { width: 50px; height: 50px; font-size: 2rem; top: 20px; right: 20px; }
     .visualizer-style-btn { font-size: 0.7rem; padding: 8px 12px; }
+}
+
+@media (max-width: 420px) {
+    .site-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-nav {
+        transition: none;
+    }
 }
 
 </style>
@@ -749,11 +779,11 @@ body {
 </div>
 
 <nav class="site-nav" aria-label="Main navigation">
-    <a class="nav-brand" href="#top">Northern Dial</a>
     <a href="#about">About</a>
-    <a href="#library">Library</a>
+    <a href="./artists.html">Library</a>
     <a href="#shows">Shows</a>
-    <a href="#stories">Stories</a>
+    <a href="./blog/">Stories</a>
+    <a href="./requests.html">Requests</a>
     <a href="#submit">Submit</a>
 </nav>
 
@@ -1767,6 +1797,17 @@ body {
 
     window.addEventListener('scroll', updateHomepageGradient, { passive: true });
     updateHomepageGradient();
+
+    // Keep the navigation out of the opening hero view, then make it sticky
+    // once the player/hero has scrolled away.
+    const siteNav = document.querySelector('.site-nav');
+    const heroSection = document.querySelector('.player-section');
+    if (siteNav && heroSection && 'IntersectionObserver' in window) {
+        const navVisibilityObserver = new IntersectionObserver(([entry]) => {
+            siteNav.classList.toggle('is-visible', !entry.isIntersecting);
+        }, { threshold: 0 });
+        navVisibilityObserver.observe(heroSection);
+    }
 
     // Artist-directory links can open this modal with the artist already searched.
     (() => {

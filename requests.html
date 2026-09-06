@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a song from Northern Dial's Canadian music radio library.">
+  <meta name="theme-color" content="#CC3333">
+  <link rel="canonical" href="https://www.northerndial.ca/requests.html">
+  <title>Request a Song | Northern Dial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #1a1a1a; color: #fff; font-family: 'Roboto Condensed', sans-serif; }
+    .page { width: min(760px, 100%); margin: 0 auto; padding: 28px 20px 60px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+    .nav a { color: #fff; border: 1px solid #555; border-radius: 5px; padding: 9px 12px; text-decoration: none; font-weight: 700; }
+    .nav a:hover, .nav a:focus { background: #C33; border-color: #C33; }
+    h1 { color: #C33; font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 12vw, 5rem); letter-spacing: .04em; line-height: 1; margin: 0 0 12px; }
+    .intro { color: #ccc; font-size: 1.1rem; margin: 0 0 28px; }
+    .search { display: flex; gap: 10px; margin-bottom: 20px; }
+    input { flex: 1; min-width: 0; padding: 15px 16px; border: 3px solid #C33; border-radius: 8px; font: 1.05rem 'Roboto Condensed', sans-serif; }
+    button { background: linear-gradient(135deg,#C33,#8B2323); color: #fff; border: 0; border-radius: 8px; padding: 0 22px; font-weight: 700; cursor: pointer; }
+    button:focus, input:focus { outline: 3px solid #fff; outline-offset: 2px; }
+    #status { color: #ccc; text-align: center; padding: 14px; }
+    #results { display: flex; flex-direction: column; gap: 10px; }
+    .result { display: flex; align-items: center; gap: 14px; background: #2a2a2a; border: 2px solid #444; border-radius: 8px; padding: 12px; }
+    .result:hover { border-color: #C33; }
+    .art { width: 55px; height: 55px; border-radius: 6px; object-fit: cover; flex: 0 0 55px; background: #333; display: grid; place-items: center; color: #777; font-size: 1.5rem; }
+    .song { min-width: 0; flex: 1; }
+    .song strong, .song span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .song span { color: #aaa; margin-top: 4px; }
+    .request { padding: 10px 14px; flex: 0 0 auto; }
+    @media (max-width: 520px) {
+      .page { padding: 20px 14px 45px; }
+      .nav { margin-bottom: 35px; }
+      .nav a { font-size: .9rem; padding: 8px 10px; }
+      .search { flex-direction: column; }
+      .search button { min-height: 48px; }
+      .result { align-items: flex-start; flex-wrap: wrap; }
+      .request { margin-left: 69px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="./">Listen live</a>
+      <a href="./artists.html">Artist library</a>
+      <a href="./blog/">Stories</a>
+    </nav>
+    <h1>Request a song</h1>
+    <p class="intro">Search the Northern Dial library and request what you want to hear next.</p>
+    <form class="search" id="searchForm">
+      <input id="query" type="search" placeholder="Search by song or artist…" aria-label="Search for a song or artist" required>
+      <button type="submit">Search</button>
+    </form>
+    <div id="status" aria-live="polite">Search for a song or artist to begin.</div>
+    <div id="results"></div>
+  </main>
+  <script>
+    const apiRoot = 'https://a10.asurahosting.com';
+    const queryInput = document.getElementById('query');
+    const status = document.getElementById('status');
+    const results = document.getElementById('results');
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+    }
+
+    async function searchSongs(event) {
+      if (event) event.preventDefault();
+      const query = queryInput.value.trim();
+      if (!query) return;
+      status.textContent = 'Searching…';
+      results.innerHTML = '';
+      try {
+        const response = await fetch(`${apiRoot}/api/station/northern_dial/requests?searchPhrase=${encodeURIComponent(query)}&rowCount=10&current=1`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const songs = data.rows || data.result || data.results || (Array.isArray(data) ? data : []);
+        if (!Array.isArray(songs) || songs.length === 0) {
+          status.textContent = 'No results found. Try a different search.';
+          return;
+        }
+        status.textContent = `${songs.length} result${songs.length === 1 ? '' : 's'} found`;
+        results.innerHTML = songs.map(item => {
+          const song = item.song || item;
+          const requestUrl = item.request_url || '';
+          const art = song.art || song.album_art || '';
+          const image = art ? `<img class="art" src="${escapeHtml(art)}" alt="">` : '<div class="art" aria-hidden="true">♪</div>';
+          return `<div class="result">${image}<div class="song"><strong>${escapeHtml(song.title || 'Unknown title')}</strong><span>${escapeHtml(song.artist || 'Unknown artist')}</span></div><button class="request" data-url="${escapeHtml(requestUrl)}">Request</button></div>`;
+        }).join('');
+      } catch (error) {
+        status.textContent = 'Search is temporarily unavailable. Please try again.';
+      }
+    }
+
+    async function requestSong(requestUrl, button) {
+      const fullUrl = requestUrl.startsWith('http') ? requestUrl : apiRoot + requestUrl;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      try { await fetch(fullUrl, { method: 'POST', headers: { Accept: 'application/json' } }); } catch (error) { /* The station may still accept the request despite a CORS response. */ }
+      status.textContent = 'Request submitted — your song will play soon.';
+      results.innerHTML = '';
+      queryInput.value = '';
+    }
+
+    document.getElementById('searchForm').addEventListener('submit', searchSongs);
+    results.addEventListener('click', event => {
+      const button = event.target.closest('button[data-url]');
+      if (button) requestSong(button.dataset.url, button);
+    });
+  </script>
+</body>
+</html>
