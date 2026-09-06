@@ -248,7 +248,6 @@ Ice tha One
 IMP THA DON
 Indica
 Indigo Phoenyx
-Insight
 Ironside
 IRS
 Islove
@@ -282,7 +281,6 @@ Jonathan Murrill
 Jonny Vulgar
 Joolsannie
 Jordan Fall
-Jovian
 Jr. Rhodes
 Jugga
 JUGGER
@@ -291,7 +289,6 @@ Juju
 Jules Halpern
 Julian Thomas
 Junk
-Justin Strauss
 Jxggi
 K-4ce
 K.C. Thomas
@@ -434,7 +431,6 @@ OxXx
 Papi AQ
 Paradox
 Paris Richards
-Parker
 Passion Mango
 Pay$o
 Pearl
@@ -504,7 +500,6 @@ Serenade
 Set2
 Shai.I
 Shakari Nyte
-Shamon Harage
 Shanic
 Shanks Sioux
 SHEAL
@@ -527,8 +522,6 @@ Sorisa
 Soshy
 Soulstice
 Spade
-Spidah Man
-Spidahman
 Spirit Josh
 Sre
 St-Prince
@@ -608,7 +601,6 @@ Vlxl
 VOLUNTEEER
 VT
 Western Motel
-Whosane
 Wizdome Bunitall
 Wolfy Lights
 X10Land
