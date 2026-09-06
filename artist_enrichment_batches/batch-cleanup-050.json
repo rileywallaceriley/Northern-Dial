@@ -1,0 +1,119 @@
+{
+  "cœur de pirate": {
+    "bio": "Montréal singer-songwriter Béatrice Martin, better known as Cœur de pirate, is a Canadian Francophone pop artist whose piano-led songwriting has made her one of Québec's most recognizable contemporary voices.",
+    "website": "https://app.daretocarerecords.com/coeurdepirate/en/",
+    "instagram": "https://www.instagram.com/beatricepirate/",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.bravomusique.com/en/artists/coeur-de-pirate/", "https://fr.wikipedia.org/wiki/C%C5%93ur_de_pirate"]
+  },
+  "japandroids": {
+    "bio": "Vancouver duo Japandroids, Brian King and David Prowse, were a Canadian indie-rock band known for loud, anthemic guitar-and-drums records including Post-Nothing and Celebration Rock.",
+    "website": "https://japandroids.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://japandroids.bandcamp.com/", "https://en.wikipedia.org/wiki/Japandroids"]
+  },
+  "jenn grant": {
+    "bio": "Halifax-based singer-songwriter Jenn Grant is a three-time Juno nominee whose dreamy folk-pop and Americana songwriting has earned East Coast Music Awards and a Polaris Prize long-listing.",
+    "website": "https://www.jenngrant.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.jenngrant.com/about", "https://en.wikipedia.org/wiki/Jenn_Grant"]
+  },
+  "jeremy fisher": {
+    "bio": "Ottawa-based Jeremy Fisher is a four-time Juno-nominated Canadian folk-pop singer-songwriter whose work spans six studio albums, international touring and the CBC animated series Jeremy and Jazzy.",
+    "website": "https://www.jeremyfishermusic.com/",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.jeremyfishermusic.com/about", "https://www.jeremyfishermusic.com/"]
+  },
+  "joel plaskett emergency": {
+    "bio": "Nova Scotia rock trio Joel Plaskett Emergency pairs Joel Plaskett's sharp, melodic songwriting with longtime bandmates Dave Marsh and Chris Pennell, carrying East Coast rock and roll through more than two decades of recordings and touring.",
+    "website": "https://joelplaskett.com/",
+    "instagram": "",
+    "city": "Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://joelplaskett.com/pages/media", "https://linktr.ee/joelplaskett"]
+  },
+  "jrdn": {
+    "bio": "Halifax-born JRDN, born Ralph Jordon Croucher, is a Canadian R&B singer whose career grew from Nova Scotia's music scene into a Juno-recognized blend of R&B, soul and hip-hop.",
+    "website": "https://linktr.ee/iamjrdn",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://thecbma.com/artists/jrdn/", "https://en.wikipedia.org/wiki/JRDN"]
+  },
+  "just john": {
+    "bio": "Scarborough rapper and art curator John Samuels, known as Just John, is a Toronto creative whose forward-looking hip-hop grew alongside his Blank Canvas arts collective and later collaborations with producer Dom Dias.",
+    "website": "",
+    "instagram": "https://www.instagram.com/justjohnforreal/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Just_John_x_Dom_Dias", "https://hiphopcanada.com/just-john-black-ghost-single/"]
+  },
+  "jay trak": {
+    "bio": "Toronto-born Canadian-Indian producer Jaspunit Sandhu, known as Jay Trak, built his career from local rap production into major Punjabi collaborations, first breaking through with Pengz and TwoTwo's Griselda Blanco.",
+    "website": "https://linktr.ee/jaytrak",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/jay-trak/1454755910", "https://linktr.ee/jaytrak"]
+  },
+  "lauren spencer smith": {
+    "bio": "British-born, British Columbia-raised Lauren Spencer Smith is a Canadian pop singer-songwriter whose confessional ballads and powerhouse vocals broke internationally with Fingers Crossed and led to multiple Juno nominations.",
+    "website": "https://www.laurenspencersmith.com/",
+    "instagram": "https://www.instagram.com/laurenspencersmith/",
+    "city": "Nanaimo, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Lauren_Spencer_Smith", "https://www.laurenspencersmith.com/"]
+  },
+  "leland whitty": {
+    "bio": "Toronto multi-instrumentalist, songwriter and producer Leland Whitty is best known as BADBADNOTGOOD's saxophonist and a versatile collaborator whose work crosses jazz, hip-hop, soul, scoring and production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Leland_Whitty", "https://www.allmusic.com/artist/leland-whitty-mn0003240368"]
+  },
+  "lil berete": {
+    "bio": "Toronto-born Regent Park rapper Lil Berete is known for melodic street rap that helped bridge rival sides of his neighbourhood, building an international audience through singles such as Northside and Southside and the Icebreaker projects.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/lil-berete-mn0003847397", "https://music.apple.com/us/artist/lil-berete/1334328410"]
+  },
+  "pengz": {
+    "bio": "Toronto rapper Pengz emerged from the city's street-rap scene through collaborations with TwoTwo, including Griselda Blanco, before building a solo run around his distinct clipped flow on tracks such as Alejandro Sosa and Igloo.",
+    "website": "",
+    "instagram": "https://www.instagram.com/clepengz/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/pengz/1272192035", "https://chilcanadianvodka.wordpress.com/2021/06/28/pengz-and-twotwo-gangsta-dir-by-kr-productions-orazio/"]
+  },
+  "theo vandenhoff": {
+    "bio": "Toronto's Theo Vandenhoff began as a synth-pop solo project and grew into a four-piece Canadian post-punk band, pairing dark romanticism, driving rhythms and melodic 1980s-informed textures.",
+    "website": "https://theovandenhoff.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://safesounds.ca/artist/theo-vandenhoff", "https://www.grauzonefestival.nl/theo-vandenhoff"]
+  }
+}
