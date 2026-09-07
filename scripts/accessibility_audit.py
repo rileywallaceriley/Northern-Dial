@@ -16,7 +16,7 @@ issues = []
 
 def internal_target(source: Path, href: str):
     href = href.strip()
-    if not href or href.startswith('#'):
+    if not href or href.startswith('#') or '${' in href:
         return None
     if href.startswith(('mailto:', 'tel:', 'javascript:', 'data:')):
         return None
