@@ -1,0 +1,47 @@
+{
+  "grand eugene": {
+    "bio": "Grand Eugène is a Montreal indie-rock and dream-pop project led by Melyssa Lemieux and Jeremy Lachance. The project began with songs developed between British Columbia and Quebec before taking shape in Montreal, and has grown through releases including its self-titled EP and Deux places au cimetière. Northern Dial carries Grand Eugène as part of Quebec's contemporary indie scene.",
+    "website": "https://grandeugene.bandcamp.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://grandeugene.bandcamp.com/album/grand-eug-ne", "https://nouvellesondes.siriusxm.ca/grand-eugene/"]
+  },
+  "jaclyn gee": {
+    "bio": "Jaclyn Gee is a Vancouver hip-hop and R&B artist whose catalogue includes the 2015 album Gypsy Rose and collaborations with Canadian rappers including Snak the Ripper, Merkules and Eternia. Northern Dial carries Jaclyn Gee as part of British Columbia's independent hip-hop and soul scene.",
+    "website": "https://jaclyngeemusic.bandcamp.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://jaclyngeemusic.bandcamp.com/album/gypsy-rose", "https://soundcloud.com/jaclyngee"]
+  },
+  "jhevon paris": {
+    "bio": "Jhevon Paris is a Toronto rap and R&B artist who became visible in Canada's late-2000s pop and hip-hop crossover era. He appeared on Stereos' 2009 single Throw Ya Hands Up, which reached the Canadian Hot 100, and built a profile through MuchMusic-era collaborations. Northern Dial carries Jhevon Paris as part of Toronto's pre-2010 crossover scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Throw_Ya_Hands_Up"]
+  },
+  "jj adrian": {
+    "bio": "JJ Adrian is a Vancouver-born singer-songwriter whose music blends R&B, pop and electronic influences. A Creative BC-supported artist and Berklee College of Music graduate, Adrian has developed a polished contemporary R&B catalogue rooted in Vancouver's music scene. Northern Dial carries JJ Adrian as part of Western Canada's modern R&B landscape.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://creativebc.com/2024/02/creating-honest-music-with-jj-adrian/", "https://www.ralphjaccodine.com/about/roster/c/128/"]
+  },
+  "jesse green beats": {
+    "bio": "Jesse Green Beats is a producer associated with Toronto's independent underground hip-hop scene. His production work includes collaborations with Toronto rappers Asun Eastwood and Lord Juco, including material from their Two Birds project. Northern Dial carries Jesse Green Beats as part of the production network surrounding contemporary Canadian underground rap.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://asuneastwood.com/", "https://asuneastwood.com/products/2-birds-lp-digital-download"]
+  }
+}
