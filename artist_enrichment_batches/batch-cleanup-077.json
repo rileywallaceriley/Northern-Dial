@@ -1,0 +1,47 @@
+{
+  "jaye woods": {
+    "bio": "Jaye Woods is the stage name of Mississauga-raised, Hamilton-based hip-hop artist, producer and therapist Jordan Heywood. Active since 2011 and formerly recording as Orijin, he blends rap, melody and reflective writing around healing, sensitivity and community, with provincial tours and a Canadian Music Week appearance among his credits.",
+    "website": "https://jayewoods.carrd.co/",
+    "instagram": "",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hamiltoncitymagazine.ca/for-the-love-of-hamilton-19/", "https://heyjayewoods.bandcamp.com/music", "https://theartycrowd.ca/artist_profile/jaye-woods/"]
+  },
+  "libby ember": {
+    "bio": "Libby Ember is a Canadian indie-pop singer-songwriter based in Montreal whose intimate writing blends indie folk, dream pop and bedroom pop. A Concordia University music student, she emerged with the 2025 EP I Kill Spiders and has continued building an audience with emotionally direct songs about longing, anxiety and relationships.",
+    "website": "https://libbyember.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://libbyember.bandcamp.com/", "https://www.libbyember.com/", "https://theconcordian.com/2025/10/libby-embers-breakthrough-into-indie-pop-as-an-independent-artist/"]
+  },
+  "rach": {
+    "bio": "Rach is a rapper and former beatmaker from Laval-des-Rapides, Quebec, who emerged from the local rap scene with tracks including Chief Keef and Sur Appel. His catalogue and collaborations with artists such as JBO, JPS, Tizzo, Souldia and Connaisseur Ticaso have established him as a rising voice in rap québécois.",
+    "website": "",
+    "instagram": "",
+    "city": "Laval, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hhqc.com/actualites/jps-rach-et-jbo-representent-laval-des-rapides-dans-le-videoclip-sur-appel/", "https://musiqc.ca/artistes/rach", "https://lepointdevente.com/billets/mns260307001"]
+  },
+  "vadell gabriel": {
+    "bio": "Halifax rapper, songwriter, producer and composer Vadell Gabriel has spent more than a decade developing a style he calls Nerd Jack Swing, mixing new jack swing, boom-bap, chiptune and R&B. Raised between Halifax and Dartmouth, he is also active in Atlantic Canadian music through the Pyrate Radio project and soundtrack work for animation and games.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/1w4PPtSZ1T10KxG5cVZttU", "https://www.nottalabel.com/about", "https://vadellgabriel.bandcamp.com/album/accordion-mega-drive-vibe"]
+  },
+  "vincent khouni": {
+    "bio": "Montreal singer-songwriter and multi-disciplinary artist Vincent Khouni is the leader of garage-rock band Double Date with Death and also records solo material. His solo work moves between alternative pop, psychedelic rock and electronic textures, with releases including 8:12pm and Accident and appearances at Coup de coeur francophone and Les Francouvertes.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.simonerecords.net/artistes/vincent-khouni/", "https://lecanalauditif.ca/artistes/vincent-khouni/", "https://vincentkhouni.bandcamp.com/"]
+  }
+}
