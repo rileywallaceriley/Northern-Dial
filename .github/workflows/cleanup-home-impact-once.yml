@@ -1,0 +1,64 @@
+name: Clean homepage impact block one-time update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cleanup-home-impact-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove homepage impact block and add subtle About link
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          # Remove the homepage-only grant impact CSS block.
+          text = re.sub(
+              r'\n?\s*/\* ND_GRANT_IMPACT_START \*/.*?/\* ND_GRANT_IMPACT_END \*/\s*',
+              '\n',
+              text,
+              flags=re.S,
+          )
+
+          # Remove the large homepage impact section and its live-stat script.
+          text = re.sub(
+              r'\n?\s*<!-- ND_GRANT_IMPACT_HTML_START -->.*?<!-- ND_GRANT_IMPACT_HTML_END -->\s*',
+              '\n',
+              text,
+              flags=re.S,
+          )
+
+          # Add one quiet path from the existing homepage About copy to the full project page.
+          about_anchor = '<p style="margin-top: 15px;">We stream 24/7 and add new music into rotation constantly. Interested in having your music  or podcast played? Scroll down and click our submission box.</p>'
+          about_link = about_anchor + '\n        <p style="margin-top: 15px;"><a href="about.html" style="color:#8B2323;font-weight:700;text-decoration:none;">About the Northern Dial project →</a></p>'
+          if 'About the Northern Dial project →' not in text and about_anchor in text:
+              text = text.replace(about_anchor, about_link, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit homepage cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Move project impact details off homepage'
+          git push origin HEAD:main
