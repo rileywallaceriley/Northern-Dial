@@ -1,0 +1,18 @@
+name: Accessibility guardrail audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 13 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Run accessibility guardrails
+        run: python3 scripts/accessibility_audit.py
