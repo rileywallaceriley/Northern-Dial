@@ -1,0 +1,83 @@
+{
+  "checkmate": {
+    "bio": "Vancouver rapper and producer Checkmate, born Lyle Bismark, is a veteran of Canadian hip-hop best known for his verse on the landmark 1998 posse cut Northern Touch. A longtime fixture in Vancouver's rap scene, he later released the album Welcome to the Game and earned a Juno nomination for Rap Recording of the Year for R.A.W.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/checkmate-welcome_to_game", "https://hiphopcanada.com/checkmate-interview-pro-game-2/"]
+  },
+  "concise": {
+    "bio": "Vancouver MC and producer Concise the Black Knight is a longtime figure in the city's hip-hop community. Born in North Africa and raised in Vancouver after immigrating to Canada, he came up alongside Checkmate, appeared in the Northern Touch era and built a solo catalogue rooted in independent West Coast rap.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.straight.com/article/concise-the-black-knight", "https://www.hiphopvancouver.com/news/concise-must-be-crazy-live-hhvtv-2022-performance/"]
+  },
+  "d-shade": {
+    "bio": "Montréal rapper D-Shade is best known as a member of the pioneering trio Shades of Culture alongside Revolution and DJ Storm. Emerging from Montréal's early-1990s hip-hop scene, the group toured nationally and released records including Mindstate while helping establish an independent francophone and anglophone rap culture in the city.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.afroheritage.ca/team/", "https://cultmtl.com/2017/09/pop-montreal-2017-reviews/"]
+  },
+  "dj mercilless": {
+    "bio": "Toronto DJ, producer and engineer DJ Mercilless has been a fixture in the city's hip-hop scene for more than three decades. His career includes club and concert work, Canadian touring and appearances alongside artists including Ghostface Killah, GZA, Styles P and Conway the Machine, as well as DJing Drake's Replacement Girl video release party in 2007.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/events/an-enchanted-evening", "https://harthouse.ca/events/redefining-the-cypher-reception"]
+  },
+  "fax4": {
+    "bio": "Fax4 is a Halifax hip-hop crew made up of Spesh K, Quake Matthews, Boy-Ill and Markit. Active in Nova Scotia's mid-2000s rap scene, the group released the 2006 album Inklined and became part of the broader East Coast Canadian underground alongside artists including Classified and Mic Boyd.",
+    "website": "https://markitmusic.bandcamp.com/album/fax-4-inklined-2006",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://markitmusic.bandcamp.com/album/fax-4-inklined-2006", "https://quakemusic.wordpress.com/about/", "https://citizenfreak.com/artists/94941-fax4"]
+  },
+  "markit": {
+    "bio": "Halifax rapper Markit, born Mark Cwajna, emerged from Nova Scotia's independent hip-hop scene as a member of Fax4 before expanding into solo work and the group Something Good with Boy-Ill. His 2007 album Mark My Words helped earn national exposure, including a VideoFACT-supported MuchMusic video with fellow Fax4 member Spesh K.",
+    "website": "https://markitmusic.bandcamp.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dalspaceb.library.dal.ca/server/api/core/bitstreams/98ba606c-2bd3-455d-940e-6cd572cd25a4/content", "https://www.thecoast.ca/arts-music/its-all-something-good-1224017/"]
+  },
+  "boy-iill": {
+    "bio": "Halifax MC Boy-Ill, born Matt Boyle, came up in Nova Scotia's hip-hop community as a member of Fax4 with Spesh K, Quake Matthews and Markit. He later partnered with longtime friend Markit in Something Good, developing their two-MC setup into a live-band project that toured beyond Halifax.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecoast.ca/arts-music/its-all-something-good-1224017/", "https://dalspaceb.library.dal.ca/server/api/core/bitstreams/0e94bc8d-4a9a-4560-b535-e9903197ea03/content"]
+  },
+  "ambition": {
+    "bio": "Halifax rapper and producer Ambition, also known as Ambeez, is part of Nova Scotia's long-running independent hip-hop community and the wider Backburner collective. He has worked closely with Uncle Fester, released solo projects including Man of the Year and later formed The Library Steps with Jesse Dangerously.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.indiemusicdiscovery.com/interview-library-steps/", "https://902hiphop.wordpress.com/author/mmacmaster7/", "https://halifaxbloggers.ca/hafilax/2011/02/ambition-and-uncle-fester-k-r-e-a-m-indie/"]
+  },
+  "kapok": {
+    "bio": "Toronto-born, Vancouver-raised hip-hop artist Kapok is a Mayan-Canadian rapper, songwriter and producer whose work blends rap with soul, jazz and R&B. Raised in Vancouver's Strathcona neighbourhood, he has collaborated with artists including De La Soul, Moka Only, T3 and Potatohead People while building an independent West Coast catalogue.",
+    "website": "https://kapokmusic.bandcamp.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://creativebc.com/2021/04/kapok/", "https://www.hiphopvancouver.com/uncategorized/hip-hop-artists-you-should-know/", "https://kapokmusic.bandcamp.com/"]
+  }
+}
