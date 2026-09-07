@@ -1,0 +1,47 @@
+{
+  "james": {
+    "bio": "James is the split Northern Dial credit for Canadian singer-songwriter Rob James, one half of Winnipeg pop and R&B duo McMaster & James with Luke McMaster. The duo's gold-selling Canadian run produced radio hits including Thank You, the exact James credit represented in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Winnipeg, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Rob_James_(singer)", "https://www.lukemcmaster.com/bio", "https://music.apple.com/us/song/306811209"]
+  },
+  "mileena": {
+    "bio": "Mileena is a Toronto-based neo-soul and alternative R&B singer-songwriter whose music moves through bedroom pop, lo-fi, trip-hop and soulful electronic textures. Her self-titled debut and Time Spent Running EP established her in Toronto's independent scene, while her feature on Kai Banks and La Reezy's Too Deep For The Outro is her Northern Dial library credit.",
+    "website": "https://mileena.co/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/torontos_mileena_unveils_self-titled_debut_album", "https://open.spotify.com/artist/3zMmBYE6UVHfnURPeagEZu", "https://music.apple.com/us/song/1849126345"]
+  },
+  "daphne": {
+    "bio": "DAPHNE is a Toronto-based indie-pop artist, songwriter and producer whose euphoric melodies, vulnerable lyrics and hands-on DIY production shape her high-energy independent pop. A 2024 SOCAN Foundation Young Canadian Songwriters Award winner, she released the GIRL EP in 2026; Never Be from that project is her Northern Dial library credit.",
+    "website": "https://www.iamdaphne.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.socanmagazine.ca/news/socan-foundation-announces-winners-of-the-2024-young-canadian-songwriters-awards/", "https://www.iamdaphne.com/copy-2-of-home", "https://music.amazon.ca/tracks/B0GQJ67RKF"]
+  },
+  "islove": {
+    "bio": "Islove is a recording alias used by East Coast Canadian singer-songwriter Jeremy Francis Dollemont, who later released music as Francis Skyes. Born on Canada's east coast and based in Riverview, New Brunswick, Dollemont co-wrote and sang Glenn Morrison's dance hit Goodbye, the exact Islove credit in the Northern Dial library.",
+    "website": "https://www.waxrecords.com/francis-skyes",
+    "instagram": "",
+    "city": "Riverview, New Brunswick",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.newswire.ca/fr/news-releases/la-creme-de-la-creme-des-createurs-de-musique-canadiens-honores-au-socan-awards-518026731.html", "https://www.waxrecords.com/francis-skyes", "https://open.spotify.com/artist/0eDNDJ6p75kQRD2dYx6qL5"]
+  },
+  "private name private number": {
+    "bio": "Private Name Private Number, also known as PNPN, is a Toronto hip-hop artist, songwriter, producer and independent label owner whose music blends rap, R&B and Caribbean influence. MusicOntario has presented him as a Canadian artist and HipHopCanada has documented his Toronto-rooted catalogue through releases including Terminal 3 and collaborations with Rochester and Choclair. Seven Private Name Private Number tracks appear in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music-ontario.ca/events/display%2Cdetails/17835/musicontario-new-skool-rules-2023", "https://hiphopcanada.com/tag/private-name-private-number/", "https://open.spotify.com/artist/6c9dagfe5XNuF6fwFRXu3A"]
+  }
+}
