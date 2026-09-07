@@ -1,0 +1,47 @@
+{
+  "chai sully": {
+    "bio": "Chai Sully is a Toronto R&B-pop artist and songwriter whose music blends pop instincts, alternative R&B and an offbeat lyrical sensibility. She has become part of Toronto's emerging independent scene through releases including TRIED IT, LIPS, Princess Peach and Thief (come over); her collaboration DerekFisher with KOTO? and Soft Eyez is the Northern Dial library credit.",
+    "website": "https://chaimusic.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nxne.com/2026-artists/chai-sully", "https://chaimusic.bandcamp.com/", "https://open.spotify.com/artist/1VSEcTooR4oespyPjdva3K"]
+  },
+  "koto?": {
+    "bio": "KOTO? is a London, Ontario-rooted rapper and producer active in Toronto and a member of the 4DaTribe collective. His music draws heavily on boom-bap and lo-fi hip-hop, pairing compact, sample-driven production with dense lyricism across projects including Mornington Me and 4DaTribe Disc Two. DerekFisher, with Soft Eyez and Chai Sully, is his Northern Dial library credit.",
+    "website": "https://whoiskoto.bandcamp.com/",
+    "instagram": "",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://whoiskoto.bandcamp.com/album/mornington-me", "https://london.ca/newsroom/new-years-eve-park-shine-light-local-talent-0", "https://music.amazon.com/albums/B0G1D4K19P"]
+  },
+  "psychic armour": {
+    "bio": "Psychic Armour is a Montreal punk band formed in 2021 by Tristan, Sara and Evan. Their music combines buzzsaw punk melodies with heavy-metal guitar technique and earnest songwriting, moving from their 2023 Demo through the 2025 Pressure EP and 2026 album Ugly Planet. Four songs from Pressure appear in the Northern Dial library.",
+    "website": "https://psychicarmour.bandcamp.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://psychicarmour.bandcamp.com/album/pressure", "https://psychicarmour.bandcamp.com/album/ugly-planet", "https://suoniperilpopolo.org/artists/psychic-armour"]
+  },
+  "tecun b'alam": {
+    "bio": "Tecun B'alam is a Calgary-based Kaq'chikel hip-hop and R&B artist whose work connects Indigenous solidarity, political performance and contemporary rap. Identifying himself as the Mayan man on Treaty 7 land, he has built a catalogue including A Better Version Of Me, 4myBB and Red Music Vol.1; three tracks from Red Music Vol.1 appear in the Northern Dial library.",
+    "website": "https://tecunbalam.bandcamp.com/",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://tecunbalam.bandcamp.com/album/4mybb", "https://www.stagehand.app/artists/3697", "https://yycmusicawards.com/awards/2025/2025-yycma-nominees/"]
+  },
+  "the soulmate collective": {
+    "bio": "The Soulmate Collective is a Saskatoon neo-soul, jazz and funk ensemble formed around bassist-producer vbnd. Built from a rotating group of local Saskatchewan musicians including Katie Tupper, Connor Newton, Jesse McMillan and Ayden Draude, the collective became the live and recording band behind vbnd's 2021 album Scum Funk, which accounts for its six Northern Dial library tracks.",
+    "website": "",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.deepmatter.co.uk/vbnd", "https://thesheaf.com/2019/10/13/featured-locals-of-the-month-vbnd-katie-tupper-and-the-soulmate-collective/", "https://vbnd.bandcamp.com/album/scum-funk"]
+  }
+}
