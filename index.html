@@ -1029,6 +1029,96 @@ body {
 }
 /* ND_MOBILE_MENU_CSS_END */
 
+
+/* ND_GRANT_IMPACT_START */
+.grant-impact {
+    background: #fff;
+    border: 4px solid #1a1a1a;
+    border-radius: 12px;
+    margin: 0 0 38px;
+    padding: 26px;
+}
+.grant-impact-head {
+    align-items: end;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.grant-impact-kicker {
+    color: #C33;
+    font-family: 'Oswald', sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+.grant-impact h2 {
+    color: #1a1a1a;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.35rem;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
+.grant-impact-link {
+    color: #8B2323;
+    flex: 0 0 auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.grant-impact-link:hover,
+.grant-impact-link:focus { text-decoration: underline; }
+.grant-impact-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grant-impact-stat {
+    background: #1a1a1a;
+    border-bottom: 4px solid #C33;
+    border-radius: 8px;
+    color: #fff;
+    padding: 17px 14px;
+    text-align: center;
+}
+.grant-impact-number {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.grant-impact-label {
+    color: #ddd;
+    display: block;
+    font-size: .78rem;
+    line-height: 1.35;
+    margin-top: 5px;
+}
+.grant-impact-note {
+    color: #666;
+    font-size: .82rem;
+    line-height: 1.45;
+    margin: 12px 0 0;
+}
+@media (max-width: 760px) {
+    .grant-impact-head { align-items: flex-start; flex-direction: column; gap: 9px; }
+    .grant-impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 430px) {
+    .grant-impact { padding: 20px 16px; }
+    .grant-impact-grid { grid-template-columns: 1fr; }
+}
+/* ND_GRANT_IMPACT_END */
+
 </style>
 
 </head>
@@ -1112,6 +1202,39 @@ body {
         </div>
     </div>
 </div>
+
+
+<!-- ND_GRANT_IMPACT_HTML_START -->
+<section class="grant-impact" aria-labelledby="grant-impact-title">
+    <div class="grant-impact-head">
+        <div>
+            <div class="grant-impact-kicker">Current Project Snapshot</div>
+            <h2 id="grant-impact-title">Northern Dial at a Glance</h2>
+        </div>
+        <a class="grant-impact-link" href="about.html">About the project →</a>
+    </div>
+    <div class="grant-impact-grid">
+        <div class="grant-impact-stat"><span class="grant-impact-number" id="impactRetained">1,299</span><span class="grant-impact-label">artists currently retained after editorial removals</span></div>
+        <div class="grant-impact-stat"><span class="grant-impact-number" id="impactProfiles">944</span><span class="grant-impact-label">retained artists with completed profiles</span></div>
+        <div class="grant-impact-stat"><span class="grant-impact-number" id="impactRemoved">696</span><span class="grant-impact-label">non-Canadian or misclassified credits removed</span></div>
+        <div class="grant-impact-stat"><span class="grant-impact-number" id="impactCoverage">72.7%</span><span class="grant-impact-label">current profile completion across retained artists</span></div>
+    </div>
+    <p class="grant-impact-note">The artist library is actively researched and reviewed. Ambiguous credits stay unresolved rather than becoming guesses.</p>
+</section>
+<script>
+fetch('./artist_enrichment_audit.json', {cache:'no-store'})
+  .then(response => response.ok ? response.json() : Promise.reject())
+  .then(data => {
+    const set = (id, value) => { const el = document.getElementById(id); if (el && value !== undefined && value !== null) el.textContent = value; };
+    set('impactRetained', Number(data.retained_artists).toLocaleString());
+    set('impactProfiles', Number(data.retained_with_profiles).toLocaleString());
+    set('impactRemoved', Number(data.removed_non_canadian).toLocaleString());
+    set('impactCoverage', `${data.completion_percent}%`);
+  })
+  .catch(() => {});
+</script>
+<!-- ND_GRANT_IMPACT_HTML_END -->
+
 
 <!-- Explore Recent Songs Banner -->
 <section id="library" style="margin-bottom: 60px;">
