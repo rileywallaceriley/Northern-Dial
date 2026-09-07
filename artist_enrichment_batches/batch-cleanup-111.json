@@ -1,0 +1,47 @@
+{
+  "seb c": {
+    "bio": "Seb C is a Vancouver-based house DJ and producer active in British Columbia's electronic music scene. His work is centred on club-focused house music, DJ performance and independent releases. Northern Dial carries Seb C as part of its Canadian electronic and dance catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/6onez3fBM2qqeEOG7Ojqdk", "https://www.beatport.com/artist/seb-c/826744", "https://thedjagency.com/artist/dj-seb-c/"]
+  },
+  "shelailai": {
+    "bio": "Shelailai is a Canadian-Caribbean rapper and pop artist who emerged from Vancouver before expanding her career into the United States. Her music moves between hip-hop, pop and Caribbean-influenced sounds, with an independent catalogue built across both sides of the border. Northern Dial carries Shelailai as part of its Canadian hip-hop and pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/6rhcTWIMphyIXBGVo3B0gc", "https://www.oculate.uk/gettoknow/shelailai"]
+  },
+  "sonny hendrixx": {
+    "bio": "Sonny Hendrixx is a Toronto hip-hop artist whose catalogue emphasizes lyrical rap, independent releases and collaborations from the city's contemporary scene. Streaming profiles identify him as a Toronto artist, placing his work within the Greater Toronto Area's current rap ecosystem. Northern Dial carries Sonny Hendrixx as part of its Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/2aGi4cgyxDTN2t4PT2z67e"]
+  },
+  "sargeant": {
+    "bio": "Sargeant is Calgary vocalist Yolanda Sargeant, one half of the acclaimed lo-fi soul duo Sargeant X Comrade. Her expressive vocals sit at the centre of the group's blend of soul, hip-hop, funk and sample-driven production. Northern Dial carries Sargeant as part of its Calgary and Western Canadian soul catalogue.",
+    "website": "https://sargeantxcomrade.com/about/",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.reverbnation.com/sargeantandcomrade", "https://sargeantxcomrade.com/about/", "https://exclaim.ca/artists/sargeant_comrade", "https://kingeddy.ca/event/sargeant-x-comrade-at-the-king-eddy/"]
+  },
+  "comrade": {
+    "bio": "Comrade is Calgary producer Evgeniy 'Comrade' Bykovets, one half of the lo-fi soul duo Sargeant X Comrade. His production combines hip-hop sampling, soul, funk and jazz textures behind vocalist Yolanda Sargeant. Northern Dial carries Comrade as part of its Calgary producer and soul catalogue.",
+    "website": "https://sargeantxcomrade.com/about/",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.reverbnation.com/sargeantandcomrade", "https://sargeantxcomrade.com/about/", "https://exclaim.ca/artists/sargeant_comrade", "https://kingeddy.ca/event/sargeant-x-comrade-at-the-king-eddy/"]
+  }
+}
