@@ -1,0 +1,47 @@
+{
+  "balam kiel": {
+    "bio": "BALAM KIEL is a Toronto-based Spanish artist whose music blends reggaeton, Latin pop and hip-hop. He has built a solo catalogue including Capítulo Uno while collaborating with Canadian artists such as Snow and Cole James. His appearances with Snow on Reason to Love and Together are the two BALAM KIEL credits in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.richmondsentinel.ca/article-detail/17669/cole-james-destined-for-musical-bliss", "https://music.amazon.com/tracks/B08PJNPMH6", "https://music.amazon.ca/artists/B07GFBLZNV/balam-kiel"]
+  },
+  "connor newton": {
+    "bio": "Connor Newton is a Saskatoon-born Canadian saxophonist, multi-instrumentalist, producer and educator. After studying jazz performance in Edmonton and at the University of Toronto, he returned to Saskatoon and has worked with artists including Bombargo, vbnd, Katie Tupper and Collective Order while also releasing hip-hop-informed solo work as Contrafact. His saxophone performances on vbnd's Name (On My Tongue) and No Other Feeling account for his Northern Dial library credits.",
+    "website": "https://www.rootintootinconnornewton.com/",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.rootintootinconnornewton.com/", "https://www.soundbetter.com/profiles/164498-connor-newton", "https://www.shazam.com/song/1553764864/no-other-feeling-feat-katie-tupper-connor-newton-and-jesse-mcmillan"]
+  },
+  "heybombay": {
+    "bio": "HeyBombay, also known as Bombay, is a Qatar-born music producer residing in Toronto, Canada. Working across hip-hop, R&B, neo-soul and beat music, he became a key collaborator of Toronto artist Ice Tha One, producing her MONSTAR material and later sharing artist billing on the deluxe edition. Their Dance Like Me collaboration with Truss and Junia-T is HeyBombay's Northern Dial library credit.",
+    "website": "https://bombay1.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://bombay1.bandcamp.com/album/birthday-bombs", "https://www.artscape.ca/2021/03/08/how-singer-songwriter-and-emcee-ice-tha-one-shows-up-for-torontos-east-end-with-her-music/", "https://music.amazon.com/tracks/B0CV251CF1"]
+  },
+  "rach": {
+    "bio": "Rach is a Quebec rapper and former beatmaker from Laval-des-Rapides. He emerged through tracks such as Chief Keef, Sans refrain, FNG and collaborations with J.BO, JPS and Tizzo, building a catalogue rooted in Laval's francophone street-rap scene. His feature on JMB Drippy's 2021 single Palmarès is the RACH credit in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Laval, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/1Qyyc7H8E9gI5nEjWTQk7n", "https://www.shazam.com/fr-fr/song/1595139232/palmar%C3%A8s-feat-rach", "https://open.spotify.com/intl-es/track/7wd4iBYSiURS5G506Gma0E"]
+  },
+  "vbnd": {
+    "bio": "vbnd is a Saskatoon, Saskatchewan bassist, producer and recording artist whose music blends jazz, funk, neo-soul and alternative R&B. Signed to UK label DeepMatter, he built his catalogue through releases including Daughter of the Sun and Scum Funk, often working with the Saskatoon musicians who became The Soulmate Collective. Ten vbnd tracks from those projects and related singles appear in the Northern Dial library.",
+    "website": "https://vbnd.bandcamp.com/",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.deepmatter.co.uk/vbnd", "https://www.soundbetter.com/profiles/350996-vbnd", "https://vbnd.bandcamp.com/album/scum-funk"]
+  }
+}
