@@ -1,0 +1,109 @@
+name: Wire project pages one-time update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/wire-project-pages-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wire project pages into public navigation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          root_targets = [
+              Path('index.html'),
+              Path('library.html'),
+              Path('artists.html'),
+              Path('discover.html'),
+              Path('requests.html'),
+              Path('about.html'),
+              Path('sessions.html'),
+              Path('archive.html'),
+              Path('accessibility.html'),
+          ]
+          blog_targets = sorted(Path('blog').glob('*.html'))
+          targets = [p for p in root_targets + blog_targets if p.exists()]
+
+          project_footer = r'''
+          <!-- ND_PROJECT_LINKS_START -->
+          <footer class="nd-project-links" aria-label="Northern Dial project links" style="margin-top:48px;background:#1a1a1a;border-top:4px solid #CC3333;color:#fff;padding:24px 18px;">
+            <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+              <div style="font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CC3333;">Northern Dial Project</div>
+              <nav aria-label="Project pages" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="/about.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">About</a>
+                <a href="/sessions.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Sessions</a>
+                <a href="/archive.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Archive &amp; Atlas</a>
+                <a href="/accessibility.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Accessibility</a>
+              </nav>
+            </div>
+          </footer>
+          <!-- ND_PROJECT_LINKS_END -->
+          '''
+
+          nav_block_re = re.compile(r'(<div\s+class=["\']mobile-menu-links["\']>)(.*?)(</div>)', re.S | re.I)
+          submit_re = re.compile(r'(<a\b[^>]*href=["\'][^"\']*#submit[^"\']*["\'][^>]*>\s*Submit\s*</a>)', re.I)
+
+          changed = []
+          for path in targets:
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              def patch_nav(match):
+                  opener, inner, closer = match.groups()
+                  if re.search(r'href=["\'](?:/|\.\.?/)?about\.html["\']', inner, re.I):
+                      return match.group(0)
+                  about_class = ' class="active" aria-current="page"' if path.name == 'about.html' and path.parent == Path('.') else ''
+                  about_link = f'<a href="/about.html"{about_class}>About</a>'
+                  if submit_re.search(inner):
+                      inner = submit_re.sub(about_link + '\n        ' + r'\1', inner, count=1)
+                  else:
+                      inner = inner.rstrip() + '\n        ' + about_link + '\n'
+                  return opener + inner + closer
+
+              text, _ = nav_block_re.subn(patch_nav, text, count=1)
+
+              # Fallback for any public page whose nav does not use mobile-menu-links.
+              if '/about.html' not in text.split('</nav>', 1)[0] if '</nav>' in text else False:
+                  first_nav = re.search(r'<nav\b[^>]*>.*?</nav>', text, re.S | re.I)
+                  if first_nav and 'About</a>' not in first_nav.group(0):
+                      block = first_nav.group(0)
+                      if submit_re.search(block):
+                          block = submit_re.sub('<a href="/about.html">About</a>\n        ' + r'\1', block, count=1)
+                          text = text[:first_nav.start()] + block + text[first_nav.end():]
+
+              if 'ND_PROJECT_LINKS_START' not in text and '</body>' in text:
+                  text = text.replace('</body>', project_footer + '\n</body>', 1)
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          print(f'Updated {len(changed)} public pages:')
+          for item in changed:
+              print(' -', item)
+          PY
+
+      - name: Commit site navigation wiring
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html library.html artists.html discover.html requests.html about.html sessions.html archive.html accessibility.html blog/*.html
+          if git diff --cached --quiet; then
+            echo 'No navigation changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Wire project pages into site navigation'
+          git push origin HEAD:main
