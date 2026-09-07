@@ -1,0 +1,38 @@
+{
+  "irs": {
+    "bio": "IRS, short for Instinctive Reaction to Struggle, was a Canadian hip-hop trio from Scarborough made up of MCs Korry Deez and Black Cat with DJ-producer T.R.A.C.K.S. Emerging from the larger Monolith collective, the group signed with Universal Music Canada and released the Juno-nominated 2003 album Welcome to Planet IRS, home to the Toronto anthem T-Dot Anthem.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/IRS_(band)", "https://www.worldradiohistory.com/Archive-All-Music/Billboard/00s/2003/BB-2003-12-20.pdf", "https://music.apple.com/ca/song/1815967747"]
+  },
+  "i.r.s.": {
+    "bio": "I.R.S. is an alternate library credit for the Canadian Scarborough hip-hop trio IRS, made up of Korry Deez, Black Cat and producer T.R.A.C.K.S. The Monolith-affiliated group released the Juno-nominated Welcome to Planet IRS and also appeared on The Real Frequency's Toronto compilation The New North.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/IRS_(band)", "https://therealfrequency.bandcamp.com/album/the-new-north", "https://www.worldradiohistory.com/Archive-All-Music/Billboard/00s/2003/BB-2003-12-20.pdf"]
+  },
+  "monolith: irs": {
+    "bio": "Monolith: IRS is a catalogue credit for the IRS branch of Toronto's Monolith hip-hop collective. IRS members Korry Deez, Black Cat and T.R.A.C.K.S. came out of Monolith before establishing the Canadian trio behind Welcome to Planet IRS, and later reunited with fellow Monolith MCs on Wio-K's Ten.",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/IRS_(band)", "https://therecordrecollection.wordpress.com/2018/08/01/monolith-the-long-awaited-1998/", "https://open.spotify.com/album/2ndKDVAwyI1H4Hz3kd9guS"]
+  },
+  "boomtang": {
+    "bio": "Boomtang is the shortened name used by Toronto dance-pop production group The Boomtang Boys for their 2002 album Wet. Built around Rob DeBoer and Tony Grace, the Canadian project followed earlier hits such as Squeeze Toy with Movin' On, which reached number one on the Canadian singles chart.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://tinnitist.com/2022/08/23/classic-album-review-boomtang-wet/", "https://en.wikipedia.org/wiki/The_Boomtang_Boys", "https://music.amazon.ca/tracks/B09HYZXRCS"]
+  }
+}
