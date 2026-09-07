@@ -1,0 +1,47 @@
+{
+  "gutta192": {
+    "bio": "Gutta192 is a Quebec rapper working within the province's contemporary francophone hip-hop scene. His releases are catalogued by MUSIQC as part of Quebec rap, placing him within the current generation of independent Canadian francophone artists. Northern Dial carries Gutta192 as part of its Quebec hip-hop catalogue.",
+    "website": "https://musiqc.ca/artistes/gutta192",
+    "instagram": "",
+    "city": "Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musiqc.ca/artistes/gutta192"]
+  },
+  "cola h.": {
+    "bio": "Cola H., also known as Colanthony Humphrey, is a Toronto multi-instrumentalist, songwriter, producer and artist active across the city's rock, hip-hop and independent music communities. He is also known for his work with The OBGMs and for production and collaborative projects beyond the band. Northern Dial carries Cola H. as part of its Toronto artist and producer catalogue.",
+    "website": "https://www.dieforcola.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.programsound.fm/team", "https://www.dieforcola.com/", "https://harthouse.ca/events/hart-house-virtual-producers-circle-winter-2021"]
+  },
+  "john shambles": {
+    "bio": "John Shambles is the solo project of Kingston, Ontario musician Brett Emmons, best known as the frontman of The Glorious Sons. The project gives Emmons a separate outlet for songwriting beyond the band's catalogue while retaining his roots in Canadian rock. Northern Dial carries John Shambles as part of its contemporary Ontario rock catalogue.",
+    "website": "https://www.johnshambles.co/",
+    "instagram": "",
+    "city": "Kingston, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/john-shambles/1846206285", "https://www.quintenews.com/2026/02/27/brett-emmons-aka-john-shambles-chats-with-quinte-news/", "https://www.johnshambles.co/"]
+  },
+  "jj adrian": {
+    "bio": "JJ Adrian is a Vancouver artist, songwriter and producer whose music blends pop, R&B and alternative influences. Creative BC identifies Adrian as a Vancouver artist, and the artist has participated in British Columbia development programs including ARC. Northern Dial carries JJ Adrian as part of its contemporary West Coast catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://creativebc.com/2024/02/creating-honest-music-with-jj-adrian/", "https://music.apple.com/us/artist/jj-adrian/1511356602", "https://arcprogrambc.com/participants/"]
+  },
+  "lane hall": {
+    "bio": "Lane Hall is a Halifax, Nova Scotia soul collective led vocally by JRDN with musical direction from Richard 'Nulo' McNeil. The project brings together musicians from the Halifax scene around live soul, R&B and groove-oriented arrangements. Northern Dial carries Lane Hall as part of its Atlantic Canadian soul and R&B catalogue.",
+    "website": "https://www.lanehall.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.lanehall.com/about", "https://www.lanehall.com/", "https://makinwavesfestival.ca/lineup/"]
+  }
+}
