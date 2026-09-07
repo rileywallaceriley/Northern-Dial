@@ -142,6 +142,70 @@ body {
     border-bottom: 3px solid #C33;
 }
 
+.discovery-banner {
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 4px solid #C33;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    color: #fff;
+    display: flex;
+    gap: 28px;
+    justify-content: space-between;
+    margin: -22px 0 38px;
+    padding: 24px 28px;
+}
+.discovery-banner-copy {
+    min-width: 0;
+}
+.discovery-banner-kicker {
+    color: #C33;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.discovery-banner h2 {
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+.discovery-banner p {
+    color: #d8d8d8;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 720px;
+}
+.discovery-banner-cta {
+    background: #C33;
+    border: 2px solid #C33;
+    border-radius: 7px;
+    color: #fff;
+    flex: 0 0 auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.discovery-banner-cta:hover,
+.discovery-banner-cta:focus {
+    background: #8B2323;
+    border-color: #8B2323;
+    transform: translateY(-2px);
+}
+
 .custom-player {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     border: 5px solid #C33;
@@ -696,9 +760,22 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .discovery-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: -28px;
+        padding: 20px;
+    }
+    .discovery-banner-cta {
+        text-align: center;
+        width: 100%;
+    }
+
     .site-nav {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0;
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
@@ -736,7 +813,7 @@ body {
 
 @media (max-width: 420px) {
     .site-nav {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -786,12 +863,23 @@ body {
     </audio>
 </section>
 
+<section class="discovery-banner" aria-labelledby="discovery-banner-title">
+    <div class="discovery-banner-copy">
+        <div class="discovery-banner-kicker">Northern Dial Discovery</div>
+        <h2 id="discovery-banner-title">Find Your Next Canadian Artist</h2>
+        <p>Pick a genre, era or artist you already love and we’ll dial up five Canadian artists worth checking out.</p>
+    </div>
+    <a class="discovery-banner-cta" href="./discover.html">Start Discovering</a>
+</section>
+
 </div>
 
 <nav class="site-nav" aria-label="Main navigation">
     <a href="./" class="active" aria-current="page">Home</a>
-    <a href="./library.html">Songs</a>
-    <a href="./blog/">Blog</a>
+    <a href="library.html">Songs</a>
+    <a href="artists.html">Artists</a>
+    <a href="discover.html">Discover</a>
+    <a href="blog/">Blog</a>
     <a href="./#submit">Submit</a>
 </nav>
 
