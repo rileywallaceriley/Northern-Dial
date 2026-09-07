@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# One-time site-wide Northern Dial Discovery navigation and homepage banner update.
+# Site-wide Northern Dial navigation, Discovery and mobile menu updater.
 
 from pathlib import Path
 import re
@@ -10,6 +10,209 @@ CORE_PAGES = {
     "artists.html": "artists",
     "discover.html": "discover",
 }
+
+MOBILE_MENU_CSS = r'''
+
+/* ND_MOBILE_MENU_CSS_START */
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu-links {
+    align-items: stretch;
+    display: flex;
+    gap: inherit;
+    justify-content: center;
+    width: 100%;
+}
+
+.mobile-menu-links > li {
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-nav {
+        display: block !important;
+        padding: 0 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+    }
+
+    .mobile-menu-toggle {
+        align-items: center;
+        background: #1a1a1a !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        display: flex !important;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 0.88rem !important;
+        font-weight: 700 !important;
+        justify-content: space-between;
+        letter-spacing: 0.14em !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        min-height: 48px;
+        padding: 13px 18px !important;
+        text-transform: uppercase;
+        width: 100% !important;
+    }
+
+    .mobile-menu-toggle:hover,
+    .mobile-menu-toggle:focus {
+        background: #262626 !important;
+        color: #ffffff !important;
+    }
+
+    .mobile-menu-toggle:focus-visible {
+        outline: 3px solid #CC3333 !important;
+        outline-offset: -3px;
+    }
+
+    .mobile-menu-icon {
+        color: #CC3333;
+        font-family: Arial, sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+    }
+
+    .mobile-menu-links {
+        background: #1a1a1a;
+        display: none !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .mobile-menu-nav.menu-open .mobile-menu-links {
+        display: flex !important;
+    }
+
+    .mobile-menu-links > li {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .mobile-menu-links a,
+    .mobile-menu-links li a {
+        background: #1a1a1a !important;
+        border: 0 !important;
+        border-bottom: 1px solid #343434 !important;
+        border-radius: 0 !important;
+        color: #ffffff !important;
+        display: block !important;
+        flex: none !important;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 0.88rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.11em !important;
+        margin: 0 !important;
+        padding: 14px 18px !important;
+        text-align: left !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        width: 100% !important;
+    }
+
+    .mobile-menu-links a:hover,
+    .mobile-menu-links a:focus,
+    .mobile-menu-links a.active,
+    .mobile-menu-links li a:hover,
+    .mobile-menu-links li a:focus,
+    .mobile-menu-links li a.active {
+        background: #262626 !important;
+        color: #CC3333 !important;
+    }
+
+    .mobile-menu-links a.active,
+    .mobile-menu-links li a.active {
+        border-left: 4px solid #CC3333 !important;
+        padding-left: 14px !important;
+    }
+
+    .mobile-menu-links .submit-link,
+    .mobile-menu-links li .submit-link {
+        background: #CC3333 !important;
+        border-bottom-color: #CC3333 !important;
+        color: #ffffff !important;
+    }
+
+    .mobile-menu-links .submit-link:hover,
+    .mobile-menu-links .submit-link:focus,
+    .mobile-menu-links li .submit-link:hover,
+    .mobile-menu-links li .submit-link:focus {
+        background: #8B2323 !important;
+        color: #ffffff !important;
+    }
+}
+/* ND_MOBILE_MENU_CSS_END */
+'''
+
+MOBILE_MENU_JS = r'''
+<script>
+/* ND_MOBILE_MENU_JS_START */
+(function () {
+    const menus = document.querySelectorAll('.mobile-menu-nav');
+    menus.forEach((nav, index) => {
+        const toggle = nav.querySelector('.mobile-menu-toggle');
+        const links = nav.querySelector('.mobile-menu-links');
+        if (!toggle || !links) return;
+
+        if (!links.id) links.id = `nd-mobile-menu-${index + 1}`;
+        toggle.setAttribute('aria-controls', links.id);
+
+        const icon = toggle.querySelector('.mobile-menu-icon');
+        const closeMenu = () => {
+            nav.classList.remove('menu-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Open navigation menu');
+            if (icon) icon.textContent = '☰';
+        };
+
+        const openMenu = () => {
+            nav.classList.add('menu-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            toggle.setAttribute('aria-label', 'Close navigation menu');
+            if (icon) icon.textContent = '✕';
+        };
+
+        toggle.addEventListener('click', () => {
+            if (nav.classList.contains('menu-open')) closeMenu();
+            else openMenu();
+        });
+
+        links.addEventListener('click', event => {
+            if (event.target.closest('a')) closeMenu();
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
+    });
+})();
+/* ND_MOBILE_MENU_JS_END */
+</script>
+'''
+
+
+def menu_button():
+    return '''    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+        <span>Menu</span>
+        <span class="mobile-menu-icon" aria-hidden="true">☰</span>
+    </button>'''
+
 
 def root_nav(page, nav_class):
     labels = [
@@ -23,17 +226,30 @@ def root_nav(page, nav_class):
     current = CORE_PAGES[page]
     links = []
     for key, href, label in labels:
+        classes = []
         attrs = ""
         if key == current:
-            attrs = ' class="active" aria-current="page"'
-        links.append(f'    <a href="{href}"{attrs}>{label}</a>')
-    return f'<nav class="{nav_class}" aria-label="Main navigation">\n' + "\n".join(links) + "\n</nav>"
+            classes.append("active")
+            attrs += ' aria-current="page"'
+        if key == "submit":
+            classes.append("submit-link")
+        if classes:
+            attrs = f' class="{" ".join(classes)}"' + attrs
+        links.append(f'        <a href="{href}"{attrs}>{label}</a>')
+    return (
+        f'<nav class="{nav_class} mobile-menu-nav" aria-label="Main navigation">\n'
+        + menu_button() + "\n"
+        + '    <div class="mobile-menu-links">\n'
+        + "\n".join(links)
+        + "\n    </div>\n</nav>"
+    )
+
 
 def replace_root_nav(path):
     text = path.read_text(encoding="utf-8")
     nav_class = "site-nav" if path.name == "index.html" else "page-nav"
     pattern = re.compile(
-        rf'<nav class="{re.escape(nav_class)}" aria-label="Main navigation">.*?</nav>',
+        rf'<nav class="{re.escape(nav_class)}(?: mobile-menu-nav)?" aria-label="Main navigation">.*?</nav>',
         re.S,
     )
     updated, count = pattern.subn(root_nav(path.name, nav_class), text, count=1)
@@ -41,25 +257,79 @@ def replace_root_nav(path):
         raise RuntimeError(f"Could not replace main nav in {path}")
     path.write_text(updated, encoding="utf-8")
 
+
 def blog_nav():
-    return '''<nav>
-    <ul>
+    return '''<nav class="mobile-menu-nav" aria-label="Main navigation">
+''' + menu_button() + '''
+    <ul class="mobile-menu-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../library.html">Songs</a></li>
       <li><a href="../artists.html">Artists</a></li>
       <li><a href="../discover.html">Discover</a></li>
       <li><a href="index.html" class="active">Blog</a></li>
-      <li><a href="../index.html#submit">Submit</a></li>
+      <li><a href="../index.html#submit" class="submit-link">Submit</a></li>
     </ul>
   </nav>'''
 
+
 def replace_blog_nav(path):
     text = path.read_text(encoding="utf-8")
-    updated, count = re.subn(r'<nav>\s*<ul>.*?</ul>\s*</nav>', blog_nav(), text, count=1, flags=re.S)
+    pattern = re.compile(
+        r'<nav(?: class="mobile-menu-nav" aria-label="Main navigation")?>\s*(?:<button.*?</button>\s*)?<ul(?: class="mobile-menu-links")?>.*?</ul>\s*</nav>',
+        re.S,
+    )
+    updated, count = pattern.subn(blog_nav(), text, count=1)
     if count != 1:
         raise RuntimeError(f"Could not replace blog nav in {path}")
-    updated = updated.replace("flex: 1 1 25%;", "flex: 1 1 33.333%;")
     path.write_text(updated, encoding="utf-8")
+
+
+def request_nav():
+    links = [
+        ("./", "Home", ""),
+        ("./library.html", "Songs", ""),
+        ("./artists.html", "Artists", ""),
+        ("./discover.html", "Discover", ""),
+        ("./blog/", "Blog", ""),
+        ("./#submit", "Submit", "submit-link"),
+    ]
+    anchors = []
+    for href, label, css_class in links:
+        class_attr = f' class="{css_class}"' if css_class else ""
+        anchors.append(f'        <a href="{href}"{class_attr}>{label}</a>')
+    return (
+        '<nav class="nav mobile-menu-nav" aria-label="Main navigation">\n'
+        + menu_button() + "\n"
+        + '    <div class="mobile-menu-links">\n'
+        + "\n".join(anchors)
+        + "\n    </div>\n</nav>"
+    )
+
+
+def replace_request_nav(path):
+    text = path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r'<nav class="nav(?: mobile-menu-nav)?" aria-label="Main navigation">.*?</nav>',
+        re.S,
+    )
+    updated, count = pattern.subn(request_nav(), text, count=1)
+    if count != 1:
+        raise RuntimeError(f"Could not replace request nav in {path}")
+    path.write_text(updated, encoding="utf-8")
+
+
+def inject_mobile_menu_assets(path):
+    text = path.read_text(encoding="utf-8")
+    if "ND_MOBILE_MENU_CSS_START" not in text:
+        if "</style>" not in text:
+            raise RuntimeError(f"Could not find style block in {path}")
+        text = text.replace("</style>", MOBILE_MENU_CSS + "\n</style>", 1)
+    if "ND_MOBILE_MENU_JS_START" not in text:
+        if "</body>" not in text:
+            raise RuntimeError(f"Could not find body end in {path}")
+        text = text.replace("</body>", MOBILE_MENU_JS + "\n</body>", 1)
+    path.write_text(text, encoding="utf-8")
+
 
 def add_home_banner(path):
     text = path.read_text(encoding="utf-8")
@@ -78,9 +348,7 @@ def add_home_banner(path):
     margin: -22px 0 38px;
     padding: 24px 28px;
 }
-.discovery-banner-copy {
-    min-width: 0;
-}
+.discovery-banner-copy { min-width: 0; }
 .discovery-banner-kicker {
     color: #C33;
     font-family: 'Oswald', sans-serif;
@@ -144,12 +412,11 @@ def add_home_banner(path):
     <a class="discovery-banner-cta" href="./discover.html">Start Discovering</a>
 </section>
 '''
-        marker = '\n</div>\n\n<nav class="site-nav" aria-label="Main navigation">'
+        marker = '\n</div>\n\n<nav class="site-nav'
         if marker not in text:
             raise RuntimeError("Could not find homepage banner insertion point")
-        text = text.replace(marker, banner + '\n</div>\n\n<nav class="site-nav" aria-label="Main navigation">', 1)
+        text = text.replace(marker, banner + '\n</div>\n\n<nav class="site-nav', 1)
 
-    text = text.replace("grid-template-columns: repeat(4, minmax(0, 1fr));", "grid-template-columns: repeat(3, minmax(0, 1fr));")
     mobile_css = r'''
     .discovery-banner {
         align-items: flex-start;
@@ -168,6 +435,7 @@ def add_home_banner(path):
         text = text.replace(media_marker, media_marker + "\n" + mobile_css, 1)
 
     path.write_text(text, encoding="utf-8")
+
 
 def patch_discovery(path):
     text = path.read_text(encoding="utf-8")
@@ -188,6 +456,7 @@ def patch_discovery(path):
         text = text.replace(old, new, 1)
     path.write_text(text, encoding="utf-8")
 
+
 def add_ari_removal():
     path = Path("artist_removals.txt")
     lines = path.read_text(encoding="utf-8").splitlines()
@@ -204,15 +473,28 @@ def add_ari_removal():
         ]
         unresolved.write_text("\n".join(unresolved_lines) + "\n", encoding="utf-8")
 
+
 def main():
     for filename in CORE_PAGES:
-        replace_root_nav(Path(filename))
+        path = Path(filename)
+        replace_root_nav(path)
+        inject_mobile_menu_assets(path)
+
     add_home_banner(Path("index.html"))
+
     for path in sorted(Path("blog").glob("*.html")):
         replace_blog_nav(path)
+        inject_mobile_menu_assets(path)
+
+    request_path = Path("requests.html")
+    if request_path.exists():
+        replace_request_nav(request_path)
+        inject_mobile_menu_assets(request_path)
+
     patch_discovery(Path("discover.html"))
     add_ari_removal()
-    print("Discovery navigation, homepage banner, and Ari Lennox exclusion applied.")
+    print("Responsive mobile hamburger navigation applied site-wide.")
+
 
 if __name__ == "__main__":
     main()
