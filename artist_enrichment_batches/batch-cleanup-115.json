@@ -1,0 +1,47 @@
+{
+  "dumb crush": {
+    "bio": "Dumb Crush is a Toronto alternative rock band whose music combines indie rock, post-punk and sharp melodic songwriting. The group has built a presence through independent releases and Canadian touring. Northern Dial carries Dumb Crush as part of its contemporary Toronto rock catalogue.",
+    "website": "https://www.dumbcrushband.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dumbcrush.bandcamp.com/", "https://www.dumbcrushband.com/", "https://exclaim.ca/music/article/dumb-crush-book-fall-canadian-tour"]
+  },
+  "karma sutra": {
+    "bio": "Karma Sutra is an Ottawa-rooted, Toronto-based rapper whose music combines melodic hip-hop with introspective and emotionally direct writing. His catalogue includes the project Sad Shorty and other independent releases tied to Ontario's contemporary rap scene. Northern Dial carries Karma Sutra as part of its Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/karma-sutra-sad-shorty-album/", "https://hiphopcanada.com/lia-kloud-520-ep/"]
+  },
+  "junk": {
+    "bio": "Junk is a Vancouver rapper with German, Italian and Canadian roots whose career spans independent hip-hop, battle rap and collaborative releases. He is also associated with Vancouver's Household Records community. Northern Dial carries Junk as part of its West Coast Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/382iZHdMjKXI44HC0IwOSr", "https://hiphopcanada.com/stealth-bomb-records-2020-roster/"]
+  },
+  "kola": {
+    "bio": "KOLA is a Montreal producer and recording artist whose music is rooted in hip-hop and beat-driven production. Raised in Montreal, he has developed an independent catalogue that reflects the city's multilingual and stylistically diverse music culture. Northern Dial carries KOLA as part of its Montreal producer and hip-hop catalogue.",
+    "website": "https://kolahimself.bandcamp.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/5f5JnmJLC6Wmi8FMXbJzsq", "https://kolahimself.bandcamp.com/track/n-day"]
+  },
+  "noam": {
+    "bio": "Noam is a Toronto singer, songwriter and producer whose independent work blends contemporary songwriting with self-produced arrangements. His Toronto-based catalogue spans original recordings and production work released through his own artist channels. Northern Dial carries Noam as part of its Toronto independent music catalogue.",
+    "website": "https://noam91.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://noam91.bandcamp.com/"]
+  }
+}
