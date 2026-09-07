@@ -13,931 +13,157 @@
   <title>Discover Canadian Music | Northern Dial</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     html { background: #fff; }
-    body {
-      background: linear-gradient(180deg, #fff 0%, #fff 58%, #f7e5e5 100%);
-      color: #1a1a1a;
-      font-family: 'Roboto Condensed', sans-serif;
-      min-height: 100vh;
+    body { margin:0; background:linear-gradient(180deg,#fff 0%,#fff 65%,#f7e5e5 100%); color:#1a1a1a; font-family:"Roboto Condensed",sans-serif; min-height:100vh; }
+    a { color:inherit; }
+    .header { background:#fff; border-bottom:4px solid #C33; }
+    .header-inner { display:flex; justify-content:center; padding:12px 18px; }
+    .brand img { display:block; height:76px; width:auto; }
+    .page-nav { background:#1a1a1a; border-bottom:2px solid #C33; display:flex; justify-content:center; overflow-x:auto; scrollbar-width:none; }
+    .page-nav::-webkit-scrollbar { display:none; }
+    .page-nav a { color:#fff; flex:0 0 auto; font-family:"Oswald",sans-serif; font-size:.9rem; letter-spacing:.1em; padding:13px 20px; text-decoration:none; text-transform:uppercase; }
+    .page-nav a:hover,.page-nav a:focus,.page-nav a.active { background:#272727; color:#C33; }
+    main { max-width:1120px; margin:0 auto; padding:38px 18px 72px; }
+    .hero { background:linear-gradient(135deg,#151515,#2a2a2a); border:5px solid #C33; border-radius:14px; color:#fff; padding:38px; }
+    .eyebrow { color:#C33; font-family:"Oswald",sans-serif; font-size:.85rem; letter-spacing:.16em; margin-bottom:8px; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-family:"Bebas Neue",sans-serif; font-size:clamp(3rem,8vw,5.2rem); font-weight:400; letter-spacing:.03em; line-height:.95; margin-bottom:16px; text-transform:uppercase; }
+    .hero p { color:rgba(255,255,255,.86); font-size:1.1rem; line-height:1.6; margin-bottom:0; max-width:760px; }
+    .builder { background:#fff; border:4px solid #1a1a1a; border-radius:12px; margin-top:28px; padding:28px; }
+    .builder h2,.results-heading h2 { font-family:"Bebas Neue",sans-serif; font-size:2.4rem; font-weight:400; letter-spacing:.04em; margin-bottom:6px; text-transform:uppercase; }
+    .builder-intro { color:#555; line-height:1.5; }
+    .form-grid { display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:22px; }
+    label { display:block; font-family:"Oswald",sans-serif; font-size:.84rem; letter-spacing:.09em; margin-bottom:6px; text-transform:uppercase; }
+    select,input { background:#fff; border:2px solid #bbb; border-radius:7px; color:#1a1a1a; font-family:inherit; font-size:1rem; min-height:48px; padding:10px 12px; width:100%; }
+    select:focus,input:focus { border-color:#C33; outline:3px solid rgba(204,51,51,.13); }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    button { border-radius:7px; cursor:pointer; font-family:"Oswald",sans-serif; font-size:.9rem; font-weight:700; letter-spacing:.09em; min-height:46px; padding:11px 20px; text-transform:uppercase; }
+    .primary-btn { background:#C33; border:2px solid #C33; color:#fff; }
+    .secondary-btn { background:#fff; border:2px solid #1a1a1a; color:#1a1a1a; }
+    button:disabled { cursor:wait; opacity:.55; }
+    .status { background:#f5f5f5; border-left:4px solid #C33; color:#444; display:none; line-height:1.45; margin-top:16px; padding:11px 13px; }
+    .status.show { display:block; }
+    .data-note { color:#777; font-size:.83rem; line-height:1.45; margin:14px 0 0; }
+    .results-section { display:none; margin-top:44px; }
+    .results-section.show { display:block; }
+    .results-heading { display:flex; gap:18px; justify-content:space-between; margin-bottom:18px; }
+    .results-heading p { color:#666; margin:0; max-width:520px; }
+    .results-grid { display:grid; gap:18px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .artist-card { background:#fff; border:3px solid #1a1a1a; border-radius:11px; overflow:hidden; }
+    .card-top { display:grid; gap:16px; grid-template-columns:132px minmax(0,1fr); padding:16px 16px 10px; }
+    .artist-image-link { align-self:start; background:#222; border:2px solid #C33; border-radius:8px; display:block; height:132px; overflow:hidden; position:relative; text-decoration:none; width:132px; }
+    .artist-image { display:block; height:100%; object-fit:cover; width:100%; }
+    .image-fallback { align-items:center; color:#C33; display:flex; font-family:"Bebas Neue",sans-serif; font-size:2.8rem; height:100%; justify-content:center; width:100%; }
+    .rank { background:#C33; color:#fff; font-family:"Oswald",sans-serif; font-size:.68rem; left:6px; letter-spacing:.07em; padding:4px 6px; position:absolute; text-transform:uppercase; top:6px; }
+    .artist-name { font-family:"Oswald",sans-serif; font-size:1.45rem; line-height:1.1; margin:0 0 4px; }
+    .artist-name a { text-decoration:none; }
+    .artist-name a:hover,.artist-name a:focus { color:#C33; }
+    .location { color:#777; font-size:.88rem; margin-bottom:8px; }
+    .tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:9px; }
+    .tag { background:#f4e3e3; border:1px solid #e3bcbc; border-radius:999px; color:#8B2323; font-size:.69rem; font-weight:700; padding:3px 6px; text-transform:uppercase; }
+    .why { color:#333; font-size:.92rem; font-weight:700; line-height:1.4; margin:0; }
+    .card-lower { padding:0 16px 16px; }
+    .bio { color:#5e5e5e; font-size:.9rem; line-height:1.48; margin:2px 0 12px; }
+    .start-track { background:#f5f5f5; border-left:3px solid #1a1a1a; font-size:.84rem; margin-bottom:12px; padding:8px 9px; }
+    .card-actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .request-link,.feature-link { border-radius:6px; display:inline-block; font-family:"Oswald",sans-serif; font-size:.78rem; letter-spacing:.07em; padding:9px 10px; text-align:center; text-decoration:none; text-transform:uppercase; }
+    .request-link { background:#C33; border:2px solid #C33; color:#fff; }
+    .feature-link { background:#fff; border:2px solid #1a1a1a; color:#1a1a1a; }
+    .about-tool { border-top:3px solid #1a1a1a; display:grid; gap:28px; grid-template-columns:1fr 1fr; margin-top:48px; padding-top:30px; }
+    .about-tool h2 { color:#C33; font-family:"Oswald",sans-serif; font-size:1.35rem; margin-bottom:7px; text-transform:uppercase; }
+    .about-tool p { color:#555; line-height:1.6; }
+    .library-cta { color:#C33; font-weight:700; }
+    @media (max-width:760px) {
+      .page-nav a { font-size:.76rem; padding:11px 11px; }
+      main { padding:26px 12px 56px; }
+      .hero { padding:28px 22px; }
+      .builder { padding:22px 18px; }
+      .form-grid { grid-template-columns:1fr; }
+      .results-heading { align-items:flex-start; flex-direction:column; }
+      .results-grid { grid-template-columns:1fr; }
+      .about-tool { grid-template-columns:1fr; }
     }
-    a { color: inherit; }
-    .header {
-      background: #fff;
-      border-bottom: 4px solid #C33;
-      box-shadow: 0 4px 20px rgba(0,0,0,.08);
-      position: relative;
-      z-index: 5;
+    @media (max-width:480px) {
+      .brand img { height:62px; }
+      .card-top { gap:11px; grid-template-columns:92px minmax(0,1fr); padding:12px 12px 8px; }
+      .artist-image-link { height:92px; width:92px; }
+      .artist-name { font-size:1.18rem; }
+      .location { font-size:.78rem; margin-bottom:6px; }
+      .tag { font-size:.62rem; }
+      .why { font-size:.84rem; }
+      .card-lower { padding:0 12px 12px; }
+      .bio { font-size:.86rem; }
+      .card-actions { display:grid; grid-template-columns:1fr; }
+      .request-link,.feature-link { width:100%; }
     }
-    .header-inner {
-      align-items: center;
-      display: flex;
-      gap: 24px;
-      justify-content: space-between;
-      margin: 0 auto;
-      max-width: 1200px;
-      padding: 14px 20px;
-    }
-    .brand {
-      align-items: center;
-      display: inline-flex;
-      text-decoration: none;
-    }
-    .brand img {
-      display: block;
-      height: 82px;
-      width: auto;
-    }
-    .page-nav {
-      background: #1a1a1a;
-      border-bottom: 2px solid #C33;
-      display: flex;
-      justify-content: center;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .page-nav::-webkit-scrollbar { display: none; }
-    .page-nav a {
-      color: #fff;
-      flex: 0 0 auto;
-      font-family: 'Oswald', sans-serif;
-      font-size: .92rem;
-      letter-spacing: .11em;
-      padding: 14px 22px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .page-nav a:hover,
-    .page-nav a:focus,
-    .page-nav a.active {
-      background: #262626;
-      color: #C33;
-    }
-    .page-nav a.active { border-bottom: 3px solid #C33; }
-    main {
-      margin: 0 auto;
-      max-width: 1200px;
-      padding: 48px 20px 80px;
-    }
-    .hero {
-      background: linear-gradient(135deg, #151515 0%, #282828 100%);
-      border: 5px solid #C33;
-      border-radius: 14px;
-      box-shadow: 0 10px 32px rgba(195,51,51,.24);
-      color: #fff;
-      overflow: hidden;
-      padding: 46px 42px;
-      position: relative;
-    }
-    .hero::after {
-      border: 2px solid rgba(204,51,51,.35);
-      border-radius: 50%;
-      content: "";
-      height: 330px;
-      position: absolute;
-      right: -100px;
-      top: -130px;
-      width: 330px;
-    }
-    .eyebrow {
-      color: #C33;
-      font-family: 'Oswald', sans-serif;
-      font-size: .88rem;
-      letter-spacing: .18em;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    h1 {
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 8vw, 5.6rem);
-      font-weight: 400;
-      letter-spacing: .04em;
-      line-height: .95;
-      max-width: 850px;
-      text-transform: uppercase;
-    }
-    .hero p {
-      color: rgba(255,255,255,.86);
-      font-size: 1.16rem;
-      line-height: 1.65;
-      margin-top: 20px;
-      max-width: 720px;
-    }
-    .builder {
-      background: rgba(255,255,255,.96);
-      border: 4px solid #1a1a1a;
-      border-radius: 12px;
-      box-shadow: 0 8px 28px rgba(0,0,0,.12);
-      margin-top: 32px;
-      padding: 30px;
-    }
-    .builder h2,
-    .results-heading h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      letter-spacing: .04em;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-    .builder-intro {
-      color: #555;
-      line-height: 1.55;
-      margin-top: 8px;
-    }
-    .form-grid {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      margin-top: 26px;
-    }
-    label {
-      display: block;
-      font-family: 'Oswald', sans-serif;
-      font-size: .86rem;
-      letter-spacing: .1em;
-      margin-bottom: 7px;
-      text-transform: uppercase;
-    }
-    select,
-    input {
-      background: #fff;
-      border: 2px solid #b9b9b9;
-      border-radius: 7px;
-      color: #1a1a1a;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 1rem;
-      min-height: 50px;
-      outline: none;
-      padding: 12px 13px;
-      width: 100%;
-    }
-    select:focus,
-    input:focus {
-      border-color: #C33;
-      box-shadow: 0 0 0 3px rgba(204,51,51,.12);
-    }
-    .actions {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-    .primary-btn,
-    .secondary-btn {
-      border-radius: 7px;
-      cursor: pointer;
-      font-family: 'Oswald', sans-serif;
-      font-size: .92rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      min-height: 48px;
-      padding: 12px 24px;
-      text-transform: uppercase;
-    }
-    .primary-btn {
-      background: linear-gradient(135deg,#C33,#8B2323);
-      border: 2px solid #C33;
-      color: #fff;
-    }
-    .secondary-btn {
-      background: #fff;
-      border: 2px solid #1a1a1a;
-      color: #1a1a1a;
-    }
-    .primary-btn:hover,
-    .secondary-btn:hover { transform: translateY(-1px); }
-    .primary-btn:disabled {
-      cursor: wait;
-      opacity: .55;
-      transform: none;
-    }
-    .data-note {
-      color: #777;
-      font-size: .84rem;
-      line-height: 1.45;
-      margin-top: 16px;
-    }
-    .status {
-      background: #f4f4f4;
-      border-left: 4px solid #C33;
-      color: #444;
-      display: none;
-      line-height: 1.5;
-      margin-top: 20px;
-      padding: 12px 14px;
-    }
-    .status.show { display: block; }
-    .results-section {
-      display: none;
-      margin-top: 52px;
-    }
-    .results-section.show { display: block; }
-    .results-heading {
-      align-items: end;
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .results-heading p {
-      color: #666;
-      max-width: 600px;
-    }
-    .results-grid {
-      display: grid;
-      gap: 22px;
-      grid-template-columns: repeat(5, minmax(0,1fr));
-    }
-    .artist-card {
-      background: #fff;
-      border: 3px solid #1a1a1a;
-      border-radius: 11px;
-      box-shadow: 0 5px 18px rgba(0,0,0,.1);
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      overflow: hidden;
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    }
-    .artist-card:hover {
-      border-color: #C33;
-      box-shadow: 0 10px 28px rgba(0,0,0,.16);
-      transform: translateY(-4px);
-    }
-    .artist-image-wrap {
-      aspect-ratio: 1 / 1;
-      background: linear-gradient(135deg,#202020,#363636);
-      border-bottom: 3px solid #C33;
-      overflow: hidden;
-      position: relative;
-    }
-    .artist-image {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
-    }
-    .image-fallback {
-      align-items: center;
-      color: #C33;
-      display: flex;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem;
-      height: 100%;
-      justify-content: center;
-      letter-spacing: .04em;
-      width: 100%;
-    }
-    .rank {
-      background: #C33;
-      color: #fff;
-      font-family: 'Oswald', sans-serif;
-      font-size: .8rem;
-      left: 10px;
-      letter-spacing: .08em;
-      padding: 6px 9px;
-      position: absolute;
-      text-transform: uppercase;
-      top: 10px;
-    }
-    .artist-card-body {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      padding: 18px;
-    }
-    .artist-name {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.35rem;
-      line-height: 1.15;
-      margin-bottom: 5px;
-    }
-    .location {
-      color: #777;
-      font-size: .88rem;
-      margin-bottom: 11px;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 12px;
-    }
-    .tag {
-      background: #f3e1e1;
-      border: 1px solid #e4baba;
-      border-radius: 999px;
-      color: #8B2323;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: 4px 7px;
-      text-transform: uppercase;
-    }
-    .why {
-      color: #333;
-      font-size: .92rem;
-      font-weight: 700;
-      line-height: 1.45;
-      margin-bottom: 9px;
-    }
-    .bio {
-      color: #666;
-      font-size: .88rem;
-      line-height: 1.48;
-      margin-bottom: 14px;
-    }
-    .start-track {
-      background: #f6f6f6;
-      border-left: 3px solid #1a1a1a;
-      font-size: .82rem;
-      line-height: 1.4;
-      margin-bottom: 14px;
-      padding: 9px 10px;
-    }
-    .card-actions {
-      display: grid;
-      gap: 8px;
-      margin-top: auto;
-    }
-    .request-link,
-    .feature-link {
-      border-radius: 6px;
-      display: block;
-      font-family: 'Oswald', sans-serif;
-      font-size: .8rem;
-      letter-spacing: .08em;
-      padding: 10px 11px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .request-link {
-      background: #C33;
-      border: 2px solid #C33;
-      color: #fff;
-    }
-    .request-link:hover { background: #8B2323; border-color: #8B2323; }
-    .feature-link {
-      background: #fff;
-      border: 2px solid #1a1a1a;
-      color: #1a1a1a;
-    }
-    .about-tool {
-      border-top: 3px solid #1a1a1a;
-      display: grid;
-      gap: 28px;
-      grid-template-columns: 1fr 1fr;
-      margin-top: 56px;
-      padding-top: 34px;
-    }
-    .about-tool h2 {
-      color: #C33;
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.45rem;
-      letter-spacing: .05em;
-      margin-bottom: 9px;
-      text-transform: uppercase;
-    }
-    .about-tool p {
-      color: #555;
-      line-height: 1.65;
-    }
-    .library-cta {
-      color: #C33;
-      font-weight: 700;
-    }
-    @media (max-width: 1050px) {
-      .results-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
-    }
-    @media (max-width: 760px) {
-      .header-inner { justify-content: center; }
-      .brand img { height: 68px; }
-      .page-nav a { font-size: .78rem; padding: 12px 12px; }
-      main { padding: 28px 14px 60px; }
-      .hero { padding: 32px 24px; }
-      .form-grid { grid-template-columns: 1fr; }
-      .results-grid { grid-template-columns: 1fr; }
-      .results-heading { align-items: start; flex-direction: column; }
-      .artist-card { display: grid; grid-template-columns: 120px 1fr; }
-      .artist-image-wrap { aspect-ratio: auto; border-bottom: 0; border-right: 3px solid #C33; min-height: 100%; }
-      .about-tool { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 430px) {
-      .artist-card { display: flex; }
-      .artist-image-wrap { aspect-ratio: 16/9; border-bottom: 3px solid #C33; border-right: 0; }
-      .builder { padding: 22px 18px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
-    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
   </style>
 </head>
 <body>
   <header class="header">
-    <div class="header-inner">
-      <a class="brand" href="./" aria-label="Northern Dial home">
-        <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial">
-      </a>
-    </div>
+    <div class="header-inner"><a class="brand" href="./" aria-label="Northern Dial home"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial"></a></div>
     <nav class="page-nav" aria-label="Main navigation">
-      <a href="./">Home</a>
-      <a href="./library.html">Songs</a>
-      <a href="./artists.html">Artists</a>
-      <a href="./discover.html" class="active" aria-current="page">Discover</a>
-      <a href="./blog/">Blog</a>
-      <a href="./#submit">Submit</a>
+      <a href="./">Home</a><a href="./library.html">Songs</a><a href="./artists.html">Artists</a><a href="./discover.html" class="active" aria-current="page">Discover</a><a href="./blog/">Blog</a><a href="./#submit">Submit</a>
     </nav>
   </header>
-
   <main>
-    <section class="hero">
-      <div class="eyebrow">Northern Dial Discovery</div>
-      <h1>Find Your Next Canadian Artist</h1>
-      <p>Tell us what you already love. Pick a genre, an era or an artist and we’ll dial up five Canadian artists from the Northern Dial library to check out next.</p>
-    </section>
-
+    <section class="hero"><div class="eyebrow">Northern Dial Discovery</div><h1>Find Your Next Canadian Artist</h1><p>Pick a genre, era or artist you already like. We’ll pull five Canadian artists from the Northern Dial library and give you a quick reason to try each one.</p></section>
     <section class="builder" aria-labelledby="builder-title">
       <h2 id="builder-title">What are you into?</h2>
-      <p class="builder-intro">Use one filter or combine all three. The recommendations come from Northern Dial’s curated Canadian artist library.</p>
-
+      <p class="builder-intro">Use one filter or combine them. If we don’t understand an artist name yet, we’ll tell you instead of pretending we do.</p>
       <div class="form-grid">
-        <div>
-          <label for="genreSelect">Genre</label>
-          <select id="genreSelect">
-            <option value="">Any genre</option>
-            <option value="hip-hop">Hip-Hop</option>
-            <option value="rnb-soul">R&B / Soul</option>
-            <option value="pop">Pop</option>
-            <option value="rock">Rock</option>
-            <option value="indie-alternative">Indie / Alternative</option>
-            <option value="electronic-dance">Electronic / Dance</option>
-            <option value="folk-songwriter">Folk / Singer-Songwriter</option>
-            <option value="country-americana">Country / Americana</option>
-            <option value="jazz">Jazz</option>
-            <option value="punk-hardcore">Punk / Hardcore</option>
-            <option value="metal">Metal</option>
-            <option value="reggae-dancehall">Reggae / Dancehall</option>
-          </select>
-        </div>
-        <div>
-          <label for="eraSelect">Era</label>
-          <select id="eraSelect">
-            <option value="">Any era</option>
-            <option value="2020s">Current / 2020s</option>
-            <option value="2010s">2010s</option>
-            <option value="2000s">2000s</option>
-            <option value="1990s">1990s</option>
-            <option value="pre-1990">1980s and earlier</option>
-          </select>
-        </div>
-        <div>
-          <label for="tasteInput">Artist you like <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
-          <input id="tasteInput" list="artistSuggestions" placeholder="e.g. Ari Lennox, Drake, Portishead" autocomplete="off">
-          <datalist id="artistSuggestions"></datalist>
-        </div>
+        <div><label for="genreSelect">Genre</label><select id="genreSelect"><option value="">Any genre</option><option value="hip-hop">Hip-Hop</option><option value="rnb-soul">R&B / Soul</option><option value="pop">Pop</option><option value="rock">Rock</option><option value="indie-alternative">Indie / Alternative</option><option value="electronic-dance">Electronic / Dance</option><option value="folk-songwriter">Folk / Singer-Songwriter</option><option value="country-americana">Country / Americana</option><option value="jazz">Jazz</option><option value="punk-hardcore">Punk / Hardcore</option><option value="metal">Metal</option><option value="reggae-dancehall">Reggae / Dancehall</option></select></div>
+        <div><label for="eraSelect">Era</label><select id="eraSelect"><option value="">Any era</option><option value="2020s">Current / 2020s</option><option value="2010s">2010s</option><option value="2000s">2000s</option><option value="1990s">1990s</option><option value="pre-1990">1980s and earlier</option></select></div>
+        <div><label for="tasteInput">Artist you like <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label><input id="tasteInput" list="artistSuggestions" placeholder="e.g. VIBI, Ari Lennox, Drake" autocomplete="off"><datalist id="artistSuggestions"></datalist></div>
       </div>
-
-      <div class="actions">
-        <button class="primary-btn" id="discoverBtn" type="button" disabled>Loading artist library…</button>
-        <button class="secondary-btn" id="surpriseBtn" type="button" disabled>Surprise Me</button>
-      </div>
+      <div class="actions"><button class="primary-btn" id="discoverBtn" type="button" disabled>Loading artist library…</button><button class="secondary-btn" id="surpriseBtn" type="button" disabled>Surprise Me</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
-      <p class="data-note">Discovery V1 uses Northern Dial’s artist profiles, catalogue and editorial metadata. Genre and era matching will get sharper as the library continues to be enriched.</p>
+      <p class="data-note">Discovery uses Northern Dial’s curated artist catalogue. Genre and era matching will get sharper as more profiles receive structured metadata.</p>
     </section>
-
-    <section class="results-section" id="resultsSection" aria-live="polite">
-      <div class="results-heading">
-        <div>
-          <div class="eyebrow" style="margin-bottom:6px;">Your five</div>
-          <h2>Artists to check out</h2>
-        </div>
-        <p id="resultsSummary"></p>
-      </div>
-      <div class="results-grid" id="resultsGrid"></div>
-    </section>
-
-    <section class="about-tool">
-      <div>
-        <h2>Built from the Northern Dial library</h2>
-        <p>This isn’t a generic recommendation feed. Discovery starts with artists Northern Dial has catalogued and retained as part of its Canadian music library, then matches them using their profile and catalogue signals.</p>
-      </div>
-      <div>
-        <h2>Hear something you like?</h2>
-        <p>Every result links back into Northern Dial’s request flow so discovery can turn into airplay. You can also <a class="library-cta" href="./artists.html">browse the full artist library</a>.</p>
-      </div>
-    </section>
+    <section class="results-section" id="resultsSection" aria-live="polite"><div class="results-heading"><div><div class="eyebrow">Your five</div><h2>Artists to check out</h2></div><p id="resultsSummary"></p></div><div class="results-grid" id="resultsGrid"></div></section>
+    <section class="about-tool"><div><h2>Built from the Northern Dial library</h2><p>Discovery only recommends artists retained in Northern Dial’s Canadian artist catalogue.</p></div><div><h2>Hear something you like?</h2><p>Use the request button to send that artist into Northern Dial’s existing request flow, or <a class="library-cta" href="./artists.html">browse the full artist library</a>.</p></div></section>
   </main>
-
   <script>
-    const GENRES = {
-      "hip-hop": { label: "Hip-Hop", terms: ["hip-hop","hip hop","rapper","rap "," rap","rap.","rap,","rap-","mc ","emcee","boom bap","trap","drill"] },
-      "rnb-soul": { label: "R&B / Soul", terms: ["r&b","rnb","rhythm and blues","neo-soul","neo soul","soul","soulful"] },
-      "pop": { label: "Pop", terms: [" pop ","synth-pop","synthpop","dance-pop","art-pop","electropop","dream pop","indie-pop","indie pop"] },
-      "rock": { label: "Rock", terms: [" rock ","garage rock","hard rock","classic rock","post-rock","rockabilly"] },
-      "indie-alternative": { label: "Indie / Alternative", terms: ["indie","alternative","alt-","alt ","shoegaze","post-punk","new wave","dream pop","art rock","experimental"] },
-      "electronic-dance": { label: "Electronic / Dance", terms: ["electronic","electronica","house","techno"," dance ","club","edm","ambient","trip-hop","trip hop","downtempo","synth"] },
-      "folk-songwriter": { label: "Folk / Singer-Songwriter", terms: ["folk","singer-songwriter","singer songwriter","acoustic","roots music"] },
-      "country-americana": { label: "Country / Americana", terms: ["country","americana","alt-country","alt country","bluegrass","honky tonk"] },
-      "jazz": { label: "Jazz", terms: ["jazz","bebop","improvisation","improvised music"] },
-      "punk-hardcore": { label: "Punk / Hardcore", terms: ["punk","hardcore","post-hardcore","post hardcore","emo","ska punk"] },
-      "metal": { label: "Metal", terms: ["metal","doom","black metal","death metal","thrash","sludge","metalcore"] },
-      "reggae-dancehall": { label: "Reggae / Dancehall", terms: ["reggae","dancehall","dub","soca","caribbean"] }
+    const $=id=>document.getElementById(id);
+    const normalize=value=>String(value||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[’‘]/g,"'").trim();
+    const GENRES={
+      "hip-hop":{label:"Hip-Hop",terms:["hip-hop","hip hop","rapper"," rap ","rap.","rap,","boom bap","trap","drill","emcee"]},
+      "rnb-soul":{label:"R&B / Soul",terms:["r&b","rnb","rhythm and blues","neo-soul","neo soul","soul","soulful"]},
+      "pop":{label:"Pop",terms:[" pop ","synth-pop","synthpop","dance-pop","art-pop","electropop","dream pop","indie-pop","indie pop","scandi-pop"]},
+      "rock":{label:"Rock",terms:[" rock ","garage rock","hard rock","classic rock","post-rock","rockabilly"]},
+      "indie-alternative":{label:"Indie / Alternative",terms:["indie","alternative","alt-","shoegaze","post-punk","new wave","dream pop","art rock","experimental"]},
+      "electronic-dance":{label:"Electronic / Dance",terms:["electronic","electronica","house","techno"," dance ","club","edm","ambient","trip-hop","trip hop","downtempo","synth"]},
+      "folk-songwriter":{label:"Folk / Singer-Songwriter",terms:["folk","singer-songwriter","singer songwriter","acoustic","roots music"]},
+      "country-americana":{label:"Country / Americana",terms:["country","americana","alt-country","bluegrass","honky tonk"]},
+      "jazz":{label:"Jazz",terms:["jazz","bebop","improvisation","improvised music"]},
+      "punk-hardcore":{label:"Punk / Hardcore",terms:["punk","hardcore","post-hardcore","emo","ska punk"]},
+      "metal":{label:"Metal",terms:["metal","doom","black metal","death metal","thrash","sludge","metalcore"]},
+      "reggae-dancehall":{label:"Reggae / Dancehall",terms:["reggae","dancehall","dub","soca","caribbean"]}
     };
-
-    const ERA_LABELS = {
-      "2020s": "2020s",
-      "2010s": "2010s",
-      "2000s": "2000s",
-      "1990s": "1990s",
-      "pre-1990": "1980s and earlier"
-    };
-
-    const REFERENCE_TASTES = {
-      "ari lennox": ["rnb-soul"],
-      "sza": ["rnb-soul","pop"],
-      "erykah badu": ["rnb-soul"],
-      "dangelo": ["rnb-soul"],
-      "d'angelo": ["rnb-soul"],
-      "anderson paak": ["rnb-soul","hip-hop"],
-      "anderson .paak": ["rnb-soul","hip-hop"],
-      "kendrick lamar": ["hip-hop"],
-      "j cole": ["hip-hop"],
-      "j. cole": ["hip-hop"],
-      "de la soul": ["hip-hop"],
-      "a tribe called quest": ["hip-hop"],
-      "outkast": ["hip-hop"],
-      "nas": ["hip-hop"],
-      "radiohead": ["indie-alternative","rock","electronic-dance"],
-      "portishead": ["electronic-dance","indie-alternative"],
-      "massive attack": ["electronic-dance","indie-alternative"],
-      "nirvana": ["rock","indie-alternative"],
-      "the cure": ["indie-alternative","rock"],
-      "phoebe bridgers": ["indie-alternative","folk-songwriter"],
-      "boygenius": ["indie-alternative","folk-songwriter"],
-      "taylor swift": ["pop","folk-songwriter"],
-      "beyonce": ["pop","rnb-soul"],
-      "beyoncé": ["pop","rnb-soul"],
-      "charli xcx": ["pop","electronic-dance"],
-      "dua lipa": ["pop","electronic-dance"],
-      "daft punk": ["electronic-dance"],
-      "fred again": ["electronic-dance"],
-      "fred again..": ["electronic-dance"],
-      "aphex twin": ["electronic-dance"],
-      "johnny cash": ["country-americana"],
-      "dolly parton": ["country-americana"],
-      "wilco": ["country-americana","indie-alternative","rock"],
-      "joni mitchell": ["folk-songwriter"],
-      "bob dylan": ["folk-songwriter"],
-      "miles davis": ["jazz"],
-      "kamasi washington": ["jazz"],
-      "bad brains": ["punk-hardcore"],
-      "turnstile": ["punk-hardcore"],
-      "metallica": ["metal"],
-      "black sabbath": ["metal","rock"],
-      "bob marley": ["reggae-dancehall"],
-      "burna boy": ["reggae-dancehall","pop"],
-      "drake": ["hip-hop","rnb-soul","pop"],
-      "the weeknd": ["rnb-soul","pop","electronic-dance"],
-      "weeknd": ["rnb-soul","pop","electronic-dance"]
-    };
-
-    let library = [];
-    let imageMap = new Map();
-    let ready = false;
-
-    const $ = id => document.getElementById(id);
-
-    function normalize(value) {
-      return String(value || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .replace(/[’‘]/g, "'")
-        .replace(/\s+/g, " ")
-        .trim();
-    }
-
-    function classifyGenres(text) {
-      const haystack = ` ${normalize(text)} `;
-      const matches = [];
-      Object.entries(GENRES).forEach(([key, genre]) => {
-        if (genre.terms.some(term => haystack.includes(normalize(term)))) matches.push(key);
-      });
-      return [...new Set(matches)];
-    }
-
-    function inferEras(text) {
-      const value = normalize(text);
-      const eras = new Set();
-      const years = [...value.matchAll(/\b(19[5-9]\d|20[0-2]\d)\b/g)].map(match => Number(match[1]));
-      years.forEach(year => {
-        if (year >= 2020) eras.add("2020s");
-        else if (year >= 2010) eras.add("2010s");
-        else if (year >= 2000) eras.add("2000s");
-        else if (year >= 1990) eras.add("1990s");
-        else eras.add("pre-1990");
-      });
-      if (/\b(2020s|current|contemporary|emerging|recent|new generation)\b/.test(value)) eras.add("2020s");
-      if (/\b(2010s|streaming era)\b/.test(value)) eras.add("2010s");
-      if (/\b(2000s|aughts)\b/.test(value)) eras.add("2000s");
-      if (/\b(1990s|90s|nineties)\b/.test(value)) eras.add("1990s");
-      if (/\b(1980s|80s|1970s|70s|1960s|60s|veteran|legacy)\b/.test(value)) eras.add("pre-1990");
-      return [...eras];
-    }
-
-    function parseImages(tsv) {
-      const map = new Map();
-      String(tsv || "").split(/\r?\n/).slice(1).forEach(line => {
-        const tab = line.indexOf("\t");
-        if (tab < 1) return;
-        const artist = line.slice(0, tab).trim();
-        const url = line.slice(tab + 1).trim();
-        if (artist && url && !map.has(normalize(artist))) map.set(normalize(artist), url);
-      });
-      return map;
-    }
-
-    function cleanSummaryName(summary) {
-      if (!summary) return "";
-      const firstTextNode = [...summary.childNodes].find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
-      if (firstTextNode) return firstTextNode.textContent.trim();
-      return summary.textContent.replace(/\(\s*\d+\s+tracks?\s*\)\s*$/i, "").trim();
-    }
-
-    function parseArtistLibrary(html) {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      const artists = [];
-      const seen = new Set();
-
-      doc.querySelectorAll("details[data-search]").forEach(details => {
-        const name = cleanSummaryName(details.querySelector("summary"));
-        const key = normalize(name);
-        if (!name || seen.has(key)) return;
-        seen.add(key);
-
-        const bio = details.querySelector(".profile-bio")?.textContent.trim() || "";
-        const location = details.querySelector(".profile-location")?.textContent.trim() || "";
-        const tracks = [...details.querySelectorAll(".track")].map(track => ({
-          title: track.querySelector(".track-title")?.textContent.trim() || "",
-          album: track.querySelector(".track-album")?.textContent.trim() || ""
-        })).filter(track => track.title);
-
-        const requestHref = details.querySelector(".request-link")?.getAttribute("href") || `./index.html?request=${encodeURIComponent(name)}`;
-        const featureAnchor = [...details.querySelectorAll(".profile-links a")].find(a => /northern dial feature/i.test(a.textContent));
-        const feature = featureAnchor?.getAttribute("href") || "";
-
-        const classificationText = [bio, ...tracks.slice(0, 12).map(track => track.album)].join(" ");
-        const genres = classifyGenres(classificationText);
-        const eras = inferEras(classificationText);
-
-        artists.push({
-          name,
-          key,
-          bio,
-          location,
-          tracks,
-          requestHref,
-          feature,
-          genres,
-          eras,
-          image: imageMap.get(key) || ""
-        });
-      });
-
-      return artists;
-    }
-
-    function populateSuggestions() {
-      const datalist = $("artistSuggestions");
-      const values = [
-        ...library.map(artist => artist.name),
-        ...Object.keys(REFERENCE_TASTES).map(name => name.replace(/\b\w/g, char => char.toUpperCase()))
-      ];
-      const unique = [...new Set(values)].sort((a,b) => a.localeCompare(b));
-      datalist.innerHTML = unique.slice(0, 1800).map(name => `<option value="${escapeAttr(name)}"></option>`).join("");
-    }
-
-    function escapeHtml(value) {
-      const div = document.createElement("div");
-      div.textContent = String(value || "");
-      return div.innerHTML;
-    }
-
-    function escapeAttr(value) {
-      return escapeHtml(value).replace(/"/g, "&quot;");
-    }
-
-    function truncate(text, length = 175) {
-      const value = String(text || "").trim();
-      if (value.length <= length) return value;
-      const clipped = value.slice(0, length).replace(/\s+\S*$/, "");
-      return `${clipped}…`;
-    }
-
-    function tasteGenresFor(input) {
-      const key = normalize(input);
-      if (!key) return { genres: [], source: "" };
-
-      const exact = library.find(artist => artist.key === key);
-      if (exact && exact.genres.length) return { genres: exact.genres, source: exact.name };
-
-      const close = library.find(artist => artist.key.includes(key) || key.includes(artist.key));
-      if (close && close.genres.length) return { genres: close.genres, source: close.name };
-
-      if (REFERENCE_TASTES[key]) return { genres: REFERENCE_TASTES[key], source: input.trim() };
-
-      return { genres: [], source: input.trim() };
-    }
-
-    function scoreArtist(artist, selectedGenre, selectedEra, tasteGenres, excludedKey) {
-      if (artist.key === excludedKey) return -999;
-      let score = Math.random() * 1.8;
-
-      if (selectedGenre) {
-        if (artist.genres.includes(selectedGenre)) score += 10;
-        else score -= 3;
-      }
-
-      const overlap = artist.genres.filter(genre => tasteGenres.includes(genre));
-      score += overlap.length * 6;
-
-      if (selectedEra) {
-        if (artist.eras.includes(selectedEra)) score += 5;
-        else if (artist.eras.length) score -= 1.5;
-      }
-
-      if (artist.bio) score += 1.2;
-      if (artist.image) score += .5;
-      if (artist.feature) score += 1.2;
-      if (artist.tracks.length > 1) score += .5;
-
-      return score;
-    }
-
-    function whyLine(artist, selectedGenre, selectedEra, tasteGenres, tasteSource) {
-      const pieces = [];
-      if (selectedGenre && artist.genres.includes(selectedGenre)) {
-        pieces.push(`A ${GENRES[selectedGenre].label} match`);
-      } else {
-        const overlap = artist.genres.find(genre => tasteGenres.includes(genre));
-        if (overlap && tasteSource) pieces.push(`If you like ${tasteSource}, the ${GENRES[overlap].label.toLowerCase()} connection is a good place to start`);
-      }
-      if (selectedEra && artist.eras.includes(selectedEra)) pieces.push(`with ${ERA_LABELS[selectedEra].toLowerCase()} signals`);
-      if (artist.location) pieces.push(`from ${artist.location}`);
-      if (!pieces.length) return "A Canadian artist from the Northern Dial library worth putting on your radar.";
-      return `${pieces.join(" ")}.`;
-    }
-
-    function makeRecommendations({ surprise = false } = {}) {
-      if (!ready) return;
-
-      let selectedGenre = $("genreSelect").value;
-      let selectedEra = $("eraSelect").value;
-      const tasteInput = $("tasteInput").value.trim();
-
-      if (surprise) {
-        selectedGenre = "";
-        selectedEra = "";
-        $("genreSelect").value = "";
-        $("eraSelect").value = "";
-        $("tasteInput").value = "";
-      }
-
-      const taste = tasteGenresFor(tasteInput);
-      const excludedKey = normalize(taste.source);
-
-      if (tasteInput && !taste.genres.length) {
-        showStatus(`We don’t have a taste profile for “${tasteInput}” yet, so I’ll lean on your genre and era choices. Try an artist from the suggestions for stronger matching.`);
-      } else {
-        hideStatus();
-      }
-
-      const scored = library
-        .filter(artist => artist.genres.length || (!selectedGenre && !taste.genres.length))
-        .map(artist => ({ artist, score: scoreArtist(artist, selectedGenre, selectedEra, taste.genres, excludedKey) }))
-        .filter(item => item.score > -900)
-        .sort((a,b) => b.score - a.score);
-
-      let picks = scored.slice(0, 5).map(item => item.artist);
-
-      if (picks.length < 5) {
-        const used = new Set(picks.map(artist => artist.key));
-        const backups = library
-          .filter(artist => !used.has(artist.key) && artist.key !== excludedKey)
-          .sort(() => Math.random() - .5)
-          .slice(0, 5 - picks.length);
-        picks = [...picks, ...backups];
-      }
-
-      renderResults(picks, selectedGenre, selectedEra, taste.genres, taste.source, surprise);
-    }
-
-    function renderResults(picks, selectedGenre, selectedEra, tasteGenres, tasteSource, surprise) {
-      const summaryBits = [];
-      if (selectedGenre) summaryBits.push(GENRES[selectedGenre].label);
-      if (selectedEra) summaryBits.push(ERA_LABELS[selectedEra]);
-      if (tasteSource) summaryBits.push(`fans of ${tasteSource}`);
-
-      $("resultsSummary").textContent = surprise
-        ? "Five picks pulled from Northern Dial’s Canadian artist library."
-        : summaryBits.length
-          ? `Matched around ${summaryBits.join(" · ")}.`
-          : "Five picks pulled from Northern Dial’s Canadian artist library.";
-
-      $("resultsGrid").innerHTML = picks.map((artist, index) => {
-        const tags = [
-          ...artist.genres.slice(0,3).map(key => GENRES[key]?.label).filter(Boolean),
-          ...artist.eras.slice(0,1).map(key => ERA_LABELS[key]).filter(Boolean)
-        ];
-        const track = artist.tracks[0];
-        const image = artist.image
-          ? `<img class="artist-image" src="${escapeAttr(artist.image)}" alt="${escapeAttr(artist.name)}" loading="lazy" onerror="this.outerHTML='<div class=&quot;image-fallback&quot;>ND</div>'">`
-          : `<div class="image-fallback">ND</div>`;
-        const feature = artist.feature
-          ? `<a class="feature-link" href="${escapeAttr(artist.feature)}">Read Northern Dial Feature</a>`
-          : "";
-        const requestUrl = artist.requestHref || `./index.html?request=${encodeURIComponent(artist.name)}`;
-        const bio = artist.bio || "Explore this Canadian artist in the Northern Dial catalogue.";
-
-        return `
-          <article class="artist-card">
-            <div class="artist-image-wrap">
-              ${image}
-              <div class="rank">Pick ${index + 1}</div>
-            </div>
-            <div class="artist-card-body">
-              <h3 class="artist-name">${escapeHtml(artist.name)}</h3>
-              <div class="location">${escapeHtml(artist.location || "Canada")}</div>
-              <div class="tags">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
-              <p class="why">${escapeHtml(whyLine(artist, selectedGenre, selectedEra, tasteGenres, tasteSource))}</p>
-              <p class="bio">${escapeHtml(truncate(bio))}</p>
-              ${track ? `<div class="start-track"><strong>On Northern Dial:</strong> ${escapeHtml(track.title)}</div>` : ""}
-              <div class="card-actions">
-                <a class="request-link" href="${escapeAttr(requestUrl)}">Request ${escapeHtml(artist.name)}</a>
-                ${feature}
-              </div>
-            </div>
-          </article>`;
-      }).join("");
-
-      $("resultsSection").classList.add("show");
-      $("resultsSection").scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function showStatus(message) {
-      $("status").textContent = message;
-      $("status").classList.add("show");
-    }
-
-    function hideStatus() {
-      $("status").classList.remove("show");
-      $("status").textContent = "";
-    }
-
-    async function loadDiscoveryData() {
-      const button = $("discoverBtn");
-      try {
-        const [artistsResponse, imagesResponse] = await Promise.all([
-          fetch("./artists.html", { cache: "no-store" }),
-          fetch("./library_artist_images.tsv", { cache: "no-store" })
-        ]);
-
-        if (!artistsResponse.ok) throw new Error(`Artist library returned ${artistsResponse.status}`);
-
-        const [artistsHtml, imagesTsv] = await Promise.all([
-          artistsResponse.text(),
-          imagesResponse.ok ? imagesResponse.text() : Promise.resolve("")
-        ]);
-
-        imageMap = parseImages(imagesTsv);
-        library = parseArtistLibrary(artistsHtml);
-
-        if (library.length < 5) throw new Error("Artist library did not return enough records");
-
-        populateSuggestions();
-        ready = true;
-        button.disabled = false;
-        button.textContent = "Find Me 5 Artists";
-        $("surpriseBtn").disabled = false;
-
-        const tagged = library.filter(artist => artist.genres.length).length;
-        showStatus(`${library.length.toLocaleString()} Canadian artist profiles loaded. ${tagged.toLocaleString()} currently have discovery genre signals.`);
-        setTimeout(hideStatus, 4200);
-      } catch (error) {
-        console.error("Discovery load failed:", error);
-        button.textContent = "Discovery unavailable";
-        showStatus("The artist library couldn’t load right now. You can still browse the full artist index and try Discovery again shortly.");
-      }
-    }
-
-    $("discoverBtn").addEventListener("click", () => makeRecommendations());
-    $("surpriseBtn").addEventListener("click", () => makeRecommendations({ surprise: true }));
-    $("tasteInput").addEventListener("keydown", event => {
-      if (event.key === "Enter" && ready) makeRecommendations();
-    });
-
+    const ERA_LABELS={"2020s":"2020s","2010s":"2010s","2000s":"2000s","1990s":"1990s","pre-1990":"1980s and earlier"};
+    const REFERENCE_TASTES={"vibi":["pop","indie-alternative"],"ari lennox":["rnb-soul"],"sza":["rnb-soul","pop"],"erykah badu":["rnb-soul"],"d'angelo":["rnb-soul"],"anderson .paak":["rnb-soul","hip-hop"],"kendrick lamar":["hip-hop"],"j. cole":["hip-hop"],"de la soul":["hip-hop"],"a tribe called quest":["hip-hop"],"outkast":["hip-hop"],"nas":["hip-hop"],"radiohead":["indie-alternative","rock","electronic-dance"],"portishead":["electronic-dance","indie-alternative"],"massive attack":["electronic-dance","indie-alternative"],"nirvana":["rock","indie-alternative"],"the cure":["indie-alternative","rock"],"phoebe bridgers":["indie-alternative","folk-songwriter"],"boygenius":["indie-alternative","folk-songwriter"],"taylor swift":["pop","folk-songwriter"],"beyonce":["pop","rnb-soul"],"charli xcx":["pop","electronic-dance"],"dua lipa":["pop","electronic-dance"],"daft punk":["electronic-dance"],"fred again..":["electronic-dance"]};
+    let library=[],imageMap=new Map(),ready=false;
+    function escapeHtml(value){const div=document.createElement("div");div.textContent=String(value||"");return div.innerHTML;}
+    function escapeAttr(value){return escapeHtml(value).replace(/"/g,"&quot;");}
+    function classifyGenres(text){const haystack=` ${normalize(text)} `;return Object.entries(GENRES).filter(([,genre])=>genre.terms.some(term=>haystack.includes(normalize(term)))).map(([key])=>key);}
+    function inferEras(text){const value=normalize(text),eras=new Set(),years=[...value.matchAll(/\b(19[5-9]\d|20[0-2]\d)\b/g)].map(m=>Number(m[1]));years.forEach(year=>{if(year>=2020)eras.add("2020s");else if(year>=2010)eras.add("2010s");else if(year>=2000)eras.add("2000s");else if(year>=1990)eras.add("1990s");else eras.add("pre-1990");});if(/\b(current|contemporary|emerging|2020s)\b/.test(value))eras.add("2020s");if(/\b(2010s|streaming era)\b/.test(value))eras.add("2010s");if(/\b(2000s|aughts)\b/.test(value))eras.add("2000s");if(/\b(1990s|90s|nineties)\b/.test(value))eras.add("1990s");if(/\b(1980s|80s|1970s|70s|1960s|60s|legacy)\b/.test(value))eras.add("pre-1990");return[...eras];}
+    function parseImages(tsv){const map=new Map();String(tsv||"").split(/\r?\n/).slice(1).forEach(line=>{const tab=line.indexOf("\t");if(tab<1)return;const name=line.slice(0,tab).trim(),url=line.slice(tab+1).trim();if(name&&url&&!map.has(normalize(name)))map.set(normalize(name),url);});return map;}
+    function cleanSummaryName(summary){if(!summary)return"";const textNode=[...summary.childNodes].find(node=>node.nodeType===Node.TEXT_NODE&&node.textContent.trim());return textNode?textNode.textContent.trim():summary.textContent.replace(/\(\s*\d+\s+tracks?\s*\)\s*$/i,"").trim();}
+    function parseArtistLibrary(html){const doc=new DOMParser().parseFromString(html,"text/html"),artists=[],seen=new Set();doc.querySelectorAll("details[data-search]").forEach(details=>{const name=cleanSummaryName(details.querySelector("summary")),key=normalize(name);if(!name||seen.has(key))return;seen.add(key);const bio=details.querySelector(".profile-bio")?.textContent.trim()||"",location=details.querySelector(".profile-location")?.textContent.trim()||"",tracks=[...details.querySelectorAll(".track")].map(track=>({title:track.querySelector(".track-title")?.textContent.trim()||"",album:track.querySelector(".track-album")?.textContent.trim()||""})).filter(track=>track.title),requestHref=details.querySelector(".request-link")?.getAttribute("href")||`./index.html?request=${encodeURIComponent(name)}`,featureAnchor=[...details.querySelectorAll(".profile-links a")].find(a=>/northern dial feature/i.test(a.textContent)),feature=featureAnchor?.getAttribute("href")||"",signals=[bio,...tracks.slice(0,12).map(track=>track.album)].join(" ");artists.push({name,key,bio,location,tracks,requestHref,feature,genres:classifyGenres(signals),eras:inferEras(signals),image:imageMap.get(key)||""});});return artists;}
+    function populateSuggestions(){const names=[...library.map(a=>a.name),...Object.keys(REFERENCE_TASTES)],unique=[...new Set(names)].sort((a,b)=>a.localeCompare(b));$("artistSuggestions").innerHTML=unique.map(name=>`<option value="${escapeAttr(name)}"></option>`).join("");}
+    function resolveTaste(input){const raw=String(input||"").trim(),key=normalize(raw);if(!key)return{genres:[],source:"",matched:false,excludedKey:""};const exact=library.find(artist=>artist.key===key);if(exact&&exact.genres.length)return{genres:exact.genres,source:exact.name,matched:true,excludedKey:exact.key};const close=library.find(artist=>artist.key.includes(key)||key.includes(artist.key));if(close&&close.genres.length)return{genres:close.genres,source:close.name,matched:true,excludedKey:close.key};if(REFERENCE_TASTES[key])return{genres:REFERENCE_TASTES[key],source:raw,matched:true,excludedKey:key};return{genres:[],source:"",matched:false,excludedKey:""};}
+    function scoreArtist(artist,genre,era,tasteGenres){let score=Math.random()*1.2;if(genre&&artist.genres.includes(genre))score+=12;score+=artist.genres.filter(g=>tasteGenres.includes(g)).length*7;if(era&&artist.eras.includes(era))score+=5;if(artist.bio)score+=1;if(artist.feature)score+=1;if(artist.tracks.length)score+=.5;return score;}
+    function makeRecommendations({surprise=false}={}){if(!ready)return;let genre=$("genreSelect").value,era=$("eraSelect").value,tasteInput=$("tasteInput").value.trim();if(surprise){genre="";era="";tasteInput="";$("genreSelect").value="";$("eraSelect").value="";$("tasteInput").value="";}const taste=resolveTaste(tasteInput);if(tasteInput&&!taste.matched&&!genre&&!era){showStatus(`I don’t have enough information about “${tasteInput}” yet. Pick a genre or era, or choose an artist from the suggestions.`);$("resultsSection").classList.remove("show");return;}if(tasteInput&&!taste.matched)showStatus(`I don’t have a reliable taste profile for “${tasteInput}” yet, so these picks use only your selected genre and era.`);else hideStatus();let candidates=library.filter(a=>a.key!==taste.excludedKey);if(genre){const strict=candidates.filter(a=>a.genres.includes(genre));if(strict.length>=5)candidates=strict;}else if(taste.genres.length){const strict=candidates.filter(a=>a.genres.some(g=>taste.genres.includes(g)));if(strict.length>=5)candidates=strict;}const ranked=candidates.map(artist=>({artist,score:scoreArtist(artist,genre,era,taste.genres)})).sort((a,b)=>b.score-a.score),pool=ranked.slice(0,Math.min(12,ranked.length)),picks=[];while(pool.length&&picks.length<5){const weightedTop=Math.min(6,pool.length),index=Math.floor(Math.random()*weightedTop);picks.push(pool.splice(index,1)[0].artist);}renderResults(picks,genre,era,taste,surprise);}
+    function whyLine(artist,genre,era,taste){const reasons=[];if(genre&&artist.genres.includes(genre))reasons.push(`${GENRES[genre].label} fit`);const overlap=artist.genres.find(g=>taste.genres.includes(g));if(overlap&&taste.source)reasons.push(`shares a ${GENRES[overlap].label.toLowerCase()} lane with ${taste.source}`);if(era&&artist.eras.includes(era))reasons.push(`${ERA_LABELS[era]} signal`);if(!reasons.length&&artist.genres.length)reasons.push(`${GENRES[artist.genres[0]].label} from the Northern Dial library`);return reasons.length?reasons.join(" · "):"Canadian artist from the Northern Dial library";}
+    function truncate(text,len=170){const value=String(text||"").trim();if(value.length<=len)return value;return value.slice(0,len).replace(/\s+\S*$/,"")+"…";}
+    function renderResults(picks,genre,era,taste,surprise){const summary=[];if(genre)summary.push(GENRES[genre].label);if(era)summary.push(ERA_LABELS[era]);if(taste.matched&&taste.source)summary.push(`fans of ${taste.source}`);$("resultsSummary").textContent=surprise?"Five picks from Northern Dial’s Canadian artist library.":summary.length?`Matched around ${summary.join(" · ")}.`:"Five picks from Northern Dial’s Canadian artist library.";$("resultsGrid").innerHTML=picks.map((artist,index)=>{const requestUrl=artist.requestHref||`./index.html?request=${encodeURIComponent(artist.name)}`,primaryUrl=artist.feature||requestUrl,tags=[...artist.genres.slice(0,3).map(g=>GENRES[g]?.label).filter(Boolean),...artist.eras.slice(0,1).map(e=>ERA_LABELS[e]).filter(Boolean)],image=artist.image?`<img class="artist-image" src="${escapeAttr(artist.image)}" alt="${escapeAttr(artist.name)}" loading="lazy" onerror="this.outerHTML='<div class=&quot;image-fallback&quot;>ND</div>'">`:`<div class="image-fallback">ND</div>`,track=artist.tracks[0],feature=artist.feature?`<a class="feature-link" href="${escapeAttr(artist.feature)}">Read Feature</a>`:"",bio=artist.bio||"Explore this Canadian artist in the Northern Dial catalogue.";return`<article class="artist-card"><div class="card-top"><a class="artist-image-link" href="${escapeAttr(primaryUrl)}" aria-label="${escapeAttr(artist.feature?`Read about ${artist.name}`:`Request ${artist.name}`)}">${image}<span class="rank">Pick ${index+1}</span></a><div><h3 class="artist-name"><a href="${escapeAttr(primaryUrl)}">${escapeHtml(artist.name)}</a></h3><div class="location">${escapeHtml(artist.location||"Canada")}</div><div class="tags">${tags.map(tag=>`<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div><p class="why">${escapeHtml(whyLine(artist,genre,era,taste))}</p></div></div><div class="card-lower"><p class="bio">${escapeHtml(truncate(bio))}</p>${track?`<div class="start-track"><strong>On Northern Dial:</strong> ${escapeHtml(track.title)}</div>`:""}<div class="card-actions"><a class="request-link" href="${escapeAttr(requestUrl)}">Request ${escapeHtml(artist.name)}</a>${feature}</div></div></article>`;}).join("");$("resultsSection").classList.add("show");$("resultsSection").scrollIntoView({behavior:"smooth",block:"start"});}
+    function showStatus(message){$("status").textContent=message;$("status").classList.add("show");}
+    function hideStatus(){$("status").textContent="";$("status").classList.remove("show");}
+    async function loadDiscoveryData(){try{const[artistsResponse,imagesResponse]=await Promise.all([fetch("./artists.html",{cache:"no-store"}),fetch("./library_artist_images.tsv",{cache:"no-store"})]);if(!artistsResponse.ok)throw new Error(`Artist library returned ${artistsResponse.status}`);const[artistsHtml,imagesTsv]=await Promise.all([artistsResponse.text(),imagesResponse.ok?imagesResponse.text():Promise.resolve("")]);imageMap=parseImages(imagesTsv);library=parseArtistLibrary(artistsHtml);if(library.length<5)throw new Error("Not enough artist records");populateSuggestions();ready=true;$("discoverBtn").disabled=false;$("discoverBtn").textContent="Find Me 5 Artists";$("surpriseBtn").disabled=false;const tagged=library.filter(a=>a.genres.length).length;showStatus(`${library.length.toLocaleString()} Canadian artist profiles loaded. ${tagged.toLocaleString()} currently have discovery genre signals.`);setTimeout(hideStatus,3500);}catch(error){console.error("Discovery load failed:",error);$("discoverBtn").textContent="Discovery unavailable";showStatus("The artist library couldn’t load right now. Try again shortly or browse the full artist index.");}}
+    $("discoverBtn").addEventListener("click",()=>makeRecommendations());
+    $("surpriseBtn").addEventListener("click",()=>makeRecommendations({surprise:true}));
+    $("tasteInput").addEventListener("keydown",event=>{if(event.key==="Enter"&&ready)makeRecommendations();});
     loadDiscoveryData();
   </script>
 </body>
