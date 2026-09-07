@@ -1,0 +1,47 @@
+{
+  "tegan": {
+    "bio": "Tegan is a split library credit for Tegan Quin of the Canadian duo Tegan and Sara. Calgary-born twin sisters Tegan and Sara Quin built an internationally acclaimed career spanning indie rock, alternative pop and synth-pop, with records including The Con, Sainthood, Heartthrob and Love You to Death.",
+    "website": "https://teganandsara.com/",
+    "instagram": "https://www.instagram.com/teganandsara/",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/tegan-and-sara-emc", "https://teganandsara.com/"]
+  },
+  "sara": {
+    "bio": "Sara is a split library credit for Sara Quin of the Canadian duo Tegan and Sara. Calgary-born twin sisters Sara and Tegan Quin built an internationally acclaimed career spanning indie rock, alternative pop and synth-pop, with records including The Con, Sainthood, Heartthrob and Love You to Death.",
+    "website": "https://teganandsara.com/",
+    "instagram": "https://www.instagram.com/teganandsara/",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecanadianencyclopedia.ca/en/article/tegan-and-sara-emc", "https://teganandsara.com/"]
+  },
+  "avril": {
+    "bio": "Avril is a split library credit for Canadian singer-songwriter Avril Lavigne on the 2020 ArtistsCAN charity recording of Lean on Me. The Napanee-raised pop-rock star joined more than two dozen Canadian artists for the Sony Music Canada release supporting Canadian Red Cross COVID-19 relief.",
+    "website": "https://avrillavigne.com/",
+    "instagram": "https://www.instagram.com/avrillavigne/",
+    "city": "Napanee, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sonymusic.ca/press_release/artistscan-lean-on-me", "https://www.thecanadianencyclopedia.ca/en/article/avril-lavigne"]
+  },
+  "ambeez": {
+    "bio": "Ambeez is an alternate recording name used by Halifax rapper and producer Ambition, a longtime member of Nova Scotia's independent hip-hop community and the wider Backburner collective. His catalogue includes solo work, collaborations with Uncle Fester and later releases as one half of The Library Steps with Jesse Dangerously.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.indiemusicdiscovery.com/interview-library-steps/", "https://902hiphop.wordpress.com/author/mmacmaster7/", "https://halifaxbloggers.ca/hafilax/2011/02/ambition-and-uncle-fester-k-r-e-a-m-indie/"]
+  },
+  "the riveters": {
+    "bio": "The Riveters is a shortened library credit for Rosie and the Riveters, the Saskatoon folk-pop group founded by singer-songwriters Farideh Olsen, Alexis Normand, Allyson Reigh and Melissa Nygren. The Canadian group paired close vocal harmonies with original songs rooted in folk, gospel, soul and feminist themes across albums including Good Clean Fun! and Ms. Behave.",
+    "website": "",
+    "instagram": "",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.saskmusic.org/news/cover-artists/view%2Cartist/6465/rosie-the-riveters", "https://open.spotify.com/artist/3ejpJrbdqqxGf3o39aGCKR"]
+  }
+}
