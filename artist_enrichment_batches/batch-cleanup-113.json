@@ -1,0 +1,47 @@
+{
+  "erin b": {
+    "bio": "Erin B is a Jamaica-born, Toronto-based singer and artist whose music moves between dancehall, R&B and hip-hop. After settling in Toronto, she became part of the city's independent contemporary music scene through solo work and collaborations. Northern Dial carries Erin B as part of its Toronto R&B and Caribbean-influenced catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/3wl1EecwwMjUiXkCa383hu"]
+  },
+  "eman alali": {
+    "bio": "Eman Alali is an Iranian and Iraqi-Saudi artist with Canadian roots whose indie-pop songwriting was shaped in part by growing up in Cornwall, Ontario. Her work explores identity, belonging and emotionally detailed pop songwriting, and she has since continued her career internationally. Northern Dial carries Eman Alali as part of its Canadian independent pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Cornwall, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.asiantones.com/2025/11/get-to-know-eman-alali.html", "https://music.apple.com/us/artist/eman-alali/1848276357"]
+  },
+  "jacob vallen": {
+    "bio": "Jacob Vallen is a Canadian music producer and independent artist whose work spans beat-making, production and collaborative recording. His professional profile identifies him as a producer from Canada working with artists remotely and across genres. Northern Dial carries Jacob Vallen as part of its Canadian producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.airgigs.com/user/JacobVallen"]
+  },
+  "miro": {
+    "bio": "Miro is a Quebec singer, rapper and songwriter whose music blends pop, R&B and hip-hop. His francophone catalogue has earned recognition within Quebec's music industry, including ADISQ attention, while maintaining a contemporary crossover sound. Northern Dial carries Miro as part of its Quebec pop and R&B catalogue.",
+    "website": "https://www.mirofromtheblock.com/biographie",
+    "instagram": "",
+    "city": "Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.mirofromtheblock.com/biographie", "https://palmares.adisq.com/artiste/81452"]
+  },
+  "marie celeste": {
+    "bio": "Marie Celeste is a Quebec group originating in Alma, Lac-Saint-Jean and later associated with Montreal's independent scene. The band's music draws together folk, indie rock, jazz and experimental textures around francophone songwriting. Northern Dial carries Marie Celeste as part of its Quebec independent music catalogue.",
+    "website": "https://marieceleste.bandcamp.com/music",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/marie-celeste/", "https://marieceleste.bandcamp.com/music"]
+  }
+}
