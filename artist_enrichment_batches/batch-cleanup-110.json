@@ -1,0 +1,47 @@
+{
+  "lemind": {
+    "bio": "LeMind is an Ottawa rapper, producer and audio engineer working in francophone hip-hop. Originally from Ottawa, he has built a catalogue shaped by introspective writing and self-produced rap. Northern Dial carries LeMind as part of its Ontario francophone hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.magazinehiphop.com/lemind-introverti/"]
+  },
+  "oche": {
+    "bio": "Oche is a Lagos-born, Toronto-based singer, rapper, songwriter and producer whose music blends alternative R&B, soul and hip-hop. His work moves between melodic songwriting and rap while drawing on his Nigerian roots and Toronto surroundings. Northern Dial carries Oche as part of its contemporary Canadian R&B and hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/0syn1OL9u8k1x9gEnNLt6X"]
+  },
+  "passion mango": {
+    "bio": "Passion Mango is a Vancouver indie and bedroom-pop project led by songwriter and musician Connor Wilkinson. The project's dreamy sound combines indie pop, lo-fi textures and melodic songwriting. Northern Dial carries Passion Mango as part of its contemporary British Columbia independent music catalogue.",
+    "website": "https://passionmangoband.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://passionmangoband.com/", "https://open.spotify.com/artist/1duhcJbPuZ66kIsntXd9zn", "https://gigpit.ca/artists/passion-mango"]
+  },
+  "sre": {
+    "bio": "SRE is a Scarborough, Ontario rapper and multidisciplinary artist whose work blends melodic hip-hop, R&B and visual storytelling. Born and raised in Scarborough, SRE has developed an independent catalogue rooted in the Greater Toronto Area. Northern Dial carries SRE as part of its contemporary Toronto hip-hop catalogue.",
+    "website": "https://www.sreonly.com/about",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sreonly.com/about", "https://open.spotify.com/artist/6ezljS161pspv4Loge4OjV", "https://vibearts.ca/converge/"]
+  },
+  "sit still": {
+    "bio": "Sit Still is a Bowmanville, Ontario indie rock band whose music draws on post-punk and 2000s alternative rock. The group has released independent projects including Crooked and Finally while remaining rooted in Durham Region's music community. Northern Dial carries Sit Still as part of its Ontario independent rock catalogue.",
+    "website": "https://sitstill.bandcamp.com/",
+    "instagram": "",
+    "city": "Bowmanville, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://sitstill.bandcamp.com/album/finally", "https://sitstill.bandcamp.com/album/crooked"]
+  }
+}
