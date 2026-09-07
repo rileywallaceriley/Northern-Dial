@@ -1,0 +1,29 @@
+{
+  "motion": {
+    "bio": "Toronto-born Wendy 'Motion' Brathwaite is a Canadian emcee, spoken-word poet, playwright, screenwriter and activist whose work has helped connect hip-hop, literature and theatre for more than three decades. A co-founder of CIUT's long-running Masterplan Show and a member of Nu Black Nation, she made Canadian hip-hop history with early releases including Use What U Got and later expanded into award-winning film and television writing.",
+    "website": "https://www.motionlive.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://optera.ccs.yorku.ca/aconline/f_playwrights.html", "https://harthouse.ca/profile/motion", "https://thecbma.com/artists/motion-live/"]
+  },
+  "paris richards": {
+    "bio": "Toronto-born rapper Paris Richards is a Canadian hip-hop artist whose music draws on her experiences as a young mother, model and former exotic dancer. After beginning to record seriously in the mid-2010s, she built a catalogue around bold, self-directed writing and released projects including Queen of the 6ix, positioning her work around women's independence, sexuality and survival.",
+    "website": "https://parisrichards.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://parisrichards.com/bio", "https://webookthem.com/exclusive-interview-with-paris-richards/"]
+  },
+  "shakari nyte": {
+    "bio": "Toronto MC, producer and vocalist Shakari Nyte is a Canadian artist best known for work with the R&B and hip-hop supergroup Big Black Lincoln alongside Saukrates, T.R.A.C.K.S., Agile and Ro Dolla. His credits also include collaboration with Esthero on Wikked Lil' Grrrls, where Billboard identified him among the album's Canadian contributors.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/big_black_lincoln_very_necessary", "https://www.worldradiohistory.com/Archive-All-Music/Billboard/00s/2005/BB-2005-03-25.pdf", "https://en.wikipedia.org/wiki/Big_Black_Lincoln"]
+  }
+}
