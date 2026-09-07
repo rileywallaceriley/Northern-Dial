@@ -1,0 +1,47 @@
+{
+  "dj charlie b": {
+    "bio": "Ontario-born Ajay 'Charlie B' Saxena is a Canadian DJ, producer and music executive known for championing Toronto and Canadian hip-hop. A JUNO-nominated artist and longtime collaborator with artists including Pressa and Preme, he has also served as Director of A&R at Warner Music Canada and built a reputation as 'Mr. Canada.'",
+    "website": "",
+    "instagram": "https://www.instagram.com/djcharlieb/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.socanmagazine.ca/features/for-dj-charlie-b-the-studio-is-like-the-classroom/", "https://www.jamaicaobserver.com/2015/07/31/dj-charlie-b-to-rock-playground/"]
+  },
+  "dj g-starr": {
+    "bio": "DJ G-Starr is a Canadian hip-hop DJ from Toronto who emerged through the G7 Records camp and work with Juno-winning group Ghetto Concept. Raised in Rexdale, he became Reema Major's tour DJ, collaborated with Kwajo Cinqo and performed on bills including Mac Miller's Incredibly Dope Tour.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://g7records.bandcamp.com/music", "https://www.reverbnation.com/label/g7universe"]
+  },
+  "nana quinn": {
+    "bio": "Montreal-based Nana Quinn is a multidisciplinary Quebec artist, writer and musician whose work moves between poetry, performance, visual art and experimental folk-pop. A Radio-Canada poetry prize recipient and CALQ-supported artist, Quinn has released books alongside musical projects including tout me quitte / tout vient à moi.",
+    "website": "https://www.nanaquinn.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.calq.gouv.qc.ca/actualites-et-publications/actualites/dix-huit-bourses-pour-la-releve-de-lile-de-montreal", "https://coupdecoeur.ca/artistes/nana-quinn/", "https://www.nanaquinn.com/apropos"]
+  },
+  "richie payso": {
+    "bio": "Richie Payso is a Toronto-area rapper associated with the G7 Records camp founded by Ghetto Concept's Kwajo Cinqo. His early catalogue includes the Ghetto Celeb project and collaborations with labelmates including LP Da Original, placing him within the independent Toronto hip-hop scene of the early 2010s.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://g7records.bandcamp.com/music", "https://g7recordspromo.bandcamp.com/album/no-organization-no-progress", "https://www.reverbnation.com/label/g7universe"]
+  },
+  "set2": {
+    "bio": "Set2 is a Canadian hip-hop artist associated with Toronto independent label Motive Music Canada. His catalogue includes releases and collaborations with Gee Wunder and Mezziah, with Motive projects receiving Canadian college and commercial radio play and Set2 continuing to appear on Toronto rap releases into the 2020s.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://motivemusiccanada.com/about/", "https://hiphopcanada.com/mezziah-blue-aura/", "https://music.apple.com/ca/album/clean-up-nice-feat-set2-single/1792057926"]
+  }
+}
