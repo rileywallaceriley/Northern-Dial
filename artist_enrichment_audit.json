@@ -1,8 +1,8 @@
 {
   "total_library_artists": 1995,
-  "removed_non_canadian": 633,
-  "retained_artists": 1362,
-  "retained_with_profiles": 778,
-  "retained_without_profiles": 584,
-  "completion_percent": 57.1
+  "removed_non_canadian": 638,
+  "retained_artists": 1357,
+  "retained_with_profiles": 785,
+  "retained_without_profiles": 572,
+  "completion_percent": 57.8
 }
