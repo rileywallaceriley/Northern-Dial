@@ -1,0 +1,47 @@
+{
+  "admiral naughtz": {
+    "bio": "Admiral Naughtz is a Toronto underground hip-hop MC associated with the city's hardcore and boom-bap scene and the Hella Treez circle. Active on Toronto bills for years, he has collaborated with D.O.V and DJ Chino420; his feature on D.O.V's Back From The Dead is the Northern Dial library credit, while U.G.M.L. extends that affiliation into Hella Treez's current catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://syphersights.com/2017/11/05/concert-review-slaine-termanology-at-nocturne-in-toronto/", "https://hellatreez.bandcamp.com/album/d-o-v-is-god", "https://distrokid.com/hyperfollow/hellatreez/ugml-feat-admiral-naughtz--bobby-bishop"]
+  },
+  "d.o.v": {
+    "bio": "D.O.V, born David Oliveira Vieira, is a Toronto-native underground hip-hop artist, songwriter and executive producer. A co-owner of Hella Treez alongside DJ Chino420, he works in gritty boom-bap and hardcore rap and has collaborated with artists including Ruste Juxx, Termanology, Planet Asia and Killah Priest. His 2025 album D.O.V is GOD includes the Northern Dial tracks Back From The Dead and Fallen Angels.",
+    "website": "https://hellatreez.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/0iMUTTpl1j4qPlMayRLQEJ", "https://hellatreez.bandcamp.com/album/d-o-v-is-god", "https://hellatreez.bandcamp.com/track/marijuaneros-feat-gambit-ramsay"]
+  },
+  "nawfal": {
+    "bio": "Nawfal is a Montreal rapper whose work sits in contemporary francophone hip-hop, often drawing on Maghrebi identity and local Quebec culture. His releases include SECTEUR NORD, L.X.I.V and the 2025 project blues beldi with producer Kheir; their track archive 2001 is the Northern Dial library entry.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.podcastsquebec.ca/podcasts/pole-hip-hop/321-avec-souffrance-et-nawfal", "https://lewarmupfm.com/blog/nawfal-grimpe-la-pyramide-et-son-art-le-porte-dj-au-sommet", "https://open.spotify.com/track/0jhy3QaIzpDmY0Bq5MPFIa"]
+  },
+  "prty h3ro": {
+    "bio": "PRTY H3RO was a Canadian hip-pop, dance and rock trio formed in Toronto by Vancouver musicians Natasha Zimbaro, Dustin 'Dizzy' Overhill and Mark Luongo. Signed to Sony Music Canada, they broke through in 2013 with the national radio single Life of the PRTY and followed it with Young & Shameless, both represented in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musiccanada.wordpress.com/2013/12/09/special-feature-on-prty-h3ro/", "https://www.bandsintown.com/a/7597150-prty-h3ro", "https://open.spotify.com/track/7cQIxtOgxBmWB9X3iMPzl9"]
+  },
+  "stone pöet": {
+    "bio": "Stone Pöet is a Canadian hip-hop artist associated with Toronto's late-1990s rap scene. He appeared on Maestro Fresh Wes's 1998 album Built to Last, including the Northern Dial track Clap Ya Handz, Turn It Out, Pt. 2, and was identified by Billboard among the Canadian R&B and hip-hop acts supporting the project.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.worldradiohistory.com/Archive-All-Music/Billboard/90s/1998/BB-1998-10-31.pdf", "https://www.worldradiohistory.com/Archive-All-Music/Billboard/90s/1999/BB-1999-01-16.pdf", "https://music.amazon.com/tracks/B075YF1R8K"]
+  }
+}
