@@ -1,0 +1,47 @@
+{
+  "caleb awiti": {
+    "bio": "Caleb Awiti is a Kenyan-born, Vancouver-based R&B artist whose music blends contemporary soul, pop and melodic hip-hop influences. His independent catalogue includes releases such as SBLTLA, HYPNOTIC and I Can't Change Time, and his work has been featured in Canadian discovery playlists including Touchpoints: Vancouver. Northern Dial carries Caleb Awiti as part of its contemporary West Coast R&B catalogue.",
+    "website": "https://audiomack.com/caleb-awiti",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://audiomack.com/caleb-awiti", "https://music.amazon.ca/artists/B08F3V5R6G/caleb-awiti"]
+  },
+  "brigitte m": {
+    "bio": "Brigitte M is a Quebec singer and stage performer whose career spans pop, musical theatre and orchestral reinterpretations of rock songs. Known professionally as Brigitte M and born Brigitte Marchand, she has appeared in major Quebec productions including Grease and released solo albums such as Toute moi and From Metal to Crystal. Northern Dial carries Brigitte M as part of its francophone Canadian vocal catalogue.",
+    "website": "https://torpille.ca/artistes/brigitte-m/",
+    "instagram": "",
+    "city": "Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://torpille.ca/artistes/brigitte-m/", "https://www.tvanouvelles.ca/2012/02/20/brigitte-m-revisite-la-piece-its-my-life"]
+  },
+  "louis-charles": {
+    "bio": "Louis-Charles is a Quebec City quintet whose music blends post-punk, post-rock and alternative pop with francophone songwriting. The group released the EP BABY in 2023 and followed it with the album Louis-Charles II in 2026, establishing a growing presence in Quebec's independent rock scene. Northern Dial carries Louis-Charles as part of its contemporary francophone alternative catalogue.",
+    "website": "https://lecanalauditif.ca/artistes/louis-charles/",
+    "instagram": "",
+    "city": "Quebec City, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/louis-charles/", "https://ecoutedonc.ca/2026/01/20/louis-charles-louis-charles-ii/", "https://www.festivalfono.com/en/lineup/4851/Louis-Charles"]
+  },
+  "leith": {
+    "bio": "Leith is the pop project of Toronto-born singer-songwriter Jessie Munro. Her atmospheric pop balances bright hooks with introspective songwriting, with releases including Birthdays in July, Running Wild and the 2026 EP Sad In The Sun. Northern Dial carries Leith as part of its contemporary Canadian pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.shazam.com/artist/leith/1609661229", "https://music.apple.com/us/artist/leith/1609661229"]
+  },
+  "gray rowan": {
+    "bio": "Gray Rowan is a Toronto producer and musician active across the city's R&B, electronic and independent music scenes. Rowan has co-produced work for artists including Maddee and contributed to recordings with Matthew Progress, Dan Only, Kingo Halla and Daniela Andrade, while also working from the NDG 208 studio in Toronto's east end. Northern Dial carries Gray Rowan as part of its Canadian producer and collaborator catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.electricisland.to/artists/dan-only", "https://www.wavelengthmusic.ca/artist/maddee/", "https://northerntransmissions.com/maddee-shares-a-taste-of-new-ep/"]
+  }
+}
