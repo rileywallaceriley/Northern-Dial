@@ -1,0 +1,47 @@
+{
+  "sunny diamonds": {
+    "bio": "Sunny Diamonds is a Toronto music entrepreneur, executive producer and studio operator whose work is rooted in the city's recording scene. Through Diamond Factory Studios he has worked across production, engineering and artist development, while also releasing music under his own name. His 2025 single Caribana Friday is his Northern Dial library credit.",
+    "website": "https://sunny.diamonds/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://sunny.diamonds/", "https://music.apple.com/ca/artist/sunny-diamonds/1187613603"]
+  },
+  "pluto": {
+    "bio": "Pluto was a Vancouver alternative-rock band formed in 1993 by Ian Jones, Rolf Hetherington, John Ounpuu and Justin Leigh. After early independent and Mint Records releases, the group signed with Virgin Records and earned a 1997 Juno nomination for Best New Group. Paste, from the band's 1996 self-titled album, is the Pluto recording in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.allmusic.com/artist/pluto-mn0000348139", "https://canpopencyclopedia.home.blog/p/"]
+  },
+  "kheir": {
+    "bio": "Kheir is a Montréal producer and beatmaker active in Quebec's francophone hip-hop scene. His production credits include QCLTUR releases and work with artists including KNLO, while his 2025 collaborative album blues beldi with Nawfal paired rap, Maghrebi influence and jazz-informed production. Their track archive 2001 is his Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://atelier10.ca/nouveauprojet/article/ce-qu-on-ecoute-janvier-2026", "https://qcltur.bandcamp.com/album/qcltur-album", "https://open.spotify.com/track/0jhy3QaIzpDmY0Bq5MPFIa"]
+  },
+  "vince maria": {
+    "bio": "Vince 'Vinny Mac' Maria is a Canadian producer, songwriter and musician whose career developed through Toronto's dance and remix scene. A five-time Juno nominee, he has produced and remixed work for Canadian and international artists and is a member of the Canadian dance project Hellbent. The Ryder Remix of Hellbent's Fast Car is his Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://medium.com/authority-magazine/rising-music-stars-rachelle-loren-and-vince-maria-of-hellbent-on-the-five-things-you-need-to-shine-368d6a177b14", "https://www.shazam.com/song/1747900742/fast-car"]
+  },
+  "es": {
+    "bio": "Es, born Eseme Elango, is a Mississauga hip-hop MC whose work is rooted in golden-era boom-bap and the Gillbreathing family alongside Elaquent, Solar-C and Mathematik. He has released a long-running independent catalogue through projects including Feud For Thought, We Are Only Getting Older and You Want A Piece Of Me?. His appearance on Elaquent's Carnival with Mathematik and Solar-C is his Northern Dial library credit.",
+    "website": "https://esmuzik.bandcamp.com/",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://esmuzik.bandcamp.com/", "https://www.thecomeupshow.com/2013/04/25/interview-elaquent-talks-early-influences-issues-with-bootlegging-and-pursuing-his-dreams/"]
+  }
+}
