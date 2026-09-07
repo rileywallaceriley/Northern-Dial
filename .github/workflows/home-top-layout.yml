@@ -1,4 +1,4 @@
-name: Pair homepage player and Discovery
+name: Homepage layout maintenance
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Pair player and Discovery on desktop
+      - name: Move Explore Recent Songs below About
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -31,98 +31,39 @@ jobs:
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
 
-          css = r'''
-          /* ND_HOME_TOP_GRID_CSS_START */
-          .home-top-grid {
-              align-items: stretch;
-              display: grid;
-              gap: 24px;
-              grid-template-columns: minmax(0, 1.65fr) minmax(320px, 1fr);
-              margin-bottom: 38px;
-          }
+          banner_pattern = re.compile(
+              r'\n?<!-- Explore Recent Songs Banner -->\s*'
+              r'<section id="library" style="margin-bottom: 60px;">.*?</section>\s*',
+              re.S,
+          )
+          match = banner_pattern.search(text)
+          if not match:
+              raise SystemExit('Could not locate Explore Recent Songs banner')
 
-          .home-top-grid .player-section {
-              display: flex;
-              margin-bottom: 0;
-              min-width: 0;
-          }
+          banner = match.group(0).strip()
+          text = text[:match.start()] + '\n\n' + text[match.end():]
 
-          .home-top-grid .custom-player {
-              height: 100%;
-              width: 100%;
-          }
+          shows_marker = '<section id="shows" class="shows-section">'
+          if shows_marker not in text:
+              raise SystemExit('Could not locate On Air Daily section')
 
-          .home-top-grid .discovery-banner {
-              align-items: flex-start;
-              flex-direction: column;
-              gap: 20px;
-              justify-content: space-between;
-              margin: 0;
-              min-height: 100%;
-              padding: 26px;
-          }
-
-          .home-top-grid .discovery-banner h2 {
-              font-size: clamp(2rem, 3vw, 2.7rem);
-          }
-
-          .home-top-grid .discovery-banner-cta {
-              text-align: center;
-              width: 100%;
-          }
-
-          @media (max-width: 900px) {
-              .home-top-grid {
-                  display: block;
-                  margin-bottom: 0;
-              }
-
-              .home-top-grid .player-section {
-                  display: block;
-                  margin-bottom: 60px;
-              }
-
-              .home-top-grid .custom-player {
-                  height: auto;
-              }
-
-              .home-top-grid .discovery-banner {
-                  margin: -22px 0 38px;
-                  min-height: 0;
-              }
-          }
-          /* ND_HOME_TOP_GRID_CSS_END */
-          '''
-
-          if 'ND_HOME_TOP_GRID_CSS_START' not in text:
-              marker = '\n.custom-player {'
-              if marker not in text:
-                  raise SystemExit('Could not find custom-player CSS marker')
-              text = text.replace(marker, '\n' + css + marker, 1)
-
-          if 'class="home-top-grid"' not in text:
-              pattern = re.compile(
-                  r'(?P<player><section class="player-section">.*?</section>)\s*'
-                  r'(?P<banner><section class="discovery-banner".*?</section>)',
-                  re.S,
-              )
-              def wrap(match):
-                  return '<div class="home-top-grid">\n' + match.group('player') + '\n\n' + match.group('banner') + '\n</div>'
-              text, count = pattern.subn(wrap, text, count=1)
-              if count != 1:
-                  raise SystemExit('Could not locate adjacent player and Discovery sections')
+          text = text.replace(
+              shows_marker,
+              banner + '\n\n' + shows_marker,
+              1,
+          )
 
           path.write_text(text, encoding='utf-8')
           PY
 
-      - name: Commit homepage layout
+      - name: Commit homepage order
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
           if git diff --cached --quiet; then
-            echo 'No homepage layout changes to commit.'
+            echo 'No homepage order changes to commit.'
             exit 0
           fi
-          git commit -m 'Pair homepage player and Discovery cards'
+          git commit -m 'Move songs banner below About section'
           git push origin HEAD:main
