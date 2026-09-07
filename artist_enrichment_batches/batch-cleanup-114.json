@@ -1,0 +1,47 @@
+{
+  "markus aurelyus": {
+    "bio": "Markus Aurelyus is a Scarborough-based Trinidadian-Canadian singer-songwriter whose music blends R&B, soul, gospel, pop and hip-hop influences. His work reflects both his Caribbean heritage and Toronto-area upbringing. Northern Dial carries Markus Aurelyus as part of its contemporary Canadian R&B and soul catalogue.",
+    "website": "https://www.taplovetour.com/mars",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://festivalofauthors.ca/nationality/trinidadian-canadian/", "https://www.taplovetour.com/mars"]
+  },
+  "glamboy": {
+    "bio": "Glamboy is a Toronto hip-hop artist whose independent catalogue includes releases connected to the city's contemporary rap scene. His work has appeared alongside Toronto collaborators including 88GLAM, while solo material continues to develop his own artist identity. Northern Dial carries Glamboy as part of its Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/glam3oy/tracks", "https://music.amazon.ca/artists/B07F7NXTF6/glamboy"]
+  },
+  "meeno giinchy": {
+    "bio": "Meeno Giinchy is a Mississauga hip-hop artist and collaborator active in the Greater Toronto Area rap scene. His catalogue includes solo releases and collaborations with artists from Toronto and surrounding communities, placing him within Southern Ontario's independent hip-hop network. Northern Dial carries Meeno Giinchy as part of its GTA hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Mississauga, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/friyie-anf_aint_nothing_free", "https://hiphopcanada.com/nixxon-meeno-giincy-whereyoufrom/", "https://music.amazon.ca/artists/B07D148HZ8/meeno-giinchy"]
+  },
+  "briskinthehouse": {
+    "bio": "BriskInTheHouse is a Toronto hip-hop artist working within the city's independent rap scene. His online catalogue identifies Toronto as his location and collects original tracks and collaborations from his ongoing recording work. Northern Dial carries BriskInTheHouse as part of its Toronto hip-hop catalogue.",
+    "website": "https://soundcloud.com/briskinthehouse",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/briskinthehouse"]
+  },
+  "chris black": {
+    "bio": "Chris Black is a Toronto independent artist whose self-titled catalogue is rooted in the city's hip-hop and contemporary music scene. His releases are documented through a Toronto-based Bandcamp profile, distinguishing this Canadian artist from other performers using the same name. Northern Dial carries Chris Black as part of its Toronto independent catalogue.",
+    "website": "https://c-black.bandcamp.com/album/chris-black",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://c-black.bandcamp.com/album/chris-black"]
+  }
+}
