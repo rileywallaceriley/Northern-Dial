@@ -1,0 +1,47 @@
+{
+  "sam-r": {
+    "bio": "Sam-r is a Syrian-born, Toronto-based hip-hop artist, producer and multi-instrumentalist who arrived in Canada as a refugee in 2017. He has built his career in Toronto through solo releases, live-band performance and The Cook-Up Sessions, a collaborative series he launched in 2023. His Northern Dial library credits span Death of a Saint, Aura, The Cook-Up Sessions Vol. 1 and later singles including Dystopia.",
+    "website": "https://www.soundslikesamer.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.soundslikesamer.com/about", "https://unitedmasters.com/a/sam-r", "https://music.apple.com/us/artist/sam-r/1410376896"]
+  },
+  "freakey": {
+    "bio": "FREAKEY! is a Montréal producer and artist from the Saint-Léonard and Repentigny areas whose futuristic hip-hop production has reached artists in Canada, the United States and Europe. Raised in a Haitian family in Montréal, he has produced for artists including Don Toliver, Hamza, KILLY and Lost while developing his own solo catalogue. His 2020 collaboration EUPHORIA with Toronto producer WondaGurl is his Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.billboard.com/music/rb-hip-hop/freakey-producer-montreal", "https://soundcloud.com/freakey-freakey", "https://music.apple.com/mz/song/1505619236"]
+  },
+  "golde london": {
+    "bio": "Golde London is a Toronto rapper from the Jane and Finch area whose music combines assertive street rap with melodic, personality-driven hooks. She has been active in Toronto's independent hip-hop scene through solo releases and collaborations with other Canadian women in rap. Her 2025 Think They Know Me remix with Haviah Mighty, Charmaine, TAAYLEE G and DvblM is her Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/dutchess-golde-london-buss-down/", "https://www.se7enfigure.com/artist/golde/", "https://music.apple.com/us/album/think-they-know-me-remix-feat-charmaine-taaylee-g-dvblm/1850793455"]
+  },
+  "taaylee g": {
+    "bio": "TAAYLEE G is a Toronto rapper whose music blends sharp, confident bars with melodic delivery and Caribbean influence. She emerged in the early 2020s, performed at Toronto's first Rolling Loud festival and later appeared on the 2023 Legacy Awards honouring Canadian hip-hop pioneers. Her feature on Golde London's 2025 Think They Know Me remix is her Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/taaylee-g/1559430778", "https://croxxings.com/taaylee-g-certified-finessa-official-music-video/", "https://music.apple.com/us/album/think-they-know-me-remix-feat-charmaine-taaylee-g-dvblm/1850793455"]
+  },
+  "dvblm": {
+    "bio": "DVBLM is a Toronto-born and raised hip-hop artist whose energetic rap draws on Caribbean influence, 1990s and 2000s R&B and a performance-first approach. She was named one of the 2023 Black Canadian Music Award recipients by the SOCAN Foundation and SiriusXM. Her feature on Golde London's 2025 Think They Know Me remix is her Northern Dial library credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.billboard.com/black-canadian-music-awards", "https://www.siriusxm.ca/blog/mixtape-north-celebrates-the-recipients-of-the-fourth-siriusxm-black-canadian-music-awards/", "https://music.apple.com/us/artist/dvblm/1569376696"]
+  }
+}
