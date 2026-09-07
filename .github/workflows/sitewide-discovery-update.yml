@@ -1,0 +1,51 @@
+name: Apply sitewide Discovery update
+
+on:
+  push:
+    paths:
+      - 'sitewide_discovery_update.py'
+      - '.github/workflows/sitewide-discovery-update.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitewide-discovery-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply Discovery navigation and banner
+        run: python3 sitewide_discovery_update.py
+
+      - name: Commit site-wide changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html library.html artists.html discover.html blog/*.html artist_removals.txt artist_unresolved.txt
+          if git diff --cached --quiet; then
+            echo 'No site-wide changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add Discovery navigation and homepage banner'
+
+          for attempt in 1 2 3 4 5; do
+            echo "Push attempt ${attempt}..."
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+
+          echo 'Unable to push site-wide Discovery update after 5 attempts.' >&2
+          exit 1
