@@ -1,0 +1,47 @@
+{
+  "sarah swire": {
+    "bio": "Canadian multidisciplinary artist Sarah Swire is a singer-songwriter, actor, choreographer and writer who records art-rock under her own name and as Sister Swire. Raised in Canada with Ottawa Valley roots, she later studied at the Royal Conservatoire of Scotland and returned to Canada to record her 2023 debut album with Joel Plaskett in Dartmouth, Nova Scotia.",
+    "website": "",
+    "instagram": "",
+    "city": "Ottawa Valley, Ontario / Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musicmecca.org/canadian-performing-artist-indie-songwriter-sister-swire-releases-new-single-my-sister-is-a-butcher/", "https://tinnitist.com/2022/02/11/sister-swire-my-sister-is-a-butcher-exclusive-single-premiere/", "https://www.thecoast.ca/arts-music/art-rocker-sister-swire-couldve-recorded-her-debut-anywhere-heres-why-she-chose-dartmouth-28413820/"]
+  },
+  "dramatik": {
+    "bio": "Montréal-born rapper Dramatik, born Bruno Jocelyn, is a foundational figure in Québec hip-hop. After forming the influential group Muzion with Imposs and J-Kyll in 1996, he built a solo catalogue known for dense wordplay, freestyle skill and albums including La boîte noire, Radiothérapie and Le phénix, il était plusieurs fois.",
+    "website": "https://7iemeciel.ca/artiste/dramatik/",
+    "instagram": "",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.7iemeciel.ca/artistes/dramatik/bio_dramatik.pdf", "https://7iemeciel.ca/artiste/dramatik/", "https://dramatik7.bandcamp.com/album/le-ph-nix-il-tait-plusieurs-fois"]
+  },
+  "jb": {
+    "bio": "Toronto rapper JB is a Canadian hip-hop artist raised in Flemingdon Park whose independent career spans more than two decades. He earned MuchMusic Video Award nominations for Fire in Ya Eyes featuring The Game and Move Ya Body featuring Ghetto Flex, while his 2009 album My Environment documented the Toronto scene through collaborations with Dru, Michie Mee, Maestro and others.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/JB_(Canadian_rapper)", "https://open.spotify.com/artist/1IRcunfbaCRDigcOtZ0vXs", "https://www.thegate.ca/spotlight/01416/hedley-tops-2008-mmva-nominations/"]
+  },
+  "divo": {
+    "bio": "Guatemalan-Canadian rapper Divo is a veteran of the Greater Toronto Area and Hamilton hip-hop scenes, known for bilingual English-Spanish lyricism and a career stretching back more than two decades. His catalogue includes This Iz Bizness and the collaborative album Transatlantic Soul with French producer GMJ, alongside work with Canadian artists including Classified, D-Sisive, Eternia and Young Stitch.",
+    "website": "https://divo.bandcamp.com/",
+    "instagram": "",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/13BNab1hIqMUaevwTaktZw", "https://umfm.com/programming/broadcast/urban-renewal-project-january-19-2026", "https://divo.bandcamp.com/track/angels-fly-single"]
+  },
+  "theology 3": {
+    "bio": "Toronto rapper and producer Theology 3, also known as Theo3, is a longtime Canadian hip-hop veteran whose work helped popularize the city's Screwface Capital identity. His catalogue includes The Screwface Capital, Airplane Over One Way Streets and the Morning Bars series, with collaborations spanning Mathematik, DJ Serious, Muneshine, Tanika Charles and other Canadian underground artists.",
+    "website": "https://theo3musik.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/theo3-sotd-take/", "https://exclaim.ca/music/article/theology_3-featuring", "https://theo3musik.bandcamp.com/"]
+  }
+}
