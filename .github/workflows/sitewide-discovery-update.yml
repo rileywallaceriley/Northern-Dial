@@ -5,6 +5,7 @@ on:
     paths:
       - 'sitewide_discovery_update.py'
       - 'grant_readiness_update.py'
+      - 'navigation_finalize.py'
       - '.github/workflows/sitewide-discovery-update.yml'
   workflow_dispatch:
 
@@ -30,6 +31,9 @@ jobs:
       - name: Apply grant readiness and bilingual updates
         run: python3 grant_readiness_update.py
 
+      - name: Finalize public navigation
+        run: python3 navigation_finalize.py
+
       - name: Commit site-wide changes
         run: |
           git config user.name 'github-actions[bot]'
@@ -39,7 +43,7 @@ jobs:
             echo 'No site-wide changes to commit.'
             exit 0
           fi
-          git commit -m 'Launch bilingual grant readiness foundation'
+          git commit -m 'Finalize bilingual grant readiness navigation'
 
           for attempt in 1 2 3 4 5; do
             echo "Push attempt ${attempt}..."
