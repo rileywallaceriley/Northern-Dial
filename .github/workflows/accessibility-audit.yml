@@ -12,7 +12,7 @@ on:
       - 'fr/*.html'
       - 'sitemap.xml'
       - 'robots.txt'
-      - 'scripts/site_quality_audit.py'
+      - 'scripts/site_quality_audit_v2.py'
       - '.github/workflows/accessibility-audit.yml'
 
 permissions:
@@ -25,4 +25,4 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Run SEO, accessibility and architecture guardrails
-        run: python3 scripts/site_quality_audit.py
+        run: python3 scripts/site_quality_audit_v2.py
