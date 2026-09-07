@@ -1,0 +1,56 @@
+{
+  "adam klobi": {
+    "bio": "Toronto-born singer-songwriter Adam Klobi is a Canadian alternative artist whose emotionally direct writing and resonant vocals first found a large audience through viral online covers. After beginning to pursue music seriously in his hometown, he signed with Darkroom Records and built an original catalogue around releases including Rain, RUT, Piece of Mind and YESTERDAY, TODAY.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.euphoriazine.com/blog/2026/04/interviews-introducing-adam-klobi/", "https://music.apple.com/us/artist/adam-klobi/1802793759"]
+  },
+  "joee": {
+    "bio": "Toronto-born Joey DeSimone, better known as Joee, is a Canadian dance singer, songwriter and producer who became a fixture of Canadian radio in the late 1990s and early 2000s. His catalogue includes charting singles such as Angel, If I Could, Do You Right and Arriba, and his work earned a JUNO nomination and a SOCAN dance music award.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/7lnyytg8R4MiLIjfcjJrLZ", "https://music.apple.com/ca/artist/joee/2733893"]
+  },
+  "maria-therese": {
+    "bio": "Toronto-born R&B and soul singer-songwriter Maria-Therese is a Canadian artist whose work pairs intimate storytelling with themes of resilience, healing and personal growth. Her releases have reached CBC, BBC Radio, SiriusXM and major streaming platforms, while the Warner Music Canada-released EP MONARCH marked a major step in her contemporary R&B career.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/5G7CkGWwTk7l36L6vw0ftK", "https://music.apple.com/us/artist/maria-therese/1527915724", "https://www.socanmagazine.ca/news/photo-gallery-socan-warner-music-canada-co-host-large-scale-song-camp/"]
+  },
+  "runway the catwalker": {
+    "bio": "Runway the Catwalker is an Ajax, Ontario artist, songwriter and producer based in Toronto whose genre-bending work moves through rap, punk, indie and alternative music. Alongside his own releases, he has built an international songwriting and production résumé that includes work connected to Doja Cat, A$AP Rocky, Yxng Bane and D-Block Europe.",
+    "website": "",
+    "instagram": "",
+    "city": "Ajax, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.kilomg.com/songwriters", "https://www.cshf.ca/2023-indigenous-song-camp-participants/", "https://music.apple.com/ca/artist/runway-the-catwalker/1193073400"]
+  },
+  "sumeet": {
+    "bio": "Sumeet is a Canadian singer-songwriter born and raised in London, Ontario whose mid-2000s music blended hip-hop, R&B, dancehall and South Asian influences. Her independent breakthrough included the Elephant Man-assisted single Agony and the album Deeper, with her work receiving Canadian radio play and collaborations across Toronto's urban music scene.",
+    "website": "",
+    "instagram": "",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://allhiphop.com/alternatives/sumeet-get-deeper/", "https://music.apple.com/us/artist/sumeet/69975272"]
+  },
+  "truss": {
+    "bio": "Brampton-raised, Toronto-based Truss is a Canadian singer, rapper, songwriter, producer and audio engineer whose solo work and duo TRP.P blend hip-hop, R&B and soul. A self-taught multi-instrumentalist, he has composed for Canadian television, toured nationally and internationally and released solo projects including All Day Breakfast, Cavity, Root Canal and All We Ask Is Truss.",
+    "website": "https://trussproductions.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://trussproductions.com/bio", "https://music-ontario.ca/news/spotlight/read%2Carticle/18191/member-spotlight-truss-releases-his-solo-debut-ep-all-we-ask-is-truss", "https://www.pridetoronto.com/performances/trp-p/"]
+  }
+}
