@@ -6,10 +6,15 @@ on:
       - 'artist_enrichment_batches/**'
       - 'artist_profiles.json'
       - 'artist_removals.txt'
+      - '.github/workflows/build-artist-directory.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: build-artist-directory
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -61,4 +66,16 @@ jobs:
             exit 0
           fi
           git commit -m 'Rebuild artist directory from enrichment batches'
-          git push
+
+          for attempt in 1 2 3 4 5; do
+            echo "Push attempt ${attempt}..."
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+
+          echo 'Unable to push generated directory after 5 attempts.' >&2
+          exit 1
