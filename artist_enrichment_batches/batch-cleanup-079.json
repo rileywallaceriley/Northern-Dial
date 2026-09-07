@@ -1,0 +1,38 @@
+{
+  "cyrus robertson-orkish": {
+    "bio": "Cape Breton-born musician, songwriter and producer Cyrus Robertson-Orkish has built a versatile Canadian career spanning alternative rock, progressive music, jazz fusion and experimental pop. After establishing himself in Halifax with Dali Van Gogh and solo work as Cyrus R.O., he later became active in Ottawa through projects including Finely Tuned Elephant, GirlBoyThing and Victor Complex.",
+    "website": "",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dalgazette.com/arts-culture/black-sheep-of-the-halifax-music-scene/", "https://egoandvicepodcast.com/episodes", "https://finelytunedelephant.bandcamp.com/album/the-fast-life"]
+  },
+  "ebril": {
+    "bio": "Ebril is Iraqi-Canadian singer, songwriter and producer Huda Al-Hamami, an Ontario-based alternative artist whose self-produced debut album In Copula blends folk, lo-fi, shoegaze and field recordings. After her song Stranger in You became a viral breakthrough, she signed with Universal Music Canada and continued expanding her audience through Canadian festivals and touring.",
+    "website": "https://www.ebril.net/",
+    "instagram": "",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.ebril.net/", "https://www.universalmusic.ca/2025/11/10/ebrils-debut-album-in-copula-captures-global-attention-led-by-striking-opening-track-stranger-in-you/", "https://ca.billboard.com/business/record-labels/universal-music-canada-ebril"]
+  },
+  "theo day": {
+    "bio": "Theo Day is a Canadian indie-folk and Americana singer-songwriter emerging from Montreal's independent music scene. Since debuting in 2025, his acoustic storytelling and folk-pop sound have powered releases including the Homegrown EP, sold-out Montreal shows and festival appearances including LASSO Montréal.",
+    "website": "",
+    "instagram": "https://www.instagram.com/theodaymusic/",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/7kInTAGydeTIPx9JwrSApc", "https://www.evergreenmusic.ca/roster", "https://www.evergreenmusic.ca/blog/theo-day-releases-oh-my-lanta"]
+  },
+  "xpress aka djxp": {
+    "bio": "Xpress aka DJXP is a Canadian-born DJ and producer of Nigerian and Jamaican heritage based in Toronto. The brother and longtime musical collaborator of EverythingOShauN, he works across hip-hop, R&B, Afro and pop as a producer, songwriter and DJ, with credits extending from Canadian independent music to television and film placements.",
+    "website": "https://linktr.ee/xpressakadjxp",
+    "instagram": "https://www.instagram.com/xpressakadjxp/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nac-cna.ca/en/bio/xpress-aka-djxp", "https://www.soundbetter.com/profiles/687475-xpress-aka-djxp", "https://nac-cna.ca/en/event/notes/35006"]
+  }
+}
