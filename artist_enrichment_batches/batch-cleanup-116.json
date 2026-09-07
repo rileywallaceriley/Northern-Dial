@@ -1,0 +1,47 @@
+{
+  "zinera": {
+    "bio": "Zinera is a Montreal rapper from Anjou whose music sits within Quebec's contemporary francophone hip-hop scene. His releases have gained attention through streaming and local rap media, reflecting the city's current independent street-rap movement. Northern Dial carries Zinera as part of its Montreal hip-hop catalogue.",
+    "website": "https://musiqc.ca/artistes/zinera",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musiqc.ca/artistes/zinera", "https://www.magazinehiphop.com/zinera-occupe-la-9e-place-des-tendances-musicales-sur-youtube/", "https://music.apple.com/us/artist/zinera/1701502196"]
+  },
+  "victory": {
+    "bio": "Victory is a Calgary hip-hop and R&B artist whose melodic approach blends rap with contemporary R&B. Coverage of his early releases identifies him directly with Calgary's emerging music scene. Northern Dial carries Victory as part of its contemporary Alberta hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/victory-brob-real-single/"]
+  },
+  "zargo": {
+    "bio": "Zargo, also known as Rockboy Zargo and King Jzargo, is a Toronto hip-hop artist active in the city's independent rap scene. His releases and visuals have been covered as part of Toronto's contemporary street and melodic rap movement. Northern Dial carries Zargo as part of its Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/zargo-moving-forward-video/", "https://open.spotify.com/intl-de/artist/1mHhrYrqwDSXbx4DOKkw5b"]
+  },
+  "unotopic": {
+    "bio": "Unotopic is an Edmonton artist with Canadian and Guatemalan roots whose music sits within the urbano latino space. Born in 2001 and based in Alberta, he blends Latin urban influences with contemporary pop and hip-hop production. Northern Dial carries Unotopic as part of its Western Canadian Latin and urban catalogue.",
+    "website": "https://unotopicmusica.com/",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/unotopic/1510176783", "https://unotopicmusica.com/"]
+  },
+  "touch": {
+    "bio": "Touch is an Edmonton MC best known as part of the Canadian hip-hop duo Touch and Nato. His work is rooted in Alberta's long-running independent rap scene, with solo and collaborative recordings connecting him to Canadian underground hip-hop. Northern Dial carries Touch as part of its Edmonton hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Touch_and_Nato"]
+  }
+}
