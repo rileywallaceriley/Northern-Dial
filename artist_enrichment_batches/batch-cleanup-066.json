@@ -1,0 +1,47 @@
+{
+  "jessa sky": {
+    "bio": "Cree singer-songwriter Jessa Sky, from Treaty 6 Territory, blends soulful pop, R&B and Indigenous roots with emotionally direct writing about resilience, identity and healing. Since beginning her professional career in 2021, she has earned multiple number-one singles on the Indigenous Music Countdown and was selected for the CBC × SOCAN Reverie Indigenous Music Residency.",
+    "website": "https://www.jessasky.com/",
+    "instagram": "",
+    "city": "Treaty 6 Territory",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.jessasky.com/about", "https://www.sakihiwe.ca/artist-directory/performing-this-year", "https://open.spotify.com/artist/2s3owRsjkaanegjOOxmCC8"]
+  },
+  "jah'mila": {
+    "bio": "Jamaican-born Canadian reggae singer Jah'Mila is a Halifax-based artist whose roots reggae incorporates soul and jazz. Her debut album Roots Girl won East Coast recognition and earned a Juno nomination, and her career has included performances and collaborations with Symphony Nova Scotia, the National Arts Centre Orchestra and the Toronto Symphony Orchestra.",
+    "website": "https://www.jahmilamusic.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.jahmilamusic.com/", "https://ansma.squarespace.com/directory/jahmila", "https://en.wikipedia.org/wiki/Jah%27Mila"]
+  },
+  "j-wyze": {
+    "bio": "Toronto hip-hop and spoken-word artist J-Wyze, born Jelani Nias, has worked as an MC, writer, broadcaster and arts facilitator across the city's independent scene. His catalogue includes Proverbs and Herbs and later WyzeArt releases, with collaborations and production connections spanning artists including Motion, Rich Kidd, Saukrates and Kolor Brown.",
+    "website": "https://jwyze.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://jwyze.bandcamp.com/album/proverbs-and-herbs", "https://nowtoronto.com/news/j-wyze-on-getting-young-offenders-to-write/", "https://stroberecords.com/pages/ron-allen-j-wyze-melody"]
+  },
+  "haliey smith": {
+    "bio": "Halifax singer-songwriter Haliey Smith is an African Nova Scotian R&B and soul artist with deep roots in the province's music community. A longtime session and background vocalist, she has performed with artists including David Myles and Joel Plaskett, appeared with Symphony Nova Scotia and stepped into a solo career with releases including Fall In Love.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.cymbamusic.com/haliey-smith-bio", "https://honeyjam.com/artists/", "https://www.nsmw.ca/news/music-nova-scotia-presents-the-25th-annual-music-amp-industry-awards-nominations"]
+  },
+  "the 45 portland street band": {
+    "bio": "The 45 Portland Street Band is a Dartmouth, Nova Scotia studio collective assembled from artists connected to the creative community around 45 Portland Street and Fang Recording. The project appeared on the 2025 Joel Plaskett tribute Songs From The Gang with Drunk Teenagers, featuring Eric Stephen Martin, Alexander Gallant, Aquakultre and Sarah Swire alongside Lance Sampson, Brendan Morley and Dylan Jewers.",
+    "website": "https://joelplaskett.bandcamp.com/track/drunk-teenagers-feat-eric-stephen-martin-alexander-gallant-aquakultre-sarah-swire",
+    "instagram": "",
+    "city": "Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://joelplaskett.bandcamp.com/track/drunk-teenagers-feat-eric-stephen-martin-alexander-gallant-aquakultre-sarah-swire", "https://joelplaskett.com/products/songs-from-the-gang-a-celebration-of-joel-plaskett-vinyl"]
+  }
+}
