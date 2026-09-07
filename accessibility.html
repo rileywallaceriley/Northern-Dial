@@ -13,10 +13,12 @@
     @media(max-width:720px){.grid{grid-template-columns:1fr}.page-nav{display:block;position:sticky;top:0;z-index:1000}.mobile-menu-toggle{align-items:center;background:#1a1a1a;border:0;color:#fff;display:flex;font-family:"Oswald",sans-serif;font-size:.88rem;font-weight:700;justify-content:space-between;letter-spacing:.14em;min-height:48px;padding:13px 18px;text-transform:uppercase;width:100%}.mobile-menu-icon{color:#C33;font-family:Arial,sans-serif;font-size:1.35rem}.mobile-menu-links{display:none;flex-direction:column}.page-nav.menu-open .mobile-menu-links{display:flex}.mobile-menu-links a{border-bottom:1px solid #343434;padding:14px 18px}.mobile-menu-links .submit-link{background:#C33}.wrap{padding:26px 12px 56px}.hero{padding:30px 23px}.brand img{height:62px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
+<link rel="alternate" hreflang="en" href="https://www.northerndial.ca/accessibility.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/accessibilite.html">
 </head>
 <body>
   <header class="header"><div class="header-inner"><a class="brand" href="./"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial"></a></div>
     <nav class="page-nav" aria-label="Main navigation"><button class="mobile-menu-toggle" type="button" aria-expanded="false"><span>Menu</span><span class="mobile-menu-icon">☰</span></button><div class="mobile-menu-links"><a href="index.html">Home</a><a href="library.html">Songs</a><a href="artists.html">Artists</a><a href="discover.html">Discover</a><a href="blog/">Blog</a><a href="/about.html">About</a>
+        <a href="/fr/accessibilite.html" class="language-switch" lang="fr" hreflang="fr">FR</a>
         <a href="index.html#submit" class="submit-link">Submit</a></div></nav>
   </header>
   <main class="wrap">
@@ -35,7 +37,8 @@
 
     <section class="section card"><div class="eyebrow">Next Steps</div><h2>Make the Commitment Measurable</h2><p>Future accessibility work will include more systematic keyboard testing, screen-reader review, form-label checks, contrast review, media transcripts or captions and testing across representative mobile and desktop environments.</p><div class="callout"><strong>Feedback is welcome.</strong> Northern Dial is an open-source project, and accessibility issues can be raised through the public GitHub repository so they can be tracked and fixed.</div><p style="margin-top:18px"><a href="https://github.com/rileywallaceriley/Northern-Dial" target="_blank" rel="noopener"><strong>Visit the Northern Dial GitHub repository →</strong></a></p></section>
 
-    <footer class="footer"><a href="about.html">About</a><a href="sessions.html">Sessions</a><a href="archive.html">Archive and Atlas</a><p class="small">Last updated September 2026.</p></footer>
+    <section class="section card"><div class="eyebrow">Verification</div><h2>How We Check It</h2><p>Northern Dial now maintains an automated accessibility guardrail that checks core public pages for basic structural problems such as a missing page language, title, H1 or image alt attribute. This catches regressions early, but it is deliberately not described as WCAG certification.</p><p>Manual review still matters. The working checklist includes keyboard-only navigation, visible focus, screen-reader spot checks, form labels, contrast, zoom/reflow, reduced-motion behaviour and captions or transcripts for new media.</p><div class="callout"><strong>Standard:</strong> target WCAG 2.2 AA practices, verify automated findings in code and use manual or specialist review for funded project releases.</div></section>
+<footer class="footer"><a href="about.html">About</a><a href="sessions.html">Sessions</a><a href="archive.html">Archive and Atlas</a><p class="small">Last updated September 2026.</p></footer>
   </main>
   <script>const nav=document.querySelector('.page-nav'),toggle=document.querySelector('.mobile-menu-toggle');if(nav&&toggle){toggle.addEventListener('click',()=>{const o=nav.classList.toggle('menu-open');toggle.setAttribute('aria-expanded',String(o));toggle.querySelector('.mobile-menu-icon').textContent=o?'✕':'☰'})}</script>
 
