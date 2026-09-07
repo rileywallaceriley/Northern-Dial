@@ -6,7 +6,7 @@ on:
       - 'sitewide_discovery_update.py'
       - 'navigation_finalize.py'
       - 'site_quality_update.py'
-      - 'scripts/site_quality_audit.py'
+      - 'scripts/site_quality_audit_v2.py'
       - 'accessibility_enhancements.js'
       - '.github/workflows/sitewide-discovery-update.yml'
   workflow_dispatch:
@@ -37,13 +37,13 @@ jobs:
         run: python3 site_quality_update.py
 
       - name: Run site quality audit
-        run: python3 scripts/site_quality_audit.py
+        run: python3 scripts/site_quality_audit_v2.py
 
       - name: Commit site-wide changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html homepage_language.js accessibility_enhancements.js library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr sitemap.xml robots.txt 404.html admin.html instagram-dashboard.html library_artist_profiles.html sample-explorer.html zen-scene.html scripts/site_quality_audit.py artist_removals.txt artist_unresolved.txt
+          git add index.html homepage_language.js accessibility_enhancements.js library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr sitemap.xml robots.txt 404.html admin.html instagram-dashboard.html library_artist_profiles.html sample-explorer.html zen-scene.html scripts/site_quality_audit_v2.py artist_removals.txt artist_unresolved.txt
           if git diff --cached --quiet; then
             echo 'No site-wide changes to commit.'
             exit 0
