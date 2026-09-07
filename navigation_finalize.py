@@ -66,7 +66,6 @@ def normalize_language_after_submit(nav: str, homepage: bool = False) -> str:
     is_list_nav = '<ul' in nav
 
     if homepage:
-        # Remove any old homepage French link/button, then place the in-page toggle after Submit.
         nav = re.sub(
             r'\s*<a\s+href=["\']/fr/?["\'][^>]*>\s*(?:FR|Français)\s*</a>',
             '', nav, count=1, flags=re.I,
@@ -125,7 +124,6 @@ def patch_nav(path: Path, about_href: str, fr_href: str):
     nav = match.group(1)
     is_list_nav = '<ul' in nav
 
-    # Normalize an older malformed blog-nav form where About and French shared one <li>.
     nav = re.sub(
         r'<li>\s*(<a[^>]*href="[^"]*about\.html"[^>]*>About</a>)\s*(<a[^>]*(?:href="[^"]*fr/?"|hreflang="fr")[^>]*>(?:FR|Français)</a>)\s*</li>',
         r'<li>\1</li>\n      <li>\2</li>',
@@ -142,12 +140,11 @@ def patch_nav(path: Path, about_href: str, fr_href: str):
                     r'(\s*<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)',
                     '\n      ' + item + r'\1', nav, count=1,
                 )
-        else:
-            if 'submit-link' in nav:
-                nav = re.sub(
-                    r'(\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)',
-                    '\n        ' + anchor + r'\1', nav, count=1,
-                )
+        elif 'submit-link' in nav:
+            nav = re.sub(
+                r'(\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)',
+                '\n        ' + anchor + r'\1', nav, count=1,
+            )
 
     has_language_control = bool(re.search(r'(hreflang="fr"|lang="fr"|data-language-toggle)', nav, re.I))
     if not has_language_control and path.name != 'index.html':
@@ -181,14 +178,24 @@ def patch_home_language_assets():
     path.write_text(text, encoding='utf-8')
 
 
+def patch_home_dynamic_image_alts():
+    path = Path('index.html')
+    if not path.exists():
+        return
+    text = path.read_text(encoding='utf-8')
+    # Dynamic album artwork is decorative because title and artist text sit directly beside it.
+    text = text.replace('<img src="${art}" style=', '<img src="${art}" alt="" style=')
+    path.write_text(text, encoding='utf-8')
+
+
 for name in ROOT_PAGES:
     path = Path(name)
-    # Institutional pages already contain About; these hrefs are only fallbacks.
     patch_nav(path, '/about.html', '/fr/')
 
 for path in sorted(Path('blog').glob('*.html')):
     patch_nav(path, '../about.html', '../fr/')
 
 patch_home_language_assets()
+patch_home_dynamic_image_alts()
 
-print('Navigation finalized: Submit precedes Français, and the homepage language control translates in place.')
+print('Navigation finalized: Submit precedes Français; homepage translation stays in place; dynamic artwork has accessible alt treatment.')
