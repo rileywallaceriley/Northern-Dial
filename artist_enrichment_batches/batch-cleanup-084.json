@@ -1,0 +1,47 @@
+{
+  "dawamafia": {
+    "bio": "DawaMafia is a French-Canadian rap duo from Montreal's South Shore made up of brothers Zacka and Tali-B. Blending Quebec rap with trap and American hip-hop influences, they have built a catalogue around projects including D'où je viens, Mafia, Loyal and LIEN200 while representing the greater Montreal scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.ricorichproductions.com/artiste-dawamafia/", "https://dawamafia.bandcamp.com/music", "https://music.apple.com/us/artist/dawamafia/1339786336"]
+  },
+  "duski": {
+    "bio": "Duski is a Canadian hip-hop artist from High Level, Alberta. His catalogue includes singles such as The North, Blessed, If U Call and BUSS DOWN, the 2021 collaboration with DazeOnEast that appears in the Northern Dial library, alongside the NORTHSIDEBABY project and collaborations with other Alberta artists.",
+    "website": "",
+    "instagram": "",
+    "city": "High Level, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/duski/1468215363", "https://www.shazam.com/artist/duski/1468215363", "https://music.apple.com/us/album/buss-down-feat-dazeoneast-single/1571770351"]
+  },
+  "fresco rhodes": {
+    "bio": "Fresco Rhodes, also known as Finesse, is a Toronto-based Canadian producer, composer, keyboardist and mix engineer. His production work spans hip-hop, R&B and pop, including collaborations with EverythingOShauN and Papi AQ on BODMON, the track that appears in the Northern Dial library.",
+    "website": "https://linktr.ee/fresco_rhodes",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.soundclick.com/finessetheproducer", "https://linktr.ee/fresco_rhodes", "https://music.apple.com/us/song/bodmon/1611906380"]
+  },
+  "n.i.f.t.y.": {
+    "bio": "Ches Christian, better known as N.I.F.T.Y., is a Toronto faith-based hip-hop artist, storyteller and educator with a recording career stretching back to the 2000s. Alongside national touring and independent releases including This Iz Bizness, he became Canada's first rap performance professor at Centennial College and has remained active in music education and community work.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.utoronto.ca/people/directories/all-faculty/ches-christian", "https://nilla.bandcamp.com/", "https://www.reverbnation.com/niftymusic"]
+  },
+  "orange gecko": {
+    "bio": "Orange Gecko is a Montreal francophone pop-rock group whose music mixes soul, jazz, indie pop and groove-driven rock. Formed in 2016, the Quebec group has released projects including Amour et stupéfiants and Jab!, evolving through several lineups while remaining part of Montreal's independent music scene.",
+    "website": "https://orangegecko.bandcamp.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://orangegecko.bandcamp.com/", "https://lecanalauditif.ca/artistes/orange-gecko/", "https://palmaresadisq.ca/fr/artiste/orange-gecko/"]
+  }
+}
