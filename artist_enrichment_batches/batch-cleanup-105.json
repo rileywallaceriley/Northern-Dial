@@ -1,0 +1,47 @@
+{
+  "king bliss": {
+    "bio": "King Bliss is a Toronto emcee rooted in the city's underground hip-hop and cypher scene. His catalogue includes tracks such as Top Shotta, Pocket Dial and Writing the Wrongs, with a style built around lyricism and social commentary. Northern Dial carries King Bliss as part of Toronto's independent rap community.",
+    "website": "https://kingblissent.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://kingblissent.bandcamp.com/"]
+  },
+  "sonny hendrixx": {
+    "bio": "Sonny Hendrixx is a Toronto hip-hop artist whose music blends rap, rock and trap with autobiographical writing about survival, addiction and recovery. His catalogue includes The Sonny Boy Wonder LP and later releases such as I Got Now and Nothing Less. Northern Dial carries Sonny Hendrixx as part of Toronto's independent rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/2aGi4cgyxDTN2t4PT2z67e", "https://music.apple.com/us/artist/sonny-hendrixx/1520302252"]
+  },
+  "zinera": {
+    "bio": "Zinera is a Montreal rapper from the Anjou borough whose French-language catalogue emerged in the mid-2020s. Tracks including 4 AM, Glitch and material from Mr Fastlife helped establish Zinera within Montreal's new-generation rap scene. Northern Dial carries Zinera as part of contemporary Quebec hip-hop.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.magazinehiphop.com/zinera-occupe-la-9e-place-des-tendances-musicales-sur-youtube/", "https://music.apple.com/us/artist/zinera/1701502196"]
+  },
+  "mayone9": {
+    "bio": "MayOne-9 is a Canadian hip-hop artist associated with Toronto rap group BrassMunk and with producer Dub J's early-2000s Canadian hip-hop network. His work sits within the same era that connected artists such as JD Era, Eternia, D-Sisive and Moka Only. Northern Dial carries MayOne-9 as part of Canada's 2000s underground rap history.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dubjmusic.com/my-story"]
+  },
+  "beau dick": {
+    "bio": "Beau Dick was a Kwakwaka'wakw artist, hereditary chief, culture bearer, activist, dancer and musician from British Columbia. Born in Alert Bay, his creative practice connected carving, ceremony, performance, song and storytelling, making him an important figure in contemporary Indigenous art in Canada. Northern Dial carries Beau Dick in recognition of that broader musical and cultural practice.",
+    "website": "",
+    "instagram": "",
+    "city": "Alert Bay, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.umista.ca/a/s/pages/beau-dick", "https://fnhl.ubc.ca/2017/03/28/fnhl-remembers-beau-dick/"]
+  }
+}
