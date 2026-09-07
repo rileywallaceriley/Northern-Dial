@@ -1,0 +1,47 @@
+{
+  "arcee": {
+    "bio": "Toronto MC and radio host Arcee is a veteran of Canada's independent hip-hop scene, known for sharp battle-oriented lyricism and for co-hosting the influential Real Frequency show on CKLN. His early singles and collaborations with producers including Da Grassroots, DJ Serious and Jake One were collected on the MixedWell mixtape, while his catalogue also includes appearances alongside Brassmunk, IRS, King Reign and other Toronto artists.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.rapreviews.com/2004/11/arcee-mixedwell-mixtape/", "https://exclaim.ca/music/article/arcee-mixedwell", "https://open.spotify.com/album/4h4GB3iy05iDvYv79zpy65"]
+  },
+  "marvel": {
+    "bio": "Toronto rapper Marvel is a veteran of the city's early independent hip-hop movement and a member of the Circle crew and Figurez of Speech. Closely connected to artists including Kardinal Offishall, Choclair and Solitair, he built a solo catalogue around releases such as No Streets (Just the World), combining Toronto-focused writing with production from some of Canada's best-known hip-hop producers.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.rapreviews.com/2007/09/marvel-no-streets-just-the-world/", "https://en.wikipedia.org/wiki/List_of_Canadian_hip-hop_musicians", "https://www.sootoday.com/local-news/a-guy-from-scarborough-raps-the-sault-91674"]
+  },
+  "k-4ce": {
+    "bio": "Pioneering Toronto MC Shawn 'K-4ce' Morrison is an early architect of the city's hip-hop identity, remembered for coining the term 'T-Dot' and for work with artists including Michie Mee, Maestro Fresh Wes and Ghetto Concept. Raised between Toronto's Weston neighbourhood and New York City, he helped shape the vocabulary and culture of Toronto rap before the city's later international breakthrough.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/events/thefirst50", "https://blogs.tpl.ca/trl/2019/11/for-the-record-an-idea-of-the-north-exhibit-digest/", "https://open.spotify.com/show/7FLtSNA99fqD8T55FTqO5D"]
+  },
+  "scotty iv": {
+    "bio": "Toronto rapper Scotty IV is a Canadian MC and member of the Stay Out Late collective whose introspective writing draws on experiences ranging from university and homelessness to survival and personal growth. His solo catalogue and group work have connected him with artists including Tremayne, Noyz and Kardinal Offishall, who featured him on the Canadian posse cut One For All (Remix).",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/kardinal-offishall-one-for-all-remix/", "https://open.spotify.com/artist/52r5XipCHb2l7LjQe9r6tg", "https://voiceonline.com/new-artists-revealed-for-monsterworld-mashup/"]
+  },
+  "tamir": {
+    "bio": "Scarborough rapper and R&B artist Tamir Holder is a Canadian MC whose music combines agile rap flows with melodic vocals and writing about Scarborough, love, Black identity, masculinity and mental health. He has built an independent catalogue including Don't Let Your Fear Kill You and later singles, and joined Kardinal Offishall, Tona, Scotty IV, Eternia, Quake Matthews and Promise on One For All (Remix).",
+    "website": "",
+    "instagram": "",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/kardinal-offishall-one-for-all-remix/", "https://readfoyer.com/article/rap-horizons-sydanie-and-tamir", "https://music.apple.com/us/artist/tamir/1512527598"]
+  }
+}
