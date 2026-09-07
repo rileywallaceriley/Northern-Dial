@@ -1,0 +1,7 @@
+# Verified non-Canadian artists matched to exact Northern Dial identities.
+Loop.holes
+Type.Raw
+Chris IDH
+Eight9FLY
+Madwreck
+Kayam
