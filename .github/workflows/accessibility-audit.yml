@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '20 13 * * 1'
+  push:
+    paths:
+      - '*.html'
+      - 'blog/*.html'
+      - 'fr/*.html'
+      - 'scripts/accessibility_audit.py'
+      - '.github/workflows/accessibility-audit.yml'
 
 permissions:
   contents: read
@@ -14,5 +21,5 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Run accessibility guardrails
+      - name: Run accessibility and navigation guardrails
         run: python3 scripts/accessibility_audit.py
