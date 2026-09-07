@@ -2,7 +2,11 @@
 from pathlib import Path
 import re
 
-ROOT_PAGES = ['index.html', 'library.html', 'artists.html', 'discover.html', 'requests.html']
+ROOT_PAGES = [
+    'index.html', 'library.html', 'artists.html', 'discover.html', 'requests.html',
+    'about.html', 'sessions.html', 'archive.html', 'accessibility.html',
+    'rights.html', 'survey.html'
+]
 
 HOME_LANGUAGE_STYLES = r'''
 <style id="nd-home-language-styles">
@@ -58,6 +62,58 @@ HOME_LANGUAGE_STYLES = r'''
 '''
 
 
+def normalize_language_after_submit(nav: str, homepage: bool = False) -> str:
+    is_list_nav = '<ul' in nav
+
+    if homepage:
+        # Remove any old homepage French link/button, then place the in-page toggle after Submit.
+        nav = re.sub(
+            r'\s*<a\s+href=["\']/fr/?["\'][^>]*>\s*(?:FR|Français)\s*</a>',
+            '', nav, count=1, flags=re.I,
+        )
+        nav = re.sub(
+            r'\s*<button[^>]*data-language-toggle[^>]*>.*?</button>',
+            '', nav, count=1, flags=re.I | re.S,
+        )
+        button = ('<button type="button" class="language-switch language-toggle" '
+                  'data-language-toggle lang="fr" '
+                  'aria-label="Afficher la page d’accueil en français">Français</button>')
+        submit = re.search(r'(<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)', nav, re.I)
+        if submit:
+            nav = nav[:submit.end()] + '\n        ' + button + nav[submit.end():]
+        return nav
+
+    if is_list_nav:
+        lang_match = re.search(
+            r'\s*<li>\s*(<a[^>]*(?:href="[^"]*fr/?"|hreflang="fr"|lang="fr")[^>]*>\s*(?:FR|Français)\s*</a>)\s*</li>',
+            nav, re.I | re.S,
+        )
+        if not lang_match:
+            return nav
+        anchor = re.sub(r'>\s*FR\s*</a>', '>Français</a>', lang_match.group(1), flags=re.I)
+        nav = nav[:lang_match.start()] + nav[lang_match.end():]
+        submit = re.search(
+            r'(<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)',
+            nav, re.I | re.S,
+        )
+        if submit:
+            nav = nav[:submit.end()] + '\n      <li>' + anchor + '</li>' + nav[submit.end():]
+        return nav
+
+    lang_match = re.search(
+        r'\s*(<a[^>]*(?:href="[^"]*fr(?:/|/[^\"]*|\.html)?"|hreflang="fr"|lang="fr")[^>]*>\s*(?:FR|Français)\s*</a>)',
+        nav, re.I | re.S,
+    )
+    if not lang_match:
+        return nav
+    anchor = re.sub(r'>\s*FR\s*</a>', '>Français</a>', lang_match.group(1), flags=re.I)
+    nav = nav[:lang_match.start()] + nav[lang_match.end():]
+    submit = re.search(r'(<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)', nav, re.I)
+    if submit:
+        nav = nav[:submit.end()] + '\n        ' + anchor + nav[submit.end():]
+    return nav
+
+
 def patch_nav(path: Path, about_href: str, fr_href: str):
     if not path.exists():
         return
@@ -69,79 +125,70 @@ def patch_nav(path: Path, about_href: str, fr_href: str):
     nav = match.group(1)
     is_list_nav = '<ul' in nav
 
-    # Normalize an older malformed blog-nav form where About and FR shared one <li>.
+    # Normalize an older malformed blog-nav form where About and French shared one <li>.
     nav = re.sub(
-        r'<li>\s*(<a[^>]*href="[^"]*about\.html"[^>]*>About</a>)\s*(<a[^>]*href="[^"]*fr/?"[^>]*>FR</a>)\s*</li>',
+        r'<li>\s*(<a[^>]*href="[^"]*about\.html"[^>]*>About</a>)\s*(<a[^>]*(?:href="[^"]*fr/?"|hreflang="fr")[^>]*>(?:FR|Français)</a>)\s*</li>',
         r'<li>\1</li>\n      <li>\2</li>',
         nav,
-        flags=re.S,
+        flags=re.S | re.I,
     )
 
     if '>About</a>' not in nav:
         anchor = f'<a href="{about_href}">About</a>'
         if is_list_nav:
             item = f'<li>{anchor}</li>'
-            if '>FR</a>' in nav:
-                nav = re.sub(r'(\s*<li>\s*<a[^>]*>FR</a>\s*</li>)', '\n      ' + item + r'\1', nav, count=1)
-            elif 'submit-link' in nav:
-                nav = re.sub(r'(\s*<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)', '\n      ' + item + r'\1', nav, count=1)
+            if 'submit-link' in nav:
+                nav = re.sub(
+                    r'(\s*<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)',
+                    '\n      ' + item + r'\1', nav, count=1,
+                )
         else:
-            if '>FR</a>' in nav:
-                nav = re.sub(r'(\s*<a[^>]*>FR</a>)', '\n        ' + anchor + r'\1', nav, count=1)
-            elif 'submit-link' in nav:
-                nav = re.sub(r'(\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)', '\n        ' + anchor + r'\1', nav, count=1)
+            if 'submit-link' in nav:
+                nav = re.sub(
+                    r'(\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)',
+                    '\n        ' + anchor + r'\1', nav, count=1,
+                )
 
-    has_language_control = ('>FR</a>' in nav or 'data-language-toggle' in nav)
-    if not has_language_control:
-        anchor = f'<a href="{fr_href}" class="language-switch" lang="fr" hreflang="fr">FR</a>'
+    has_language_control = bool(re.search(r'(hreflang="fr"|lang="fr"|data-language-toggle)', nav, re.I))
+    if not has_language_control and path.name != 'index.html':
+        anchor = f'<a href="{fr_href}" class="language-switch" lang="fr" hreflang="fr">Français</a>'
         if is_list_nav:
-            item = f'<li>{anchor}</li>'
-            nav = re.sub(r'(\s*<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)', '\n      ' + item + r'\1', nav, count=1)
+            submit = re.search(
+                r'(<li>\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>\s*</li>)',
+                nav, re.I | re.S,
+            )
+            if submit:
+                nav = nav[:submit.end()] + '\n      <li>' + anchor + '</li>' + nav[submit.end():]
         else:
-            nav = re.sub(r'(\s*<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)', '\n        ' + anchor + r'\1', nav, count=1)
+            submit = re.search(r'(<a[^>]*class="[^"]*submit-link[^"]*"[^>]*>Submit</a>)', nav, re.I)
+            if submit:
+                nav = nav[:submit.end()] + '\n        ' + anchor + nav[submit.end():]
 
+    nav = normalize_language_after_submit(nav, homepage=(path.name == 'index.html'))
     text = text[:match.start()] + nav + text[match.end():]
     path.write_text(text, encoding='utf-8')
 
 
-def patch_home_language_toggle():
+def patch_home_language_assets():
     path = Path('index.html')
     if not path.exists():
         return
     text = path.read_text(encoding='utf-8')
-
-    button = ('<button type="button" class="language-switch language-toggle" '
-              'data-language-toggle lang="fr" '
-              'aria-label="Afficher la page d’accueil en français">Français</button>')
-
-    text, count = re.subn(
-        r'<a\s+href=["\']/fr/?["\'][^>]*>\s*(?:FR|Français)\s*</a>',
-        button,
-        text,
-        count=1,
-        flags=re.I,
-    )
-
-    if count == 0 and 'data-language-toggle' not in text:
-        submit = re.search(r'<a href="\./#submit" class="submit-link">Submit</a>', text)
-        if submit:
-            text = text[:submit.start()] + button + '\n        ' + text[submit.start():]
-
     if 'id="nd-home-language-styles"' not in text:
         text = text.replace('</head>', HOME_LANGUAGE_STYLES + '\n</head>', 1)
-
     if 'src="/homepage_language.js"' not in text:
         text = text.replace('</body>', '<script src="/homepage_language.js"></script>\n</body>', 1)
-
     path.write_text(text, encoding='utf-8')
 
 
 for name in ROOT_PAGES:
-    patch_nav(Path(name), '/about.html', '/fr/')
+    path = Path(name)
+    # Institutional pages already contain About; these hrefs are only fallbacks.
+    patch_nav(path, '/about.html', '/fr/')
 
 for path in sorted(Path('blog').glob('*.html')):
     patch_nav(path, '../about.html', '../fr/')
 
-patch_home_language_toggle()
+patch_home_language_assets()
 
-print('Final navigation guard applied. Homepage language control now translates the existing page in place.')
+print('Navigation finalized: Submit precedes Français, and the homepage language control translates in place.')
