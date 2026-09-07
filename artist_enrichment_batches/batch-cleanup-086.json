@@ -1,0 +1,47 @@
+{
+  "kubla": {
+    "bio": "Kubla is a Canadian soul and R&B singer-songwriter, producer, guitarist and bandleader based in Toronto. Raised on Canada's West Coast by musician parents, he built his independent career after moving to Toronto, blending jazz-informed musicianship with soul, R&B and pop across releases including Close to the Sun, Sounds from Deep Down and Bodies Dancing.",
+    "website": "https://kublamusic.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://kublamusic.com/about", "https://siegelent.com/artist/kubla/", "https://music.apple.com/us/song/1853254665"]
+  },
+  "septo": {
+    "bio": "SepTo is a Toronto hip-hop artist whose work emerged from the city's independent rap scene in the early 2010s. His catalogue includes projects such as T.O for Toronto and Almost NevR, along with collaborations with Korry Deez, Dan-e-o and Rich Kidd; his appearance on Dan-e-o's Get Up On It is the track represented in the Northern Dial library.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.andrerehal.com/music-video", "https://daneo-urbnet.bandcamp.com/album/inevitable", "https://www.urbnet.com/video/"]
+  },
+  "spirit josh": {
+    "bio": "Spirit Josh is a Toronto indie-folk and alternative-country band formed in memory of songwriter Matt Jonn Lewis's late brother Josh. Built around Lewis, Sam Szigeti, Alex Nunes and collaborators, the group has developed a self-recorded catalogue that moves between folk, country, slowcore and indie rock, including Paint a Lucky Picture and the 2026 album Road of Life.",
+    "website": "https://spiritjosh.bandcamp.com/",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://spiritjosh.bandcamp.com/album/paint-a-lucky-picture", "https://exclaim.ca/artists/spirit_josh", "https://ca.billboard.com/fyi/prism-prize-eligible-video-spirit-josh-pinetree-lake%C2%A0"]
+  },
+  "taylor jackson": {
+    "bio": "Taylor Jackson is a Winnipeg-based Canadian singer-songwriter whose music sits between indie rock and contemporary singer-songwriter pop. Her releases include the Boring EP and the 2025-26 singles I Lose My Mind and Buzzcut, with Manitoba community radio identifying her as both a local and Canadian artist.",
+    "website": "https://taylordjackson.bandcamp.com/",
+    "instagram": "",
+    "city": "Winnipeg, Manitoba",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://taylordjackson.bandcamp.com/", "https://umfm.com/programming/broadcast/manitoba-in-the-moment-february-24-2026", "https://music.apple.com/us/artist/taylor-jackson/293756368"]
+  },
+  "vermeil": {
+    "bio": "Vermeil is an emerging indie-pop artist from Quebec City whose French-language music pairs intimate writing with grainy synths, subtle electronic textures and a melancholy pop sensibility. Her catalogue includes songs such as L'œil, Remède, Sommeil and si je ne suis pas, the latter appearing in the Northern Dial library.",
+    "website": "https://vermeilv.bandcamp.com/",
+    "instagram": "",
+    "city": "Quebec City, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://vermeilv.bandcamp.com/", "https://musiqc.ca/artistes/vermeil", "https://palmaresadisq.ca/en/artist/vermeil/"]
+  }
+}
