@@ -46,6 +46,10 @@
     'Search': 'Rechercher',
     'Submit Music': 'Soumettre de la musique',
     'The Northern Dial Project': 'Le projet Northern Dial',
+    'Northern Dial Project': 'Projet Northern Dial',
+    'Sessions': 'Séances',
+    'Archive & Atlas': 'Archives et atlas',
+    'Accessibility': 'Accessibilité',
     'Our Mantra': 'Notre raison d’être',
     'Where We Are Now': 'Où nous en sommes',
     'The Vision': 'La vision',
@@ -150,6 +154,17 @@
     if (persist) localStorage.setItem(STORAGE_KEY, lang);
   }
 
+  function closeMobileMenu() {
+    const nav = document.querySelector('.mobile-menu-nav');
+    const menuToggle = nav?.querySelector('.mobile-menu-toggle');
+    const icon = menuToggle?.querySelector('.mobile-menu-icon');
+    if (!nav || !menuToggle) return;
+    nav.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    if (icon) icon.textContent = '☰';
+  }
+
   function installMutationTranslation() {
     let queued = false;
     const observer = new MutationObserver(() => {
@@ -172,6 +187,7 @@
     toggle.addEventListener('click', () => {
       const current = document.documentElement.dataset.ndLanguage || 'en';
       applyLanguage(current === 'fr' ? 'en' : 'fr');
+      closeMobileMenu();
     });
 
     const saved = localStorage.getItem(STORAGE_KEY);
