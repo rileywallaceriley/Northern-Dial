@@ -1,0 +1,466 @@
+name: Grant readiness sprint one-time update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/grant-readiness-sprint-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build grant-readiness assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          ROOT = Path('.')
+          RED = '#CC3333'
+          LOGO = 'https://i.imgur.com/XIAPd0N.png'
+
+          def write(path, content):
+              p = Path(path)
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(content.strip() + '\n', encoding='utf-8')
+
+          base_css = r'''
+          *{box-sizing:border-box}html{background:#fff}body{margin:0;background:linear-gradient(180deg,#fff 0%,#fff 72%,#f7e5e5 100%);color:#1a1a1a;font-family:"Roboto Condensed",sans-serif;min-height:100vh}a{color:inherit}.header{background:#fff;border-bottom:4px solid #C33}.header-inner{display:flex;justify-content:center;padding:12px 18px}.brand img{display:block;height:76px;width:auto}.page-nav{background:#1a1a1a;border-bottom:2px solid #C33;display:flex;justify-content:center}.page-nav a{color:#fff;font-family:"Oswald",sans-serif;font-size:.88rem;letter-spacing:.09em;padding:13px 16px;text-decoration:none;text-transform:uppercase}.page-nav a:hover,.page-nav a:focus,.page-nav a.active{background:#272727;color:#C33}.mobile-menu-toggle{display:none}.mobile-menu-links{display:flex;justify-content:center}.wrap{max-width:1060px;margin:0 auto;padding:38px 18px 72px}.hero{background:linear-gradient(135deg,#151515,#2a2a2a);border:5px solid #C33;border-radius:14px;color:#fff;padding:42px}.eyebrow{color:#C33;font-family:"Oswald",sans-serif;font-size:.84rem;font-weight:700;letter-spacing:.16em;margin-bottom:8px;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.2rem,8vw,5.8rem);font-weight:400;letter-spacing:.03em;line-height:.95;margin-bottom:16px;text-transform:uppercase}.hero p{color:#e5e5e5;font-size:1.13rem;line-height:1.65;margin:0;max-width:800px}.section{margin-top:30px}.card{background:#fff;border:4px solid #1a1a1a;border-radius:12px;padding:28px}.section h2{color:#C33;font-family:"Bebas Neue",sans-serif;font-size:2.5rem;font-weight:400;letter-spacing:.05em;margin-bottom:12px;text-transform:uppercase}.section h3{font-family:"Oswald",sans-serif;font-size:1.08rem;letter-spacing:.04em;margin-bottom:7px;text-transform:uppercase}.section p,.section li,.section label{font-size:1.02rem;line-height:1.65}.grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}.mini{background:#fff;border:3px solid #1a1a1a;border-radius:10px;padding:21px}.mini p{color:#555;margin:0}.btn{border-radius:7px;display:inline-block;font-family:"Oswald",sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.09em;padding:11px 16px;text-decoration:none;text-transform:uppercase}.btn-red{background:#C33;border:2px solid #C33;color:#fff}.btn-outline{background:#fff;border:2px solid #1a1a1a;color:#1a1a1a}.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.note{background:#f8eded;border-left:5px solid #C33;padding:15px 17px}.footer{border-top:3px solid #1a1a1a;margin-top:46px;padding-top:20px}.footer a{color:#8B2323;font-weight:700;margin-right:14px}.small{color:#666;font-size:.9rem;line-height:1.5;margin-top:14px}.lang{background:#fff!important;color:#1a1a1a!important;border:2px solid #C33!important;border-radius:999px!important;margin:7px 6px;padding:5px 10px!important}.lang:hover,.lang:focus{background:#C33!important;color:#fff!important}
+          @media(max-width:760px){.grid{grid-template-columns:1fr}.page-nav{display:block;position:sticky;top:0;z-index:1000}.mobile-menu-toggle{align-items:center;background:#1a1a1a;border:0;color:#fff;display:flex;font-family:"Oswald",sans-serif;font-size:.88rem;font-weight:700;justify-content:space-between;letter-spacing:.14em;min-height:48px;padding:13px 18px;text-transform:uppercase;width:100%}.mobile-menu-icon{color:#C33;font-family:Arial,sans-serif;font-size:1.35rem}.mobile-menu-links{background:#1a1a1a;display:none;flex-direction:column}.page-nav.menu-open .mobile-menu-links{display:flex}.mobile-menu-links a{border-bottom:1px solid #343434;padding:14px 18px;text-align:left}.mobile-menu-links .submit-link{background:#C33;color:#fff}.lang{align-self:flex-start;margin:8px 18px!important}.wrap{padding:26px 12px 56px}.hero{padding:30px 23px}.brand img{height:62px}}
+          @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+          '''
+
+          nav_script = """<script>const nav=document.querySelector('.page-nav'),toggle=document.querySelector('.mobile-menu-toggle');if(nav&&toggle){toggle.addEventListener('click',()=>{const o=nav.classList.toggle('menu-open');toggle.setAttribute('aria-expanded',String(o));toggle.querySelector('.mobile-menu-icon').textContent=o?'✕':'☰'})}</script>"""
+
+          def en_nav(active='', fr='/fr/'):
+              items=[('index.html','Home'),('library.html','Songs'),('artists.html','Artists'),('discover.html','Discover'),('blog/','Blog'),('about.html','About')]
+              links=''.join(f'<a href="{href}"'+(' class="active" aria-current="page"' if label==active else '')+f'>{label}</a>' for href,label in items)
+              return f'''<nav class="page-nav" aria-label="Main navigation"><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><span>Menu</span><span class="mobile-menu-icon" aria-hidden="true">☰</span></button><div class="mobile-menu-links">{links}<a class="lang" href="{fr}" lang="fr" hreflang="fr">FR</a><a href="index.html#submit" class="submit-link">Submit</a></div></nav>'''
+
+          def fr_nav(active='', en='/'):
+              items=[('/fr/','Accueil'),('/fr/a-propos.html','À propos'),('/fr/droits.html','Droits'),('/fr/accessibilite.html','Accessibilité'),('/survey.html','Sondage')]
+              links=''.join(f'<a href="{href}"'+(' class="active" aria-current="page"' if label==active else '')+f'>{label}</a>' for href,label in items)
+              return f'''<nav class="page-nav" aria-label="Navigation principale"><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu de navigation"><span>Menu</span><span class="mobile-menu-icon" aria-hidden="true">☰</span></button><div class="mobile-menu-links">{links}<a class="lang" href="{en}" lang="en" hreflang="en">EN</a></div></nav>'''
+
+          def shell(lang, title, description, canonical, nav, body, alternates=''):
+              return f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="{description}"><meta name="theme-color" content="#CC3333"><link rel="canonical" href="{canonical}">{alternates}<title>{title}</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"><style>{base_css}</style>
+</head><body><header class="header"><div class="header-inner"><a class="brand" href="{'/fr/' if lang=='fr' else '/'}" aria-label="Northern Dial"><img src="{LOGO}" alt="Northern Dial"></a></div>{nav}</header><main class="wrap">{body}</main>{nav_script}</body></html>'''
+
+          rights_body = '''
+          <section class="hero"><div class="eyebrow">Rights, Sources and Corrections</div><h1>Respect the Work. Show the Source.</h1><p>Northern Dial documents and promotes Canadian music. That means being clear about where information comes from, what we own, what we do not own and how artists or rights holders can ask us to correct or remove material.</p></section>
+          <section class="section card"><div class="eyebrow">Provenance</div><h2>Source-Backed Artist Information</h2><p>Artist biographies and metadata are built from official artist websites, label or management pages, established publications, public databases and other reliable sources. Where practical, Northern Dial keeps source references with profile data so claims can be checked later. Ambiguous identities or Canadian connections stay unresolved rather than being presented as fact.</p></section>
+          <section class="section"><div class="eyebrow">Rights</div><h2>What Northern Dial Does and Does Not Claim</h2><div class="grid"><div class="mini"><h3>Artist Names and Facts</h3><p>Names, career facts and other factual information are used for editorial and discovery purposes. Northern Dial does not claim ownership over an artist's identity or factual history.</p></div><div class="mini"><h3>Images</h3><p>Artist images may come from artist-supplied materials, official pages or other sources believed appropriate for editorial identification. Rights remain with their respective owners.</p></div><div class="mini"><h3>Music and Audio</h3><p>Streaming and request functionality is handled through Northern Dial's radio infrastructure. Copyright in recordings and compositions remains with the applicable artists, writers, labels, publishers and other rights holders.</p></div><div class="mini"><h3>Original Northern Dial Work</h3><p>Original editorial writing, interface design and project-specific materials remain subject to their own authorship and licensing terms. The public code repository does not automatically place third-party content into the same licence.</p></div></div></section>
+          <section class="section card"><div class="eyebrow">Corrections and Takedowns</div><h2>Artists Can Challenge the Record</h2><p>If an artist, representative or rights holder believes a profile contains an error, misidentification, inappropriate image or material that should be removed, Northern Dial will review the request and the supporting information. Corrections should favour verifiable evidence, and clear rights concerns should be handled promptly.</p><div class="note"><strong>Current contact path:</strong> public factual corrections can be raised through the Northern Dial GitHub repository. For matters involving private information or rights documentation, do not post sensitive material publicly. A dedicated private rights inbox is a planned operational improvement.</div><div class="links"><a class="btn btn-red" href="https://github.com/rileywallaceriley/Northern-Dial" target="_blank" rel="noopener">GitHub Repository</a><a class="btn btn-outline" href="about.html#curation">How We Curate</a></div></section>
+          <section class="section"><div class="eyebrow">Artist-Submitted Material</div><h2>Submission Is Not a Rights Transfer</h2><p>Submitting music or information to Northern Dial does not transfer ownership of the underlying work. Submitters should only provide materials they are authorized to share. Northern Dial may use submitted information to evaluate music for programming, editorial coverage or inclusion in public discovery features.</p></section>
+          <footer class="footer"><a href="about.html">About</a><a href="accessibility.html">Accessibility</a><a href="survey.html">Audience Survey</a><p class="small">Last updated September 2026. This page describes Northern Dial's editorial operating approach and is not legal advice.</p></footer>'''
+          write('rights.html', shell('en','Rights, Sources and Corrections | Northern Dial','Northern Dial rights, sourcing, corrections and provenance policy.','https://www.northerndial.ca/rights.html',en_nav(fr='/fr/droits.html'),rights_body,'<link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/droits.html"><link rel="alternate" hreflang="en" href="https://www.northerndial.ca/rights.html">'))
+
+          survey_body = '''
+          <section class="hero"><div class="eyebrow">Audience Research · Recherche auprès du public</div><h1>Help Shape Northern Dial</h1><p>Tell us how you use Northern Dial and what would make Canadian music discovery more useful to you. This short pilot survey is available in English and French.</p></section>
+          <section class="section card"><div class="eyebrow">Pilot Survey</div><h2>Your Experience / Votre expérience</h2>
+          <form id="surveyForm">
+            <p><label for="language"><strong>Response language / Langue de réponse</strong></label><br><select id="language" name="language"><option>English</option><option>Français</option></select></p>
+            <p><label for="role"><strong>Which best describes you? / Quel profil vous décrit le mieux?</strong></label><br><select id="role" name="role"><option>Listener / Auditeur·rice</option><option>Artist / Artiste</option><option>Music industry / Industrie musicale</option><option>Researcher or journalist / Recherche ou journalisme</option><option>Other / Autre</option></select></p>
+            <p><label for="region"><strong>Province, territory or region / Province, territoire ou région</strong></label><br><input id="region" name="region" type="text"></p>
+            <p><label for="frequency"><strong>How often do you use Northern Dial? / À quelle fréquence utilisez-vous Northern Dial?</strong></label><br><select id="frequency" name="frequency"><option>First visit / Première visite</option><option>Occasionally / À l'occasion</option><option>Monthly / Chaque mois</option><option>Weekly / Chaque semaine</option><option>Several times a week / Plusieurs fois par semaine</option></select></p>
+            <p><label for="discovery"><strong>Have you discovered a Canadian artist here you did not already know? / Avez-vous découvert ici un artiste canadien que vous ne connaissiez pas?</strong></label><br><select id="discovery" name="discovery"><option>Yes / Oui</option><option>No / Non</option><option>Not yet / Pas encore</option></select></p>
+            <p><label for="valuable"><strong>What is most useful? / Qu'est-ce qui vous est le plus utile?</strong></label><br><select id="valuable" name="valuable"><option>Live radio / Radio en direct</option><option>Artist library / Répertoire d'artistes</option><option>Discovery tool / Outil de découverte</option><option>Editorial stories / Articles</option><option>Requests / Demandes</option></select></p>
+            <p><label for="next"><strong>What should Northern Dial build or improve next? / Que devrait développer ou améliorer Northern Dial?</strong></label><br><textarea id="next" name="next" rows="4"></textarea></p>
+            <p><label for="comment"><strong>Anything else? / Autre chose?</strong></label><br><textarea id="comment" name="comment" rows="4"></textarea></p>
+            <p><label><input type="checkbox" name="quote" value="yes"> You may quote my response anonymously in funding or project reporting. / Vous pouvez citer ma réponse de façon anonyme dans les demandes de financement ou les rapports.</label></p>
+            <div class="links"><button class="btn btn-red" type="button" id="copySurvey">Copy Response / Copier</button><button class="btn btn-outline" type="button" id="shareSurvey">Share Response / Partager</button></div>
+          </form><div id="surveyStatus" class="note" style="margin-top:18px" aria-live="polite">Pilot collection method: responses are copied or shared from your device. Northern Dial does not yet store survey responses in a centralized database. / Méthode pilote : les réponses sont copiées ou partagées depuis votre appareil. Northern Dial ne les stocke pas encore dans une base de données centralisée.</div></section>
+          <footer class="footer"><a href="about.html">About</a><a href="rights.html">Rights and Sources</a><a href="/fr/">Français</a></footer>
+          <style>form input[type=text],form select,form textarea{width:100%;max-width:760px;border:2px solid #1a1a1a;border-radius:6px;padding:10px;font:inherit;background:#fff}form button{cursor:pointer}</style>
+          <script>
+          function surveyText(){const f=new FormData(document.getElementById('surveyForm'));return 'Northern Dial Audience Survey / Sondage Northern Dial\n\n'+[...f.entries()].map(([k,v])=>k+': '+v).join('\n')}
+          document.getElementById('copySurvey').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(surveyText());document.getElementById('surveyStatus').textContent='Response copied. / Réponse copiée.'}catch(e){document.getElementById('surveyStatus').textContent='Copy failed. Please select and copy your answers manually. / La copie a échoué.'}});
+          document.getElementById('shareSurvey').addEventListener('click',async()=>{const text=surveyText();if(navigator.share){try{await navigator.share({title:'Northern Dial Audience Survey',text})}catch(e){}}else{try{await navigator.clipboard.writeText(text);document.getElementById('surveyStatus').textContent='Sharing is not available here, so the response was copied. / Le partage n’est pas disponible; la réponse a été copiée.'}catch(e){}}});
+          </script>'''
+          write('survey.html', shell('en','Audience Survey | Northern Dial','Northern Dial bilingual listener and artist audience survey.','https://www.northerndial.ca/survey.html',en_nav(fr='/survey.html'),survey_body))
+
+          fr_home_body='''
+          <section class="hero"><div class="eyebrow">Northern Dial en français</div><h1>La musique canadienne mérite du contexte</h1><p>Northern Dial est un projet indépendant de radio, de découverte et de documentation de la musique canadienne. Cette version française donne accès aux pages essentielles du projet pendant que la traduction du catalogue et des articles se développe progressivement.</p><div class="links"><a class="btn btn-red" href="/">Écouter la radio</a><a class="btn btn-outline" href="/discover.html">Découvrir des artistes</a></div></section>
+          <section class="section"><div class="eyebrow">Le projet</div><h2>Découverte. Documentation. Diffusion.</h2><div class="grid"><div class="mini"><h3>Radio canadienne 24/7</h3><p>Une programmation canadienne continue, avec des demandes d'auditeurs et une rotation qui traverse les genres et les époques.</p></div><div class="mini"><h3>Répertoire d'artistes</h3><p>Un catalogue croissant d'artistes canadiens enrichi de biographies, de lieux, de liens officiels et de sources.</p></div><div class="mini"><h3>Découverte Northern Dial</h3><p>Un outil qui utilise le catalogue sélectionné pour proposer cinq artistes canadiens selon vos goûts.</p></div><div class="mini"><h3>Histoires et communauté</h3><p>Des portraits d'artistes, des histoires régionales, des soumissions et des projets de programmation future.</p></div></div></section>
+          <section class="section card"><div class="eyebrow">Version française en développement</div><h2>Une base bilingue, sans fausse promesse</h2><p>Les pages institutionnelles essentielles sont maintenant offertes en français. Le répertoire d'artistes et les articles de fond restent pour l'instant dans leur langue source jusqu'à ce qu'une traduction et une révision appropriées soient disponibles.</p><div class="links"><a class="btn btn-red" href="/fr/a-propos.html">À propos</a><a class="btn btn-outline" href="/fr/droits.html">Droits et sources</a><a class="btn btn-outline" href="/fr/accessibilite.html">Accessibilité</a><a class="btn btn-outline" href="/survey.html">Sondage bilingue</a></div></section>
+          <footer class="footer"><a href="/">English</a><a href="/artists.html">Artistes</a><a href="/blog/">Articles</a><p class="small">Certaines ressources demeurent en anglais pendant le déploiement progressif de la version française.</p></footer>'''
+          write('fr/index.html', shell('fr','Northern Dial en français | Musique canadienne','Northern Dial en français : radio, découverte et documentation de la musique canadienne.','https://www.northerndial.ca/fr/',fr_nav(active='Accueil'),fr_home_body,'<link rel="alternate" hreflang="en" href="https://www.northerndial.ca/"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/">'))
+
+          fr_about_body='''
+          <section class="hero"><div class="eyebrow">À propos de Northern Dial</div><h1>La musique canadienne mérite du contexte</h1><p>Northern Dial est un projet indépendant de découverte, de documentation et de radio consacré à la musique canadienne. La radio est la porte d'entrée; le projet plus large vise à bâtir une infrastructure publique utile autour des artistes, des scènes et des histoires musicales du Canada.</p></section>
+          <section class="section card"><div class="eyebrow">Mandat</div><h2>Découverte. Documentation. Diffusion.</h2><p>Northern Dial cherche à rendre la musique canadienne plus facile à trouver, à comprendre et à partager, avec une attention particulière aux artistes indépendants, émergents, régionaux et moins documentés.</p></section>
+          <section class="section"><div class="eyebrow">Direction du projet</div><h2>Un projet dirigé par Riley</h2><p><strong>Riley Wallace, fondateur et rédacteur en chef</strong>, dirige actuellement Northern Dial et assume la stratégie éditoriale, la programmation, le développement du produit et la coordination générale. Le projet est soutenu par des collaborateurs qui peuvent contribuer selon les besoins et les ressources disponibles.</p><div class="grid"><div class="mini"><h3>Développement</h3><p>Soutien au développement Web, aux intégrations, à l'automatisation, aux données et à l'évolution technique de la plateforme.</p></div><div class="mini"><h3>Partenariats et développement</h3><p>Soutien aux relations avec les partenaires, aux commandites, aux occasions de revenus et au développement de collaborations.</p></div><div class="mini"><h3>Design et curation</h3><p>Soutien à l'identité visuelle, à l'expérience utilisateur, à la programmation, à la sélection et au contexte éditorial.</p></div><div class="mini"><h3>Spécialistes futurs</h3><p>Les projets financés peuvent ajouter des spécialistes rémunérés en accessibilité, traduction, recherche, droits ou production selon le programme.</p></div></div></section>
+          <section class="section card"><div class="eyebrow">Méthode</div><h2>Curation humaine et sources vérifiables</h2><p>Northern Dial ne traite pas chaque crédit de base de données comme un fait. Les identités et les liens canadiens sont vérifiés à partir de sources fiables; les cas ambigus restent non résolus plutôt que de devenir des suppositions.</p><div class="links"><a class="btn btn-red" href="/fr/droits.html">Droits et sources</a><a class="btn btn-outline" href="/survey.html">Participer au sondage</a></div></section>
+          <footer class="footer"><a href="/about.html">English</a><a href="/fr/accessibilite.html">Accessibilité</a><a href="/fr/droits.html">Droits</a></footer>'''
+          write('fr/a-propos.html', shell('fr','À propos | Northern Dial','À propos de Northern Dial, projet canadien de radio, découverte et documentation musicale.','https://www.northerndial.ca/fr/a-propos.html',fr_nav(active='À propos',en='/about.html'),fr_about_body,'<link rel="alternate" hreflang="en" href="https://www.northerndial.ca/about.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/a-propos.html">'))
+
+          fr_rights_body='''
+          <section class="hero"><div class="eyebrow">Droits, sources et corrections</div><h1>Respecter le travail. Montrer la source.</h1><p>Northern Dial documente et fait découvrir la musique canadienne. Nous voulons donc être clairs sur nos sources, sur ce que nous possédons ou non et sur la façon dont les artistes ou titulaires de droits peuvent demander une correction ou un retrait.</p></section>
+          <section class="section card"><div class="eyebrow">Provenance</div><h2>Des profils appuyés par des sources</h2><p>Les biographies et métadonnées proviennent de sites officiels d'artistes, de maisons de disques ou de gestion, de publications reconnues, de bases publiques et d'autres sources fiables. Les cas ambigus restent non résolus jusqu'à ce que des preuves suffisantes soient disponibles.</p></section>
+          <section class="section"><div class="eyebrow">Droits</div><h2>Ce que Northern Dial revendique, et ne revendique pas</h2><div class="grid"><div class="mini"><h3>Noms et faits</h3><p>Les noms et faits de carrière sont utilisés à des fins éditoriales et de découverte. Northern Dial ne revendique aucun droit de propriété sur l'identité ou l'histoire d'un artiste.</p></div><div class="mini"><h3>Images</h3><p>Les images peuvent provenir de matériel fourni par l'artiste, de pages officielles ou d'autres sources jugées appropriées pour l'identification éditoriale. Les droits demeurent à leurs propriétaires respectifs.</p></div><div class="mini"><h3>Musique et audio</h3><p>Les droits sur les enregistrements et compositions demeurent aux artistes, auteurs, maisons de disques, éditeurs et autres titulaires concernés.</p></div><div class="mini"><h3>Travail original</h3><p>Les textes, interfaces et éléments originaux de Northern Dial conservent leur propre statut d'auteur et de licence; le dépôt de code public n'étend pas automatiquement sa licence au contenu de tiers.</p></div></div></section>
+          <section class="section card"><div class="eyebrow">Corrections et retraits</div><h2>Les artistes peuvent contester le dossier</h2><p>Une erreur, une mauvaise identification, une image inappropriée ou une préoccupation liée aux droits peut faire l'objet d'une révision. Les corrections doivent s'appuyer sur des éléments vérifiables. Pour l'instant, les corrections factuelles publiques peuvent être signalées sur GitHub. Il ne faut pas y publier de renseignements privés ou de documents sensibles.</p></section>
+          <footer class="footer"><a href="/rights.html">English</a><a href="/fr/a-propos.html">À propos</a><a href="/fr/accessibilite.html">Accessibilité</a></footer>'''
+          write('fr/droits.html', shell('fr','Droits, sources et corrections | Northern Dial','Politique de Northern Dial sur les droits, les sources, la provenance et les corrections.','https://www.northerndial.ca/fr/droits.html',fr_nav(active='Droits',en='/rights.html'),fr_rights_body,'<link rel="alternate" hreflang="en" href="https://www.northerndial.ca/rights.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/droits.html">'))
+
+          fr_access_body='''
+          <section class="hero"><div class="eyebrow">Accessibilité</div><h1>L'accès fait partie du produit</h1><p>Northern Dial veut rendre sa radio, son information sur les artistes, ses articles et ses outils de découverte utiles sur différents appareils, vitesses de connexion et modes d'accès.</p></section>
+          <section class="section card"><div class="eyebrow">Orientation</div><h2>Vers les pratiques WCAG 2.2 AA</h2><p>Le projet travaille vers les pratiques WCAG 2.2 AA lorsque cela est applicable. Il s'agit d'un engagement d'amélioration continue, et non d'une affirmation que chaque page a déjà fait l'objet d'un audit ou d'une certification indépendante.</p></section>
+          <section class="section"><div class="eyebrow">Processus</div><h2>Automatiser ce qui peut l'être, tester le reste</h2><div class="grid"><div class="mini"><h3>Contrôles automatisés</h3><p>Une vérification en lecture seule contrôle des éléments de base comme la langue du document, les textes alternatifs, la structure des titres et certains libellés de formulaires.</p></div><div class="mini"><h3>Navigation au clavier</h3><p>Les fonctions essentielles doivent être testées sans souris ni écran tactile.</p></div><div class="mini"><h3>Lecteurs d'écran</h3><p>Des vérifications manuelles ponctuelles doivent confirmer que menus, formulaires, titres et contrôles interactifs restent compréhensibles.</p></div><div class="mini"><h3>Suivi public</h3><p>Les problèmes techniques d'accessibilité peuvent être consignés dans le dépôt GitHub afin d'être suivis et corrigés.</p></div></div></section>
+          <section class="section card"><div class="eyebrow">Limites actuelles</div><h2>Pas de faux certificat</h2><p>Les contrôles automatisés ne remplacent pas un audit professionnel ni des tests avec des personnes handicapées. Un projet financé à plus grande échelle devrait prévoir du budget pour une expertise et une validation supplémentaires.</p></section>
+          <footer class="footer"><a href="/accessibility.html">English</a><a href="/fr/a-propos.html">À propos</a><a href="/fr/droits.html">Droits</a></footer>'''
+          write('fr/accessibilite.html', shell('fr','Accessibilité | Northern Dial','Engagement et processus d’accessibilité de Northern Dial.','https://www.northerndial.ca/fr/accessibilite.html',fr_nav(active='Accessibilité',en='/accessibility.html'),fr_access_body,'<link rel="alternate" hreflang="en" href="https://www.northerndial.ca/accessibility.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/accessibilite.html">'))
+
+          grant_package = r'''# Northern Dial Grant Development Package
+
+**Status:** working grant-development document, September 2026  
+**Applicant approach for now:** Riley Wallace as the individual project lead/applicant where the program permits an individual artist or arts worker. Northern Dial is the project, not currently represented here as a separate incorporated nonprofit.
+
+## 1. Core project statement
+Northern Dial is an independent Canadian music discovery, documentation and radio project. It combines 24/7 curated programming, a source-backed artist library, editorial storytelling and listener-facing digital discovery tools to make Canadian music easier to find, understand and share, particularly independent, emerging, regional and under-documented work.
+
+## 2. Public mandate
+**Discovery. Documentation. Dissemination.**
+- Discovery: connect audiences with Canadian artists through radio, requests, search and recommendation tools.
+- Documentation: create and maintain source-backed profiles, geographic context and reliable artist metadata.
+- Dissemination: extend Canadian music through radio, editorial work, searchable pages and future presentation/documentation programs.
+
+## 3. Applicant and delivery structure
+### Project lead
+**Riley Wallace — Founder, editor and project lead.** Responsible for overall direction, editorial standards, programming, product strategy, research coordination, grant delivery and reporting.
+
+### Collaborator roles
+Northern Dial is Riley-led and collaborator-supported. Named individuals may vary by project and funding level; applications can identify confirmed contributors when required.
+- **Development collaborator(s):** web development, integrations, automation, data workflows, QA and technical delivery.
+- **Partnerships and development collaborator(s):** outreach, sponsorship/revenue development, stakeholder relationships, venue or organizational partnerships and audience growth.
+- **Design and curation collaborator(s):** visual design, user experience, programming support, editorial curation and cultural/contextual review.
+- **Specialist contractors as funded:** accessibility testing, professional French translation/comparative editing, rights research, production, documentation and evaluation.
+
+Do not imply that unnamed collaborators are employees, formal board members or confirmed paid contractors unless that is true for the specific application.
+
+## 4. Priority project streams
+### A. Canadian Artist Library and Discovery
+Build structured, source-backed discovery infrastructure around the existing Canadian catalogue. Priorities include profile completion, genre/era/place metadata, source provenance, bilingual core interfaces, accessibility and audience evaluation.
+
+### B. Northern Dial Sessions
+A proposed live/virtual presentation program for Canadian artists, combining intimate performance, artist conversation and accessible documentation. This is currently a program in development, not an announced funded season.
+
+### C. Canadian Music Archive and Atlas
+A longer-term digital cultural project exploring Canadian music through place, era, scene, artists, releases, stories and oral history. The existing library is a foundation, not yet a formal preservation archive.
+
+## 5. Objectives
+1. Increase meaningful discovery of Canadian artists beyond mainstream recommendation loops.
+2. Improve the reliability and public usefulness of Canadian artist information through human review and source provenance.
+3. Build accessible, bilingual-ready digital infrastructure that can support future cultural and presentation projects.
+4. Strengthen pathways between listeners, artists, regional scenes and Canadian music communities.
+5. Establish measurable evidence of audience use, discovery and project impact.
+
+## 6. Outputs
+Possible funded outputs, selected by program scope:
+- verified/enriched artist profiles and structured discovery metadata
+- public search/recommendation improvements
+- bilingual core interfaces and professionally reviewed translation for funded deliverables
+- accessibility testing and remediation
+- rights/provenance and correction workflows
+- listener/artist audience research
+- editorial features, interviews or regional scene documentation
+- live/virtual sessions and documented media, where presentation funding applies
+- evaluation report and reusable project documentation
+
+## 7. Intended outcomes
+**Short term:** more Canadian artists become discoverable; catalogue reliability improves; audience behaviour becomes measurable; bilingual and accessibility foundations become stronger.
+
+**Medium term:** listeners use Northern Dial as a recurring Canadian music discovery resource; artists gain additional contextual pathways to audiences; project partnerships and contributors expand.
+
+**Long term:** Northern Dial develops into durable public digital infrastructure for Canadian music discovery and documentation, with the capacity to support deeper archival, regional and presentation projects.
+
+## 8. Target audiences
+- listeners seeking Canadian music outside mainstream algorithmic recommendations
+- independent, emerging, regional and under-documented Canadian artists
+- local music communities, curators and cultural organizations
+- music journalists, researchers and educators seeking source-backed starting points
+- French-speaking and bilingual Canadian audiences as the French rollout expands
+
+## 9. Audience research plan
+Use the bilingual Northern Dial pilot survey to establish baseline evidence on audience type, geography, frequency of use, artist discovery, feature value and desired improvements. Supplement with privacy-respecting web analytics and station/listener data where available.
+
+Core evaluation questions:
+- Did the user discover an artist they did not previously know?
+- Which Northern Dial feature created that discovery?
+- Where is the audience located?
+- Do users return?
+- What do artists and listeners say is missing from existing Canadian discovery tools?
+
+## 10. Rights and provenance
+Northern Dial maintains a public Rights, Sources and Corrections policy. Artist biographies and metadata should retain source references where practical. Ambiguous identities remain unresolved instead of being guessed. Third-party music, images and artist identities remain subject to the applicable rights holders. Funded archival/documentation work should include project-specific rights review and permissions where required.
+
+## 11. Bilingual delivery
+Northern Dial now has a French beta for core institutional pages and a bilingual audience survey. The current artist catalogue and legacy editorial archive are not represented as fully translated. For a funded bilingual deliverable, budget for professional French translation and comparative editing rather than treating automated translation as final publication.
+
+## 12. Accessibility delivery
+Northern Dial has a public accessibility commitment, a manual testing checklist and a read-only automated HTML accessibility guardrail. These are development practices, not WCAG certification. Larger funded projects should budget for specialist review and user testing appropriate to the grant requirements.
+
+## 13. Illustrative 12-month schedule
+**Months 1–2:** project setup, baseline metrics, audience research, technical/accessibility audit, rights review.  
+**Months 3–5:** metadata/profile work, interface development, bilingual architecture, design and testing.  
+**Months 6–8:** public beta/release, editorial or presentation production where applicable, audience recruitment.  
+**Months 9–10:** accessibility remediation, translation review, partner/community feedback.  
+**Months 11–12:** evaluation, final documentation, reporting and next-stage roadmap.
+
+## 14. Budget framework
+Use real quotes/rates for each application. Typical categories:
+- project lead/editorial and project management
+- development and technical implementation
+- artist fees, where performances/interviews are funded
+- design and user experience
+- research, rights and metadata work
+- professional French translation and comparative editing
+- accessibility specialist/testing
+- venue, production, recording or documentation costs where relevant
+- hosting/software/services
+- outreach, audience research and evaluation
+- contingency where permitted
+
+Track in-kind Riley time separately when a program allows it. Do not inflate volunteer/in-kind amounts simply to improve leverage.
+
+## 15. Risks and mitigations
+- **Founder concentration:** document workflows, use collaborator roles and scope projects to realistic capacity.
+- **Rights uncertainty:** retain provenance, separate third-party content from open-source code and maintain correction/takedown procedures.
+- **Translation quality:** use professional review for funded bilingual deliverables.
+- **Accessibility gaps:** combine automated checks with manual and specialist testing.
+- **Data quality:** keep unresolved cases unresolved, audit removals and preserve sources.
+- **Audience claims:** distinguish measured results from projections.
+
+## 16. Evidence inventory
+Already available or in progress:
+- live 24/7 station
+- curated requestable catalogue
+- artist library and enrichment audit
+- editorial features
+- Northern Dial Discovery
+- source/removal workflow
+- public About, Accessibility and Rights pages
+- French core-site beta
+- bilingual pilot audience survey
+- public code repository
+
+## 17. Application language to reuse
+**One sentence:** Northern Dial is building public digital infrastructure for Canadian music discovery, documentation and audience connection.
+
+**Short paragraph:** Northern Dial combines curated 24/7 radio, a source-backed Canadian artist library, editorial storytelling and digital discovery tools to help audiences find artists beyond the handful of names that dominate mainstream recommendation systems. The project is Riley-led and collaborator-supported, with a growing focus on bilingual access, accessibility, rights provenance and measurable public impact.
+
+## 18. Items intentionally deferred
+- incorporation/nonprofit restructuring
+- formal board/governance structure
+- dedicated project bank account and full financial system
+- formal partnership commitments and letters of support
+
+These should be revisited when a target program requires them rather than represented as already complete.
+'''
+          write('docs/grants/NORTHERN_DIAL_GRANT_DEVELOPMENT_PACKAGE.md', grant_package)
+
+          accessibility_checklist=r'''# Northern Dial Accessibility Testing Checklist
+
+This checklist supports the public accessibility commitment. It is a development and QA process, not a certification of WCAG compliance.
+
+## Before publishing or materially redesigning a page
+- Confirm a descriptive `<title>`, one primary `<h1>` and a declared page language.
+- Check heading order for understandable structure.
+- Confirm meaningful images have useful `alt` text; decorative images should use empty alt text where appropriate.
+- Navigate the page using keyboard only. Focus must remain visible and controls must be reachable in a logical order.
+- Open and close mobile navigation using keyboard controls.
+- Confirm buttons and form fields have understandable visible or programmatic labels.
+- Check text and control contrast, including hover/focus/active states.
+- Test at 200% browser zoom and at a narrow mobile width without losing core content.
+- Respect `prefers-reduced-motion` for non-essential animation.
+- Spot-check with a screen reader on core journeys: listen, navigate, discover, read artist information and complete forms.
+
+## For audio, video and interviews
+- Add captions for video dialogue and meaningful audio where applicable.
+- Provide transcripts for interview/documentary material where practical.
+- Do not rely on sound alone for important status or instructions.
+
+## For funded projects
+Budget for specialist review and, where feasible, testing with disabled users. Automated checks are a guardrail, not a substitute for lived-experience testing or a professional accessibility audit.
+'''
+          write('docs/accessibility/TESTING_CHECKLIST.md',accessibility_checklist)
+
+          audit_py=r'''#!/usr/bin/env python3
+from html.parser import HTMLParser
+from pathlib import Path
+import re, sys
+
+class Audit(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.html_lang=False; self.h1=0; self.images=[]; self.labels=set(); self.controls=[]; self.buttons=[]; self.stack=[]
+    def handle_starttag(self, tag, attrs):
+        a=dict(attrs); self.stack.append(tag)
+        if tag=='html': self.html_lang=bool(a.get('lang'))
+        if tag=='h1': self.h1+=1
+        if tag=='img': self.images.append(a)
+        if tag=='label' and a.get('for'): self.labels.add(a['for'])
+        if tag in ('input','select','textarea'):
+            if tag=='input' and a.get('type','text') in ('hidden','submit','button'): return
+            self.controls.append((tag,a))
+        if tag=='button': self.buttons.append({'attrs':a,'text':''})
+    def handle_endtag(self, tag):
+        if self.stack: self.stack.pop()
+    def handle_data(self, data):
+        if self.buttons and self.stack and self.stack[-1]=='button': self.buttons[-1]['text']+=data.strip()
+
+def check(path):
+    text=Path(path).read_text(encoding='utf-8',errors='replace'); p=Audit(); p.feed(text); errors=[]; warnings=[]
+    if not p.html_lang: errors.append('missing html lang')
+    if p.h1!=1: warnings.append(f'expected 1 h1, found {p.h1}')
+    for i,img in enumerate(p.images,1):
+        if 'alt' not in img: errors.append(f'image {i} missing alt')
+    for tag,a in p.controls:
+        cid=a.get('id'); labelled=bool(a.get('aria-label') or a.get('aria-labelledby') or (cid and cid in p.labels))
+        if not labelled: warnings.append(f'{tag} control lacks explicit label: {cid or "no id"}')
+    for i,b in enumerate(p.buttons,1):
+        if not b['text'] and not b['attrs'].get('aria-label'): warnings.append(f'button {i} may lack accessible name')
+    return errors,warnings
+
+paths=sys.argv[1:] or ['index.html','about.html','rights.html','accessibility.html','survey.html','fr/index.html','fr/a-propos.html','fr/droits.html','fr/accessibilite.html']
+failed=False
+for path in paths:
+    if not Path(path).exists(): print(f'WARN {path}: missing'); continue
+    e,w=check(path)
+    for x in e: print(f'ERROR {path}: {x}'); failed=True
+    for x in w: print(f'WARN {path}: {x}')
+if failed: sys.exit(1)
+print('Accessibility guardrail completed.')
+'''
+          write('scripts/accessibility_audit.py',audit_py)
+
+          audit_workflow=r'''name: Accessibility guardrail
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'scripts/accessibility_audit.py'
+  pull_request:
+    paths:
+      - '**.html'
+      - 'scripts/accessibility_audit.py'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Northern Dial HTML accessibility guardrail
+        run: python3 scripts/accessibility_audit.py
+'''
+          write('.github/workflows/accessibility-audit.yml',audit_workflow)
+
+          # Update About: Riley-led structure plus collaborator roles and trust/research links.
+          about=Path('about.html')
+          if about.exists():
+              text=about.read_text(encoding='utf-8')
+              team=r'''<section class="section team">
+      <div class="section-card">
+        <div class="eyebrow">Team and Delivery</div>
+        <h2>Riley-Led, Collaborator-Supported</h2>
+        <p><strong>Riley Wallace, founder and editor</strong>, currently leads Northern Dial and is responsible for editorial direction, programming, product strategy, research coordination and overall project delivery.</p>
+        <p>Northern Dial is not being represented as a separate incorporated nonprofit at this stage. Where a funding program permits an individual artist or arts worker applicant, the project can be presented as Riley-led, with collaborator roles scoped to the funded work.</p>
+      </div>
+      <div class="team-box">
+        <h3>Collaborator Roles</h3>
+        <p><strong>Development:</strong> web/product development, integrations, automation, data and QA.<br><br><strong>Partnerships and development:</strong> outreach, sponsorship/revenue opportunities and partner relationships.<br><br><strong>Design and curation:</strong> visual design, user experience, programming and editorial curation.</p>
+        <p style="margin-top:14px">Specific contributors can be named in an application when they are confirmed. Northern Dial does not imply that unnamed collaborators are employees or board members.</p>
+      </div>
+    </section>'''
+              text=re.sub(r'<section class="section team">.*?</section>',team,text,count=1,flags=re.S)
+              if 'Rights, Sources and Corrections' not in text:
+                  marker='<section class="section section-card" id="accessibility">'
+                  trust=r'''<section class="section section-card" id="trust">
+      <div class="eyebrow">Trust and Participation</div>
+      <h2>Make the Method Visible</h2>
+      <p>Northern Dial maintains a public rights, sourcing and corrections policy and is beginning structured audience research so future funding claims can be grounded in evidence rather than assumptions.</p>
+      <div class="links"><a class="btn btn-red" href="rights.html">Rights, Sources and Corrections</a><a class="btn btn-outline" href="survey.html">Take the Audience Survey</a></div>
+    </section>
+
+    '''
+                  text=text.replace(marker,trust+marker,1)
+              if 'hreflang="fr"' not in text:
+                  text=text.replace('<link rel="canonical" href="https://www.northerndial.ca/about.html">','<link rel="canonical" href="https://www.northerndial.ca/about.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/a-propos.html"><link rel="alternate" hreflang="en" href="https://www.northerndial.ca/about.html">',1)
+              text=text.replace('<a href="/about.html" class="active" aria-current="page">About</a>','<a href="/about.html" class="active" aria-current="page">About</a><a class="lang" href="/fr/a-propos.html" lang="fr" hreflang="fr">FR</a>',1)
+              about.write_text(text,encoding='utf-8')
+
+          # Update accessibility page with concrete process and French alternate.
+          acc=Path('accessibility.html')
+          if acc.exists():
+              text=acc.read_text(encoding='utf-8')
+              if 'Automated Guardrail' not in text:
+                  block=r'''<section class="section"><div class="eyebrow">How We Test</div><h2>Turn the Commitment Into a Process</h2><div class="grid"><div class="mini"><h3>Automated Guardrail</h3><p>A read-only GitHub Action checks core HTML pages for basic structural issues such as missing document language, image alternative text and some form-label problems.</p></div><div class="mini"><h3>Keyboard Testing</h3><p>Core navigation and interactive journeys should be tested without a mouse or touch input before major releases.</p></div><div class="mini"><h3>Screen-Reader Spot Checks</h3><p>Menus, headings, forms and key listening/discovery journeys should receive manual assistive-technology spot checks.</p></div><div class="mini"><h3>Manual Checklist</h3><p>A version-controlled testing checklist documents expectations for zoom, mobile layouts, reduced motion, media captions and funded-project specialist review.</p></div></div><div class="callout" style="margin-top:18px"><strong>Important:</strong> these checks are development guardrails, not a WCAG certification or substitute for professional and lived-experience testing.</div></section>
+
+'''
+                  text=text.replace('<section class="section card"><div class="eyebrow">Next Steps</div>',block+'<section class="section card"><div class="eyebrow">Next Steps</div>',1)
+              if 'hreflang="fr"' not in text:
+                  text=text.replace('<link rel="canonical" href="https://www.northerndial.ca/accessibility.html">','<link rel="canonical" href="https://www.northerndial.ca/accessibility.html"><link rel="alternate" hreflang="fr" href="https://www.northerndial.ca/fr/accessibilite.html"><link rel="alternate" hreflang="en" href="https://www.northerndial.ca/accessibility.html">',1)
+              text=text.replace('<a href="/about.html">About</a>','<a href="/about.html">About</a><a class="lang" href="/fr/accessibilite.html" lang="fr" hreflang="fr">FR</a>',1)
+              acc.write_text(text,encoding='utf-8')
+
+          # Add a French entry point across existing English public HTML without changing content language.
+          for path in list(Path('.').glob('*.html')) + list(Path('blog').glob('*.html')):
+              if path.name in {'rights.html','survey.html'}: continue
+              text=path.read_text(encoding='utf-8',errors='replace')
+              if 'href="/fr/"' in text or 'href="/fr/a-propos.html"' in text or 'href="/fr/accessibilite.html"' in text: continue
+              # Insert once after the first primary About nav link when present.
+              patterns=['>About</a>','>ABOUT</a>']
+              changed=False
+              for pat in patterns:
+                  if pat in text:
+                      text=text.replace(pat,pat+'<a class="lang" href="/fr/" lang="fr" hreflang="fr">FR</a>',1); changed=True; break
+              if changed: path.write_text(text,encoding='utf-8')
+
+          # Add survey link to homepage About area if not already present.
+          idx=Path('index.html')
+          if idx.exists():
+              text=idx.read_text(encoding='utf-8')
+              anchor='<p style="margin-top: 15px;"><a href="about.html" style="color:#8B2323;font-weight:700;text-decoration:none;">About the Northern Dial project →</a></p>'
+              if 'Help shape Northern Dial →' not in text and anchor in text:
+                  text=text.replace(anchor,anchor+'\n        <p style="margin-top: 10px;"><a href="survey.html" style="color:#8B2323;font-weight:700;text-decoration:none;">Help shape Northern Dial →</a></p>',1)
+              idx.write_text(text,encoding='utf-8')
+
+          # Sitemap additions.
+          sm=Path('sitemap.xml')
+          if sm.exists():
+              text=sm.read_text(encoding='utf-8')
+              urls=[
+                ('https://www.northerndial.ca/rights.html','0.6'),('https://www.northerndial.ca/survey.html','0.6'),('https://www.northerndial.ca/fr/','0.8'),('https://www.northerndial.ca/fr/a-propos.html','0.7'),('https://www.northerndial.ca/fr/droits.html','0.5'),('https://www.northerndial.ca/fr/accessibilite.html','0.5')]
+              additions='\n'.join(f'  <url><loc>{u}</loc><priority>{p}</priority></url>' for u,p in urls if u not in text)
+              if additions: text=text.replace('</urlset>',additions+'\n</urlset>')
+              sm.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Run accessibility guardrail on new core pages
+        run: python3 scripts/accessibility_audit.py about.html rights.html accessibility.html survey.html fr/index.html fr/a-propos.html fr/droits.html fr/accessibilite.html
+
+      - name: Commit grant-readiness sprint
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add . ':!.github/workflows/grant-readiness-sprint-once.yml'
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add grant readiness, French beta and audience research'
+          git push origin HEAD:main
