@@ -1,0 +1,38 @@
+{
+  "kxng wooz": {
+    "bio": "Kxng Wooz is a Halifax-based Canadian hip-hop artist whose music pairs introspective lyricism with contemporary rap production. A longtime part of Nova Scotia's independent scene, he has released projects including Entering The..., Redemption and MALIK and collaborated with artists such as Ghettosocks, Aquakultre, Timbuktu and Leila Dey.",
+    "website": "https://kxngwooz.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://kxngwooz.com/bio", "https://kxngwooz.bandcamp.com/album/entering-the-ep", "https://www.sappyfest.com/kxng-wooz"]
+  },
+  "mikezup": {
+    "bio": "MikeZup is a Montreal-area rapper, songwriter and producer whose career grew out of Quebec's francophone street-rap scene. Active since his teens, the Laval artist built an independent catalogue around projects including the Omerta trilogy, Imprévu and Couleurs Primaires before continuing through his own 630MG label.",
+    "website": "",
+    "instagram": "",
+    "city": "Laval, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://630mg.ca/pages/artiste", "https://lecanalauditif.ca/artistes/mikezup/", "https://ca.rollingstone.com/fr/mikezup-signe-un-dernier-tour-de-piste-avec-compte-a-rebours/"]
+  },
+  "gnino": {
+    "bio": "Gnino is a Montreal rapper from Tétreaultville in the city's east end who grew up immersed in Quebec hip-hop through his father, rapper Rjboy. After beginning to write in his teens, he built momentum through the Cagoulé Gang duo and solo releases including Paranoia, developing a melodic, emotionally direct style within Montreal's francophone rap scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.ricorichproductions.com/artiste-gnino/", "https://open.spotify.com/artist/03sPkUqjLbCXdxu3e46T3H"]
+  },
+  "cupidon": {
+    "bio": "Cupidon is a Montreal street rapper from the city's Sud-Ouest who has been active in Quebec hip-hop since the early 2010s. His catalogue includes solo releases and collaborations with artists including Lebza Khey and DawaMafia, with a direct writing style rooted in the local rap québécois scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.seihastudios.com/cupidon"]
+  }
+}
