@@ -1,0 +1,47 @@
+{
+  "bebeboy": {
+    "bio": "Bebeboy is a Toronto-based R&B and hip-hop artist, songwriter and producer whose melodic catalogue blends contemporary R&B, pop and rap. Born outside Canada and raised within Toronto's music scene, Bebeboy has built an independent catalogue of emotionally direct songs and collaborations. Northern Dial carries Bebeboy as part of its contemporary Toronto R&B catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/bebeboy/1468948378", "https://hiphopcanada.com/bebeboy-1800-wants-needz/"]
+  },
+  "boy wonder": {
+    "bio": "Boy Wonder is a Toronto musician and independent artist whose work sits within the city's contemporary music scene. He is distinct from similarly named producers and is documented specifically as a musician from Toronto. Northern Dial carries Boy Wonder as part of its Canadian independent artist catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.bandsintown.com/a/1072006-boy-wonder"]
+  },
+  "delirious": {
+    "bio": "Delirious is a Toronto-based DJ and producer associated with the Delirious and Alex K production partnership. The project works across electronic and club-oriented music, with remixes and original productions tied to Toronto's dance scene. Northern Dial carries Delirious as part of its Canadian electronic and producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/58zeLSwvlNwRAUp73BWIEv"]
+  },
+  "ibxrhm": {
+    "bio": "iBXRHM is a Toronto R&B artist whose music blends contemporary soul, melodic hip-hop and atmospheric production. The artist, also known as Ibrahim Ahmed, is based in Toronto and has developed an independent catalogue within the city's emerging R&B scene. Northern Dial carries iBXRHM as part of its contemporary Canadian R&B catalogue.",
+    "website": "https://audiomack.com/ibxrhm",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://audiomack.com/ibxrhm", "https://departureto.com/?m=0"]
+  },
+  "ejji smith": {
+    "bio": "Ejji Smith is a Toronto artist and collaborator working across hip-hop and R&B. Sony Music Canada has identified Smith among the Torontonian artists featured on TOBi's Toronto Remix of Dollas and Cents, placing the artist within the city's contemporary rap and soul community. Northern Dial carries Ejji Smith as part of its Toronto music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sonymusic.ca/press_release/tobis-nigerian-roots-shine-in-video-for-new-single-dollas-and-cents", "https://www.sonymusic.ca/press_release/tobi-experiments-and-genre-bends-in-new-project-elements-vol-1"]
+  }
+}
