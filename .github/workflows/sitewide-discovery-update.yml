@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'sitewide_discovery_update.py'
+      - 'grant_readiness_update.py'
       - '.github/workflows/sitewide-discovery-update.yml'
   workflow_dispatch:
 
@@ -26,16 +27,19 @@ jobs:
       - name: Apply responsive site navigation
         run: python3 sitewide_discovery_update.py
 
+      - name: Apply grant readiness and bilingual updates
+        run: python3 grant_readiness_update.py
+
       - name: Commit site-wide changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html library.html artists.html discover.html requests.html blog/*.html artist_removals.txt artist_unresolved.txt
+          git add index.html library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr docs/grant-readiness-package.md scripts/accessibility_audit.py sitemap.xml artist_removals.txt artist_unresolved.txt
           if git diff --cached --quiet; then
             echo 'No site-wide changes to commit.'
             exit 0
           fi
-          git commit -m 'Add mobile hamburger navigation site-wide'
+          git commit -m 'Launch bilingual grant readiness foundation'
 
           for attempt in 1 2 3 4 5; do
             echo "Push attempt ${attempt}..."
@@ -47,5 +51,5 @@ jobs:
             sleep 2
           done
 
-          echo 'Unable to push site-wide navigation update after 5 attempts.' >&2
+          echo 'Unable to push site-wide update after 5 attempts.' >&2
           exit 1
