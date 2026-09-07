@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr docs/grant-readiness-package.md scripts/accessibility_audit.py sitemap.xml artist_removals.txt artist_unresolved.txt
+          git add index.html homepage_language.js library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr docs/grant-readiness-package.md scripts/accessibility_audit.py sitemap.xml artist_removals.txt artist_unresolved.txt
           if git diff --cached --quiet; then
             echo 'No site-wide changes to commit.'
             exit 0
