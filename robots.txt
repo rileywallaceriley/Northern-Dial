@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /instagram-dashboard.html
+Disallow: /library_artist_profiles.html
+Disallow: /sample-explorer.html
+Disallow: /zen-scene.html
+Disallow: /docs/
+
 Sitemap: https://www.northerndial.ca/sitemap.xml

@@ -127,14 +127,25 @@
     }
   }
 
+  function updateUrlForLanguage(lang) {
+    const url = new URL(window.location.href);
+    if (lang === 'fr') url.searchParams.set('lang', 'fr');
+    else url.searchParams.delete('lang');
+    const next = `${url.pathname}${url.search}${url.hash}`;
+    window.history.replaceState({}, '', next);
+  }
+
   function updateMetadata(lang) {
     const description = document.querySelector('meta[name="description"]');
+    const canonical = document.querySelector('link[rel="canonical"]');
     if (lang === 'fr') {
       document.title = 'Radio musicale canadienne indépendante | Northern Dial';
       if (description) description.setAttribute('content', 'Northern Dial est une radio canadienne indépendante diffusée 24 heures sur 24 pour découvrir des artistes, des chansons et des émissions d’ici.');
+      if (canonical) canonical.setAttribute('href', 'https://www.northerndial.ca/?lang=fr');
     } else {
       document.title = 'Independent Canadian Music Radio | Northern Dial';
       if (description) description.setAttribute('content', 'Northern Dial is independent 24/7 Canadian music radio: discover emerging artists, Canadian songs, and curated shows from coast to coast.');
+      if (canonical) canonical.setAttribute('href', 'https://www.northerndial.ca/');
     }
   }
 
@@ -151,6 +162,7 @@
     document.documentElement.dataset.ndLanguage = lang;
     updateLanguageToggle(lang);
     updateMetadata(lang);
+    if (persist) updateUrlForLanguage(lang);
     if (persist) localStorage.setItem(STORAGE_KEY, lang);
   }
 
@@ -190,8 +202,10 @@
       closeMobileMenu();
     });
 
+    const requested = new URLSearchParams(window.location.search).get('lang');
     const saved = localStorage.getItem(STORAGE_KEY);
-    applyLanguage(saved === 'fr' ? 'fr' : 'en', false);
+    const initial = requested === 'fr' ? 'fr' : (requested === 'en' ? 'en' : (saved === 'fr' ? 'fr' : 'en'));
+    applyLanguage(initial, false);
     installMutationTranslation();
   }
 
