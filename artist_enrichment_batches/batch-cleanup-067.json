@@ -1,0 +1,38 @@
+{
+  "yoko gold": {
+    "bio": "Toronto-born R&B singer, songwriter and producer Yoko Gold, born Moses Peterson, first emerged through solo releases before gaining wider attention through collaborations with his brother Tory Lanez. His atmospheric contemporary R&B catalogue includes the independent project Escape From Limbo and singles such as Limbo, Mirage and Obsolete.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://aipate.com/2018/08/25/hear-yoko-gold-in-ayyo/", "https://www.allmusic.com/artist/yoko-gold-mn0003636848", "https://hiphopcanada.com/yoko-gold-mirage-single/"]
+  },
+  "sekawnee": {
+    "bio": "Vancouver artist, songwriter and producer Sekawnee Baker is an Afro-Indigenous musician from the Squamish, Tla'amin, Kwakwaka'wakw/Musgamagw Dzawada'enuxw, Tlingit and Haida Nations. Working across hip-hop, R&B and production, he has developed his own catalogue while also creating recording opportunities for young artists in Vancouver.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://fourfires.ca/2022-entertainment/", "https://fullcircle.ca/dj-kookums-indigenous-day-eve/", "https://www.sfu.ca/publicsquare/events/2020/mst-futurism.html"]
+  },
+  "jr. rhodes": {
+    "bio": "Edmonton hip-hop artist and songwriter Jr. Rhodes, born Brandon D'Souza, blends rap with jazz, neo-soul and melodic production. Emerging from Alberta's independent scene, his catalogue has grown from projects such as Project Paradise into releases including Stuck Between, far from perfect and a waiting king, alongside collaborations with NorthSideBaby and other Edmonton artists.",
+    "website": "",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hugo.artistpr.com/press-release/jr-rhodes/", "https://lemmonstage.com/get-to-know-the-artists-of-music-day-in-canada/", "https://lastdaydeaf.com/listening-now-jr-rhodes-been-on-you-feat-soji-joseph-kiarrah-ireland/"]
+  },
+  "ntwali": {
+    "bio": "Rwandan-Canadian rapper, poet and activist Ntwali Kayijaho came up in Edmonton's hip-hop community before expanding his creative circle in Montréal. His socially conscious music draws on family history, Black identity, resilience and community advocacy, with projects including New Beginnings and performances that bridge music and motivational speaking.",
+    "website": "https://ntwali.com/",
+    "instagram": "",
+    "city": "Edmonton / Montréal",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://teachers.ab.ca/news/diversity-leaders-reflect-history-and-hope", "https://edifyedmonton.com/culture/performing-arts/ntwali-kayijahos-music-honours-his-rwandan-heritage/", "https://thegriff.ca/creative-spotlight-ntwali-2/"]
+  }
+}
