@@ -206,6 +206,68 @@ body {
     transform: translateY(-2px);
 }
 
+
+/* ND_HOME_TOP_GRID_CSS_START */
+.home-top-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 1.65fr) minmax(320px, 1fr);
+    margin-bottom: 38px;
+}
+
+.home-top-grid .player-section {
+    display: flex;
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+.home-top-grid .custom-player {
+    height: 100%;
+    width: 100%;
+}
+
+.home-top-grid .discovery-banner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 100%;
+    padding: 26px;
+}
+
+.home-top-grid .discovery-banner h2 {
+    font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
+.home-top-grid .discovery-banner-cta {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .home-top-grid {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .home-top-grid .player-section {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    .home-top-grid .custom-player {
+        height: auto;
+    }
+
+    .home-top-grid .discovery-banner {
+        margin: -22px 0 38px;
+        min-height: 0;
+    }
+}
+/* ND_HOME_TOP_GRID_CSS_END */
+
 .custom-player {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     border: 5px solid #C33;
@@ -980,6 +1042,7 @@ body {
     <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
 </header>
 
+<div class="home-top-grid">
 <section class="player-section">
     <div class="custom-player">
         <div class="player-controls">
@@ -1015,6 +1078,7 @@ body {
     </div>
     <a class="discovery-banner-cta" href="./discover.html">Start Discovering</a>
 </section>
+</div>
 
 </div>
 
