@@ -1,0 +1,56 @@
+{
+  "charlie noiir": {
+    "bio": "Toronto rapper and vocalist Charlie Noiir is a Canadian hip-hop artist known for his solo work and as a member of the STAYOUTLATE collective. Earlier in his career he fronted the Toronto duo OSIYM, later developing a melodic, genre-fluid solo catalogue while remaining closely tied to the city's independent rap scene.",
+    "website": "",
+    "instagram": "https://www.instagram.com/charlienoiir/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.fredperry.com/subculture/articles/charlienoiir", "https://hashbrandnew.com/Artists/Charlie%2BNoiir"]
+  },
+  "dj ritz": {
+    "bio": "DJ Ritz is a Toronto DJ, radio personality and producer who has been part of the city's urban music scene for more than two decades. A former Toronto DJ of the Year winner, he also hosts Made In Canada on FLOW 98.7FM, a program devoted to Canadian artists.",
+    "website": "https://www.djritzent.com/",
+    "instagram": "https://www.instagram.com/djritz/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.flow987.com/dj-ritz-2/", "https://www.djritzent.com/"]
+  },
+  "jordan fall": {
+    "bio": "Jordan Fall is a Filipino-Canadian rapper, singer and DJ from Toronto whose music blends hip-hop, R&B and electronic influences. After first becoming known behind the decks in Toronto's IXXI circle, including work with Sean Leon, he moved into a solo recording career with releases such as Savings, Good Mourning and Truss.",
+    "website": "",
+    "instagram": "https://www.instagram.com/jordanfall/",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://usa.inquirer.net/140555/jordan-fall-truss", "https://www.complex.com/music/a/josephine-cruz/jordan-fall-savings-premiere"]
+  },
+  "sully burrows": {
+    "bio": "Parry Sound singer-songwriter Sully Burrows is a Canadian country artist whose small-town Ontario roots shape his contemporary country sound. He emerged with songs including Youth, Think of Me and Rally Around, later becoming a SiriusXM Top of the Country finalist and a CMAOntario Emerging Artist Award winner.",
+    "website": "https://sullyburrows.com/",
+    "instagram": "https://www.instagram.com/sullyburrows/",
+    "city": "Parry Sound, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://cmaontario.ca/artist-of-the-month-sully-burrows/", "https://www.paquinentertainment.com/artist/sully-burrows"]
+  },
+  "chudi harris": {
+    "bio": "Halifax singer-songwriter and recording artist Chudi Harris is part of Nova Scotia's independent R&B and hip-hop community. His alternative R&B catalogue includes multiple EPs and collaborations, with performances and recordings connecting him to artists including Aquakultre, T. Thomason, Ghettosocks and Tachichi.",
+    "website": "",
+    "instagram": "https://www.instagram.com/chudi_harris/",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.thecoast.ca/arts-music/the-year-in-music-11453775/", "https://outloudculture.com/2022/08/26/insiders-guide-lexi-mariah-mine-kaye-shoffy-jnr-choi-lil-1-dte-john-k-venna-ann-king/"]
+  },
+  "jimmie d": {
+    "bio": "Jimmie D is a Canadian hip-hop artist from Montreal's St-Henri neighbourhood whose understated, bar-heavy style has become closely associated with producer Nicholas Craven. Their long-running partnership includes projects such as Trout & Brussels Sprouts, Good Man and Good Music Hypnotizes, alongside collaborations with other Canadian underground rappers.",
+    "website": "",
+    "instagram": "https://www.instagram.com/jimmied514/",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nicholascraven.bandcamp.com/album/trout-brussels-sprouts", "https://www.musicmetricsvault.com/artists/jimmie-d/1grzkPdyoi7RbrBTMIIxRU", "https://www.complex.com/music/a/louispavlakos/nicholas-craven-best-canadian-collabs"]
+  }
+}
