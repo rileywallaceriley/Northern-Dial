@@ -6,6 +6,7 @@ Run from the repository root with:
 """
 
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 from html import escape
 from urllib.parse import quote
 from urllib.request import urlopen
@@ -26,6 +27,8 @@ NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
 # Verified U.S. artists whose standalone sections should be hidden. Their songs
 # remain available under any retained principal artist(s) on the same credit.
 REMOVAL_FILE = "artist_removals.txt"
+REMOVAL_BATCH_DIR = "artist_removal_batches"
+ENRICHMENT_BATCH_DIR = "artist_enrichment_batches"
 CREDIT_SEPARATOR = re.compile(
     r"\s*(?:,|/|&|\+|×|\bx\b|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
     re.IGNORECASE,
@@ -46,11 +49,32 @@ def clean_artist(value):
 
 def hidden_artists():
     """Load the editorial removal list without altering the source catalogue."""
-    try:
-        with open(REMOVAL_FILE, "r", encoding="utf-8") as handle:
-            return {line.strip().casefold() for line in handle if line.strip() and not line.startswith("#")}
-    except FileNotFoundError:
-        return set()
+    names = set()
+    paths = [Path(REMOVAL_FILE)]
+    paths.extend(sorted(Path(REMOVAL_BATCH_DIR).glob("*.txt")))
+    for path in paths:
+        if not path.exists():
+            continue
+        names.update(
+            line.strip().casefold()
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
+    return names
+
+
+def load_enrichments():
+    """Merge the committed enrichment store and reviewed batches chronologically."""
+    merged = {}
+    paths = [Path(ENRICHMENT_FILE)]
+    paths.extend(sorted(Path(ENRICHMENT_BATCH_DIR).glob("*.json")))
+    for path in paths:
+        if not path.exists():
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            merged.update({str(key).casefold(): value for key, value in data.items()})
+    return merged
 
 
 def split_artists(value):
@@ -187,20 +211,7 @@ def main():
     groups = build_groups(rows, hidden_artists())
     with open(PROFILE_FILE, "r", encoding="utf-8") as handle:
         profiles = {key.casefold(): value for key, value in json.load(handle).items()}
-    try:
-        with open(ENRICHMENT_FILE, "r", encoding="utf-8") as handle:
-            enrichments = {key.casefold(): value for key, value in json.load(handle).items()}
-    except FileNotFoundError:
-        enrichments = {}
-    try:
-        with open(PUBLISH_MANIFEST_FILE, "r", encoding="utf-8") as handle:
-            published = {str(key).casefold() for key in json.load(handle)}
-        enrichments = {
-            key: value for key, value in enrichments.items()
-            if key in published
-        }
-    except FileNotFoundError:
-        pass
+    enrichments = load_enrichments()
     with open(TEMPLATE, "r", encoding="utf-8") as handle:
         template = handle.read()
     if CATALOGUE_START not in template or CATALOGUE_END not in template:
