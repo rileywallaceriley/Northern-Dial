@@ -21,7 +21,6 @@ ANJXLXE
 Ant
 Anthony Bezel
 Ants Man
-Aristo
 Asect
 asia
 Astrokidjay
@@ -38,7 +37,6 @@ Big Nous
 Big Thump
 Bijaan
 Black U Sun
-Black-I
 Blaze
 Blitz Equip
 Bone
@@ -90,7 +88,6 @@ Different Shades Of Black
 DJ Access
 DJ Cee
 Dj Precyce
-DJ R Dub L
 Dj Sanj
 DJ Sean P
 DJ Sojah
@@ -178,7 +175,6 @@ Karma Sutra
 Kash Phat
 Kayam
 Kazuo
-KH
 Kid Frankie
 Kid Sharif
 Killa
@@ -200,7 +196,6 @@ LeMind
 Leod
 Lex Aura
 Lilo Key
-Lincoln
 LiquidLtd
 Lizzie Nightingale
 Lokkz
@@ -234,7 +229,6 @@ Miro
 Mirror Gazer
 MOMONEYMATTEO
 Monark
-Money Musik
 Morbid Concepts
 Mr Metaphor
 Ms. Bella
@@ -290,7 +284,6 @@ Ro Dolla
 Robb Klarke
 Robert Ivory
 Rock Supreme
-Roddy Rod
 Rolo
 Ron E
 Rose Duke
@@ -318,8 +311,6 @@ Skandaali
 Smokey
 Sonny Hendrixx
 Sorisa
-Soshy
-Soulstice
 Spade
 Sre
 STAX
@@ -340,7 +331,6 @@ Thirdrail Vic
 Titus
 Touch
 TRAPMAT SAVIOR
-Trinity
 Trishannah
 Ty Kane
 Type.Raw
