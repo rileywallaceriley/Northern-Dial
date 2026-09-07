@@ -1,0 +1,65 @@
+{
+  "sunshine makers": {
+    "bio": "Sunshine Makers are a psychedelic soul-funk collective that began as a Toronto project in 2017 before taking root in London, Ontario. Led by songwriter Brent Jackson, the group blends R&B, funk, jazz and neo-soul with lush vocal arrangements and an uplifting focus on love, unity and community.",
+    "website": "https://sunshinemakersmusic.com/",
+    "instagram": "",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.sunfest.on.ca/national-performers-25/sunshine-makers", "https://sunshinemakers.bandcamp.com/"]
+  },
+  "western motel": {
+    "bio": "Western Motel is a Vancouver indie band whose catalogue moves between lo-fi pop, folk and guitar-driven alternative music. The group emerged in 2021 with releases including Kensington Park Tapes and a self-titled album, later returning with Months Between Transmissions and the 2026 Badass Dragon EP.",
+    "website": "https://westernmotel.bandcamp.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://westernmotel.bandcamp.com/album/kensington-park-tapes", "https://kingfisherbluez.bandcamp.com/artists"]
+  },
+  "the blk lt$": {
+    "bio": "The BLK LT$ is the musical project of Toronto-born singer, songwriter and producer Andreena Miller. Known earlier as Andreena Mill, she has earned Juno nominations, collaborated with artists and producers across hip-hop and R&B and developed a catalogue that moves between soul, R&B and hip-hop production.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://theheatdb.com/wp-content/uploads/2023/05/THE-BLK-LT-PRESS-KIT-2023.pdf", "https://soundcloud.com/theblklts/song-cry"]
+  },
+  "the halfsizegiants": {
+    "bio": "HalfSizeGiants are an Ottawa hip-hop group formed by childhood friends Ironic, Memo Moreno and Jahiant, who grew up together in the city's south end. Originally known as B.M.W., the trio blended hip-hop with Jamaican and Latin influences, first making their mark in the 1990s before reuniting years later.",
+    "website": "",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/halfsizegiants-life-moves-fast/", "https://ca.billboard.com/fyi/music-news-digest-june-10-2019"]
+  },
+  "la dynastie des morniers": {
+    "bio": "La Dynastie des Morniers is a Montréal hip-hop collective closely connected to Muzion and the city's Saint-Michel rap community. Emerging from the same mid-1990s network that produced Wolfpack, Akadémia and Muzion, the collective included Montréal rappers such as Le Voyou and appeared on Muzion's 2002 album J'Rêvolutionne.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://voir.ca/musique/2019/07/04/il-y-a-20-ans-muzion-mentalite-moune-morne-ils-nont-pas-compris/", "https://www.itineraire.ca/rap-queb-les-femmes-prennent-leur-place/"]
+  },
+  "alexander gallant": {
+    "bio": "Alexander Gallant is a Halifax-area folk singer-songwriter known for fingerpicked guitar, dark humour and sharply observed storytelling. Part of the creative community around 45 Portland Street in Dartmouth, he has released projects including Waiting Table Blues, Rubber Monster Suit and The Prince of Birchy Head.",
+    "website": "https://alexandergallant.com/",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://alexandergallant.com/", "https://www.thecoast.ca/arts-music/alexander-gallant-talks-social-media-rubber-monster-suit-and-best-of-halifax-nomination/"]
+  },
+  "eric stephen martin": {
+    "bio": "Dartmouth singer-songwriter Eric Stephen Martin is a Nova Scotia indie-rock artist and co-founder of Three First Names Records. His solo work includes the rock album Paper Chains, which won Rock Recording of the Year at the 2025 Music Nova Scotia Awards.",
+    "website": "https://ericstephenmartin.bandcamp.com/",
+    "instagram": "",
+    "city": "Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ericstephenmartin.bandcamp.com/music", "https://www.nsmw.ca/past-awards/2025"]
+  }
+}
