@@ -1,0 +1,47 @@
+{
+  "Spade": {
+    "bio": "Jeff 'Spade' Duke is a Scarborough-raised Toronto hip-hop emcee, b-boy, graffiti writer and independent label founder best known as one half of the Canadian rap duo Citizen Kane. Northern Dial's Spade entry is tied to 'Space and Time' from Mathematik's Ecology, a recording credited to Mathematik, Spade and Sic Sense and rooted in the same Toronto underground hip-hop circle.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://harthouse.ca/profile/jeff-duke", "https://trackify.am/track/1Vsgog6IiwIvhmKyakH0xb/tempo"]
+  },
+  "Ms. Bella": {
+    "bio": "Ms. Bella is a Canadian francophone urban-pop singer-songwriter based in Montréal. Previously recording as Angee Wings, she relaunched her career as Ms. Bella and has worked across acoustic pop, dancehall and afropop with Québec producers including Kleancut, Poirier and Sonny Black. Northern Dial carries her single 'Désert', which is also documented in SiriusXM Influence Franco airplay listings.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://actuanews.fr/2022/11/24/ms-bella-devoile-le-clip-de-o-na-na/", "https://xmplaylist.com/station/influencefranco"]
+  },
+  "Amber Days": {
+    "bio": "Amber Days is a Montréal indie pop-rock quartet made up of Mario Gervais, Alexy Préfontaine, Samuel Jalbert and Vincent Dessureault. Formerly known as Alpha & the Van, the group adopted the Amber Days name in 2024 and established itself on the Montréal and Québec live-music scene. Northern Dial carries 'Present Tense', the opening track on the band's 2026 debut album On The Run.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://musicotfuture.com/2026/05/30/blending-a-contagious-groove-with-a-colorful-sound-pallette-we-want-to-introduce-indie-pop-rock-four-piece-amber-days-with-their-brand-new-single-blueberries-out-now-you-can-read-our-chat-rig/", "https://musicbrainz.org/release/cbb02b3c-64e5-4e60-b955-1c6c190775e4"]
+  },
+  "Orlanda": {
+    "bio": "Orlanda is Montréal artist Orlanda Gagnon, a francophone singer-songwriter and vocalist whose solo catalogue includes the EP Fantaisie. Northern Dial's Orlanda entry is tied to Marco Ema's 'Comme un refrain' from Soleil mâché, whose official credits list Orlanda Gagnon on vocals. Her solo work is also catalogued by Québec music-industry source PalmarèsADISQ.",
+    "website": "",
+    "instagram": "",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://marcoema.bandcamp.com/track/comme-un-refrain-2", "https://palmaresadisq.ca/fr/artiste/orlanda/", "https://www.linkedin.com/in/orlanda-gagnon-350b891a1"]
+  },
+  "Adelaide": {
+    "bio": "Adelaide is an alternate Northern Dial library credit created when the name of Oshawa, Ontario band Mary & Adelaide is split at the ampersand. The exact Northern Dial tracks 'Hoodie zipper' and 'You pulled up' both come from the Canadian band's 2026 album Celebrate Another Day of Living. Mary & Adelaide describe themselves as a band from Oshawa, Ontario, and Canadian music press likewise identifies the group as Oshawa-based.",
+    "website": "https://maryandadelaide.bandcamp.com/",
+    "instagram": "",
+    "city": "Oshawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://maryandadelaide.bandcamp.com/", "https://exclaim.ca/music/article/oshawa-s-mary-and-adelaide-share-single-hoodie-zipper", "https://start-track.com/album-mary-adelaide-celebrate-another-day-of-living/"]
+  }
+}
