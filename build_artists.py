@@ -12,6 +12,7 @@ from urllib.parse import quote
 from urllib.request import urlopen
 import json
 import re
+import unicodedata
 
 
 API = "https://a10.asurahosting.com/api/station/northern_dial/requests"
@@ -45,6 +46,14 @@ def clean_artist(value):
     name = str(value or "Unknown Artist")
     name = re.sub(r"^\s*\d{1,3}\s*[.-]\s*", "", name).strip()
     return name or "Unknown Artist"
+
+
+def slugify(value):
+    """Match the standalone artist-page slug format."""
+    normalized = unicodedata.normalize("NFKD", value)
+    ascii_value = normalized.encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-z0-9]+", "-", ascii_value.casefold()).strip("-")
+    return slug or "artist"
 
 
 def hidden_artists():
@@ -142,9 +151,17 @@ def render_groups(groups, profiles, enrichments):
         profile = profiles.get(name.casefold(), {})
         enrichment = enrichments.get(name.casefold(), {})
         profile_html = render_profile(profile, enrichment)
+        has_artist_page = bool(profile) or bool(enrichment.get("reviewed"))
+        if has_artist_page:
+            artist_name_html = (
+                f'<a class="artist-page-link" href="./artists/{slugify(name)}.html" '
+                f'onclick="event.stopPropagation()">{escape(name)}</a>'
+            )
+        else:
+            artist_name_html = escape(name)
         rendered.append(
             anchor + f'      <details data-search="{search}">'
-            f'<summary>{escape(name)} <span class="artist-meta">'
+            f'<summary>{artist_name_html} <span class="artist-meta">'
             f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
             + profile_html + "\n"
             + "\n".join(tracks)
