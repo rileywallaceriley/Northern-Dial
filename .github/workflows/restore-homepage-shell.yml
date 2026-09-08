@@ -1,0 +1,76 @@
+name: Restore homepage hero shell
+
+on:
+  push:
+    paths:
+      - '.github/workflows/restore-homepage-shell.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore homepage logo and nav placement
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          header = '''<header class="header">
+    <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
+</header>
+
+'''
+
+          nav = '''<nav class="site-nav mobile-menu-nav" aria-label="Main navigation">
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+        <span>Menu</span>
+        <span class="mobile-menu-icon" aria-hidden="true">☰</span>
+    </button>
+    <div class="mobile-menu-links">
+        <a href="./" class="active" aria-current="page">Home</a>
+        <a href="library.html">Songs</a>
+        <a href="artists.html">Artists</a>
+        <a href="discover.html">Discover</a>
+        <a href="blog/">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="./#submit" class="submit-link">Submit</a>
+        <button type="button" class="language-switch language-toggle" data-language-toggle lang="fr" aria-label="Afficher la page d’accueil en français">Français</button>
+    </div>
+</nav>
+
+'''
+
+          if '<div class="hero" id="hero">\n<header class="header">' not in text:
+              text = text.replace('<div class="hero" id="hero">\n', '<div class="hero" id="hero">\n' + header, 1)
+
+          marker = '</div>\n\n<div id="about" class="content-columns">'
+          if '<nav class="site-nav mobile-menu-nav"' not in text:
+              if marker not in text:
+                  raise SystemExit('Could not locate homepage hero/about boundary')
+              text = text.replace(marker, '</div>\n\n' + nav + '<div id="about" class="content-columns">', 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit homepage shell
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No homepage shell changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Restore homepage large logo and sticky nav'
+          git push origin HEAD:main
