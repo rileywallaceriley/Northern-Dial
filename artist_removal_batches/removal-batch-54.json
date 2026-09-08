@@ -1,0 +1,20 @@
+{
+  "Dan Amozig": {
+    "reason": "Verified non-Canadian artist. Dan Amozig is a guitarist, bassist and beatmaker based in Paris, France; his Bandcamp profile explicitly identifies him as Paris-based.",
+    "country": "France",
+    "reviewed": true,
+    "sources": ["https://amoz.bandcamp.com/album/guitar-beats-vol-2-mustachios", "https://alcynoosmusic.bandcamp.com/album/night-shift"]
+  },
+  "Robert Ivory": {
+    "reason": "Verified non-Canadian artist. Robert Ivory is an independent artist based in Chelsea, Oklahoma, United States, as identified on his official Bandcamp profile.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://robertivory.bandcamp.com/album/wasted-talent-on-type-beats"]
+  },
+  "Myūjikku": {
+    "reason": "Verified non-Canadian artist. Myūjikku is part of the DJ Chidow and Myūjikku project, whose official Bandcamp profile identifies the act as based in Minneapolis, Minnesota, United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://chidowhouse-shop.bandcamp.com/", "https://chidowhouse-shop.bandcamp.com/album/do-whatcha-do"]
+  }
+}
