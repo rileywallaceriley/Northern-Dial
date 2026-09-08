@@ -1,0 +1,47 @@
+{
+  "achel": {
+    "bio": "ACHEL is a Quebec francophone artist working across contemporary pop and rap-adjacent sounds. His catalogue includes collaborations with artists including Peypo, lilaash, popo and Madior, and he is documented by MUSIQC, Quebec's francophone music discovery platform. Northern Dial carries ACHEL as part of its contemporary Quebec catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musiqc.ca/artistes/achel"]
+  },
+  "maadlvc": {
+    "bio": "maadlvc is a Toronto DJ and selector whose sets move through hip-hop, R&B, dance and club music. Their SoundCloud profile identifies Toronto as home and documents a catalogue of mixes and radio appearances. Northern Dial carries maadlvc as part of its contemporary Toronto DJ catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://m.soundcloud.com/lyawilz/sets/bounce", "https://linktr.ee/babyvaye"]
+  },
+  "liquidltd": {
+    "bio": "LiquidLtd is a Montreal-linked music project associated with vocalist and founding member Stephen 'Liquid' Hawley. Hawley is based in Montreal, Quebec, and the project maintains an independent catalogue spanning releases and online performances. Northern Dial carries LiquidLtd as part of its Canadian independent music catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/liquidltd/",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://linktr.ee/liquidltd", "https://ca.linkedin.com/in/stephen-hawley-2a340b47"]
+  },
+  "cairo!": {
+    "bio": "CAIRO! is Canadian artist and producer Cairo Khaleel Weir, associated with Hamilton, Ontario and Montreal. His electronic and bass-oriented releases include independent work and collaborations, with Canadian profiles placing him in Ontario. Northern Dial carries CAIRO! as part of its contemporary Canadian electronic catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/northsidecai/",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/northsidecai", "https://nocopyrightsounds.fandom.com/wiki/CAIRO!"]
+  },
+  "culture": {
+    "bio": "Culture is a Canadian-Bahamian rapper and reggae artist best known for his feature on Karl Wolf's hit version of Africa. His work crosses hip-hop, reggae and pop, and the collaboration became a major Canadian chart success. Northern Dial carries Culture as part of its Canadian hip-hop and reggae catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://en.wikipedia.org/wiki/Culture_(musician)"]
+  }
+}
