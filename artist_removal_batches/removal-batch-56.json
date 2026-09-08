@@ -1,0 +1,32 @@
+{
+  "IX WULF": {
+    "reason": "Verified non-Canadian artist. Apple Music identifies IX WULF as an R&B/Soul artist from the United States; the Northern Dial entry matches the same catalogue including releases such as 'Like Me,' 'Weekends' and 'heal yourself first.'",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/ix-wulf/1399083815", "https://music.apple.com/ca/album/keep-it-inside-single/1185951337"]
+  },
+  "Mxrci": {
+    "reason": "Verified non-Canadian artist. MXRCI is a Punjabi producer born and raised in Mohali/Panjab, India; Apple Music lists his origin as India and FL Studio's artist profile describes him as Panjab-born.",
+    "country": "India",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/mxrci/1433848872", "https://www.image-line.com/artists/mxrci"]
+  },
+  "Titus": {
+    "reason": "Verified non-Canadian artist. The TITUS artist associated with releases including 'Pull Up' is from Westwood, New Jersey, United States; Apple Music and UnitedMasters both document his New Jersey origin.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/titus/1522520457", "https://unitedmasters.com/a/titus0514"]
+  },
+  "Harrd Luck": {
+    "reason": "Verified non-Canadian artist. Harrd Luck is a New Jersey rapper; current profiles identify him with Paterson, New Jersey and contemporary coverage names him among fellow Jersey artists on Fetty Wap's 2026 album 'Zavier.'",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://distrokid.com/hyperfollow/harrdluck/feed-the-dogs", "https://www.iheart.com/content/2026-03-27-fetty-wap-delivers-new-album-zavier-with-max-b-wiz-khalifa-monty-more/"]
+  },
+  "VisionPlay": {
+    "reason": "Verified non-Canadian artist/production entity. VisionPlay Entertainment identifies itself as based in New York, New York, and its current catalogue corresponds to the VisionPlay artist entry carried by streaming services.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://visionplayent.bandcamp.com/", "https://www.visionplayent.com/about", "https://music.apple.com/us/artist/visionplay/1829806249"]
+  }
+}
