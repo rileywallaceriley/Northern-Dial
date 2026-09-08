@@ -1,0 +1,24 @@
+{
+  "DES3ETT": {
+    "reason": "Verified non-Canadian artist. Armada Music identifies DES3ETT as Italian DJ and producer Cristian Verdes, and Amsterdam Dance Event identifies him as being from Trento, Italy.",
+    "country": "Italy",
+    "sources": [
+      "https://www.armadamusic.com/news/italian-artist-des3ett-builds-on-two-contest-winning-remixes-with-first-single-release-on-armada-music-fill-me-in",
+      "https://www.amsterdam-dance-event.nl/en/artists-speakers/des3ett/1921601/"
+    ]
+  },
+  "EMBASSYLIGHTS": {
+    "reason": "Verified non-Canadian artist. Boompa Records lists EMBASSYLIGHTS as an artist from Reykjavik, Iceland.",
+    "country": "Iceland",
+    "sources": [
+      "https://boomparecords.bandcamp.com/artists"
+    ]
+  },
+  "Mxrci": {
+    "reason": "Verified non-Canadian artist. Apple Music identifies MXRCI as a Punjabi producer born and raised in Mohali and lists his origin as India.",
+    "country": "India",
+    "sources": [
+      "https://music.apple.com/us/artist/mxrci/1433848872"
+    ]
+  }
+}
