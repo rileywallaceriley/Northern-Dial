@@ -1,0 +1,14 @@
+{
+  "PRNG": {
+    "reason": "Verified non-Canadian artist. PRNG is identified in Toronto Pride programming as a Brazilian rapper featured on TRP.P's 'Good Vibes' remix.",
+    "country": "Brazil",
+    "reviewed": true,
+    "sources": ["https://www.pridetoronto.com/events/blocko-after-dark/", "https://www.pridetoronto.com/performances/trp-p/"]
+  },
+  "Young Assassins": {
+    "reason": "Verified non-Canadian hip-hop group. The group's own SoundClick profile identifies its members as being from Long Beach and Fresno, California, United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://www.soundclick.com/track/1071553/young-assassins/y-a-is-an-army"]
+  }
+}
