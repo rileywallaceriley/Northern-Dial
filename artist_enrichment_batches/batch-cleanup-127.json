@@ -1,0 +1,47 @@
+{
+  "loser supreme": {
+    "bio": "loser supreme is a Montreal-based independent artist working in alternative pop and hip-hop-adjacent sounds. His SoundCloud profile identifies Montreal as his home base and documents a growing catalogue of self-released tracks. Northern Dial carries loser supreme as part of its contemporary Montreal independent music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://m.soundcloud.com/losersupreme/drunk-again-ft-saccharine"]
+  },
+  "quantacious": {
+    "bio": "Quantacious is an underground rapper from Vancouver, British Columbia whose music draws on old-school hip-hop and lyrical rap traditions. His artist profile explicitly identifies Vancouver, Canada as his home and he has maintained a steady stream of independent releases. Northern Dial carries Quantacious as part of its contemporary Vancouver hip-hop catalogue.",
+    "website": "https://linktr.ee/quantacious",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/6wkeHn7TQuwK1xABTOi939", "https://linktr.ee/quantacious"]
+  },
+  "ora": {
+    "bio": "ORA is a Montreal experimental electronic duo formed by sound artists Stéphanie Castonguay and Maxime Corbeil-Perron. Their work combines prepared instruments, electronics, electromagnetic field sensors and improvised sound, with releases through Montreal label Mikroclimat. Northern Dial carries ORA as part of its experimental Quebec electronic catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://lecanalauditif.ca/artistes/ora/", "https://mikroclimat.bandcamp.com/album/motile-cilia"]
+  },
+  "sorisa": {
+    "bio": "Sorisa is a Canadian singer and songwriter from Toronto whose music blends electropop, EDM, hyperpop and melodic hip-hop. He broke through with U Look So Good in Fall and was named one of Billboard Canada's rising Canadian acts to watch in 2026. Northern Dial carries Sorisa as part of its contemporary Toronto pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.billboard.com/music/features/canadian-artists-to-watch-2026", "https://en.wikipedia.org/wiki/Sorisa"]
+  },
+  "rossy": {
+    "bio": "rossy is a Toronto-based independent artist whose catalogue blends rap, alternative rock and melodic songwriting. His artist profile explicitly lists Toronto and includes tracks such as young addicts that reflect his crossover sound. Northern Dial carries rossy as part of its contemporary Toronto independent music catalogue.",
+    "website": "https://rossyofficial.com/music",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://m.soundcloud.com/rossyofficialpage/young-addicts", "https://rossyofficial.com/music"]
+  }
+}
