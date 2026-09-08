@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: restore-homepage-special-shell
+  cancel-in-progress: false
+
 jobs:
   restore:
     runs-on: ubuntu-latest
@@ -32,4 +36,5 @@ jobs:
             exit 0
           fi
           git commit -m 'Restore homepage large logo and condensed sticky nav'
+          git pull --rebase origin main
           git push origin HEAD:main
