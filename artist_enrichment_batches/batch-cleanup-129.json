@@ -1,0 +1,47 @@
+{
+  "Tassja": {
+    "bio": "Tassja is a Canadian singer associated with Toronto and Halifax hip-hop and R&B circles. Her catalogue includes the 2006 Spesh K collaboration 'Retirement Days,' while she later appeared in Drake's 'Started From the Bottom' video and pursued her own music as Tassja Dawn. Northern Dial carries Tassja as part of its Canadian R&B and hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://musicbrainz.org/artist/8f653148-9e4e-4786-a9d2-a145469a731f/releases", "https://hiphopwired.com/215239/bangin-candy-started-from-the-bottoms-tassja-dawn-photos/", "https://www.brockwayent.com/newsletter/2006-12-25.html"]
+  },
+  "TESSA.": {
+    "bio": "TESSA is the Canadian pop and R&B project built around Sudbury-born singer-songwriter Tessa Gooden and Toronto-based producer and multi-instrumentalist Petr Balaz. Their releases include the 2018 album Fool Love and singles such as Honesty, blending pop, R&B and soul production. Northern Dial carries TESSA as part of its Ontario independent pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://tinnitist.com/2019/04/19/tessa-honesty-exclusive-video-premiere/", "https://music-ontario.ca/news/recent-news/read%2Carticle/17652/meet-the-songwriters-for-the-ontario-edition-of-the-2018-canadian-songwriter-challenge", "https://music.apple.com/ca/album/fool-love/1445702820"]
+  },
+  "GlomanOnThaBeat": {
+    "bio": "GlomanOnThaBeat is a Toronto producer and recording artist whose independent catalogue spans hip-hop and beat-driven releases. He has collaborated with Canadian artists including Vancouver's Illyminiachi and has released projects such as Today and How 2. Northern Dial carries GlomanOnThaBeat as part of its Toronto hip-hop and producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/glomanonthabeat-illyminiachi-location/", "https://music.apple.com/ca/artist/glomanonthabeat/1347771590"]
+  },
+  "Scifo of the Micn Gz Crew": {
+    "bio": "Scifo, born Andil Houlder, is a Toronto rapper best known as one half of the Canadian hip-hop duo Mic'N Gz Crew. The group emerged from Toronto's early-1990s rap scene and released All Chix Lov Da Mix through the Canadian label Def Beat Records. Northern Dial carries Scifo through his later guest appearance on 2 Versatile's 'Guiding Light.'",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.facebook.com/100050650922040/posts/the-mic-n-gz-crewcanadian-hip-hip-duo-from-toronto-that-was-consisted-of-andil-h/1431442598554091/", "https://www.discogs.com/label/311828-Def-Beat-Records-2", "https://www.discogs.com/release/5671502-MicN-Gz-Crew-All-Chix-Lov-Da-Mix"]
+  },
+  "Shog Stan": {
+    "bio": "Shog Stan is an Ottawa-based hip-hop artist and producer who writes, performs, produces and engineers his own releases. His recent catalogue includes the 2026 album Mr.ShogStan and singles such as 'I Gotta' and 'What You Saying.' Northern Dial carries Shog Stan as part of its contemporary Ottawa independent hip-hop catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/shog.stan/",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.facebook.com/61578338528319/videos/fetti-reels-fetti-reels-music-producer/1540156504035478/", "https://www.instagram.com/shog.stan/", "https://music.apple.com/ca/album/mr-shogstan/1868911100"]
+  }
+}
