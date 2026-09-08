@@ -1,0 +1,47 @@
+{
+  "Alsham": {
+    "bio": "Alsham is a Toronto underground hip-hop artist represented on the 1998 local compilation Invading the Mega City. Northern Dial carries 'Invasion' and 'Mega Garden,' the latter featuring Black U Sun and K.P. The compilation documents Toronto's independent rap scene at the end of the 1990s.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.discogs.com/release/2059470-Various-Invading-The-Megacity", "https://music.apple.com/ca/album/invading-the-mega-city/1606009949"]
+  },
+  "Black U Sun": {
+    "bio": "Black U Sun is a Toronto underground hip-hop artist documented on the 1998 local compilation Invading the Mega City. Black U Sun appears with Alsham and K.P. on 'Mega Garden,' the same recording carried by Northern Dial. The release captures Toronto's independent hip-hop scene of the period.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.discogs.com/release/2059470-Various-Invading-The-Megacity", "https://music.apple.com/ca/album/invading-the-mega-city/1606009949"]
+  },
+  "asia": {
+    "bio": "asia is a Toronto underground hip-hop artist represented on the 1998 local compilation Invading the Mega City. Northern Dial carries the artist's track 'Dedicated' from that release. The compilation was built around Toronto-based independent rap artists and documents the city's late-1990s hip-hop scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.discogs.com/release/2059470-Various-Invading-The-Megacity", "https://music.apple.com/ca/album/invading-the-mega-city/1606009949"]
+  },
+  "Diamond": {
+    "bio": "Diamond is the Northern Dial catalogue name for Toronto underground rapper Diamond X, whose 'On My Own' appears on the 1998 local compilation Invading the Mega City. Northern Dial also credits Diamond on 'Murda Style' alongside Madlocks and Infinite. The matching release credit identifies this catalogue entry with Toronto's late-1990s independent hip-hop scene.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.discogs.com/release/2059470-Various-Invading-The-Megacity", "https://music.apple.com/ca/album/invading-the-mega-city/1606009949"]
+  },
+  "Rolo": {
+    "bio": "Rolo is a Toronto underground hip-hop artist represented on the 1998 local compilation Invading the Mega City. The release credits Rolo with King David on 'Warriors Come Thru,' while Northern Dial also carries Rolo's 'In T.O.' The compilation documents Toronto-based independent rap artists from the era.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.discogs.com/release/2059470-Various-Invading-The-Megacity", "https://music.apple.com/ca/album/invading-the-mega-city/1606009949"]
+  }
+}
