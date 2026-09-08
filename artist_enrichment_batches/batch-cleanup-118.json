@@ -1,0 +1,47 @@
+{
+  "jules halpern": {
+    "bio": "Jules Halpern is a Toronto pop singer-songwriter whose work spans contemporary pop, soul and theatrical influences. She was among the Canadian performers featured on the 2020 ArtistsCAN benefit recording of Lean on Me and has continued releasing independent singles including Boogiewoman, Hush, Bitchcraft and Stand Beside Me. Northern Dial carries Jules Halpern as part of its contemporary Canadian pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/jules-halpern/1509984442", "https://www.iheartradio.ca/en/music-news/canadian-artists-join-voices-for-lean-on-me-1.12227470.html", "https://www.sonymusic.ca/press_release/artistscan-lean-on-me"]
+  },
+  "olivia ridgely": {
+    "bio": "Olivia Ridgely is a Montreal-based Canadian indie-pop singer and songwriter whose catalogue includes releases such as Busy Body, Flowers for a Friend, Blu/Lucky, Hot Cakes and twenty18. Her work also extends into collaborations across Canadian pop, folk and electronic music, including songs with Theo Day and Montreal artists. Northern Dial carries Olivia Ridgely as part of its contemporary Canadian indie-pop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.musicmetricsvault.com/artists/olivia-ridgely/0OE65qjIKHqSyU7YWpOQrv", "https://palmaresadisq.ca/fr/artiste/olivia-ridgely/", "https://music.apple.com/ca/album/twenty18-single/1847451774"]
+  },
+  "fidelina": {
+    "bio": "Fidelina is a Canadian R&B and pop singer-songwriter whose music centres soulful vocals and intimate contemporary production. She has been highlighted among emerging Canadian musicians and has released independent singles including I Don't Wanna and When It Rains. Northern Dial carries Fidelina as part of its emerging Canadian R&B catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/fidelinaswrld/",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.seeyounexttuesdaymedia.com/articles/11-canadian-artists-on-the-rise", "https://music.amazon.ca/albums/B0GPX5CLGQ"]
+  },
+  "angela apigo": {
+    "bio": "Angela Apigo is an Ontario vocalist and songwriter active in Canadian R&B, soul and hip-hop collaborations. Her recorded work includes featured vocals on Big Jacks' Sunflower EP and Kutcorners' Round & Round, with credits connected to Toronto's independent soul and beat scene. Northern Dial carries Angela Apigo as part of its Canadian R&B and collaborator catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://snackalot.bandcamp.com/album/sunflower", "https://music.apple.com/ca/song/1836888087"]
+  },
+  "chasé scanz": {
+    "bio": "Chasé Scanz is a Canadian hip-hop artist associated with Vancouver's Indigenous rap scene and the Hereditary Sound circle. His collaborations with Sekawnee and EfrainYB include Nations, Relatives and Get Up and Dance, while his own releases include Fashion District. Northern Dial carries Chasé Scanz as part of its contemporary Indigenous and West Coast Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://app.chartmetric.com/de/artist/3371186", "https://www.shazam.com/song/1693235950/nations", "https://soundcloud.com/sekawnee/nations-ft-chase-scanz-efrainyb"]
+  }
+}
