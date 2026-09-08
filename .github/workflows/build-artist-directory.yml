@@ -6,6 +6,8 @@ on:
       - 'artist_enrichment_batches/**'
       - 'artist_profiles.json'
       - 'artist_removals.txt'
+      - 'build_artists.py'
+      - 'build_artist_pages.py'
       - '.github/workflows/build-artist-directory.yml'
   workflow_dispatch:
 
@@ -50,22 +52,26 @@ jobs:
           manifest_path.write_text(json.dumps(sorted(published), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           PY
 
-      - name: Build directory
+      - name: Build directory from live station catalogue
+        continue-on-error: true
         run: python3 build_artists.py
+
+      - name: Build standalone artist SEO pages
+        run: python3 build_artist_pages.py
 
       - name: Keep enrichment batches as source of truth
         run: git checkout -- artist_enrichment.json artist_publish_manifest.json
 
-      - name: Commit generated directory
+      - name: Commit generated artist pages
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artists.html
+          git add artists.html artists/ sitemap.xml
           if git diff --cached --quiet; then
-            echo 'No directory changes to commit.'
+            echo 'No artist page changes to commit.'
             exit 0
           fi
-          git commit -m 'Rebuild artist directory from enrichment batches'
+          git commit -m 'Rebuild artist directory and SEO pages'
 
           for attempt in 1 2 3 4 5; do
             echo "Push attempt ${attempt}..."
@@ -77,5 +83,5 @@ jobs:
             sleep 2
           done
 
-          echo 'Unable to push generated directory after 5 attempts.' >&2
+          echo 'Unable to push generated artist pages after 5 attempts.' >&2
           exit 1
