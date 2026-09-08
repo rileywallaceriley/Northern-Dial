@@ -1,0 +1,41 @@
+{
+  "Skandaali": {
+    "reason": "Verified non-Canadian artist. Skandaali is Joonas Palmgren, a Finnish/Helsinki rap artist associated with Finland's suomirap scene; Yle documents his Finnish rap career and performance history, and his catalog matches the Skandaali artist credit.",
+    "country": "Finland",
+    "sources": [
+      "https://yle.fi/a/3-6691593",
+      "https://www.last.fm/music/Skandaali"
+    ]
+  },
+  "Robert Ivory": {
+    "reason": "Verified non-Canadian artist. Robert Ivory is a Cleveland, Ohio musician whose catalog includes the Logic collaboration City in the Stars; independent artist references identify him as being from Cleveland, Ohio.",
+    "country": "United States",
+    "sources": [
+      "https://recentmusic.com/artist/6iDuag1v0fC3GGG3JvaWWa/"
+    ]
+  },
+  "PRNG": {
+    "reason": "Verified non-Canadian artist. PRNG is Thiago Pirangi, an artist from Taguatinga in Brazil's Federal District; Rapgol identifies the alias directly and Pride Toronto identifies PRNG as the Brazilian rapper featured on TRP.P's Good Vibes remix.",
+    "country": "Brazil",
+    "sources": [
+      "https://rapgol.com.br/thiago-pirangi-conversa-com-a-rapgol/",
+      "https://www.pridetoronto.com/events/blocko-after-dark/"
+    ]
+  },
+  "Hugo": {
+    "reason": "Verified non-Canadian artist. The exact HUGO artist profile contains the Sam-r/X2FromTheCIV track Entourage and identifies the artist's hometown as the United States, matching the unresolved library credit without relying on the ambiguous Hugo name alone.",
+    "country": "United States",
+    "sources": [
+      "https://www.shazam.com/en-us/artist/hugo/1515957494",
+      "https://www.qobuz.com/se-en/album/death-of-a-saint-sam-r/rygzvo6kqt8da"
+    ]
+  },
+  "Ron E": {
+    "reason": "Verified non-Canadian artist. MNRK Music Group identifies the exact recording artist Ron E as Long Island-bred and rooted in New York; his current catalog and songwriting career match the unresolved artist credit.",
+    "country": "United States",
+    "sources": [
+      "https://www.mnrk.com/press-room/2024/07/rising-rb-singer-songwriter-ron-e-fabolous-drops-new-single-worst-way/",
+      "https://www.mnrk.com/press-room/2025/10/grammy-winner-ron-e-releases-his-highly-anticipated-debut-album-let-me-explain-out-today/"
+    ]
+  }
+}
