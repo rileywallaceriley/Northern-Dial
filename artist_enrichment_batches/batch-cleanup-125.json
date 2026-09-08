@@ -1,0 +1,47 @@
+{
+  "juice": {
+    "bio": "Juice is a Toronto hip-hop artist also known as Rochester or Rochester aka Juice. A longtime figure in the city's rap scene, he has released solo work under both names and has been documented by Canadian music press as a Toronto MC. Northern Dial carries Juice as part of its Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/rochester_aka_juice-to_release_debut_album_dreams_dont_have_deadlines", "https://hiphopcanada.com/rochester-juice-interview/"]
+  },
+  "la luv": {
+    "bio": "LA Luv is a Toronto hip-hop DJ and artist associated with Michie Mee and the early Canadian rap scene. He later became part of the Dream Warriors orbit and appears throughout documented histories of Toronto hip-hop's formative years. Northern Dial carries LA Luv as part of its foundational Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://harthouse.ca/blog/black-music-history-toronto-michie-mee-la-luv", "https://citizenfreak.com/artists/101719-michie-mee-la-luv"]
+  },
+  "ironside": {
+    "bio": "Ironside is a Toronto hip-hop artist associated with Ghetto Concept and the 7Bills scene. He appeared alongside major Canadian rappers on Ghetto Concept's Still Too Much and is part of the documented network around Toronto's late-1990s and early-2000s underground rap movement. Northern Dial carries Ironside as part of its archival Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.dsnow.co.uk/site/the-past-present-and-the-future-of-ghetto-concept/", "https://www.imdb.com/name/nm10348364/"]
+  },
+  "angel duss": {
+    "bio": "Angel Duss is a Toronto hip-hop vocalist and rapper connected to the city's 7Bills and Ghetto Concept scene. Her credits include multiple appearances on Ghetto Concept releases, including N.E.W.S., Krazy Mixed Up World, Blades of Ice and later recordings. Northern Dial carries Angel Duss as part of its archival Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://citizenfreak.com/titles/328157-ghetto-concept-ghetto-concept", "https://www.dsnow.co.uk/site/the-past-present-and-the-future-of-ghetto-concept/", "https://musicbrainz.org/release/b22714bc-f3c9-4f7b-bbe2-4193b1efc770"]
+  },
+  "ray smoove": {
+    "bio": "Ray Smoove is a Toronto hip-hop artist associated with Ghetto Concept, Unit 7 and the 7Bills scene. His credits span classic Toronto recordings including Heat of the Night, Blades of Ice, No Love in the Streets and later Ghetto Concept projects. Northern Dial carries Ray Smoove as part of its archival Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://citizenfreak.com/titles/328157-ghetto-concept-ghetto-concept", "https://www.dsnow.co.uk/site/the-past-present-and-the-future-of-ghetto-concept/", "https://music.apple.com/us/album/no-love-in-the-streets-feat-ray-smoove-madlocks/1541686388"]
+  }
+}
