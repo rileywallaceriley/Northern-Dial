@@ -1,0 +1,47 @@
+{
+  "julian thomas": {
+    "bio": "Julian Thomas is a Toronto rapper raised in Etobicoke who has been writing and recording hip-hop since his youth. His work draws on the west-end Toronto environment he grew up in, and he later signed with Sony Music Entertainment Canada while developing a catalogue that blends introspective writing with contemporary rap. Northern Dial carries Julian Thomas as part of its Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/julian-thomas-progressive-interview/"]
+  },
+  "kid sharif": {
+    "bio": "Kid Sharif is a Victoria-born, Vancouver-based hip-hop artist who began releasing music independently in 2018. His early work documented Vancouver nightlife and helped establish him within the city's emerging rap scene. Northern Dial carries Kid Sharif as part of its contemporary West Coast Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/kid-sharif-forever-video/"]
+  },
+  "luka ferraro": {
+    "bio": "Luka Ferraro is a Filipino-Italian songwriter and producer based in Montreal whose music spans indie rock and pop. He first gained attention as one half of 20 Minutes Til Sunrise before expanding into solo releases and collaborations across Montreal's independent music community. Northern Dial carries Luka Ferraro as part of its contemporary Montreal indie catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcharts.com/en/artist/b3fd8527-34ea-4812-91f4-13add7d7366f", "https://music.apple.com/us/concerts/ce.d34136fc-8a35-4351-a392-9a4bfa245c0c"]
+  },
+  "jaytrillz": {
+    "bio": "JayTrillz is a Brampton hip-hop artist whose music reflects the Toronto and Brampton scene around him. He built his catalogue through independent singles and projects including Trillion Dollar Dreams, while speaking openly about the opportunities and challenges facing artists in the local music ecosystem. Northern Dial carries JayTrillz as part of its contemporary Greater Toronto Area rap catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.amazon.ca/podcasts/08fe4581-682b-4152-a8e5-45cb6865e77c/episodes/509fb790-f261-4797-b49a-9c4d9a206418/the-man-dem-show-jaytrillz-on-%E2%80%9Ctrillion-dollar-dreams-%E2%80%9D-charting-on-itunes-fixing-the-toronto-music-industry-more", "https://music.apple.com/us/artist/jaytrillz/1467474930"]
+  },
+  "eric kane": {
+    "bio": "Eric Kane is an Edmonton singer-songwriter and former frontman of Kane Incognito whose music blends folk, rock and emotionally direct pop songwriting. After beginning as a drummer, he moved to the microphone and developed a solo career built around personal storytelling, grief, resilience and growth. Northern Dial carries Eric Kane as part of its contemporary Western Canadian singer-songwriter catalogue.",
+    "website": "https://erickaneofficial.com/",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://erickaneofficial.com/", "https://www.thecarleton.ca/events/eric-kane/", "https://www.myentertainmentworld.ca/2019/10/spotlight-kane-incognito/"]
+  }
+}
