@@ -1,0 +1,50 @@
+{
+  "sheltoh": {
+    "reason": "Verified non-Canadian artist. Sheltoh is a London, England-based artist whose public artist profiles identify London as his home city.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/sheltoh/1555957277", "https://www.shazam.com/artist/sheltoh/1555957277"]
+  },
+  "shanic": {
+    "reason": "Verified non-Canadian artist. Shanic is Austin, Texas-based artist Abraham Nunez, with the exact artist profile tied to his released catalogue.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/Shanic"]
+  },
+  "jikay": {
+    "reason": "Verified non-Canadian artist. JiKay is a British-born producer who has been based in Los Angeles and is documented through his official artist profile.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/jikay"]
+  },
+  "brit lauren": {
+    "reason": "Verified non-Canadian artist. Brit Lauren, now recording as Brit Manor, is a Los Angeles soul and electronic artist.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://britmanor.bandcamp.com/album/diamond-in-the-rough", "https://bastardjazz.com/release/diamond-rough/"]
+  },
+  "begetz": {
+    "reason": "Verified non-Canadian artist. Begetz is a Brooklyn-born rapper and songwriter who later relocated to Los Angeles.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://kjnewswire.com/6729/exclusive-interview-begetz-rapper-actor-songwriter-and-ceo-hustlepreneur-steadily-building"]
+  },
+  "oxxx": {
+    "reason": "Verified non-Canadian artist. OxXx is Jon Oxenham, whose artist profile identifies Washington, D.C., United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/oxxx"]
+  },
+  "skandaali": {
+    "reason": "Verified non-Canadian artist. Skandaali is Finnish rapper Joonas Palmgren, documented by Finland's official music chart and national library catalogue.",
+    "country": "Finland",
+    "reviewed": true,
+    "sources": ["https://ifpi.fi/lista/artistit/skandaali/", "https://kansalliskirjasto.finna.fi/Record/fikka.4799158", "https://musicbrainz.org/artist/9b862ffe-85fc-49e1-ac8f-f1cd1f0d3499"]
+  },
+  "james cocozza": {
+    "reason": "Verified non-Canadian artist. James Cocozza is a UK-based producer and composer associated with Shutter Audio and commercial production music.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/16BxOX67lWcQpiglrMa2HY", "https://music.apple.com/gb/song/1797287347"]
+  }
+}
