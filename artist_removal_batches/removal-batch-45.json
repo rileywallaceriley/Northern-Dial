@@ -1,0 +1,14 @@
+{
+  "frank delour": {
+    "reason": "Verified non-Canadian artist. Frank Delour is a U.S. house artist and DJ associated with New York and Miami; Apple Music identifies him as from the United States and his official materials describe him as a NYC artist regularly active in New York and Miami.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/frank-delour/255674967", "https://www.djfrankdelour.com/about", "https://soundcloud.com/frankdelour"]
+  },
+  "ryan witherspoon": {
+    "reason": "Verified non-Canadian artist. Ryan Witherspoon is a Brooklyn, New York hip-hop artist; Apple Music identifies his origin as Brooklyn, New York, United States, and his SoundCloud profile also lists Brooklyn.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/us/artist/ryan-witherspoon/1426675292", "https://soundcloud.com/ryan_witherspoon"]
+  }
+}
