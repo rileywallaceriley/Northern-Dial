@@ -3,6 +3,7 @@ name: Restore homepage special shell
 on:
   push:
     paths:
+      - 'restore_homepage_shell.py'
       - '.github/workflows/cleanup-duplicate-shells.yml'
   workflow_dispatch:
 
@@ -18,117 +19,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Restore homepage large logo and condensed nav
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
-
-          # Remove any previous homepage-only header/nav so this stays idempotent.
-          text = re.sub(
-              r'\n<header class="header nd-home-hero-logo">.*?</header>\s*',
-              '\n', text, count=1, flags=re.S
-          )
-          text = re.sub(
-              r'\n<nav class="site-nav mobile-menu-nav nd-home-nav".*?</nav>\s*',
-              '\n', text, count=1, flags=re.S
-          )
-
-          header = '''<header class="header nd-home-hero-logo">
-    <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial Logo" class="logo-image">
-</header>
-
-'''
-
-          nav = '''<nav class="site-nav mobile-menu-nav nd-home-nav" aria-label="Main navigation">
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
-        <span>Menu</span>
-        <span class="mobile-menu-icon" aria-hidden="true">☰</span>
-    </button>
-    <div class="mobile-menu-links nd-home-nav-links">
-        <a href="./" class="active" aria-current="page">Home</a>
-        <a href="library.html">Songs</a>
-        <a href="artists.html">Artists</a>
-        <a href="discover.html">Discover</a>
-        <a href="blog/">Blog</a>
-        <div class="nd-home-more">
-            <button type="button" class="nd-home-more-toggle" aria-expanded="false">More <span aria-hidden="true">▾</span></button>
-            <div class="nd-home-more-menu">
-                <a href="about.html">About</a>
-                <a href="#submit" class="submit-link">Submit</a>
-                <button type="button" class="language-switch language-toggle" data-language-toggle lang="fr" aria-label="Afficher la page d’accueil en français">Français</button>
-            </div>
-        </div>
-    </div>
-</nav>
-
-'''
-
-          hero_marker = '<div class="hero" id="hero">\n'
-          if hero_marker not in text:
-              raise SystemExit('Could not locate homepage hero')
-          text = text.replace(hero_marker, hero_marker + header, 1)
-
-          about_marker = '<div id="about" class="content-columns">'
-          if about_marker not in text:
-              raise SystemExit('Could not locate homepage About section')
-          text = text.replace(about_marker, nav + about_marker, 1)
-
-          css = '''
-<style id="nd-home-special-shell-css">
-.nd-home-hero-logo { text-align:center; }
-.nd-home-hero-logo .logo-image { display:block; width:min(82%,620px); max-width:620px; height:auto; margin:0 auto; }
-.nd-home-nav { position:sticky !important; top:0; z-index:10000; }
-.nd-home-nav-links { align-items:stretch; justify-content:center; }
-.nd-home-more { position:relative; display:flex; align-items:stretch; }
-.nd-home-more-toggle { background:transparent; border:0; color:#fff; cursor:pointer; font-family:'Oswald',sans-serif; font-size:.95rem; font-weight:700; letter-spacing:.12em; padding:14px 28px; text-transform:uppercase; }
-.nd-home-more-toggle:hover,.nd-home-more-toggle:focus { background:#262626; color:#C33; }
-.nd-home-more-menu { display:none; position:absolute; right:0; top:100%; min-width:190px; background:#1a1a1a; border-top:2px solid #C33; box-shadow:0 10px 24px rgba(0,0,0,.25); z-index:10001; }
-.nd-home-more.open .nd-home-more-menu,.nd-home-more:focus-within .nd-home-more-menu { display:block; }
-.nd-home-more-menu a,.nd-home-more-menu button { display:block; width:100%; background:#1a1a1a; border:0; border-bottom:1px solid #343434; color:#fff; cursor:pointer; font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:700; letter-spacing:.1em; padding:14px 18px; text-align:left; text-decoration:none; text-transform:uppercase; }
-.nd-home-more-menu a:hover,.nd-home-more-menu a:focus,.nd-home-more-menu button:hover,.nd-home-more-menu button:focus { background:#262626; color:#C33; }
-.nd-home-more-menu .submit-link { background:#C33; color:#fff; }
-@media (max-width:768px) {
-  .nd-home-hero-logo .logo-image { width:min(90%,520px); }
-  .nd-home-more { display:block; width:100%; }
-  .nd-home-more-toggle { display:none; }
-  .nd-home-more-menu { display:block; position:static; min-width:0; box-shadow:none; border:0; width:100%; }
-}
-</style>
-<script id="nd-home-special-shell-js">
-document.addEventListener('DOMContentLoaded', function () {
-  const more = document.querySelector('.nd-home-more');
-  const toggle = document.querySelector('.nd-home-more-toggle');
-  if (!more || !toggle) return;
-  toggle.addEventListener('click', function (event) {
-    event.stopPropagation();
-    const open = more.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-  document.addEventListener('click', function (event) {
-    if (!more.contains(event.target)) {
-      more.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      more.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
-'''
-          # Remove an older copy, then add current homepage-only styles/scripts.
-          text = re.sub(r'\n<style id="nd-home-special-shell-css">.*?</script>\s*', '\n', text, flags=re.S)
-          text = text.replace('</body>', css + '\n</body>', 1)
-
-          path.write_text(text, encoding='utf-8')
-          PY
+      - name: Restore homepage shell
+        run: python3 restore_homepage_shell.py
 
       - name: Commit homepage shell
         run: |
