@@ -29,8 +29,8 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
 
-          css_tag = '  <link rel="stylesheet" href="/nd-shell.css?v=20260907">'
-          js_tag = '  <script src="/nd-shell.js?v=20260907" defer></script>'
+          css_tag = '  <link rel="stylesheet" href="/nd-shell.css?v=20260907b">'
+          js_tag = '  <script src="/nd-shell.js?v=20260907b" defer></script>'
           skip_names = {'admin.html'}
           skip_parts = {'.git', '.github', 'archives'}
           changed = []
@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- '*.html' 'blog/*.html' 'fr/*.html' 'fr/**/*.html' 2>/dev/null || true
+          git add -A -- '*.html'
           if git diff --cached --quiet; then
             echo 'No site shell changes to commit.'
             exit 0
