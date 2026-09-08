@@ -1,0 +1,47 @@
+{
+  "buddie": {
+    "bio": "buddie is a Vancouver-based grunge-pop and indie-rock band led by songwriter Dan Forrest. Originally formed in Philadelphia, the project was rebuilt in Vancouver after Forrest relocated there in 2021, and the current group has become part of the city's independent music scene through releases including Agitator and Glass and appearances at Canadian festivals such as Sled Island and Music Waste.",
+    "website": "https://buddietheband.com/",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://buddietheband.com/", "https://www.sledisland.com/2026/buddie", "https://www.craftedsounds.net/agitator"]
+  },
+  "Kash Phat": {
+    "bio": "Kash Phat is a Canada-based Ghanaian singer and electronic artist associated with Sault Ste. Marie, Ontario. His catalogue spans hip-hop, R&B and Afropop-influenced releases including Project 1: Kash to the World and To Her, and the Sault Ste. Marie Music Project lists Kash-phat among artists from the city.",
+    "website": "",
+    "instagram": "",
+    "city": "Sault Ste. Marie, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soomusicproject.ca/browse_artists%26ll_bands%3D0%26no_limit_bands%3Dtrue", "https://ameyawdebrah.com/watch-kash-phat-releases-visuals-for-sweet-girl/", "https://music.amazon.ca/tracks/B07FY9V2K5"]
+  },
+  "Mary": {
+    "bio": "Mary is an alternate Northern Dial library credit produced when the name of Oshawa indie-rock band Mary & Adelaide is split at the ampersand. Mary & Adelaide formed in Oshawa in 2017 and consists of Aidan McGuirk, Luke Mitchell, Sam Szigeti and Kyle Topolnisky. The separate Mary entry should therefore be treated as the same Canadian band identity already represented by Adelaide.",
+    "website": "https://maryandadelaide.bandcamp.com/",
+    "instagram": "",
+    "city": "Oshawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://rmg.on.ca/events/rmg-fridays-presents-chastity-and-mary-adelaide/", "https://maryandadelaide.bandcamp.com/", "https://exclaim.ca/music/article/oshawa-s-mary-and-adelaide-share-single-hoodie-zipper"]
+  },
+  "Strik-9": {
+    "bio": "Strik-9 is a Canadian hip-hop artist tied to London's early-2000s underground rap scene. He appears with Ron B and E-Mortal on the 2002 track '519 District', a London, Ontario collaboration documented by Penetraitor Records as Canadian rap and associated with the city's local hip-hop roster.",
+    "website": "",
+    "instagram": "",
+    "city": "London, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.soundclick.com/track/266948/penetraitor/ron-b-strik-9-and-e-mortal-519-district"]
+  },
+  "Baby Chilli": {
+    "bio": "Baby Chilli is a Toronto-raised, Vancouver-based alternative artist, guitarist and producer. After growing up around Toronto's music scene, he relocated to Vancouver and has worked from the city's independent scene as a solo artist and collaborator, including releases such as Sweet Tooth and MUSTANG and work with Vancouver singer-songwriter Matt Storm and DACEY.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://dolosangeles.com/events/2025/4/5/matt-storm-with-baby-chilli-tickets", "https://www.straight.com/music/cant-miss-vancouver-concerts-for-february-2025", "https://www.stereofox.com/matt-storm-green/", "https://music.apple.com/ca/album/sweet-tooth-single/1823516776"]
+  }
+}
