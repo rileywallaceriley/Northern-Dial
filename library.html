@@ -596,47 +596,40 @@
 }
 /* ND_MOBILE_MENU_CSS_END */
 
+
+    .songs-search-top {
+        margin: 0 auto 28px;
+        max-width: 760px;
+        text-align: center;
+    }
+    .songs-search-top .search-container {
+        max-width: none;
+        width: 100%;
+    }
+    .songs-search-top .catalog-info {
+        margin-top: 12px;
+        text-align: center;
+    }
+
 </style>
 
   <link rel="stylesheet" href="/nd-shell.css?v=20260907b">
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <a href="index.html" class="logo-link">
-                <span class="back-arrow">←</span>
-                <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" style="height: 120px; vertical-align: middle; margin: 0 15px;">
-            </a>
-            <div class="search-container">
-                <input type="text" 
-                       class="search-input" 
-                       id="searchInput" 
-                       placeholder="Search catalog..."
-                       autocomplete="off">
-            </div>
-            <div class="catalog-info">
-                <div id="catalogCount">Loading...</div>
-            </div>
-        </div>
-        <nav class="page-nav mobile-menu-nav" aria-label="Main navigation">
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
-        <span>Menu</span>
-        <span class="mobile-menu-icon" aria-hidden="true">☰</span>
-    </button>
-    <div class="mobile-menu-links">
-        <a href="index.html">Home</a>
-        <a href="library.html" class="active" aria-current="page">Songs</a>
-        <a href="artists.html">Artists</a>
-        <a href="discover.html">Discover</a>
-        <a href="blog/">Blog</a>
-        <a href="/about.html">About</a>
-        <a href="index.html#submit" class="submit-link">Submit</a>
-        <a href="/fr/" class="language-switch" lang="fr" hreflang="fr">Français</a>
-    </div>
-</nav>
-    </div>
-
 <div class="container">
+    <section class="songs-search-top" aria-label="Search Northern Dial songs">
+        <div class="search-container">
+            <input type="text"
+                   class="search-input"
+                   id="searchInput"
+                   placeholder="Search catalog..."
+                   autocomplete="off">
+        </div>
+        <div class="catalog-info">
+            <div id="catalogCount">Loading...</div>
+        </div>
+    </section>
+
     <div style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a); border: 4px solid #C33; border-radius: 12px; padding: 25px; margin-bottom: 30px; text-align: center;">
         <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: #C33; margin-bottom: 10px; letter-spacing: 4px;">RECENTLY PLAYED</h1>
         <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin-bottom: 8px;">Browse recent tracks or search to explore our catalog</p>
