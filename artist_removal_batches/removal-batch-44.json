@@ -1,0 +1,14 @@
+{
+  "big nous": {
+    "reason": "Verified non-Canadian artist. Big Nous was a member of Oakland, California hip-hop collective Hobo Junction and appears on Saafir-associated West Coast releases.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://rapsource.net/product/hobo-junction-the-cleaners/", "https://en.wikipedia.org/wiki/Trigonometry_(album)"]
+  },
+  "thirdrail vic": {
+    "reason": "Verified non-Canadian artist. Third Raill Vic was a member of Oakland, California hip-hop collective Hobo Junction and appears with Saafir and Big Nous on Swollen Members' Valentine's Day Massacre.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://rapsource.net/product/hobo-junction-the-cleaners/", "https://music.apple.com/us/song/1838769550"]
+  }
+}
