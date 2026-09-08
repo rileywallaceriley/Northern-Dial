@@ -59,6 +59,47 @@ jobs:
       - name: Build standalone artist SEO pages
         run: python3 build_artist_pages.py
 
+      - name: Link existing directory to standalone artist pages
+        run: |
+          python3 - <<'PY'
+          from html import escape
+          from pathlib import Path
+          from build_artist_pages import load_profiles, load_enrichments, slugify
+
+          directory_path = Path('artists.html')
+          html = directory_path.read_text(encoding='utf-8')
+          profiles = load_profiles()
+          enrichments = load_enrichments()
+          linked = 0
+
+          for key in sorted(set(profiles) | set(enrichments)):
+              profile_name, profile = profiles.get(key, ('', {}))
+              enrichment_name, enrichment = enrichments.get(key, ('', {}))
+              if not profile and not enrichment.get('reviewed'):
+                  continue
+              name = profile_name or enrichment_name
+              if not name:
+                  continue
+
+              escaped_name = escape(name)
+              slug = slugify(name)
+              plain = f'<summary>{escaped_name} <span class="artist-meta">'
+              linked_summary = (
+                  f'<summary><a class="artist-page-link" href="./artists/{slug}.html">'
+                  f'{escaped_name}</a> <span class="artist-meta">'
+              )
+              if plain in html:
+                  html = html.replace(plain, linked_summary, 1)
+                  linked += 1
+
+          if '.artist-page-link {' not in html:
+              style = '''\n    .artist-page-link { color: inherit; text-decoration: underline; text-decoration-color: #C33; text-underline-offset: 3px; }\n    .artist-page-link:hover, .artist-page-link:focus { color: #C33; }\n'''
+              html = html.replace('</style>', style + '</style>', 1)
+
+          directory_path.write_text(html, encoding='utf-8')
+          print(f'Linked {linked} researched artists in artists.html')
+          PY
+
       - name: Keep enrichment batches as source of truth
         run: git checkout -- artist_enrichment.json artist_publish_manifest.json
 
