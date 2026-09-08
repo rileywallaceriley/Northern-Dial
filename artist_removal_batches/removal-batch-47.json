@@ -1,0 +1,20 @@
+{
+  "big nous": {
+    "reason": "Verified non-Canadian artist. Big Nous is a member of Hobo Junction, the Oakland, California hip-hop collective, and is documented on the group's releases and Saafir collaborations.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://rapsource.net/product/hobo-junction-the-cleaners/", "https://en.wikipedia.org/wiki/Trigonometry_(album)"]
+  },
+  "thirdrail vic": {
+    "reason": "Verified non-Canadian artist. Third Rail Vic is a member of Oakland, California's Hobo Junction collective and appears on Bay Area releases including The Whoridas' High Times.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://rapsource.net/product/hobo-junction-the-cleaners/", "https://www.rapmusicguide.com/cd/10561/the-whoridas-high-times"]
+  },
+  "saüd": {
+    "reason": "Verified non-Canadian artist. Saüd is Saudi-born producer Saud AlTurki, whose work includes 'Good Fellas' featuring Belly and whose career is rooted in Saudi Arabia and international recording sessions rather than Canada.",
+    "country": "Saudi Arabia",
+    "reviewed": true,
+    "sources": ["https://www.wordplaymagazine.com/blog-1/2025/11/4/33ajglqio3dumq51tum0ytnyw9up39", "https://www.qobuz.com/us-en/album/good-fellas-feat-belly-saud/oymgt8ksgj2bb"]
+  }
+}
