@@ -1,0 +1,47 @@
+{
+  "nathan allen": {
+    "bio": "Nathan Allen is a contemporary jazz saxophonist from Brampton, Ontario whose sound blends smooth jazz, R&B and hip-hop influences. He studied at York University in Toronto and built a large online audience through saxophone performances and covers, while continuing to perform regularly across the Greater Toronto Area. Northern Dial carries Nathan Allen as part of its contemporary Canadian jazz and instrumental catalogue.",
+    "website": "https://www.nathanallensax.com/",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nathanallensax.com/about-4", "https://www.bandmix.ca/nathan-allen/", "https://open.spotify.com/artist/6IRnIHHQ6Fj5bEsGkHH2Ce/"]
+  },
+  "jed harper": {
+    "bio": "Jed Harper is a Newmarket-born, Toronto-based DJ and producer whose career spans hip-hop, house and club music. Formerly known as DJ Jedi, he became a fixture in Toronto nightlife, served as the Toronto Blue Jays' official DJ and performed at major festivals and clubs in Canada and abroad. Northern Dial carries Jed Harper as part of its Canadian DJ and electronic music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/19sPYbkx9355xeMPVtymxi", "https://www.bandsintown.com/a/1060256-jed-harper", "https://ra.co/events/390219"]
+  },
+  "king dapz": {
+    "bio": "King Dapz is a Scarborough rapper associated with Toronto's independent hip-hop scene. He has released solo material and collaborated with fellow Scarborough artist Gangis Khan, with tracks including Drip, Done and Angels (Freestyle). Northern Dial carries King Dapz as part of its contemporary Toronto rap catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/kingdapz416/",
+    "city": "Scarborough, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/gangis-khan-king-dapz-drip/", "https://music.apple.com/ca/song/1761332822", "https://music.apple.com/ca/song/1842620162"]
+  },
+  "nick day": {
+    "bio": "Nick Day is a singer and guitarist from Sandy Lake First Nation in Ontario who performed with the Indigenous rock group Bear Paws. The group recorded the rare 1988 album Kitche-Ogamah for Sunshine Records, blending original material with rock and country influences. Northern Dial carries Nick Day as part of its archival Indigenous Canadian music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Sandy Lake First Nation, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://citizenfreak.com/artists/110074-bear-paws", "https://www.citizenfreak.com/titles/326677-bear-paws-kitche-ogamah"]
+  },
+  "only1kng": {
+    "bio": "Only1KNG is a Canadian producer and musician whose work is closely connected to Toronto's independent hip-hop and R&B community. He has produced and performed with artists including Junia-T, Tea Fannie, STORRY, Samalong and Borelson, contributing keyboards, production and collaborative releases across Canadian projects. Northern Dial carries Only1KNG as part of its contemporary Canadian producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/ca/artist/only1kng/1447563665", "https://soundcloud.com/junia_t/4am-in-toronto-feat-miloh-1", "https://exclaim.ca/music/article/calgary-s-tea-fannie-announces-new-album-it-s-all-love-shares-rap-again", "https://borelson.bandcamp.com/album/building-bridges"]
+  }
+}
