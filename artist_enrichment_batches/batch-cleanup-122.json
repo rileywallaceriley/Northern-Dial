@@ -1,0 +1,47 @@
+{
+  "kkanji": {
+    "bio": "kkanji is the stage name of Kaelan Hachey, a Montreal-based pop and R&B artist whose catalogue blends indie pop, contemporary R&B and alternative songwriting. His releases include You've Still Got Time, Six String Chemistry and Rowdy, alongside collaborations with other Montreal artists including Luka Ferraro. Northern Dial carries kkanji as part of its contemporary Montreal independent music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://soundcloud.com/user-74556125", "https://www.viberate.com/artist/kkanji/", "https://music.apple.com/us/artist/kkanji/1589318084"]
+  },
+  "renny holladae": {
+    "bio": "Renny Holladae is a Toronto hip-hop producer and artist associated with the city's independent rap community. His production credits include work with Scarborough artist KinSmuv and collaborations within Toronto's long-running underground scene, including artists connected to Motive Music. Northern Dial carries Renny Holladae as part of its Toronto hip-hop and production catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://hiphopcanada.com/kinsmuv-paranoid-mind/", "https://www.whodoyou.com/biz/1811758/labank-enterprise-toronto-on", "https://livemotivators.bandcamp.com/album/the-journey"]
+  },
+  "shanks sioux": {
+    "bio": "Shanks Sioux is an Indigenous hip-hop artist whose work is connected to Canada's West Coast rap scene. He has appeared on Snotty Nose Rez Kids releases including I Can't Remember My Name and Cops With Guns Are The Worst!!!, and the former was recognized among the finalists at the Canadian Independent Music Video Awards. Northern Dial carries Shanks Sioux as part of its Indigenous Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://snottynoserezkids.bandcamp.com/track/i-cant-remember-my-name-ft-shanks-sioux", "https://snottynoserezkids.bandcamp.com/track/cops-with-guns-are-the-worst-ft-shanks-sioux", "https://dropoutentertainment.ca/2020/01/8700/"]
+  },
+  "x2fromtheciv": {
+    "bio": "X2FromTheCIV is a hip-hop artist active in Toronto's independent music community. His catalogue includes State of Mind and Heavily Humbled, along with recurring collaborations with Toronto-based artist and engineer Sam-r, HXGO, Tadiie and other members of the surrounding scene. Northern Dial carries X2FromTheCIV as part of its contemporary Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.tomusicians.com/events/toronto-musicians-unscripted", "https://www.shazam.com/artist/x2fromtheciv/1382947869", "https://music.amazon.ca/albums/B07CZRBQSQ"]
+  },
+  "robb klarke": {
+    "bio": "Robb Klarke is a Milton, Ontario-based multidisciplinary artist and musician connected to Canadian hip-hop. His work includes visual and animation projects for Toronto rap artists as well as a featured performance with Saukrates and Dankery Harv on My Luv from Saukrates' Amani deluxe EP. Northern Dial carries Robb Klarke as part of its Greater Toronto Area hip-hop and multidisciplinary arts catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Milton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.linkedin.com/in/robb-klarke-48174044", "https://www.shazam.com/song/1867548215/my-luv", "https://www.beatport.com/artist/robb-klarke/1506210"]
+  }
+}
