@@ -1,0 +1,47 @@
+{
+  "joolsannie": {
+    "bio": "Joolsannie is the music alias of Halifax/Dartmouth multidisciplinary artist Julia Hutt. She has contributed vocals and co-writing to Aquakultre's Halifax-rooted catalogue, including the 2022 single Lunch, while also working across illustration, video art direction, production and set design. Northern Dial carries Joolsannie as part of its contemporary Atlantic Canadian R&B and independent music catalogue.",
+    "website": "https://joolsannie.com/",
+    "instagram": "https://www.instagram.com/joolsannie/",
+    "city": "Halifax/Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://visualarts.ns.ca/artist-pages/julia-hutt-jools-annie/", "https://exclaim.ca/music/article/aquakultre_serves_lunch_with_new_single"]
+  },
+  "hatfield": {
+    "bio": "Hatfield is a Canadian rapper and singer-songwriter from Weymouth, Nova Scotia, formerly known as Khaki Ka$h and Just Q. His music moves between golden-era boom bap, melodic rap and alternative influences, reflecting a long-running connection to Nova Scotia's independent hip-hop community. Northern Dial carries Hatfield as part of its Atlantic Canadian rap catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Weymouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mayworkskjipuktukhfx.ca/event/wiki-w-lord-unknown-dj-uncle-fester-tachichi-basyl-hatfield/", "https://www.simpletix.com/e/wiki-with-lord-unknown-dj-uncle-fester-tac-tickets-196215"]
+  },
+  "monark": {
+    "bio": "Mister Monark is a Fredericton, New Brunswick hip-hop artist associated with Atlantic Canada's long-running underground rap scene. His work includes collaborations with artists such as Phakt and Sean One, and he has appeared on projects and compilations documenting Canadian rap from Fredericton and Saint John. Northern Dial carries Monark as part of its East Coast Canadian hip-hop catalogue.",
+    "website": "https://mistermonark.bandcamp.com/",
+    "instagram": "",
+    "city": "Fredericton, New Brunswick",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://mistermonark.bandcamp.com/", "https://brockwayent.com/brockwayent2010.html"]
+  },
+  "vilaxxs": {
+    "bio": "Vilaxxs is a Canadian multi-genre electronic artist whose music spans dark ambient, jumpstyle and phonk. Also associated with the names SERAPHIX and Zyrek, the project is known for atmospheric production built around deep pads, plucked melodies and nostalgic textures. Northern Dial carries Vilaxxs as part of its contemporary Canadian electronic catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/2uahqz51pzezhpMsqZvk2j"]
+  },
+  "pay$o": {
+    "bio": "Pay$o is a Canadian hip-hop artist whose catalogue includes tracks such as Digital Minds, St-Antoine, Dollarama, Rudimentary and Game Changer. His music draws on contemporary urban rap while reflecting everyday life and personal experience, and he has appeared alongside other Montreal-linked independent artists. Northern Dial carries Pay$o as part of its contemporary Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.viberate.com/artist/payso-362/", "https://music.apple.com/ca/artist/pay%24o/1468882681"]
+  }
+}
