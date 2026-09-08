@@ -1,6 +1,9 @@
 (() => {
   const LOGO = 'https://i.imgur.com/XIAPd0N.png';
   const path = window.location.pathname;
+  const isHomepage = path === '/' || path === '/index.html';
+  if (isHomepage) return;
+
   const isFrench = path === '/fr' || path.startsWith('/fr/');
 
   const root = isFrench ? '/fr/' : '/';
@@ -99,7 +102,7 @@
     mobileToggle.className = 'nd-mobile-toggle';
     mobileToggle.type = 'button';
     mobileToggle.setAttribute('aria-expanded', 'false');
-    mobileToggle.innerHTML = `<span>${isFrench ? 'Menu' : 'Menu'}</span><span class="nd-menu-icon" aria-hidden="true">☰</span>`;
+    mobileToggle.innerHTML = `<span>Menu</span><span class="nd-menu-icon" aria-hidden="true">☰</span>`;
     inner.appendChild(mobileToggle);
 
     const primary = document.createElement('div');
