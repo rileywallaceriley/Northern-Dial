@@ -1,0 +1,47 @@
+{
+  "trishannah": {
+    "bio": "Trishannah is an Edmonton-based vocalist and multidisciplinary artist whose work spans solo performance, community arts and collaborative music projects. She has performed under the Trishannah Gentles Music name and has participated in Edmonton arts initiatives including 5 Artists One Love and CASA choir projects. Northern Dial carries Trishannah as part of its Alberta vocal and independent music catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://ca.linkedin.com/in/trishannahgally"]
+  },
+  "prodgk": {
+    "bio": "prodGK, born Gurminder Kajla, is a Canadian producer and beatmaker based in Toronto. His production blends Punjabi and desi influences with hip-hop and R&B, and he has worked with artists including Sukha, Shubh, Jassa Dhillon and Prem Dhillon. Northern Dial carries prodGK as part of its contemporary Canadian producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.qobuz.com/gb-en/interpreter/prodgk/7504109", "https://www.musicmetricsvault.com/artists/prodgk/2E6ODN4Dna1vkh6s8sxHC0", "https://music.apple.com/us/artist/prodgk/1463705962"]
+  },
+  "vlxl": {
+    "bio": "VLXL is a Toronto hip-hop duo formed by Via Linez and Lyve. Their music draws on classic boom-bap while incorporating contemporary production, and their album Trains, Automobiles and Flights features Canadian collaborators including Tanika Charles, Junia-T and Tona. Northern Dial carries VLXL as part of its Toronto independent hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://urbanvault.co.uk/2015/12/22/vlxl-via-linez-x-lyve-moodswing-music-video/"]
+  },
+  "lazyeye": {
+    "bio": "Lazyeye is a Toronto producer closely associated with Mississauga rapper AR Paisley and Canada's Punjabi hip-hop scene. He produced much of Paisley's debut album Timeless and has continued collaborating on releases including G-Shock, Legends Never Die and Moose World. Northern Dial carries Lazyeye as part of its contemporary Canadian hip-hop producer catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://nowtoronto.com/music/ar-paisley-timeless/", "https://www.socanmagazine.ca/news/photo-gallery-socan-warner-music-canada-co-host-large-scale-song-camp/", "https://www.complex.com/music/a/bianca-thompson/ar-paisley-legends-never-die"]
+  },
+  "mapouginen": {
+    "bio": "Mapouginen is the artistic alias of Montreal multidisciplinary artist and choreographer Cindy Belotte. Her work is rooted in Montreal's Black and diasporic arts communities, and the Mapouginen name also appears among the performers on the large-scale Quebec recording Stand By Me/Lean On Me. Northern Dial carries Mapouginen as part of its Montreal multidisciplinary and vocal arts catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/mapouginen/",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nyata-nyata.org/artisteassociee", "https://musiqc.ca/artistes/annie-blanchard"]
+  }
+}
