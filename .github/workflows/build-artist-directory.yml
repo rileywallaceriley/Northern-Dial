@@ -131,6 +131,39 @@ jobs:
           )
           PY
 
+      - name: Link discovery recommendations to artist profiles
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('discover.html')
+          html = path.read_text(encoding='utf-8')
+
+          normalize_line = '    const normalize=value=>String(value||"").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[’‘]/g,"\'").trim();'
+          slug_line = '    const profileSlug=value=>String(value||"").normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^\\x00-\\x7F]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")||"artist";'
+          if slug_line not in html:
+              html = html.replace(normalize_line, normalize_line + '\n' + slug_line, 1)
+
+          old_parse = 'feature=featureAnchor?.getAttribute("href")||"",signals=[bio,...tracks.slice(0,12).map(track=>track.album)].join(" ");artists.push({name,key,bio,location,tracks,requestHref,feature,genres:classifyGenres(signals),eras:inferEras(signals),image:imageMap.get(key)||""});'
+          new_parse = 'feature=featureAnchor?.getAttribute("href")||"",existingProfile=details.querySelector("summary .artist-page-link")?.getAttribute("href")||"",profileHref=existingProfile||(bio?`./artists/${profileSlug(name)}.html`:""),signals=[bio,...tracks.slice(0,12).map(track=>track.album)].join(" ");artists.push({name,key,bio,location,tracks,requestHref,feature,profileHref,genres:classifyGenres(signals),eras:inferEras(signals),image:imageMap.get(key)||""});'
+          html = html.replace(old_parse, new_parse, 1)
+
+          old_render = 'const requestUrl=artist.requestHref||`./index.html?request=${encodeURIComponent(artist.name)}`,primaryUrl=artist.feature||requestUrl,tags='
+          new_render = 'const requestUrl=artist.requestHref||`./index.html?request=${encodeURIComponent(artist.name)}`,profileUrl=artist.profileHref||"",primaryUrl=profileUrl||artist.feature||requestUrl,tags='
+          html = html.replace(old_render, new_render, 1)
+
+          old_actions = 'feature=artist.feature?`<a class="feature-link" href="${escapeAttr(artist.feature)}">Read Feature</a>`:"",bio=artist.bio||"Explore this Canadian artist in the Northern Dial catalogue.";'
+          new_actions = 'profile=profileUrl?`<a class="feature-link" href="${escapeAttr(profileUrl)}">Artist Profile</a>`:"",feature=artist.feature?`<a class="feature-link" href="${escapeAttr(artist.feature)}">Read Feature</a>`:"",bio=artist.bio||"Explore this Canadian artist in the Northern Dial catalogue.";'
+          html = html.replace(old_actions, new_actions, 1)
+
+          old_buttons = '<div class="card-actions"><a class="request-link" href="${escapeAttr(requestUrl)}">Request ${escapeHtml(artist.name)}</a>${feature}</div>'
+          new_buttons = '<div class="card-actions"><a class="request-link" href="${escapeAttr(requestUrl)}">Request ${escapeHtml(artist.name)}</a>${profile}${feature}</div>'
+          html = html.replace(old_buttons, new_buttons, 1)
+
+          path.write_text(html, encoding='utf-8')
+          print('Discovery recommendations now prefer and expose standalone artist profile links.')
+          PY
+
       - name: Keep enrichment batches as source of truth
         run: git checkout -- artist_enrichment.json artist_publish_manifest.json
 
@@ -138,7 +171,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artists.html artists/ sitemap.xml
+          git add artists.html artists/ sitemap.xml discover.html
           if git diff --cached --quiet; then
             echo 'No artist page changes to commit.'
             exit 0
@@ -158,4 +191,4 @@ jobs:
           echo 'Unable to push generated artist pages after 5 attempts.' >&2
           exit 1
 
-# Scheduled link-batch trigger: 2026-09-08 18:21 ET
+# Scheduled link-batch trigger: 2026-09-09 next batch + discovery profile links
