@@ -1,0 +1,47 @@
+{
+  "OLIVER": {
+    "bio": "OLIVER is the electronic production duo of Vaughn Oliver and Oliver Goldstein. Northern Dial carries the duo's 2017 track 'Go With It' from the album Full Circle. Vaughn Oliver is a Canadian producer originally associated with Vancouver, and the duo's catalogue blends electro, nu-disco and pop production. Northern Dial retains OLIVER in its Canadian catalogue based on Vaughn Oliver's Canadian identity and the exact Full Circle recording credit.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver / Los Angeles",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://www.shazam.com/track/371709404/go-with-it-feat-chromeo", "https://www.laampmusic.com/mentors/vaughn-oliver"]
+  },
+  "Carmen": {
+    "bio": "Carmen is Carmen Thomas, one half of the Canadian twin-sister pop duo Carmen & Camille. Northern Dial carries Carmen through 'Shine 4U' and 'Shine 4U 2.0,' recordings tied directly to Carmen & Camille's Juno-nominated Canadian catalogue. The sisters were raised in White Rock, British Columbia and built their early career in Vancouver before expanding internationally.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://www.hardmusicgroup.com/artists/profile/cat-1-artist/carmen-and-camille", "https://dailyhive.com/vancouver/carmen-camille-pop-opera-november-7th-2009"]
+  },
+  "Camille": {
+    "bio": "Camille is Camille Thomas, one half of the Canadian twin-sister pop duo Carmen & Camille. Northern Dial's Camille entry is tied to 'Shine 4U' and 'Shine 4U 2.0,' recordings credited to the duo and their remix collaborators. Carmen & Camille emerged from Vancouver and their single 'Shine 4U' earned a Juno nomination for Dance Recording of the Year.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://www.hardmusicgroup.com/artists/profile/cat-1-artist/carmen-and-camille", "https://www.beatport.com/track/shine-4u-20-feat-carmen-camille/3375060"]
+  },
+  "Manchi": {
+    "bio": "Manchi is a Toronto hip-hop artist associated with the early-2000s Ghetto Concept orbit. Northern Dial carries Manchi on Ghetto Concept's 2002 single 'Westend Story' alongside J-Wyze, Ray Smoove, Madlocks, DJ G-Starr and Black-I. Contemporary and retrospective Toronto hip-hop references place Manchi within the same local scene around Ghetto Concept and Infinite.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://music.apple.com/us/album/westend-story-feat-j-wyze-manchi-ray-smoove-madlocks/1541849314", "https://www.qobuz.com/no-en/interpreter/ghetto-concept/2764798/page/3"]
+  },
+  "Mic Check": {
+    "bio": "Mic Check is an Ottawa-based French-language rapper who appeared with DL Incognito on 'Savoir Faire' from the 2002 album A Sample and a Drum Machine and later on 'Fall Back.' Northern Dial's Mic Check entry is tied directly to that DL Incognito catalogue, and artist profiles identify Mic Check as representing Ottawa, Canada.",
+    "website": "",
+    "instagram": "",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.northerndial.ca/artists.html", "https://dlincognito.bandcamp.com/track/savoir-faire-feat-mic-check", "https://www.aaemusic.com/artist/dl-incognito/"]
+  }
+}
