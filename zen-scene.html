@@ -18,6 +18,7 @@
   .clock .date{font-size:clamp(10px,1.2vw,14px);font-weight:300;letter-spacing:2.5px;
     text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,0.6)}
 </style>
+  <link rel="stylesheet" href="/nd-shell.css?v=20260907b">
 </head>
 <body>
 <canvas id="scene"></canvas>
@@ -280,5 +281,6 @@ setInterval(uc,1000);uc();
 let fc=0;function anim(t){fc++;if(fc%2===0){drawScene();drawWater(t)}drawParticles(t);requestAnimationFrame(anim)}
 requestAnimationFrame(anim);
 </script>
+  <script src="/nd-shell.js?v=20260907b" defer></script>
 </body>
 </html>
