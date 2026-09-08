@@ -1,0 +1,47 @@
+{
+  "Capital Vision": {
+    "bio": "Capital Vision is a Brampton-rooted Canadian urban music collective and management project founded in 2024. Its releases and artist network connect a group of emerging Peel Region hip-hop acts, including JayTrillz, PHB Hollis, Froboii and Punchinrd. Northern Dial carries Capital Vision as part of its contemporary Brampton and GTA hip-hop catalogue.",
+    "website": "",
+    "instagram": "https://www.instagram.com/capitalvisionmgmt/",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://app.chartmetric.com/artist/14161248", "https://www.instagram.com/capitalvisionmgmt/", "https://open.spotify.com/artist/1WIcjL5lbl5b3yKg2TYDpN"]
+  },
+  "PHB Hollis": {
+    "bio": "PHB Hollis is a Canadian hip-hop artist connected to Brampton-rooted Capital Vision and the wider Toronto-area rap scene. His catalogue includes singles such as 'Switched Up' and 'Same Thing,' along with Capital Vision collaborations including 'Lost Time,' 'Pray For Me,' 'Wild Life' and 'Soul Complete.' Northern Dial carries PHB Hollis as part of its emerging GTA hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://app.chartmetric.com/artist/14161248", "https://music.apple.com/ca/artist/phb-hollis/1580272317", "https://music.apple.com/ca/playlist/the-new-toronto/pl.42f9ff0cd1c648d8a5953d8385df68dd"]
+  },
+  "Punchinrd": {
+    "bio": "Punchinrd is a Canadian hip-hop artist associated with Brampton-rooted Capital Vision and a network of emerging Peel Region rappers. His independent catalogue includes 'Believe In Me,' 'I Am Punchin,' 'Married to the Game' and 'Expensive Dinner,' while Capital Vision has also promoted his releases directly. Northern Dial carries Punchinrd as part of its contemporary Brampton-area rap catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.instagram.com/capitalvisionmgmt/", "https://app.chartmetric.com/artist/11082204", "https://music.apple.com/ca/album/married-to-the-game-single/1817990892"]
+  },
+  "Corey Writez": {
+    "bio": "Corey Writez is a Halifax hip-hop artist active in Nova Scotia's independent rap scene. He appears on Aquakultre and DJ Uncle Fester's Halifax-recorded album Bleeding Gums Murphy on the track 'Autographs' and has been billed as a local Halifax act in live-event promotion. Northern Dial carries Corey Writez as part of its Atlantic Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Halifax, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://exclaim.ca/music/article/aquakultre_and_uncle_fester_announce_new_album_bleeding_gums_murphy", "https://djunclefester.bandcamp.com/album/bleeding-gums-murphy", "https://www.facebook.com/halifaxnoise/posts/from-unionofblackartistssociety-%EF%B8%8Fwant-to-get-25-off-any-ticket-tier-for-the-upco/1049060369917735/"]
+  },
+  "Vandalizm": {
+    "bio": "Vandalizm is a Canadian R&B and hip-hop collaborator active in Toronto's contemporary independent scene. The artist has released music with Toronto R&B singer Sage Harris, including 'Raw,' 'Poseidon' and 'No Falling,' and appears in Canadian and Toronto-focused R&B discovery contexts alongside that work. Northern Dial carries Vandalizm as part of its current Toronto-area R&B and hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://audiomack.com/sageharris/song/100-bpm", "https://music.amazon.ca/albums/B0F6RPWLTG", "https://music.apple.com/us/song/1811248318"]
+  }
+}
