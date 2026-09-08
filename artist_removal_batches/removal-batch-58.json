@@ -1,0 +1,20 @@
+{
+  "Don Sazón": {
+    "reason": "Verified non-Canadian artist. Northern Dial's Don Sazón credit is on D.O.V's 'Fallen Angels'; Don Sazón is a New York City rapper whose artist identity and catalogue are tied to the @donsazonnyc profile.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://music.amazon.in/podcasts/cd053aea-ae2f-4777-83b6-cc3edb483798/episodes/7b44cecd-a08c-4565-8561-b126c0399c89/the-boom-bap-media-show-episode-eight-don-saz%C3%B3n", "https://www.instagram.com/donsazonnyc/"]
+  },
+  "Poizonnn": {
+    "reason": "Verified non-Canadian artist. Northern Dial carries Poizonnn via 'Show You' from The VZN SZN, Vol. 1. The same VisionPlay artist is identified with Charleston and the 843 area and described as rising out of the Carolinas.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://www.instagram.com/p/DND4PRYM9BX/", "https://www.instagram.com/reel/DOeFa0NEa4Z/", "https://www.mnrk.com/press-room/2025/10/visionplay-entertainment-presents-the-vzn-szn-vol-1/"]
+  },
+  "VisionPlay": {
+    "reason": "Verified misclassified non-artist credit. Northern Dial lists VisionPlay on 'Show You' from The VZN SZN, Vol. 1, but VisionPlay Entertainment is a New York-based entertainment/production company and label, not a Canadian performing artist.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://www.visionplayent.com/about", "https://visionplayent.bandcamp.com/", "https://www.mnrk.com/press-room/2025/10/visionplay-entertainment-presents-the-vzn-szn-vol-1/"]
+  }
+}
