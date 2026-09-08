@@ -1,0 +1,47 @@
+{
+  "avenoir": {
+    "bio": "Avenoir is a Canadian R&B singer and songwriter raised in Edmonton, Alberta. Born in South Africa, he built his sound around piano-led, atmospheric progressive R&B and earned a JUNO nomination for his 2023 EP Noire before releasing his debut album Mirage in 2025. Northern Dial carries Avenoir as part of its contemporary Canadian R&B catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Edmonton, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nxne.com/2026-artists/avenoir", "https://en.wikipedia.org/wiki/Avenoir"]
+  },
+  "dozie": {
+    "bio": "Dozie is a Calgary-based hip-hop and afro-pop artist whose music blends rap with melodic and Afrobeats influences. His work has received Canadian playlist and radio support, and he has toured in Canada and Europe while building a growing catalogue of independent releases. Northern Dial carries Dozie as part of its contemporary Western Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.calgarystampede.com/coca-cola-stage/dozie", "https://www.shazam.com/artist/dozie/1412570762", "https://music.apple.com/us/artist/dozie/1412570762"]
+  },
+  "anjxlxe": {
+    "bio": "ANJXLXE is a Montreal singer and songwriter making francophone R&B informed by 1990s and 2000s soul and pop. The Quebec artist released her self-titled debut album in 2025 and earned an ADISQ nomination for R&B/Soul Album of the Year. Northern Dial carries ANJXLXE as part of its contemporary Quebec R&B catalogue.",
+    "website": "https://anjxlxe.com/",
+    "instagram": "",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.tvanouvelles.ca/2025/05/29/la-chanteuse-quebecoise-anjxlxe-lance-un-premier-album-rb-francophone-inspire-par-janet-jackson-et-beyonce", "https://palmaresadisq.ca/en/artist/anjxlxe/"]
+  },
+  "endangered species": {
+    "bio": "Endangered Species is a Canadian old-school hip-hop duo from Calgary, Alberta, made up of Infinite P and Nohow. The group recorded its underground album Intangible in a home studio and saw the project spread from Calgary across Canada and into international underground rap circles. Northern Dial carries Endangered Species as part of its archival Western Canadian hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.nts.live/artists/10176-endangered-species", "https://90stapes.bandcamp.com/album/intangible"]
+  },
+  "dk": {
+    "bio": "DK is producer Darrell Kelloway, a Newfoundland-raised, Nova Scotia-based beatmaker known for sample-rich boom-bap production. Based in the Halifax-Dartmouth area, he has worked closely with Canadian MCs including Ghettosocks and has released projects such as Soul Expressions, Listen to the Masters and Atlantic Rap Vol. 1. Northern Dial carries DK as part of its Canadian hip-hop producer catalogue.",
+    "website": "https://www.dkproducer.com/",
+    "instagram": "",
+    "city": "Dartmouth, Nova Scotia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.dkproducer.com/about", "https://www.thecoast.ca/arts-music/dartmouth-producer-dks-atlantic-rap-vol-1-offers-a-steady-dose-of-boom-bap-31887999"]
+  }
+}
