@@ -1,0 +1,14 @@
+{
+  "Lilo Key": {
+    "reason": "Verified non-Canadian artist. Lilo Key is identified as a United States hip-hop artist; his catalogue includes 'Too Young,' 'Strange Thangs,' 'Local Celebrity' and collaborations with U.S. artists including Michael Wavves.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://www.musicmetricsvault.com/artists/lilo-key/2ZmLTdyp3OYw418egRLHkk", "https://music.apple.com/us/artist/lilo-key/1177830603", "https://en.wikipedia.org/wiki/Michael_Wavves"]
+  },
+  "Lex Aura": {
+    "reason": "Verified non-Canadian artist. Lex Aura is a Sacramento, California hip-hop and R&B artist whose catalogue includes work with Mozzy, YG and G-Eazy; his Bandcamp profile identifies Sacramento, California as his location.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://lexaura.bandcamp.com/track/on-prod-lex-aura", "https://music.apple.com/us/artist/lex-aura/919788833", "https://hypebeast.com/2017/1/mozzy-yg-g-eazy-lex-aura-hold-on-me"]
+  }
+}
