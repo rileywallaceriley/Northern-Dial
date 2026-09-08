@@ -1,0 +1,32 @@
+{
+  "DJ Access": {
+    "reason": "Verified non-Canadian artist. Northern Dial's DJ Access credit is on 'Change' with JD Era and Meeco; the same DJ Access is a Dresden, Germany-based turntablist, NewDEF Records co-founder and longtime German hip-hop DJ.",
+    "country": "Germany",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/ca/song/1657974464", "https://urbanvault.co.uk/2021/07/20/urban-vault-interviews-dj-access/", "https://www.deutschlandfunknova.de/beitrag/green-goes-black-dj-access-mit-skills"]
+  },
+  "JiKay": {
+    "reason": "Verified non-Canadian artist. JiKay is British producer Jim Kirk, also known as Teen Carnage, with Resident Advisor listing his location as the United Kingdom and Spotify describing him as a British music producer.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://ra.co/dj/jikay", "https://open.spotify.com/artist/5ZciodrGuWZAkGIXHzTiQP"]
+  },
+  "olsem": {
+    "reason": "Verified non-Canadian artist. Olsem is a French rapper from Le Havre who later lived in Paris; his artist interview identifies both his origin and Paris residence.",
+    "country": "France",
+    "reviewed": true,
+    "sources": ["https://lh.boulevarddesartistes.com/entretien-avec-olsem/", "https://music.apple.com/us/artist/olsem/1272852972"]
+  },
+  "Shai.I": {
+    "reason": "Verified non-Canadian artist. Shai.I is South African rapper and producer Keitumetse Shai Maponya; his official links use the shaii_za identity and his catalogue is released through the South African Apple Music storefront.",
+    "country": "South Africa",
+    "reviewed": true,
+    "sources": ["https://linktr.ee/shai.i_", "https://music.apple.com/za/album/enter-the-bounce-ep/1766619475", "https://music.apple.com/us/artist/shai-i/1464528963"]
+  },
+  "Kyst Cortez": {
+    "reason": "Verified non-Canadian artist. Kyst Cortez is a London, UK hip-hop artist. His Spotify and Chartmetric profiles identify him as representing London, UK, and his Northern Dial catalogue track 'Trappin in My Genes' matches the release with Stax and K Koke.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://open.spotify.com/artist/2Og3mKiuimFU9oLq0dyyGR", "https://app.chartmetric.com/artist/1460647", "https://www.mixtapemadness.com/blog/news/stax-k-koke-kyst-cortez"]
+  }
+}
