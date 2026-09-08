@@ -1,0 +1,47 @@
+{
+  "TheQ.": {
+    "bio": "TheQ. is a French-language hip-hop artist from Quebec's contemporary rap scene. The artist's catalogue includes singles such as 'PRADA' and 'OTR,' released through Self Liberated Records, and appears alongside Quebec City rappers in rap québécois discovery networks. Northern Dial carries TheQ. as part of its current Quebec hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Quebec, Canada",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.foxsoundi.com/artist/26649574/theq", "https://www.shazam.com/song/1752780404/prada", "https://www.shazam.com/artist/lostboy-carlos/1485818587"]
+  },
+  "Young Smugglaz": {
+    "bio": "Young Smugglaz is a Toronto-area hip-hop artist connected to the Jane and Finch rap scene. The artist appears on the 2024 project 'Jane & Finch Most Wanted, Vol. 1,' including 'Sam Taylor' with Young Don Million and 'RIP JR. D.' Northern Dial carries Young Smugglaz as part of its Jane and Finch and Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/bh/artist/young-smugglaz/1723238283", "https://jane-finch.com/music.htm"]
+  },
+  "Young Don Million": {
+    "bio": "Young Don Million is a Toronto-area hip-hop artist associated with the Jane and Finch scene. The artist appears with Young Smugglaz on 'Sam Taylor' from the 2024 compilation 'Jane & Finch Most Wanted, Vol. 1,' tying the project directly to one of Toronto's longstanding rap communities. Northern Dial carries Young Don Million as part of its Jane and Finch and Toronto hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://music.apple.com/bh/artist/young-smugglaz/1723238283", "https://jane-finch.com/music.htm"]
+  },
+  "EfrainYB": {
+    "bio": "EfrainYB is an Indigenous hip-hop artist active in British Columbia's contemporary rap scene. The artist records frequently with Sekawnee, including 'Nations,' 'Relatives' and 'BOI,' and has appeared with that circle in Vancouver live listings. Northern Dial carries EfrainYB as part of its emerging West Coast Indigenous hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://www.shazam.com/song/1693235950/nations", "https://www.shazam.com/event/1f48ce47-9f53-4469-a412-675ccd2e46be", "https://open.spotify.com/artist/6C5z7TmlN7IcDWWZfw7N9a"]
+  },
+  "Luminous": {
+    "bio": "Luminous is a hip-hop artist connected to Toronto's late-1990s underground scene through work with Canadian rapper and producer Frankenstein. Credits include scratches on Frankenstein's Toronto-recorded 'The Rain Is Gone' EP and the collaboration 'Oxygen.' Northern Dial carries Luminous as part of its classic Toronto underground hip-hop catalogue.",
+    "website": "",
+    "instagram": "",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": ["https://citizenfreak.com/titles/276996-frankenstein-the-rain-is-gone-ep", "https://podjerky.wixsite.com/podjerky/featured-podcast-guests"]
+  }
+}
