@@ -1,0 +1,97 @@
+name: Clean duplicate homepage and songs shells
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cleanup-duplicate-shells.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove legacy duplicate shells and reposition songs search
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          # Homepage: remove the legacy nested logo header and legacy nav.
+          home = Path('index.html')
+          text = home.read_text(encoding='utf-8')
+          text, n1 = re.subn(
+              r'\n<header class="header">\s*<img[^>]+class="logo-image"[^>]*>\s*</header>\s*',
+              '\n', text, count=1, flags=re.S
+          )
+          text, n2 = re.subn(
+              r'\n<nav class="site-nav mobile-menu-nav" aria-label="Main navigation">.*?</nav>\s*',
+              '\n', text, count=1, flags=re.S
+          )
+          if not n1:
+              print('Homepage legacy logo header not found or already removed')
+          if not n2:
+              print('Homepage legacy nav not found or already removed')
+          home.write_text(text, encoding='utf-8')
+
+          # Songs: extract search + count, remove the old header/nav wrapper,
+          # then put search/count at the start of the main content.
+          songs = Path('library.html')
+          text = songs.read_text(encoding='utf-8')
+
+          search_match = re.search(
+              r'<div class="search-container">.*?</div>\s*<div class="catalog-info">.*?</div>\s*</div>',
+              text,
+              flags=re.S,
+          )
+          if not search_match:
+              raise SystemExit('Could not locate Songs search/count block')
+
+          captured = search_match.group(0)
+          # Drop the final header-content closing div from the captured fragment.
+          captured = re.sub(r'\s*</div>\s*$', '', captured, count=1, flags=re.S)
+
+          # Remove entire legacy .header, including logo/back arrow and second nav.
+          text, removed = re.subn(
+              r'\n\s*<div class="header">\s*<div class="header-content">.*?</nav>\s*</div>\s*',
+              '\n',
+              text,
+              count=1,
+              flags=re.S,
+          )
+          if not removed:
+              raise SystemExit('Could not remove legacy Songs header/nav')
+
+          search_top = '''\n    <section class="songs-search-top" aria-label="Search Northern Dial songs">\n        <div class="search-container">\n            <input type="text"\n                   class="search-input"\n                   id="searchInput"\n                   placeholder="Search catalog..."\n                   autocomplete="off">\n        </div>\n        <div class="catalog-info">\n            <div id="catalogCount">Loading...</div>\n        </div>\n    </section>\n'''
+
+          marker = '<div class="container">'
+          if marker not in text:
+              raise SystemExit('Could not locate Songs main container')
+          text = text.replace(marker, marker + search_top, 1)
+
+          # Add compact spacing/alignment for the relocated search block.
+          css = '''\n    .songs-search-top {\n        margin: 0 auto 28px;\n        max-width: 760px;\n        text-align: center;\n    }\n    .songs-search-top .search-container {\n        max-width: none;\n        width: 100%;\n    }\n    .songs-search-top .catalog-info {\n        margin-top: 12px;\n        text-align: center;\n    }\n'''
+          if '.songs-search-top {' not in text:
+              text = text.replace('</style>', css + '\n</style>', 1)
+
+          songs.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html library.html
+          if git diff --cached --quiet; then
+            echo 'No duplicate-shell cleanup changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Remove duplicate headers and clean Songs search layout'
+          git push origin HEAD:main
