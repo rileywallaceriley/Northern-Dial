@@ -157,3 +157,5 @@ jobs:
 
           echo 'Unable to push generated artist pages after 5 attempts.' >&2
           exit 1
+
+# Scheduled link-batch trigger: 2026-09-08 18:21 ET
