@@ -59,7 +59,7 @@ jobs:
       - name: Build standalone artist SEO pages
         run: python3 build_artist_pages.py
 
-      - name: Link existing directory to standalone artist pages
+      - name: Link next 200 researched artists to standalone pages
         run: |
           python3 - <<'PY'
           from html import unescape
@@ -67,6 +67,7 @@ jobs:
           import re
           from build_artist_pages import load_profiles, load_enrichments, slugify
 
+          BATCH_SIZE = 200
           directory_path = Path('artists.html')
           html = directory_path.read_text(encoding='utf-8')
           profiles = load_profiles()
@@ -86,11 +87,9 @@ jobs:
               re.IGNORECASE | re.DOTALL,
           )
           tag_pattern = re.compile(r'<[^>]+>')
-          linked = 0
-          matched = 0
+          stats = {'added': 0, 'existing': 0, 'matched': 0}
 
           def replace_summary(match):
-              nonlocal linked, matched
               label_html = match.group('label').strip()
               display_text = unescape(tag_pattern.sub('', label_html)).strip()
               key = display_text.casefold()
@@ -98,12 +97,22 @@ jobs:
               if not slug:
                   return match.group(0)
 
-              matched += 1
-              linked += 1
+              stats['matched'] += 1
+
+              # Preserve links already added by earlier batches.
+              if 'artist-page-link' in label_html:
+                  stats['existing'] += 1
+                  return match.group(0)
+
+              # Add no more than 200 new links in this run.
+              if stats['added'] >= BATCH_SIZE:
+                  return match.group(0)
+
+              stats['added'] += 1
               return (
-                  f'<summary><a class="artist-page-link" href="./artists/{slug}.html">'
-                  f'{label_html if "artist-page-link" not in label_html else display_text}'
-                  f'</a> <span class="artist-meta">'
+                  f'<summary><a class="artist-page-link" href="./artists/{slug}.html" '
+                  f'onclick="event.stopPropagation()">{label_html}</a> '
+                  f'<span class="artist-meta">'
               )
 
           html = summary_pattern.sub(replace_summary, html)
@@ -113,7 +122,13 @@ jobs:
               html = html.replace('</style>', style + '</style>', 1)
 
           directory_path.write_text(html, encoding='utf-8')
-          print(f'Linked {linked} researched artists in artists.html from {len(researched)} researched profiles ({matched} matched directory names)')
+          remaining = max(0, stats['matched'] - stats['existing'] - stats['added'])
+          print(
+              f"Added {stats['added']} new artist links; "
+              f"preserved {stats['existing']} existing links; "
+              f"matched {stats['matched']} researched directory artists; "
+              f"approximately {remaining} matched artists remain unlinked."
+          )
           PY
 
       - name: Keep enrichment batches as source of truth
