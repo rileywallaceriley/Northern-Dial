@@ -1,0 +1,26 @@
+{
+  "Des3Ett": {
+    "reason": "Verified non-Canadian artist. DES3ETT is the project of Italian DJ and producer Cristian Verdes from Trento, Italy.",
+    "country": "Italy",
+    "reviewed": true,
+    "sources": ["https://www.armadamusic.com/news/italian-artist-des3ett-builds-on-two-contest-winning-remixes-with-first-single-release-on-armada-music-fill-me-in", "https://www.amsterdam-dance-event.nl/en/artists-speakers/des3ett/1921601/"]
+  },
+  "Matty Beats": {
+    "reason": "Verified non-Canadian producer. Matty Beats is identified as an LA-based producer from Los Angeles, California, United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://earmilk.com/2022/12/12/matty-beats-stands-up-for-his-style-on-enemigos/", "https://www.beatstars.world/dual-form/level-up"]
+  },
+  "Mirror Gazer": {
+    "reason": "Verified non-Canadian artist. Mirror Gazer is the project of Dorian Duvall, an artist identified as originating from Portland, Oregon, United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://sorstu.ca/critique-album-onuinu-mirror-gazer/", "https://soundcloud.com/freshselects/mirror-gazer-loaded-desire-david-marston-dan-izco-fffacts-remix"]
+  },
+  "Sheltoh": {
+    "reason": "Verified non-Canadian artist. Sheltoh is identified as being from the City of London, London, England.",
+    "country": "United Kingdom",
+    "reviewed": true,
+    "sources": ["https://www.shazam.com/song/1788739602/run/music-video", "https://www.qobuz.com/ie-en/album/run-sheltoh/ebjflifesc6mb"]
+  }
+}
