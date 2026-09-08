@@ -1,0 +1,199 @@
+/* Northern Dial shared site shell */
+.nd-site-header {
+  background: #fff !important;
+  border-bottom: 3px solid #CC3333 !important;
+  padding: 24px 24px 20px !important;
+  text-align: center !important;
+}
+.nd-site-logo {
+  display: inline-block !important;
+  line-height: 0 !important;
+}
+.nd-site-logo img {
+  display: block !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  max-width: 240px !important;
+  width: min(65vw, 240px) !important;
+}
+.nd-site-nav {
+  background: #1a1a1a !important;
+  border-bottom: 2px solid #CC3333 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10000 !important;
+}
+.nd-nav-inner {
+  align-items: stretch !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  min-height: 54px !important;
+}
+.nd-nav-link,
+.nd-more-button {
+  align-items: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  justify-content: center !important;
+  letter-spacing: .12em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  min-height: 54px !important;
+  padding: 14px 25px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+.nd-nav-link:hover,
+.nd-nav-link:focus,
+.nd-more-button:hover,
+.nd-more-button:focus,
+.nd-nav-link.active {
+  background: #262626 !important;
+  color: #CC3333 !important;
+}
+.nd-nav-link.active {
+  box-shadow: inset 0 -3px 0 #CC3333 !important;
+}
+.nd-more {
+  display: flex !important;
+  position: relative !important;
+}
+.nd-more-button::after {
+  content: '▾';
+  font-family: Arial, sans-serif !important;
+  font-size: .72em !important;
+  margin-left: 8px !important;
+}
+.nd-more-menu {
+  background: #1a1a1a !important;
+  border: 1px solid #343434 !important;
+  border-top: 2px solid #CC3333 !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25) !important;
+  display: none !important;
+  min-width: 190px !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 100% !important;
+  z-index: 10001 !important;
+}
+.nd-more.open .nd-more-menu,
+.nd-more:focus-within .nd-more-menu {
+  display: block !important;
+}
+.nd-more-menu .nd-nav-link {
+  justify-content: flex-start !important;
+  min-height: 46px !important;
+  padding: 13px 18px !important;
+  width: 100% !important;
+}
+.nd-more-menu .nd-submit-link {
+  background: #CC3333 !important;
+  color: #fff !important;
+}
+.nd-more-menu .nd-submit-link:hover,
+.nd-more-menu .nd-submit-link:focus {
+  background: #8B2323 !important;
+  color: #fff !important;
+}
+.nd-mobile-toggle {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  .nd-nav-link,
+  .nd-more-button {
+    font-size: .88rem !important;
+    letter-spacing: .09em !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nd-site-header {
+    padding: 18px 18px 16px !important;
+  }
+  .nd-site-logo img {
+    max-width: 190px !important;
+    width: min(58vw, 190px) !important;
+  }
+  .nd-nav-inner {
+    display: block !important;
+    min-height: 48px !important;
+  }
+  .nd-mobile-toggle {
+    align-items: center !important;
+    background: #1a1a1a !important;
+    border: 0 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: flex !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: .88rem !important;
+    font-weight: 700 !important;
+    justify-content: space-between !important;
+    letter-spacing: .14em !important;
+    min-height: 48px !important;
+    padding: 13px 18px !important;
+    text-transform: uppercase !important;
+    width: 100% !important;
+  }
+  .nd-mobile-toggle .nd-menu-icon {
+    color: #CC3333 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 1.35rem !important;
+  }
+  .nd-primary-links {
+    background: #1a1a1a !important;
+    display: none !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .nd-site-nav.open .nd-primary-links {
+    display: flex !important;
+  }
+  .nd-primary-links > .nd-nav-link,
+  .nd-more,
+  .nd-more-button {
+    width: 100% !important;
+  }
+  .nd-primary-links > .nd-nav-link,
+  .nd-more-button {
+    border-bottom: 1px solid #343434 !important;
+    justify-content: flex-start !important;
+    min-height: 46px !important;
+    padding: 14px 18px !important;
+  }
+  .nd-nav-link.active {
+    box-shadow: inset 4px 0 0 #CC3333 !important;
+  }
+  .nd-more {
+    display: block !important;
+  }
+  .nd-more-button {
+    display: none !important;
+  }
+  .nd-more-menu {
+    border: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    min-width: 0 !important;
+    position: static !important;
+    width: 100% !important;
+  }
+  .nd-more-menu .nd-nav-link {
+    border-bottom: 1px solid #343434 !important;
+    min-height: 46px !important;
+    padding: 14px 18px !important;
+  }
+}
