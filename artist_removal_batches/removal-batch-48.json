@@ -1,0 +1,20 @@
+{
+  "ryan witherspoon": {
+    "reason": "Verified non-Canadian artist. Ryan Witherspoon is documented as an East New York artist and Brooklyn native whose career is rooted in New York rather than Canada.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://rollinghype.com/ryan-witherspoon-releases-debut-ep-in-the-city/"]
+  },
+  "brit lauren": {
+    "reason": "Verified non-Canadian artist. Brit Lauren, who later recorded as Brit Manor, is documented as a homegrown Los Angeles soul singer.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://bastardjazz.com/single-brit-manor-diamond-rough-video-premiere/", "https://britmanor.bandcamp.com/album/diamond-in-the-rough"]
+  },
+  "frank delour": {
+    "reason": "Verified non-Canadian artist. Frank Delour is documented as a New York-born DJ and producer, with later work based in the United States.",
+    "country": "United States",
+    "reviewed": true,
+    "sources": ["https://hoodcriticmagazine.com/2026/02/02/frank-delour-releases-aya-a-slow-burning-afro-house-single-rooted-in-patience-place-and-purpose/", "https://jamsphere.com/news/afrotech-muzik-announces-a-new-single-release-bailar-from-frank-delour"]
+  }
+}
