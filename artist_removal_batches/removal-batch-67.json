@@ -1,0 +1,26 @@
+{
+  "Brit Lauren": {
+    "reason": "Verified non-Canadian artist. Brit Laurén is the former recording name of Los Angeles soul singer Brit Manor; her Bandcamp bio describes her as a homegrown Los Angeles artist and ties the alias directly to her Captain Planet collaborations.",
+    "country": "United States",
+    "sources": [
+      "https://britmanor.bandcamp.com/album/diamond-in-the-rough",
+      "https://www.okayafrica.com/captain-planet-in-the-gray/"
+    ]
+  },
+  "Mirror Gazer": {
+    "reason": "Verified non-Canadian artist. Mirror Gazer is Dorian Duvall, a Portland-raised U.S. producer who adopted the Mirror Gazer name while living in Brooklyn; Fresh Selects identifies him as Brooklyn-based and tags the project United States, while Resident Advisor documents his later move to Mexico.",
+    "country": "United States",
+    "sources": [
+      "https://freshselects.bandcamp.com/album/ordeal-erasure",
+      "https://freshselects.bandcamp.com/album/on-my-way-figgy-remix",
+      "https://ra.co/dj/8itr/biography"
+    ]
+  },
+  "prince ali pa": {
+    "reason": "Verified non-Canadian artist. The exact prince ali pa artist profile and I Miss 1994 release identify the artist as based in London, UK.",
+    "country": "United Kingdom",
+    "sources": [
+      "https://princealipa.bandcamp.com/album/i-miss-1994"
+    ]
+  }
+}
