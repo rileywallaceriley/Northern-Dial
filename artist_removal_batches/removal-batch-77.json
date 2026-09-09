@@ -1,0 +1,10 @@
+{
+  "ScrewfaceCapital": {
+    "reason": "Verified non-artist metadata artifact. Northern Dial's unresolved ScrewfaceCapital credit is attached to '90s Hip-Hop Gems: Beat Factory Rap Essentials Vol. 1' as both the track and album title. The exact matching YouTube upload is posted by the channel ScrewfaceCapital, and its description identifies the actual performers on the Beat Factory compilation track by track, including Concrete Mob, Down To Erf, Kardinal Offishall, Black-I, Wio-K, Redlife, Dan-E-O, Scales Empire, Choclair, Citizen Kane and Ghetto Concept. ScrewfaceCapital is the uploader/channel name, not a recording artist on the compilation, so this library credit is a source-metadata ingestion artifact and should be removed rather than enriched.",
+    "country": "Non-artist metadata artifact",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://www.youtube.com/watch?v=943XIzn3V7A"
+    ]
+  }
+}
