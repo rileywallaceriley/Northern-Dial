@@ -8,6 +8,8 @@ on:
       - 'artist_removals.txt'
       - 'build_artists.py'
       - 'build_artist_pages.py'
+      - 'build_listening_paths.py'
+      - 'listening_paths.json'
       - 'patch_directory_enrichment.py'
       - '.github/workflows/build-artist-directory.yml'
   workflow_dispatch:
@@ -89,6 +91,9 @@ jobs:
       - name: Build standalone artist SEO pages
         run: python3 build_artist_pages.py
 
+      - name: Build Listening Paths and connect artist profiles
+        run: python3 build_listening_paths.py
+
       - name: Link next 200 researched artists to standalone pages
         run: |
           python3 - <<'PY'
@@ -164,12 +169,12 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artists.html artists/ sitemap.xml
+          git add artists.html artists/ listening-paths.html listening-paths/ sitemap.xml
           if git diff --cached --quiet; then
-            echo 'No artist page changes to commit.'
+            echo 'No artist page or Listening Path changes to commit.'
             exit 0
           fi
-          git commit -m 'Rebuild artist directory and SEO pages'
+          git commit -m 'Rebuild artist directory, SEO pages and Listening Paths'
 
           for attempt in 1 2 3 4 5; do
             echo "Push attempt ${attempt}..."
