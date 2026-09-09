@@ -38,16 +38,21 @@
     h3 { font-size:1.8rem; line-height:1; margin-bottom:8px; }
     .dek { font-size:clamp(1.08rem,2vw,1.25rem); max-width:760px; }
     .intro { font-size:1.08rem; margin-top:18px; max-width:780px; }
-    .path-list,.steps { display:grid; gap:18px; margin-top:28px; }
+    .path-list { display:grid; gap:18px; margin-top:28px; }
+    .steps { display:grid; gap:0; margin-top:28px; }
     .card { background:#f7f7f7; border:1px solid #ddd; border-radius:10px; padding:26px 28px; }
     .step-number { color:#c33; font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; }
-    .artist-link { font-family:'Oswald',sans-serif; font-weight:700; text-decoration:none; }
+    .artist-link { display:inline-block; font-family:'Oswald',sans-serif; font-weight:700; margin-top:10px; text-decoration:none; }
     .transition { border-left:3px solid #c33; color:#555; margin-top:16px; padding-left:16px; }
+    .path-connector { border-left:3px solid #c33; color:#555; margin:8px 0 8px 32px; padding:18px 0 18px 20px; }
+    .path-connector-title { color:#333; font-family:'Oswald',sans-serif; font-size:1rem; font-weight:700; margin-bottom:4px; }
+    .path-connector-arrow { color:#c33; display:inline-block; margin-right:7px; }
+    .path-connector p:last-child { max-width:720px; }
     .cta { background:#c33; border-radius:7px; color:#fff; display:inline-block; font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:700; letter-spacing:.09em; margin-top:16px; padding:10px 16px; text-decoration:none; text-transform:uppercase; }
     .source-note { color:#666; font-size:.9rem; margin-top:28px; }
     .site-footer { background:#1a1a1a; border-top:3px solid #c33; color:#aaa; padding:24px 20px; text-align:center; }
     .site-footer a { color:#fff; text-decoration:none; }
-    @media (max-width:620px) { .site-nav a { flex:1 1 auto; padding:12px 10px; text-align:center; } .page { padding-top:24px; } .hero { border-width:3px; padding:28px 22px; } .card { padding:22px; } }
+    @media (max-width:620px) { .site-nav a { flex:1 1 auto; padding:12px 10px; text-align:center; } .page { padding-top:24px; } .hero { border-width:3px; padding:28px 22px; } .card { padding:22px; } .path-connector { margin-left:18px; padding:16px 0 16px 16px; } }
   </style>
 </head>
 <body>
@@ -58,7 +63,7 @@
   <main class="page">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./index.html">Home</a> / Listening Paths</nav>
     <section class="hero"><p class="eyebrow">Northern Dial Listening Paths</p><h1>Find Your Way Through Canadian Music</h1><p class="dek">Curated journeys connecting artists through scenes, eras, influence and cultural history. Each path explains why one stop leads naturally to the next.</p></section>
-    <section class="path-list" aria-label="Available Listening Paths"><article class="card"><p class="eyebrow">7 artists · Guided discovery</p><h2>How Canadian Hip-Hop Kept Expanding</h2><p>A guided path from the first national rap breakthrough to artists who widened what Canadian hip-hop could sound like, say and represent.</p><p class="transition">Maestro Fresh Wes → Saukrates → Choclair → k-os → Shad → Haviah Mighty → Snotty Nose Rez Kids</p><a class="cta" href="./listening-paths/canadian-hip-hop-kept-expanding.html">Start this path</a></article><article class="card"><p class="eyebrow">6 artists · Guided discovery</p><h2>Canadian Women Who Broke Global Pop Open</h2><p>Six artists, six different routes from Canada to the world, from powerhouse balladry and country crossover to alternative confession, pop-punk and genre-fluid reinvention.</p><p class="transition">Céline Dion → Shania Twain → Sarah McLachlan → Alanis Morissette → Avril Lavigne → Nelly Furtado</p><a class="cta" href="./listening-paths/canadian-women-global-pop.html">Start this path</a></article></section>
+    <section class="path-list" aria-label="Available Listening Paths"><article class="card"><p class="eyebrow">7 artists · Guided discovery</p><h2>How Canadian Hip-Hop Kept Expanding</h2><p>A guided path from the first national rap breakthrough to artists who widened what Canadian hip-hop could sound like, say and represent.</p><p class="transition">Maestro Fresh Wes → Saukrates → Choclair → k-os → Shad → Haviah Mighty → Snotty Nose Rez Kids</p><a class="cta" href="./listening-paths/canadian-hip-hop-kept-expanding.html">Start this path</a></article><article class="card"><p class="eyebrow">6 artists · Guided discovery</p><h2>Canadian Women Who Broke Global Pop Open</h2><p>Six artists, six different routes from Canada to the world, from powerhouse balladry and country crossover to alternative confession, pop-punk and genre-fluid reinvention.</p><p class="transition">Céline Dion → Shania Twain → Sarah McLachlan → Alanis Morissette → Avril Lavigne → Nelly Furtado</p><a class="cta" href="./listening-paths/canadian-women-global-pop.html">Start this path</a></article><article class="card"><p class="eyebrow">6 artists · Guided discovery</p><h2>From Alternative Radio to Pop-Punk: Canadian Rock Turns a Corner</h2><p>Six Ontario and Québec bands trace how Canadian rock moved from the ambitious alternative boom of the 1990s into the faster, sharper and increasingly international sound of the 2000s.</p><p class="transition">The Tea Party → Our Lady Peace → Finger Eleven → Sum 41 → Billy Talent → Simple Plan</p><a class="cta" href="./listening-paths/canadian-rock-radio-to-pop-punk.html">Start this path</a></article></section>
   </main>
   <footer class="site-footer">Independent Canadian music discovery · <a href="/index.html">Northern Dial</a></footer>
 </body>
