@@ -134,7 +134,8 @@ def render_page(name, profile, enrichment):
         source_html = f'<section class="sources card"><p class="eyebrow">Verified profile</p><h2>Sources</h2><ul>{source_items}</ul></section>'
 
     link_html = f'<div class="official-links">{"".join(links)}</div>' if links else ""
-    bio_html = f'<p class="bio">{escape(bio)}</p>' if bio else ""
+    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
+    bio_html = "".join(f'<p class="bio">{escape(part)}</p>' for part in paragraphs)
     location_html = f'<p class="location">{escape(location)}</p>' if location else ""
     title = f"{name} | Canadian Artist | Northern Dial"
 
@@ -183,6 +184,7 @@ def render_page(name, profile, enrichment):
     h2 {{ font-size:2.25rem; line-height:1; margin-bottom:14px; }}
     .location {{ color:#d4d4d4; font-family:'Oswald',sans-serif; font-size:.95rem; letter-spacing:.08em; margin-bottom:24px; text-transform:uppercase; }}
     .bio {{ font-size:clamp(1.05rem,2vw,1.22rem); line-height:1.7; max-width:760px; }}
+    .bio + .bio {{ margin-top:16px; }}
     .official-links {{ display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }}
     .link-chip {{ border:1px solid #666; border-radius:6px; color:#fff; font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.08em; padding:9px 13px; text-decoration:none; text-transform:uppercase; }}
     .link-chip:hover,.link-chip:focus {{ border-color:#c33; color:#c33; }}
