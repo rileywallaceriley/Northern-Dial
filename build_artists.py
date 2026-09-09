@@ -181,7 +181,7 @@ def render_profile(profile, enrichment=None):
     enrichment = enrichment or {}
     if not profile and not enrichment.get("reviewed"):
         return ""
-    bio = profile.get("bio") or enrichment.get("bio", "")
+    bio = enrichment.get("directory_summary") or profile.get("bio") or enrichment.get("bio", "")
     links = []
     website = profile.get("website") or enrichment.get("website")
     instagram = profile.get("instagram") or enrichment.get("instagram")
