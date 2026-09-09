@@ -2,10 +2,11 @@
   "canadian-hip-hop-kept-expanding": {
     "title": "How Canadian Hip-Hop Kept Expanding",
     "dek": "A guided path from the first national rap breakthrough to artists who widened what Canadian hip-hop could sound like, say and represent.",
-    "intro": "Canadian hip-hop did not arrive as one unified scene or sound. This path follows seven artists whose careers mark meaningful expansions in the space available to Canadian rap: commercial breakthroughs, Toronto's 1990s infrastructure, genre-crossing experimentation, independent authorship and new Black and Indigenous perspectives. The links are historical and cultural rather than a claim that every artist directly influenced the next.",
+    "intro": "Canadian hip-hop did not arrive as one unified scene or sound. This path follows eight artists whose careers mark meaningful expansions in the space available to Canadian rap: commercial breakthroughs, Toronto's 1990s infrastructure, West Coast growth, genre-crossing experimentation, independent authorship and new Black and Indigenous perspectives. The links are historical and cultural rather than a claim that every artist directly influenced the next.",
     "sources": [
       "https://canadianmusichalloffame.ca/inductee/maestro-fresh-wes/",
       "https://junoawards.ca/blog/canadas-hip-hop-legacy/",
+      "https://junoawards.ca/blog/raps-rocky-road/",
       "https://www.socanmagazine.ca/news/haviah-mighty-wins-2019-edition-of-50000-polaris-prize/",
       "https://polarismusicprize.ca/album/trapline/",
       "https://junoawards.ca/winners-announced-for-the-2025-juno-awards-gala-presented-by-music-canada-and-54th-annual-juno-awards-live-on-cbc/"
@@ -27,7 +28,13 @@
         "name": "Choclair",
         "slug": "choclair",
         "why_here": "Choclair links the independent Toronto build to a visible national breakthrough. His early releases won JUNO recognition, his appearance on the landmark \"Northern Touch\" placed him inside a coast-to-coast statement of Canadian rap identity and Ice Cold turned that momentum into a gold-selling solo album.",
-        "leads_to_next": "With a commercial lane established, k-os showed that Canadian rap could stretch across soul, rock, reggae and pop without losing its hip-hop centre."
+        "leads_to_next": "Swollen Members move the map west. Their early-2000s breakthrough showed that nationally visible Canadian rap could grow from Vancouver as well as Toronto."
+      },
+      {
+        "name": "Swollen Members",
+        "slug": "swollen-members",
+        "why_here": "Swollen Members made Vancouver impossible to treat as a footnote in the national rap story. Balance, Bad Dreams and Monsters in the Closet turned a West Coast underground group into a major Canadian act, while four JUNO rap wins between 2001 and 2007 gave the region sustained institutional visibility.",
+        "leads_to_next": "After the geography widened, k-os widened the sound itself by moving freely across soul, rock, reggae and pop without abandoning hip-hop."
       },
       {
         "name": "k-os",
