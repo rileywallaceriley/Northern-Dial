@@ -14,19 +14,15 @@ import json
 import re
 import unicodedata
 
-
 API = "https://a10.asurahosting.com/api/station/northern_dial/requests"
 PAGE_SIZE = 25
 TEMPLATE = "artists.html"
 PROFILE_FILE = "artist_profiles.json"
 ENRICHMENT_FILE = "artist_enrichment.json"
-PUBLISH_MANIFEST_FILE = "artist_publish_manifest.json"
 CATALOGUE_START = "      <!-- STATIC_ARTIST_CATALOGUE_START -->"
 CATALOGUE_END = "      <!-- STATIC_ARTIST_CATALOGUE_END -->"
 NAV_START = "    <!-- STATIC_ARTIST_LETTER_NAV_START -->"
 NAV_END = "    <!-- STATIC_ARTIST_LETTER_NAV_END -->"
-# Verified U.S. artists whose standalone sections should be hidden. Their songs
-# remain available under any retained principal artist(s) on the same credit.
 REMOVAL_FILE = "artist_removals.txt"
 REMOVAL_BATCH_DIR = "artist_removal_batches"
 ENRICHMENT_BATCH_DIR = "artist_enrichment_batches"
@@ -49,7 +45,6 @@ def clean_artist(value):
 
 
 def slugify(value):
-    """Match the standalone artist-page slug format."""
     normalized = unicodedata.normalize("NFKD", value)
     ascii_value = normalized.encode("ascii", "ignore").decode("ascii")
     slug = re.sub(r"[^a-z0-9]+", "-", ascii_value.casefold()).strip("-")
@@ -57,7 +52,6 @@ def slugify(value):
 
 
 def hidden_artists():
-    """Load the editorial removal list without altering the source catalogue."""
     names = set()
     paths = [Path(REMOVAL_FILE)]
     paths.extend(sorted(Path(REMOVAL_BATCH_DIR).glob("*.txt")))
@@ -73,7 +67,7 @@ def hidden_artists():
 
 
 def load_enrichments():
-    """Merge the committed enrichment store and reviewed batches chronologically."""
+    """Merge enrichment records field-by-field so later editorial layers can be small."""
     merged = {}
     paths = [Path(ENRICHMENT_FILE)]
     paths.extend(sorted(Path(ENRICHMENT_BATCH_DIR).glob("*.json")))
@@ -81,13 +75,35 @@ def load_enrichments():
         if not path.exists():
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, dict):
-            merged.update({str(key).casefold(): value for key, value in data.items()})
+        if not isinstance(data, dict):
+            continue
+        for key, value in data.items():
+            normalized = str(key).casefold()
+            if isinstance(value, dict):
+                merged.setdefault(normalized, {}).update(value)
+            else:
+                merged[normalized] = value
     return merged
 
 
+def render_editorial_text(value, album_titles=()):
+    """Escape editorial copy while allowing only verified album-title emphasis."""
+    text = str(value or "")
+    titles = sorted({str(title) for title in album_titles if title}, key=len, reverse=True)
+    if not titles:
+        return escape(text)
+    pattern = re.compile("|".join(re.escape(title) for title in titles))
+    output = []
+    position = 0
+    for match in pattern.finditer(text):
+        output.append(escape(text[position:match.start()]))
+        output.append(f"<em>{escape(match.group(0))}</em>")
+        position = match.end()
+    output.append(escape(text[position:]))
+    return "".join(output)
+
+
 def split_artists(value):
-    """Return individual artist credits from a collaboration string."""
     credit = clean_artist(value)
     parts = [clean_artist(part) for part in CREDIT_SEPARATOR.split(credit)]
     return list(dict.fromkeys(part for part in parts if part))
@@ -116,12 +132,46 @@ def build_groups(rows, hidden):
                 "album": song.get("album") or song.get("genre") or "Northern Dial library",
             })
     return sorted(
-        (
-            group for key, group in groups.items()
-            if key not in hidden
-        ),
+        (group for key, group in groups.items() if key not in hidden),
         key=lambda group: group["name"].casefold(),
     )
+
+
+def render_profile(profile, enrichment=None):
+    enrichment = enrichment or {}
+    if not profile and not enrichment.get("reviewed"):
+        return ""
+    bio = enrichment.get("directory_summary") or profile.get("bio") or enrichment.get("bio", "")
+    album_titles = enrichment.get("album_titles", [])
+    links = []
+    website = profile.get("website") or enrichment.get("website")
+    instagram = profile.get("instagram") or enrichment.get("instagram")
+    if website:
+        links.append(f'<a href="{escape(website, quote=True)}" target="_blank" rel="noopener">Official site</a>')
+    if instagram:
+        links.append(f'<a href="{escape(instagram, quote=True)}" target="_blank" rel="noopener">Instagram</a>')
+    if profile.get("feature"):
+        links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
+    if enrichment.get("musicbrainz_artist_id"):
+        mbid = escape(enrichment["musicbrainz_artist_id"], quote=True)
+        links.append(f'<a href="https://musicbrainz.org/artist/{mbid}" target="_blank" rel="noopener">MusicBrainz</a>')
+    sources = [url for url in enrichment.get("sources", []) if url]
+    source_html = ""
+    if sources:
+        source_links = " · ".join(
+            f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener">Source {index}</a>'
+            for index, url in enumerate(sources, 1)
+        )
+        source_html = f'<div class="profile-sources"><span>Sources:</span> {source_links}</div>'
+    location = enrichment.get("city") or enrichment.get("country")
+    location_html = f'<p class="profile-location">{escape(location)}</p>' if location else ""
+    link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
+    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
+    bio_html = "".join(
+        f'<p class="profile-bio">{render_editorial_text(part, album_titles)}</p>'
+        for part in paragraphs
+    )
+    return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
 
 
 def render_groups(groups, profiles, enrichments):
@@ -159,8 +209,7 @@ def render_groups(groups, profiles, enrichments):
                 f'onclick="event.stopPropagation()">{escape(name)}</a>'
             )
             profile_action_html = (
-                f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
-                f'View Full Profile</a></div>'
+                f'<div class="profile-actions"><a class="request-link" href="{profile_url}">View Full Profile</a></div>'
             )
         else:
             artist_name_html = escape(name)
@@ -169,45 +218,9 @@ def render_groups(groups, profiles, enrichments):
             anchor + f'      <details data-search="{search}">'
             f'<summary>{artist_name_html} <span class="artist-meta">'
             f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
-            + profile_html + "\n"
-            + profile_action_html + "\n"
-            + "\n".join(tracks)
-            + "</details>"
+            + profile_html + "\n" + profile_action_html + "\n" + "\n".join(tracks) + "</details>"
         )
     return "\n".join(rendered)
-
-
-def render_profile(profile, enrichment=None):
-    enrichment = enrichment or {}
-    if not profile and not enrichment.get("reviewed"):
-        return ""
-    bio = enrichment.get("directory_summary") or profile.get("bio") or enrichment.get("bio", "")
-    links = []
-    website = profile.get("website") or enrichment.get("website")
-    instagram = profile.get("instagram") or enrichment.get("instagram")
-    if website:
-        links.append(f'<a href="{escape(website, quote=True)}" target="_blank" rel="noopener">Official site</a>')
-    if instagram:
-        links.append(f'<a href="{escape(instagram, quote=True)}" target="_blank" rel="noopener">Instagram</a>')
-    if profile.get("feature"):
-        links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
-    if enrichment.get("musicbrainz_artist_id"):
-        mbid = escape(enrichment["musicbrainz_artist_id"], quote=True)
-        links.append(f'<a href="https://musicbrainz.org/artist/{mbid}" target="_blank" rel="noopener">MusicBrainz</a>')
-    sources = [url for url in enrichment.get("sources", []) if url]
-    source_html = ""
-    if sources:
-        source_links = " · ".join(
-            f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener">Source {index}</a>'
-            for index, url in enumerate(sources, 1)
-        )
-        source_html = f'<div class="profile-sources"><span>Sources:</span> {source_links}</div>'
-    location = enrichment.get("city") or enrichment.get("country")
-    location_html = f'<p class="profile-location">{escape(location)}</p>' if location else ""
-    link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
-    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
-    bio_html = "".join(f'<p class="profile-bio">{escape(part)}</p>' for part in paragraphs)
-    return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
 
 
 def render_letter_nav(groups):
@@ -218,11 +231,12 @@ def render_letter_nav(groups):
             letters.append(letter)
     options = ['<option value="">Jump to a letter…</option>', '<option value="artistList">All artists</option>']
     options.extend(f'<option value="letter-{letter}">{"#" if letter == "0" else letter.upper()}</option>' for letter in letters)
-    return ('    <nav class="letter-nav" aria-label="Catalogue navigation">'
-            '<label for="letterJump">Jump to:</label>'
-            '<select id="letterJump"><optgroup label="Artist sections">'
-            + "".join(options) + '</optgroup></select>'
-            '<a class="top-link" href="#top">Back to top ↑</a></nav>')
+    return (
+        '    <nav class="letter-nav" aria-label="Catalogue navigation">'
+        '<label for="letterJump">Jump to:</label><select id="letterJump">'
+        '<optgroup label="Artist sections">' + "".join(options) + '</optgroup></select>'
+        '<a class="top-link" href="#top">Back to top ↑</a></nav>'
+    )
 
 
 def replace_block(template, start_marker, end_marker, content):
