@@ -89,8 +89,19 @@ def patch_block(name, block, enrichment):
     return block
 
 
+def patch_directory_styles(html):
+    """Keep outlined curation buttons on-brand instead of browser-link blue."""
+    rule = ".curation-links a:not(:first-child) { color:#1a1a1a; }"
+    if rule not in html:
+        marker = ".curation-links a:first-child { background: #C33; border-color: #C33; color: #fff; }"
+        if marker in html:
+            html = html.replace(marker, marker + "\n" + rule, 1)
+    return html
+
+
 def main():
     html = DIRECTORY_FILE.read_text(encoding="utf-8")
+    html = patch_directory_styles(html)
     enrichments = load_enrichments()
     patched = 0
 
