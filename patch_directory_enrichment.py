@@ -16,8 +16,8 @@ DIRECTORY_FILE = Path("artists.html")
 ENRICHMENT_FILE = Path("artist_enrichment.json")
 ENRICHMENT_BATCH_DIR = Path("artist_enrichment_batches")
 PROFILE_ACTION_PATTERN = re.compile(
-    r'\s*<div class="profile-actions"><a class="request-link" '
-    r'href="\./artists/[^"]+">View Full Profile</a></div>\s*',
+    r'\s*<div class="profile-actions"[^>]*>\s*<a class="request-link"[^>]*'
+    r'href="\./artists/[^"]+"[^>]*>View Full Profile</a>\s*</div>\s*',
     re.IGNORECASE,
 )
 
@@ -90,11 +90,15 @@ def patch_block(name, block, enrichment):
             )
 
     # Be idempotent: remove any CTA already inside this accordion, then insert
-    # exactly one before the first track so it is visible immediately on open.
+    # exactly one before the first track. Inline display styling intentionally
+    # guarantees visibility on mobile even if older directory CSS is cached.
     block = PROFILE_ACTION_PATTERN.sub("\n", block)
     profile_url = f"./artists/{slugify(name)}.html"
     cta = (
-        f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
+        '<div class="profile-actions" style="display:block;margin:12px 0 16px;">'
+        f'<a class="request-link" href="{profile_url}" '
+        'style="display:inline-block;background:#c33;border:1px solid #c33;color:#fff;'
+        'padding:9px 13px;border-radius:6px;font-weight:700;text-decoration:none;">'
         'View Full Profile</a></div>\n'
     )
     first_track = re.search(r'<div class="track"', block)
