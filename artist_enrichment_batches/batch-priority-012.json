@@ -1,0 +1,35 @@
+{
+  "three days grace": {
+    "display_name": "Three Days Grace",
+    "bio": "Three Days Grace grew out of the small-town Ontario band Groundswell, formed by Adam Gontier, Brad Walst and Neil Sanderson in the Norwood area before the musicians regrouped under their current name in the late 1990s. After signing with Jive, the 2003 self-titled debut turned the band's tense, emotionally direct post-grunge into an international rock-radio breakthrough. \"I Hate Everything About You\" became the signature early hit, while the album established a formula built around heavy guitar hooks, blunt emotional conflict and choruses designed for large rooms rather than underground scenes.\n\nThe 2006 album One-X expanded the band's reach with \"Animal I Have Become,\" \"Pain\" and \"Never Too Late,\" songs that connected especially strongly with listeners drawn to the catalogue's writing about isolation, addiction and survival. Life Starts Now and Transit of Venus extended the Adam Gontier era before he left the group in 2013. Matt Walst, Brad Walst's brother and the singer of My Darkest Days, stepped in as frontman for Human, Outsider and Explosions, allowing Three Days Grace to remain one of North America's most consistent mainstream-rock acts through a major lineup change.\n\nThe band entered another unusual chapter when Gontier returned alongside Walst rather than replacing him, creating a dual-frontman lineup for 2025's Alienation. The reunion produced a new run of No. 1 rock-radio singles, including \"Mayday\" and \"Kill Me Fast.\" By 2026, Three Days Grace had scored 20 No. 1s on Billboard's U.S. Mainstream Rock Airplay chart, and \"I Hate Everything About You\" and \"Animal I Have Become\" had both passed one billion Spotify streams, making them the first Canadian band with two songs in the platform's Billions Club. That late-career resurgence reinforces their place as one of the most internationally durable Canadian hard-rock bands of the 2000s era.",
+    "directory_summary": "Norwood, Ontario's Three Days Grace turned emotionally direct post-grunge into one of Canada's most durable international rock careers. The self-titled debut and One-X produced staples including \"I Hate Everything About You,\" \"Animal I Have Become\" and \"Never Too Late,\" while the band survived a major frontman change and later reunited Adam Gontier with Matt Walst in a dual-vocal lineup. By 2026, they had 20 U.S. Mainstream Rock No. 1s and two billion-stream Spotify songs.",
+    "album_titles": ["Three Days Grace", "One-X", "Life Starts Now", "Transit of Venus", "Human", "Outsider", "Explosions", "Alienation"],
+    "website": "https://threedaysgrace.com/",
+    "city": "Norwood, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://ca.billboard.com/music/rock/three-days-grace-global-no-1s-cover-story",
+      "https://ca.billboard.com/music/rock/three-days-grace-spotify",
+      "https://ca.billboard.com/music/chart-beat/three-days-grace-airplay-charts-2677786135",
+      "https://threedaysgrace.com/"
+    ]
+  },
+  "deadmau5": {
+    "display_name": "deadmau5",
+    "bio": "Niagara Falls-born producer Joel Zimmerman built deadmau5 from an internet-era studio project into one of the defining electronic-music acts of the late 2000s and early 2010s. Early albums such as Get Scraped and Vexillology documented his development, but 2008's Random Album Title became the international turning point. Tracks including \"Faxing Berlin,\" \"Move for Me\" and the Kaskade collaboration \"I Remember\" established a patient, melodic progressive-house sound that stood apart from the increasingly compressed pop structures surrounding the North American EDM boom.\n\nFor Lack of a Better Name deepened that identity through \"Ghosts 'n' Stuff\" and the slow-building instrumental \"Strobe,\" while 4×4=12 pushed into a harder, more festival-scale sound. Subsequent albums including > album title goes here <, while(1<2) and W:/2016ALBUM/ kept Zimmerman's production focused on long-form builds, precise sound design and the friction between club functionality and studio experimentation. His mau5head helmet and increasingly elaborate live productions made the visual presentation inseparable from the music, helping establish deadmau5 as one of the first Canadian electronic artists to headline the largest North American festival and arena stages.\n\nZimmerman's influence also runs through mau5trap, the label he built into a platform for electronic producers, and through collaborations that connect different generations of dance music. His long-running partnership with Kaskade eventually became Kx5, whose self-titled album earned a Grammy nomination for Best Dance/Electronic Music Album. Deadmau5 has received seven Grammy nominations overall, won three JUNO Awards and was inducted into Canadian Music Week's Music Industry Hall of Fame in 2024. More than two decades into the project, his combination of technical independence, label-building, visual spectacle and a distinctly recognizable production language makes him one of Canada's most consequential electronic-music exports.",
+    "directory_summary": "Niagara Falls-born producer Joel Zimmerman turned deadmau5 into one of the defining acts of the North American EDM boom. Random Album Title, For Lack of a Better Name and 4×4=12 established his slow-building progressive-house sound, while the mau5head, large-scale live production and mau5trap label expanded the project beyond records. Seven Grammy nominations, three JUNO wins and a 2024 Canadian Music Week Hall of Fame induction reflect a career that helped move Canadian electronic music onto global festival stages.",
+    "album_titles": ["Get Scraped", "Vexillology", "Random Album Title", "For Lack of a Better Name", "4×4=12", "> album title goes here <", "while(1<2)", "W:/2016ALBUM/", "Kx5"],
+    "website": "https://deadmau5.com/",
+    "city": "Niagara Falls, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.grammy.com/artists/deadmau5/1963/",
+      "https://ca.billboard.com/music/music-news/deadmau5-canadian-music-week-hall-of-fame",
+      "https://ca.billboard.com/music/deadmau5-interview-canadian-music-week",
+      "https://ca.billboard.com/music/features/deadmau5-rezz-decode-their-creative-process",
+      "https://deadmau5.com/"
+    ]
+  }
+}
