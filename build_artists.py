@@ -153,17 +153,24 @@ def render_groups(groups, profiles, enrichments):
         profile_html = render_profile(profile, enrichment)
         has_artist_page = bool(profile) or bool(enrichment.get("reviewed"))
         if has_artist_page:
+            profile_url = f"./artists/{slugify(name)}.html"
             artist_name_html = (
-                f'<a class="artist-page-link" href="./artists/{slugify(name)}.html" '
+                f'<a class="artist-page-link" href="{profile_url}" '
                 f'onclick="event.stopPropagation()">{escape(name)}</a>'
+            )
+            profile_action_html = (
+                f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
+                f'View Full Profile</a></div>'
             )
         else:
             artist_name_html = escape(name)
+            profile_action_html = ""
         rendered.append(
             anchor + f'      <details data-search="{search}">'
             f'<summary>{artist_name_html} <span class="artist-meta">'
             f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
             + profile_html + "\n"
+            + profile_action_html + "\n"
             + "\n".join(tracks)
             + "</details>"
         )
@@ -174,7 +181,7 @@ def render_profile(profile, enrichment=None):
     enrichment = enrichment or {}
     if not profile and not enrichment.get("reviewed"):
         return ""
-    bio = escape(profile.get("bio") or enrichment.get("bio", ""))
+    bio = profile.get("bio") or enrichment.get("bio", "")
     links = []
     website = profile.get("website") or enrichment.get("website")
     instagram = profile.get("instagram") or enrichment.get("instagram")
@@ -198,7 +205,8 @@ def render_profile(profile, enrichment=None):
     location = enrichment.get("city") or enrichment.get("country")
     location_html = f'<p class="profile-location">{escape(location)}</p>' if location else ""
     link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
-    bio_html = f'<p class="profile-bio">{bio}</p>' if bio else ""
+    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
+    bio_html = "".join(f'<p class="profile-bio">{escape(part)}</p>' for part in paragraphs)
     return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
 
 
