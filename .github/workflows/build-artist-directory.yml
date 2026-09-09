@@ -45,9 +45,16 @@ jobs:
               batch = json.loads(Path(filename).read_text(encoding='utf-8'))
               for key, value in batch.items():
                   normalized = str(key).casefold()
-                  enrichment[normalized] = value
-                  if value.get('reviewed'):
-                      published.add(normalized)
+                  if isinstance(value, dict):
+                      existing = enrichment.get(normalized)
+                      if not isinstance(existing, dict):
+                          existing = {}
+                      existing.update(value)
+                      enrichment[normalized] = existing
+                      if existing.get('reviewed'):
+                          published.add(normalized)
+                  else:
+                      enrichment[normalized] = value
 
           enrichment_path.write_text(json.dumps(enrichment, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           manifest_path.write_text(json.dumps(sorted(published), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
