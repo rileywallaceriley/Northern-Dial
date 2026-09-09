@@ -25,6 +25,7 @@ def slugify(value):
 
 
 def load_enrichments():
+    """Merge enrichment records field-by-field so partial layers do not erase bios."""
     merged = {}
     paths = [ENRICHMENT_FILE]
     paths.extend(sorted(ENRICHMENT_BATCH_DIR.glob("*.json")))
@@ -32,30 +33,54 @@ def load_enrichments():
         if not path.exists():
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, dict):
-            merged.update({str(key).casefold(): value or {} for key, value in data.items()})
+        if not isinstance(data, dict):
+            continue
+        for key, value in data.items():
+            normalized = str(key).casefold()
+            if isinstance(value, dict):
+                merged.setdefault(normalized, {}).update(value)
+            else:
+                merged[normalized] = value
     return merged
 
 
-def render_editorial_text(value):
-    """Escape text while allowing paired *release title* emphasis markers."""
-    safe = escape(str(value or ""))
-    return re.sub(r"\*([^*\n]+)\*", r"<em>\1</em>", safe)
+def render_editorial_text(value, album_titles=()):
+    """Escape editorial copy while emphasizing only verified release titles."""
+    text = str(value or "")
+    titles = sorted({str(title) for title in album_titles if title}, key=len, reverse=True)
+    if not titles:
+        return escape(text)
+    pattern = re.compile("|".join(re.escape(title) for title in titles))
+    output = []
+    position = 0
+    for match in pattern.finditer(text):
+        output.append(escape(text[position:match.start()]))
+        output.append(f"<em>{escape(match.group(0))}</em>")
+        position = match.end()
+    output.append(escape(text[position:]))
+    return "".join(output)
 
 
 def patch_block(name, block, enrichment):
     summary = enrichment.get("directory_summary")
     if summary:
-        rendered_summary = render_editorial_text(summary)
+        rendered_summary = render_editorial_text(summary, enrichment.get("album_titles", []))
         bio_pattern = re.compile(r'<p class="profile-bio">.*?</p>', re.DOTALL)
         if bio_pattern.search(block):
             block = bio_pattern.sub(f'<p class="profile-bio">{rendered_summary}</p>', block, count=1)
-            # Directory summaries are intentionally one compact paragraph.
-            block = re.sub(r'(<p class="profile-bio">.*?</p>)(?:<p class="profile-bio">.*?</p>)+', r'\1', block, flags=re.DOTALL)
+            block = re.sub(
+                r'(<p class="profile-bio">.*?</p>)(?:<p class="profile-bio">.*?</p>)+',
+                r'\1',
+                block,
+                flags=re.DOTALL,
+            )
 
     profile_url = f"./artists/{slugify(name)}.html"
     if "View Full Profile" not in block:
-        cta = f'<div class="profile-actions"><a class="request-link" href="{profile_url}">View Full Profile</a></div>\n'
+        cta = (
+            f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
+            'View Full Profile</a></div>\n'
+        )
         first_track = re.search(r'<div class="track"\b', block)
         if first_track:
             block = block[:first_track.start()] + cta + block[first_track.start():]
@@ -70,6 +95,8 @@ def main():
     patched = 0
 
     for name, enrichment in enrichments.items():
+        if not isinstance(enrichment, dict):
+            continue
         if not enrichment.get("reviewed") or not enrichment.get("directory_summary"):
             continue
         search_value = re.escape(escape(name.casefold(), quote=True))
