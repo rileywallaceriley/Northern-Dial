@@ -15,6 +15,11 @@ import unicodedata
 DIRECTORY_FILE = Path("artists.html")
 ENRICHMENT_FILE = Path("artist_enrichment.json")
 ENRICHMENT_BATCH_DIR = Path("artist_enrichment_batches")
+PROFILE_ACTION_PATTERN = re.compile(
+    r'\s*<div class="profile-actions"><a class="request-link" '
+    r'href="\./artists/[^"]+">View Full Profile</a></div>\s*',
+    re.IGNORECASE,
+)
 
 
 def slugify(value):
@@ -61,6 +66,15 @@ def render_editorial_text(value, album_titles=()):
     return "".join(output)
 
 
+def cleanup_legacy_profile_actions(html):
+    """Remove profile CTA blocks left outside accordions by older patch runs."""
+    pattern = re.compile(
+        r'(</details>)(?:' + PROFILE_ACTION_PATTERN.pattern + r')+',
+        re.IGNORECASE,
+    )
+    return pattern.sub(r'\1\n', html)
+
+
 def patch_block(name, block, enrichment):
     summary = enrichment.get("directory_summary")
     if summary:
@@ -75,17 +89,19 @@ def patch_block(name, block, enrichment):
                 flags=re.DOTALL,
             )
 
+    # Be idempotent: remove any CTA already inside this accordion, then insert
+    # exactly one before the first track so it is visible when the accordion opens.
+    block = PROFILE_ACTION_PATTERN.sub("\n", block)
     profile_url = f"./artists/{slugify(name)}.html"
-    if "View Full Profile" not in block:
-        cta = (
-            f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
-            'View Full Profile</a></div>\n'
-        )
-        first_track = re.search(r'<div class="track"\b', block)
-        if first_track:
-            block = block[:first_track.start()] + cta + block[first_track.start():]
-        else:
-            block += "\n" + cta
+    cta = (
+        f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
+        'View Full Profile</a></div>\n'
+    )
+    first_track = re.search(r'<div class="track"\b', block)
+    if first_track:
+        block = block[:first_track.start()] + cta + block[first_track.start():]
+    else:
+        block = block.replace("</details>", cta + "</details>", 1)
     return block
 
 
@@ -101,6 +117,7 @@ def patch_directory_styles(html):
 
 def main():
     html = DIRECTORY_FILE.read_text(encoding="utf-8")
+    html = cleanup_legacy_profile_actions(html)
     html = patch_directory_styles(html)
     enrichments = load_enrichments()
     patched = 0
