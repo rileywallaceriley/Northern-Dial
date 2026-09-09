@@ -1,0 +1,32 @@
+{
+  "drake": {
+    "album_titles": ["Thank Me Later", "Take Care", "Nothing Was the Same", "Views", "Scorpion"]
+  },
+  "justin bieber": {
+    "album_titles": ["My World", "My World 2.0", "Purpose", "Changes", "Justice", "SWAG"]
+  },
+  "alanis morissette": {
+    "album_titles": ["Jagged Little Pill", "Supposed Former Infatuation Junkie", "Under Rug Swept"]
+  },
+  "kardinal offishall": {
+    "album_titles": ["Eye & I", "Quest for Fire: Firestarter, Vol. 1"]
+  },
+  "the weeknd": {
+    "album_titles": ["House of Balloons", "Kiss Land", "Beauty Behind the Madness", "Starboy", "After Hours", "Hurry Up Tomorrow"]
+  },
+  "céline dion": {
+    "album_titles": ["Unison", "The Colour of My Love", "Falling into You", "Let’s Talk About Love"]
+  },
+  "shania twain": {
+    "album_titles": ["The Woman in Me", "Come On Over"]
+  },
+  "avril lavigne": {
+    "album_titles": ["Let Go", "Under My Skin", "Love Sux", "Greatest Hits"]
+  },
+  "bryan adams": {
+    "album_titles": ["Cuts Like a Knife", "Reckless"]
+  },
+  "sarah mclachlan": {
+    "album_titles": ["Touch", "Solace", "Fumbling Towards Ecstasy", "Surfacing"]
+  }
+}
