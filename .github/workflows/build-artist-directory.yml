@@ -53,11 +53,29 @@ jobs:
           manifest_path.write_text(json.dumps(sorted(published), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           PY
 
+      - name: Apply committed enrichment to current static directory
+        run: python3 patch_directory_enrichment.py
+
+      - name: Publish static directory enrichment immediately
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artists.html
+          if git diff --cached --quiet; then
+            echo 'No immediate directory changes to commit.'
+          else
+            git commit -m 'Apply enriched artist directory summaries and profile CTAs'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
+
       - name: Build directory from live station catalogue
         continue-on-error: true
+        timeout-minutes: 3
         run: python3 build_artists.py
 
-      - name: Apply committed enrichment to static directory
+      - name: Reapply committed enrichment after live directory build
         run: python3 patch_directory_enrichment.py
 
       - name: Build standalone artist SEO pages
@@ -102,11 +120,9 @@ jobs:
                   return match.group(0)
 
               stats['matched'] += 1
-
               if 'artist-page-link' in label_html:
                   stats['existing'] += 1
                   return match.group(0)
-
               if stats['added'] >= BATCH_SIZE:
                   return match.group(0)
 
