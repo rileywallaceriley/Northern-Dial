@@ -1,0 +1,40 @@
+{
+  "swollen members": {
+    "display_name": "Swollen Members",
+    "bio": "Vancouver hip-hop group Swollen Members emerged at the end of the 1990s around rappers Madchild and Prevail, with producer Rob the Viking becoming central to the group's sound and Moka Only contributing during key early years. Their 1999 debut Balance connected the West Coast Canadian underground to a wider North American rap network through collaborations with artists including Dilated Peoples, while establishing a dense, battle-informed style that sounded distinct from the Toronto scenes then dominating the national conversation.\n\nThe group broke much wider with Bad Dreams in 2001 and Monsters in the Closet in 2002. Songs such as \"Fuel Injected\" helped turn Swollen Members into one of the most visible Canadian rap acts of the early 2000s, and the JUNO Awards later highlighted their four Rap Recording of the Year wins in 2001, 2002, 2003 and 2007 as evidence that Canadian hip-hop was gaining major traction beyond Toronto. Albums including Black Magic and Armed to the Teeth kept the group active through lineup changes, commercial shifts and periods of instability.\n\nSwollen Members continued recording into the 2010s with Beautiful Death Machine and Brand New Day before the core trio spent several years apart. Their 2024 reunion for Vancouver's SwollenFest and a 17-city Canadian tour returned Madchild, Prevail and Rob the Viking to the stage together. The group's larger Canadian significance lies in geography as much as longevity: they helped make Vancouver a nationally visible hip-hop centre and demonstrated that a commercially viable Canadian rap identity could develop outside the country's dominant Toronto pipeline.",
+    "directory_summary": "Vancouver's Swollen Members helped push Canadian hip-hop beyond Toronto in the early 2000s. Built around Madchild, Prevail and producer Rob the Viking, the group moved from the underground debut Balance to the broader success of Bad Dreams, Monsters in the Closet and \"Fuel Injected,\" winning four JUNO rap awards along the way. Their long career made the West Coast a more visible part of Canada's national rap map.",
+    "album_titles": ["Balance", "Bad Dreams", "Monsters in the Closet", "Black Magic", "Armed to the Teeth", "Beautiful Death Machine", "Brand New Day"],
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://junoawards.ca/blog/raps-rocky-road/",
+      "https://junoawards.ca/awards/past-winners-nominees/page/400/?search=&sort=ASC&sortby=name",
+      "https://exclaim.ca/music/article/rising_in_west-vancouver_hip-hops",
+      "https://exclaim.ca/music/article/swollen_members_strengthen_links_with_los_angeles",
+      "https://exclaim.ca/music/article/swollen-members-reunite-for-2024-canadian-tour"
+    ]
+  },
+  "madchild": {
+    "display_name": "Madchild",
+    "bio": "British Columbia rapper Madchild, born Shane Bunting, first became nationally known as one of the founding MCs of Swollen Members. His tightly wound, high-pitched delivery and battle-rap instincts were central to the Vancouver group's rise from the late-1990s underground through the JUNO-winning Balance, Bad Dreams and Monsters in the Closet era, making him one of the more recognizable voices in West Coast Canadian hip-hop.\n\nMadchild's solo career became a major second chapter after addiction and personal instability interrupted the group's momentum. His first full-length solo album, Dope Sick, arrived in 2012 after months of writing during his recovery from an OxyContin addiction and turned that experience into unusually direct material about self-destruction, sobriety and rebuilding. He followed it with releases including Switched On, Silver Tongue Devil and The Darkest Hour, maintaining a prolific independent catalogue alongside later Swollen Members records and touring.\n\nOn 2019's Demons, Madchild returned explicitly to the subject of addictive behaviour and the ongoing work of recovery rather than presenting sobriety as a finished narrative. By the 2020s, his solo career and renewed work with Swollen Members had given him a rare degree of longevity within Canadian underground rap. His significance is tied both to the commercial breakthrough of his group and to the independent Battle Axe ecosystem that helped sustain a dedicated national audience outside mainstream radio cycles.",
+    "directory_summary": "Madchild is a veteran British Columbia rapper best known as a founding MC of Swollen Members and a central voice in Vancouver's early-2000s hip-hop breakthrough. His solo debut Dope Sick turned his recovery from addiction into a darker, deeply personal second chapter, followed by an extensive independent catalogue including Silver Tongue Devil, The Darkest Hour and Demons. His career connects Canadian rap's commercial rise with its durable underground touring culture.",
+    "album_titles": ["Balance", "Bad Dreams", "Monsters in the Closet", "Dope Sick", "Switched On", "Silver Tongue Devil", "The Darkest Hour", "Demons"],
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://exclaim.ca/music/article/swollen_members_madchild_announces_debut_solo_album_dope_sick",
+      "https://exclaim.ca/music/article/madchild-dope_sick",
+      "https://exclaim.ca/music/article/madchild_returns_with_new_album_demons",
+      "https://www.battleaxerecords.net/"
+    ]
+  },
+  "mac demarco": {
+    "album_titles": ["Rock and Roll Night Club", "Salad Days", "Another One", "This Old Dog", "Here Comes the Cowboy", "Five Easy Hot Dogs", "One Wayne G", "Guitar"]
+  },
+  "the weeknd": {
+    "display_name": "The Weeknd",
+    "album_titles": ["House of Balloons", "Kiss Land", "Beauty Behind the Madness", "After Hours", "Hurry Up Tomorrow"]
+  }
+}
