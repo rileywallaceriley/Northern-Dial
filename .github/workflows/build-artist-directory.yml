@@ -72,6 +72,7 @@ jobs:
             echo 'No immediate directory changes to commit.'
           else
             git commit -m 'Apply enriched artist directory summaries and profile CTAs'
+            git checkout -- artist_enrichment.json artist_publish_manifest.json
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
