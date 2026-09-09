@@ -1,0 +1,31 @@
+{
+  "Chloe Sagum": {
+    "reason": "Verified non-Canadian artist. Northern Dial's unresolved Chloe Sagum credit is 'Start Again (feat. Chloe Sagum),' the 2022 Connor Price collaboration. Shazam identifies Chloe Sagum as the vocalist and songwriter on that exact recording, while current artist-biography sources identify her as an R&B/soul musician from Nevada, United States. This is the matching U.S. artist, not a Canadian artist.",
+    "country": "United States",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://www.shazam.com/song/1630509496/start-again",
+      "https://www.viberate.com/artist/chloe-sagum/"
+    ]
+  },
+  "Nic D": {
+    "reason": "Verified non-Canadian artist. Northern Dial carries Nic D tracks including 'Ambidextrous,' 'No Bad Side,' 'Gasoline' and 'Tuesday.' Apple Music/Shazam identify Nic D on 'Ambidextrous' and Qobuz identifies him as Nicolas Donovan on 'No Bad Side.' Independent radio and music-biography sources identify Nicolas Donovan, professionally known as Nic D, as a recording artist based in Culpeper, Virginia, United States. The catalogue identity and U.S. artist identity match directly.",
+    "country": "United States",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://music.apple.com/us/song/1816733929",
+      "https://www.qobuz.com/se-en/album/no-bad-side-connor-price-amp-nic-d/ffed6ux74nktb",
+      "https://real.fm/music/artists/nic-d"
+    ]
+  },
+  "Jon Nash": {
+    "reason": "Verified non-Canadian artist. Northern Dial's Jon Nash credit is 'Watchu Heard' from Rich Kidd Presents' Compliation Volume1 'You Already Know.' Amazon Music lists that exact track as Big Thump featuring Jon Nash. Independent Bay Area rap discography sources identify this Jon Nash as an Oakland, California gangsta rapper, and Apple Music ties the same artist profile to Bay Area collaborators and compilation releases. This is the matching U.S. rapper, not an ambiguous same-name artist.",
+    "country": "United States",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://music.amazon.it/albums/B00JKJM262",
+      "https://www.thegoodoldayz.com/artist/jon-nash/15459.html",
+      "https://music.apple.com/us/artist/jon-nash/171954120"
+    ]
+  }
+}
