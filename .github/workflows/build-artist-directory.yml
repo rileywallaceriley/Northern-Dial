@@ -8,6 +8,7 @@ on:
       - 'artist_removals.txt'
       - 'build_artists.py'
       - 'build_artist_pages.py'
+      - 'patch_directory_enrichment.py'
       - '.github/workflows/build-artist-directory.yml'
   workflow_dispatch:
 
@@ -56,6 +57,9 @@ jobs:
         continue-on-error: true
         run: python3 build_artists.py
 
+      - name: Apply committed enrichment to static directory
+        run: python3 patch_directory_enrichment.py
+
       - name: Build standalone artist SEO pages
         run: python3 build_artist_pages.py
 
@@ -99,12 +103,10 @@ jobs:
 
               stats['matched'] += 1
 
-              # Preserve links already added by earlier batches.
               if 'artist-page-link' in label_html:
                   stats['existing'] += 1
                   return match.group(0)
 
-              # Add no more than 200 new links in this run.
               if stats['added'] >= BATCH_SIZE:
                   return match.group(0)
 
