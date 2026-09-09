@@ -54,5 +54,55 @@
         "leads_to_next": "From here, keep exploring Northern Dial's Indigenous artists and regional rap scenes. Canadian hip-hop's history is not a single line, and this path is one doorway into a much larger map."
       }
     ]
+  },
+  "canadian-women-global-pop": {
+    "title": "Canadian Women Who Broke Global Pop Open",
+    "dek": "Six artists, six different routes from Canada to the world, from powerhouse balladry and country crossover to alternative confession, pop-punk and genre-fluid reinvention.",
+    "intro": "There is no single Canadian route into global pop. This path follows six women whose careers opened distinctly different lanes across the 1990s, 2000s and beyond. It is a story of scale, authorship and reinvention: Québec vocal tradition becoming international pop, country becoming borderless mainstream music, alternative songwriting becoming blockbuster culture, pop-punk becoming a youth language and genre boundaries becoming increasingly porous.",
+    "sources": [
+      "https://www.grammy.com/artists/alanis-morissette/4915/",
+      "https://www.grammy.com/artists/shania-twain/7643/",
+      "https://www.canada.ca/en/women-gender-equality/commemorations-celebrations/women-impact/arts/sarah-mclachlan.html",
+      "https://canadianmusichalloffame.ca/inductee/nelly-furtado/",
+      "https://www.thecanadianencyclopedia.ca/en/article/alanis-morissette"
+    ],
+    "artists": [
+      {
+        "name": "Céline Dion",
+        "slug": "celine-dion",
+        "why_here": "Start with scale. Céline Dion moved from a francophone Québec career into one of the largest international pop careers ever built by a Canadian artist, while continuing to carry a distinctly Québec identity into global mainstream culture.",
+        "leads_to_next": "Dion demonstrated how far a Canadian vocalist could travel inside the international pop system. Shania Twain then broke another boundary by making country production and songwriting function as worldwide pop without abandoning the genre's core identity."
+      },
+      {
+        "name": "Shania Twain",
+        "slug": "shania-twain",
+        "why_here": "Shania Twain turned country-pop crossover into a global event. The Woman in Me and Come On Over paired country songwriting with huge hooks and polished production, expanding both the commercial possibilities for Canadian country artists and the international audience for the genre.",
+        "leads_to_next": "Where Twain widened genre boundaries through crossover, Sarah McLachlan changed the surrounding infrastructure by pairing a major singer-songwriter career with Lilith Fair, creating a new platform for women across styles."
+      },
+      {
+        "name": "Sarah McLachlan",
+        "slug": "sarah-mclachlan",
+        "why_here": "Sarah McLachlan's catalogue made intimate, adult-alternative songwriting commercially powerful, but her larger significance also includes Lilith Fair. The festival put women-led bills at arena scale and helped challenge an industry culture that routinely treated female artists as programming exceptions.",
+        "leads_to_next": "That emphasis on authorship and emotional directness leads naturally to Alanis Morissette, whose breakthrough turned a far more confrontational form of autobiographical writing into mass-market pop culture."
+      },
+      {
+        "name": "Alanis Morissette",
+        "slug": "alanis-morissette",
+        "why_here": "Jagged Little Pill made Alanis Morissette a defining voice of 1990s alternative pop by putting anger, vulnerability, irony and self-examination at the centre of a blockbuster record. Its success widened expectations for what a young woman could sound like in mainstream rock and pop.",
+        "leads_to_next": "A generation later, Avril Lavigne translated a different kind of resistance into youth pop, replacing adult-alternative introspection with skate-punk attitude, compact hooks and a visual identity that travelled instantly across borders."
+      },
+      {
+        "name": "Avril Lavigne",
+        "slug": "avril-lavigne",
+        "why_here": "Avril Lavigne's Let Go made Canadian pop-punk part of the early-2000s global mainstream. Songs such as \"Complicated\" and \"Sk8er Boi\" offered a less polished, more guitar-driven alternative to the dominant teen-pop template and helped shape the next generation of pop-rock artists.",
+        "leads_to_next": "Nelly Furtado pushed the idea of Canadian pop openness even further, moving between folk-pop, R&B, electronic production, Latin music and club-oriented pop without treating those shifts as separate careers."
+      },
+      {
+        "name": "Nelly Furtado",
+        "slug": "nelly-furtado",
+        "why_here": "Nelly Furtado closes the path as a model of genre-fluid Canadian pop. From Whoa, Nelly! and Folklore through Loose, Mi Plan and later independent work, she repeatedly changed musical language while maintaining a recognizable songwriting identity and an international audience.",
+        "leads_to_next": "From here, the next Listening Paths can move into the artists these breakthroughs helped normalize: Canadian women in indie rock, R&B, electronic music, country and multilingual pop."
+      }
+    ]
   }
 }
