@@ -42,7 +42,7 @@ def load_profiles():
 
 
 def load_enrichments():
-    """Merge enrichment records field-by-field so later editorial layers can be small."""
+    """Merge enrichment records field-by-field and preserve editorial display casing."""
     merged = {}
     display_names = {}
     paths = [ENRICHMENT_FILE]
@@ -55,10 +55,11 @@ def load_enrichments():
             continue
         for name, value in data.items():
             key = str(name).casefold()
-            display_names[key] = str(name)
             if isinstance(value, dict):
+                display_names[key] = str(value.get("display_name") or name)
                 merged.setdefault(key, {}).update(value)
             else:
+                display_names[key] = str(name)
                 merged[key] = value
     return {key: (display_names.get(key, key), value) for key, value in merged.items()}
 
@@ -263,57 +264,54 @@ def render_page(name, profile, enrichment):
   </main>
   <footer class="site-footer">Independent Canadian music discovery · <a href="../index.html">Northern Dial</a></footer>
 </body>
-</html>
-'''
+</html>'''
 
 
 def update_sitemap(slugs):
-    if not SITEMAP_FILE.exists():
+    try:
+        root = ET.parse(SITEMAP_FILE).getroot()
+    except (FileNotFoundError, ET.ParseError):
         return
-    ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
-    tree = ET.parse(SITEMAP_FILE)
-    root = tree.getroot()
-    namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
-    for node in list(root):
-        loc = node.find(f"{namespace}loc")
-        if loc is not None and loc.text and "/artists/" in loc.text:
-            root.remove(node)
+    namespace = "http://www.sitemaps.org/schemas/sitemap/0.9"
+    ET.register_namespace("", namespace)
+    existing = {element.text for element in root.findall(f"{{{namespace}}}url/{{{namespace}}}loc") if element.text}
+    changed = False
     for slug in sorted(slugs):
-        url = ET.SubElement(root, f"{namespace}url")
-        ET.SubElement(url, f"{namespace}loc").text = f"{BASE_URL}/artists/{slug}.html"
-        ET.SubElement(url, f"{namespace}priority").text = "0.7"
-    ET.indent(tree, space="  ")
-    tree.write(SITEMAP_FILE, encoding="utf-8", xml_declaration=True)
+        loc = f"{BASE_URL}/artists/{slug}.html"
+        if loc in existing:
+            continue
+        url = ET.SubElement(root, f"{{{namespace}}}url")
+        ET.SubElement(url, f"{{{namespace}}}loc").text = loc
+        ET.SubElement(url, f"{{{namespace}}}changefreq").text = "weekly"
+        ET.SubElement(url, f"{{{namespace}}}priority").text = "0.65"
+        changed = True
+    if changed:
+        tree = ET.ElementTree(root)
+        ET.indent(tree, space="  ")
+        tree.write(SITEMAP_FILE, encoding="utf-8", xml_declaration=True)
 
 
 def main():
     profiles = load_profiles()
     enrichments = load_enrichments()
-    keys = sorted(set(profiles) | set(enrichments))
-    ARTIST_DIR.mkdir(exist_ok=True)
+    ARTIST_DIR.mkdir(parents=True, exist_ok=True)
+    slugs = set()
 
-    generated = []
-    expected_files = set()
-    for key in keys:
-        profile_name, profile = profiles.get(key, ("", {}))
-        enrichment_name, enrichment = enrichments.get(key, ("", {}))
-        if not profile and not enrichment.get("reviewed"):
+    names = sorted(set(profiles) | set(enrichments))
+    for key in names:
+        profile_name, profile = profiles.get(key, (None, {}))
+        enrichment_name, enrichment = enrichments.get(key, (None, {}))
+        name = profile_name or enrichment_name or key
+        if not profile and not enrichment:
             continue
-        name = profile_name or enrichment_name
-        if not name:
+        if not (profile.get("bio") or enrichment.get("bio")):
             continue
         slug = slugify(name)
-        path = ARTIST_DIR / f"{slug}.html"
-        path.write_text(render_page(name, profile, enrichment), encoding="utf-8")
-        generated.append(slug)
-        expected_files.add(path.name)
+        (ARTIST_DIR / f"{slug}.html").write_text(render_page(name, profile, enrichment), encoding="utf-8")
+        slugs.add(slug)
 
-    for path in ARTIST_DIR.glob("*.html"):
-        if path.name not in expected_files:
-            path.unlink()
-
-    update_sitemap(generated)
-    print(f"Generated {len(generated):,} standalone artist pages and updated {SITEMAP_FILE}")
+    update_sitemap(slugs)
+    print(f"Built {len(slugs)} artist profile pages.")
 
 
 if __name__ == "__main__":
