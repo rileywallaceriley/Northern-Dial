@@ -44,9 +44,11 @@ function pathView(path) {
 function paintPlayer(){const s=radio.state;$('#play').textContent=['playing','buffering'].includes(s)?'Ⅱ':'▶';$('#play').setAttribute('aria-label',['playing','buffering'].includes(s)?'Pause live radio':'Play live radio');$('#status').textContent=({playing:'LIVE FROM NORTHERN DIAL',buffering:'CONNECTING…',paused:'READY WHEN YOU ARE',error:'CONNECTION LOST · TAP PLAY TO RETRY'})[s]||s;document.body.classList.toggle('playing',s==='playing');}
 radio.addEventListener('change',paintPlayer);$('#play').onclick=()=>['playing','buffering'].includes(radio.state)?radio.pause():radio.play();
 async function poll(){if(polling)return;polling=true;try{const data=await request(NOW);song=data.now_playing?.song||{};history=Array.isArray(data.song_history)?data.song_history:[];$('#track').textContent=song.title||'Northern Dial';$('#artist').textContent=(song.artist||'Live Canadian radio')+' · About the artist ↗';await radio.metadata(song);if($('#recent'))historyRows($('#recent'));}catch{$('#artist').textContent=(song.artist||'Live Canadian radio')+' · Broadcast details temporarily unavailable';}finally{polling=false;}}
+function resumeSync(){artists=[];poll();radio.refreshState();}
 document.querySelectorAll('[data-tab]').forEach(n=>n.onclick=()=>{render(n.dataset.tab);window.scrollTo(0,0);});
 window.addEventListener('hashchange',()=>{if(location.hash==='#listen')render('listen');});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden){poll();artists=[];}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)resumeSync();});
+App.addListener('appStateChange',({isActive})=>{if(isActive)resumeSync();});
 App.addListener('backButton',()=>{if(dialog.open)dialog.close();else if(tab!=='listen')render('listen');else App.minimizeApp();});
 radio.init().catch(()=>{radio.setState('error');$('#status').textContent='AUDIO SERVICE UNAVAILABLE';});
 render();paintPlayer();poll();setInterval(()=>{if(!document.hidden)poll();},10000);
