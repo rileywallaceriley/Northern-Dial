@@ -301,7 +301,7 @@ def main():
     for key in names:
         profile_name, profile = profiles.get(key, (None, {}))
         enrichment_name, enrichment = enrichments.get(key, (None, {}))
-        name = profile_name or enrichment_name or key
+        name = enrichment_name or profile_name or key
         if not profile and not enrichment:
             continue
         if not (profile.get("bio") or enrichment.get("bio")):
