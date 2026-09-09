@@ -90,14 +90,14 @@ def patch_block(name, block, enrichment):
             )
 
     # Be idempotent: remove any CTA already inside this accordion, then insert
-    # exactly one before the first track so it is visible when the accordion opens.
+    # exactly one before the first track so it is visible immediately on open.
     block = PROFILE_ACTION_PATTERN.sub("\n", block)
     profile_url = f"./artists/{slugify(name)}.html"
     cta = (
         f'<div class="profile-actions"><a class="request-link" href="{profile_url}">'
         'View Full Profile</a></div>\n'
     )
-    first_track = re.search(r'<div class="track"\b', block)
+    first_track = re.search(r'<div class="track"', block)
     if first_track:
         block = block[:first_track.start()] + cta + block[first_track.start():]
     else:
