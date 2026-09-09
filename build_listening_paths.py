@@ -86,7 +86,7 @@ def shell(title, description, canonical, body):
 <body>
   <header class="site-header"><a class="logo" href="/index.html" aria-label="Northern Dial home"><img src="{LOGO_URL}" alt="Northern Dial"></a></header>
   <nav class="site-nav" aria-label="Primary navigation">
-    <a href="/index.html">Listen</a><a href="/artists.html">Artists</a><a class="active" href="/listening-paths.html">Listening Paths</a><a href="/shows.html">Shows</a>
+    <a href="/index.html">Listen</a><a href="/artists.html">Artists</a><a href="/shows.html">Shows</a>
   </nav>
   {body}
   <footer class="site-footer">Independent Canadian music discovery · <a href="/index.html">Northern Dial</a></footer>
