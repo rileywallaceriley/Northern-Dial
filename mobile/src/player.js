@@ -14,13 +14,26 @@ export class Radio extends EventTarget {
   async init() {
     if (this.native) {
       await NativeRadio.addListener('stateChange', s => this.setState(s.state));
-      const s = await NativeRadio.getState(); this.setState(s.state);
+      await this.refreshState();
     } else if ('mediaSession' in navigator) {
       navigator.mediaSession.setActionHandler('play',()=>this.play());
       navigator.mediaSession.setActionHandler('pause',()=>this.pause());
     }
   }
-  setState(state) { this.state = state; this.dispatchEvent(new Event('change')); }
+  setState(state) {
+    if (!state || state === this.state) return;
+    this.state = state; this.dispatchEvent(new Event('change'));
+  }
+  async refreshState() {
+    if (!this.native) return this.state;
+    try {
+      const s = await NativeRadio.getState();
+      this.setState(s.state);
+      return s.state;
+    } catch {
+      return this.state;
+    }
+  }
   async play() {
     this.intent = true; this.setState('buffering');
     try {
