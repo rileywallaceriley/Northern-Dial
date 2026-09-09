@@ -42,7 +42,9 @@ def load_profiles():
 
 
 def load_enrichments():
+    """Merge enrichment records field-by-field so later editorial layers can be small."""
     merged = {}
+    display_names = {}
     paths = [ENRICHMENT_FILE]
     paths.extend(sorted(ENRICHMENT_BATCH_DIR.glob("*.json")))
     for path in paths:
@@ -52,8 +54,30 @@ def load_enrichments():
         if not isinstance(data, dict):
             continue
         for name, value in data.items():
-            merged[str(name).casefold()] = (str(name), value or {})
-    return merged
+            key = str(name).casefold()
+            display_names[key] = str(name)
+            if isinstance(value, dict):
+                merged.setdefault(key, {}).update(value)
+            else:
+                merged[key] = value
+    return {key: (display_names.get(key, key), value) for key, value in merged.items()}
+
+
+def render_editorial_text(value, album_titles=()):
+    """Escape editorial copy while allowing only verified album-title emphasis."""
+    text = str(value or "")
+    titles = sorted({str(title) for title in album_titles if title}, key=len, reverse=True)
+    if not titles:
+        return escape(text)
+    pattern = re.compile("|".join(re.escape(title) for title in titles))
+    output = []
+    position = 0
+    for match in pattern.finditer(text):
+        output.append(escape(text[position:match.start()]))
+        output.append(f"<em>{escape(match.group(0))}</em>")
+        position = match.end()
+    output.append(escape(text[position:]))
+    return "".join(output)
 
 
 def entity_type(bio):
@@ -76,6 +100,7 @@ def description_for(name, bio, city, country):
 
 def render_page(name, profile, enrichment):
     bio = profile.get("bio") or enrichment.get("bio") or ""
+    album_titles = enrichment.get("album_titles", [])
     website = profile.get("website") or enrichment.get("website") or ""
     instagram = profile.get("instagram") or enrichment.get("instagram") or ""
     feature = profile.get("feature") or ""
@@ -135,7 +160,10 @@ def render_page(name, profile, enrichment):
 
     link_html = f'<div class="official-links">{"".join(links)}</div>' if links else ""
     paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
-    bio_html = "".join(f'<p class="bio">{escape(part)}</p>' for part in paragraphs)
+    bio_html = "".join(
+        f'<p class="bio">{render_editorial_text(part, album_titles)}</p>'
+        for part in paragraphs
+    )
     location_html = f'<p class="location">{escape(location)}</p>' if location else ""
     title = f"{name} | Canadian Artist | Northern Dial"
 
