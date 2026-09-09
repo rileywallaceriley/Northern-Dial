@@ -100,7 +100,7 @@ def description_for(name, bio, city, country):
 
 
 def render_page(name, profile, enrichment):
-    bio = profile.get("bio") or enrichment.get("bio") or ""
+    bio = enrichment.get("bio") or profile.get("bio") or ""
     album_titles = enrichment.get("album_titles", [])
     website = profile.get("website") or enrichment.get("website") or ""
     instagram = profile.get("instagram") or enrichment.get("instagram") or ""
