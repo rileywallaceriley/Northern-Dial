@@ -1,0 +1,10 @@
+{
+  "Potlood": {
+    "reason": "Verified non-artist metadata artifact. Northern Dial's unresolved Potlood credit is attached to 'Beat Factory Rap Essentials Volume Two [1997].' The matching source is a YouTube upload of the complete 1997 Beat Factory compilation posted by the channel Potlood; its description identifies the actual recording artists track by track, including Infinite, Grimmy Grimmy feat. Shakari Nite, Down To Erf, Tara Chase, Madlocks, Asia, Michie Mee, Arsenal a.k.a. Verbal Soldier, Marvel, Sic Sense, St8ofmind, Furee, M.A.D., Motion, Illegal Justice and Crooks Of Da Round Table. Potlood is the uploader/channel name, not an artist on the compilation, so the library credit is a source-metadata ingestion artifact and should be removed rather than enriched.",
+    "country": "Non-artist metadata artifact",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://www.youtube.com/watch?v=vIlQYRzxFDM"
+    ]
+  }
+}
