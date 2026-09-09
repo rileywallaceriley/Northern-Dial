@@ -1,0 +1,14 @@
+{
+  "shania twain": {
+    "album_titles": ["The Woman in Me", "Come On Over", "Up!"],
+    "reviewed": true
+  },
+  "coeur de pirate": {
+    "album_titles": ["Blonde", "Roses", "En cas de tempête, ce jardin sera fermé", "Perséides", "Impossible à aimer", "Cavale"],
+    "reviewed": true
+  },
+  "cadence weapon": {
+    "album_titles": ["Breaking Kayfabe", "Hope in Dirt City", "Parallel World", "Rollercoaster"],
+    "reviewed": true
+  }
+}
