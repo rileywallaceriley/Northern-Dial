@@ -10,17 +10,17 @@ Open Android with `npx cap open android`, or run `cd android && ./gradlew assemb
 
 ## Content
 
-Runtime reads the existing public site: artists.html, artists/{slug}.html, listening_paths.json. It also reads the station's public now-playing API. No editorial data is copied into the app. The markup adapter is intentionally narrow and tested against the website. Full profiles refresh on every open. Directory data resets when returning to the foreground. Paths refresh on entry. The currently playing artist is matched by exact name, with a conservative featured-artist fallback; ambiguous credits are not guessed.
+Runtime reads the existing public site: artists.html, artists/{slug}.html, listening_paths.json. It also reads the station's public now-playing API. No editorial data is copied into the app. Native builds enable CapacitorHttp so these requests use the platform HTTP stack instead of depending on WebView CORS behaviour. The markup adapter is intentionally narrow and tested against the website. Full profiles refresh on every open. Directory data resets when returning to the foreground. Paths refresh on entry. The currently playing artist is matched by exact name, with a conservative featured-artist fallback; ambiguous credits are not guessed.
 
-Audio ownership is outside navigation. Native metadata polling is independent of WebView timers. No autoplay, seek, skip, on-demand playlist or audio downloading is implemented. On connection errors the play button allows a fresh attempt.
+Audio ownership is outside navigation. Native metadata polling is independent of WebView timers. No autoplay, seek, skip, on-demand playlist or audio downloading is implemented. On connection errors the play button allows a fresh attempt. When the app returns to the foreground it also re-reads native playback state so lock-screen or headset controls cannot leave the on-screen player stale.
 
 ## Current verification
 
-Web build and four content tests passed locally. Native project generation and sync passed. Android compilation was attempted but this workspace could not download Gradle (network unreachable); iOS compilation requires macOS. Native code is provisional until CI and physical device checks pass. Never label this branch submission-ready based solely on web tests.
+GitHub Actions has passed the web tests and Vite build, Android debug compilation and iOS Simulator compilation for this branch. The successful Android build produced a debug APK artifact. That proves the projects compile in CI, not that native playback behaviour is release-ready. Physical-device checks are still required for background playback, lock-screen controls, interruptions, Bluetooth/headphone changes and network transitions.
 
 ## Release gates
 
-- Verify native compilation and physical-device background audio, lock-screen controls, interruption recovery, Bluetooth/headphone disconnects, network transitions and live-edge resume. Verify no seek controls are offered by Android system surfaces.
+- Verify physical-device background audio, lock-screen controls, interruption recovery, Bluetooth/headphone disconnects, network transitions and live-edge resume. Verify no seek controls are offered by Android system surfaces.
 - Confirm app identifier ca.northerndial.radio and developer account ownership; supply signing through store/CI settings, never committed keys.
 - Replace generated placeholder launcher icons/splash assets with approved Northern Dial branding. Prepare real device screenshots and app-store descriptions.
 - Confirm a public privacy-policy URL and actual data handling by the stream/content providers before completing App Privacy and Data Safety forms. No microphone permission or account system is requested by this app.
