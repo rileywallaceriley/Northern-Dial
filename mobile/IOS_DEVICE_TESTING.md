@@ -1,41 +1,41 @@
 # Northern Dial iPhone device test
 
-The iOS project compiles in GitHub Actions. The next release gate is proving the native radio on a physical iPhone.
+The iOS project compiles in GitHub Actions. Riley does not have a Mac, so physical iPhone testing uses a cloud macOS runner plus TestFlight rather than local Xcode.
 
-## One-time Mac setup
+## iPad-only route
 
-1. Install the current Xcode from the Mac App Store and open it once so it can finish installing components.
-2. In Xcode, add the Apple ID that will be used for development under Xcode Settings > Accounts.
-3. Connect the iPhone to the Mac by cable for the first run, unlock it and trust the Mac if prompted.
-4. Enable Developer Mode on the iPhone if iOS requests it for local development builds.
+The repository includes `.github/workflows/ios-testflight.yml`. It can archive and upload Northern Dial to App Store Connect/TestFlight from GitHub Actions. A Mac is not required for routine beta builds once Apple signing is configured.
 
-## Get the branch
+### Apple prerequisites
 
-From Terminal:
+1. Be enrolled in the Apple Developer Program.
+2. In App Store Connect, create the Northern Dial iOS app record using bundle ID `ca.northerndial.radio`.
+3. Enable App Store Connect API access if it is not already enabled.
+4. Create a **team App Store Connect API key** with sufficient signing/distribution access. A team key is required because individual keys do not support provisioning endpoints.
+5. Download the `.p8` private key and keep it private. Apple only lets you download it once.
+6. Record the API Key ID, Issuer ID and Apple Developer Team ID.
 
-```bash
-git clone https://github.com/rileywallaceriley/Northern-Dial.git
-cd Northern-Dial
-git checkout mobile/app-foundation
-cd mobile
-npm ci
-npm run sync
-npx cap open ios
-```
+### GitHub Actions secrets
 
-If the repository is already cloned locally, use `git pull` and `git checkout mobile/app-foundation` instead of cloning again.
+From GitHub in Safari on iPad, open the Northern Dial repository and add these Actions secrets under repository **Settings > Secrets and variables > Actions**:
 
-## Xcode signing
+- `APP_STORE_CONNECT_KEY_ID` — the App Store Connect API Key ID.
+- `APP_STORE_CONNECT_ISSUER_ID` — the App Store Connect Issuer ID.
+- `APP_STORE_CONNECT_PRIVATE_KEY` — the complete contents of the downloaded `.p8` private key, including the BEGIN/END lines.
+- `APPLE_TEAM_ID` — the Apple Developer Team ID.
 
-In Xcode:
+Never commit the `.p8` key or any of these values to the repository.
 
-1. Select the **App** project, then the **App** target.
-2. Open **Signing & Capabilities**.
-3. Keep **Automatically manage signing** enabled.
-4. Choose your Apple development team.
-5. Confirm the bundle identifier is `ca.northerndial.radio`. If Apple reports that identifier is unavailable for your account, stop and choose a new identifier before changing the repository.
-6. Confirm **Background Modes > Audio, AirPlay, and Picture in Picture** is enabled. The repository already declares the audio background mode in `Info.plist`.
-7. Select the connected iPhone as the run destination and press **Run**.
+### Send a build to TestFlight
+
+1. In GitHub, switch to the `mobile/app-foundation` branch.
+2. Open **Actions > iOS TestFlight**.
+3. Tap **Run workflow** and choose `mobile/app-foundation`.
+4. GitHub runs the web tests, syncs Capacitor, archives the native iOS app using a hosted Mac and asks Apple to cloud-sign and upload it.
+5. After Apple processes the upload, open App Store Connect/TestFlight and enable the build for internal testing.
+6. On the iPhone, install Apple's TestFlight app and install Northern Dial from the invitation/account.
+
+The first TestFlight upload may expose account-level setup that CI cannot complete for you, such as an app record, agreements, API access, signing permissions or a bundle-ID conflict. Fix the Apple account item and rerun the workflow rather than changing application code blindly.
 
 ## First physical-device test
 
