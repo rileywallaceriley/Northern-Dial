@@ -192,3 +192,4 @@ jobs:
           exit 1
 
 # Scheduled link-batch trigger: 2026-09-09 next batch + discovery profile links
+# Manual link-batch trigger: 2026-09-09 00:20 UTC
