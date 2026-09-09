@@ -66,16 +66,21 @@ def shell(title, description, canonical, body):
     h3 {{ font-size:1.8rem; line-height:1; margin-bottom:8px; }}
     .dek {{ font-size:clamp(1.08rem,2vw,1.25rem); max-width:760px; }}
     .intro {{ font-size:1.08rem; margin-top:18px; max-width:780px; }}
-    .path-list,.steps {{ display:grid; gap:18px; margin-top:28px; }}
+    .path-list {{ display:grid; gap:18px; margin-top:28px; }}
+    .steps {{ display:grid; gap:0; margin-top:28px; }}
     .card {{ background:#f7f7f7; border:1px solid #ddd; border-radius:10px; padding:26px 28px; }}
     .step-number {{ color:#c33; font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; }}
-    .artist-link {{ font-family:'Oswald',sans-serif; font-weight:700; text-decoration:none; }}
+    .artist-link {{ display:inline-block; font-family:'Oswald',sans-serif; font-weight:700; margin-top:10px; text-decoration:none; }}
     .transition {{ border-left:3px solid #c33; color:#555; margin-top:16px; padding-left:16px; }}
+    .path-connector {{ border-left:3px solid #c33; color:#555; margin:8px 0 8px 32px; padding:18px 0 18px 20px; }}
+    .path-connector-title {{ color:#333; font-family:'Oswald',sans-serif; font-size:1rem; font-weight:700; margin-bottom:4px; }}
+    .path-connector-arrow {{ color:#c33; display:inline-block; margin-right:7px; }}
+    .path-connector p:last-child {{ max-width:720px; }}
     .cta {{ background:#c33; border-radius:7px; color:#fff; display:inline-block; font-family:'Oswald',sans-serif; font-size:.88rem; font-weight:700; letter-spacing:.09em; margin-top:16px; padding:10px 16px; text-decoration:none; text-transform:uppercase; }}
     .source-note {{ color:#666; font-size:.9rem; margin-top:28px; }}
     .site-footer {{ background:#1a1a1a; border-top:3px solid #c33; color:#aaa; padding:24px 20px; text-align:center; }}
     .site-footer a {{ color:#fff; text-decoration:none; }}
-    @media (max-width:620px) {{ .site-nav a {{ flex:1 1 auto; padding:12px 10px; text-align:center; }} .page {{ padding-top:24px; }} .hero {{ border-width:3px; padding:28px 22px; }} .card {{ padding:22px; }} }}
+    @media (max-width:620px) {{ .site-nav a {{ flex:1 1 auto; padding:12px 10px; text-align:center; }} .page {{ padding-top:24px; }} .hero {{ border-width:3px; padding:28px 22px; }} .card {{ padding:22px; }} .path-connector {{ margin-left:18px; padding:16px 0 16px 16px; }} }}
   </style>
 </head>
 <body>
@@ -114,14 +119,20 @@ def build_path(slug, path):
     for index, item in enumerate(artists, 1):
         name = str(item.get("name", ""))
         artist_slug = str(item.get("slug", ""))
-        transition = str(item.get("leads_to_next", ""))
+        transition = str(item.get("leads_to_next", "")).strip()
         steps.append(
             f'<article class="card"><p class="step-number">Stop {index} of {len(artists)}</p>'
             f'<h2>{escape(name)}</h2><p>{escape(item.get("why_here", ""))}</p>'
             f'<a class="artist-link" href="../artists/{escape(artist_slug, quote=True)}.html">View {escape(name)} profile →</a>'
-            + (f'<p class="transition"><strong>Why next:</strong> {escape(transition)}</p>' if transition else "")
-            + '</article>'
+            '</article>'
         )
+        if index < len(artists) and transition:
+            next_name = str(artists[index].get("name", ""))
+            steps.append(
+                f'<div class="path-connector">'
+                f'<p class="path-connector-title"><span class="path-connector-arrow" aria-hidden="true">↓</span>Up next: {escape(next_name)}</p>'
+                f'<p>{escape(transition)}</p></div>'
+            )
     body = f'''<main class="page">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../listening-paths.html">Listening Paths</a> / {escape(path.get("title", slug))}</nav>
     <section class="hero"><p class="eyebrow">Northern Dial Listening Path</p><h1>{escape(path.get("title", slug))}</h1><p class="dek">{escape(path.get("dek", ""))}</p><p class="intro">{escape(path.get("intro", ""))}</p></section>
