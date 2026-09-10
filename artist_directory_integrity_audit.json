@@ -1,46 +1,8 @@
 {
   "directory_accordions": 1215,
   "profile_backed_accordions": 955,
-  "standalone_profile_files": 1141,
-  "issue_count": 6,
-  "issue_types": {
-    "bad_profile_anchor": 1,
-    "bad_profile_cta": 1,
-    "bad_profile_name_link": 1,
-    "duplicate_or_missing_profile_block": 1,
-    "missing_dropdown_bio": 1,
-    "missing_profile_file": 1
-  },
-  "issues": [
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "Donna Makeda",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "Donna Makeda",
-      "detail": "Expected one ./artists/donna-makeda.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "Donna Makeda",
-      "detail": "Expected one View Full Profile link to ./artists/donna-makeda.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "Donna Makeda",
-      "detail": "Expected id=artist-donna-makeda; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "Donna Makeda",
-      "detail": "artists/donna-makeda.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "Donna Makeda",
-      "detail": "Expected 1 artist-profile block; found 0"
-    }
-  ]
+  "standalone_profile_files": 1142,
+  "issue_count": 0,
+  "issue_types": {},
+  "issues": []
 }
