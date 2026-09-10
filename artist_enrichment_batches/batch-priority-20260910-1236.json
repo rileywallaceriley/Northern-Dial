@@ -1,0 +1,56 @@
+{
+  "kinnie starr": {
+    "display_name": "Kinnie Starr",
+    "reviewed": true,
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "directory_summary": "Kinnie Starr is a genre-crossing Canadian singer, rapper, producer, poet and visual artist whose work has moved between hip-hop, rock, spoken word and electronic music since the 1990s. A Juno-nominated solo artist and Juno-winning producer, Starr has also scored film, documented gender inequality in music production and made her Mohawk ancestry and independent creative control central parts of a career built outside easy industry categories.",
+    "bio": "Calgary-born Kinnie Starr emerged in the mid-1990s as an unusually difficult artist to categorize, combining rap, spoken word, guitar-driven rock, pop and multilingual writing. Her 1996 debut Tidy established that hybrid approach before a major-label period with Island/Def Jam ended without a commercial album release. Rather than reshape herself around the label system, Starr returned to independent work with Tune-Up in 2000 and Sun Again in 2003. The latter helped earn her a 2004 Juno nomination for New Artist of the Year and brought a wider Canadian audience to a catalogue that had already been crossing boundaries for years.\n\nStarr kept expanding the range of that work through albums including Anything, A Different Day, Kiss It, From Far Away and Feed the Fire. She has written, recorded, engineered and produced much of her own material, while also working with artists including Tegan and Sara and Nelly Furtado. In 2010, Starr's production work on Digging Roots' We Are... contributed to the album winning the Juno Award for Aboriginal Album of the Year. Her Mohawk ancestry has been a recurring part of her artistic perspective, but her work has resisted being confined to a single Indigenous, hip-hop or singer-songwriter lane.\n\nThat independence extends beyond records. Starr co-produced and hosted the 2016 documentary Play Your Gender, which examined the severe underrepresentation of women in music production, and she later wrote the score for Edge of the Knife, the first feature film made entirely in the Haida language. After a 2015 traffic collision left her with a brain injury, Feed the Fire in 2018 turned recovery, technology and disconnection into part of the album's subject matter. Across music, film, writing and visual art, Starr's significance lies in the way she has treated authorship, genre freedom and cultural identity as inseparable parts of the same creative practice.",
+    "album_titles": [
+      "Tidy",
+      "Tune-Up",
+      "Sun Again",
+      "Anything",
+      "A Different Day",
+      "Kiss It",
+      "From Far Away",
+      "Feed the Fire",
+      "We Are...",
+      "Edge of the Knife"
+    ],
+    "website": "https://kinniestarr.ca/",
+    "sources": [
+      "https://kinniestarr.ca/",
+      "https://ca.billboard.com/fyi/essentials%E2%80%A6-kinnie-starr",
+      "https://deeprootsmusic.ca/2011/06/kinnie-starr/",
+      "https://exclaim.ca/music/article/kinnie_starr-from_far_away_album_stream",
+      "https://www.citizenfreak.com/artists/103546-kinnie-starr"
+    ]
+  },
+  "moka only": {
+    "display_name": "Moka Only",
+    "reviewed": true,
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "directory_summary": "Vancouver rapper, producer and singer Moka Only is one of the most prolific figures in Canadian hip-hop. A co-founder and later member of Swollen Members, he built a much larger parallel identity through dozens of self-produced solo records that blend jazz, soul, left-field rap and melodic experimentation. His long independent run makes him a key link between Vancouver's 1990s underground and Canada's broader culture of artist-run hip-hop.",
+    "bio": "Born Daniel Denton and raised in British Columbia, Moka Only began recording well before Vancouver hip-hop had much national infrastructure. He became part of the city's underground network in the 1990s, recording solo material, working in groups including the early Swollen Members lineup and developing a self-contained approach in which rapping, singing and beatmaking were all parts of the same practice. His 1995 debut Upcoast Relix began a catalogue that would grow at an extraordinary pace, with independent tapes, albums, collaborations and instrumental projects arriving far more frequently than the conventional label cycle allowed.\n\nMoka's best-known mainstream chapter came through Swollen Members. He rejoined the group during its early-2000s commercial breakthrough and appeared on releases including Monsters in the Closet and Heavy, a period that brought major Canadian exposure and multiple Juno wins around the group. But the larger story of his career is the solo work around and after that success. Albums such as The Desired Effect, Vermilion and the long-running Airport series moved between jazzy sample-based production, synthesizers, singing, understated rhyme writing and deliberately low-key experimentation. By 2011, Exclaim! was already describing a discography of more than 60 albums, collaborative projects and beat tapes.\n\nThat volume is not simply a novelty. Moka Only's catalogue represents a durable model of independent Canadian hip-hop built around self-production, home recording and constant stylistic movement rather than a handful of flagship releases. His collaborations have connected him with artists including J Dilla, MF DOOM, Kool Keith and Del the Funky Homosapien, while later records such as Summer 2002 and In and of Itself have continued the same self-directed approach decades into his career. His significance to Canadian rap comes from both sides of that history: participation in one of Vancouver's biggest crossover groups and an unusually deep underground catalogue that kept expanding long after the major-label spotlight moved elsewhere.",
+    "album_titles": [
+      "Upcoast Relix",
+      "Monsters in the Closet",
+      "Heavy",
+      "The Desired Effect",
+      "Vermilion",
+      "Airport",
+      "Summer 2002",
+      "In and of Itself"
+    ],
+    "website": "https://mokaonly.bandcamp.com/",
+    "sources": [
+      "https://exclaim.ca/music/article/moka_only",
+      "https://exclaim.ca/music/article/moka_only-vermilion",
+      "https://urbnet.com/blogs/vinyl-update-timbuktu-ollie-teeba-million-pound-note/posts/7185549/moka-only-in-and-of-itself",
+      "https://mokaonly.bandcamp.com/album/in-and-of-itself",
+      "https://mokaonly.bandcamp.com/album/sex-money-moka"
+    ]
+  }
+}
