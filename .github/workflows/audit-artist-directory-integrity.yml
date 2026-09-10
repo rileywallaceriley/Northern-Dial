@@ -52,3 +52,5 @@ jobs:
         run: |
           echo 'Artist directory integrity defects remain. See artist_directory_integrity_audit.json.' >&2
           exit 1
+
+# Integrity recheck after normalize_artist_back_links.py rollout on 2026-09-10.
