@@ -161,5 +161,63 @@
         "leads_to_next": ""
       }
     ]
+  },
+  "canadian-r-and-b-before-global-toronto": {
+    "title": "Before Toronto Became Global: Canadian R&B Builds a Lane",
+    "dek": "Seven artists trace how Canadian R&B moved from scarce domestic infrastructure to international credibility, setting the stage for Toronto's later global era.",
+    "intro": "Long before Toronto became a shorthand for globally dominant R&B, Canadian singers were building the audience, industry relationships and cross-border credibility that made such a future imaginable. This path follows seven artists from 1990s international breakthroughs through the early-2000s Toronto scene and into a generation that moved increasingly freely between R&B, pop and television. It is a scene-and-era history rather than a claim of direct influence between every stop.",
+    "sources": [
+      "https://junoawards.ca/blog/deborah-coxs-rise-to-the-top/",
+      "https://tamiaworld.com/biography",
+      "https://thecbma.com/artists/glenn-lewis/",
+      "https://thecbma.com/artists/jully-black/",
+      "https://music.apple.com/us/artist/keshia-chant%C3%A9/30598531",
+      "https://ca.billboard.com/music/pop/shawn-desman-interview",
+      "https://www.grammy.com/artists/melanie-fiona/11484/"
+    ],
+    "artists": [
+      {
+        "name": "Deborah Cox",
+        "slug": "deborah-cox",
+        "why_here": "Start with the cross-border breakthrough. Deborah Cox moved from Toronto club work and backing vocals into a major U.S. R&B career, with One Wish and \"Nobody's Supposed to Be Here\" proving a Canadian singer could compete at the genre's highest commercial level.",
+        "leads_to_next": "Tamia widens that story beyond Toronto: another Ontario vocalist built lasting U.S. R&B credibility through classic-soul technique and a deep catalogue rather than one crossover moment."
+      },
+      {
+        "name": "Tamia",
+        "slug": "tamia",
+        "why_here": "Windsor-born Tamia earned Grammy attention through Quincy Jones before her own debut, then built a durable catalogue around \"So Into You,\" \"Stranger in My House\" and \"Officially Missing You.\" Her career shows Canadian R&B establishing longevity inside the U.S. industry.",
+        "leads_to_next": "Glenn Lewis brings the path back to Toronto, where local clubs, producers and collaborative records were beginning to resemble an actual R&B ecosystem."
+      },
+      {
+        "name": "Glenn Lewis",
+        "slug": "glenn-lewis",
+        "why_here": "Glenn Lewis came directly out of Toronto's late-1990s R&B network. World Outside My Window and \"Don't You Forget It\" carried that local development into the neo-soul mainstream, giving the city one of its clearest early-2000s U.S. breakthroughs.",
+        "leads_to_next": "Jully Black shows how the same Toronto ecosystem supported artists who moved between songwriting, soul, hip-hop collaboration and a distinctly Canadian career."
+      },
+      {
+        "name": "Jully Black",
+        "slug": "jully-black",
+        "why_here": "Jully Black helped make Canadian R&B more self-sustaining at home while writing and collaborating across the country's hip-hop scene. Revival and \"Seven Day Fool\" turned years of groundwork into a JUNO-winning national breakthrough.",
+        "leads_to_next": "Keshia Chanté represents the next generation arriving younger, more pop-facing and increasingly connected to U.S. Black music media."
+      },
+      {
+        "name": "Keshia Chanté",
+        "slug": "keshia-chante",
+        "why_here": "Keshia Chanté broke nationally as a teenager with \"Shook,\" \"Unpredictable\" and \"Bad Boy,\" then moved between R&B and dance-pop before co-hosting BET's 106 & Park. Her career reflects a Canadian scene becoming more connected to the U.S. industry.",
+        "leads_to_next": "Shawn Desman shows the same early-2000s infrastructure reaching male pop-R&B, where choreography and dance production became central to the Canadian mainstream."
+      },
+      {
+        "name": "Shawn Desman",
+        "slug": "shawn-desman",
+        "why_here": "Shawn Desman brought R&B vocals, ambitious choreography and dance-pop production into Canadian radio through records such as Shawn Desman, Back for More and Fresh. His later OVO Fest return helped reframe that catalogue as part of the lineage behind Toronto's global era.",
+        "leads_to_next": "Melanie Fiona closes the path by turning Toronto-developed soul craft into Grammy-winning international R&B just before the city's next generation changed the global conversation."
+      },
+      {
+        "name": "Melanie Fiona",
+        "slug": "melanie-fiona",
+        "why_here": "Melanie Fiona closes the path with The Bridge, \"It Kills Me\" and two Grammy wins for \"Fool for You.\" Her success placed a Toronto-born soul singer firmly inside the U.S. R&B establishment on the eve of the city's much larger global breakthrough.",
+        "leads_to_next": ""
+      }
+    ]
   }
 }
