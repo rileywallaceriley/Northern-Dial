@@ -44,7 +44,10 @@ jobs:
           published = set(json.loads(manifest_path.read_text(encoding='utf-8'))) if manifest_path.exists() else set()
 
           for filename in sorted(glob.glob('artist_enrichment_batches/*.json')):
-              batch = json.loads(Path(filename).read_text(encoding='utf-8'))
+              try:
+                  batch = json.loads(Path(filename).read_text(encoding='utf-8'))
+              except json.JSONDecodeError as exc:
+                  raise SystemExit(f'Invalid enrichment JSON in {filename}: {exc}') from exc
               for key, value in batch.items():
                   normalized = str(key).casefold()
                   if isinstance(value, dict):
@@ -62,30 +65,15 @@ jobs:
           manifest_path.write_text(json.dumps(sorted(published), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           PY
 
-      - name: Apply committed enrichment to current static directory
+      - name: Reconcile committed enrichment with current static directory
         run: python3 patch_directory_enrichment.py
-
-      - name: Publish static directory enrichment immediately
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artists.html
-          if git diff --cached --quiet; then
-            echo 'No immediate directory changes to commit.'
-          else
-            git commit -m 'Apply enriched artist directory summaries and profile CTAs'
-            git checkout -- artist_enrichment.json artist_publish_manifest.json
-            git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
-          fi
 
       - name: Build directory from live station catalogue
         continue-on-error: true
         timeout-minutes: 3
         run: python3 build_artists.py
 
-      - name: Reapply committed enrichment after live directory build
+      - name: Reconcile directory after live catalogue build
         run: python3 patch_directory_enrichment.py
 
       - name: Build standalone artist SEO pages
@@ -112,10 +100,11 @@ jobs:
           for key in sorted(set(profiles) | set(enrichments)):
               profile_name, profile = profiles.get(key, ('', {}))
               enrichment_name, enrichment = enrichments.get(key, ('', {}))
-              if not profile and not enrichment.get('reviewed'):
+              if not (profile.get('bio') or enrichment.get('bio')):
                   continue
-              name = profile_name or enrichment_name or key
+              name = enrichment_name or profile_name or key
               researched[str(key).casefold()] = slugify(name)
+              researched[slugify(name)] = slugify(name)
 
           summary_pattern = re.compile(
               r'<summary>(?P<label>.*?)\s*<span class="artist-meta">',
@@ -127,8 +116,7 @@ jobs:
           def replace_summary(match):
               label_html = match.group('label').strip()
               display_text = unescape(tag_pattern.sub('', label_html)).strip()
-              key = display_text.casefold()
-              slug = researched.get(key)
+              slug = researched.get(display_text.casefold()) or researched.get(slugify(display_text))
               if not slug:
                   return match.group(0)
 
@@ -161,6 +149,9 @@ jobs:
               f"approximately {remaining} matched artists remain unlinked."
           )
           PY
+
+      - name: Final directory integrity reconciliation
+        run: python3 patch_directory_enrichment.py
 
       - name: Keep enrichment batches as source of truth
         run: git checkout -- artist_enrichment.json artist_publish_manifest.json
