@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: artist-directory-integrity
@@ -26,5 +26,29 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Audit profile and directory contracts
+        id: integrity
+        continue-on-error: true
         run: python3 audit_artist_directory_integrity.py
+
+      - name: Publish integrity report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artist_directory_integrity_audit.json
+          if git diff --cached --quiet; then
+            echo 'No integrity report changes to commit.'
+          else
+            git commit -m 'Update artist directory integrity audit'
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Enforce integrity result
+        if: steps.integrity.outcome != 'success'
+        run: |
+          echo 'Artist directory integrity defects remain. See artist_directory_integrity_audit.json.' >&2
+          exit 1
