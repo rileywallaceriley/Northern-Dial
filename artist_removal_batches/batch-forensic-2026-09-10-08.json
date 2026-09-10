@@ -1,0 +1,11 @@
+{
+  "Louie Lorenzo": {
+    "classification": "metadata junk/non-artist ingestion artifact",
+    "reason": "Northern Dial's generated artist index contains a single Louie Lorenzo entry whose track title and album field are both the filename-style string 'Drake - Between Us (ft. Slakah the Beatchild) prod. by Häzel'. The underlying 2012 recording is catalogued as Häzel's 'Between Us' featuring Drake and Slakah the Beatchild, with no Louie Lorenzo performer credit. Louie Lorenzo is therefore source/uploader-style metadata leaked into the artist field rather than a distinct credited artist on this recording.",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://wordisbond.bandcamp.com/track/between-us-feat-drake-slakah-the-beatchild",
+      "https://www.nts.live/artists/14397-hazel"
+    ]
+  }
+}
