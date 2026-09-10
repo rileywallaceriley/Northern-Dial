@@ -222,7 +222,7 @@ def insert_profile_action(block, profile_url):
     block = remove_divs_by_class(block, "profile-actions")
     cta = (
         '<div class="profile-actions">'
-        f'<a class="request-link" href="{profile_url}">View Full Profile</a>'
+        f'<a class="profile-page-button" href="{profile_url}">View Full Profile</a>'
         '</div>\n'
     )
     first_track = re.search(r'<div class="track"', block, re.IGNORECASE)
@@ -244,11 +244,34 @@ def cleanup_legacy_actions(html):
 
 
 def patch_directory_styles(html):
-    rule = ".curation-links a:not(:first-child) { color:#1a1a1a; }"
-    if rule not in html:
+    """Keep directory controls consistently styled after generated rebuilds."""
+    curation_rule = ".curation-links a:not(:first-child) { color:#1a1a1a; }"
+    if curation_rule not in html:
         marker = ".curation-links a:first-child { background: #C33; border-color: #C33; color: #fff; }"
         if marker in html:
-            html = html.replace(marker, marker + "\n" + rule, 1)
+            html = html.replace(marker, marker + "\n" + curation_rule, 1)
+
+    button_css = """
+    .profile-actions { margin:12px 0 16px; }
+    .profile-page-button {
+      background:#C33;
+      border:2px solid #C33;
+      border-radius:6px;
+      color:#fff;
+      display:inline-block;
+      font-weight:700;
+      padding:9px 13px;
+      text-decoration:none;
+    }
+    .profile-page-button:hover,
+    .profile-page-button:focus {
+      background:#8B2323;
+      border-color:#8B2323;
+      color:#fff;
+    }
+"""
+    if ".profile-page-button {" not in html:
+        html = html.replace("</style>", button_css + "</style>", 1)
     return html
 
 
@@ -306,8 +329,6 @@ def main():
 
     html = DETAIL_PATTERN.sub(reconcile, html)
 
-    # If a standalone profile has a corresponding directory accordion, that
-    # accordion must now expose all four pieces of the navigation contract.
     problems = []
     for block in DETAIL_PATTERN.findall(html):
         summary_match = SUMMARY_PATTERN.search(block)
