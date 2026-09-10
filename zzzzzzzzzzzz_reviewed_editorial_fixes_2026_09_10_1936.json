@@ -1,0 +1,32 @@
+{
+  "feist": {
+    "display_name": "Feist",
+    "bio": "Leslie Feist built her career across several layers of Canada's independent music community before emerging internationally as a solo artist. After playing in Calgary punk band Placebo and later working in Toronto, she became part of the loose collective around Broken Social Scene while developing the quieter, more spacious songwriting heard on her own records. Let It Die, released internationally in the mid-2000s, introduced that voice to a broader audience through songs including “Mushaboom.”\n\nHer 2007 album The Reminder became the major breakthrough. “1234” gained enormous exposure through its colourful one-take video and an Apple iPod advertisement, while the album reached No. 16 on the Billboard 200 and earned Feist four GRAMMY nominations, including Best New Artist and Best Pop Vocal Album. Rather than chase the brightness of that moment, she followed with the more austere Metals, then Pleasure and Multitudes, continuing to foreground arrangement, texture and emotional detail over conventional pop formulas.\n\nFeist's place in Canadian music is tied both to her solo catalogue and to the collaborative ecosystem that produced it. Broken Social Scene connected her with a generation of Toronto musicians whose projects helped make Canadian indie music internationally visible, while her own success demonstrated that understated, idiosyncratic songwriting could travel far beyond that scene. Her JUNO recognition has continued across eras, including Adult Alternative Album honours for Metals and Multitudes.",
+    "directory_summary": "Leslie Feist moved from Canada's indie-rock network into international singer-songwriter success without losing the intimacy of her work. Her role in Broken Social Scene, the breakthrough of The Reminder and the five-JUNO sweep that followed made her a defining voice of the 2000s Canadian indie generation. Later albums including Metals and Multitudes reinforced a career built on subtle arrangements, emotional precision and resistance to predictable pop formulas.",
+    "album_titles": ["Let It Die", "The Reminder", "Metals", "Pleasure", "Multitudes"],
+    "instagram": "https://www.instagram.com/feistmusic/",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.grammy.com/artists/feist/11476/",
+      "https://listentofeist.com/thereminder",
+      "https://junoawards.ca/awards/past-winners-nominees/page/171/?search_year_val1=2003&sort=DESC&sortby=name"
+    ]
+  },
+  "a tribe called red": {
+    "display_name": "A Tribe Called Red",
+    "bio": "Ottawa electronic group A Tribe Called Red, now known as The Halluci Nation, became a landmark force in contemporary Indigenous music by bringing powwow singing and drums into dialogue with club production, hip-hop, dancehall and electronic bass music. Emerging from the Electric Pow Wow parties in Ottawa, the group created music that was designed for a dance floor but also asserted Indigenous presence inside urban spaces and genres where that presence had often been marginalized or treated as historical rather than contemporary.\n\nThe self-titled debut and Nation II Nation established the group nationally, while We Are the Halluci Nation expanded the concept through collaborations with artists including Tanya Tagaq, Black Bear and Yasiin Bey. Songs such as “R.E.D.” and “Sila” made the project's political and cultural framework inseparable from its sound. JUNO recognition followed across electronic and Indigenous categories, and the group's 2017 JUNO performance with Tanya Tagaq and the Black Bear Singers became a particularly visible presentation of contemporary Indigenous music on a national broadcast.\n\nThe later name The Halluci Nation reflects a broader idea of community that the group had already articulated in its music. Its influence is not simply the fusion of powwow and electronic production; it is the insistence that Indigenous music belongs in the present tense, in clubs, festivals, hip-hop spaces and experimental electronic culture. That approach helped open wider mainstream visibility for a generation of Indigenous artists working across contemporary genres while remaining grounded in distinct cultural traditions.",
+    "directory_summary": "Ottawa's A Tribe Called Red, now The Halluci Nation, transformed Canadian electronic music by bringing powwow singing and drums into club, hip-hop and bass production. Nation II Nation and We Are the Halluci Nation made contemporary Indigenous identity central to the project, while the Electric Pow Wow parties and national JUNO visibility helped widen space for Indigenous artists across modern Canadian genres.",
+    "album_titles": ["Nation II Nation", "We Are the Halluci Nation"],
+    "website": "https://thehallucination.com/",
+    "instagram": "https://www.instagram.com/atribecalledred/",
+    "city": "Ottawa, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://junoawards.ca/blog/indigenous-excellence-at-the-juno-awards/",
+      "https://junoawards.ca/blog/the-junos-creates-space-for-the-contemporary-and-traditional/",
+      "https://junoawards.ca/awards/past-winners-nominees/page/2/?search_year_val1=2003&sort=ASC&sortby=name"
+    ]
+  }
+}
