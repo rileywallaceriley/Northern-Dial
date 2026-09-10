@@ -1,0 +1,12 @@
+{
+  "HalfPit": {
+    "classification": "verified non-Canadian artist",
+    "country": "United States",
+    "reason": "The exact Northern Dial identity is Sean Wallace, aka Half Pit, a member of Half Pit Half Dead. MusicBrainz ties Sean Wallace directly to Snow's 'Rivertown' and identifies him as Half Pit, while a separate artist profile for Half Pit Half Dead lists the group's origin as the United States and identifies Sean Wallace as a member. This is sufficient to classify the HalfPit credit as non-Canadian without relying on Snow's Canadian nationality or recording-location metadata.",
+    "sources": [
+      "https://musicbrainz.org/release/b60be357-64cf-4c4f-a7df-5fe02e14cd3b",
+      "https://musify.club/artist/half-pit-half-dead-564853",
+      "https://www.allmusic.com/album/fear-original-soundtrack--mw0000235079"
+    ]
+  }
+}
