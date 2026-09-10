@@ -27,6 +27,8 @@ def load_json(path, default):
 def main():
     artists = load_lines("library_artists.txt")
     removed = {name.casefold() for name in load_lines("artist_removals.txt")}
+    for filename in sorted(glob.glob("artist_removal_batches/*.txt")):
+        removed.update(name.casefold() for name in load_lines(filename))
 
     reviewed = set()
 
