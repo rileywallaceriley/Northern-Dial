@@ -1,0 +1,11 @@
+{
+  ".E.L.": {
+    "classification": "metadata junk/non-artist ingestion artifact",
+    "reason": "Northern Dial's generated artist index creates a standalone '.E.L.' entry from Spesh K's 'So Alone (feat. X.E.L. & Jugga)' on Media Coverage. The exact 2006 album track is credited by Spotify and Amazon to X.E.L. and Jugga, and Amazon's X.E.L. artist page explicitly lists this Spesh K appearance. There is no '.E.L.' artist in the underlying credit; the leading X was lost during ingestion/parsing. '.E.L.' is therefore a malformed artist token, not a distinct artist identity.",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://open.spotify.com/album/5kpBWvOJ2pofEuNcxDhK7X",
+      "https://music.amazon.com.au/artists/B000QK7RBY/x-e-l"
+    ]
+  }
+}
