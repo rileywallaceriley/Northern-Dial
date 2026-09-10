@@ -1,0 +1,12 @@
+{
+  "DazeOnEast": {
+    "classification": "verified non-Canadian artist",
+    "country": "United States",
+    "reason": "The exact Northern Dial identity is DazeOnEast on Duski's 2021 track 'BUSS DOWN'. The Northern Dial live artist directory and an independent Amazon Music listing both tie DazeOnEast to that exact recording. In a 2019 Nefarious Supply interview, DazeOnEast directly states that he grew up in a small town in South Carolina. This direct artist-level location evidence is sufficient to classify the identity as non-Canadian without inferring nationality from Duski's Canadian origin, collaborators, label or scene associations.",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://music.amazon.com/tracks/B0971JX1CL",
+      "https://nefarioussupply.com/discover-1/tag/Nefarious%2BSupply%2BInterviews"
+    ]
+  }
+}
