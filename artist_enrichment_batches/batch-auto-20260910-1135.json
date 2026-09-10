@@ -28,5 +28,19 @@
       "https://torontolife.com/culture/heres-like-dj-raptors-game/",
       "https://www.socanmagazine.ca/features/djs-are-turning-the-tables/"
     ]
+  },
+  "88glam": {
+    "display_name": "88GLAM",
+    "bio": "Toronto rappers Derek Wise and 88Camino formed 88GLAM in 2017 after both had developed solo identities around the city's Get Home Safe circle. Their self-titled debut mixtape arrived that year with the NAV collaboration \"Bali\" and the single \"12,\" establishing a nocturnal sound built from melodic trap, R&B phrasing and icy production. The project entered the Canadian albums chart and helped place the duo within the broader wave of Toronto rap that was reaching international audiences through streaming and the city's increasingly influential label ecosystem.\n\nThe pair signed with XO and Republic and followed with 88GLAM2 in 2018, featuring NAV and Gunna. The period brought four Juno nominations across 2019 and 2020, including Breakthrough Group of the Year, Group of the Year and Rap Recording of the Year recognition. Their music refined a specific late-2010s Toronto aesthetic: woozy synths, luxury imagery, melodic flows and trap production that sounded connected to the city without simply reproducing the work of its biggest stars.\n\nAfter separating from XO and Republic, 88GLAM continued independently and eventually released Close to Heaven Far from God in 2022, their final album as a duo. Their run was relatively short, but it captured an important transition in Canadian rap, when Toronto artists could move quickly from local online momentum to global streaming audiences. 88GLAM's catalogue remains a useful snapshot of that era and of the network linking Get Home Safe, XO, NAV and the city's melodic-trap scene.",
+    "directory_summary": "Toronto duo 88GLAM, formed by Derek Wise and 88Camino, helped define the city's late-2010s melodic-trap sound. Their self-titled debut and 88GLAM2 turned the NAV-assisted \"Bali\" and other atmospheric records into national momentum, leading to four Juno nominations across 2019 and 2020. Though the duo's run ended after 2022's Close to Heaven Far from God, their catalogue captures a key moment when Toronto rap was becoming a global streaming force.",
+    "album_titles": ["88GLAM", "88GLAM2", "Close to Heaven Far from God"],
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://thecbma.com/artists/88glam/",
+      "https://music.apple.com/us/artist/88glam/1304591819",
+      "https://www.allmusic.com/artist/88glam-mn0003687960"
+    ]
   }
 }
