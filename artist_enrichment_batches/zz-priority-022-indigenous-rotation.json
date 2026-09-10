@@ -1,0 +1,32 @@
+{
+  "a$h da hunter": {
+    "display_name": "A$h Da Hunter",
+    "bio": "Arizona rapper A$h Da Hunter is a member of the Yavapai-Apache Nation and a descendant of Hopi people, grounding her music in reservation life, ceremony and contemporary Native identity. Her writing is candid and direct, using hip-hop as a space to talk about culture, survival, confidence and the realities of being a Native woman in a genre where Indigenous voices remain underrepresented. Rather than treating identity as a branding device, she places it inside the everyday language and perspective of her songs.\n\nHer 2023 project Playing With Prey introduced a wider audience to that approach, while the 2024 album HUNTING SZN sharpened it through tracks such as \"Stoodis,\" \"Native Girl\" and \"Blessing or a Curse.\" The record balances aggressive rap performance with explicitly Indigenous references and collaborations, building a catalogue that can move between humour, confrontation and community-minded storytelling without flattening any of those elements into a single message.\n\nA$h Da Hunter's profile has continued to grow through collaborations and the wider Indigenous hip-hop circuit. In 2026 she was featured alongside Travis Thompson and Wiidaaseh in Alexandra Lazarowich's documentary Turtle Island Rap, a film centred on emerging Indigenous hip-hop artists and the personal as well as artistic worlds behind their music. Her importance within Northern Dial's rotation is not simply that she is an Indigenous rapper, but that her work shows contemporary Native hip-hop as active, stylistically current and connected to lived community rather than framed as a historical category.",
+    "directory_summary": "Arizona rapper A$h Da Hunter is a member of the Yavapai-Apache Nation and a Hopi descendant whose music connects reservation life, Native identity and hard-edged contemporary hip-hop. Her projects Playing With Prey and HUNTING SZN include tracks such as \"Native Girl\" and \"Stoodis,\" while her profile expanded further through the 2026 documentary Turtle Island Rap. Her work brings an unapologetically contemporary Indigenous woman's perspective into a scene where Native voices are still too rarely centred.",
+    "album_titles": ["Playing With Prey", "HUNTING SZN"],
+    "city": "Arizona",
+    "country": "United States",
+    "reviewed": true,
+    "sources": [
+      "https://ashdahunter.bandcamp.com/",
+      "https://ashdahunter.bandcamp.com/album/hunting-szn",
+      "https://viff.org/whats-on/viff26-turtle-island-rap/",
+      "https://renatayazzie.com/north-american-indigenous-music-resources/"
+    ]
+  },
+  "travis thompson": {
+    "display_name": "Travis Thompson",
+    "bio": "Seattle-area rapper Travis Thompson grew out of the Pacific Northwest's youth-poetry and independent hip-hop communities, developing a style built around dense internal rhyme, humour and highly personal storytelling. Thompson is Diné on his father's side, with family ties to Fort Defiance, Arizona, and he has spoken about carrying that identity as one part of a broader personal story rather than reducing his work to a single cultural label. Early momentum came through local releases and live work before national attention expanded after his appearances around Macklemore's orbit and a 2017 performance on The Tonight Show Starring Jimmy Fallon.\n\nThompson's catalogue moved from independent mixtapes into projects including YOUGOOD?, Runaways and BLVD BOY, while collaborations with artists such as Macklemore, G-Eazy, Logic and KYLE widened his audience. His songwriting often returns to family, addiction, ambition, neighbourhood life and the tension between public success and the communities that shaped him. That grounded perspective also made him a natural fit for Reservation Dogs, where he appeared on screen and had music featured, connecting his rap career with one of the most visible contemporary Indigenous television projects in North America.\n\nHis ties to Indigenous hip-hop became even more explicit through collaborations with Canada's Snotty Nose Rez Kids, including the 2024 single \"KALEIDOSCOPE,\" and through his inclusion in the 2026 documentary Turtle Island Rap alongside A$h Da Hunter and Toronto producer-rapper Wiidaaseh. Thompson's presence in Northern Dial's rotation broadens the Indigenous hip-hop conversation beyond national borders: his career links Diné identity, Seattle rap and collaborations with Canadian First Nations artists into the larger contemporary music network of Turtle Island.",
+    "directory_summary": "Seattle-area rapper Travis Thompson is a Diné artist whose highly personal hip-hop connects Pacific Northwest youth-poetry roots with a growing international career. His catalogue includes YOUGOOD?, Runaways and BLVD BOY, alongside collaborations with Macklemore, Logic, G-Eazy and Canada's Snotty Nose Rez Kids. Thompson also appeared in Reservation Dogs and in the 2026 documentary Turtle Island Rap, placing him within a contemporary Indigenous hip-hop network that crosses the Canada-U.S. border.",
+    "album_titles": ["YOUGOOD?", "Runaways", "BLVD BOY"],
+    "city": "Burien, Washington",
+    "country": "United States",
+    "reviewed": true,
+    "sources": [
+      "https://navajotimes.com/ae/people/hip-hop-artist-travis-thompson-will-perform-in-fort-defiance/",
+      "https://www.sonymusic.ca/press_release/snotty-nose-rez-kids-join-forces-with-travis-thompson-for-wavy-new-single-visualizer",
+      "https://www.knkx.org/arts-culture/2022-08-23/local-rapper-travis-thompson-makes-his-small-screen-debut-in-reservation-dogs",
+      "https://viff.org/whats-on/viff26-turtle-island-rap/"
+    ]
+  }
+}
