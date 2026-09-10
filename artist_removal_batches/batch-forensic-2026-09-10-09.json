@@ -1,0 +1,12 @@
+{
+  "Pearl": {
+    "classification": "metadata junk/non-artist ingestion artifact",
+    "reason": "Northern Dial's generated artist index contains a standalone 'Pearl' entry for 'Paraiso (Maylee Todd Remix)'. The underlying 2023 release Coast 2 Coast Remixes credits the track to Pearl & The Oysters and Maylee Todd, with Pearl & The Oysters as the artist/project. The isolated 'Pearl' token is therefore a truncated ingestion/parser artifact rather than a distinct credited performer on this recording.",
+    "sources": [
+      "https://www.northerndial.ca/artists.html",
+      "https://pearlandtheoysters.bandcamp.com/track/paraiso-maylee-todd-remix",
+      "https://music.apple.com/us/song/1714940614",
+      "https://www.stonesthrow.com/news/pearl-the-oysters-coast-2-coast-remixes/"
+    ]
+  }
+}
