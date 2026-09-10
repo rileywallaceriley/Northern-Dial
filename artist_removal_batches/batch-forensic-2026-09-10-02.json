@@ -1,0 +1,12 @@
+{
+  "Northside Archives": {
+    "classification": "metadata junk/non-artist archival catalog credit",
+    "country": "Canada",
+    "reason": "The exact catalog identity is not a performing artist. Streaming metadata credits Northside Archives across the archival compilation 'Jane & Finch Most Wanted, Vol. 1', whose tracklist is organized around named Jane & Finch artists/crews and interview/skit material such as Young Many Eyes, Dukie aka Frank White, Shellz & PD Crack, Young Offenders and Smugglaz. Independent institutional sources describe the Northside Hip Hop Archive as a Toronto-based digital archive preserving Canadian hip-hop history rather than a recording act. Treat the Northside Archives artist credit as an archive/compilation wrapper created by distribution metadata, not as a standalone artist profile.",
+    "sources": [
+      "https://music.amazon.com/tracks/B0CR18T3BF",
+      "https://www.archives.gov.on.ca/ao-content/media/uploads/2025/08/Research_Guide_Black_Histories_EN-1.pdf",
+      "https://ago.ca/events/fab-5-freddy-archiving-hip-hop"
+    ]
+  }
+}
