@@ -1,0 +1,30 @@
+name: Audit artist directory integrity
+
+on:
+  push:
+    paths:
+      - 'artists.html'
+      - 'artists/**'
+      - 'artist_enrichment_batches/**'
+      - 'artist_profiles.json'
+      - 'build_artist_pages.py'
+      - 'patch_directory_enrichment.py'
+      - 'audit_artist_directory_integrity.py'
+      - '.github/workflows/audit-artist-directory-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: artist-directory-integrity
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Audit profile and directory contracts
+        run: python3 audit_artist_directory_integrity.py
