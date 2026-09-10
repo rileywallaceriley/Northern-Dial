@@ -174,6 +174,16 @@ def render_profile(profile, enrichment=None):
     return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
 
 
+def canonical_display_name(raw_name, profile, enrichment):
+    """Prefer reviewed editorial naming over raw station credit formatting."""
+    return str(
+        enrichment.get("display_name")
+        or profile.get("display_name")
+        or profile.get("name")
+        or raw_name
+    )
+
+
 def render_groups(groups, profiles, enrichments):
     rendered = []
     previous_letter = None
@@ -184,9 +194,12 @@ def render_groups(groups, profiles, enrichments):
         if letter != previous_letter:
             anchor = f'      <div id="letter-{letter}" class="letter-anchor" aria-hidden="true"></div>\n'
             previous_letter = letter
-        search = escape(name.casefold(), quote=True)
-        request_url = f"./index.html?request={quote(name)}"
         songs = list(group["songs"].values())
+        profile = profiles.get(name.casefold(), {})
+        enrichment = enrichments.get(name.casefold(), {})
+        display_name = canonical_display_name(name, profile, enrichment)
+        search = escape(f"{name} {display_name}".casefold(), quote=True)
+        request_url = f"./index.html?request={quote(name)}"
         tracks = []
         for song in sorted(songs, key=lambda value: (value["title"].casefold(), value["album"].casefold())):
             title = song["title"]
@@ -198,24 +211,25 @@ def render_groups(groups, profiles, enrichments):
                 f'<div class="track-album">{escape(album)}</div></div>'
                 f'<a class="request-link" href="{request_url}">Request this artist</a></div>'
             )
-        profile = profiles.get(name.casefold(), {})
-        enrichment = enrichments.get(name.casefold(), {})
         profile_html = render_profile(profile, enrichment)
         has_artist_page = bool(profile) or bool(enrichment.get("reviewed"))
+        details_id = ""
         if has_artist_page:
-            profile_url = f"./artists/{slugify(name)}.html"
+            slug = slugify(display_name)
+            profile_url = f"./artists/{slug}.html"
+            details_id = f' id="artist-{escape(slug, quote=True)}"'
             artist_name_html = (
                 f'<a class="artist-page-link" href="{profile_url}" '
-                f'onclick="event.stopPropagation()">{escape(name)}</a>'
+                f'onclick="event.stopPropagation()">{escape(display_name)}</a>'
             )
             profile_action_html = (
-                f'<div class="profile-actions"><a class="request-link" href="{profile_url}">View Full Profile</a></div>'
+                f'<div class="profile-actions"><a class="profile-page-button" href="{profile_url}">View Full Profile</a></div>'
             )
         else:
             artist_name_html = escape(name)
             profile_action_html = ""
         rendered.append(
-            anchor + f'      <details data-search="{search}">'
+            anchor + f'      <details{details_id} data-search="{search}">'
             f'<summary>{artist_name_html} <span class="artist-meta">'
             f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
             + profile_html + "\n" + profile_action_html + "\n" + "\n".join(tracks) + "</details>"
