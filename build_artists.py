@@ -27,7 +27,7 @@ REMOVAL_FILE = "artist_removals.txt"
 REMOVAL_BATCH_DIR = "artist_removal_batches"
 ENRICHMENT_BATCH_DIR = "artist_enrichment_batches"
 CREDIT_SEPARATOR = re.compile(
-    r"\s*(?:,|/|&|\+|×|\bx\b|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
+    r"\s*(?:,|/|&|\+|×|(?<!\S)x(?!\S)|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*",
     re.IGNORECASE,
 )
 
@@ -113,169 +113,174 @@ def catalogue_rows():
     first = fetch_page(1)
     pages = int(first.get("total_pages") or 1)
     page_data = [first]
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        for start in range(2, pages + 1, 12):
-            page_data.extend(executor.map(fetch_page, range(start, min(start + 12, pages + 1))))
-    return [row for page in page_data for row in (page.get("rows") or [])]
+    if pages > 1:
+        with ThreadPoolExecutor(max_workers=min(8, pages - 1)) as executor:
+            page_data.extend(executor.map(fetch_page, range(2, pages + 1)))
+
+    rows = []
+    for data in page_data:
+        for row in data.get("rows", []):
+            rows.append(row)
+    return rows
 
 
-def build_groups(rows, hidden):
-    groups = {}
-    for item in rows:
-        song = item.get("song") or item
-        song_key = song.get("id") or f"{song.get('artist', 'Unknown Artist')}:{song.get('title', '')}"
-        for name in split_artists(song.get("artist")):
-            key = name.casefold()
-            group = groups.setdefault(key, {"name": name, "songs": {}})
-            group["songs"].setdefault(song_key, {
-                "title": song.get("title") or "Unknown title",
-                "album": song.get("album") or song.get("genre") or "Northern Dial library",
-            })
-    return sorted(
-        (group for key, group in groups.items() if key not in hidden),
-        key=lambda group: group["name"].casefold(),
-    )
+def normalize_track(row):
+    song = row.get("song") or {}
+    artist = clean_artist(song.get("artist"))
+    title = str(song.get("title") or "Unknown title").strip() or "Unknown title"
+    album = str(song.get("album") or "Northern Dial library").strip() or "Northern Dial library"
+    request_id = row.get("request_id") or row.get("id") or ""
+    return artist, title, album, request_id
 
 
-def render_profile(profile, enrichment=None):
-    enrichment = enrichment or {}
-    if not profile and not enrichment.get("reviewed"):
+def build_catalogue(rows):
+    removals = hidden_artists()
+    by_artist = {}
+    for row in rows:
+        artist_credit, title, album, request_id = normalize_track(row)
+        for artist in split_artists(artist_credit):
+            if artist.casefold() in removals:
+                continue
+            by_artist.setdefault(artist, []).append(
+                {"title": title, "album": album, "request_id": request_id}
+            )
+    return by_artist
+
+
+def profile_for(artist, enrichments, profiles):
+    key = artist.casefold()
+    profile = {}
+    if isinstance(profiles.get(key), dict):
+        profile.update(profiles[key])
+    if isinstance(enrichments.get(key), dict):
+        profile.update(enrichments[key])
+    return profile
+
+
+def render_source_links(sources):
+    if not sources:
         return ""
-    bio = enrichment.get("directory_summary") or profile.get("bio") or enrichment.get("bio", "")
-    album_titles = enrichment.get("album_titles", [])
     links = []
-    website = profile.get("website") or enrichment.get("website")
-    instagram = profile.get("instagram") or enrichment.get("instagram")
-    if website:
-        links.append(f'<a href="{escape(website, quote=True)}" target="_blank" rel="noopener">Official site</a>')
-    if instagram:
-        links.append(f'<a href="{escape(instagram, quote=True)}" target="_blank" rel="noopener">Instagram</a>')
-    if profile.get("feature"):
-        links.append(f'<a href="{escape(profile["feature"], quote=True)}">Northern Dial feature</a>')
-    if enrichment.get("musicbrainz_artist_id"):
-        mbid = escape(enrichment["musicbrainz_artist_id"], quote=True)
-        links.append(f'<a href="https://musicbrainz.org/artist/{mbid}" target="_blank" rel="noopener">MusicBrainz</a>')
-    sources = [url for url in enrichment.get("sources", []) if url]
-    source_html = ""
-    if sources:
-        source_links = " · ".join(
-            f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener">Source {index}</a>'
-            for index, url in enumerate(sources, 1)
-        )
-        source_html = f'<div class="profile-sources"><span>Sources:</span> {source_links}</div>'
-    location = enrichment.get("city") or enrichment.get("country")
-    location_html = f'<p class="profile-location">{escape(location)}</p>' if location else ""
-    link_html = f'<div class="profile-links">{" · ".join(links)}</div>' if links else ""
-    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", bio) if part.strip()]
-    bio_html = "".join(
-        f'<p class="profile-bio">{render_editorial_text(part, album_titles)}</p>'
-        for part in paragraphs
-    )
-    return f'<div class="artist-profile">{bio_html}{location_html}{link_html}{source_html}</div>'
-
-
-def canonical_display_name(raw_name, profile, enrichment):
-    """Prefer reviewed editorial naming over raw station credit formatting."""
-    return str(
-        enrichment.get("display_name")
-        or profile.get("display_name")
-        or profile.get("name")
-        or raw_name
-    )
-
-
-def render_groups(groups, profiles, enrichments):
-    rendered = []
-    previous_letter = None
-    for group in groups:
-        name = group["name"]
-        letter = name[0].casefold() if name and name[0].isalpha() else "0"
-        anchor = ""
-        if letter != previous_letter:
-            anchor = f'      <div id="letter-{letter}" class="letter-anchor" aria-hidden="true"></div>\n'
-            previous_letter = letter
-        songs = list(group["songs"].values())
-        profile = profiles.get(name.casefold(), {})
-        enrichment = enrichments.get(name.casefold(), {})
-        display_name = canonical_display_name(name, profile, enrichment)
-        search = escape(f"{name} {display_name}".casefold(), quote=True)
-        request_url = f"./index.html?request={quote(name)}"
-        tracks = []
-        for song in sorted(songs, key=lambda value: (value["title"].casefold(), value["album"].casefold())):
-            title = song["title"]
-            album = song["album"]
-            track_search = escape(f"{name} {title} {album}".casefold(), quote=True)
-            tracks.append(
-                f'        <div class="track" data-search="{track_search}">'
-                f'<div><div class="track-title">{escape(title)}</div>'
-                f'<div class="track-album">{escape(album)}</div></div>'
-                f'<a class="request-link" href="{request_url}">Request this artist</a></div>'
-            )
-        profile_html = render_profile(profile, enrichment)
-        has_artist_page = bool(profile) or bool(enrichment.get("reviewed"))
-        details_id = ""
-        if has_artist_page:
-            slug = slugify(display_name)
-            profile_url = f"./artists/{slug}.html"
-            details_id = f' id="artist-{escape(slug, quote=True)}"'
-            artist_name_html = (
-                f'<a class="artist-page-link" href="{profile_url}" '
-                f'onclick="event.stopPropagation()">{escape(display_name)}</a>'
-            )
-            profile_action_html = (
-                f'<div class="profile-actions"><a class="profile-page-button" href="{profile_url}">View Full Profile</a></div>'
-            )
+    for index, source in enumerate(sources, start=1):
+        if isinstance(source, str):
+            url = source
+            label = f"Source {index}"
+        elif isinstance(source, dict):
+            url = source.get("url") or ""
+            label = source.get("label") or f"Source {index}"
         else:
-            artist_name_html = escape(name)
-            profile_action_html = ""
-        rendered.append(
-            anchor + f'      <details{details_id} data-search="{search}">'
-            f'<summary>{artist_name_html} <span class="artist-meta">'
-            f'({len(songs)} track{"" if len(songs) == 1 else "s"})</span></summary>'
-            + profile_html + "\n" + profile_action_html + "\n" + "\n".join(tracks) + "</details>"
+            continue
+        if not url:
+            continue
+        links.append(
+            f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(label)}</a>'
         )
-    return "\n".join(rendered)
+    if not links:
+        return ""
+    return '<p class="artist-sources">Sources: ' + " · ".join(links) + "</p>"
 
 
-def render_letter_nav(groups):
-    letters = []
-    for group in groups:
-        letter = group["name"][0].casefold() if group["name"] and group["name"][0].isalpha() else "0"
-        if letter not in letters:
-            letters.append(letter)
-    options = ['<option value="">Jump to a letter…</option>', '<option value="artistList">All artists</option>']
-    options.extend(f'<option value="letter-{letter}">{"#" if letter == "0" else letter.upper()}</option>' for letter in letters)
-    return (
-        '    <nav class="letter-nav" aria-label="Catalogue navigation">'
-        '<label for="letterJump">Jump to:</label><select id="letterJump">'
-        '<optgroup label="Artist sections">' + "".join(options) + '</optgroup></select>'
-        '<a class="top-link" href="#top">Back to top ↑</a></nav>'
-    )
+def render_artist_links(profile):
+    links = []
+    for label, field in (("Official site", "official_site"), ("Instagram", "instagram")):
+        url = profile.get(field)
+        if url:
+            links.append(
+                f'<a href="{escape(str(url), quote=True)}" target="_blank" rel="noopener noreferrer">{label}</a>'
+            )
+    if not links:
+        return ""
+    return '<p class="artist-links">' + " · ".join(links) + "</p>"
 
 
-def replace_block(template, start_marker, end_marker, content):
-    start = template.index(start_marker) + len(start_marker)
-    end = template.index(end_marker, start)
-    return template[:start] + "\n" + content + "\n" + template[end:]
+def render_profile(artist, tracks, profile):
+    slug = slugify(artist)
+    title = escape(artist)
+    count = len(tracks)
+    reviewed = bool(profile.get("reviewed"))
+    bio = profile.get("bio") if reviewed else None
+    location = profile.get("location") if reviewed else None
+    album_titles = {track.get("album") for track in tracks if track.get("album")}
+
+    lines = [
+        f'<article class="artist-card" id="artist-{slug}" data-artist="{escape(artist, quote=True)}">',
+        '  <details class="artist-details">',
+        f'    <summary><span class="artist-name">{title}</span> <span class="track-count">({count} track{"s" if count != 1 else ""})</span></summary>',
+        '    <div class="artist-body">',
+    ]
+    if bio:
+        lines.append(f'      <p class="artist-bio">{render_editorial_text(bio, album_titles)}</p>')
+    if location:
+        lines.append(f'      <p class="artist-location">{escape(str(location))}</p>')
+    links = render_artist_links(profile)
+    if links:
+        lines.append("      " + links)
+    sources = render_source_links(profile.get("sources") or [])
+    if sources:
+        lines.append("      " + sources)
+    if reviewed:
+        profile_url = f"/artists/{slug}.html"
+        lines.append(f'      <p class="artist-profile-link"><a href="{profile_url}">View Full Profile</a></p>')
+
+    lines.append('      <div class="artist-track-list">')
+    for track in sorted(tracks, key=lambda item: item["title"].casefold()):
+        request_id = track.get("request_id")
+        if request_id:
+            request_url = f"/?request_id={quote(str(request_id))}"
+            request = f'<a class="request-track" href="{request_url}">Request this artist</a>'
+        else:
+            request = ""
+        lines.extend(
+            [
+                '        <div class="artist-track">',
+                f'          <span class="track-title">{escape(track["title"])}</span>',
+                f'          <span class="track-album">{escape(track["album"])}</span>',
+                (f"          {request}" if request else ""),
+                "        </div>",
+            ]
+        )
+    lines.extend(['      </div>', '    </div>', '  </details>', '</article>'])
+    return "\n".join(line for line in lines if line != "")
+
+
+def replace_between(text, start_marker, end_marker, replacement):
+    start = text.index(start_marker) + len(start_marker)
+    end = text.index(end_marker, start)
+    return text[:start] + "\n" + replacement.rstrip() + "\n      " + text[end:]
 
 
 def main():
     rows = catalogue_rows()
-    groups = build_groups(rows, hidden_artists())
-    with open(PROFILE_FILE, "r", encoding="utf-8") as handle:
-        profiles = {key.casefold(): value for key, value in json.load(handle).items()}
+    by_artist = build_catalogue(rows)
     enrichments = load_enrichments()
-    with open(TEMPLATE, "r", encoding="utf-8") as handle:
-        template = handle.read()
-    if CATALOGUE_START not in template or CATALOGUE_END not in template:
-        raise SystemExit(f"Catalogue markers not found in {TEMPLATE}")
-    output = replace_block(template, CATALOGUE_START, CATALOGUE_END, render_groups(groups, profiles, enrichments))
-    if NAV_START not in output or NAV_END not in output:
-        raise SystemExit(f"Letter navigation markers not found in {TEMPLATE}")
-    output = replace_block(output, NAV_START, NAV_END, render_letter_nav(groups))
-    with open(TEMPLATE, "w", encoding="utf-8") as handle:
-        handle.write(output)
-    print(f"Generated {len(groups):,} artists and {len(rows):,} songs in {TEMPLATE}")
+    raw_profiles = json.loads(Path(PROFILE_FILE).read_text(encoding="utf-8")) if Path(PROFILE_FILE).exists() else {}
+    profiles = {str(key).casefold(): value for key, value in raw_profiles.items()}
+
+    artists = sorted(by_artist, key=str.casefold)
+    catalogue = "\n".join(
+        render_profile(artist, by_artist[artist], profile_for(artist, enrichments, profiles))
+        for artist in artists
+    )
+    letters = []
+    seen = set()
+    for artist in artists:
+        first = artist[0].upper() if artist else "#"
+        letter = first if first.isalpha() else "#"
+        if letter not in seen:
+            seen.add(letter)
+            letters.append(letter)
+    nav = " ".join(
+        f'<a href="#artist-{slugify(next(a for a in artists if ((a[0].upper() if a else "#") if (a[0].upper() if a else "#").isalpha() else "#") == letter))}">{escape(letter)}</a>'
+        for letter in letters
+    )
+
+    template = Path(TEMPLATE).read_text(encoding="utf-8")
+    template = replace_between(template, CATALOGUE_START, CATALOGUE_END, catalogue)
+    template = replace_between(template, NAV_START, NAV_END, nav)
+    Path(TEMPLATE).write_text(template, encoding="utf-8")
+
+    Path("library_artists.txt").write_text("\n".join(artists) + "\n", encoding="utf-8")
+    print(f"Wrote {len(artists):,} artists from {len(rows):,} catalogue rows")
 
 
 if __name__ == "__main__":
