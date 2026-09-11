@@ -216,18 +216,52 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   text-decoration: none !important;
 }
 
-/* Keep the newest blog story prominent without forcing a two-row card height. */
+/* Desktop blog lead: one large feature with two compact next-story cards beside it. */
 @media (min-width: 901px) {
+  .card-grid {
+    grid-auto-flow: dense !important;
+  }
+
   .card-grid .nd-featured-story {
     grid-column: span 2 !important;
-    grid-row: auto !important;
-    align-self: start !important;
+    grid-row: span 2 !important;
+    align-self: stretch !important;
   }
+
   .card-grid .nd-featured-story .card-body {
-    flex: 0 0 auto !important;
+    flex: 1 1 auto !important;
   }
-  .card-grid .nd-featured-story .card-excerpt {
-    flex: 0 0 auto !important;
-    margin-bottom: 20px !important;
+
+  .card-grid > article.card:nth-child(2),
+  .card-grid > article.card:nth-child(3) {
+    grid-column: 3 !important;
+    min-height: 0 !important;
+  }
+
+  .card-grid > article.card:nth-child(2) > a:first-child,
+  .card-grid > article.card:nth-child(3) > a:first-child,
+  .card-grid > article.card:nth-child(2) .card-date,
+  .card-grid > article.card:nth-child(3) .card-date,
+  .card-grid > article.card:nth-child(2) .card-accent,
+  .card-grid > article.card:nth-child(3) .card-accent,
+  .card-grid > article.card:nth-child(2) .card-excerpt,
+  .card-grid > article.card:nth-child(3) .card-excerpt {
+    display: none !important;
+  }
+
+  .card-grid > article.card:nth-child(2) .card-body,
+  .card-grid > article.card:nth-child(3) .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 100% !important;
+    padding: 26px 24px !important;
+  }
+
+  .card-grid > article.card:nth-child(2) .card-title,
+  .card-grid > article.card:nth-child(3) .card-title {
+    font-size: 1.45rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 24px !important;
   }
 }
