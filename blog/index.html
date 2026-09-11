@@ -25,66 +25,18 @@
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://www.northerndial.ca/blog/rochelle-jordan-disc-2-remix-series.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://www.northerndial.ca/blog/m-is-for-montreal-part-1.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://www.northerndial.ca/blog/enola-bedard.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://www.northerndial.ca/blog/five-canadian-artists-northern-dial.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://www.northerndial.ca/blog/koko-love.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://www.northerndial.ca/blog/lia-pappas-kemps.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://www.northerndial.ca/blog/livingthing.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "url": "https://www.northerndial.ca/blog/ghostboyrj.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "url": "https://www.northerndial.ca/blog/tauro.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "url": "https://www.northerndial.ca/blog/haley-smalls.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 11,
-        "url": "https://www.northerndial.ca/blog/lov.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 12,
-        "url": "https://www.northerndial.ca/blog/puma-june.html"
-      }
+      {"@type":"ListItem","position":1,"url":"https://www.northerndial.ca/blog/rochelle-jordan-disc-2-remix-series.html"},
+      {"@type":"ListItem","position":2,"url":"https://www.northerndial.ca/blog/m-is-for-montreal-part-1.html"},
+      {"@type":"ListItem","position":3,"url":"https://www.northerndial.ca/blog/enola-bedard.html"},
+      {"@type":"ListItem","position":4,"url":"https://www.northerndial.ca/blog/five-canadian-artists-northern-dial.html"},
+      {"@type":"ListItem","position":5,"url":"https://www.northerndial.ca/blog/koko-love.html"},
+      {"@type":"ListItem","position":6,"url":"https://www.northerndial.ca/blog/lia-pappas-kemps.html"},
+      {"@type":"ListItem","position":7,"url":"https://www.northerndial.ca/blog/livingthing.html"},
+      {"@type":"ListItem","position":8,"url":"https://www.northerndial.ca/blog/ghostboyrj.html"},
+      {"@type":"ListItem","position":9,"url":"https://www.northerndial.ca/blog/tauro.html"},
+      {"@type":"ListItem","position":10,"url":"https://www.northerndial.ca/blog/haley-smalls.html"},
+      {"@type":"ListItem","position":11,"url":"https://www.northerndial.ca/blog/lov.html"},
+      {"@type":"ListItem","position":12,"url":"https://www.northerndial.ca/blog/puma-june.html"}
     ]
   }
 }
@@ -93,774 +45,104 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background:#fff; color:#1a1a1a; font-family:'Roboto Condensed',sans-serif; font-weight:400; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    header { background:#fff; padding:24px 24px 20px; text-align:center; border-bottom:3px solid #CC3333; }
+    .site-logo img { max-width:240px; width:65%; height:auto; display:block; margin:0 auto; }
+    nav { background:#1a1a1a; border-bottom:2px solid #CC3333; position:sticky; top:0; z-index:100; }
+    nav ul { display:flex; flex-wrap:wrap; justify-content:center; list-style:none; max-width:1200px; margin:0 auto; padding:0; }
+    nav ul li a { display:block; padding:14px 28px; font-family:'Oswald',sans-serif; font-weight:700; font-size:.95rem; letter-spacing:.12em; text-transform:uppercase; color:#fff; transition:color .2s,background .2s; white-space:nowrap; }
+    nav ul li a:hover, nav ul li a:focus, nav ul li a.active { background:#262626; color:#CC3333; }
+    nav ul li a.active { border-bottom:3px solid #CC3333; }
+    .page-header { background:#fff; padding:40px 24px 32px; text-align:center; border-bottom:3px solid #CC3333; }
+    .page-header h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,5vw,3.2rem); letter-spacing:.06em; color:#1a1a1a; margin-bottom:8px; }
+    .page-header .subheading { font-family:'Roboto Condensed',sans-serif; font-size:1.05rem; color:#555; letter-spacing:.04em; }
+    main { max-width:1200px; margin:0 auto; padding:56px 24px 72px; }
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:32px; }
+    .card { background:#fff; border:1px solid #e0e0e0; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow .25s,transform .25s; }
+    .card:hover { box-shadow:0 8px 30px rgba(195,51,51,.4); transform:translateY(-3px); }
+    .card-body { background:#fff; padding:28px 24px 24px; flex:1; display:flex; flex-direction:column; }
+    .card-date { font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#CC3333; margin-bottom:10px; }
+    .card-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:1.4rem; letter-spacing:.02em; color:#1a1a1a; margin-bottom:12px; line-height:1.2; }
+    .card-excerpt { font-size:.97rem; color:#444; line-height:1.65; flex:1; margin-bottom:20px; }
+    .card-accent { height:3px; background:#CC3333; margin:0 -24px 20px; }
+    .card-link { font-family:'Oswald',sans-serif; font-weight:700; font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; color:#CC3333; display:inline-flex; align-items:center; gap:6px; transition:gap .2s; }
+    .card-link:hover { gap:10px; }
+    .card-link::after { content:'→'; }
+    @media (max-width:640px) { nav ul li a { flex:1 1 33.333%; padding:12px 6px; font-size:.78rem; text-align:center; } .card-grid { grid-template-columns:1fr; } }
+    .nd-modal { position:fixed; inset:0; background:rgba(0,0,0,.8); z-index:10001; display:none; align-items:center; justify-content:center; padding:20px; }
+    .nd-modal.show { display:flex; }
+    .nd-modal-content { background:white; border-radius:12px; padding:30px; max-width:600px; width:100%; max-height:85vh; overflow-y:auto; }
+    .nd-modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:16px; border-bottom:3px solid #CC3333; }
+    .nd-modal-title { font-family:'Oswald',sans-serif; font-size:1.8rem; color:#CC3333; text-transform:uppercase; letter-spacing:.08em; }
+    .nd-close-btn { background:none; border:none; font-size:2rem; color:#999; cursor:pointer; line-height:1; }
+    .nd-modal input,.nd-modal textarea { width:100%; padding:14px 18px; font-size:1rem; font-family:'Roboto Condensed',sans-serif; border:2px solid #ddd; border-radius:8px; outline:none; box-sizing:border-box; margin-bottom:12px; }
+    .nd-modal input:focus,.nd-modal textarea:focus { border-color:#CC3333; }
+    .nd-modal textarea { resize:vertical; }
+    .nd-submit-btn { width:100%; background:linear-gradient(135deg,#C33,#8B2323); color:white; border:none; padding:15px 25px; border-radius:8px; font-family:'Oswald',sans-serif; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:.1em; cursor:pointer; }
+    .nd-submit-btn:hover { background:linear-gradient(135deg,#a82828,#6e1a1a); }
+    .mobile-menu-toggle { display:none; }
+    .mobile-menu-links { align-items:stretch; display:flex; gap:inherit; justify-content:center; width:100%; }
+    .mobile-menu-links > li { list-style:none; }
+    @media (max-width:768px) {
+      .mobile-menu-nav { display:block !important; padding:0 !important; position:sticky !important; top:0 !important; z-index:1000 !important; }
+      .mobile-menu-toggle { align-items:center; background:#1a1a1a !important; border:0 !important; border-radius:0 !important; color:#fff !important; cursor:pointer; display:flex !important; font-family:'Oswald',sans-serif !important; font-size:.88rem !important; font-weight:700 !important; justify-content:space-between; letter-spacing:.14em !important; line-height:1 !important; margin:0 !important; min-height:48px; padding:13px 18px !important; text-transform:uppercase; width:100% !important; }
+      .mobile-menu-icon { color:#CC3333; font-family:Arial,sans-serif; font-size:1.35rem; font-weight:700; line-height:1; }
+      .mobile-menu-links { background:#1a1a1a; display:none !important; flex-direction:column !important; gap:0 !important; margin:0 !important; max-width:none !important; padding:0 !important; width:100% !important; }
+      .mobile-menu-nav.menu-open .mobile-menu-links { display:flex !important; }
+      .mobile-menu-links > li { margin:0 !important; padding:0 !important; width:100% !important; }
+      .mobile-menu-links a,.mobile-menu-links li a { background:#1a1a1a !important; border:0 !important; border-bottom:1px solid #343434 !important; border-radius:0 !important; color:#fff !important; display:block !important; flex:none !important; font-family:'Oswald',sans-serif !important; font-size:.88rem !important; font-weight:700 !important; letter-spacing:.11em !important; margin:0 !important; padding:14px 18px !important; text-align:left !important; text-decoration:none !important; text-transform:uppercase !important; width:100% !important; }
+      .mobile-menu-links a:hover,.mobile-menu-links a:focus,.mobile-menu-links a.active,.mobile-menu-links li a:hover,.mobile-menu-links li a:focus,.mobile-menu-links li a.active { background:#262626 !important; color:#CC3333 !important; }
+      .mobile-menu-links a.active,.mobile-menu-links li a.active { border-left:4px solid #CC3333 !important; padding-left:14px !important; }
+      .mobile-menu-links .submit-link,.mobile-menu-links li .submit-link { background:#CC3333 !important; border-bottom-color:#CC3333 !important; color:#fff !important; }
+      .mobile-menu-links .submit-link:hover,.mobile-menu-links .submit-link:focus,.mobile-menu-links li .submit-link:hover,.mobile-menu-links li .submit-link:focus { background:#8B2323 !important; color:#fff !important; }
     }
-
-    body {
-      background: #ffffff;
-      color: #1a1a1a;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: #ffffff;
-      padding: 24px 24px 20px;
-      text-align: center;
-      border-bottom: 3px solid #CC3333;
-    }
-
-    .site-logo img {
-      max-width: 240px;
-      width: 65%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-
-
-    /* ── NAV ── */
-    nav {
-      background: #1a1a1a;
-      border-bottom: 2px solid #CC3333;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 14px 28px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #ffffff;
-      transition: color 0.2s, background 0.2s;
-      white-space: nowrap;
-    }
-
-    nav ul li a:hover {
-      color: #CC3333;
-    }
-
-    nav ul li a:hover,
-    nav ul li a:focus,
-    nav ul li a.active {
-      background: #262626;
-      color: #CC3333;
-    }
-
-    nav ul li a.active {
-      border-bottom: 3px solid #CC3333;
-    }
-
-    /* ── HERO / PAGE HEADER ── */
-    .page-header {
-      background: #ffffff;
-      padding: 40px 24px 32px;
-      text-align: center;
-      border-bottom: 3px solid #CC3333;
-    }
-
-    .page-header h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      letter-spacing: 0.06em;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-
-    .page-header .subheading {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 1.05rem;
-      color: #555555;
-      letter-spacing: 0.04em;
-    }
-
-    /* ── MAIN CONTENT ── */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 56px 24px 72px;
-    }
-
-    /* ── ARTICLE CARD GRID ── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 32px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.25s, transform 0.25s;
-    }
-
-    .card:hover {
-      box-shadow: 0 8px 30px rgba(195, 51, 51, 0.4);
-      transform: translateY(-3px);
-    }
-
-    .card-body {
-      background: #ffffff;
-      padding: 28px 24px 24px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-date {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #CC3333;
-      margin-bottom: 10px;
-    }
-
-    .card-title {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      font-size: 1.4rem;
-      letter-spacing: 0.02em;
-      color: #1a1a1a;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    .card-excerpt {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 0.97rem;
-      color: #444444;
-      line-height: 1.65;
-      flex: 1;
-      margin-bottom: 20px;
-    }
-
-    .card-accent {
-      height: 3px;
-      background: #CC3333;
-      margin: 0 -24px;
-      margin-bottom: 20px;
-    }
-
-    .card-link {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #CC3333;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s;
-    }
-
-    .card-link:hover {
-      gap: 10px;
-    }
-
-    .card-link::after {
-      content: '→';
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-      border-top: 3px solid #CC3333;
-      text-align: center;
-      padding: 32px 24px;
-    }
-
-    footer p {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      color: #aaaaaa;
-      text-transform: uppercase;
-    }
-
-    footer p strong {
-      color: #ffffff;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      nav ul li a {
-        flex: 1 1 33.333%;
-        padding: 12px 6px;
-        font-size: 0.78rem;
-        text-align: center;
-      }
-
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ── SUBMIT MODAL ── */
-    .nd-modal {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 10001;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .nd-modal.show { display: flex; }
-    .nd-modal-content {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 600px;
-      width: 100%;
-      max-height: 85vh;
-      overflow-y: auto;
-    }
-    .nd-modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 3px solid #CC3333;
-    }
-    .nd-modal-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.8rem;
-      color: #CC3333;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .nd-close-btn {
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: #999;
-      cursor: pointer;
-      line-height: 1;
-    }
-    .nd-modal input,
-    .nd-modal textarea {
-      width: 100%;
-      padding: 14px 18px;
-      font-size: 1rem;
-      font-family: 'Roboto Condensed', sans-serif;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      outline: none;
-      box-sizing: border-box;
-      margin-bottom: 12px;
-    }
-    .nd-modal input:focus,
-    .nd-modal textarea:focus { border-color: #CC3333; }
-    .nd-modal textarea { resize: vertical; }
-    .nd-submit-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #C33, #8B2323);
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      cursor: pointer;
-    }
-    .nd-submit-btn:hover { background: linear-gradient(135deg, #a82828, #6e1a1a); }
-  
-
-/* ND_MOBILE_MENU_CSS_START */
-.mobile-menu-toggle {
-    display: none;
-}
-
-.mobile-menu-links {
-    align-items: stretch;
-    display: flex;
-    gap: inherit;
-    justify-content: center;
-    width: 100%;
-}
-
-.mobile-menu-links > li {
-    list-style: none;
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-nav {
-        display: block !important;
-        padding: 0 !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1000 !important;
-    }
-
-    .mobile-menu-toggle {
-        align-items: center;
-        background: #1a1a1a !important;
-        border: 0 !important;
-        border-radius: 0 !important;
-        color: #ffffff !important;
-        cursor: pointer;
-        display: flex !important;
-        font-family: 'Oswald', sans-serif !important;
-        font-size: 0.88rem !important;
-        font-weight: 700 !important;
-        justify-content: space-between;
-        letter-spacing: 0.14em !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        min-height: 48px;
-        padding: 13px 18px !important;
-        text-transform: uppercase;
-        width: 100% !important;
-    }
-
-    .mobile-menu-toggle:hover,
-    .mobile-menu-toggle:focus {
-        background: #262626 !important;
-        color: #ffffff !important;
-    }
-
-    .mobile-menu-toggle:focus-visible {
-        outline: 3px solid #CC3333 !important;
-        outline-offset: -3px;
-    }
-
-    .mobile-menu-icon {
-        color: #CC3333;
-        font-family: Arial, sans-serif;
-        font-size: 1.35rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        line-height: 1;
-    }
-
-    .mobile-menu-links {
-        background: #1a1a1a;
-        display: none !important;
-        flex-direction: column !important;
-        gap: 0 !important;
-        margin: 0 !important;
-        max-width: none !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-
-    .mobile-menu-nav.menu-open .mobile-menu-links {
-        display: flex !important;
-    }
-
-    .mobile-menu-links > li {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-
-    .mobile-menu-links a,
-    .mobile-menu-links li a {
-        background: #1a1a1a !important;
-        border: 0 !important;
-        border-bottom: 1px solid #343434 !important;
-        border-radius: 0 !important;
-        color: #ffffff !important;
-        display: block !important;
-        flex: none !important;
-        font-family: 'Oswald', sans-serif !important;
-        font-size: 0.88rem !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.11em !important;
-        margin: 0 !important;
-        padding: 14px 18px !important;
-        text-align: left !important;
-        text-decoration: none !important;
-        text-transform: uppercase !important;
-        width: 100% !important;
-    }
-
-    .mobile-menu-links a:hover,
-    .mobile-menu-links a:focus,
-    .mobile-menu-links a.active,
-    .mobile-menu-links li a:hover,
-    .mobile-menu-links li a:focus,
-    .mobile-menu-links li a.active {
-        background: #262626 !important;
-        color: #CC3333 !important;
-    }
-
-    .mobile-menu-links a.active,
-    .mobile-menu-links li a.active {
-        border-left: 4px solid #CC3333 !important;
-        padding-left: 14px !important;
-    }
-
-    .mobile-menu-links .submit-link,
-    .mobile-menu-links li .submit-link {
-        background: #CC3333 !important;
-        border-bottom-color: #CC3333 !important;
-        color: #ffffff !important;
-    }
-
-    .mobile-menu-links .submit-link:hover,
-    .mobile-menu-links .submit-link:focus,
-    .mobile-menu-links li .submit-link:hover,
-    .mobile-menu-links li .submit-link:focus {
-        background: #8B2323 !important;
-        color: #ffffff !important;
-    }
-}
-/* ND_MOBILE_MENU_CSS_END */
-
-</style>
+  </style>
   <link rel="stylesheet" href="/nd-shell.css?v=20260907b">
 </head>
 <body>
-
-  <header>
-    <a href="../index.html" class="site-logo">
-      <img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" />
-    </a>
-  </header>
-
+  <header><a href="../index.html" class="site-logo"><img src="https://i.imgur.com/XIAPd0N.png" alt="Northern Dial" /></a></header>
   <nav class="mobile-menu-nav" aria-label="Main navigation">
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
-        <span>Menu</span>
-        <span class="mobile-menu-icon" aria-hidden="true">☰</span>
-    </button>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><span>Menu</span><span class="mobile-menu-icon" aria-hidden="true">☰</span></button>
     <ul class="mobile-menu-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../library.html">Songs</a></li>
-      <li><a href="../artists.html">Artists</a></li>
-      <li><a href="../discover.html">Discover</a></li>
-      <li><a href="index.html" class="active">Blog</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#submit" class="submit-link">Submit</a>
-        <button type="button" class="language-switch language-toggle" data-language-toggle lang="fr" aria-label="Afficher la page d’accueil en français">Français</button></li>
+      <li><a href="../index.html">Home</a></li><li><a href="../library.html">Songs</a></li><li><a href="../artists.html">Artists</a></li><li><a href="../discover.html">Discover</a></li><li><a href="index.html" class="active">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../index.html#submit" class="submit-link">Submit</a><button type="button" class="language-switch language-toggle" data-language-toggle lang="fr" aria-label="Afficher la page d’accueil en français">Français</button></li>
     </ul>
   </nav>
-
-  <div class="page-header">
-    <h1>Artist Features &amp; Stories</h1>
-    <p class="subheading">Digging deeper into the music we play</p>
-      <p class="subheading"><a href="../index.html">Listen live</a> · <a href="../library.html">Explore recently played songs</a></p>
-  </div>
-
+  <div class="page-header"><h1>Artist Features &amp; Stories</h1><p class="subheading">Digging deeper into the music we play</p><p class="subheading"><a href="../index.html">Listen live</a> · <a href="../library.html">Explore recently played songs</a></p></div>
   <main>
     <div class="card-grid">
-      <article class="card">
-        <a href="rochelle-jordan-disc-2-remix-series.html">
-          <img src="../images/rochelle-jordan-disc-2-toronto.jpg?v=1" alt="Rochelle Jordan in a Toronto torn-paper collage" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">September 11, 2026 · News Hit</p>
-          <h2 class="card-title">Rochelle Jordan Expands <em>Through The Wall</em> With <em>Disc 2</em></h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">The Toronto-raised artist opens her remix series to Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion.</p>
-          <a href="rochelle-jordan-disc-2-remix-series.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="m-is-for-montreal-part-1.html">
-          <img src="../images/m-is-for-montreal-part-1-1200x675.png?v=ab24043" alt="M Is for Montreal Part 1 collage featuring five Montreal artists" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">September 3, 2026 · M Is for Montreal</p>
-          <h2 class="card-title">M Is for Montreal, Part 1: Five Montreal Artists to Hear Right Now</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Five Montreal artists, five new 2026 releases, and one starting point for exploring the city’s current sound.</p>
-          <a href="m-is-for-montreal-part-1.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="if-you-like-kaytranada-canadian-artists.html">
-          <img src="../images/if-you-like-kaytranada-1200x675.jpg?v=78a53ba8" alt="Montreal torn-paper collage featuring a Canadian artist" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">September 10, 2026 · If You Like...</p>
-          <h2 class="card-title">If You Like Kaytranada, Listen to These 5 Canadian Artists</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Five different routes out from Kaytranada’s sound: house, R&amp;B, Caribbean club music, funk and Montréal beat culture.</p>
-          <a href="if-you-like-kaytranada-canadian-artists.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <a href="enola-bedard.html">
-          <img src="https://images.squarespace-cdn.com/content/v1/660d9658de6c8215dd2fcb99/3e268111-3215-41d5-a389-d388ea40d7bd/enola-main.png?format=1500w&v=4" alt="Enola Bédard — official artist press image" style="width:100%;height:260px;object-fit:contain;object-position:center top;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">September 3, 2026 · Northern Dial After Dark</p>
-          <h2 class="card-title">Enola Bédard Finds Her Voice in Motion on “Unavez”</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">The Canadian artist turns dance, multilingual pop and emotional tension into a new chapter.</p>
-          <a href="enola-bedard.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="five-canadian-artists-northern-dial.html">
-          <img src="../images/toronto-after-dark-live.jpg?v=7" alt="Northern Dial After Dark photo collage" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">September 2, 2026 · Northern Dial After Dark</p>
-          <h2 class="card-title">Northern Dial After Dark: Five Canadian Artists to Hear Tonight</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Five distinct Canadian voices across R&amp;B, hip-hop, pop and independent music.</p>
-          <a href="five-canadian-artists-northern-dial.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-
-      
-
-            <article class="card">
-        <a href="koko-love.html">
-          <img src="../images/koko-love.jpg" alt="Koko Love" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=Koko+Love'"/>
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 25, 2026</p>
-          <h2 class="card-title">Artist Feature: Koko Love</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Montreal's Koko Love emerges from his Miko past with a stripped-back, patient sound on debut album The Cost of Freedom.</p>
-          <a href="koko-love.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="lia-pappas-kemps.html">
-          <img src="../images/lia-pappas-kemps.jpg" alt="Lia Pappas-Kemps" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=Lia+Pappas-Kemps'"/>
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 24, 2026</p>
-          <h2 class="card-title">Artist Feature: Lia Pappas-Kemps</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Toronto artist Lia Pappas-Kemps delivers a restrained, carefully shaped debut with Winged — a record that knows exactly what it wants to hold back.</p>
-          <a href="lia-pappas-kemps.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="livingthing.html">
-          <img src="../images/livingthing.jpg" alt="livingthing" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=livingthing'"/>
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 23, 2026</p>
-          <h2 class="card-title">Artist Feature: livingthing</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Toronto-based indie electronic artist livingthing commands attention on Northern Dial After Dark with dreamy synth-pop and steady momentum.</p>
-          <a href="livingthing.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a href="ghostboyrj.html">
-          <img src="../images/ghostboyrj.jpg" alt="Ghostboyrj" style="width:100%;height:260px;object-fit:cover;object-position:center top;display:block;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 23, 2026</p>
-          <h2 class="card-title">Artist Feature: Ghostboyrj</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Toronto-born, Brampton-raised producer Ghostboyrj builds a steadily expanding catalog of beats and collaborations across the city's underground.</p>
-          <a href="ghostboyrj.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-
-    
-
-      <article class="card">
-        <a href="tauro.html">
-          <img src="https://tauromusic.com/wp-content/uploads/2025/08/TauroMainBg.jpg" alt="TAURO" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 13, 2026</p>
-          <h2 class="card-title">Artist Feature: TAURO</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">A Toronto collaboration between Cynthia Tauro and Brendan Canning, TAURO’s <em>Act I</em> maps change and emotional recalibration with indie-soul precision.</p>
-          <a href="tauro.html" class="card-link">Read More</a>
-        </div>
-      </article>
-            
-      <article class="card">
-        <a href="haley-smalls.html">
-          <img src="https://i.scdn.co/image/ab67616d0000b273d30e100f20d1cbb4c8385e5b" alt="Haley Smalls — Artwork" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 10, 2026</p>
-          <h2 class="card-title">Artist Feature: Haley Smalls</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Toronto-born independent R&B artist Haley Smalls keeps momentum high with 2025 projects <em>The Cure IV</em> and <em>Matches</em>.</p>
-          <a href="haley-smalls.html" class="card-link">Read More</a>
-        </div>
-      </article>
-      <article class="card">
-        <a href="lov.html">
-          <img src="https://lovxofficial.com/wp-content/uploads/2026/01/Lov-Website-Bio.jpg" alt="LÖV — Press Photo" style="width:100%;height:260px;object-fit:cover;object-position:center top;display:block;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 10, 2026</p>
-          <h2 class="card-title">Artist Feature: LÖV</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">Treaty 6 Saskatchewan-based Cree R&B/soul artist LÖV is building momentum with viral single Mama and her upcoming album Iskwêw.</p>
-          <a href="lov.html" class="card-link">Read More</a>
-        </div>
-      </article>
-      <article class="card">
-        <a href="puma-june.html">
-          <img src="https://images.squarespace-cdn.com/content/v1/61f5a68b5f468d08d3e423e8/cb385d96-803d-473e-a92e-58c0e75bcc2d/Puma+June+Jan+2024+%2862+of+77%29.jpg" alt="Puma June — Press Photo" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" />
-        </a>
-        <div class="card-body">
-          <p class="card-date">April 10, 2026</p>
-          <h2 class="card-title">Artist Feature: Puma June</h2>
-          <div class="card-accent"></div>
-          <p class="card-excerpt">There's a moment in Puma June's music where you can't quite place the genre — and that's exactly the point.</p>
-          <a href="puma-june.html" class="card-link">Read More</a>
-        </div>
-      </article>
-
-</div>
-  </main>
-
-  <footer>
-    <p><strong>Northern Dial</strong> — All Killer, All CanCon</p>
-  </footer>
-
-<div class="nd-modal" id="submitModal">
-  <div class="nd-modal-content">
-    <div class="nd-modal-header">
-      <h2 class="nd-modal-title">Submit Your Music</h2>
-      <button class="nd-close-btn" onclick="document.getElementById('submitModal').classList.remove('show')">&times;</button>
+      <article class="card"><a href="rochelle-jordan-disc-2-remix-series.html"><img src="../images/rochelle-jordan-disc-2-toronto.jpg?v=1" alt="Rochelle Jordan in a Toronto torn-paper collage" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 11, 2026 · News Hit</p><h2 class="card-title">Rochelle Jordan Expands <em>Through The Wall</em> With <em>Disc 2</em></h2><div class="card-accent"></div><p class="card-excerpt">The Toronto-raised artist opens her remix series to Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion.</p><a href="rochelle-jordan-disc-2-remix-series.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="m-is-for-montreal-part-1.html"><img src="../images/m-is-for-montreal-part-1-1200x675.png?v=ab24043" alt="M Is for Montreal Part 1 collage featuring five Montreal artists" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 3, 2026 · M Is for Montreal</p><h2 class="card-title">M Is for Montreal, Part 1: Five Montreal Artists to Hear Right Now</h2><div class="card-accent"></div><p class="card-excerpt">Five Montreal artists, five new 2026 releases, and one starting point for exploring the city’s current sound.</p><a href="m-is-for-montreal-part-1.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="if-you-like-kaytranada-canadian-artists.html"><img src="../images/if-you-like-kaytranada-1200x675.jpg?v=78a53ba8" alt="Montreal torn-paper collage featuring a Canadian artist" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 10, 2026 · If You Like...</p><h2 class="card-title">If You Like Kaytranada, Listen to These 5 Canadian Artists</h2><div class="card-accent"></div><p class="card-excerpt">Five different routes out from Kaytranada’s sound: house, R&amp;B, Caribbean club music, funk and Montréal beat culture.</p><a href="if-you-like-kaytranada-canadian-artists.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="enola-bedard.html"><img src="https://images.squarespace-cdn.com/content/v1/660d9658de6c8215dd2fcb99/3e268111-3215-41d5-a389-d388ea40d7bd/enola-main.png?format=1500w&v=4" alt="Enola Bédard — official artist press image" style="width:100%;height:260px;object-fit:contain;object-position:center top;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 3, 2026 · Northern Dial After Dark</p><h2 class="card-title">Enola Bédard Finds Her Voice in Motion on “Unavez”</h2><div class="card-accent"></div><p class="card-excerpt">The Canadian artist turns dance, multilingual pop and emotional tension into a new chapter.</p><a href="enola-bedard.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="five-canadian-artists-northern-dial.html"><img src="../images/toronto-after-dark-live.jpg?v=7" alt="Northern Dial After Dark photo collage" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 2, 2026 · Northern Dial After Dark</p><h2 class="card-title">Northern Dial After Dark: Five Canadian Artists to Hear Tonight</h2><div class="card-accent"></div><p class="card-excerpt">Five distinct Canadian voices across R&amp;B, hip-hop, pop and independent music.</p><a href="five-canadian-artists-northern-dial.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="koko-love.html"><img src="../images/koko-love.jpg" alt="Koko Love" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=Koko+Love'"/></a><div class="card-body"><p class="card-date">April 25, 2026</p><h2 class="card-title">Artist Feature: Koko Love</h2><div class="card-accent"></div><p class="card-excerpt">Montreal's Koko Love emerges from his Miko past with a stripped-back, patient sound on debut album The Cost of Freedom.</p><a href="koko-love.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="lia-pappas-kemps.html"><img src="../images/lia-pappas-kemps.jpg" alt="Lia Pappas-Kemps" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=Lia+Pappas-Kemps'"/></a><div class="card-body"><p class="card-date">April 24, 2026</p><h2 class="card-title">Artist Feature: Lia Pappas-Kemps</h2><div class="card-accent"></div><p class="card-excerpt">Toronto artist Lia Pappas-Kemps delivers a restrained, carefully shaped debut with Winged — a record that knows exactly what it wants to hold back.</p><a href="lia-pappas-kemps.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="livingthing.html"><img src="../images/livingthing.jpg" alt="livingthing" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;background:#f0f0f0;" onerror="this.src='https://placehold.co/600x400?text=livingthing'"/></a><div class="card-body"><p class="card-date">April 23, 2026</p><h2 class="card-title">Artist Feature: livingthing</h2><div class="card-accent"></div><p class="card-excerpt">Toronto-based indie electronic artist livingthing commands attention on Northern Dial After Dark with dreamy synth-pop and steady momentum.</p><a href="livingthing.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="ghostboyrj.html"><img src="../images/ghostboyrj.jpg" alt="Ghostboyrj" style="width:100%;height:260px;object-fit:cover;object-position:center top;display:block;" /></a><div class="card-body"><p class="card-date">April 23, 2026</p><h2 class="card-title">Artist Feature: Ghostboyrj</h2><div class="card-accent"></div><p class="card-excerpt">Toronto-born, Brampton-raised producer Ghostboyrj builds a steadily expanding catalog of beats and collaborations across the city's underground.</p><a href="ghostboyrj.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="tauro.html"><img src="https://tauromusic.com/wp-content/uploads/2025/08/TauroMainBg.jpg" alt="TAURO" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">April 13, 2026</p><h2 class="card-title">Artist Feature: TAURO</h2><div class="card-accent"></div><p class="card-excerpt">A Toronto collaboration between Cynthia Tauro and Brendan Canning, TAURO’s <em>Act I</em> maps change and emotional recalibration with indie-soul precision.</p><a href="tauro.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="haley-smalls.html"><img src="https://i.scdn.co/image/ab67616d0000b273d30e100f20d1cbb4c8385e5b" alt="Haley Smalls — Artwork" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">April 10, 2026</p><h2 class="card-title">Artist Feature: Haley Smalls</h2><div class="card-accent"></div><p class="card-excerpt">Toronto-born independent R&B artist Haley Smalls keeps momentum high with 2025 projects <em>The Cure IV</em> and <em>Matches</em>.</p><a href="haley-smalls.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="lov.html"><img src="https://lovxofficial.com/wp-content/uploads/2026/01/Lov-Website-Bio.jpg" alt="LÖV — Press Photo" style="width:100%;height:260px;object-fit:cover;object-position:center top;display:block;" /></a><div class="card-body"><p class="card-date">April 10, 2026</p><h2 class="card-title">Artist Feature: LÖV</h2><div class="card-accent"></div><p class="card-excerpt">Treaty 6 Saskatchewan-based Cree R&B/soul artist LÖV is building momentum with viral single Mama and her upcoming album Iskwêw.</p><a href="lov.html" class="card-link">Read More</a></div></article>
+      <article class="card"><a href="puma-june.html"><img src="https://images.squarespace-cdn.com/content/v1/61f5a68b5f468d08d3e423e8/cb385d96-803d-473e-a92e-58c0e75bcc2d/Puma+June+Jan+2024+%2862+of+77%29.jpg" alt="Puma June — Press Photo" style="width:100%;height:260px;object-fit:contain;object-position:center center;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">April 10, 2026</p><h2 class="card-title">Artist Feature: Puma June</h2><div class="card-accent"></div><p class="card-excerpt">There's a moment in Puma June's music where you can't quite place the genre — and that's exactly the point.</p><a href="puma-june.html" class="card-link">Read More</a></div></article>
     </div>
-    <p style="font-family:'Roboto Condensed',sans-serif; color:#555; margin-bottom:20px;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p>
-    <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); document.getElementById('submitModal').classList.remove('show');">
-      <input type="text" placeholder="Artist / Band Name *" required />
-      <input type="email" placeholder="Your Email *" required />
-      <input type="text" placeholder="Track Links (Spotify, SoundCloud, YouTube...) *" required />
-      <input type="text" placeholder="Social Media (Instagram, website...)" />
-      <textarea rows="4" placeholder="Tell us about your music, your sound, where you're from..."></textarea>
-      <button type="submit" class="nd-submit-btn">Submit Music</button>
-    </form>
-  </div>
-</div>
-
-<script>
-  function updateArchiveGradient() {
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = scrollableHeight > 0
-      ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
-      : 0;
-    const r = Math.round(255 - (255 - 204) * scrollPercent);
-    const g = Math.round(255 - (255 - 51) * scrollPercent);
-    const b = Math.round(255 - (255 - 51) * scrollPercent);
-    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  }
-
-  window.addEventListener('scroll', updateArchiveGradient, { passive: true });
-  updateArchiveGradient();
-</script>
-
-
-<script>
-/* ND_MOBILE_MENU_JS_START */
-(function () {
-    const menus = document.querySelectorAll('.mobile-menu-nav');
-    menus.forEach((nav, index) => {
-        const toggle = nav.querySelector('.mobile-menu-toggle');
-        const links = nav.querySelector('.mobile-menu-links');
-        if (!toggle || !links) return;
-
-        if (!links.id) links.id = `nd-mobile-menu-${index + 1}`;
-        toggle.setAttribute('aria-controls', links.id);
-
-        const icon = toggle.querySelector('.mobile-menu-icon');
-        const closeMenu = () => {
-            nav.classList.remove('menu-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('aria-label', 'Open navigation menu');
-            if (icon) icon.textContent = '☰';
-        };
-
-        const openMenu = () => {
-            nav.classList.add('menu-open');
-            toggle.setAttribute('aria-expanded', 'true');
-            toggle.setAttribute('aria-label', 'Close navigation menu');
-            if (icon) icon.textContent = '✕';
-        };
-
-        toggle.addEventListener('click', () => {
-            if (nav.classList.contains('menu-open')) closeMenu();
-            else openMenu();
-        });
-
-        links.addEventListener('click', event => {
-            if (event.target.closest('a')) closeMenu();
-        });
-
-        document.addEventListener('keydown', event => {
-            if (event.key === 'Escape') closeMenu();
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) closeMenu();
-        });
-    });
-})();
-/* ND_MOBILE_MENU_JS_END */
-</script>
-
-
-<!-- ND_PROJECT_LINKS_START -->
-<footer class="nd-project-links" aria-label="Northern Dial project links" style="margin-top:48px;background:#1a1a1a;border-top:4px solid #CC3333;color:#fff;padding:24px 18px;">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
-    <div style="font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CC3333;">Northern Dial Project</div>
-    <nav aria-label="Project pages" style="display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="/about.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">About</a>
-      <a href="/sessions.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Sessions</a>
-      <a href="/archive.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Archive &amp; Atlas</a>
-      <a href="/accessibility.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Accessibility</a>
-    </nav>
-  </div>
-</footer>
-<!-- ND_PROJECT_LINKS_END -->
-
+  </main>
+  <div class="nd-modal" id="submitModal"><div class="nd-modal-content"><div class="nd-modal-header"><h2 class="nd-modal-title">Submit Your Music</h2><button class="nd-close-btn" onclick="document.getElementById('submitModal').classList.remove('show')">&times;</button></div><p style="font-family:'Roboto Condensed',sans-serif; color:#555; margin-bottom:20px;">Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.</p><form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); document.getElementById('submitModal').classList.remove('show');"><input type="text" placeholder="Artist / Band Name *" required /><input type="email" placeholder="Your Email *" required /><input type="text" placeholder="Track Links (Spotify, SoundCloud, YouTube...) *" required /><input type="text" placeholder="Social Media (Instagram, website...)" /><textarea rows="4" placeholder="Tell us about your music, your sound, where you're from..."></textarea><button type="submit" class="nd-submit-btn">Submit Music</button></form></div></div>
+  <script>
+    function updateArchiveGradient(){const h=document.documentElement.scrollHeight-window.innerHeight;const p=h>0?Math.min(Math.max(window.scrollY/h,0),1):0;const r=Math.round(255-(255-204)*p),g=Math.round(255-(255-51)*p),b=Math.round(255-(255-51)*p);document.body.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;}
+    window.addEventListener('scroll',updateArchiveGradient,{passive:true});updateArchiveGradient();
+  </script>
+  <script>
+  (function(){const menus=document.querySelectorAll('.mobile-menu-nav');menus.forEach((nav,index)=>{const toggle=nav.querySelector('.mobile-menu-toggle');const links=nav.querySelector('.mobile-menu-links');if(!toggle||!links)return;if(!links.id)links.id=`nd-mobile-menu-${index+1}`;toggle.setAttribute('aria-controls',links.id);const icon=toggle.querySelector('.mobile-menu-icon');const closeMenu=()=>{nav.classList.remove('menu-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');if(icon)icon.textContent='☰';};const openMenu=()=>{nav.classList.add('menu-open');toggle.setAttribute('aria-expanded','true');toggle.setAttribute('aria-label','Close navigation menu');if(icon)icon.textContent='✕';};toggle.addEventListener('click',()=>{if(nav.classList.contains('menu-open'))closeMenu();else openMenu();});links.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu();});document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu();});window.addEventListener('resize',()=>{if(window.innerWidth>768)closeMenu();});});})();
+  </script>
+  <!-- ND_PROJECT_LINKS_START -->
+  <footer class="nd-project-links" aria-label="Northern Dial project links" style="margin-top:48px;background:#1a1a1a;border-top:4px solid #CC3333;color:#fff;padding:24px 18px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+      <div style="font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CC3333;">Northern Dial Project</div>
+      <nav aria-label="Project pages" style="display:flex;gap:16px;flex-wrap:wrap;"><a href="/about.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">About</a><a href="/sessions.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Sessions</a><a href="/archive.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Archive &amp; Atlas</a><a href="/accessibility.html" style="color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-decoration:none;">Accessibility</a></nav>
+    </div>
+  </footer>
+  <!-- ND_PROJECT_LINKS_END -->
   <script src="/nd-shell.js?v=20260907b" defer></script>
 </body>
 </html>
