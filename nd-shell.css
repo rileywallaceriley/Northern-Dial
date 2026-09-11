@@ -215,3 +215,19 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   margin-bottom: 10px !important;
   text-decoration: none !important;
 }
+
+/* Keep the newest blog story prominent without forcing a two-row card height. */
+@media (min-width: 901px) {
+  .card-grid .nd-featured-story {
+    grid-column: span 2 !important;
+    grid-row: auto !important;
+    align-self: start !important;
+  }
+  .card-grid .nd-featured-story .card-body {
+    flex: 0 0 auto !important;
+  }
+  .card-grid .nd-featured-story .card-excerpt {
+    flex: 0 0 auto !important;
+    margin-bottom: 20px !important;
+  }
+}
