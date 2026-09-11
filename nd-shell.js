@@ -639,6 +639,15 @@
     });
   }
 
+  function loadI18n() {
+    if (document.querySelector('script[data-nd-i18n]')) return;
+    const script = document.createElement('script');
+    script.src = '/nd-i18n.js?v=20260911a';
+    script.defer = true;
+    script.dataset.ndI18n = 'true';
+    document.head.appendChild(script);
+  }
+
   function init() {
     addLatestStory();
     sortStoryCards();
@@ -649,6 +658,7 @@
     fixKaytranadaVideos();
     enhanceArtistFeatures();
     if (!isHomepage) buildShell();
+    loadI18n();
   }
 
   if (document.readyState === 'loading') {
