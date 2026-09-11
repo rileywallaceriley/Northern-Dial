@@ -197,3 +197,21 @@
     padding: 14px 18px !important;
   }
 }
+
+/* Normalize the M Is for Montreal homepage story card with the rest of the grid. */
+a[href="/blog/m-is-for-montreal-part-1.html"] > img {
+  aspect-ratio: auto !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+}
+a[href="/blog/m-is-for-montreal-part-1.html"] .card-title,
+a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
+  color: #1a1a1a !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 10px !important;
+  text-decoration: none !important;
+}
