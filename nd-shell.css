@@ -216,6 +216,16 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   text-decoration: none !important;
 }
 
+/* Keep every standard blog archive card image the same size. */
+.card-grid > article.card:not(.nd-featured-story) > a:first-child img {
+  aspect-ratio: 16 / 9 !important;
+  display: block !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+}
+
 /* Desktop blog lead: one large feature with two compact next-story cards beside it. */
 @media (min-width: 901px) {
   .card-grid {
