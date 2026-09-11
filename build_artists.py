@@ -63,6 +63,12 @@ def hidden_artists():
             for line in path.read_text(encoding="utf-8").splitlines()
             if line.strip() and not line.lstrip().startswith("#")
         )
+    for path in sorted(Path(REMOVAL_BATCH_DIR).glob("*.json")):
+        if not path.exists():
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            names.update(str(name).casefold() for name in data)
     return names
 
 
