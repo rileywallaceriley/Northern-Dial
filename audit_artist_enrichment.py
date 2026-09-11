@@ -29,6 +29,10 @@ def main():
     removed = {name.casefold() for name in load_lines("artist_removals.txt")}
     for filename in sorted(glob.glob("artist_removal_batches/*.txt")):
         removed.update(name.casefold() for name in load_lines(filename))
+    for filename in sorted(glob.glob("artist_removal_batches/*.json")):
+        batch = load_json(filename, {})
+        if isinstance(batch, dict):
+            removed.update(str(name).casefold() for name in batch)
 
     reviewed = set()
 
