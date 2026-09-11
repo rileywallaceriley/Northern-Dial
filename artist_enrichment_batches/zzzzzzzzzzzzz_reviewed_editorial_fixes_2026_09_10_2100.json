@@ -1,0 +1,27 @@
+{
+  "metric": {
+    "display_name": "Metric",
+    "directory_summary": "Toronto's Metric turned the collaborative energy of Canada's early-2000s indie scene into a durable international career. Led by Emily Haines and James Shaw, the band moved from the nervy new-wave edge of Old World Underground, Where Are You Now? through the breakthrough Fantasies and into an evolving catalogue that balances guitars, synthesizers and sharp pop songwriting. Their longevity helped carry Canadian indie rock from a celebrated moment into a lasting global presence.",
+    "reviewed": true
+  },
+  "daniel caesar": {
+    "display_name": "Daniel Caesar",
+    "directory_summary": "Daniel Caesar emerged from Toronto's independent R&B ecosystem with gospel-rooted, intimate songwriting that found a worldwide audience. Freudian, the GRAMMY-winning H.E.R. duet \"Best Part\" and later albums including Case Study 01 and Never Enough established him as one of Canada's defining contemporary R&B voices. His restrained delivery and devotional, conflicted writing helped demonstrate that Toronto's global music story extended well beyond rap and large-scale pop.",
+    "reviewed": true
+  },
+  "nelly furtado": {
+    "display_name": "Nelly Furtado",
+    "directory_summary": "Victoria-born Nelly Furtado built one of Canada's most adventurous international pop careers by repeatedly changing the frame around her songwriting. From Whoa, Nelly! and \"I'm Like a Bird\" through the Timbaland-driven Loose, Spanish-language work and her 2020s return, she has moved across pop, R&B, folk, hip-hop, dance and Portuguese-influenced music without treating genre as a boundary. Her 2026 Canadian Music Hall of Fame induction recognized that unusually wide-ranging legacy.",
+    "reviewed": true
+  },
+  "kaytranada": {
+    "display_name": "Kaytranada",
+    "directory_summary": "Montreal-raised producer and DJ Kaytranada has made rhythm itself his signature, folding house, funk, hip-hop, disco and R&B into an immediately recognizable swing. The albums 99.9%, BUBBA and TIMELESS turned an online remix and beat-making following into an influential international career, while BUBBA and \"10%\" brought GRAMMY wins. His work helped dissolve old boundaries between club music, beat culture and contemporary R&B while keeping a distinct Montreal identity in view.",
+    "reviewed": true
+  },
+  "carly rae jepsen": {
+    "display_name": "Carly Rae Jepsen",
+    "directory_summary": "Carly Rae Jepsen transformed the worldwide scale of \"Call Me Maybe\" into a more idiosyncratic long-term pop career. After her Canadian Idol beginnings and the global success of Kiss, E•MO•TION established her as an album-focused songwriter with a devoted audience for synth-pop craft, deep cuts and romantic detail. Dedicated and The Loneliest Time extended that second act, making her a rare example of viral-era superstardom becoming the foundation for a durable cult-pop identity rather than a ceiling.",
+    "reviewed": true
+  }
+}
