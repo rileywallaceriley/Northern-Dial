@@ -1,0 +1,19 @@
+{
+  "sarah mclachlan": {
+    "display_name": "Sarah McLachlan",
+    "directory_summary": "Sarah McLachlan helped define Canadian singer-songwriter pop in the 1990s, pairing atmospheric production with emotionally direct writing on albums including <em>Fumbling Towards Ecstasy</em> and <em>Surfacing</em>. Her impact extends beyond her own catalogue: as a co-founder of Lilith Fair, she helped create a major touring platform for women artists while building an internationally successful career recognized by multiple JUNO and GRAMMY Awards."
+  },
+  "avril lavigne": {
+    "display_name": "Avril Lavigne",
+    "directory_summary": "Avril Lavigne took guitar-driven pop from small-town Ontario to a global audience with <em>Let Go</em>, whose hits “Complicated” and “Sk8er Boi” made her a defining voice of early-2000s pop-punk. Her mix of direct songwriting, punk aesthetics and mainstream hooks helped open space for young women in guitar-heavy pop, and her influence became newly visible during the genre’s 2020s revival."
+  },
+  "justin bieber": {
+    "display_name": "Justin Bieber",
+    "directory_summary": "Justin Bieber went from posting teenage performance videos in Stratford, Ontario, to becoming one of the first global pop superstars built through social-media discovery. <em>My World 2.0</em> established him internationally, while <em>Purpose</em> expanded his sound through R&B, electronic and dance-pop collaborations. His career helped make online fan-building a viable launch path for a new generation of Canadian pop artists."
+  },
+  "shawn mendes": {
+    "display_name": "Shawn Mendes",
+    "directory_summary": "Pickering-raised Shawn Mendes turned an audience built through short-form cover videos into an international pop career, moving from “Life of the Party” and <em>Handwritten</em> to arena-scale hits such as “Stitches” and “In My Blood.” His rise demonstrated how social platforms could function as a genuine artist-development pipeline, while later work broadened his acoustic-pop foundation into a more mature singer-songwriter catalogue.",
+    "album_titles": ["Handwritten", "Illuminate", "Wonder", "Shawn"]
+  }
+}
