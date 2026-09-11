@@ -120,8 +120,9 @@
         title: 'BAMBII — One Touch'
       },
       '3. Rochelle Jordan': {
-        id: 'BEwfYHpQDr8',
-        title: 'Rochelle Jordan — All Along'
+        id: 'JyqCj8D2Wzw',
+        title: 'Rochelle Jordan — Lowkey',
+        note: 'Watch next: “Lowkey”'
       },
       '4. Planet Giza': {
         id: 'Qd2LW7zYyPY',
@@ -154,10 +155,20 @@
         node = node.nextElementSibling;
       }
 
-      const iframeMarkup = `<iframe src="https://www.youtube-nocookie.com/embed/${data.id}" title="${data.title}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      const iframeMarkup = `<iframe src="https://www.youtube.com/embed/${data.id}" title="${data.title}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 
       if (video) {
         video.innerHTML = iframeMarkup;
+        if (data.note && startLine) {
+          let note = startLine.nextElementSibling;
+          if (!note || !note.classList.contains('video-note')) {
+            note = document.createElement('p');
+            note.className = 'video-note';
+            note.style.cssText = 'margin:-4px 0 10px;color:#666;font-size:.95rem;';
+            startLine.insertAdjacentElement('afterend', note);
+          }
+          note.innerHTML = `<strong>${data.note}</strong>`;
+        }
       } else if (startLine) {
         if (data.note && !startLine.nextElementSibling?.classList.contains('video-note')) {
           const note = document.createElement('p');
