@@ -1,0 +1,158 @@
+name: Update artist feature media
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-artist-feature-media.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-features:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add YouTube embeds and artist profile links
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          targets = {
+              "blog/enola-bedard.html": {
+                  "slug": "enola-bedard",
+                  "name": "Enola Bédard",
+                  "video_id": "d5valSPWtaU",
+                  "video_title": "Enola Bédard — Unavez official music video",
+              },
+              "blog/ghostboyrj.html": {
+                  "slug": "ghostboyrj",
+                  "name": "Ghostboyrj",
+                  "video_id": "IXHMbu_G3so",
+                  "video_title": "Ghostboyrj — Cartoons & Cereal Intro (Official Video)",
+              },
+              "blog/haley-smalls.html": {
+                  "slug": "haley-smalls",
+                  "name": "Haley Smalls",
+                  "video_id": "OJlFbow63fY",
+                  "video_title": "Haley Smalls — Matches",
+              },
+              "blog/koko-love.html": {
+                  "slug": "koko-love",
+                  "name": "Koko Love",
+                  "video_id": "sjOAyC2JZ2Y",
+                  "video_title": "Koko Love — The Cost of Freedom (Live)",
+              },
+              "blog/lia-pappas-kemps.html": {
+                  "slug": "lia-pappas-kemps",
+                  "name": "Lia Pappas-Kemps",
+                  "video_id": "3DMSt6uTwVs",
+                  "video_title": "Lia Pappas-Kemps — Towers (Official Video)",
+              },
+              "blog/livingthing.html": {
+                  "slug": "livingthing",
+                  "name": "livingthing",
+                  "video_id": "EBt8k2ZUYgg",
+                  "video_title": "livingthing — auburn (Official Lyric Video)",
+              },
+              "blog/lov.html": {
+                  "slug": "lov",
+                  "name": "LÖV",
+                  "video_id": "AEKT4RYj9_w",
+                  "video_title": "LÖV — Mama (Official Music Video)",
+              },
+              "blog/puma-june.html": {
+                  "slug": "puma-june",
+                  "name": "Puma June",
+                  "video_id": "Vk0KPDApOQk",
+                  "video_title": "Puma June — Bad Habits (Official Video)",
+              },
+              "blog/tauro.html": {
+                  "slug": "tauro",
+                  "name": "TAURO",
+                  "video_id": "01iUyzfWkqQ",
+                  "video_title": "TAURO — Great Minds (Official Video)",
+              },
+          }
+
+          video_css = """
+    .nd-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:28px 0;border-radius:8px;background:#111}
+    .nd-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+"""
+
+          def body_bounds(html):
+              marker = '<div class="article-body">'
+              start = html.find(marker)
+              if start == -1:
+                  raise ValueError("article-body not found")
+              content_start = start + len(marker)
+              match = re.search(r'\n\s*</div>\s*\n\s*<section\b', html[content_start:])
+              if not match:
+                  raise ValueError("article-body closing boundary not found")
+              body_end = content_start + match.start()
+              return content_start, body_end
+
+          changed = []
+          for filename, item in targets.items():
+              path = Path(filename)
+              if not path.exists():
+                  raise FileNotFoundError(filename)
+              profile = Path("artists") / f"{item['slug']}.html"
+              if not profile.exists():
+                  raise FileNotFoundError(str(profile))
+
+              html = path.read_text(encoding="utf-8")
+              original = html
+
+              # Add a responsive YouTube embed when the feature does not already have one.
+              if item["video_id"] not in html:
+                  if ".nd-video{" not in html:
+                      style_close = html.find("</style>")
+                      if style_close == -1:
+                          raise ValueError(f"style block not found in {filename}")
+                      html = html[:style_close] + video_css + html[style_close:]
+
+                  content_start, body_end = body_bounds(html)
+                  body = html[content_start:body_end]
+                  first_p = re.search(r'<p(?:\s[^>]*)?>.*?</p>', body, flags=re.S)
+                  if not first_p:
+                      raise ValueError(f"first article paragraph not found in {filename}")
+                  insert_at = content_start + first_p.end()
+                  embed = (
+                      f'\n      <div class="nd-video"><iframe src="https://www.youtube.com/embed/{item["video_id"]}" '
+                      f'title="{item["video_title"]}" loading="lazy" '
+                      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
+                      'allowfullscreen></iframe></div>'
+                  )
+                  html = html[:insert_at] + embed + html[insert_at:]
+
+              # Add a clear internal link from every feature to its dedicated artist profile.
+              profile_href = f'../artists/{item["slug"]}.html'
+              if profile_href not in html:
+                  content_start, body_end = body_bounds(html)
+                  profile_link = (
+                      f'\n      <p class="artist-profile-link"><a href="{profile_href}" '
+                      'style="color:#CC3333;text-decoration:underline;font-weight:700;">'
+                      f'Explore {item["name"]}’s Northern Dial artist profile →</a></p>'
+                  )
+                  html = html[:body_end] + profile_link + html[body_end:]
+
+              if html != original:
+                  path.write_text(html, encoding="utf-8")
+                  changed.append(filename)
+
+          print(f"Updated {len(changed)} artist features")
+          for filename in changed:
+              print(f"- {filename}")
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/update-artist-feature-media.yml
+          git add blog/*.html
+          git diff --cached --check
+          git commit -m "Add videos and artist profile links to features"
+          git push
