@@ -1,0 +1,40 @@
+name: Remove Portishead demo text
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  fix-demo-text:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Remove Portishead from discovery placeholder
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("discover.html")
+          text = path.read_text(encoding="utf-8")
+          old = 'placeholder="e.g. VIBI, Drake, Portishead"'
+          new = 'placeholder="e.g. VIBI, Drake"'
+          if old not in text:
+              raise SystemExit("Expected discovery placeholder was not found")
+          path.write_text(text.replace(old, new, 1), encoding="utf-8")
+          PY
+
+      - name: Commit the fix and remove this one-off workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/remove-portishead-demo.yml
+          git add discover.html
+          git commit -m "Remove Portishead from discovery demo text"
+          git push
