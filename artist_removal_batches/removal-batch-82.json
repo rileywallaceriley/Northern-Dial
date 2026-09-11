@@ -1,0 +1,18 @@
+{
+  "Busty": {
+    "reason": "Metadata junk / non-artist ingestion artifact. Northern Dial's artist parser splits credits on ampersands, and the unresolved entries 'Busty' and 'The Bass' are the two fragments of the canonical Montreal band Busty & The Bass (Busty and the Bass), not separate recording artists. McGill identifies Busty & the Bass as the Montreal/McGill collective, and contemporary release coverage uses the same ampersand stylization.",
+    "country": "metadata_junk",
+    "sources": [
+      "https://www.mcgill.ca/newsroom/channels/news/busty-bass-win-cbc-music-and-tds-rockyourcampus-239784",
+      "https://www.withguitars.com/busty-bass-debut-album-uncommon-good/"
+    ]
+  },
+  "The Bass": {
+    "reason": "Metadata junk / non-artist ingestion artifact. Northern Dial's artist parser splits credits on ampersands, and the unresolved entries 'Busty' and 'The Bass' are the two fragments of the canonical Montreal band Busty & The Bass (Busty and the Bass), not separate recording artists. McGill identifies Busty & the Bass as the Montreal/McGill collective, and contemporary release coverage uses the same ampersand stylization.",
+    "country": "metadata_junk",
+    "sources": [
+      "https://www.mcgill.ca/newsroom/channels/news/busty-bass-win-cbc-music-and-tds-rockyourcampus-239784",
+      "https://www.withguitars.com/busty-bass-debut-album-uncommon-good/"
+    ]
+  }
+}
