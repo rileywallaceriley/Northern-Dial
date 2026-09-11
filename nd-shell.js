@@ -5,13 +5,13 @@
   const isFrench = path === '/fr' || path.startsWith('/fr/');
 
   const LATEST_STORY = {
-    href: '/blog/if-you-like-kaytranada-canadian-artists.html',
-    localHref: 'if-you-like-kaytranada-canadian-artists.html',
-    image: '/images/if-you-like-kaytranada-1200x675.svg',
-    date: 'September 10, 2026',
-    category: 'If You Like...',
-    title: 'If You Like Kaytranada, Listen to These 5 Canadian Artists',
-    excerpt: 'Five different routes out from Kaytranada’s sound: house, R&B, Caribbean club music, funk and Montréal beat culture.'
+    href: '/blog/rochelle-jordan-disc-2-remix-series.html',
+    localHref: 'rochelle-jordan-disc-2-remix-series.html',
+    image: '/images/rochelle-jordan-disc-2-2026.jpg',
+    date: 'September 11, 2026',
+    category: 'News Hit',
+    title: 'Rochelle Jordan Expands Through The Wall With Disc 2',
+    excerpt: 'Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion reshape Rochelle Jordan’s 2025 album for the dancefloor.'
   };
 
   const root = isFrench ? '/fr/' : '/';
