@@ -1,0 +1,66 @@
+name: Build French artist pages
+
+on:
+  push:
+    paths:
+      - 'artist_translation_batches/**'
+      - 'build_french_artist_pages.py'
+      - 'nd-i18n.js'
+      - '.github/workflows/build-french-artist-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-french-artist-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build French artist pages
+        run: python3 build_french_artist_pages.py
+
+      - name: Validate 50-profile batch ceiling
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          for path in Path('artist_translation_batches').glob('*.json'):
+              data = json.loads(path.read_text(encoding='utf-8'))
+              if len(data) > 50:
+                  raise SystemExit(f'{path} has {len(data)} records; maximum is 50')
+          audit = json.loads(Path('artist_translation_audit.json').read_text(encoding='utf-8'))
+          if audit['missing_source_count']:
+              raise SystemExit(f"Missing English source profiles: {audit['missing_sources']}")
+          print(f"Validated {audit['generated_pages']} translated artist pages.")
+          PY
+
+      - name: Commit generated French pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fr/artists/ artists/ sitemap.xml artist_translation_audit.json
+          if git diff --cached --quiet; then
+            echo 'No French artist page changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Build French artist profile pages'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+          echo 'Unable to push generated French artist pages after 5 attempts.' >&2
+          exit 1
