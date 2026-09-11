@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artist_translation_candidates.json
+          git add artist_translation_candidates.json artist_translation_candidates.jsonl
           if git diff --cached --quiet; then
             echo 'Candidate queue is unchanged.'
             exit 0
