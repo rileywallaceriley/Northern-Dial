@@ -48,53 +48,135 @@
 
     if (path === '/blog/' || path === '/blog/index.html') {
       const grid = document.querySelector('.card-grid');
-      if (grid && !grid.querySelector(`a[href="${LATEST_STORY.localHref}"]`)) {
-        const article = document.createElement('article');
-        article.className = 'card';
-        article.setAttribute('data-nd-latest-story', 'true');
-        article.innerHTML = `
-          <a href="${LATEST_STORY.localHref}">
-            <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#171717;" />
-          </a>
-          <div class="card-body">
-            <p class="card-date">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
-            <h2 class="card-title">${LATEST_STORY.title}</h2>
-            <div class="card-accent"></div>
-            <p class="card-excerpt">${LATEST_STORY.excerpt}</p>
-            <a href="${LATEST_STORY.localHref}" class="card-link">Read More</a>
-          </div>`;
-        grid.prepend(article);
+      if (grid) {
+        let cardLink = grid.querySelector(`a[href="${LATEST_STORY.localHref}"]`);
+        let article = cardLink ? cardLink.closest('article.card') : null;
+
+        if (!article) {
+          article = document.createElement('article');
+          article.className = 'card';
+          article.setAttribute('data-nd-latest-story', 'true');
+          article.innerHTML = `
+            <a href="${LATEST_STORY.localHref}">
+              <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#171717;" />
+            </a>
+            <div class="card-body">
+              <p class="card-date">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
+              <h2 class="card-title">${LATEST_STORY.title}</h2>
+              <div class="card-accent"></div>
+              <p class="card-excerpt">${LATEST_STORY.excerpt}</p>
+              <a href="${LATEST_STORY.localHref}" class="card-link">Read More</a>
+            </div>`;
+        }
+
+        if (grid.firstElementChild !== article) grid.prepend(article);
       }
     }
 
     if (isHomepage) {
       const stories = document.querySelector('#stories');
-      if (!stories || stories.querySelector(`a[href="${LATEST_STORY.href}"]`)) return;
+      if (!stories) return;
 
       const grid = [...stories.querySelectorAll('div')].find((el) => window.getComputedStyle(el).display === 'grid');
       if (!grid) return;
 
-      const card = document.createElement('a');
-      card.href = LATEST_STORY.href;
-      card.setAttribute('data-nd-latest-story', 'true');
-      card.style.cssText = 'text-decoration:none;display:block;border-radius:10px;overflow:hidden;background:white;border:1px solid #e0e0e0;transition:box-shadow .25s,transform .25s;';
-      card.innerHTML = `
-        <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%;height:200px;object-fit:cover;display:block;background:#171717;" />
-        <div style="padding:20px 18px 18px;">
-          <p style="font-family:'Roboto Condensed',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C33;margin:0 0 8px;">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
-          <h3 style="font-family:'Oswald',sans-serif;font-size:1.22rem;line-height:1.25;color:#1a1a1a;margin:0 0 10px;">${LATEST_STORY.title}</h3>
-          <p style="font-family:'Roboto Condensed',sans-serif;font-size:.94rem;line-height:1.55;color:#444;margin:0;">${LATEST_STORY.excerpt}</p>
-        </div>`;
-      card.addEventListener('mouseenter', () => {
-        card.style.boxShadow = '0 8px 30px rgba(195,51,51,.3)';
-        card.style.transform = 'translateY(-3px)';
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.boxShadow = 'none';
-        card.style.transform = 'translateY(0)';
-      });
-      grid.prepend(card);
+      let card = grid.querySelector(`a[href="${LATEST_STORY.href}"]`);
+
+      if (!card) {
+        card = document.createElement('a');
+        card.href = LATEST_STORY.href;
+        card.setAttribute('data-nd-latest-story', 'true');
+        card.style.cssText = 'text-decoration:none;display:block;border-radius:10px;overflow:hidden;background:white;border:1px solid #e0e0e0;transition:box-shadow .25s,transform .25s;';
+        card.innerHTML = `
+          <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%;height:200px;object-fit:cover;display:block;background:#171717;" />
+          <div style="padding:20px 18px 18px;">
+            <p style="font-family:'Roboto Condensed',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C33;margin:0 0 8px;">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
+            <h3 style="font-family:'Oswald',sans-serif;font-size:1.22rem;line-height:1.25;color:#1a1a1a;margin:0 0 10px;">${LATEST_STORY.title}</h3>
+            <p style="font-family:'Roboto Condensed',sans-serif;font-size:.94rem;line-height:1.55;color:#444;margin:0;">${LATEST_STORY.excerpt}</p>
+          </div>`;
+        card.addEventListener('mouseenter', () => {
+          card.style.boxShadow = '0 8px 30px rgba(195,51,51,.3)';
+          card.style.transform = 'translateY(-3px)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.boxShadow = 'none';
+          card.style.transform = 'translateY(0)';
+        });
+      }
+
+      if (grid.firstElementChild !== card) grid.prepend(card);
     }
+  }
+
+  function fixKaytranadaVideos() {
+    if (path !== '/blog/if-you-like-kaytranada-canadian-artists.html') return;
+
+    const body = document.querySelector('.article-body');
+    if (!body) return;
+
+    const replacements = {
+      '2. BAMBII': {
+        id: 'RGOJ8bEoY-0',
+        title: 'BAMBII — One Touch'
+      },
+      '3. Rochelle Jordan': {
+        id: 'BEwfYHpQDr8',
+        title: 'Rochelle Jordan — All Along'
+      },
+      '4. Planet Giza': {
+        id: 'Qd2LW7zYyPY',
+        title: 'Planet Giza — Nights Like This',
+        note: 'Watch next: “Nights Like This”'
+      },
+      '5. KALLITECHNIS': {
+        id: '2oX4Vlvof58',
+        title: 'KALLITECHNIS — Hold Me Down featuring Kofi',
+        note: 'Watch next: “Hold Me Down” featuring Kofi'
+      }
+    };
+
+    const headings = [...body.querySelectorAll('h2')];
+
+    Object.entries(replacements).forEach(([label, data]) => {
+      const heading = headings.find((h2) => h2.textContent.trim() === label);
+      if (!heading) return;
+
+      let node = heading.nextElementSibling;
+      let startLine = null;
+      let video = null;
+
+      while (node && node.tagName !== 'H2') {
+        if (node.matches('p.start')) startLine = node;
+        if (node.matches('.video')) {
+          video = node;
+          break;
+        }
+        node = node.nextElementSibling;
+      }
+
+      const iframeMarkup = `<iframe src="https://www.youtube-nocookie.com/embed/${data.id}" title="${data.title}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+
+      if (video) {
+        video.innerHTML = iframeMarkup;
+      } else if (startLine) {
+        if (data.note && !startLine.nextElementSibling?.classList.contains('video-note')) {
+          const note = document.createElement('p');
+          note.className = 'video-note';
+          note.style.cssText = 'margin:-4px 0 10px;color:#666;font-size:.95rem;';
+          note.innerHTML = `<strong>${data.note}</strong>`;
+          startLine.insertAdjacentElement('afterend', note);
+          video = document.createElement('div');
+          video.className = 'video';
+          video.innerHTML = iframeMarkup;
+          note.insertAdjacentElement('afterend', video);
+        } else {
+          video = document.createElement('div');
+          video.className = 'video';
+          video.innerHTML = iframeMarkup;
+          startLine.insertAdjacentElement('afterend', video);
+        }
+      }
+    });
   }
 
   function normalized(value) {
@@ -223,6 +305,7 @@
 
   function init() {
     addLatestStory();
+    fixKaytranadaVideos();
     if (!isHomepage) buildShell();
   }
 
