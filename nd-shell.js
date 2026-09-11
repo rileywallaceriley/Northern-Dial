@@ -108,6 +108,56 @@
     }
   }
 
+  function styleBlogArchiveActions() {
+    if (path !== '/blog/' && path !== '/blog/index.html') return;
+
+    const header = document.querySelector('.page-header');
+    if (!header) return;
+
+    const actionLine = [...header.querySelectorAll('p.subheading')].find((p) => p.querySelectorAll('a').length >= 2);
+    if (!actionLine) return;
+
+    actionLine.classList.add('nd-blog-actions');
+    actionLine.style.cssText = 'display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px;letter-spacing:0;';
+
+    const actionLinks = [...actionLine.querySelectorAll('a')];
+    actionLinks.forEach((link, index) => {
+      link.style.cssText = `display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:7px;font-family:'Oswald',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s,color .2s,border-color .2s;${index === 0 ? 'background:#CC3333;color:#fff;border:2px solid #CC3333;' : 'background:#fff;color:#1a1a1a;border:2px solid #1a1a1a;'}`;
+
+      link.addEventListener('mouseenter', () => {
+        link.style.transform = 'translateY(-2px)';
+        if (index === 0) link.style.background = '#8B2323';
+        else {
+          link.style.background = '#1a1a1a';
+          link.style.color = '#fff';
+        }
+      });
+
+      link.addEventListener('mouseleave', () => {
+        link.style.transform = 'translateY(0)';
+        if (index === 0) link.style.background = '#CC3333';
+        else {
+          link.style.background = '#fff';
+          link.style.color = '#1a1a1a';
+        }
+      });
+    });
+
+    actionLine.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('·')) node.textContent = ' ';
+    });
+
+    const mobile = window.matchMedia('(max-width: 640px)');
+    const applyMobile = () => {
+      actionLinks.forEach((link) => {
+        link.style.width = mobile.matches ? '100%' : 'auto';
+        link.style.maxWidth = mobile.matches ? '320px' : 'none';
+      });
+    };
+    applyMobile();
+    mobile.addEventListener?.('change', applyMobile);
+  }
+
   function fixKaytranadaVideos() {
     if (path !== '/blog/if-you-like-kaytranada-canadian-artists.html') return;
 
@@ -421,6 +471,7 @@
 
   function init() {
     addLatestStory();
+    styleBlogArchiveActions();
     fixKaytranadaVideos();
     enhanceArtistFeatures();
     if (!isHomepage) buildShell();
