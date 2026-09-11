@@ -190,6 +190,111 @@
     });
   }
 
+  function enhanceArtistFeatures() {
+    const features = {
+      '/blog/enola-bedard.html': {
+        slug: 'enola-bedard',
+        name: 'Enola Bédard',
+        video: { id: 'd5valSPWtaU', title: 'Enola Bédard — Unavez official music video' }
+      },
+      '/blog/ghostboyrj.html': {
+        slug: 'ghostboyrj',
+        name: 'Ghostboyrj',
+        video: { id: 'IXHMbu_G3so', title: 'Ghostboyrj — Cartoons & Cereal Intro (Official Video)' }
+      },
+      '/blog/haley-smalls.html': {
+        slug: 'haley-smalls',
+        name: 'Haley Smalls',
+        video: { id: 'OJlFbow63fY', title: 'Haley Smalls — Matches' }
+      },
+      '/blog/koko-love.html': {
+        slug: 'koko-love',
+        name: 'Koko Love',
+        video: { id: 'sjOAyC2JZ2Y', title: 'Koko Love — The Cost of Freedom (Live)' }
+      },
+      '/blog/lia-pappas-kemps.html': {
+        slug: 'lia-pappas-kemps',
+        name: 'Lia Pappas-Kemps',
+        video: { id: '3DMSt6uTwVs', title: 'Lia Pappas-Kemps — Towers (Official Video)' }
+      },
+      '/blog/livingthing.html': {
+        slug: 'livingthing',
+        name: 'livingthing',
+        video: { id: 'EBt8k2ZUYgg', title: 'livingthing — auburn (Official Lyric Video)' }
+      },
+      '/blog/lov.html': {
+        slug: 'lov',
+        name: 'LÖV',
+        video: { id: 'AEKT4RYj9_w', title: 'LÖV — Mama (Official Music Video)' }
+      },
+      '/blog/puma-june.html': {
+        slug: 'puma-june',
+        name: 'Puma June',
+        video: { id: 'Vk0KPDApOQk', title: 'Puma June — Bad Habits (Official Video)' }
+      },
+      '/blog/tauro.html': {
+        slug: 'tauro',
+        name: 'TAURO',
+        video: { id: '01iUyzfWkqQ', title: 'TAURO — Great Minds (Official Video)' }
+      }
+    };
+
+    const feature = features[path];
+    if (!feature) return;
+
+    const body = document.querySelector('.article-body');
+    if (!body) return;
+
+    const hasYouTube = [...body.querySelectorAll('iframe')].some((iframe) => {
+      const src = iframe.getAttribute('src') || '';
+      return src.includes('youtube.com/embed/');
+    });
+
+    if (!hasYouTube) {
+      const firstParagraph = body.querySelector('p');
+      if (firstParagraph) {
+        const video = document.createElement('div');
+        video.className = 'nd-feature-video';
+        video.style.cssText = 'position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:28px 0;border-radius:8px;background:#111;';
+
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${feature.video.id}`;
+        iframe.title = feature.video.title;
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;';
+
+        video.appendChild(iframe);
+        firstParagraph.insertAdjacentElement('afterend', video);
+      }
+    }
+
+    const profileHref = `/artists/${feature.slug}.html`;
+    const existingProfileLink = [...body.querySelectorAll('a')].some((link) => {
+      try {
+        return new URL(link.href, window.location.origin).pathname === profileHref;
+      } catch (_) {
+        return false;
+      }
+    });
+
+    if (!existingProfileLink) {
+      const profileLine = document.createElement('p');
+      profileLine.className = 'artist-profile-link';
+      profileLine.style.marginTop = '24px';
+
+      const profileLink = document.createElement('a');
+      profileLink.href = profileHref;
+      profileLink.textContent = `Explore ${feature.name}’s Northern Dial artist profile →`;
+      profileLink.style.cssText = 'color:#CC3333;text-decoration:underline;font-weight:700;';
+
+      profileLine.appendChild(profileLink);
+      body.appendChild(profileLine);
+    }
+  }
+
   function normalized(value) {
     if (!value) return '/';
     const url = new URL(value, window.location.origin);
@@ -317,6 +422,7 @@
   function init() {
     addLatestStory();
     fixKaytranadaVideos();
+    enhanceArtistFeatures();
     if (!isHomepage) buildShell();
   }
 
