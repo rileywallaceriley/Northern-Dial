@@ -1,76 +1,8 @@
 {
   "directory_accordions": 1215,
   "profile_backed_accordions": 958,
-  "standalone_profile_files": 1144,
-  "issue_count": 12,
-  "issue_types": {
-    "bad_profile_anchor": 2,
-    "bad_profile_cta": 2,
-    "bad_profile_name_link": 2,
-    "duplicate_or_missing_profile_block": 2,
-    "missing_dropdown_bio": 2,
-    "missing_profile_file": 2
-  },
-  "issues": [
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "Book",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "Book",
-      "detail": "Expected one ./artists/book.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "Book",
-      "detail": "Expected one View Full Profile link to ./artists/book.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "Book",
-      "detail": "Expected id=artist-book; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "Book",
-      "detail": "artists/book.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "Book",
-      "detail": "Expected 1 artist-profile block; found 0"
-    },
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "FB",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "FB",
-      "detail": "Expected one ./artists/fb.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "FB",
-      "detail": "Expected one View Full Profile link to ./artists/fb.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "FB",
-      "detail": "Expected id=artist-fb; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "FB",
-      "detail": "artists/fb.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "FB",
-      "detail": "Expected 1 artist-profile block; found 0"
-    }
-  ]
+  "standalone_profile_files": 1146,
+  "issue_count": 0,
+  "issue_types": {},
+  "issues": []
 }
