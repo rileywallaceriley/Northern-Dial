@@ -200,6 +200,102 @@
     }
   }
 
+  function limitHomepageStories() {
+    if (!isHomepage) return;
+    const stories = document.querySelector('#stories');
+    if (!stories) return;
+    const grid = [...stories.querySelectorAll('div')].find((el) => window.getComputedStyle(el).display === 'grid');
+    if (!grid) return;
+
+    const applyLimit = () => {
+      const width = window.innerWidth;
+      const limit = width <= 640 ? 4 : width <= 900 ? 6 : 8;
+      const cards = [...grid.children].filter((el) => el.tagName === 'A' && /\/blog\//.test(el.getAttribute('href') || ''));
+      cards.forEach((card, index) => {
+        card.style.display = index < limit ? 'block' : 'none';
+      });
+    };
+
+    applyLimit();
+    window.addEventListener('resize', applyLimit, { passive: true });
+  }
+
+  function paginateBlogArchive() {
+    if (path !== '/blog/' && path !== '/blog/index.html') return;
+    const grid = document.querySelector('.card-grid');
+    if (!grid) return;
+
+    const cards = [...grid.children].filter((el) => el.matches('article.card'));
+    const pageSize = 8;
+    const totalPages = Math.max(1, Math.ceil(cards.length / pageSize));
+    if (totalPages <= 1) return;
+
+    const controls = document.createElement('nav');
+    controls.className = 'nd-blog-pagination';
+    controls.setAttribute('aria-label', 'Blog pagination');
+    controls.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:42px 0 0;background:transparent;border:0;position:static;';
+    grid.insertAdjacentElement('afterend', controls);
+
+    const makeButton = (label, page, ariaLabel = '') => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = label;
+      button.dataset.page = String(page);
+      if (ariaLabel) button.setAttribute('aria-label', ariaLabel);
+      button.style.cssText = "min-width:42px;height:42px;padding:0 13px;border:2px solid #1a1a1a;border-radius:6px;background:#fff;color:#1a1a1a;font-family:'Oswald',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;";
+      return button;
+    };
+
+    const render = (requestedPage, updateHistory = true) => {
+      const currentPage = Math.min(Math.max(Number(requestedPage) || 1, 1), totalPages);
+      const start = (currentPage - 1) * pageSize;
+      const end = start + pageSize;
+
+      cards.forEach((card, index) => {
+        card.style.display = index >= start && index < end ? 'flex' : 'none';
+      });
+
+      controls.innerHTML = '';
+      const prev = makeButton('←', currentPage - 1, 'Previous page');
+      prev.disabled = currentPage === 1;
+      prev.style.opacity = prev.disabled ? '.35' : '1';
+      controls.appendChild(prev);
+
+      for (let page = 1; page <= totalPages; page += 1) {
+        const button = makeButton(String(page), page, `Page ${page}`);
+        if (page === currentPage) {
+          button.setAttribute('aria-current', 'page');
+          button.style.background = '#CC3333';
+          button.style.borderColor = '#CC3333';
+          button.style.color = '#fff';
+        }
+        controls.appendChild(button);
+      }
+
+      const next = makeButton('→', currentPage + 1, 'Next page');
+      next.disabled = currentPage === totalPages;
+      next.style.opacity = next.disabled ? '.35' : '1';
+      controls.appendChild(next);
+
+      controls.querySelectorAll('button:not(:disabled)').forEach((button) => {
+        button.addEventListener('click', () => {
+          render(Number(button.dataset.page));
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      if (updateHistory) {
+        const url = new URL(window.location.href);
+        if (currentPage === 1) url.searchParams.delete('page');
+        else url.searchParams.set('page', String(currentPage));
+        history.replaceState({ page: currentPage }, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+    };
+
+    const initialPage = Number(new URLSearchParams(window.location.search).get('page')) || 1;
+    render(initialPage, false);
+  }
+
   function fixKaytranadaVideos() {
     if (path !== '/blog/if-you-like-kaytranada-canadian-artists.html') return;
 
@@ -514,6 +610,8 @@
   function init() {
     addLatestStory();
     sortStoryCards();
+    limitHomepageStories();
+    paginateBlogArchive();
     styleBlogArchiveActions();
     fixKaytranadaVideos();
     enhanceArtistFeatures();
