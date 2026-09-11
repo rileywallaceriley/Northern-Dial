@@ -158,6 +158,48 @@
     mobile.addEventListener?.('change', applyMobile);
   }
 
+  function sortStoryCards() {
+    const datePattern = /(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/i;
+    const parseDate = (text) => {
+      const match = String(text || '').match(datePattern);
+      if (!match) return 0;
+      const time = Date.parse(match[0]);
+      return Number.isNaN(time) ? 0 : time;
+    };
+
+    if (path === '/blog/' || path === '/blog/index.html') {
+      const grid = document.querySelector('.card-grid');
+      if (grid) {
+        const cards = [...grid.children].filter((el) => el.matches('article.card'));
+        cards
+          .map((card, index) => ({
+            card,
+            index,
+            date: parseDate(card.querySelector('.card-date')?.textContent)
+          }))
+          .sort((a, b) => (b.date - a.date) || (a.index - b.index))
+          .forEach(({ card }) => grid.appendChild(card));
+      }
+    }
+
+    if (isHomepage) {
+      const stories = document.querySelector('#stories');
+      if (!stories) return;
+      const grid = [...stories.querySelectorAll('div')].find((el) => window.getComputedStyle(el).display === 'grid');
+      if (!grid) return;
+
+      const cards = [...grid.children].filter((el) => el.tagName === 'A' && /\/blog\//.test(el.getAttribute('href') || ''));
+      cards
+        .map((card, index) => ({
+          card,
+          index,
+          date: parseDate([...card.querySelectorAll('p')].map((p) => p.textContent).join(' '))
+        }))
+        .sort((a, b) => (b.date - a.date) || (a.index - b.index))
+        .forEach(({ card }) => grid.appendChild(card));
+    }
+  }
+
   function fixKaytranadaVideos() {
     if (path !== '/blog/if-you-like-kaytranada-canadian-artists.html') return;
 
@@ -471,6 +513,7 @@
 
   function init() {
     addLatestStory();
+    sortStoryCards();
     styleBlogArchiveActions();
     fixKaytranadaVideos();
     enhanceArtistFeatures();
