@@ -1,0 +1,32 @@
+{
+  "wide mouth mason": {
+    "display_name": "Wide Mouth Mason",
+    "bio": "Wide Mouth Mason formed in Saskatoon in 1995 around guitarist and singer Shaun Verreault, bassist Earl Pereira and drummer Safwan Javed. The trio built its identity on blues and soul vocabulary played with the force of a contemporary rock band, and its early live reputation centred on Verreault's elastic singing, improvisational guitar work and the group's unusually tight rhythm section. After the independently released The Nazarene attracted major-label attention, Warner Music Canada issued the band's 1997 self-titled album, which brought songs including \"Midnight Rain,\" \"My Old Self\" and \"This Mourning\" to Canadian rock radio and earned the group a JUNO nomination for Best New Group.\n\nThe 1999 album Where I Started became another major step, earning gold certification in Canada and widening the band's sound without abandoning its blues foundation. Stew followed in 2000 and brought another JUNO nomination, this time for Best Rock Album. Wide Mouth Mason's reach also came through the road: the band toured with acts including The Rolling Stones, AC/DC and ZZ Top and performed at the Montreux Jazz Festival, placing a Saskatoon power trio inside a much larger international blues-rock tradition.\n\nWide Mouth Mason continued well beyond its late-1990s breakthrough rather than settling into catalogue-act status. Pereira eventually left the group, while Verreault and Javed kept recording with collaborators including Big Sugar's Gordie Johnson. I Wanna Go With You in 2019 explored a leaner roots-blues approach, and Late Night Walking in 2023 paired the band with producer Ryan Dahle while again featuring Johnson on bass. That longevity matters: Wide Mouth Mason is one of the clearest links between prairie blues-rock, the Canadian alternative-radio era and a continuing culture of musicianship-first touring bands.",
+    "directory_summary": "Saskatoon's Wide Mouth Mason turned blues, soul and improvisational power-trio playing into a durable Canadian rock career. The band's 1997 major-label breakthrough and gold-certified Where I Started made Shaun Verreault, Safwan Javed and original bassist Earl Pereira fixtures of late-1990s rock radio, while tours with The Rolling Stones, AC/DC and ZZ Top expanded their reach. Decades later, the group remains active, connecting prairie blues-rock tradition with a restless, musicianship-first approach.",
+    "album_titles": ["The Nazarene", "Where I Started", "Stew", "I Wanna Go With You", "Late Night Walking"],
+    "website": "https://widemouthmason.com/",
+    "city": "Saskatoon, Saskatchewan",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.paquinentertainment.com/artist/wide-mouth-mason",
+      "https://ca.billboard.com/fyi/five-questions-%E2%80%A6-wide-mouth-mason",
+      "https://widemouthmasonsk.bandcamp.com/album/late-night-walking"
+    ]
+  },
+  "the killjoys": {
+    "display_name": "The Killjoys",
+    "bio": "The Killjoys emerged from Hamilton, Ontario, in the early 1990s with a sound that pulled power pop and punk energy into the alternative-rock moment. Mike Trebilcock, Shelley Woods and Gene Champagne recorded their debut Starry independently in Hamilton, and songs such as \"Dana\" and \"Today I Hate Everyone\" helped the group move from regional attention to national exposure. Warner Music Canada picked up and reissued the album in 1994 after \"Dana\" gained strong CFNY support, while the blunt, hook-heavy \"Today I Hate Everyone\" became the band's signature MuchMusic-era single.\n\nThe 1996 follow-up Gimme Five pushed the band further into Canadian alternative radio. \"Rave + Drool\" appeared on the first Big Shiny Tunes compilation, while \"Soaked\" and other singles kept The Killjoys visible during a period when Canadian guitar music was moving rapidly between independent scenes and major-label rock. In 1997, the group won the JUNO Award for Best New Group. Melos Modos followed as their third studio album, extending the catalogue before the original run wound down near the end of the decade.\n\nThe Killjoys' importance is less about international scale than about how clearly they capture a particular Canadian 1990s ecosystem: Hamilton roots, CFNY and MuchMusic exposure, independent credibility, a Warner deal and songs built to survive the shift from grunge-era radio toward sharper power pop. The band later reunited for periodic shows and returned to Starry for a 30th-anniversary vinyl edition in 2024, adding new recordings to an album that had never originally been issued on vinyl. That continuing activity has kept the group's most durable songs connected to the scene that produced them rather than freezing The Killjoys as a one-era artifact.",
+    "directory_summary": "Hamilton's The Killjoys paired punk bite with power-pop hooks during Canada's 1990s alternative-rock boom. Their independently made debut Starry produced \"Dana\" and the enduring \"Today I Hate Everyone,\" then a Warner deal and Gimme Five carried the group deeper into national radio and MuchMusic culture. A 1997 JUNO win for Best New Group confirmed their place in the era, while later reunions and a 2024 Starry vinyl edition kept the catalogue active.",
+    "album_titles": ["Starry", "Gimme Five", "Melos Modos"],
+    "website": "https://www.thekilljoys.ca/",
+    "city": "Hamilton, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.warnermusic.ca/50/history.html",
+      "https://www.thekilljoys.ca/",
+      "https://thekilljoysmusic.bandcamp.com/album/starry"
+    ]
+  }
+}
