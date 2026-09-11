@@ -70,6 +70,13 @@
   }
 
   function counterpart(targetLang) {
+    const alternateLang = targetLang === 'fr' ? 'fr-CA' : 'en-CA';
+    const alternate = document.querySelector(`link[rel="alternate"][hreflang="${alternateLang}"]`);
+    if (alternate?.href) {
+      const paired = new URL(alternate.href, window.location.origin);
+      return `${paired.pathname}${paired.search}${paired.hash}`;
+    }
+
     const current = window.location.pathname;
     const direct = routePairs[current] || reversePairs[current];
     if (direct) return direct;
