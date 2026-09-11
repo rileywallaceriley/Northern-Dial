@@ -200,6 +200,38 @@
     }
   }
 
+  function featureNewestBlogStory() {
+    if (path !== '/blog/' && path !== '/blog/index.html') return;
+    const grid = document.querySelector('.card-grid');
+    const featured = grid?.querySelector('article.card');
+    if (!grid || !featured) return;
+
+    featured.classList.add('nd-featured-story');
+    const image = featured.querySelector('img');
+    const title = featured.querySelector('.card-title');
+    const excerpt = featured.querySelector('.card-excerpt');
+
+    const applyLayout = () => {
+      const desktop = window.innerWidth > 900;
+      grid.style.gridAutoFlow = desktop ? 'dense' : '';
+      featured.style.gridColumn = desktop ? 'span 2' : '';
+      featured.style.gridRow = desktop ? 'span 2' : '';
+
+      if (image) {
+        image.style.width = '100%';
+        image.style.height = desktop ? '360px' : '';
+        image.style.aspectRatio = desktop ? 'auto' : '16 / 9';
+        image.style.objectFit = 'cover';
+        image.style.objectPosition = 'center center';
+      }
+      if (title) title.style.fontSize = desktop ? '1.9rem' : '';
+      if (excerpt) excerpt.style.fontSize = desktop ? '1.05rem' : '';
+    };
+
+    applyLayout();
+    window.addEventListener('resize', applyLayout, { passive: true });
+  }
+
   function limitHomepageStories() {
     if (!isHomepage) return;
     const stories = document.querySelector('#stories');
@@ -226,7 +258,7 @@
     if (!grid) return;
 
     const cards = [...grid.children].filter((el) => el.matches('article.card'));
-    const pageSize = 8;
+    const pageSize = 9;
     const totalPages = Math.max(1, Math.ceil(cards.length / pageSize));
     if (totalPages <= 1) return;
 
@@ -610,6 +642,7 @@
   function init() {
     addLatestStory();
     sortStoryCards();
+    featureNewestBlogStory();
     limitHomepageStories();
     paginateBlogArchive();
     styleBlogArchiveActions();
