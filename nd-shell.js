@@ -2,9 +2,17 @@
   const LOGO = 'https://i.imgur.com/XIAPd0N.png';
   const path = window.location.pathname;
   const isHomepage = path === '/' || path === '/index.html';
-  if (isHomepage) return;
-
   const isFrench = path === '/fr' || path.startsWith('/fr/');
+
+  const LATEST_STORY = {
+    href: '/blog/if-you-like-kaytranada-canadian-artists.html',
+    localHref: 'if-you-like-kaytranada-canadian-artists.html',
+    image: '/images/if-you-like-kaytranada-1200x675.svg',
+    date: 'September 10, 2026',
+    category: 'If You Like...',
+    title: 'If You Like Kaytranada, Listen to These 5 Canadian Artists',
+    excerpt: 'Five different routes out from Kaytranada’s sound: house, R&B, Caribbean club music, funk and Montréal beat culture.'
+  };
 
   const root = isFrench ? '/fr/' : '/';
   const links = isFrench
@@ -34,6 +42,60 @@
         ['Submit', '/#submit', 'submit'],
         ['Français', '/fr/', 'language']
       ];
+
+  function addLatestStory() {
+    if (isFrench) return;
+
+    if (path === '/blog/' || path === '/blog/index.html') {
+      const grid = document.querySelector('.card-grid');
+      if (grid && !grid.querySelector(`a[href="${LATEST_STORY.localHref}"]`)) {
+        const article = document.createElement('article');
+        article.className = 'card';
+        article.setAttribute('data-nd-latest-story', 'true');
+        article.innerHTML = `
+          <a href="${LATEST_STORY.localHref}">
+            <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#171717;" />
+          </a>
+          <div class="card-body">
+            <p class="card-date">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
+            <h2 class="card-title">${LATEST_STORY.title}</h2>
+            <div class="card-accent"></div>
+            <p class="card-excerpt">${LATEST_STORY.excerpt}</p>
+            <a href="${LATEST_STORY.localHref}" class="card-link">Read More</a>
+          </div>`;
+        grid.prepend(article);
+      }
+    }
+
+    if (isHomepage) {
+      const stories = document.querySelector('#stories');
+      if (!stories || stories.querySelector(`a[href="${LATEST_STORY.href}"]`)) return;
+
+      const grid = [...stories.querySelectorAll('div')].find((el) => window.getComputedStyle(el).display === 'grid');
+      if (!grid) return;
+
+      const card = document.createElement('a');
+      card.href = LATEST_STORY.href;
+      card.setAttribute('data-nd-latest-story', 'true');
+      card.style.cssText = 'text-decoration:none;display:block;border-radius:10px;overflow:hidden;background:white;border:1px solid #e0e0e0;transition:box-shadow .25s,transform .25s;';
+      card.innerHTML = `
+        <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%;height:200px;object-fit:cover;display:block;background:#171717;" />
+        <div style="padding:20px 18px 18px;">
+          <p style="font-family:'Roboto Condensed',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C33;margin:0 0 8px;">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
+          <h3 style="font-family:'Oswald',sans-serif;font-size:1.22rem;line-height:1.25;color:#1a1a1a;margin:0 0 10px;">${LATEST_STORY.title}</h3>
+          <p style="font-family:'Roboto Condensed',sans-serif;font-size:.94rem;line-height:1.55;color:#444;margin:0;">${LATEST_STORY.excerpt}</p>
+        </div>`;
+      card.addEventListener('mouseenter', () => {
+        card.style.boxShadow = '0 8px 30px rgba(195,51,51,.3)';
+        card.style.transform = 'translateY(-3px)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.boxShadow = 'none';
+        card.style.transform = 'translateY(0)';
+      });
+      grid.prepend(card);
+    }
+  }
 
   function normalized(value) {
     if (!value) return '/';
@@ -159,9 +221,14 @@
     });
   }
 
+  function init() {
+    addLatestStory();
+    if (!isHomepage) buildShell();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', buildShell);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    buildShell();
+    init();
   }
 })();
