@@ -1,0 +1,46 @@
+name: Prepare French translation candidates
+
+on:
+  push:
+    paths:
+      - 'prepare_french_translation_candidates.py'
+      - 'artist_enrichment.json'
+      - 'artist_enrichment_batches/**'
+      - 'artist_translation_batches/**'
+      - '.github/workflows/prepare-french-translation-candidates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-french-translation-candidates
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare next 50 candidates
+        run: python3 prepare_french_translation_candidates.py
+      - name: Commit candidate queue
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artist_translation_candidates.json
+          if git diff --cached --quiet; then
+            echo 'Candidate queue is unchanged.'
+            exit 0
+          fi
+          git commit -m 'Refresh French translation candidate queue'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
