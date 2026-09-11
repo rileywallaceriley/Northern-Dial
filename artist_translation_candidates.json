@@ -150,21 +150,6 @@
       ]
     },
     {
-      "key": "adelaide",
-      "display_name": "Adelaide",
-      "bio": "Adelaide is an alternate Northern Dial library credit created when the name of Oshawa, Ontario band Mary & Adelaide is split at the ampersand. The exact Northern Dial tracks 'Hoodie zipper' and 'You pulled up' both come from the Canadian band's 2026 album Celebrate Another Day of Living. Mary & Adelaide describe themselves as a band from Oshawa, Ontario, and Canadian music press likewise identifies the group as Oshawa-based.",
-      "city": "Oshawa, Ontario",
-      "country": "Canada",
-      "website": "https://maryandadelaide.bandcamp.com/",
-      "instagram": "",
-      "sources": [
-        "https://www.northerndial.ca/artists.html",
-        "https://maryandadelaide.bandcamp.com/",
-        "https://exclaim.ca/music/article/oshawa-s-mary-and-adelaide-share-single-hoodie-zipper",
-        "https://start-track.com/album-mary-adelaide-celebrate-another-day-of-living/"
-      ]
-    },
-    {
       "key": "admiral naughtz",
       "display_name": "admiral naughtz",
       "bio": "Admiral Naughtz is a Toronto underground hip-hop MC associated with the city's hardcore and boom-bap scene and the Hella Treez circle. Active on Toronto bills for years, he has collaborated with D.O.V and DJ Chino420; his feature on D.O.V's Back From The Dead is the Northern Dial library credit, while U.G.M.L. extends that affiliation into Hella Treez's current catalogue.",
@@ -670,6 +655,20 @@
       "sources": [
         "https://www.universalmusic.ca/press-releases/bad-child-unveils-hi-def-new-song-and-music-video/",
         "https://exclaim.ca/music/article/five_ways_bad_child_found_salvation_in_music_and_became_one_of_2021s_must-hear_artists"
+      ]
+    },
+    {
+      "key": "balam kiel",
+      "display_name": "balam kiel",
+      "bio": "BALAM KIEL is a Toronto-based Spanish artist whose music blends reggaeton, Latin pop and hip-hop. He has built a solo catalogue including Capítulo Uno while collaborating with Canadian artists such as Snow and Cole James. His appearances with Snow on Reason to Love and Together are the two BALAM KIEL credits in the Northern Dial library.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://www.richmondsentinel.ca/article-detail/17669/cole-james-destined-for-musical-bliss",
+        "https://music.amazon.com/tracks/B08PJNPMH6",
+        "https://music.amazon.ca/artists/B07GFBLZNV/balam-kiel"
       ]
     }
   ]
