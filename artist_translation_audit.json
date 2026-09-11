@@ -1,9 +1,14 @@
 {
   "batch_limit": 50,
-  "batches": [],
-  "translation_records": 0,
-  "generated_pages": 0,
-  "english_hreflang_updates": 0,
+  "batches": [
+    {
+      "file": "artist_translation_batches/batch-001.json",
+      "count": 50
+    }
+  ],
+  "translation_records": 50,
+  "generated_pages": 50,
+  "english_hreflang_updates": 50,
   "missing_source_count": 0,
   "missing_sources": []
 }
