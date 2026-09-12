@@ -54,13 +54,13 @@ text = replace_once(
 text = replace_once(
     text,
     '<a class="watch" href="https://www.youtube.com/results?search_query=Jon+McKiel+Gold+Horatio+For+Shadow" target="_blank" rel="noopener">Hear “For Shadow” on YouTube</a>',
-    '<p>For a visual entry point into McKiel’s catalogue, here is “Deeper Shade.”</p>' + embed('n0lqF6HqL7E', 'Jon McKiel — Deeper Shade'),
+    '<p>For a visual entry point into McKiel’s catalogue, here is the official video for “Mourning Dove.”</p>' + embed('HYbYW_CjE3g', 'Jon McKiel — Mourning Dove'),
     'Jon McKiel button',
 )
 text = replace_once(
     text,
     '<a class="watch" href="https://www.youtube.com/results?search_query=Starpainter+Cayenne+Flowerbed+Rabbits" target="_blank" rel="noopener">Hear Starpainter on YouTube</a>',
-    '<p>“I Found a River” was the first preview of <em>Cayenne Flowerbed</em> and gives the album’s fuzzy alt-country side a proper visual.</p>' + embed('H4xQ2xjL3tA', 'Starpainter — I Found a River'),
+    '<p>For a visual entry point into Starpainter’s catalogue, here is “Let It Pass,” performed live at The Owl.</p>' + embed('CVAOCKEvSN4', 'Starpainter — Let It Pass (Live at The Owl)'),
     'Starpainter button',
 )
 text = replace_once(
