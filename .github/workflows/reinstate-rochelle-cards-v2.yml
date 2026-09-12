@@ -31,4 +31,5 @@ jobs:
             exit 0
           fi
           git commit -m 'Restore Rochelle Jordan cards below current features'
+          git pull --rebase origin main
           git push origin HEAD:main
