@@ -1,0 +1,68 @@
+{
+  "Mattmac": {
+    "display_name": "Mattmac",
+    "reviewed": true,
+    "city": "Garden Hill First Nation, Manitoba",
+    "country": "Canada",
+    "bio": "Mattmac is an Anisininew hip-hop artist and producer from Garden Hill First Nation in Manitoba. Born blind and raised around music, he moved from singing in his community gospel choir to teaching himself production, piano and guitar before emerging nationally through N'we Jinan and a run of independent releases. His 2026 album Smoke Signals, made in close collaboration with Atlanta artist and producer QuestionATL, connects memories of Garden Hill, displacement, friendship and the Southern rap records that shaped his early listening. Rather than treat those influences as nostalgia, Mattmac uses them to trace how music travels between communities and how home stays present even as a career expands.",
+    "album_titles": ["Smoke Signals"],
+    "website": "https://mattmacmusic.com/",
+    "instagram": "https://www.instagram.com/mattmaconline/",
+    "sources": [
+      "https://www.manitobamusic.com/mattmac",
+      "https://hiphopcanada.com/mattmac-announces-smoke-signals/"
+    ]
+  },
+  "CG Tears": {
+    "display_name": "CG Tears",
+    "reviewed": true,
+    "city": "Calgary, Alberta",
+    "country": "Canada",
+    "bio": "CG Tears is a Calgary trio built from a long-running collaboration between songwriter Clinton St. John, producer and multi-instrumentalist Morgan Greenwood and Chad VanGaalen. The project began as an idea between St. John and Greenwood more than a decade before it settled into a finished band. VanGaalen initially came in to mix the material, then added instrumentation, backing vocals and arrangement ideas until the duo became a trio. Their self-titled 2026 debut pairs echo-heavy synths and intricate electronic rhythms with impressionistic writing, odd turns and pop instincts that keep the songs from drifting too far into abstraction.",
+    "album_titles": ["CG Tears"],
+    "website": "https://cgtears.bandcamp.com/",
+    "sources": [
+      "https://cgtears.bandcamp.com/",
+      "https://www.killbeatmusic.com/media-releases?offset=1785939423918"
+    ]
+  },
+  "Jon McKiel": {
+    "display_name": "Jon McKiel",
+    "reviewed": true,
+    "city": "Baie Verte, New Brunswick",
+    "country": "Canada",
+    "bio": "Jon McKiel is a New Brunswick songwriter and recording artist whose work moves between guitar music, warped pop and home-studio experimentation. Gold Horatio, released in September 2026, was recorded with Jay Crocker in Baie Verte and Sackville, New Brunswick. The pair handled the arrangements, production and performances themselves, extending a creative partnership that has increasingly shaped McKiel's records. The result is intimate but strange around the edges, with familiar songwriting forms bent by unusual textures and production choices rather than polished smooth.",
+    "album_titles": ["Gold Horatio"],
+    "website": "https://jonmckiel.bandcamp.com/",
+    "sources": [
+      "https://jonmckiel.bandcamp.com/album/gold-horatio"
+    ]
+  },
+  "Starpainter": {
+    "display_name": "Starpainter",
+    "reviewed": true,
+    "city": "Lethbridge, Alberta",
+    "country": "Canada",
+    "bio": "Starpainter is a Lethbridge, Alberta band led by songwriter Joel Stretch, with a sound that keeps one foot in indie rock and the other in country. The group's 2026 album Cayenne Flowerbed was produced in Calgary with Chris Dadge and grew into one of Starpainter's most collaborative records. Bright acoustic guitars, slide guitar and loose, detailed percussion sit under songs about distance, routine, absence and the pull of home. Stretch has described Starpainter as a town band that can drift into country tones whenever it wants, and Cayenne Flowerbed leans into that freedom without sanding off the band's prairie character.",
+    "album_titles": ["Cayenne Flowerbed"],
+    "website": "https://www.starpainter.ca/",
+    "sources": [
+      "https://www.starpainter.ca/about",
+      "https://starpainter.bandcamp.com/track/cayenne-flowerbed"
+    ]
+  },
+  "Hip Club Groove": {
+    "display_name": "Hip Club Groove",
+    "reviewed": true,
+    "city": "Truro and Halifax, Nova Scotia",
+    "country": "Canada",
+    "bio": "Hip Club Groove is a Nova Scotia hip-hop group that emerged from Truro before becoming part of Halifax's early-1990s rap and indie ecosystem. The best-known lineup paired MCs Cheklove Shakil and Derek MacKenzie with DJ Moves. Their 1993 Cool Beans EP led to Trailer Park Hip Hop on Sloan's murderecords in 1994, and the group played across genre lines at a moment when Halifax was drawing national attention for its independent music scene. Hip Club Groove later released Land of the Lost in 1996 before going quiet. In 2026, Cheklove, MacKenzie and Moves reunited for Dead Words, their first new song in 30 years, recorded for Hand'Solo Records' Bassments of Badmen 4 compilation.",
+    "album_titles": ["Cool Beans", "Trailer Park Hip Hop", "Land of the Lost", "Bassments of Badmen 4"],
+    "sources": [
+      "https://handsolorecords.com/2012/07/",
+      "https://handsolorecords.bandcamp.com/track/dead-words-3",
+      "https://www.vice.com/en/article/the-history-of-hip-hop-in-halifax/",
+      "https://exclaim.ca/music/article/halifax_hip-hop-anticipates_big_bang"
+    ]
+  }
+}
