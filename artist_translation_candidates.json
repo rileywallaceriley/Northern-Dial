@@ -3,6 +3,19 @@
   "candidate_count": 50,
   "candidates": [
     {
+      "key": "cg tears",
+      "display_name": "CG Tears",
+      "bio": "CG Tears is a Calgary trio built from a long-running collaboration between songwriter Clinton St. John, producer and multi-instrumentalist Morgan Greenwood and Chad VanGaalen. The project began as an idea between St. John and Greenwood more than a decade before it settled into a finished band. VanGaalen initially came in to mix the material, then added instrumentation, backing vocals and arrangement ideas until the duo became a trio. Their self-titled 2026 debut pairs echo-heavy synths and intricate electronic rhythms with impressionistic writing, odd turns and pop instincts that keep the songs from drifting too far into abstraction.",
+      "city": "Calgary, Alberta",
+      "country": "Canada",
+      "website": "https://cgtears.bandcamp.com/",
+      "instagram": "",
+      "sources": [
+        "https://cgtears.bandcamp.com/",
+        "https://www.killbeatmusic.com/media-releases?offset=1785939423918"
+      ]
+    },
+    {
       "key": "ejji smith",
       "display_name": "ejji smith",
       "bio": "Ejji Smith is a Toronto artist and collaborator working across hip-hop and R&B. Sony Music Canada has identified Smith among the Torontonian artists featured on TOBi's Toronto Remix of Dollas and Cents, placing the artist within the city's contemporary rap and soul community. Northern Dial carries Ejji Smith as part of its Toronto music catalogue.",
@@ -640,19 +653,6 @@
       "sources": [
         "https://www.thecanadianencyclopedia.ca/en/article/great-big-sea-emc",
         "https://music.apple.com/us/artist/great-big-sea/500382"
-      ]
-    },
-    {
-      "key": "grimace love",
-      "display_name": "grimace love",
-      "bio": "Scarborough rapper Grimace Love is a veteran of Toronto’s underground hip-hop scene and a longtime member of the Monolith collective. His solo work carries the rugged boom-bap sound associated with the crew while giving more room to his raspy delivery, storytelling and personal writing.",
-      "city": "Scarborough, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://exclaim.ca/music/article/grimace_love-strength",
-        "https://nowtoronto.com/news/nish-rawks/"
       ]
     }
   ]
