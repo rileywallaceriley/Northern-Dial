@@ -82,6 +82,8 @@
   };
 
   const FR_TO_EN = Object.fromEntries(Object.entries(EN_TO_FR).map(([en, fr]) => [fr, en]));
+  // Compatibility with the older French phrase so already-rendered/cached DOM can recover.
+  FR_TO_EN['Projet communautaire à code source ouvert'] = 'Open-Source Community Project';
 
   const EN_TO_FR_ROUTES = {
     '/': '/?lang=fr',
@@ -159,6 +161,29 @@
     });
   }
 
+  function normalizeProjectCard(lang) {
+    const candidates = [...document.querySelectorAll('h1,h2,h3,h4,.card-title,.section-title')];
+    const heading = candidates.find((el) => {
+      const text = (el.textContent || '').trim();
+      return text === 'Open-Source Community Project' || text === 'Projet open source' || text === 'Projet communautaire à code source ouvert';
+    });
+    if (!heading) return;
+
+    heading.textContent = lang === 'fr' ? 'Projet open source' : 'Open-Source Community Project';
+    heading.style.maxWidth = '100%';
+    heading.style.overflowWrap = 'anywhere';
+    heading.style.wordBreak = 'normal';
+    heading.style.lineHeight = '1.02';
+    heading.style.fontSize = 'clamp(2.35rem, 11vw, 4.5rem)';
+
+    const card = heading.closest('section,article,.card,.feature-card,.project-card') || heading.parentElement;
+    if (card) {
+      card.style.minWidth = '0';
+      card.style.maxWidth = '100%';
+      card.style.overflow = 'hidden';
+    }
+  }
+
   function updateUrlForLanguage(lang) {
     const url = new URL(window.location.href);
     if (lang === 'fr') url.searchParams.set('lang', 'fr');
@@ -195,6 +220,7 @@
     updateInternalLinks(lang);
     updateMetadata(lang);
     updateLanguageToggle(lang);
+    normalizeProjectCard(lang);
     if (persist) updateUrlForLanguage(lang);
     if (persist) {
       try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
@@ -225,9 +251,8 @@
           translateAttributes(EN_TO_FR);
           updateInternalLinks('fr');
         }
-        // The language control is UI, not translatable page copy. Always force it
-        // to advertise the OTHER language after any nav/DOM rebuild.
         updateLanguageToggle(current);
+        normalizeProjectCard(current);
       });
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
