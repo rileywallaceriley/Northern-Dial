@@ -1,0 +1,36 @@
+name: Fix Sept 11 YouTube embeds
+
+on:
+  push:
+    paths:
+      - 'tools/fix_sep11_youtube_embeds.py'
+      - '.github/workflows/fix-sep11-youtube-embeds.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Replace YouTube buttons and broken embeds
+        run: python tools/fix_sep11_youtube_embeds.py
+      - name: Commit embed fixes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blog/if-you-like-drake-canadian-artists.html blog/new-canadian-releases-september-11-2026.html blog/mattmac-smoke-signals.html blog/hip-club-groove-dead-words.html
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Replace new blog YouTube buttons with embeds'
+          git pull --rebase origin main
+          git push origin HEAD:main
