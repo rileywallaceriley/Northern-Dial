@@ -1,0 +1,78 @@
+name: Remove Rochelle Jordan index cards
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-rochelle-cards.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  remove-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove Rochelle Jordan cards from homepage and blog index
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import re
+
+          # Homepage: remove only the Rochelle Jordan story card. Keep the article page untouched.
+          home = Path('index.html')
+          text = home.read_text(encoding='utf-8')
+          pattern = re.compile(
+              r'\s*<a href="/blog/rochelle-jordan-disc-2-remix-series\.html"[^>]*>.*?</a>\s*',
+              re.S,
+          )
+          text, count = pattern.subn('\n', text, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected 1 Rochelle homepage card, removed {count}')
+          home.write_text(text, encoding='utf-8')
+
+          # Blog index: remove only the Rochelle Jordan card.
+          blog = Path('blog/index.html')
+          text = blog.read_text(encoding='utf-8')
+          pattern = re.compile(
+              r'\s*<article class="card"><a href="rochelle-jordan-disc-2-remix-series\.html">.*?</article>\s*',
+              re.S,
+          )
+          text, count = pattern.subn('\n', text, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected 1 Rochelle blog card, removed {count}')
+
+          # Keep the blog CollectionPage schema aligned with the visible blog index.
+          ld_pattern = re.compile(r'(<script type="application/ld\+json">\s*)(\{.*?\})(\s*</script>)', re.S)
+          match = ld_pattern.search(text)
+          if not match:
+              raise SystemExit('Could not find blog CollectionPage JSON-LD')
+          data = json.loads(match.group(2))
+          items = data.get('mainEntity', {}).get('itemListElement', [])
+          items = [item for item in items if not str(item.get('url', '')).endswith('/rochelle-jordan-disc-2-remix-series.html')]
+          for position, item in enumerate(items, start=1):
+              item['position'] = position
+          data['mainEntity']['itemListElement'] = items
+          new_json = json.dumps(data, ensure_ascii=False, indent=2)
+          text = text[:match.start(2)] + new_json + text[match.end(2):]
+          blog.write_text(text, encoding='utf-8')
+
+          print('Removed Rochelle Jordan cards from index.html and blog/index.html only.')
+          PY
+
+      - name: Commit card removals
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html blog/index.html
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Remove Rochelle Jordan cards from homepage and blog index'
+          git push origin HEAD:main
