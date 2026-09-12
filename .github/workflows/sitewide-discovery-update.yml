@@ -29,9 +29,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Apply responsive site navigation
-        run: python3 sitewide_discovery_update.py
-
       - name: Finalize public navigation
         run: python3 navigation_finalize.py
 
