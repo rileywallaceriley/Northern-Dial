@@ -60,11 +60,15 @@
     {
       "file": "artist_translation_batches/batch-015.json",
       "count": 50
+    },
+    {
+      "file": "artist_translation_batches/batch-016.json",
+      "count": 50
     }
   ],
-  "translation_records": 749,
-  "generated_pages": 749,
-  "english_hreflang_updates": 50,
+  "translation_records": 799,
+  "generated_pages": 799,
+  "english_hreflang_updates": 49,
   "missing_source_count": 0,
   "missing_sources": []
 }
