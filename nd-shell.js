@@ -4,15 +4,6 @@
   const isHomepage = path === '/' || path === '/index.html';
   const isFrench = path === '/fr' || path.startsWith('/fr/');
 
-  const LATEST_STORY = {
-    href: '/blog/new-canadian-releases-september-11-2026.html',
-    localHref: 'new-canadian-releases-september-11-2026.html',
-    image: '/images/new-canadian-releases-sept-11-2026-collage-v2.jpg',
-    date: 'September 11, 2026',
-    category: 'New Canadian Music',
-    title: '5 New Canadian Releases to Bump This Weekend',
-    excerpt: 'Mattmac, CG Tears, Jon McKiel, Starpainter and Hip Club Groove lead this weekend’s picks.'
-  };
 
   const root = isFrench ? '/fr/' : '/';
   const links = isFrench
@@ -42,71 +33,6 @@
         ['Submit', '/#submit', 'submit'],
         ['Français', '/fr/', 'language']
       ];
-
-  function addLatestStory() {
-    if (isFrench) return;
-
-    if (path === '/blog/' || path === '/blog/index.html') {
-      const grid = document.querySelector('.card-grid');
-      if (grid) {
-        let cardLink = grid.querySelector(`a[href="${LATEST_STORY.localHref}"]`);
-        let article = cardLink ? cardLink.closest('article.card') : null;
-
-        if (!article) {
-          article = document.createElement('article');
-          article.className = 'card';
-          article.setAttribute('data-nd-latest-story', 'true');
-          article.innerHTML = `
-            <a href="${LATEST_STORY.localHref}">
-              <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#171717;" />
-            </a>
-            <div class="card-body">
-              <p class="card-date">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
-              <h2 class="card-title">${LATEST_STORY.title}</h2>
-              <div class="card-accent"></div>
-              <p class="card-excerpt">${LATEST_STORY.excerpt}</p>
-              <a href="${LATEST_STORY.localHref}" class="card-link">Read More</a>
-            </div>`;
-        }
-
-        if (grid.firstElementChild !== article) grid.prepend(article);
-      }
-    }
-
-    if (isHomepage) {
-      const stories = document.querySelector('#stories');
-      if (!stories) return;
-
-      const grid = [...stories.querySelectorAll('div')].find((el) => window.getComputedStyle(el).display === 'grid');
-      if (!grid) return;
-
-      let card = grid.querySelector(`a[href="${LATEST_STORY.href}"]`);
-
-      if (!card) {
-        card = document.createElement('a');
-        card.href = LATEST_STORY.href;
-        card.setAttribute('data-nd-latest-story', 'true');
-        card.style.cssText = 'text-decoration:none;display:block;border-radius:10px;overflow:hidden;background:white;border:1px solid #e0e0e0;transition:box-shadow .25s,transform .25s;';
-        card.innerHTML = `
-          <img src="${LATEST_STORY.image}" alt="${LATEST_STORY.title}" style="width:100%;height:200px;object-fit:cover;display:block;background:#171717;" />
-          <div style="padding:20px 18px 18px;">
-            <p style="font-family:'Roboto Condensed',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C33;margin:0 0 8px;">${LATEST_STORY.date} · ${LATEST_STORY.category}</p>
-            <h3 style="font-family:'Oswald',sans-serif;font-size:1.22rem;line-height:1.25;color:#1a1a1a;margin:0 0 10px;">${LATEST_STORY.title}</h3>
-            <p style="font-family:'Roboto Condensed',sans-serif;font-size:.94rem;line-height:1.55;color:#444;margin:0;">${LATEST_STORY.excerpt}</p>
-          </div>`;
-        card.addEventListener('mouseenter', () => {
-          card.style.boxShadow = '0 8px 30px rgba(195,51,51,.3)';
-          card.style.transform = 'translateY(-3px)';
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.boxShadow = 'none';
-          card.style.transform = 'translateY(0)';
-        });
-      }
-
-      if (grid.firstElementChild !== card) grid.prepend(card);
-    }
-  }
 
   function styleBlogArchiveActions() {
     if (path !== '/blog/' && path !== '/blog/index.html') return;
@@ -649,7 +575,6 @@
   }
 
   function init() {
-    addLatestStory();
     sortStoryCards();
     featureNewestBlogStory();
     limitHomepageStories();
