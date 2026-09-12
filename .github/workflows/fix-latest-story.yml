@@ -1,10 +1,13 @@
 name: Fix latest story source
+
 on:
   push:
     paths:
-      - '.github/workflows/fix-latest-story.yml'
+      - .github/workflows/fix-latest-story.yml
+
 permissions:
   contents: write
+
 jobs:
   fix:
     runs-on: ubuntu-latest
@@ -12,40 +15,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Point latest story injector at new Canadian releases
+      - name: Update latest story source
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          path = Path('nd-shell.js')
-          text = path.read_text(encoding='utf-8')
-
-          replacement = """const LATEST_STORY = {
-    href: '/blog/new-canadian-releases-september-11-2026.html',
-    localHref: 'new-canadian-releases-september-11-2026.html',
-    image: '/images/new-canadian-releases-sept-11-2026-collage-v2.jpg',
-    date: 'September 11, 2026',
-    category: 'New Canadian Music',
-    title: '5 New Canadian Releases to Bump This Weekend',
-    excerpt: 'Mattmac, CG Tears, Jon McKiel, Starpainter and Hip Club Groove lead this weekend’s picks.'
-  };"""
-
-          new_text, count = re.subn(r"const LATEST_STORY = \{.*?\n  \};", replacement, text, count=1, flags=re.S)
-          if count != 1:
-              raise SystemExit(f'Expected to replace 1 LATEST_STORY block, replaced {count}')
-
-          path.write_text(new_text, encoding='utf-8')
-          print('Updated nd-shell.js LATEST_STORY to the September 11 roundup.')
-          PY
-      - name: Commit latest story fix
+          sed -i "s|/blog/rochelle-jordan-disc-2-remix-series.html|/blog/new-canadian-releases-september-11-2026.html|g" nd-shell.js
+          sed -i "s|rochelle-jordan-disc-2-remix-series.html|new-canadian-releases-september-11-2026.html|g" nd-shell.js
+          sed -i "s|/images/rochelle-jordan-disc-2-2026.jpg|/images/new-canadian-releases-sept-11-2026-collage-v2.jpg|g" nd-shell.js
+          sed -i "s|category: 'News Hit'|category: 'New Canadian Music'|" nd-shell.js
+          sed -i "s|title: 'Rochelle Jordan Expands Through The Wall With Disc 2'|title: '5 New Canadian Releases to Bump This Weekend'|" nd-shell.js
+          sed -i "s|excerpt: 'Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion reshape Rochelle Jordan’s 2025 album for the dancefloor.'|excerpt: 'Mattmac, CG Tears, Jon McKiel, Starpainter and Hip Club Groove lead this weekend’s picks.'|" nd-shell.js
+      - name: Commit fix
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add nd-shell.js
           if git diff --cached --quiet; then
-            echo 'No changes to commit.'
+            echo No changes to commit
             exit 0
           fi
-          git commit -m 'Make new Canadian releases the latest featured story'
+          git commit -m "Make new Canadian releases the latest featured story"
           git push origin HEAD:main
