@@ -6,6 +6,8 @@ on:
       - 'sitewide_discovery_update.py'
       - 'navigation_finalize.py'
       - 'site_quality_update.py'
+      - 'scripts/add_discovery_nav.py'
+      - 'scripts/rebuild_sitemap.py'
       - 'scripts/site_quality_audit_v2.py'
       - 'accessibility_enhancements.js'
       - '.github/workflows/sitewide-discovery-update.yml'
@@ -33,8 +35,14 @@ jobs:
       - name: Finalize public navigation
         run: python3 navigation_finalize.py
 
+      - name: Add New Releases and New Artists navigation
+        run: python3 scripts/add_discovery_nav.py
+
       - name: Apply SEO, accessibility and indexing hardening
         run: python3 site_quality_update.py
+
+      - name: Rebuild complete public sitemap
+        run: python3 scripts/rebuild_sitemap.py
 
       - name: Run site quality audit
         run: python3 scripts/site_quality_audit_v2.py
@@ -43,12 +51,12 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html homepage_language.js accessibility_enhancements.js library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr sitemap.xml robots.txt 404.html admin.html instagram-dashboard.html library_artist_profiles.html sample-explorer.html zen-scene.html scripts/site_quality_audit_v2.py artist_removals.txt artist_unresolved.txt
+          git add index.html nd-shell.js homepage_language.js accessibility_enhancements.js library.html artists.html discover.html requests.html blog/*.html about.html sessions.html archive.html accessibility.html rights.html survey.html fr sitemap.xml robots.txt 404.html admin.html instagram-dashboard.html library_artist_profiles.html sample-explorer.html zen-scene.html scripts/site_quality_audit_v2.py artist_removals.txt artist_unresolved.txt
           if git diff --cached --quiet; then
             echo 'No site-wide changes to commit.'
             exit 0
           fi
-          git commit -m 'Harden SEO accessibility and site architecture'
+          git commit -m 'Refresh discovery navigation and complete sitemap'
 
           for attempt in 1 2 3 4 5; do
             echo "Push attempt ${attempt}..."
