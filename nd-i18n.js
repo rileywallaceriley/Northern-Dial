@@ -1,8 +1,7 @@
 (() => {
   const path = window.location.pathname;
   const params = new URLSearchParams(window.location.search);
-  const stored = (() => { try { return localStorage.getItem('nd-language'); } catch (_) { return null; } })();
-  const lang = path === '/fr' || path.startsWith('/fr/') || params.get('lang') === 'fr' || (!params.get('lang') && stored === 'fr' && !path.startsWith('/fr/')) ? 'fr' : 'en';
+  const lang = path === '/fr' || path.startsWith('/fr/') || params.get('lang') === 'fr' ? 'fr' : 'en';
 
   const routePairs = {
     '/': '/fr/',
@@ -57,7 +56,7 @@
       'Artist Features & Stories':'Portraits d’artistes et histoires','Digging deeper into the music we play':'Aller plus loin dans la musique que nous diffusons','Back to the Northern Dial blog':'Retour au blogue Northern Dial',
       'Independent Canadian Music Discovery':'Découverte indépendante de la musique canadienne','News Hit':'Brève','Discovery':'Découverte','Keep Digging':'Continuer à découvrir','Discover Artists':'Découvrir des artistes','Browse the Archive':'Parcourir les archives','Sources and Further Listening':'Sources et écoute complémentaire',
       'Northern Dial Discovery':'Découverte Northern Dial','Find Your Next Canadian Artist':'Trouvez votre prochain artiste canadien','What are you into?':'Qu’est-ce que vous aimez?','Genre':'Genre','Era':'Époque','Artist you like (optional)':'Artiste que vous aimez (facultatif)','Surprise Me':'Surprenez-moi','Your five':'Vos cinq choix','Artists to check out':'Artistes à découvrir','Built from the Northern Dial library':'À partir de la bibliothèque Northern Dial','Hear something you like?':'Vous aimez ce que vous entendez?','Request a Song':'Demander une chanson','Request A Song':'Demander une chanson','Browse Now':'Parcourir',
-      'About Northern Dial':'À propos de Northern Dial','Learn More':'En savoir plus','Open-Source Community Project':'Projet communautaire à code source ouvert','Latest Stories':'Dernières histoires','View All Stories':'Voir toutes les histoires','The Northern Dial Project':'Le projet Northern Dial','Our Mantra':'Notre principe','Where We Are Now':'Où nous en sommes','The Vision':'La vision','How You Can Contribute':'Comment contribuer','Get Involved':'Participer','Your Name':'Votre nom','Submit Now':'Soumettre',
+      'About Northern Dial':'À propos de Northern Dial','Learn More':'En savoir plus','Open-Source Community Project':'Projet open source','Latest Stories':'Dernières histoires','View All Stories':'Voir toutes les histoires','The Northern Dial Project':'Le projet Northern Dial','Our Mantra':'Notre principe','Where We Are Now':'Où nous en sommes','The Vision':'La vision','How You Can Contribute':'Comment contribuer','Get Involved':'Participer','Your Name':'Votre nom','Submit Now':'Soumettre',
       'Canadian Music Deserves Context':'La musique canadienne mérite du contexte','Our Mandate':'Notre mandat','Discovery. Documentation. Dissemination.':'Découverte. Documentation. Diffusion.','Documentation':'Documentation','Dissemination':'Diffusion','Source-Backed':'Appuyé par des sources','Accessible':'Accessible','Sustainable':'Durable','Roadmap':'Feuille de route','Build on What Already Exists':'Construire à partir de l’existant','Explore the Current Library':'Explorer la bibliothèque actuelle'
     }
   };
@@ -133,7 +132,7 @@
       control.setAttribute('hreflang', targetLang === 'fr' ? 'fr-CA' : 'en-CA');
       control.setAttribute('lang', targetLang);
       control.textContent = targetLang === 'fr' ? 'English' : 'Français';
-      control.addEventListener('click', () => saveLanguage(targetLang), { once: true });
+      control.onclick = () => saveLanguage(targetLang);
     });
   }
 
@@ -147,7 +146,7 @@
     a.hreflang = lang === 'fr' ? 'en-CA' : 'fr-CA';
     a.lang = lang === 'fr' ? 'en' : 'fr';
     a.textContent = lang === 'fr' ? 'English' : 'Français';
-    a.addEventListener('click', () => saveLanguage(lang === 'fr' ? 'en' : 'fr'));
+    a.onclick = () => saveLanguage(lang === 'fr' ? 'en' : 'fr');
     nav.appendChild(a);
   }
 
