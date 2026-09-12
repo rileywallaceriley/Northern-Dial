@@ -27,7 +27,7 @@ if 'SEP12_VIBI_LOLO_START' not in text:
 
 text = home.read_text(encoding='utf-8')
 if 'SEP12_VIBI_LOLO_HOME_START' not in text:
-    marker = '<!-- SEPT11_HOME_EDITORIAL_START -->'
+    marker = '<!-- SEPT11_EDITORIAL_START -->'
     if marker not in text:
         raise SystemExit('Homepage insertion marker not found')
     text = text.replace(marker, home_cards + '\n      ' + marker, 1)
