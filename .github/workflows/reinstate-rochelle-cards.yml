@@ -1,0 +1,64 @@
+name: Reinstate Rochelle Jordan cards
+
+on:
+  push:
+    paths:
+      - '.github/workflows/reinstate-rochelle-cards.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reinstate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reinstate Rochelle Jordan below Sept 11 editorial package
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          blog = Path('blog/index.html')
+          home = Path('index.html')
+
+          blog_card = '''
+      <article class="card"><a href="rochelle-jordan-disc-2-remix-series.html"><img src="../images/no-transit-01.png?v=no-transit-01" alt="Rochelle Jordan in a Toronto torn-paper collage" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#111;" /></a><div class="card-body"><p class="card-date">September 11, 2026 · News Hit</p><h2 class="card-title">Rochelle Jordan Expands <em>Through The Wall</em> With <em>Disc 2</em></h2><div class="card-accent"></div><p class="card-excerpt">The Toronto-raised artist opens her remix series to Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion.</p><a href="rochelle-jordan-disc-2-remix-series.html" class="card-link">Read More</a></div></article>
+'''
+
+          home_card = '''
+      <a href="/blog/rochelle-jordan-disc-2-remix-series.html" style="text-decoration:none;display:block;border-radius:10px;overflow:hidden;background:white;border:1px solid #e0e0e0;transition:box-shadow .25s,transform .25s;"><img src="images/no-transit-01.png?v=no-transit-01" alt="Rochelle Jordan in a Toronto torn-paper collage" style="width:100%;height:200px;object-fit:cover;object-position:center;display:block;background:#111;"><div style="padding:20px 18px 18px;"><p style="font-family:'Roboto Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#CC3333;margin-bottom:8px;">September 11, 2026 · News Hit</p><h3 style="font-family:'Oswald',sans-serif;font-size:1.3rem;color:#1a1a1a;margin-bottom:10px;line-height:1.2;">Rochelle Jordan Expands <em>Through The Wall</em> With <em>Disc 2</em></h3><p style="font-family:'Roboto Condensed',sans-serif;font-size:.92rem;color:#555;line-height:1.6;margin-bottom:14px;">The Toronto-raised artist opens her remix series to Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion.</p><span style="font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#CC3333;">Read More →</span></div></a>
+'''
+
+          marker = '<!-- SEPT11_EDITORIAL_END -->'
+
+          text = blog.read_text(encoding='utf-8')
+          if 'href="rochelle-jordan-disc-2-remix-series.html"' not in text:
+              if marker not in text:
+                  raise SystemExit('Sept 11 editorial marker missing from blog index')
+              text = text.replace(marker, marker + blog_card, 1)
+              blog.write_text(text, encoding='utf-8')
+
+          text = home.read_text(encoding='utf-8')
+          if 'href="/blog/rochelle-jordan-disc-2-remix-series.html"' not in text:
+              if marker not in text:
+                  raise SystemExit('Sept 11 editorial marker missing from homepage')
+              text = text.replace(marker, marker + home_card, 1)
+              home.write_text(text, encoding='utf-8')
+
+          print('Rochelle cards reinstated after the Sept 11 package; article page unchanged.')
+          PY
+
+      - name: Commit reinstated cards
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blog/index.html index.html
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Reinstate Rochelle Jordan cards below current features'
+          git push origin HEAD:main
