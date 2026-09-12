@@ -1,0 +1,34 @@
+name: Permanent latest story rule
+
+on:
+  push:
+    paths:
+      - 'tools/permanent_latest_story.py'
+      - '.github/workflows/permanent-latest-story.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Remove hardcoded latest story injector
+        run: python tools/permanent_latest_story.py
+      - name: Commit permanent latest story fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nd-shell.js
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Make newest story the permanent featured story'
+          git push origin HEAD:main
