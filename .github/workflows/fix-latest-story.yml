@@ -1,0 +1,51 @@
+name: Fix latest story source
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-latest-story.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Point latest story injector at new Canadian releases
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('nd-shell.js')
+          text = path.read_text(encoding='utf-8')
+
+          replacement = """const LATEST_STORY = {
+    href: '/blog/new-canadian-releases-september-11-2026.html',
+    localHref: 'new-canadian-releases-september-11-2026.html',
+    image: '/images/new-canadian-releases-sept-11-2026-collage-v2.jpg',
+    date: 'September 11, 2026',
+    category: 'New Canadian Music',
+    title: '5 New Canadian Releases to Bump This Weekend',
+    excerpt: 'Mattmac, CG Tears, Jon McKiel, Starpainter and Hip Club Groove lead this weekend’s picks.'
+  };"""
+
+          new_text, count = re.subn(r"const LATEST_STORY = \{.*?\n  \};", replacement, text, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit(f'Expected to replace 1 LATEST_STORY block, replaced {count}')
+
+          path.write_text(new_text, encoding='utf-8')
+          print('Updated nd-shell.js LATEST_STORY to the September 11 roundup.')
+          PY
+      - name: Commit latest story fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nd-shell.js
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Make new Canadian releases the latest featured story'
+          git push origin HEAD:main
