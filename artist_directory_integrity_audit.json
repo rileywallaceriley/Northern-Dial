@@ -1,8 +1,56 @@
 {
   "directory_accordions": 1215,
   "profile_backed_accordions": 958,
-  "standalone_profile_files": 1152,
-  "issue_count": 0,
-  "issue_types": {},
-  "issues": []
+  "standalone_profile_files": 1161,
+  "issue_count": 9,
+  "issue_types": {
+    "missing_back_link": 9
+  },
+  "issues": [
+    {
+      "type": "missing_back_link",
+      "artist": "housewife",
+      "detail": "artists/housewife.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "jake-soberlak",
+      "detail": "artists/jake-soberlak.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "living-hour",
+      "detail": "artists/living-hour.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "lolo",
+      "detail": "artists/lolo.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "mars-aspen",
+      "detail": "artists/mars-aspen.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "miesha-and-the-spanks",
+      "detail": "artists/miesha-and-the-spanks.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "pretty",
+      "detail": "artists/pretty.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "shiv-and-the-carvers",
+      "detail": "artists/shiv-and-the-carvers.html"
+    },
+    {
+      "type": "missing_back_link",
+      "artist": "whisper-gang",
+      "detail": "artists/whisper-gang.html"
+    }
+  ]
 }
