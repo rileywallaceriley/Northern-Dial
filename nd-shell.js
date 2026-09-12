@@ -19,6 +19,8 @@
         ['Songs', '/library.html'],
         ['Artists', '/artists.html'],
         ['Discover', '/discover.html'],
+        ['New Releases', '/new-releases.html'],
+        ['New Artists', '/new-canadian-artists.html'],
         ['Blog', '/blog/']
       ];
 

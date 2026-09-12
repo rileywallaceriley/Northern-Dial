@@ -8,6 +8,3 @@ Disallow: /zen-scene.html
 Disallow: /docs/
 
 Sitemap: https://www.northerndial.ca/sitemap.xml
-Sitemap: https://www.northerndial.ca/blog-sitemap.xml
-Sitemap: https://www.northerndial.ca/new-releases-sitemap.xml
-Sitemap: https://www.northerndial.ca/new-canadian-artists-sitemap.xml
