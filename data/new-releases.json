@@ -1,0 +1,142 @@
+{
+  "updated": "2026-09-12",
+  "page": "/new-releases.html",
+  "methodology": {
+    "primary_discovery": [
+      "Bandcamp Canada newest releases",
+      "direct artist and label announcements",
+      "Northern Dial Formspark submissions"
+    ],
+    "secondary_verification": [
+      "streaming release data",
+      "Canadian music publications",
+      "artist and label websites"
+    ],
+    "notes": "Do not rely on a single editorial publication. Verify dates and Canadian connection before publishing."
+  },
+  "releases": [
+    {
+      "artist": "Mattmac",
+      "title": "Smoke Signals",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Manitoba",
+      "artist_profile": "/artists/mattmac.html",
+      "listen_url": "https://open.spotify.com/artist/2wn3YMzruUNJ2Ee1z6xnjY",
+      "discovery_source": "Canadian release monitoring",
+      "status": "out_now"
+    },
+    {
+      "artist": "CG Tears",
+      "title": "CG Tears",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Calgary, Alberta",
+      "artist_profile": "/artists/cg-tears.html",
+      "listen_url": "https://cgtears.bandcamp.com/",
+      "discovery_source": "direct artist/label and Canadian release monitoring",
+      "status": "out_now"
+    },
+    {
+      "artist": "Jon McKiel",
+      "title": "Gold Horatio",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "New Brunswick",
+      "artist_profile": "/artists/jon-mckiel.html",
+      "listen_url": "https://jonmckiel.bandcamp.com/album/gold-horatio",
+      "discovery_source": "direct Bandcamp",
+      "status": "out_now"
+    },
+    {
+      "artist": "Starpainter",
+      "title": "Cayenne Flowerbed",
+      "type": "album",
+      "release_date": "2026-09-09",
+      "location": "Lethbridge, Alberta",
+      "artist_profile": "/artists/starpainter.html",
+      "listen_url": "https://starpainter.bandcamp.com/album/cayenne-flowerbed",
+      "discovery_source": "direct Bandcamp",
+      "status": "out_now"
+    },
+    {
+      "artist": "Rochelle Jordan",
+      "title": "Disc 2",
+      "type": "EP",
+      "release_date": "2026-09-10",
+      "location": "Toronto",
+      "artist_profile": "/artists/rochelle-jordan.html",
+      "listen_url": "https://open.spotify.com/intl-es/artist/3MM3uKNdJbvefUael12dl3",
+      "discovery_source": "press release received by Northern Dial",
+      "status": "out_now"
+    },
+    {
+      "artist": "Colin Stetson & Brìghde Chaimbeul",
+      "title": "All the light in the world",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Montréal connection",
+      "artist_profile": null,
+      "listen_url": "https://colinstetson.bandcamp.com/album/all-the-light-in-the-world",
+      "discovery_source": "direct Bandcamp/label",
+      "status": "out_now"
+    },
+    {
+      "artist": "Raphael Weinroth-Browne",
+      "title": "Empyrean",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Canada",
+      "artist_profile": null,
+      "listen_url": "https://raphaelweinroth-browne.bandcamp.com/album/empyrean",
+      "discovery_source": "Bandcamp Canada newest",
+      "status": "out_now"
+    },
+    {
+      "artist": "Postmodern Machine",
+      "title": "The End is a Beginning",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Toronto, Ontario",
+      "artist_profile": null,
+      "listen_url": "https://postmodernmachine.bandcamp.com/album/the-end-is-a-beginning",
+      "discovery_source": "Bandcamp Canada newest",
+      "status": "out_now"
+    },
+    {
+      "artist": "Jake Soberlak",
+      "title": "I'm In Trouble",
+      "type": "album",
+      "release_date": "2026-09-11",
+      "location": "Kamloops, British Columbia",
+      "artist_profile": null,
+      "listen_url": "https://jakesoberlak.bandcamp.com/album/im-in-trouble-2",
+      "discovery_source": "Bandcamp Canada newest",
+      "status": "out_now"
+    },
+    {
+      "artist": "Eastmount Park",
+      "title": "Heaven Ain't No Heaven",
+      "type": "single",
+      "release_date": null,
+      "location": "Ottawa, Ontario",
+      "artist_profile": null,
+      "listen_url": "https://open.spotify.com/track/5YnIPanbB12cxJ2Fi7Q2M6?autoplay_ok=1",
+      "discovery_source": "Northern Dial direct submission",
+      "submission_date": "2026-09-08",
+      "status": "out_now"
+    },
+    {
+      "artist": "Various Artists / Hand'Solo Records",
+      "title": "Bassments of Badmen 4",
+      "type": "compilation",
+      "release_date": "2026-09-18",
+      "location": "Toronto, Ontario",
+      "artist_profile": null,
+      "listen_url": "https://handsolorecords.bandcamp.com/album/bassments-of-badmen-4",
+      "related_story": "/blog/hip-club-groove-dead-words.html",
+      "discovery_source": "direct label Bandcamp",
+      "status": "coming_soon"
+    }
+  ]
+}
