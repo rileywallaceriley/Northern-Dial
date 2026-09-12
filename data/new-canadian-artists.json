@@ -1,0 +1,17 @@
+{
+  "updated": "2026-09-12",
+  "source_policy": "Use direct artist and label sources, Bandcamp Canada/new, Canadian music coverage, live activity and Northern Dial submissions. Cross-check strong candidates where practical.",
+  "artists": [
+    {"name":"Sophia Stel","slug":"sophia-stel","location":"Victoria / Vancouver, BC","style":"Experimental pop","status":"profile now","signal":"Debut album announced for Oct. 16 via A24 Music","source":"https://www.vogue.com/article/sophia-stel-debut-album-announcement"},
+    {"name":"Mattmac","slug":"mattmac","location":"Garden Hill First Nation, MB","style":"Hip-hop / pop","status":"profile now","signal":"New album Smoke Signals","source":"https://mattmac.bandcamp.com/"},
+    {"name":"Shiv and the Carvers","slug":"shiv-and-the-carvers","location":"Toronto, ON","style":"Punk / alternative","status":"profile now","signal":"Debut album Always Watching due Oct. 29 via Twin Fang","source":"https://twinfangrecords.com/pages/news"},
+    {"name":"Jake Soberlak","slug":"jake-soberlak","location":"Kamloops, BC","style":"Blues","status":"profile now","signal":"Debut album I'm In Trouble released Sept. 11","source":"https://jakesoberlak.bandcamp.com/album/im-in-trouble-2"},
+    {"name":"Pretty","slug":"pretty","location":"Toronto, ON","style":"Psych / garage rock","status":"profile now","signal":"Multiple 2026 singles and new album activity","source":"https://prettytheband.bandcamp.com/"},
+    {"name":"Whisper Gang","slug":"whisper-gang","location":"Toronto, ON","style":"Shoegaze / alt-rock","status":"profile now","signal":"2026 singles Bend and Event Horizon","source":"https://whispergang.bandcamp.com/"},
+    {"name":"Mars Aspen","slug":"mars-aspen","location":"Canada","style":"Alternative / indie","status":"profile now","signal":"baby teeth EP on Twin Fang","source":"https://twinfangrecords.com/pages/mars-aspen"},
+    {"name":"Living Hour","slug":"living-hour","location":"Winnipeg, MB","style":"Dream pop / slowcore","status":"profile now","signal":"Magnet EP due Sept. 24","source":"https://livinghourband.bandcamp.com/album/magnet-ep-3"},
+    {"name":"Miesha & The Spanks","slug":"miesha-and-the-spanks","location":"Calgary, AB","style":"Garage punk","status":"profile now","signal":"Visions EP due Sept. 18","source":"https://mieshathespanks.bandcamp.com/album/visions"},
+    {"name":"Housewife","slug":"housewife","location":"Toronto, ON","style":"Indie pop","status":"watch","signal":"2026 single Misbehavin'","source":"https://music.apple.com/us/artist/housewife/1689600925"},
+    {"name":"LØLØ","slug":"lolo","location":"Toronto, ON","style":"Pop-punk / alt-pop","status":"watch","signal":"2026 singles and headline tour","source":"https://lolo.bandcamp.com/album/pretty-little-wreck"}
+  ]
+}
