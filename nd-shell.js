@@ -101,9 +101,10 @@
           .map((card, index) => ({
             card,
             index,
+            featured: card.classList.contains('featured'),
             date: parseDate(card.querySelector('.card-date')?.textContent)
           }))
-          .sort((a, b) => (b.date - a.date) || (a.index - b.index))
+          .sort((a, b) => (Number(b.featured) - Number(a.featured)) || (b.date - a.date) || (a.index - b.index))
           .forEach(({ card }) => grid.appendChild(card));
       }
     }
