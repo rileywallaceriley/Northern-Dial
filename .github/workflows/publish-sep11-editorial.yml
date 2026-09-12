@@ -1,0 +1,32 @@
+name: Publish Sept 11 editorial
+on:
+  push:
+    paths:
+      - 'tools/publish_sep11_editorial.py'
+      - '.github/workflows/publish-sep11-editorial.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Patch blog and home indexes
+        run: python tools/publish_sep11_editorial.py
+      - name: Commit generated editorial wiring
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/index.html index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish Sept 11 editorial across site"
+            git push
+          fi
