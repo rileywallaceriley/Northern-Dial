@@ -1,0 +1,34 @@
+name: Refine Sept 11 features
+on:
+  push:
+    paths:
+      - 'tools/refine_sep11_features.py'
+      - '.github/workflows/refine-sep11-features.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install video resolver
+        run: pip install -q yt-dlp
+      - name: Refine posts and profiles
+        run: python tools/refine_sep11_features.py
+      - name: Commit refinements
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/new-canadian-releases-september-11-2026.html blog/if-you-like-drake-canadian-artists.html blog/index.html index.html artists/cg-tears.html artists/jon-mckiel.html artists/starpainter.html artists/hip-club-groove.html artists/loony.html artists/northsidebenji.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Feature weekend roundup and deepen artist profiles"
+            git push
+          fi
