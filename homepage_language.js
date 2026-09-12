@@ -114,6 +114,7 @@
     for (const textNode of nodes) {
       const parent = textNode.parentElement;
       if (!parent || ['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA'].includes(parent.tagName)) continue;
+      if (parent.closest('[data-language-toggle]')) continue;
       const raw = textNode.nodeValue || '';
       const key = raw.trim();
       if (dictionary[key]) textNode.nodeValue = preserveWhitespace(raw, dictionary[key]);
@@ -122,6 +123,7 @@
 
   function translateAttributes(dictionary) {
     document.querySelectorAll('[placeholder], [aria-label], [title]').forEach((el) => {
+      if (el.matches('[data-language-toggle]')) return;
       ['placeholder', 'aria-label', 'title'].forEach((attr) => {
         const value = el.getAttribute(attr);
         if (value && dictionary[value]) el.setAttribute(attr, dictionary[value]);
@@ -143,17 +145,18 @@
   }
 
   function updateLanguageToggle(lang) {
-    const toggle = document.querySelector('[data-language-toggle]');
-    if (!toggle) return;
-    if (lang === 'fr') {
-      toggle.textContent = 'English';
-      toggle.setAttribute('lang', 'en');
-      toggle.setAttribute('aria-label', 'Switch homepage to English');
-    } else {
-      toggle.textContent = 'Français';
-      toggle.setAttribute('lang', 'fr');
-      toggle.setAttribute('aria-label', 'Afficher la page d’accueil en français');
-    }
+    document.querySelectorAll('[data-language-toggle]').forEach((toggle) => {
+      if (lang === 'fr') {
+        toggle.textContent = 'English';
+        toggle.setAttribute('lang', 'en');
+        toggle.setAttribute('aria-label', 'Switch homepage to English');
+      } else {
+        toggle.textContent = 'Français';
+        toggle.setAttribute('lang', 'fr');
+        toggle.setAttribute('aria-label', 'Afficher la page d’accueil en français');
+      }
+      toggle.dataset.languageState = lang;
+    });
   }
 
   function updateUrlForLanguage(lang) {
@@ -189,9 +192,9 @@
 
     document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
     document.documentElement.dataset.ndLanguage = lang;
-    updateLanguageToggle(lang);
     updateInternalLinks(lang);
     updateMetadata(lang);
+    updateLanguageToggle(lang);
     if (persist) updateUrlForLanguage(lang);
     if (persist) {
       try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
@@ -212,34 +215,40 @@
   function installMutationTranslation() {
     let queued = false;
     const observer = new MutationObserver(() => {
-      if ((document.documentElement.dataset.ndLanguage || 'en') !== 'fr' || queued) return;
+      if (queued) return;
       queued = true;
       requestAnimationFrame(() => {
         queued = false;
-        translateTextNodes(document.body, EN_TO_FR);
-        translateAttributes(EN_TO_FR);
-        updateLanguageToggle('fr');
-        updateInternalLinks('fr');
+        const current = document.documentElement.dataset.ndLanguage || 'en';
+        if (current === 'fr') {
+          translateTextNodes(document.body, EN_TO_FR);
+          translateAttributes(EN_TO_FR);
+          updateInternalLinks('fr');
+        }
+        // The language control is UI, not translatable page copy. Always force it
+        // to advertise the OTHER language after any nav/DOM rebuild.
+        updateLanguageToggle(current);
       });
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   }
 
   function init() {
-    const toggle = document.querySelector('[data-language-toggle]');
-    if (!toggle) return;
-
-    toggle.addEventListener('click', (event) => {
-      event.preventDefault();
-      const current = document.documentElement.dataset.ndLanguage || 'en';
-      applyLanguage(current === 'fr' ? 'en' : 'fr');
-      closeMobileMenu();
-    });
-
-    // URL state is authoritative so a saved preference can never trap the homepage.
     const requested = new URLSearchParams(window.location.search).get('lang');
     const initial = requested === 'fr' ? 'fr' : 'en';
     applyLanguage(initial, false);
+
+    document.addEventListener('click', (event) => {
+      const toggle = event.target.closest('[data-language-toggle]');
+      if (!toggle) return;
+      event.preventDefault();
+      const current = document.documentElement.dataset.ndLanguage || 'en';
+      const next = current === 'fr' ? 'en' : 'fr';
+      applyLanguage(next);
+      updateLanguageToggle(next);
+      closeMobileMenu();
+    });
+
     installMutationTranslation();
   }
 
