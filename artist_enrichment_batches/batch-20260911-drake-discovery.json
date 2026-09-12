@@ -1,0 +1,26 @@
+{
+  "LOONY": {
+    "display_name": "LOONY",
+    "reviewed": true,
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "bio": "LOONY is a Toronto singer and songwriter whose records sit between R&B, neo-soul and left-field pop. Her writing tends to stay close to the body: small details, tangled feelings and melodies that feel conversational instead of oversized. After the 2024 self-titled album LOONY and the 2026 project JUST HAPPY TO BE HERE!, she returned in July 2026 with the single RaGDOLL, keeping the focus on loose groove, vocal phrasing and emotional messiness rather than polished pop symmetry.",
+    "album_titles": ["LOONY", "JUST HAPPY TO BE HERE!"],
+    "website": "https://www.loonymoonchild.com/",
+    "sources": [
+      "https://music.apple.com/us/artist/loony/1348447686"
+    ]
+  },
+  "NorthSideBenji": {
+    "display_name": "NorthSideBenji",
+    "reviewed": true,
+    "city": "Brampton, Ontario",
+    "country": "Canada",
+    "bio": "NorthSideBenji is a Brampton rapper whose music balances street detail with melody and a low-key delivery that rarely needs to force the point. His catalogue has made him one of the steadier voices in the GTA's melodic rap lane, with songs built around reflective writing, clipped hooks and production that leaves room for his voice. In 2026 he joined Boi-1da and Canada Soccer for TRYNA WIN, part of the WHAT IF IT ALL GOES RIGHT? project, and followed it with more new material including Crowd Control.",
+    "album_titles": ["WHAT IF IT ALL GOES RIGHT?"],
+    "sources": [
+      "https://music.apple.com/us/artist/northsidebenji/1302865772",
+      "https://canadasoccer.com/perfect-pitch/"
+    ]
+  }
+}
