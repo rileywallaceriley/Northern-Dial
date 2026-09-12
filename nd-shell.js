@@ -5,13 +5,13 @@
   const isFrench = path === '/fr' || path.startsWith('/fr/');
 
   const LATEST_STORY = {
-    href: '/blog/rochelle-jordan-disc-2-remix-series.html',
-    localHref: 'rochelle-jordan-disc-2-remix-series.html',
-    image: '/images/rochelle-jordan-disc-2-2026.jpg',
+    href: '/blog/new-canadian-releases-september-11-2026.html',
+    localHref: 'new-canadian-releases-september-11-2026.html',
+    image: '/images/new-canadian-releases-sept-11-2026-collage-v2.jpg',
     date: 'September 11, 2026',
-    category: 'News Hit',
-    title: 'Rochelle Jordan Expands Through The Wall With Disc 2',
-    excerpt: 'Chad Hugo, Terry Hunter, Shanti Celeste and Bianca Oblivion reshape Rochelle Jordan’s 2025 album for the dancefloor.'
+    category: 'New Canadian Music',
+    title: '5 New Canadian Releases to Bump This Weekend',
+    excerpt: 'Mattmac, CG Tears, Jon McKiel, Starpainter and Hip Club Groove lead this weekend’s picks.'
   };
 
   const root = isFrench ? '/fr/' : '/';
