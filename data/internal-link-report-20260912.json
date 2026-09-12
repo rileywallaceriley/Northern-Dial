@@ -1,0 +1,151 @@
+{
+  "blogs_scanned": 19,
+  "artist_profiles_scanned": 1152,
+  "blogs_changed": 19,
+  "artist_profiles_changed": 28,
+  "profile_links_added_to_blogs": 33,
+  "related_blog_links_added": 18,
+  "blog_links_added_to_artist_profiles": 33,
+  "artists_with_blog_coverage": [
+    {
+      "slug": "haley-smalls",
+      "name": "Haley Smalls",
+      "stories": 2
+    },
+    {
+      "slug": "hip-club-groove",
+      "name": "Hip Club Groove",
+      "stories": 2
+    },
+    {
+      "slug": "koko-love",
+      "name": "Koko Love",
+      "stories": 2
+    },
+    {
+      "slug": "mattmac",
+      "name": "Mattmac",
+      "stories": 2
+    },
+    {
+      "slug": "rochelle-jordan",
+      "name": "rochelle jordan",
+      "stories": 2
+    },
+    {
+      "slug": "ar-paisley",
+      "name": "ar paisley",
+      "stories": 1
+    },
+    {
+      "slug": "cg-tears",
+      "name": "CG Tears",
+      "stories": 1
+    },
+    {
+      "slug": "drake",
+      "name": "Drake",
+      "stories": 1
+    },
+    {
+      "slug": "frvrfriday",
+      "name": "frvrfriday",
+      "stories": 1
+    },
+    {
+      "slug": "ghostboyrj",
+      "name": "Ghostboyrj",
+      "stories": 1
+    },
+    {
+      "slug": "jacques-greene",
+      "name": "jacques greene",
+      "stories": 1
+    },
+    {
+      "slug": "jon-mckiel",
+      "name": "Jon McKiel",
+      "stories": 1
+    },
+    {
+      "slug": "k-forest",
+      "name": "k. forest",
+      "stories": 1
+    },
+    {
+      "slug": "kaytranada",
+      "name": "Kaytranada",
+      "stories": 1
+    },
+    {
+      "slug": "lia-pappas-kemps",
+      "name": "Lia Pappas-Kemps",
+      "stories": 1
+    },
+    {
+      "slug": "livingthing",
+      "name": "livingthing",
+      "stories": 1
+    },
+    {
+      "slug": "loony",
+      "name": "LOONY",
+      "stories": 1
+    },
+    {
+      "slug": "lov",
+      "name": "LÖV",
+      "stories": 1
+    },
+    {
+      "slug": "ll",
+      "name": "lølø",
+      "stories": 1
+    },
+    {
+      "slug": "magi-merlin",
+      "name": "magi merlin",
+      "stories": 1
+    },
+    {
+      "slug": "motion",
+      "name": "motion",
+      "stories": 1
+    },
+    {
+      "slug": "northsidebenji",
+      "name": "NorthSideBenji",
+      "stories": 1
+    },
+    {
+      "slug": "planet-giza",
+      "name": "planet giza",
+      "stories": 1
+    },
+    {
+      "slug": "puma-june",
+      "name": "Puma June",
+      "stories": 1
+    },
+    {
+      "slug": "starpainter",
+      "name": "Starpainter",
+      "stories": 1
+    },
+    {
+      "slug": "tauro",
+      "name": "TAURO",
+      "stories": 1
+    },
+    {
+      "slug": "tobi",
+      "name": "tobi",
+      "stories": 1
+    },
+    {
+      "slug": "vibi",
+      "name": "VIBI",
+      "stories": 1
+    }
+  ]
+}
