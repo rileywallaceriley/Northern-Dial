@@ -21,16 +21,18 @@ jobs:
           python-version: '3.x'
       - name: Build internal link network
         run: python tools/build_internal_links.py
+      - name: Add contextual editorial links
+        run: python tools/editorial_internal_links.py
       - name: Commit internal links
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog artists data/internal-link-report-20260912.json
+          git add blog artists data/internal-link-report-20260912.json data/editorial-internal-links-20260912.json
           if git diff --cached --quiet; then
             echo "No internal-link changes needed"
             exit 0
           fi
-          git commit -m "Strengthen blog and artist internal links"
+          git commit -m "Strengthen contextual editorial links"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
