@@ -82,7 +82,6 @@
   };
 
   const FR_TO_EN = Object.fromEntries(Object.entries(EN_TO_FR).map(([en, fr]) => [fr, en]));
-  // Compatibility with the older French phrase so already-rendered/cached DOM can recover.
   FR_TO_EN['Projet communautaire à code source ouvert'] = 'Open-Source Community Project';
 
   const EN_TO_FR_ROUTES = {
@@ -269,9 +268,11 @@
       event.preventDefault();
       const current = document.documentElement.dataset.ndLanguage || 'en';
       const next = current === 'fr' ? 'en' : 'fr';
-      applyLanguage(next);
-      updateLanguageToggle(next);
+      try { localStorage.setItem(STORAGE_KEY, next); } catch (_) {}
       closeMobileMenu();
+      // Use a real navigation instead of only rewriting history. This guarantees
+      // that leaving French removes ?lang=fr completely and cannot reload back into French.
+      window.location.assign(next === 'fr' ? '/?lang=fr' : '/');
     });
 
     installMutationTranslation();
