@@ -1,0 +1,1353 @@
+{
+  "endpoint": "https://a10.asurahosting.com/api/station/northern_dial/requests",
+  "checked": "2026-09-11",
+  "artists": {
+    "Mattmac": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 3,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=Mattmac&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=Mattmac&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=Mattmac&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=Mattmac&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "f38cf1885136a913d8179c1f",
+            "request_url": "/api/station/491/request/f38cf1885136a913d8179c1f",
+            "song": {
+              "id": "0542b42136fcf2b27e24b9aa138da758",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f38cf1885136a913d8179c1f-1789177485.jpg",
+              "custom_fields": [],
+              "text": "Mattmac - Smoke Signals - Right Back Home",
+              "artist": "Mattmac",
+              "title": "Right Back Home",
+              "album": "Smoke Signals",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZZ8B2548431",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "d8126f681dffa08c31c17a84",
+            "request_url": "/api/station/491/request/d8126f681dffa08c31c17a84",
+            "song": {
+              "id": "8c9b43e076a344758784e5554a29df30",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d8126f681dffa08c31c17a84-1789006126.jpg",
+              "custom_fields": [],
+              "text": "Mattmac, QuestionATL - I Remember When - I Remember When",
+              "artist": "Mattmac, QuestionATL",
+              "title": "I Remember When",
+              "album": "I Remember When",
+              "genre": "Pop",
+              "isrc": "QZTRX2693704",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "e9d3f1aa1107346eddaafdf4",
+            "request_url": "/api/station/491/request/e9d3f1aa1107346eddaafdf4",
+            "song": {
+              "id": "6a3891b207e5bbd87bdbd991b30aa352",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e9d3f1aa1107346eddaafdf4-1789177501.jpg",
+              "custom_fields": [],
+              "text": "Mattmac, QuestionATL, DaMasta - Smoke Signals - Faded",
+              "artist": "Mattmac, QuestionATL, DaMasta",
+              "title": "Faded",
+              "album": "Smoke Signals",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZTV32631920",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    },
+    "CG Tears": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 1,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=CG+Tears&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=CG+Tears&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=CG+Tears&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=CG+Tears&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "995b90537a30fbc9b2c66fe6",
+            "request_url": "/api/station/491/request/995b90537a30fbc9b2c66fe6",
+            "song": {
+              "id": "e7b2e7b994bd69112a5cbb55ce74f4f3",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/995b90537a30fbc9b2c66fe6-1789177490.jpg",
+              "custom_fields": [],
+              "text": "CG Tears - CG Tears - Breezy Cell",
+              "artist": "CG Tears",
+              "title": "Breezy Cell",
+              "album": "CG Tears",
+              "genre": "Electro",
+              "isrc": "QM6P42696723",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    },
+    "Jon McKiel": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 3,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=Jon+McKiel&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=Jon+McKiel&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=Jon+McKiel&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=Jon+McKiel&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "34f2a6c189e7b10d290a5bd9",
+            "request_url": "/api/station/491/request/34f2a6c189e7b10d290a5bd9",
+            "song": {
+              "id": "864d35faed1aba958f3eca48e2b77eca",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/34f2a6c189e7b10d290a5bd9-1789177481.jpg",
+              "custom_fields": [],
+              "text": "Jon McKiel - Gold Horatio - For Shadow",
+              "artist": "Jon McKiel",
+              "title": "For Shadow",
+              "album": "Gold Horatio",
+              "genre": "Alternative",
+              "isrc": "CA0LX2600065",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "b3663a87d0d951b08f30fee7",
+            "request_url": "/api/station/491/request/b3663a87d0d951b08f30fee7",
+            "song": {
+              "id": "4784bbdd6a4c784251debf3a92fdd894",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b3663a87d0d951b08f30fee7-1789177495.jpg",
+              "custom_fields": [],
+              "text": "Jon McKiel - Gold Horatio - Guru",
+              "artist": "Jon McKiel",
+              "title": "Guru",
+              "album": "Gold Horatio",
+              "genre": "Alternative",
+              "isrc": "CA0LX2600066",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "e32cf3f74c856654e5d02cf6",
+            "request_url": "/api/station/491/request/e32cf3f74c856654e5d02cf6",
+            "song": {
+              "id": "d7e59a68e335aa6df2c53f3a38775769",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e32cf3f74c856654e5d02cf6-1789177901.jpg",
+              "custom_fields": [],
+              "text": "Jon McKiel - Gold Horatio - Stinging Reflection",
+              "artist": "Jon McKiel",
+              "title": "Stinging Reflection",
+              "album": "Gold Horatio",
+              "genre": "Alternative",
+              "isrc": "CA0LX2600070",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    },
+    "Starpainter": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 2,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=Starpainter&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=Starpainter&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=Starpainter&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=Starpainter&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "ca943b46dbaee9bf08edadca",
+            "request_url": "/api/station/491/request/ca943b46dbaee9bf08edadca",
+            "song": {
+              "id": "40e39a4e84f6573abbe9bebdc67cd2f2",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ca943b46dbaee9bf08edadca-1789177475.jpg",
+              "custom_fields": [],
+              "text": "Starpainter - Cayenne Flowerbed - Cayenne Flowerbed",
+              "artist": "Starpainter",
+              "title": "Cayenne Flowerbed",
+              "album": "Cayenne Flowerbed",
+              "genre": "Pop",
+              "isrc": "QM6N22633280",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "170962d51a27cb58922df7ec",
+            "request_url": "/api/station/491/request/170962d51a27cb58922df7ec",
+            "song": {
+              "id": "92326388614dc575c4a3042061b5e7c6",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/170962d51a27cb58922df7ec-1789177478.jpg",
+              "custom_fields": [],
+              "text": "Starpainter - I Found a River - I Found a River",
+              "artist": "Starpainter",
+              "title": "I Found a River",
+              "album": "I Found a River",
+              "genre": "Pop",
+              "isrc": "QM6N22633276",
+              "lyrics": "They say all rivers flow into the ocean\nCarry you away somewhere you cannot return from\nWell I found a river that flows in a circle, yeah\nI found a river that flows in a circle\n\nEverything that's been will be that way again\nI can't tell a beginning from an end\nThe same room is waiting on the other side of every door\nAnywhere I go, I know I've been there before\n\nThey say every life's a journey to the future\nYou're looking for a place somewhere nobody can hurt you\nWell I found a river that flows in a circle, yeah . . \nI found a river that flows in a circle\n\nIf you don't believe me, just wait and see\nI'll be waiting for you somewhere upstream"
+            }
+          }
+        ]
+      }
+    },
+    "Hip Club Groove": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 1,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=Hip+Club+Groove&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=Hip+Club+Groove&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=Hip+Club+Groove&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=Hip+Club+Groove&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "63dcf606022d28a0f7a8cf1f",
+            "request_url": "/api/station/491/request/63dcf606022d28a0f7a8cf1f",
+            "song": {
+              "id": "6104d72da8f737598d0c5421b9532f64",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/63dcf606022d28a0f7a8cf1f-1789177507.jpg",
+              "custom_fields": [],
+              "text": "Hip Club Groove - Dead Words - Dead Words",
+              "artist": "Hip Club Groove",
+              "title": "Dead Words",
+              "album": "Dead Words",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CAVY42600155",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    },
+    "LOONY": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 0,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=LOONY&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=LOONY&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=LOONY&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=LOONY&rowCount=100&current=1&page=1"
+        },
+        "rows": []
+      }
+    },
+    "NorthSideBenji": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 12,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=NorthSideBenji&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=NorthSideBenji&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=NorthSideBenji&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=NorthSideBenji&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "cd404cc1e9e91e2bced0a8fe",
+            "request_url": "/api/station/491/request/cd404cc1e9e91e2bced0a8fe",
+            "song": {
+              "id": "22cbf026164f4bb8e11a2d924a05b196",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cd404cc1e9e91e2bced0a8fe-1770660830.jpg",
+              "custom_fields": [],
+              "text": "Houdini/NorthSideBenji - HOU I AM - Poppin' (feat. NorthSideBenji)",
+              "artist": "Houdini/NorthSideBenji",
+              "title": "Poppin' (feat. NorthSideBenji)",
+              "album": "HOU I AM",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZDA61914624",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "61d6db0ac0532b6a22db2771",
+            "request_url": "/api/station/491/request/61d6db0ac0532b6a22db2771",
+            "song": {
+              "id": "22cbf026164f4bb8e11a2d924a05b196",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/61d6db0ac0532b6a22db2771-1770661078.jpg",
+              "custom_fields": [],
+              "text": "Houdini/NorthSideBenji - HOU I AM - Poppin' (feat. NorthSideBenji)",
+              "artist": "Houdini/NorthSideBenji",
+              "title": "Poppin' (feat. NorthSideBenji)",
+              "album": "HOU I AM",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZDA61914624",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "03100cabbaafa347d8477d78",
+            "request_url": "/api/station/491/request/03100cabbaafa347d8477d78",
+            "song": {
+              "id": "ef6a28a3ff4b057d1bb47f1a1fa2fdbd",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/03100cabbaafa347d8477d78-1770661096.jpg",
+              "custom_fields": [],
+              "text": "Houdini/NorthSideBenji/Burna Bandz - HOU I AM - Fast Life (feat. Burna Bandz, NorthSideBenji)",
+              "artist": "Houdini/NorthSideBenji/Burna Bandz",
+              "title": "Fast Life (feat. Burna Bandz, NorthSideBenji)",
+              "album": "HOU I AM",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZDA61914626",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "280d0c0abe51330ba075e39a",
+            "request_url": "/api/station/491/request/280d0c0abe51330ba075e39a",
+            "song": {
+              "id": "dd7571b50351e42ea412c01dd39431f8",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/280d0c0abe51330ba075e39a-1770660819.jpg",
+              "custom_fields": [],
+              "text": "Monument/Houdini/Northsidebenji - No Brakes - Came 2 Conquer (feat. Houdini & NorthSideBenji)",
+              "artist": "Monument/Houdini/Northsidebenji",
+              "title": "Came 2 Conquer (feat. Houdini & NorthSideBenji)",
+              "album": "No Brakes",
+              "genre": "Rap; Hip Hop",
+              "isrc": "UST8K1714400",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "f46c972274be01393140d411",
+            "request_url": "/api/station/491/request/f46c972274be01393140d411",
+            "song": {
+              "id": "9fe28faeabb3c7ec836c9bf04fb11c59",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/f46c972274be01393140d411-1770660637.jpg",
+              "custom_fields": [],
+              "text": "Northsidebenji - Again - Again",
+              "artist": "Northsidebenji",
+              "title": "Again",
+              "album": "Again",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZ9Y21795282",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "ddab1aefac20df4a2180f281",
+            "request_url": "/api/station/491/request/ddab1aefac20df4a2180f281",
+            "song": {
+              "id": "59dc85d8eb1e0e5767cdc4f979046b59",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ddab1aefac20df4a2180f281-1770660625.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - Caviar Dreams - Back On Road",
+              "artist": "NorthSideBenji",
+              "title": "Back On Road",
+              "album": "Caviar Dreams",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QT4K52507700",
+              "lyrics": "See I'm back on the road\nTen for the toes\nI'm there for the souls\nBitch you already know\nI just give her then I—\nGet a pack to the— (Hey)\nGet it back from the— (Hey)\nCause' I'm back on the— (ay)\nSee I'm back on the road\nSee its ten to the toes\nBand for the soles\nBut you already know\nSee I just give her then I go\nGive a pack to the bros\nGet her back from the hoes\nCause I'm back on the road\nSee I'm rollin with bricks in the hummer\nSee I put that bitch in the honda\nI came back with six from a wunna\nI knew its gon' be a good summer\nSee where were you? You wasn't there\nSee where were you? You wasn't there\nSee my lil vision was a pyrex\nBut your lil vision wasn't clear\nSee bricks finna kill it again\nSee Mason Margiela my Stans\nSee Imma kill you and your mans\nIf you ever call me again\nSee we just double cross the plug\nCause we just found a new connect\nAnd I was shaving down a half\nTill there wasn't nothin left\nSee half a brick of Miley Cyrus\nSee we were higher than the rest\nNow my ole homie wylin\nDouble homicide arrest\nSee put lil shorty on a mission\nNow she bringing back a check\nI'm just tryna stack up these chips\nSo I could VVS my neck\nSee I might VVS my fist\nSee VVS diamonds baguettes\nOr I might VVS my wrist\nSee Audemar ain't nothin less\nEleven hundred for the steppers\nSince they watching how I dress\nEleven years for the pimpin\nGot me watching how I step\nSee I'm back on the road\nTen for the toes\nI'm there for the souls\nBitch you already know\nI just give her then I—\nGet a pack to the— (Hey)\nGet it back from the— (Hey)\nCause' I'm back on the— (ay)\nSee I'm back on the road\nSee its ten to the toes\nBand for the soles\nBut you already know\nSee I just give her then I go\nGive a pack to the bros\nGet her back from the hoes\nCause I'm back on the road"
+            }
+          },
+          {
+            "request_id": "72f93d20006498b51b0b9129",
+            "request_url": "/api/station/491/request/72f93d20006498b51b0b9129",
+            "song": {
+              "id": "1a7eaf70aedd63ccd988828aa4641c86",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/72f93d20006498b51b0b9129-1770660773.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - FRIENEMY - EP - Clicquot",
+              "artist": "NorthSideBenji",
+              "title": "Clicquot",
+              "album": "FRIENEMY - EP",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CAION1800015",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "a65d135fb04c51d1a65b36eb",
+            "request_url": "/api/station/491/request/a65d135fb04c51d1a65b36eb",
+            "song": {
+              "id": "8e28fb4f4dab76d3d63280305199f718",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/a65d135fb04c51d1a65b36eb-1770660581.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - Caviar Dreams - Confessions",
+              "artist": "NorthSideBenji",
+              "title": "Confessions",
+              "album": "Caviar Dreams",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QT4K52507698",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "1e00aae3ebc63433b11f9753",
+            "request_url": "/api/station/491/request/1e00aae3ebc63433b11f9753",
+            "song": {
+              "id": "b739c33e17b6136e6e536256304a6d2b",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1e00aae3ebc63433b11f9753-1770660762.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - The Extravagant Collection - Money Showers",
+              "artist": "NorthSideBenji",
+              "title": "Money Showers",
+              "album": "The Extravagant Collection",
+              "genre": "Rap; Hip Hop",
+              "isrc": "FRX762144796",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "e3e7813ff9b16ec90ae5c005",
+            "request_url": "/api/station/491/request/e3e7813ff9b16ec90ae5c005",
+            "song": {
+              "id": "fe50ca718a3f174096f34b7b26d42b84",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e3e7813ff9b16ec90ae5c005-1770660823.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - One Hundred - One Hundred",
+              "artist": "NorthSideBenji",
+              "title": "One Hundred",
+              "album": "One Hundred",
+              "genre": "Pop",
+              "isrc": "QZ9Y21797162",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "8874745966a5bcb2a05f8347",
+            "request_url": "/api/station/491/request/8874745966a5bcb2a05f8347",
+            "song": {
+              "id": "b4a52353dd5656ce66ebca7b5050837e",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8874745966a5bcb2a05f8347-1770660750.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji - Caviar Dreams - Organization",
+              "artist": "NorthSideBenji",
+              "title": "Organization",
+              "album": "Caviar Dreams",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QT4K52507699",
+              "lyrics": "Wait, yeah\nSee I am the organizer of this organization (yeah)\nAnd ain't no pussy niggas ever takin' my placement (yeah)\nSee I remember all the nights I was sleeping in vacants (yeah)\nSee how could I be at the bottom, I came from the basement (yeah)\nSee I got a couple niggas and they patiently waiting (ay)\nSee I know a couple niggas real, the rest of them faking (ay)\nBut they still gon' witness all the history in the makin' (yeah)\nSee I am the organizer of this organization\nI'm talking YSL\nYou could tell by the smell\nAll this cocaine in my nails\nI just hope no one tells\nBitches recruiting bitches for the P\nI had a Spanish bitch with good physique\nI never took the scally out to eat\n'Cause in the condo room she having a feast\nI was tryna break this ho from the way\nWhile I was pimpin' this lil' ho from the B\nI was tryna scrape this bitch from the East\nUntil I noticed that lil' ho ain't for me\nShe was tryna get up under my sheets\nWhile I was tryna get a dollar a piece\nWhen I sent that lil' ho up the road\nI turned the condo to a pharmacy\nI'm talking everything a nigga need\nGirl, boy, Molly, Xannies, and Weed\nI brought my big homie dead asleep\nHe disappeared and shit got kicked by police\nI don't know why he telling on the P\nPlayin with half the money, yeah they team\nPolice tryna knock a nigga off his L\nBut I ain't no ordinary type of G\nYou dig?\n'Cause I am the organizer of this organization (yeah)\nAnd ain't no pussy nigga's ever takin my placement (yeah)\nSee I remember all the nights I was sleeping in vacants (yeah)\nSee how could I be at the bottom, I came from the basement (yeah)\nSee I got a couple niggas and they patiently waiting (ay)\nSee I know a couple niggas real, the rest of them faking (ay)\nBut they still gon' witness all the history in the makin' (yeah)\nSee I am the organizer of this organization\nSee I am the organizer of this organization (ay)\nBut I ain't touching nothing if you get what I'm saying\nRun up on me if you think that I'm playing\nMy youngin's run up on you get to the sprayin' (yeah)\nWhile I'm collecting the payment (yeah)\nNigga, you dig what I'm sayin'? (You dig?)\nSee I ain't in it for the fame (huh)\nI'm only in it for the lanes (huh)\nI'm tryna fly out to the states (huh)\nAnd find a girl in L.A. (huh)\nAnd all this paper that I make\nI'ma have to go and buy the estate\nI might have to get that house by the lake\nJust so I could bury all the bodies and snakes that I'm bringing with me\nMatter of fact I'll keep the semi with me\nMatter of fact I'll keep the .40 with me\nAnd lord forgive me\nBut I might have to leave them holy nigga\nDon't know why he hating on the P\nPlayin' with half the money, yeah they team\nPolice tryna knock a nigga off his L\nBut I ain't no ordinary type of G\nYou dig?\n'Cause I am the organizer of this organization (yeah)\nAnd ain't no pussy niggas ever takin' my placement (yeah)\nSee I remember all the nights I was sleeping in vacants (yeah)\nSee how could I be at the bottom, I came from the basement (yeah)\nSee I got a couple niggas and they patiently waiting (ay)\nSee I know a couple niggas real, the rest of them faking (ay)\nBut they still gon' witness all the history in the makin' (yeah)\nSee I am the organizer of this organization"
+            }
+          },
+          {
+            "request_id": "18eccd3b71cc56a9ff01be88",
+            "request_url": "/api/station/491/request/18eccd3b71cc56a9ff01be88",
+            "song": {
+              "id": "70902011cef8b4f8d97d6adc03956e37",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/18eccd3b71cc56a9ff01be88-1770660754.jpg",
+              "custom_fields": [],
+              "text": "NorthSideBenji, Houdini - Caviar Dreams - Levels",
+              "artist": "NorthSideBenji, Houdini",
+              "title": "Levels",
+              "album": "Caviar Dreams",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QT4K52507703",
+              "lyrics": "See, we don't get money together, but we gon' get money forever\r\nIf you ain't diggin' the dawgs, then bitch, you gon' need you a shovel\r\nYou could just go ask the broads, see, me and you ain't on a level\r\nYour niggas prayin' to God, and my niggas dance with the devil\r\nEverything' comin' in lovely, so I never settle\r\nI hope these niggas don't come for me, 'cause I got the metal\r\nAin't really keepin' no company, it's hot like a kettle (hot like a kettle)\r\nI'm tryna get my homies off the block and right up out the ghetto\r\n\r\nUh, I'm tryna get me a milli' and take all my bros out the ghetto (get me a milli')\r\nUp in the field, gotta stay with the steel, when you hold it, can't let go (let go)\r\nI had her jumpin', I bought her a heels, I bought her stilettos (stilettos)\r\nHustler mind, all a nigga could've done was sell dope\r\nBro get the strap, get the velcro (no)\r\nTryna get outta this hell hole (no)\r\nTry take my dawg, nigga, hell no (no)\r\nStill held it down on my ten toes\r\nI don't really need all the company, out of town, tryna lay low (I don't really need it)\r\nEverybody think they can get somethin' from me, I can get you some ghetto (and you could beat it)\r\n\r\nSee, we don't get money together, but we gon' get money forever (let me hear that)\r\nIf you ain't diggin' the dawgs, then bitch, you gon' need you a shovel\r\nYou could just go ask the broads, see, me and you ain't on a level\r\nYour niggas prayin' to God, and my niggas dance with the devil (no)\r\nEverything' comin' in lovely, so I never settle\r\nI hope these niggas don't come for me, 'cause I got the metal (bang, no)\r\nAin't really keepin' no company, it's hot like a kettle (gang, gang)\r\nI'm tryna get my homies off the block and right up out the ghetto (boom)\r\n\r\nAin't really keepin' no company, I'm stayin' out the way\r\nLot of niggas in my city, really doin' anything' just for the fame\r\nSee, my little nigga Gitti, told me he ain't tryna waste another grain\r\nHe be workin' on his aim\r\nHe ain't got nothin' to say\r\nCall up Houdi', gon' hop on a plane\r\nI been traffickin' for days\r\nOn the road, I'm makin' plays\r\nI've been actin' not my age\r\nI'm just tryna get away\r\nYeah, from all the fuck shit, gimmicks and games\r\nAll of my niggas goin' out the same\r\nParalyze, and gettin' one in the brain, yeah, yeah\r\n\r\nSee, we don't get money together, but we gon' get money forever\r\nIf you ain't diggin' the dawgs, then bitch, you gon' need you a shovel\r\nYou could just go ask the broads, see, me and you ain't on a level\r\nYour niggas prayin' to God, and my niggas dance with the devil\r\nEverything' comin' in lovely, so I never settle\r\nI hope these niggas don't come for me, 'cause I got the metal\r\nAin't really keepin' no company, it's hot like a kettle\r\nI'm tryna get my homies off the block and right up out the ghetto, yeah"
+            }
+          }
+        ]
+      }
+    },
+    "AR Paisley": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 48,
+        "total_pages": 2,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=AR+Paisley&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=AR+Paisley&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=AR+Paisley&rowCount=100&current=1&page=2",
+          "last": "/api/station/northern_dial/requests?searchPhrase=AR+Paisley&rowCount=100&current=1&page=2"
+        },
+        "rows": [
+          {
+            "request_id": "6246e5e0fc64f0666fcdd2bb",
+            "request_url": "/api/station/491/request/6246e5e0fc64f0666fcdd2bb",
+            "song": {
+              "id": "bf7365fb6337e334c3423d14c83d8ef9",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6246e5e0fc64f0666fcdd2bb-1770664138.jpg",
+              "custom_fields": [],
+              "text": "6ixbuzz, Bvlly, AR Paisley, 6ixbuzz, Bvlly, AR Paisley, 3MFrench - Price Gone Up (feat. 3MFrench) - Price Gone Up (feat. 3MFrench)",
+              "artist": "6ixbuzz, Bvlly, AR Paisley, 6ixbuzz, Bvlly, AR Paisley, 3MFrench",
+              "title": "Price Gone Up (feat. 3MFrench)",
+              "album": "Price Gone Up (feat. 3MFrench)",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CA5KR2015141",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "8598001023c785182f313fb9",
+            "request_url": "/api/station/491/request/8598001023c785182f313fb9",
+            "song": {
+              "id": "02406c09eca523a158fb3cd8dbd75d3e",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8598001023c785182f313fb9-1770664114.jpg",
+              "custom_fields": [],
+              "text": "AP Dhillon/ Gurinder Gill/ Money Musik/ AR Paisley - Not by Chance - Takeover (feat. AR Paisley)",
+              "artist": "AP Dhillon/ Gurinder Gill/ Money Musik/ AR Paisley",
+              "title": "Takeover (feat. AR Paisley)",
+              "album": "Not by Chance",
+              "genre": "",
+              "isrc": "QZNWU2031534",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "063a544450f6d77a301f6cbd",
+            "request_url": "/api/station/491/request/063a544450f6d77a301f6cbd",
+            "song": {
+              "id": "7c8d87e13e0b3e264d04260373b427b4",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/063a544450f6d77a301f6cbd-1770664222.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - 222 - 222",
+              "artist": "AR Paisley",
+              "title": "222",
+              "album": "222",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAFP2156607",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "b2997401df2708bfddc4ebb5",
+            "request_url": "/api/station/491/request/b2997401df2708bfddc4ebb5",
+            "song": {
+              "id": "32e4153556f2ffdd76998e4ed5e570a4",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b2997401df2708bfddc4ebb5-1770664140.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Pressure - Aye Woah",
+              "artist": "AR Paisley",
+              "title": "Aye Woah",
+              "album": "Pressure",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZMER2252602",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "d6786767814aa27c6789c7da",
+            "request_url": "/api/station/491/request/d6786767814aa27c6789c7da",
+            "song": {
+              "id": "f6f7359f2d260a69c384117c7e8c0ee4",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d6786767814aa27c6789c7da-1770664229.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - AR Paisley Vs AR Money - Birdman",
+              "artist": "AR Paisley",
+              "title": "Birdman",
+              "album": "AR Paisley Vs AR Money",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAER2082413",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "39c1dff3491ff12d87d43ff7",
+            "request_url": "/api/station/491/request/39c1dff3491ff12d87d43ff7",
+            "song": {
+              "id": "60e19d28fcf94208aa7b80ca66094b83",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/39c1dff3491ff12d87d43ff7-1770664191.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Cloth Talk - Cloth Talk",
+              "artist": "AR Paisley",
+              "title": "Cloth Talk",
+              "album": "Cloth Talk",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAFQ2133333",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "71264bf19286fc2699cb7464",
+            "request_url": "/api/station/491/request/71264bf19286fc2699cb7464",
+            "song": {
+              "id": "052defb584bebdaaa4689fb7dfaa8367",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/71264bf19286fc2699cb7464-1770664235.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Dizzy - Dizzy",
+              "artist": "AR Paisley",
+              "title": "Dizzy",
+              "album": "Dizzy",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZTAS2204630",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "fe9afd7055eb87502e08ce2f",
+            "request_url": "/api/station/491/request/fe9afd7055eb87502e08ce2f",
+            "song": {
+              "id": "cb48119ee24e2862aee4d8e8aa83d4e6",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fe9afd7055eb87502e08ce2f-1770664225.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Fuck Rap, Pt. 2 - Fuck Rap Pt. 2",
+              "artist": "AR Paisley",
+              "title": "Fuck Rap Pt. 2",
+              "album": "Fuck Rap, Pt. 2",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CA5KR2008611",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "378c3636b5070a0bf4a9d6cf",
+            "request_url": "/api/station/491/request/378c3636b5070a0bf4a9d6cf",
+            "song": {
+              "id": "0c66295671bc53621d95190a2afad31f",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/378c3636b5070a0bf4a9d6cf-1770664211.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Unfinished Business - God Save Me",
+              "artist": "AR Paisley",
+              "title": "God Save Me",
+              "album": "Unfinished Business",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CAW112400390",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "affd11d87816a1c75a4b415b",
+            "request_url": "/api/station/491/request/affd11d87816a1c75a4b415b",
+            "song": {
+              "id": "0282d001cb094c79b085ba1fb741d460",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/affd11d87816a1c75a4b415b-1770664257.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Gold Soul - Gold Soul",
+              "artist": "AR Paisley",
+              "title": "Gold Soul",
+              "album": "Gold Soul",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAER2082385",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "d8e81d9a27bdff299f5ff9a8",
+            "request_url": "/api/station/491/request/d8e81d9a27bdff299f5ff9a8",
+            "song": {
+              "id": "6f26a895dd732af7801477735ec69843",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d8e81d9a27bdff299f5ff9a8-1770664161.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Pressure - Grind",
+              "artist": "AR Paisley",
+              "title": "Grind",
+              "album": "Pressure",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZES92242172",
+              "lyrics": "Look at us now\nHe was my dawg but he turned to a snake when he crossed that line\nThat was my bro but he did me slimy\nTurned his back think he lost his mind\nThat shit cut me deep but he gave me the knife I needed to cut them ties\nDidn't wanna listen when I told you once\nMaybe you'll listen for the 100th time\nStay on your grind\nStay on your grind\nFor my dawg that trapping\nStuck in traffic stay on your grind\nTo my dawgs that spend it\nMy dawgs that stack it stay on your grind\nTo my dawgs in the projects\nDawgs in mansions stay on your grind\n\nIf you not my dog I don't need daps\nI don't need laughs I don't need hugs\nNow it feels so much better cause we got it on our own\nAfter all these years in the mud\nBeen through hell and held it down\nWe don't even need to be related by blood\nThat's still my bro that's still my fam\nThat's still my dawg that's still my cuz\nRemember those rainy days me and bro\nCrashing the whip could've lost my life\nRemember those days in garages\nBullets came close to my head could've lost it twice\nRemember those days at Ashdene\nTripping all day but I used to pray all night\nNow I'm in the crib with 15 cameras\nSwear to god that we'll be all right\nI lost my pops when I was a teen\nAnd that still hurts today no cap\nAll of this money and all of this power\nThat's still one thing that I can't get back\nAll of that trauma it turned me into the man\nI am right now that's facts\nStill here wishing that's those moments last\nTried to hold on but they left so fast\n\nLook at us now\nHe was my dawg but he turned to a snake when he crossed that line\nThat was my bro but he did me slimy\nTurned his back think he lost his mind\nThat shit cut me deep but he gave me the knife I needed to cut them ties\nDidn't wanna listen when I told you once\nMaybe you'll listen for the 100th time\nStay on your grind\nStay on your grind\nFor my dawg that trapping\nStuck in traffic stay on your grind\nTo my dawgs that spend it\nMy dawgs that stack it stay on your grind\nTo my dawgs in the projects\nDawgs in mansions stay on your grind\n\nTo all those tings who broke my trust\nWon't get my trust to break it twice\nBusting those U-Turns it feels great\nEvery time they try make it back in my life\nFucking with bums I was never your type\nYou ruin my mood get the fuck out my sight\nTurned your back can't take that back\nYou did me wrong when I did you right\nGirls in my dm wanna let me fuck\nI don't even go they might set me up\nI just need racks with sex and trust\nNeed a down one with some extra love\nSpent 15 when we left the club\nFeel like tony when he met the plug\nBeen through ups and been through downs\nAll of that shit made my mental tough\nAll this stress been wearing me down\nAll of these snakes been wearing me down\nYou was my dog but where are you now\nYou was my bro but where are you now\nTimes got tough when I looked up\nMy so called fam no where to be found\n\nLook at us now\nHe was my dawg but he turned to a snake when he crossed that line\nThat was my bro but he did me slimy\nTurned his back think he lost his mind\nThat shit cut me deep but he gave me the knife I needed to cut them ties\nDidn't wanna listen when I told you once\nMaybe you'll listen for the 100th time\nStay on your grind\nStay on your grind\nFor my dawg that trapping\nStuck in traffic stay on your grind\nTo my dawgs that spend it\nMy dawgs that stack it stay on your grind\nTo my dawgs in the projects\nDawgs in mansions stay on your grind"
+            }
+          },
+          {
+            "request_id": "161a4c8085c3bae5daee97d8",
+            "request_url": "/api/station/491/request/161a4c8085c3bae5daee97d8",
+            "song": {
+              "id": "0c79b27902285b120e8a7996fd972bd3",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/161a4c8085c3bae5daee97d8-1770664128.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Pressure - Heat",
+              "artist": "AR Paisley",
+              "title": "Heat",
+              "album": "Pressure",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZHNA2214789",
+              "lyrics": "I been whipping Lambo's\nMaking phone calls \nI just made a call to my road dog \nI been sippin' lean bout to doze off \nI been sippin' lean bout to\n\nShe call me Paisley\nI just call her crazy \nShe my lil psycho\nBut she still my baby \nI been off that 1942 I'm feeling wavy \nI been on some demon time\nGod gotta save me \n \nI had made some dirty money\nThen we clean it up \nI just copped some Cartier's\nCause I done seen enough \nI just stepped inside the house\nThat I was dreaming of \nI'm the plug that you call\nWhen you need a plug \n \nI sold weed\nSold coke\nI sold a lotta stuff\nI think I coulda been a pimp\nThe way these bitches fall in love \nI got the money and respect now all I need is luck \nWhich one do I want\nAll of the above\n \nFaded off the Tito's\nHenny and Casamigos\nMe and mi amigos\nDo this for all my people \nPlay about my Fam\nYou'll get shot like a free throw \nThis is like Drizzy more life\nYou'll get free smoke \nI'm about my cheese like Doritos \nI'm suited up like dinero\nWhen he was in casino \nIf you can't take the heat\nThen get the fuck out the kitchen\nI been feeling like Pacino\nGot gold by the kilo \n \nI been whipping Lambo's\nMaking phone calls \nI just made a call to my road dog \nI been sippin' lean bout to doze off \nI been sippin' lean bout to\n\nShe call me Paisley\nI just call her crazy \nShe a Lil psycho\nBut she still my baby \nI been off that 1942 I'm feeling wavy \nI been on some demon time\nGod gotta save me \n \nI don't chase it\nI'd rather replace it\nShe call me a fuck boy\nI call her a waste bitch\nYou would call this toxic\nI think it's amazing\nShe says she a rare breed\nI just think she basic \nI just made 100 bands\nBut that's not enough \nThis money isn't just for me\nIt's for all of us\nI seen him all over the gram\nWhen he was talking tough\nThen seen him outside of the club\nHad to call his bluff \n \nI sold weed\nSold coke\nI sold a lotta stuff\nI think I coulda been a pimp\nThe way these bitches fall in love \nI got the money and respect now all I need is luck \nWhich one do I want\nAll of the above\n\nFaded off the e pills\nSkipping over the details \nI think they getting mad\nThat we fucking all of their females \nJust made a 50 off of merch\nThat's what we sell \nNew fit every day\nI think I'm addicted to retail\n \nI been whipping Lambo's\nMaking phone calls \nI just made a call to my road dog \nI been sippin' lean bout to doze off \nI been sippin' lean bout to"
+            }
+          },
+          {
+            "request_id": "8a547908dcef453e8ddaaded",
+            "request_url": "/api/station/491/request/8a547908dcef453e8ddaaded",
+            "song": {
+              "id": "2e9d819b589a87860888b3a6483a5c12",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/8a547908dcef453e8ddaaded-1770664116.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Hellova Life - Hellova Life",
+              "artist": "AR Paisley",
+              "title": "Hellova Life",
+              "album": "Hellova Life",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QT3F52576314",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "6ba0738a4188df5bad4b1205",
+            "request_url": "/api/station/491/request/6ba0738a4188df5bad4b1205",
+            "song": {
+              "id": "fc91c300e1f9e882fe2bc444226d7827",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/6ba0738a4188df5bad4b1205-1770664168.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Let's Slide - Let's Slide",
+              "artist": "AR Paisley",
+              "title": "Let's Slide",
+              "album": "Let's Slide",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZHN92305217",
+              "lyrics": "Yeah\nHey ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight\nYou smoke (I smoke)\nI drink (me too)\nWell, good, 'cause we gon' get high tonight\nGot drops (got coupes)\nGot trucks (got jeeps)\nAll right, and we gon' take a ride tonight\nSo, ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight\n\nDowntown clubbing it was Friday night\nAt the brand new spot trying find my type\nI seen this one girl feeling like the time was right\nSaid put your number in my phone we can vibe tonight\nGot a neck full of diamonds, shining bright\nLook too long, it blind your sight\nI told her I'm super laid back I don't lie and fight\nSo me and you could vibe for life\nI told get in the Benz\nAnd don't touch nothing sit in the Benz\nShe had one night stand once and never again\nShe thinks Ima hit then say we better as friends\nBut let's chill for the night and just see where it ends\n\nHey ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight\nYou smoke (I smoke)\nI drink (me too)\nWell, good, 'cause we gon' get high tonight\nGot drops (got coupes)\nGot trucks (got jeeps)\nAll right, and we gon' take a ride tonight\nSo, ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight\n\nNow I got a girl my ex started calling my phone\nShe wanna sip she also wanna holla and moan\nI seen her at the club she said follow me home\nBut I can't do cause now I'm smarter and grown\nI changed up a lot now they know I'm legit\nWith this ice on my neck and all over my wrist\nMy ex said that I can't stay loyal to chicks\nShe thinks my heads too big plus I'm spoiled and rich\nBut I work hard for the shit that I got\nSo have a baby by me and you could live at the spot\nIf we speaking bout head shorty gives me a lot\nBut it comes with headaches she been pissing me off\n\n\nHey ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight\nYou smoke (I smoke)\nI drink (me too)\nWell, good, 'cause we gon' get high tonight\nGot drops (got coupes)\nGot trucks (got jeeps)\nAll right, and we gon' take a ride tonight\nSo, ma (wassup?)\nLet's slide (all right)\nAll right, and we gon' get it on tonight"
+            }
+          },
+          {
+            "request_id": "4d8cd7d113395ed7313d3c88",
+            "request_url": "/api/station/491/request/4d8cd7d113395ed7313d3c88",
+            "song": {
+              "id": "48602298e463a327b94adb07a2fbbdf0",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4d8cd7d113395ed7313d3c88-1770664173.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Paisley Worldwide - Life's Too Short",
+              "artist": "AR Paisley",
+              "title": "Life's Too Short",
+              "album": "Paisley Worldwide",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAFB2013807",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "2d991aa269ba2e1cca87d2f1",
+            "request_url": "/api/station/491/request/2d991aa269ba2e1cca87d2f1",
+            "song": {
+              "id": "e688f86d73d10b8ecd93b8ae497b0696",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2d991aa269ba2e1cca87d2f1-1770664208.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Unfinished Business - Lord Knows",
+              "artist": "AR Paisley",
+              "title": "Lord Knows",
+              "album": "Unfinished Business",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CAW112500010",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "94a2f8cc36bcd0deed23caed",
+            "request_url": "/api/station/491/request/94a2f8cc36bcd0deed23caed",
+            "song": {
+              "id": "d45c103796db7f8237a3fcf150f9e0ad",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/94a2f8cc36bcd0deed23caed-1770664244.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Only You - Only You",
+              "artist": "AR Paisley",
+              "title": "Only You",
+              "album": "Only You",
+              "genre": "Asian Music",
+              "isrc": "CAW112400046",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "2b5936095059edd306c77e7f",
+            "request_url": "/api/station/491/request/2b5936095059edd306c77e7f",
+            "song": {
+              "id": "a38e3705eabba0f6e899da8be98cc144",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/2b5936095059edd306c77e7f-1770664238.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Paisley - Paisley",
+              "artist": "AR Paisley",
+              "title": "Paisley",
+              "album": "Paisley",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCADT1837819",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "98c2b0b225c77c22da9efca7",
+            "request_url": "/api/station/491/request/98c2b0b225c77c22da9efca7",
+            "song": {
+              "id": "a716073ee6d6b357a5668250089af155",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/98c2b0b225c77c22da9efca7-1770664190.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Still Grateful - Still Grateful",
+              "artist": "AR Paisley",
+              "title": "Still Grateful",
+              "album": "Still Grateful",
+              "genre": "Rap; Hip Hop",
+              "isrc": "CA5KR2108787",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "81e96d6290c2da585bd902f1",
+            "request_url": "/api/station/491/request/81e96d6290c2da585bd902f1",
+            "song": {
+              "id": "c7ec03992ace0915e07271aaad0327cb",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/81e96d6290c2da585bd902f1-1770664246.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Streets - Streets",
+              "artist": "AR Paisley",
+              "title": "Streets",
+              "album": "Streets",
+              "genre": "Rap/Hip Hop",
+              "isrc": "TCAFJ2142794",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "267f39d85537d88d882cc1e2",
+            "request_url": "/api/station/491/request/267f39d85537d88d882cc1e2",
+            "song": {
+              "id": "7d5a7d163e4bb6aace95a75c6e9dfd96",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/267f39d85537d88d882cc1e2-1770664177.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Pressure - Too Attached",
+              "artist": "AR Paisley",
+              "title": "Too Attached",
+              "album": "Pressure",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZMER2252600",
+              "lyrics": "I double my bag I'm in love with the racks\nI sit in the crib while I'm watching it stack\nCan't love a hoe no she needa go\nShe way too attached\nI got a Glock with a beam attached\nPour me a cup cause I need to relax\nI'm in the Vette going 200 flat\nMade me 200 and I run it back\n\nI'm in the hills in Givenchy\nI'm in the 6 in a monclez\nTraded the chain for a Patek Phillipe\nDamn I'm getting cocky\nI got this ice all over my watch\nDamn I'm playing hockey\nI'm in the cut with the pajis and they be speaking Punjabi\nI'm in with the cut with some malis and they screaming wallahi\nI'm on the block with the road mans\nWe can turn this to an ah e\nI'm seeing a lotta the hate\nThat couldn't stop me\nI used to whip in a Honda\nNow I turn that to a Rarri\n\nI'm dropping the top and I'm feeling the breeze\nI dropped outta school don't need a degree\nHeart turned cold and my wrist is on freeze\nCan never go vegan I need the cheese\nCan't never go vegan ain't ducking no beef\nChanel her purse I double the c's\nI put her in Gucci I double the  gs but\nShe ain't a wifey she love with the streets\nThey wanted me dead so I'm living it up\nThey want my head  so my chin is still up\nRollie my trophy I'm lifting it up\nI been thru a bunch I ain't giving a fuck\nI hit it once now the bitch is in love\nThink bout the future and picturing us\nBut I cannot see it my vision is stuck\nOn all of this paper, I triple it up\nI tend to black out while I'm blowing her back out\nWhile we in the trap house\nHop out the range I walk into the mall with gang and\nI'm bout to cash out\nIt's crazy all of the people that turned their back on us\nThey circling back round\nI took a break from talking my shit\nI said fuck it I'm back now\nYa bitch, tell me you love me\nI don't even be posting the shit that I do\nCause they finna judge me\nI was on Lakeshore in the Mazda\nSelling work to the custys\nNow life is lovely but trust me it used to be ugly"
+            }
+          },
+          {
+            "request_id": "0423812b5a137b158d1f8945",
+            "request_url": "/api/station/491/request/0423812b5a137b158d1f8945",
+            "song": {
+              "id": "6dccac5ca3125a6138d11b09c739d19a",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0423812b5a137b158d1f8945-1770664236.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Toosie - Toosie",
+              "artist": "AR Paisley",
+              "title": "Toosie",
+              "album": "Toosie",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZFZ72620664",
+              "lyrics": "Woke up in Vegas, flew out to Phoenix\r\nToo lit, broke her heart into pieces\r\nWhip paid off, I don't deal with the leases\r\nYeah\r\n\r\nWoke up in Vegas, flew out to Phoenix\r\nToo lit, broke her heart into pieces\r\nWhip paid off, I don't deal with the leases\r\nToo lit, I don't got opps to beef with\r\nNew vibe, she brown and she bad\r\nRed bottom shoes and she Fendi the bag\r\nLanded in Cali, I'm spending my cash\r\nI made all my racks from a pen and a pad\r\n\r\nShe bad, bad and she boujee\r\nWhat you like, Chanel or Gucci?\r\nWhat you want, Molly or Toosie?\r\nNo cap, my life like a movie\r\nOut in Paris with mes amis\r\nLifestyle is c'est la vie\r\nWhole fit from Givenchy\r\nAnd the Rolls-Royce truck with my tank on E\r\n\r\nNew Glocks, they came with extensions\r\nNew crib surrounded by fences\r\nNew chain, I Paisley'd my pendant\r\nNew frames with Cartier lenses\r\nNew girl want a baby by me\r\nBut I came and I came to my senses\r\nBack then, I stayed in the trenches\r\nLearn a lot just by paying attention\r\nGot mans that I grew up in the trenches with\r\nGot a little bit of bread and they changed up\r\nBut I been with the team, overseas\r\nChasing big city dreams on the block that we came up\r\nIf you knew me from Paisley days\r\nFrom OG days, then you know I'm with the same ones\r\nI'm on road with the day ones, kept it solid from day one\r\n\r\nShe bad, bad and she boujee\r\nWhat you like, Chanel or Gucci?\r\nWhat you want, Molly or Toosie?\r\nNo cap, my life like a movie\r\nOut in Paris with mes amis\r\nLifestyle is c'est la vie\r\nWhole fit from Givenchy\r\nAnd the Rolls-Royce truck with my tank on E"
+            }
+          },
+          {
+            "request_id": "53111286a9d8a8f5058f5ea7",
+            "request_url": "/api/station/491/request/53111286a9d8a8f5058f5ea7",
+            "song": {
+              "id": "50c99e413f93a8be6c33fc3583babb69",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/53111286a9d8a8f5058f5ea7-1770664227.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley - Wayne Gretzky - Wayne Gretzky",
+              "artist": "AR Paisley",
+              "title": "Wayne Gretzky",
+              "album": "Wayne Gretzky",
+              "genre": "Rap/Hip Hop",
+              "isrc": "TCAFL2174849",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "b4db77e99b7c80fdc31fa1a2",
+            "request_url": "/api/station/491/request/b4db77e99b7c80fdc31fa1a2",
+            "song": {
+              "id": "47d490d3ac49f68a637c1e84bccc954a",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b4db77e99b7c80fdc31fa1a2-1770664181.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley, Bvlly - AR Paisley Vs AR Money - My Life (feat. Bvlly)",
+              "artist": "AR Paisley, Bvlly",
+              "title": "My Life (feat. Bvlly)",
+              "album": "AR Paisley Vs AR Money",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZDA82031681",
+              "lyrics": "Paisley\nThat's what made me  \nBut days like today \nMan I swear got me fucked up\nMan just listen \n \nUh yeah I just been living my life\nUh yeah cause I could just lose it tonight\nUh yeah don't live by the gun or the knife \nUh yeah I just hope they remember me right \n\nMy dog said he doing the race and that's why they hiding their faces \nI know that they'll beat all the cases \nI know one day ima make it \nSome days I don't wanna be famous \nI swear that I'd rather be nameless \nMy name is a topic of conversation \nYeah cause that's what the fame is \nAnd they got a warrant out on my homie \nCause they wanna put him in jail \nI told em If music was paying me better \nI swear that I'd give him his bail\nTold em I'm stuck in the booth I know that he stuck in a cell \nThe system is set up to fail just know I'll be sending him mail \nCops pull me over and casually search my whip and start harassing me \nI'm a rapper why you after me \nFake shit give me allergies \nKnow my father would be proud of me\nTook a year to get it outta me damn\nDamn but this the way that it gotta be \n\nUh yeah I just been living my life\nUh yeah cause I could just lose it tonight\nUh yeah don't live by the gun or the knife \nUh yeah I just hope they remember me right \n\nI hope they remember all the good that I'm doing \nCause I used to get it the wrong way \nOut of town or the rob way \nThem hoes fuck with me the long way \nI ain't with the fake shit \nThey try to hate shit \nI gotta watch who I'm hanging with \nThey tell you to pay shit \nNever to save it \nYou gotta watch who you're standing with \nYou focused on money, you're doing it right \nBattery in backs they shooting for hype\nGet knocked for the body now he doing life\nUsed to live by the gun now he live by the knife \nI can't let them take my energy \nI can't let them stop my take off\nI ain't dealing with no frenemy \nI ain't dealing with any fake love \n\nUh yeah I just been living my life\nUh yeah cause I could just lose it tonight\nUh yeah don't live by the gun or the knife \nUh yeah I just hope they remember me right\n\nI stop while I'm writing this shit\nThinking it is what it is \nI'm writing this out to the kids \nCause they wanna live how we live \nThey see the way that we drink and we smoke and they wan try out the same \nA lotta the times I can't even sleep and this is just numbing my pain \nThis for the people we loved and we lost \nA couple a wins but we took a loss \nAll of this stress trying turn to a boss \nI'm paying the price but what did it cost \nCut off my friends and I lost my pops \nI lost some friends now what do I got \nStill on the block chasing these thots \nStuck in this cycle like when will it stop \nI stand on my two man I got this \nCut off people that's toxic \nStick to the truth and I'm honest \nAll of the clout I'm beyond it \nClose eyes so I can pray \nI don't wanna see a tear drop \nI hear the threats I see the cops \nBut I only fear god \n\nUh yeah I just been living my life\nUh yeah cause I could just lose it tonight\nUh yeah don't live by the gun or the knife \nUh yeah I just hope they remember me right"
+            }
+          },
+          {
+            "request_id": "d32cb0664609884b145e5c17",
+            "request_url": "/api/station/491/request/d32cb0664609884b145e5c17",
+            "song": {
+              "id": "8c4e1297361bd691e37e69b0341bf679",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/d32cb0664609884b145e5c17-1770664255.jpg",
+              "custom_fields": [],
+              "text": "AR Paisley, Bvlly - Timeless - Sink or Swim (S.O.S)",
+              "artist": "AR Paisley, Bvlly",
+              "title": "Sink or Swim (S.O.S)",
+              "album": "Timeless",
+              "genre": "Rap; Hip Hop",
+              "isrc": "TCAEL1905917",
+              "lyrics": "[Intro - AR Paisley]\n\nWe going crazy on this one \nPaisley\n2019 shit \n\n[Verse 1  - AR Paisley]\nI hit the mall I'm popping the tags \nI'm dropping a bag I'm making em mad \nI want it all I know I'm gonna last \nFuck all opps that shit in the past \nI think I'm getting em pissed\nI know I'm gone be rich used to be praying for this\nJust look at the flick of the wrist \nAye\n\n[Bridge - AR Paisley]\nGet a bag and ima run it up \n6 side y'all ain't one of us \nGet the money make it double Dutch\nNeed a baddie w a bubble butt  \nI know I said it all up on the track u know that's facts \nI left the mall I'm spending it all then making it back\n\n[Chorus  - AR Paisley]\nI just want the  diamonds in the face \nGot people hating but I'm shining anyway \nThanking god it's perfect timing for the hate \nI ain't trippin im just smiling to the bank \n\nTell em get the old shit out my way \nI just want real shit not the fake \nSmoking cali feel like I can't even think \nGot me dripping u gon swim or u gon sink\n\n[Verse 2 - Bvlly]\n\nAnd she gon ride if you go to jail or not\nAnd if them niggas hit your guy tell me you gon kill or not\nAnd if them people give you time you gon take that deal or not\nYou know I want u by my side you gon keep it real or not\nCan you feel me \nHow you snake your nigga and you call it a stain\nAnd if you came up from my block you know the love is the same\nAnd I just got a 40 glock just to protect me from pain \nBefore the snap before the rock the streets know I had a name\n\nUsed to only want the diamonds in the face \nBut now I'm grown I need a house out by the lake\nA lot of people prolly wonder what I make\nBut what's important is the money that I save \n5 am sneak in the crib my momma like u still awake\nHad to learn to catch a fish my homie took me to the lake\nHad to learn to make a pie my homie showed me how to bake\nI grew up around some slimes I can spot me out a snake\n\n\n[Verse 3  - AR Paisley]\nI hit the bank I'm making it flip \nThey're watching my wrist like look at the gliss  \nThey said they were real but I know they bitch\nClaim to be real but I seen em switch \nThat's why i stay on my toes I know the fake get exposed \nI used to hate coming home I spent my days on the road \n\n[Bridge - AR Paisley]\n\nI get a bag and I run it up \n6 side you ain't one of us\nGet the money make it double Dutch \nNeed a baddie w a bubble butt\nI know I said it all up on the track u know that it's facts \nI hit the mall I'm spending it all and I'm making it back"
+            }
+          }
+        ]
+      }
+    },
+    "FRVRFRIDAY": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 1,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=FRVRFRIDAY&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=FRVRFRIDAY&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=FRVRFRIDAY&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=FRVRFRIDAY&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "4ad38531f5cbc9a447311ebb",
+            "request_url": "/api/station/491/request/4ad38531f5cbc9a447311ebb",
+            "song": {
+              "id": "412f2d72da9ac3120bbc75b6cc5f5627",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/4ad38531f5cbc9a447311ebb-1770665551.jpg",
+              "custom_fields": [],
+              "text": "ARDN, FRVRFRIDAY - KEEP YOUR EYE ON THE SPARROW - STACEY DASH",
+              "artist": "ARDN, FRVRFRIDAY",
+              "title": "STACEY DASH",
+              "album": "KEEP YOUR EYE ON THE SPARROW",
+              "genre": "Rap; Hip Hop",
+              "isrc": "SE6XX2537188",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    },
+    "TOBi": {
+      "ok": true,
+      "matched": true,
+      "result": {
+        "page": 1,
+        "per_page": 25,
+        "total": 25,
+        "total_pages": 1,
+        "links": {
+          "first": "/api/station/northern_dial/requests?searchPhrase=TOBi&rowCount=100&current=1&page=1",
+          "previous": "/api/station/northern_dial/requests?searchPhrase=TOBi&rowCount=100&current=1&page=1",
+          "next": "/api/station/northern_dial/requests?searchPhrase=TOBi&rowCount=100&current=1&page=1",
+          "last": "/api/station/northern_dial/requests?searchPhrase=TOBi&rowCount=100&current=1&page=1"
+        },
+        "rows": [
+          {
+            "request_id": "dccf0cb743f0dd272294efe5",
+            "request_url": "/api/station/491/request/dccf0cb743f0dd272294efe5",
+            "song": {
+              "id": "b441864950fafdd4dac1b8c594134972",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/dccf0cb743f0dd272294efe5-1770664469.jpg",
+              "custom_fields": [],
+              "text": "6ix, Jazz Cartier, TOBi - Homebody - Messi",
+              "artist": "6ix, Jazz Cartier, TOBi",
+              "title": "Messi",
+              "album": "Homebody",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZPEW2586006",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "3d86052db1fd261c6d0f7c64",
+            "request_url": "/api/station/491/request/3d86052db1fd261c6d0f7c64",
+            "song": {
+              "id": "d1be875cbc6da1c8737b37fc318133d1",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3d86052db1fd261c6d0f7c64-1770644259.jpg",
+              "custom_fields": [],
+              "text": "6ix, TOBi, Robert Ivory - Homebody - Interlude",
+              "artist": "6ix, TOBi, Robert Ivory",
+              "title": "Interlude",
+              "album": "Homebody",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QZPEW2586003",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "84a115c5b64345ca6749b05b",
+            "request_url": "/api/station/491/request/84a115c5b64345ca6749b05b",
+            "song": {
+              "id": "3f5790f94e91481d9f6b6258f10ab1fa",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/84a115c5b64345ca6749b05b-1770644288.jpg",
+              "custom_fields": [],
+              "text": "Harrison/ToBi - Outta This World - Outta This World",
+              "artist": "Harrison/ToBi",
+              "title": "Outta This World",
+              "album": "Outta This World",
+              "genre": "Electro",
+              "isrc": "CAL452205801",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "fedba1b29722d8d4831ed0ea",
+            "request_url": "/api/station/491/request/fedba1b29722d8d4831ed0ea",
+            "song": {
+              "id": "21968a15a1a62a48928287805490c5d8",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fedba1b29722d8d4831ed0ea-1770663963.jpg",
+              "custom_fields": [],
+              "text": "Haviah Mighty, Tobi - Good On My Own Tonight (feat. TOBi) - Good On My Own Tonight (feat. TOBi)",
+              "artist": "Haviah Mighty, Tobi",
+              "title": "Good On My Own Tonight (feat. TOBi)",
+              "album": "Good On My Own Tonight (feat. TOBi)",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USLD91731285",
+              "lyrics": "(Good on my own tonight)\r\n(Ha, ha, ha, ha)\r\n(I'm good on my own tonight, yeah)\r\n(Ha, ha, ha, ha)\r\n(I'm good on my)\r\n\r\nHit my first 100k on my lonesome\r\nI just stack all year\r\nThis shorty got way, way, way more balls than your scrotum (scrotum)\r\nThis ain't talk, these poems\r\nI'm normalizing luxury, shit I'm devoted (ha, ha, ha, ha)\r\nYeah, I strategize like a chess team (chess team)\r\nAll I do is grind and collect fees (collect fees)\r\nNow I really glide in Balenci's\r\nMelanin queen, down gentleman's creek\r\nWho better than me? It's a blood bath\r\nEveryone been supporting my team\r\nHop out my regime, get the fuck back\r\nYou foreign, your energy off fam\r\nYou honestly someone I'd run past\r\nYou wanna share currency? (Fuck that)\r\n(I'm sorry, that's not gon' happen)\r\nBitch I move with a podium spirit\r\nI don't seem to know nothing 'bout fearless\r\nBetter pay the full price ain't no clearance\r\nYeah, I got them big goals and I'm near it\r\nFuck the fowls and the foes, you a parrot\r\nYou a ham in a bowl, you a ferret\r\nAnd I'm boujee, my latte turmeric\r\nNeed the doe, and my guapo numeric, ay\r\n\r\nI'm good on my own tonight (good baby)\r\n(Ha, ha, ha, ha)\r\nI'm good on my own tonight\r\nI'm good on my own tonight, ay\r\n(Ha, ha, ha, ha)\r\nI'm good on my own tonight\r\nI'm good on my\r\n(Ha, ha, ha, ha) Ohh\r\nI'm good on my own tonight, ay\r\n(Ha, ha, ha, ha) Ohh\r\n\r\nYou don't know what you got 'til it's gone, ay\r\n\r\nI got a question\r\nWhy you so impressed with some shit that ain't impressive?\r\nLemme guess, mmh\r\nBetter question\r\nHow come anytime I leave you seem to be interested?\r\nWhat the hell? Yeah\r\nLook at this medal I wear it with pride\r\nWe go high, we never decline\r\nPinot Noir I'm better with time\r\nKnow you gotta watch your back\r\nWhen the shots ain't coming from behind enemy lines\r\nMusical chairs, you dance 'round the topic\r\nDon't even tip toe, no need to gossip\r\nMiss me with nonsense, we were just talking\r\nNow you wanna pop shit, now you wanna switch tones\r\nAfter the call, you were like Winslow\r\nWish I could just go back to when it was simple\r\nCatch me a vibe but you were off tempo\r\nTen toes down yet I get so high\r\nKnow it take time to reveal yo' sides\r\nLife is a bitch but the bitch don't lie\r\nSever those ties just to heal my mind\r\n\r\nSever my ties on you hoes\r\n(Sever my ties on you)\r\nBetter my grind, ahead of my time on you now\r\n\r\nUp out the gutter\r\nYou were just trouble\r\nLook how you come undone\r\n\r\nI'm good on my own tonight (good baby)\r\n(Ha, ha, ha, ha)\r\nGood on my own tonight\r\nI'm good on my own tonight, ay\r\n(Ha, ha, ha, ha)\r\nGood on my own tonight\r\n\r\n(My own) (ha, ha, ha, ha)\r\n(My own)\r\n(My own) (ha, ha, ha, ha)\r\n(My own)\r\n\r\nAnd most of y'all dusty\r\nBut you probably wanna cuff me (ha, ha, ha, ha)\r\nI wear silk scarfs late at night\r\nI don't really fuck with sun screen\r\nI might move my neck sideways\r\nIf you wanna interrupt me (ha, ha, ha, ha)\r\nI'm a black, black, black shorty\r\nIt's a vibe nigga, trust me, yeah (I'm good)\r\n\r\n(Ha, ha, ha, ha)\r\nI'm a black, black, black shorty\r\nIt's a vibe nigga trust me, yeah\r\n\r\nI'm good on my own tonight\r\nI'm good on my own tonight, ay"
+            }
+          },
+          {
+            "request_id": "3835373c107e3df960a48728",
+            "request_url": "/api/station/491/request/3835373c107e3df960a48728",
+            "song": {
+              "id": "24c889a45cf95f7747917dd22e5ce9c6",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/3835373c107e3df960a48728-1770644242.jpg",
+              "custom_fields": [],
+              "text": "Juls, TOBi - Happy Place - Beg Friend",
+              "artist": "Juls, TOBi",
+              "title": "Beg Friend",
+              "album": "Happy Place",
+              "genre": "",
+              "isrc": "GBMA22097901",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "504c3832164d1b7f1d33e3e3",
+            "request_url": "/api/station/491/request/504c3832164d1b7f1d33e3e3",
+            "song": {
+              "id": "b8c62098a9faa6f41359153fffd55d3e",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/504c3832164d1b7f1d33e3e3-1770644330.jpg",
+              "custom_fields": [],
+              "text": "Kaelin Ellis, TOBi, Anomalie - Celebration - Celebration",
+              "artist": "Kaelin Ellis, TOBi, Anomalie",
+              "title": "Celebration",
+              "album": "Celebration",
+              "genre": "R&B",
+              "isrc": "QM4TX2453299",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "7b971957dbcd104a0b188475",
+            "request_url": "/api/station/491/request/7b971957dbcd104a0b188475",
+            "song": {
+              "id": "3b993ef8a3d7f2e779afb70fdbe0af91",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7b971957dbcd104a0b188475-1770651061.jpg",
+              "custom_fields": [],
+              "text": "Liona Boyd, Jann Arden, Dan Hill, Divine Brown, John McDermott, Mark Masri, Randy Bachman, Joanne Perica, Ron Korb, Maria Aragon, Richard Margison, Eleanor McCain, Chris Hadfield, Etobicoke School of the Arts Choir, Michael Savona, Michel Bérurbé, Robert - The Return... To Canada with Love - Canada My Canada",
+              "artist": "Liona Boyd, Jann Arden, Dan Hill, Divine Brown, John McDermott, Mark Masri, Randy Bachman, Joanne Perica, Ron Korb, Maria Aragon, Richard Margison, Eleanor McCain, Chris Hadfield, Etobicoke School of the Arts Choir, Michael Savona, Michel Bérurbé, Robert ",
+              "title": "Canada My Canada",
+              "album": "The Return... To Canada with Love",
+              "genre": "Pop",
+              "isrc": "CA4BV1300016",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "1137240075fbd8790b273e89",
+            "request_url": "/api/station/491/request/1137240075fbd8790b273e89",
+            "song": {
+              "id": "ea9e8f5d24e495a2dd3563b4cff1840d",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1137240075fbd8790b273e89-1771123154.jpg",
+              "custom_fields": [],
+              "text": "Liza, TOBi - The Alternate Ending - Back For More",
+              "artist": "Liza, TOBi",
+              "title": "Back For More",
+              "album": "The Alternate Ending",
+              "genre": "R&B",
+              "isrc": "QM4TX2420810",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "50f9cdf2cb4f7c630f2c1368",
+            "request_url": "/api/station/491/request/50f9cdf2cb4f7c630f2c1368",
+            "song": {
+              "id": "dee6690316e563d3360b94f129737e42",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/50f9cdf2cb4f7c630f2c1368-1770644289.jpg",
+              "custom_fields": [],
+              "text": "Liza/ TOBi - Back For More - Back For More",
+              "artist": "Liza/ TOBi",
+              "title": "Back For More",
+              "album": "Back For More",
+              "genre": "R&B",
+              "isrc": "QM4TX2420810",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "9227ae14af985d2bb20cea4f",
+            "request_url": "/api/station/491/request/9227ae14af985d2bb20cea4f",
+            "song": {
+              "id": "8eca3dc991cc65b327fb1989d0f8e6bd",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/9227ae14af985d2bb20cea4f-1770644335.jpg",
+              "custom_fields": [],
+              "text": "M.anifest, TOBi, T'neeya - NEW ROAD AND GUAVA TREES - SAFE PLACE",
+              "artist": "M.anifest, TOBi, T'neeya",
+              "title": "SAFE PLACE",
+              "album": "NEW ROAD AND GUAVA TREES",
+              "genre": "",
+              "isrc": "QM4TX2532225",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "1eaac312e579e4aed683c5b5",
+            "request_url": "/api/station/491/request/1eaac312e579e4aed683c5b5",
+            "song": {
+              "id": "7bed3d09e2501b844ca1bccafbbff338",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1eaac312e579e4aed683c5b5-1770644339.jpg",
+              "custom_fields": [],
+              "text": "ROMderful, TOBi - Press L To Continue - Tired Of The Games",
+              "artist": "ROMderful, TOBi",
+              "title": "Tired Of The Games",
+              "album": "Press L To Continue",
+              "genre": "R&B",
+              "isrc": "USQX91900404",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "ab06d5b3d2ac4284b541af96",
+            "request_url": "/api/station/491/request/ab06d5b3d2ac4284b541af96",
+            "song": {
+              "id": "0593fb5b5b1aeeebb57fd161912c738a",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/ab06d5b3d2ac4284b541af96-1770653294.jpg",
+              "custom_fields": [],
+              "text": "TOBi - STILL - Growth",
+              "artist": "TOBi",
+              "title": "Growth",
+              "album": "STILL",
+              "genre": "Rap/Hip Hop",
+              "isrc": "USQX91900701",
+              "lyrics": "I call this shit post-traumatic growth\r\nOut of Hell, free to go\r\nSend a shout, I propose a toast\r\nTo the homies on the low, locked down in a cell\r\nLook how we arose, we gettin' grown\r\nGettin' bigger, gettin' blown, exponential growth\r\nResume say lil' Tobi, holy smokes, love ain't a joke\r\nSelf love ain't a joke\r\nI tell my bro (Bro-bro), hold your head\r\nI get you hope, I get you hope\r\nBut I can't bring you back, no\r\nNot enough words said alive, that could bring you back, uh\r\nBut I'm here, bigger\r\nI'm bigger and better now, yeah, yeah\r\nI'm bigger and better now, woah, oh, ooh-ooh\r\nSet across the Atlantic, this time with no shackles\r\nDid we betray our families?\r\nBeg forgiveness from ancestors, no family to access\r\nFour kids in the bedroom, two boys on the mattress\r\n\r\nYeah\r\nHmm, hmm, oh\r\nI'm screamin' R-I-P Lil' P (Lil' P)\r\nYeah, from my living room seat\r\nSay hi to big bro for me\r\nWords don't stick 'til I'm stone poorly\r\nOD, hurricane TOBi\r\nBlow tree, feel a breeze and the, and the, and the, and the rain on me\r\n'Cause I'm runnin' from the pressure, runnin' from the pressure, runnin' from it\r\nYeah, runnin' from the pressure, runnin' from the pressure, runnin' from it\r\nYeah, I know November, yeah, I still remember, yeah, I won't forget you\r\nYeah, I got your number, yeah, I never call it\r\nYeah, I think about it, yeah, I think that I'm good\r\nI'm good at movin' on, good at lookin' strong\r\nGood at pickin' pieces up since Lego blocks\r\nI been preppin' for this moment way ahead of time\r\n'Cause I'm good, I'm bigger and better now, yeah, yeah\r\nBigger and better now, yeah, yeah\r\nBigger and better now, yeah, yeah\r\nBigger and better now, yeah, yeah\r\nBigger and better now\r\nBigger and better now"
+            }
+          },
+          {
+            "request_id": "edae70eb8b47b49d9e4bed81",
+            "request_url": "/api/station/491/request/edae70eb8b47b49d9e4bed81",
+            "song": {
+              "id": "49a6f23800e4185294bd893257c15d09",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/edae70eb8b47b49d9e4bed81-1770653175.jpg",
+              "custom_fields": [],
+              "text": "TOBi - Hoodwinked - Hoodwinked",
+              "artist": "TOBi",
+              "title": "Hoodwinked",
+              "album": "Hoodwinked",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12202865",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "b69f396ff81fb35f0a14ac10",
+            "request_url": "/api/station/491/request/b69f396ff81fb35f0a14ac10",
+            "song": {
+              "id": "208883929deca7462300c733a947f545",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/b69f396ff81fb35f0a14ac10-1770653319.jpg",
+              "custom_fields": [],
+              "text": "TOBi - January December - January December",
+              "artist": "TOBi",
+              "title": "January December",
+              "album": "January December",
+              "genre": "Rap; Hip Hop",
+              "isrc": "QM24S1705864",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "079f3e036c5eae296446532e",
+            "request_url": "/api/station/491/request/079f3e036c5eae296446532e",
+            "song": {
+              "id": "88522f4b8a819edb9b7e5a91a02b36d0",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/079f3e036c5eae296446532e-1770653158.jpg",
+              "custom_fields": [],
+              "text": "TOBi - Life Is A Jungle - Life Is A Jungle",
+              "artist": "TOBi",
+              "title": "Life Is A Jungle",
+              "album": "Life Is A Jungle",
+              "genre": "Rap; Hip Hop",
+              "isrc": "US38Y2545458",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "cc9254f7b6d30c356df181b7",
+            "request_url": "/api/station/491/request/cc9254f7b6d30c356df181b7",
+            "song": {
+              "id": "0d902a713dbe7e7838a41061191ba8be",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/cc9254f7b6d30c356df181b7-1770653271.jpg",
+              "custom_fields": [],
+              "text": "TOBi - Ride - Ride",
+              "artist": "TOBi",
+              "title": "Ride",
+              "album": "Ride",
+              "genre": "R&B",
+              "isrc": "QM24S1703786",
+              "lyrics": "Come fall in love with a sensitive thug\r\nGet a massage and a back rub\r\nBackwood rolled I got time for one mo'\r\nI read you prose from Edgar Allan Poe\r\nAnd Def Poetry Jam Flows\r\nRemember back in the days\r\nThe Ole\r\nWe was in church catching a vibe on the pews\r\nMy thoughts were sinful but what was I 'posed to do\r\nThey think you a angel but only I know the truth\r\nYou sing in the choir well put them high notes to use\r\nBaby\r\n\r\nOuu ouuu (Ride ride)\r\nOuu ouuu (Ride ride)\r\nLadi dadi\r\nOuu ouuu (Ride ride)\r\nRide ride love\r\nOuu ouuu\r\nOuu ouuu\r\n\r\nI'm fantastic all these boys\r\nGassed up need an antacid Lord\r\nPass the ball to a young boy\r\nFinal quarter call me Robert Horry for the score\r\nPlus I got a ring for ya and more\r\nIt ain't tricking if he knows how to treat ya\r\nAin't no fees attached to this feature\r\nWhether it's by conversation or consummation\r\nYou always wanted him to go deeper\r\nIt seems like he tryna stop you from getting to your goals\r\nDoes he sound like a keeper?\r\nWhy settle for whatever's easy\r\nYour body bomb and brain and magnifique\r\nMind on fleek\r\nDress like sheesh, let's go eat\r\nLooking like a meal on the real\r\nI need that apple like the logo, can I get a piece?\r\n\r\nOuu ouuu (Ride ride)\r\nOuu ouuu (Ride ride)\r\nLadi dadi\r\nOuu ouuu (Ride ride)\r\nRide ride love\r\n\r\nWe too grown for games, too young for titles\r\nToo grown to play but context is vital\r\nGive it to me baby\r\nGive it to me if you love me\r\nGive it to me baby give it to if you love me now\r\n\r\nI know you want the chase\r\nKnow you want the, I know you want the\r\nYou love the show\r\nYou love the show\r\n(Love)\r\n\r\nOuu ouuu (Ride ride)\r\nOuu ouuu (Ride ride)\r\nLadi dadi\r\nOuu ouuu (Ride ride)\r\nRide ride love\r\n\r\nOuu ouuu (Ride ride)\r\nOuu ouuu (Ride ride)\r\nLadi dadi\r\nOuu ouuu (Ride ride)\r\nRide ride love\r\n\r\nWe too grown for games, too young for titles\r\nToo grown to play but context is vital\r\nGive it to me baby\r\nGive it to me if you love me\r\nGive it to me baby give it to if you love me now"
+            }
+          },
+          {
+            "request_id": "161b73fbdcef7ff81376ed7f",
+            "request_url": "/api/station/491/request/161b73fbdcef7ff81376ed7f",
+            "song": {
+              "id": "f50be3e3ace14b84eff55e80af3fcab3",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/161b73fbdcef7ff81376ed7f-1770664055.jpg",
+              "custom_fields": [],
+              "text": "TOBi, Jazz Cartier, Haviah Mighty, Shad, Ejji Smith - STILL+ - 24 (Toronto Remix) (feat. Haviah Mighty, Shad, Jazz Cartier & Ejji Smith)",
+              "artist": "TOBi, Jazz Cartier, Haviah Mighty, Shad, Ejji Smith",
+              "title": "24 (Toronto Remix) (feat. Haviah Mighty, Shad, Jazz Cartier & Ejji Smith)",
+              "album": "STILL+",
+              "genre": "Rap/Hip Hop",
+              "isrc": "USRC12001072",
+              "lyrics": "They would rather see you cry\r\nThen see themselves smile\r\nThat's how I know the devil is not in exile\r\nTurn the flesh of a reptile into a textile\r\nSnakeskin leathers when I step out\r\n\r\nDaytrip took it to ten (hey)\r\n\r\nUh, freedom, freedom\r\nI'm just tryna get in your arms tonight\r\nI'm just tryna get in your arms tonight, mm\r\nI know it's cold out here\r\nI know it all, please have no fear\r\n\r\nHaviah\r\nLook\r\nI ain't even flagged up (no)\r\nI ain't even ganged up\r\nMighty gang, no handguns\r\nI don't need your handcuffs\r\nBlack skin on a back spin\r\n'Cause they don't understand us\r\nI narrative abandoned\r\nReplace with propaganda\r\nI disentangled all these messes\r\nWant to handle all these stresses\r\n\"You have the right to remain silent\"\r\nBut then they cancelled all these blessings\r\nBut ay, but who the fuck Miranda\r\nWalking onto my veranda\r\nThen I gotta put my hands up\r\nMaking all of these demands, uh\r\nIt's panoramic, every angle\r\nBut I ain't finna get ran up on\r\nAnd I be muting these babylon\r\n'Cause I ain't putting these shackles on\r\nAnkle monitor just the same\r\nI know you probably want a slave\r\nSo, all my partners gon' behave\r\nFree to fall into my grace\r\n\r\nStill ridin', still ridin', still lookin' lookin', yeah\r\nStill ridin', still ridin', still lookin' for me, yeah\r\nWhere you at? Where you been? Doin' work all day\r\nWhere you at? Where you goin'? Tryna get home safe\r\nStill ridin', still ridin', still lookin' lookin', yeah\r\nStill ridin', still ridin', still lookin' for me, yeah\r\nWhere you at? Where you been? Doin' work all day\r\nWhere you at? Where you goin'? Tryna get home safe\r\n\r\nUh, it's a fine line\r\nIt's a fine line, still\r\nAlways gotta walk it straight\r\nPlus we gotta climb hills\r\nPlus the place a minefield\r\nWe just tryna find meals\r\nHurt from time\r\nWhy they say that time heals?\r\nPush to leave home\r\nThen stopped when we behind wheels\r\nThen they sign the crime bills\r\nWe can't all be signed sealed\r\nWe need real jobs, no\r\nNeed to re-define real\r\nI recall when I was small, like 1999 'til\r\n\r\nIt was \"Hands in your pockets, everyone's watching\r\nI know they do it, but that's not an option\r\nShow caution, don't let it show though\r\nKeep up your grades, clean up your fade\r\nMake 'em all laugh, take a seat and behave\r\nYou need to be brave\"\r\nWe still afraid though\r\n\r\nStill ridin', still ridin', still lookin' lookin', yeah\r\nStill ridin', still ridin', still lookin' for me, yeah\r\nWhere you at? Where you been? Doin' work all day\r\nWhere you at? Where you goin'? Tryna get home safe\r\nStill ridin', still ridin', still lookin' lookin', yeah\r\nStill ridin', still ridin', still lookin' for me, yeah\r\nWhere you at? Where you been? Doin' work all day\r\nWhere you at? Where you goin'? Tryna get home safe\r\n\r\nI hear things, I feel things\r\nFuck the fake love, want a real thing\r\nWe caged birds, song still sing\r\nBe caged birds\r\nSongs never see the light of day\r\nCut my wings off and I fly away\r\nCrossing the street, being stopped by police\r\nAnd I feel like (?)\r\nThey gave me the right of the way, uh\r\nMore peace and less war\r\nScreaming fuck Doug Ford\r\nJLF the brute force\r\nBut ain't the one they root for\r\nFalse promises, from false prophets\r\nFar from perfect since they been\r\nGot my jaw locking, law stopping\r\n\r\nSince they been\r\nGot my jaw locking, law stopping\r\n\r\nSince they been\r\nGot my jaw locking, law stopping\r\n\r\nBig on twenty-four\r\nFred Hamm twenty-one\r\nHOV came twenty-six\r\nNow look what he become\r\nI'mma be a legend in my next fucking twenty-four\r\nI'mma see some blessings in my next fucking twenty-four\r\n\r\nWatch the game from the floor seats\r\nThat's all season (ride, ride)\r\nFourth quarter, we can't stop 'til the score even (ride, ride)\r\nNews cycles got mamas traumatized\r\nNo such thing as a long term plan\r\nWhen you can't see twenty-five\r\nMaradona wrote this with the hand of God\r\nSee the snakes even through the camouflage\r\nPoliticians taking pictures with the kids\r\nSame time they rob they parents blind\r\nAh never mind\r\n\r\nReal leaders, and not no pretenders\r\nPublic policy with private agenda\r\nCorporate interests, foreign investments\r\nI can tell you will not be remembered\r\n\r\nTelling me just ride on\r\nBygones be bygones\r\nBut these arms get tied up\r\nFuck that I write on\r\nWay I craft this perfect picture\r\nIt deserve a Pulitzer, a Cy Young\r\nSay the good gon' die young\r\nBut I hope we get freedom\r\n\r\nI'm just tryna get in her arms tonight\r\n\r\nDaytrip took it to ten (hey)"
+            }
+          },
+          {
+            "request_id": "217b60dfb1adb60082ed2970",
+            "request_url": "/api/station/491/request/217b60dfb1adb60082ed2970",
+            "song": {
+              "id": "b8ddd433c3fa403910df69075be4b255",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/217b60dfb1adb60082ed2970-1770653281.jpg",
+              "custom_fields": [],
+              "text": "TOBi, Mick Jenkins - Off The Drugs - Off The Drugs",
+              "artist": "TOBi, Mick Jenkins",
+              "title": "Off The Drugs",
+              "album": "Off The Drugs",
+              "genre": "Rap/Hip Hop",
+              "isrc": "USRC12102022",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "1c364099a51e48bbfa389755",
+            "request_url": "/api/station/491/request/1c364099a51e48bbfa389755",
+            "song": {
+              "id": "745fd2d69159988dda076bd95397cfd0",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/1c364099a51e48bbfa389755-1770645606.jpg",
+              "custom_fields": [],
+              "text": "ToBi, Real Bad Man - When I'm Home - When I'm Home",
+              "artist": "ToBi, Real Bad Man",
+              "title": "When I'm Home",
+              "album": "When I'm Home",
+              "genre": "R&B",
+              "isrc": "NL8RL2562851",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "7f22ebb98a2b5be419855e0b",
+            "request_url": "/api/station/491/request/7f22ebb98a2b5be419855e0b",
+            "song": {
+              "id": "548312b6de9bd48200dc1de80bbfbb6c",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/7f22ebb98a2b5be419855e0b-1770653296.jpg",
+              "custom_fields": [],
+              "text": "TOBi/ !llmind - Shall I Continue? - Too Hot",
+              "artist": "TOBi/ !llmind",
+              "title": "Too Hot",
+              "album": "Shall I Continue?",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12102391",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "424e1fefe149c26184dfbe11",
+            "request_url": "/api/station/491/request/424e1fefe149c26184dfbe11",
+            "song": {
+              "id": "fffe4fbb05a63192d434dfadeb1f9c8f",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/424e1fefe149c26184dfbe11-1770653313.jpg",
+              "custom_fields": [],
+              "text": "TOBi/ Harrison - Beige - Beige",
+              "artist": "TOBi/ Harrison",
+              "title": "Beige",
+              "album": "Beige",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC11902826",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "0b75fa229db4b40c943c4f33",
+            "request_url": "/api/station/491/request/0b75fa229db4b40c943c4f33",
+            "song": {
+              "id": "382995c4997d83095c2f07d5337d1941",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/0b75fa229db4b40c943c4f33-1770653194.jpg",
+              "custom_fields": [],
+              "text": "TOBi/ MAVI/ MAVI - Flowers (feat. MAVI) - Flowers (feat. MAVI)",
+              "artist": "TOBi/ MAVI/ MAVI",
+              "title": "Flowers (feat. MAVI)",
+              "album": "Flowers (feat. MAVI)",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12300355",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "fdb27b2389d74ee3343c5598",
+            "request_url": "/api/station/491/request/fdb27b2389d74ee3343c5598",
+            "song": {
+              "id": "7a1b825959d696b16830e2ed814d8e7c",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/fdb27b2389d74ee3343c5598-1770653286.jpg",
+              "custom_fields": [],
+              "text": "TOBi/ Topaz Jones - All Night Long (feat. Topaz Jones) - All Night Long (feat. Topaz Jones)",
+              "artist": "TOBi/ Topaz Jones",
+              "title": "All Night Long (feat. Topaz Jones)",
+              "album": "All Night Long (feat. Topaz Jones)",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12301459",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "49fb781a8252c58b2af440bf",
+            "request_url": "/api/station/491/request/49fb781a8252c58b2af440bf",
+            "song": {
+              "id": "1167f9fe4ad00c774152111a5ad33182",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/49fb781a8252c58b2af440bf-1770664281.jpg",
+              "custom_fields": [],
+              "text": "TOBi/Jazz Cartier - Woah - Woah",
+              "artist": "TOBi/Jazz Cartier",
+              "title": "Woah",
+              "album": "Woah",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12102437",
+              "lyrics": ""
+            }
+          },
+          {
+            "request_id": "e5f700b892a8411a764166b0",
+            "request_url": "/api/station/491/request/e5f700b892a8411a764166b0",
+            "song": {
+              "id": "1167f9fe4ad00c774152111a5ad33182",
+              "art": "https://a10.asurahosting.com/api/station/northern_dial/art/e5f700b892a8411a764166b0-1770653173.jpg",
+              "custom_fields": [],
+              "text": "TOBi/Jazz Cartier - Woah - Woah",
+              "artist": "TOBi/Jazz Cartier",
+              "title": "Woah",
+              "album": "Woah",
+              "genre": "Rap; Hip Hop",
+              "isrc": "USRC12102437",
+              "lyrics": ""
+            }
+          }
+        ]
+      }
+    }
+  }
+}
