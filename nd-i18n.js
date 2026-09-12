@@ -1,5 +1,11 @@
 (() => {
   const path = window.location.pathname;
+
+  // The full homepage has its own reversible translator because its player,
+  // modals and cards are generated differently from the rest of the site.
+  // Do not run two language engines against the same DOM.
+  if ((path === '/' || path === '/index.html') && document.querySelector('script[src*="homepage_language.js"]')) return;
+
   const params = new URLSearchParams(window.location.search);
   const lang = path === '/fr' || path.startsWith('/fr/') || params.get('lang') === 'fr' ? 'fr' : 'en';
 
