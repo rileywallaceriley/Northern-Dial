@@ -36,7 +36,7 @@
     'Submit Your Music': 'Soumettez votre musique',
     'Canadian artist or podcaster? Share your tracks with us for airplay on Northern Dial.': 'Artiste canadien ou créateur de balado? Faites-nous parvenir vos titres pour une diffusion sur Northern Dial.',
     'Submit Now': 'Soumettre maintenant',
-    'Open-Source Community Project': 'Projet communautaire à code source ouvert',
+    'Open-Source Community Project': 'Projet open source',
     'Explore our bigger picture and discover how you can get involved in building the future of Canadian independent radio.': 'Découvrez notre vision et voyez comment vous pouvez contribuer à bâtir l’avenir de la radio indépendante canadienne.',
     'Learn More': 'En savoir plus',
     'Latest Stories': 'Derniers articles',
@@ -163,7 +163,9 @@
     updateLanguageToggle(lang);
     updateMetadata(lang);
     if (persist) updateUrlForLanguage(lang);
-    if (persist) localStorage.setItem(STORAGE_KEY, lang);
+    if (persist) {
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
+    }
   }
 
   function closeMobileMenu() {
@@ -202,9 +204,9 @@
       closeMobileMenu();
     });
 
+    // The URL is authoritative. A prior French choice must never trap an English URL in French.
     const requested = new URLSearchParams(window.location.search).get('lang');
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const initial = requested === 'fr' ? 'fr' : (requested === 'en' ? 'en' : (saved === 'fr' ? 'fr' : 'en'));
+    const initial = requested === 'fr' ? 'fr' : 'en';
     applyLanguage(initial, false);
     installMutationTranslation();
   }
