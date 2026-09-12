@@ -10,3 +10,5 @@ for path in [Path('blog/index.html'), Path('tools/refine_sep11_features.py')]:
         continue
     path.write_text(text.replace(old, new))
     print(f'Fixed {path}')
+
+print('Featured mobile patch complete')
