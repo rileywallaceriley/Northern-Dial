@@ -103,7 +103,7 @@ for fn,paras in bios.items():
 # Make the new-release roundup the visual lead on the blog index.
 p=ROOT/'blog/index.html'; s=p.read_text()
 if '.card.featured{' not in s:
-    s=s.replace('.card:hover {', '.card.featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.85fr);border:3px solid #CC3333}.card.featured>a{display:block;min-height:100%}.card.featured>a img{height:100%!important;min-height:320px;object-fit:cover!important}.card.featured .card-body{justify-content:center}.card.featured .card-title{font-size:2rem}@media(max-width:760px){.card.featured{display:flex;grid-column:auto}.card.featured>a img{height:auto!important;min-height:0}}\n    .card:hover {')
+    s=s.replace('.card:hover {', '.card.featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.85fr);border:3px solid #CC3333}.card.featured>a{display:block;min-height:100%}.card.featured>a img{height:100%!important;min-height:320px;object-fit:cover!important}.card.featured .card-body{justify-content:center}.card.featured .card-title{font-size:2rem}@media(max-width:760px){.card.featured{display:flex;grid-column:auto;grid-template-columns:none}.card.featured>a{min-height:0;height:auto;width:100%}.card.featured>a img{height:auto!important;min-height:0;width:100%!important;display:block}.card.featured .card-body{width:100%}}\n    .card:hover {')
 s=s.replace('<article class="card"><a href="new-canadian-releases-september-11-2026.html">','<article class="card featured"><a href="new-canadian-releases-september-11-2026.html">',1)
 p.write_text(s)
 
