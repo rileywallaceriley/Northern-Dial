@@ -17,6 +17,7 @@ BACK_LINK_PATTERN = re.compile(
     r'(<a\b[^>]*class="[^"]*\bback-link\b[^"]*"[^>]*href=")([^"]+)("[^>]*>)',
     re.IGNORECASE,
 )
+ARTICLE_CLOSE_PATTERN = re.compile(r'</article>', re.IGNORECASE)
 
 
 def main():
@@ -24,6 +25,7 @@ def main():
     anchors = set(DETAIL_ID_PATTERN.findall(directory))
     checked = 0
     changed = 0
+    inserted = 0
     anchored = 0
     directory_only = 0
 
@@ -43,17 +45,29 @@ def main():
 
         html = path.read_text(encoding="utf-8")
         match = BACK_LINK_PATTERN.search(html)
-        if not match:
+        if match:
+            if match.group(2) == expected_href:
+                continue
+            html = html[:match.start(2)] + expected_href + html[match.end(2):]
+            path.write_text(html, encoding="utf-8")
+            changed += 1
             continue
-        if match.group(2) == expected_href:
+
+        article_close = ARTICLE_CLOSE_PATTERN.search(html)
+        if not article_close:
             continue
-        html = html[:match.start(2)] + expected_href + html[match.end(2):]
+
+        back_link = (
+            f'<a class="back-link" href="{expected_href}">← Back to the artist directory</a>'
+        )
+        html = html[:article_close.start()] + back_link + html[article_close.start():]
         path.write_text(html, encoding="utf-8")
         changed += 1
+        inserted += 1
 
     print(
         f"Artist back-link normalization: {checked} profiles checked; "
-        f"{changed} changed; {anchored} anchored to current accordions; "
+        f"{changed} changed ({inserted} inserted); {anchored} anchored to current accordions; "
         f"{directory_only} safely return to artists.html."
     )
 
