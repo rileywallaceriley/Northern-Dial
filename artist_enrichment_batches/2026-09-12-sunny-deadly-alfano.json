@@ -1,0 +1,26 @@
+{
+  "sunny": {
+    "bio": "Sunny is a Montréal artist moving from an established professional dance and television career into a focused recording chapter. Her French-led contemporary R&B and urban-pop sound pairs rhythmic-pop energy with a dance-forward pulse, as heard on ‘Te Quiero.’",
+    "website": "",
+    "instagram": "https://www.instagram.com/sunny_boisvert",
+    "city": "Montréal, Québec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.instagram.com/sunny_boisvert",
+      "https://www.dropbox.com/scl/fi/o47n5iouwa6xgoroathy4/Sunny-Te-Quiero-Radio-Edit.wav?rlkey=4evvc0iebiyiavpifz77vtlow&st=r7wuipba&dl=0"
+    ]
+  },
+  "deadly alfano": {
+    "bio": "Deadly Alfano is a Toronto singer-songwriter who writes and performs original material.",
+    "website": "",
+    "instagram": "https://www.instagram.com/deadlyalfano",
+    "city": "Toronto, Ontario",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.instagram.com/deadlyalfano",
+      "https://drive.google.com/drive/folders/1ymPTrAWusDd2uqqaYF66Nhy3EZ79_3Sv"
+    ]
+  }
+}
