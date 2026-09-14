@@ -1,4 +1,12 @@
 /* Northern Dial shared site shell */
+html,
+body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  overscroll-behavior-x: none !important;
+}
+
 .nd-site-header {
   background: #fff !important;
   border-bottom: 3px solid #CC3333 !important;
@@ -306,7 +314,8 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
 
 /* Northern Dial homepage visual refresh */
 body#top {
-  background: linear-gradient(to bottom, #f3eee3 0%, #f3eee3 18%, #e9c1b8 48%, #dd8f84 72%, #cc3333 100%) !important;
+  min-height: 100vh !important;
+  background: linear-gradient(to bottom, #f3eee3 0%, #f3eee3 8%, #eccfc8 28%, #df978b 58%, #cc3333 100%) !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
 }
@@ -342,12 +351,15 @@ body#top .custom-player {
 @media (max-width: 768px) {
   body#top .container {
     padding-top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   body#top .nd-home-hero-logo {
     background-position: 72% center !important;
     background-size: cover !important;
     height: 250px !important;
     margin: 0 calc(50% - 50vw) 18px !important;
+    max-width: 100vw !important;
   }
   body#top .custom-player {
     box-shadow: 0 16px 22px -16px rgba(195, 51, 51, .34) !important;
