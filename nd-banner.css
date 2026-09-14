@@ -18,6 +18,19 @@ body:not(#top) main {
   background: transparent !important;
 }
 
+/* Artists also uses id="top" like the homepage. Identify it structurally instead. */
+body#top:has(.artist-card) {
+  background: linear-gradient(to bottom, #f3eee3 0%, #f3eee3 10%, #eccfc8 34%, #df978b 68%, #cc3333 100%) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  min-height: 100vh !important;
+}
+
+body#top:has(.artist-card) .page-header,
+body#top:has(.artist-card) main {
+  background: transparent !important;
+}
+
 /* Static page headers used across About, library, discovery and editorial pages. */
 body:not(#top) .header .header-inner {
   align-items: center !important;
@@ -97,16 +110,18 @@ body#top > header:not(.page-header):not(.nd-site-header):not(.header) img {
   pointer-events: none !important;
 }
 
-/* Artists jump controls: remove the legacy white panel so the page background can flow through. */
-body#top main div:has(select) {
+/* Artists jump controls: target the real control structurally, regardless of wrapper tag. */
+body#top:has(.artist-card) main :is(div, section, nav, form, p, label):has(select) {
   background: transparent !important;
+  background-color: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 
-body#top main select {
-  background: rgba(243, 238, 227, .78) !important;
+body#top:has(.artist-card) main select {
+  background: rgba(243, 238, 227, .88) !important;
   border-color: #CC3333 !important;
+  box-shadow: none !important;
 }
 
 /* Remove the old white-logo header treatment while keeping the nav intact. */
