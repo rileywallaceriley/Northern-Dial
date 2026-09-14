@@ -65,8 +65,10 @@ body:not(#top) .nd-site-header .nd-site-logo img {
   pointer-events: none !important;
 }
 
-/* Legacy standalone headers, including Artists and older editorial/archive pages. */
-body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) {
+/* Legacy standalone headers on ordinary inner pages. */
+body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header),
+/* Artists also uses id="top", so explicitly include its legacy standalone header. */
+body#top > header:not(.page-header):not(.nd-site-header):not(.header) {
   align-items: center !important;
   background: #f3eee3 url('/assets/northern-dial-home-hero.jpg?v=20260914c') center center / cover no-repeat !important;
   border-bottom: 0 !important;
@@ -80,13 +82,17 @@ body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) {
 
 body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) > a,
 body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) .site-logo,
-body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) .brand {
+body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) .brand,
+body#top > header:not(.page-header):not(.nd-site-header):not(.header) > a,
+body#top > header:not(.page-header):not(.nd-site-header):not(.header) .site-logo,
+body#top > header:not(.page-header):not(.nd-site-header):not(.header) .brand {
   display: block !important;
   height: 100% !important;
   width: 100% !important;
 }
 
-body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) img {
+body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) img,
+body#top > header:not(.page-header):not(.nd-site-header):not(.header) img {
   opacity: 0 !important;
   pointer-events: none !important;
 }
@@ -100,7 +106,8 @@ body:not(#top) .header {
 @media (max-width: 768px) {
   body:not(#top) .header .header-inner,
   body:not(#top) .nd-site-header,
-  body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header) {
+  body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header),
+  body#top > header:not(.page-header):not(.nd-site-header):not(.header) {
     background-position: 72% center !important;
     height: 250px !important;
   }
