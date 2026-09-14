@@ -171,6 +171,30 @@
     });
   }
 
+  function enhanceArtistDirectory() {
+    if (path !== '/artists.html') return;
+    if (document.querySelector('.nd-new-artists-cta')) return;
+
+    const cta = document.createElement('div');
+    cta.className = 'nd-new-artists-cta';
+    cta.style.cssText = 'display:flex;justify-content:flex-start;margin:18px 0 34px;';
+
+    const link = document.createElement('a');
+    link.href = '/new-canadian-artists.html';
+    link.textContent = 'Discover New Canadian Artists';
+    link.style.cssText = "display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;border:2px solid #CC3333;border-radius:7px;background:#CC3333;color:#fff;font-family:'Oswald',sans-serif;font-size:.92rem;font-weight:700;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;";
+    cta.appendChild(link);
+
+    const browseLine = [...document.querySelectorAll('p')].find((el) => el.textContent.trim() === 'Browse the complete catalogue below.');
+    if (browseLine) {
+      browseLine.insertAdjacentElement('afterend', cta);
+      return;
+    }
+
+    const filter = document.querySelector('input[placeholder*="Filter artists" i]');
+    if (filter?.parentElement) filter.parentElement.insertAdjacentElement('afterend', cta);
+  }
+
   function apply() {
     document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
     document.documentElement.dataset.ndLanguage = lang;
@@ -179,6 +203,7 @@
     addLanguageControlIfMissing();
     localizeLanguageControls();
     addHreflang();
+    enhanceArtistDirectory();
   }
 
   let queued = false;
@@ -190,6 +215,7 @@
       translateTree();
       addLanguageControlIfMissing();
       localizeLanguageControls();
+      enhanceArtistDirectory();
     });
   });
 
