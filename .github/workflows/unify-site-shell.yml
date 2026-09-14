@@ -5,6 +5,7 @@ on:
     paths:
       - 'nd-shell.css'
       - 'nd-shell.js'
+      - 'nd-banner.css'
       - '.github/workflows/unify-site-shell.yml'
   workflow_dispatch:
 
@@ -30,6 +31,7 @@ jobs:
           from pathlib import Path
 
           css_tag = '  <link rel="stylesheet" href="/nd-shell.css?v=20260907b">'
+          banner_tag = '  <link rel="stylesheet" href="/nd-banner.css?v=20260914a">'
           js_tag = '  <script src="/nd-shell.js?v=20260907b" defer></script>'
           skip_names = {'admin.html'}
           skip_parts = {'.git', '.github', 'archives'}
@@ -43,6 +45,8 @@ jobs:
 
               if '/nd-shell.css' not in text and '</head>' in text:
                   text = text.replace('</head>', css_tag + '\n</head>', 1)
+              if '/nd-banner.css' not in text and '</head>' in text:
+                  text = text.replace('</head>', banner_tag + '\n</head>', 1)
               if '/nd-shell.js' not in text and '</body>' in text:
                   text = text.replace('</body>', js_tag + '\n</body>', 1)
 
@@ -64,5 +68,5 @@ jobs:
             echo 'No site shell changes to commit.'
             exit 0
           fi
-          git commit -m 'Use shared site header and navigation'
+          git commit -m 'Use shared site header, navigation and banner'
           git push origin HEAD:main
