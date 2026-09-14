@@ -41,8 +41,8 @@ body:not(#top) .header .header-inner .brand img {
   pointer-events: none !important;
 }
 
-/* Shared JS-generated header shell. */
-body:not(#top) .nd-site-header {
+/* Shared JS-generated header shell. buildShell() only runs on non-homepage URLs. */
+.nd-site-header {
   align-items: center !important;
   background: #f3eee3 url('/assets/northern-dial-home-hero.jpg?v=20260914c') center center / cover no-repeat !important;
   border-bottom: 0 !important;
@@ -54,13 +54,13 @@ body:not(#top) .nd-site-header {
   position: relative !important;
 }
 
-body:not(#top) .nd-site-header .nd-site-logo {
+.nd-site-header .nd-site-logo {
   display: block !important;
   height: 100% !important;
   width: 100% !important;
 }
 
-body:not(#top) .nd-site-header .nd-site-logo img {
+.nd-site-header .nd-site-logo img {
   opacity: 0 !important;
   pointer-events: none !important;
 }
@@ -105,7 +105,7 @@ body:not(#top) .header {
 
 @media (max-width: 768px) {
   body:not(#top) .header .header-inner,
-  body:not(#top) .nd-site-header,
+  .nd-site-header,
   body:not(#top) > header:not(.page-header):not(.nd-site-header):not(.header),
   body#top > header:not(.page-header):not(.nd-site-header):not(.header) {
     background-position: 72% center !important;
