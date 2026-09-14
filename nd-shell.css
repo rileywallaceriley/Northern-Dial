@@ -327,8 +327,9 @@ body#top .nd-home-hero-logo::after {
   background: linear-gradient(
     to bottom,
     rgba(243, 238, 227, 0) 0%,
-    rgba(243, 238, 227, 0) 72%,
-    rgba(243, 238, 227, .45) 86%,
+    rgba(243, 238, 227, 0) 58%,
+    rgba(243, 238, 227, .22) 70%,
+    rgba(243, 238, 227, .68) 86%,
     #f3eee3 100%
   ) !important;
   bottom: 0 !important;
@@ -338,6 +339,7 @@ body#top .nd-home-hero-logo::after {
   position: absolute !important;
   right: 0 !important;
   top: 0 !important;
+  z-index: 2 !important;
 }
 body#top .nd-home-hero-logo .logo-image {
   opacity: 0 !important;
@@ -354,10 +356,20 @@ body#top .custom-player {
     padding-top: 0 !important;
   }
   body#top .nd-home-hero-logo {
-    background-position: 74% center !important;
+    background-position: 73% center !important;
     background-size: cover !important;
     height: 250px !important;
     margin: 0 calc(50% - 50vw) 18px !important;
+  }
+  body#top .nd-home-hero-logo::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(243, 238, 227, 0) 0%,
+      rgba(243, 238, 227, 0) 54%,
+      rgba(243, 238, 227, .28) 68%,
+      rgba(243, 238, 227, .78) 86%,
+      #f3eee3 100%
+    ) !important;
   }
   body#top .custom-player {
     box-shadow: 0 16px 22px -16px rgba(195, 51, 51, .34) !important;
