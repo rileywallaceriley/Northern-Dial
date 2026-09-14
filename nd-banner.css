@@ -2,7 +2,16 @@
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip !important;
+}
+
+/* Give inner pages the same warm paper tone as the Northern Dial brand. */
+body:not(#top) {
+  background: #f3eee3 !important;
+}
+
+body:not(#top) .page-header {
+  background: #f3eee3 !important;
 }
 
 /* Static page headers used across About, library, discovery and editorial pages. */
