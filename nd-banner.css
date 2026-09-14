@@ -110,14 +110,15 @@ body#top > header:not(.page-header):not(.nd-site-header):not(.header) img {
   pointer-events: none !important;
 }
 
-/* Artists jump controls: target the real control structurally, regardless of wrapper tag. */
-body#top:has(.artist-card) main :is(div, section, nav, form, p, label):has(select) {
+/* Artists jump controls: override the exact legacy white .letter-nav rule in artists.html. */
+body#top:has(.artist-card) .letter-nav {
   background: transparent !important;
   background-color: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 
+body#top:has(.artist-card) .letter-nav select,
 body#top:has(.artist-card) main select {
   background: rgba(243, 238, 227, .88) !important;
   border-color: #CC3333 !important;
