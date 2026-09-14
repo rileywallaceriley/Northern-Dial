@@ -306,7 +306,9 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
 
 /* Northern Dial homepage visual refresh */
 body#top {
-  background: #f3eee3 !important;
+  background: linear-gradient(to bottom, #f3eee3 0%, #f3eee3 18%, #e9c1b8 48%, #dd8f84 72%, #cc3333 100%) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
 }
 body#top .container {
   max-width: 1200px !important;
@@ -324,22 +326,8 @@ body#top .nd-home-hero-logo {
   position: relative !important;
 }
 body#top .nd-home-hero-logo::after {
-  background: linear-gradient(
-    to bottom,
-    rgba(243, 238, 227, 0) 0%,
-    rgba(243, 238, 227, 0) 58%,
-    rgba(243, 238, 227, .22) 70%,
-    rgba(243, 238, 227, .68) 86%,
-    #f3eee3 100%
-  ) !important;
-  bottom: 0 !important;
-  content: '' !important;
-  left: 0 !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  right: 0 !important;
-  top: 0 !important;
-  z-index: 2 !important;
+  content: none !important;
+  display: none !important;
 }
 body#top .nd-home-hero-logo .logo-image {
   opacity: 0 !important;
@@ -356,20 +344,10 @@ body#top .custom-player {
     padding-top: 0 !important;
   }
   body#top .nd-home-hero-logo {
-    background-position: 73% center !important;
+    background-position: 72% center !important;
     background-size: cover !important;
     height: 250px !important;
     margin: 0 calc(50% - 50vw) 18px !important;
-  }
-  body#top .nd-home-hero-logo::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(243, 238, 227, 0) 0%,
-      rgba(243, 238, 227, 0) 54%,
-      rgba(243, 238, 227, .28) 68%,
-      rgba(243, 238, 227, .78) 86%,
-      #f3eee3 100%
-    ) !important;
   }
   body#top .custom-player {
     box-shadow: 0 16px 22px -16px rgba(195, 51, 51, .34) !important;
