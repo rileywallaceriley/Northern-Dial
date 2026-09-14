@@ -124,6 +124,25 @@ body#top:has(.artist-card) main select {
   box-shadow: none !important;
 }
 
+/* New Artists is a promoted discovery destination, not a permanent primary-nav item. */
+.nd-primary-links > a[href="/new-canadian-artists.html"],
+.nd-home-nav-links > a[href="./new-canadian-artists.html"],
+.nd-home-nav-links > a[href="/new-canadian-artists.html"] {
+  display: none !important;
+}
+
+/* Use the exact voice command that reliably opens the station on Alexa. */
+body#top .custom-player::after {
+  content: 'NOW ON ALEXA  •  “Alexa, play Northern Dial Radio.”' !important;
+}
+
+@media (max-width: 768px) {
+  body#top .custom-player::after {
+    content: 'NOW ON ALEXA\A“Alexa, play Northern Dial Radio.”' !important;
+    white-space: pre-line !important;
+  }
+}
+
 /* Remove the old white-logo header treatment while keeping the nav intact. */
 body:not(#top) .header {
   background: #f3eee3 !important;
