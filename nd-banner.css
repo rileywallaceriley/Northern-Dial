@@ -1,0 +1,67 @@
+/* Shared Northern Dial landscape banner */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Static page headers used across About, library, discovery and editorial pages. */
+body:not(#top) .header .header-inner {
+  align-items: center !important;
+  background: #f3eee3 url('/assets/northern-dial-home-hero.jpg?v=20260914c') center center / cover no-repeat !important;
+  display: flex !important;
+  height: clamp(250px, 30vw, 390px) !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+body:not(#top) .header .header-inner .brand {
+  display: block !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+body:not(#top) .header .header-inner .brand img {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Shared JS-generated header shell. */
+body:not(#top) .nd-site-header {
+  align-items: center !important;
+  background: #f3eee3 url('/assets/northern-dial-home-hero.jpg?v=20260914c') center center / cover no-repeat !important;
+  border-bottom: 0 !important;
+  display: flex !important;
+  height: clamp(250px, 30vw, 390px) !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+body:not(#top) .nd-site-header .nd-site-logo {
+  display: block !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+body:not(#top) .nd-site-header .nd-site-logo img {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Remove the old white-logo header treatment while keeping the nav intact. */
+body:not(#top) .header {
+  background: #f3eee3 !important;
+  border-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  body:not(#top) .header .header-inner,
+  body:not(#top) .nd-site-header {
+    background-position: 72% center !important;
+    height: 250px !important;
+  }
+}
