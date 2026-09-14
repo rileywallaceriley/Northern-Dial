@@ -97,6 +97,18 @@ body#top > header:not(.page-header):not(.nd-site-header):not(.header) img {
   pointer-events: none !important;
 }
 
+/* Artists jump controls: remove the legacy white panel so the page background can flow through. */
+body#top main div:has(select) {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body#top main select {
+  background: rgba(243, 238, 227, .78) !important;
+  border-color: #CC3333 !important;
+}
+
 /* Remove the old white-logo header treatment while keeping the nav intact. */
 body:not(#top) .header {
   background: #f3eee3 !important;
