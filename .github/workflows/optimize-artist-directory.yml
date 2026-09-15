@@ -1,0 +1,53 @@
+name: Optimize artist directory payload
+
+on:
+  push:
+    paths:
+      - 'optimize_artist_directory.py'
+      - '.github/workflows/optimize-artist-directory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: optimize-artist-directory
+  cancel-in-progress: true
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Measure current directory
+        run: |
+          echo "Before:"
+          wc -c artists.html
+
+      - name: Trim embedded track rows
+        run: python3 optimize_artist_directory.py
+
+      - name: Verify directory/profile integrity
+        run: python3 audit_artist_directory_integrity.py
+
+      - name: Measure optimized directory
+        run: |
+          echo "After:"
+          wc -c artists.html
+
+      - name: Commit optimized directory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artists.html artist_directory_integrity_audit.json
+          if git diff --cached --quiet; then
+            echo 'Artist directory already optimized.'
+            exit 0
+          fi
+          git commit -m 'Reduce artist directory payload'
+          git pull --rebase origin main
+          git push origin HEAD:main
