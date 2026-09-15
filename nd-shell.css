@@ -313,17 +313,17 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
 }
 
 /* Northern Dial homepage visual refresh */
-body#top {
+body#top:has(.nd-home-hero-logo) {
   min-height: 100vh !important;
   background: linear-gradient(to bottom, #f3eee3 0%, #f3eee3 8%, #eccfc8 28%, #df978b 58%, #cc3333 100%) !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
 }
-body#top .container {
+body#top:has(.nd-home-hero-logo) .container {
   max-width: 1200px !important;
   background: transparent !important;
 }
-body#top .nd-home-hero-logo {
+body#top:has(.nd-home-hero-logo) .nd-home-hero-logo {
   background-image: url('/assets/northern-dial-home-hero.jpg?v=20260914c') !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -334,23 +334,23 @@ body#top .nd-home-hero-logo {
   padding: 0 !important;
   position: relative !important;
 }
-body#top .nd-home-hero-logo::after {
+body#top:has(.nd-home-hero-logo) .nd-home-hero-logo::after {
   content: none !important;
   display: none !important;
 }
-body#top .nd-home-hero-logo .logo-image {
+body#top:has(.nd-home-hero-logo) .nd-home-hero-logo .logo-image {
   opacity: 0 !important;
   pointer-events: none !important;
 }
 
 /* Keep the player shadow below the card so it does not bleed into the hero. */
-body#top .custom-player {
+body#top:has(.nd-home-hero-logo) .custom-player {
   box-shadow: 0 18px 28px -18px rgba(195, 51, 51, .42) !important;
   position: relative !important;
 }
 
 /* Alexa availability lives with the player as a listening option, not a separate promo card. */
-body#top .custom-player::after {
+body#top:has(.nd-home-hero-logo) .custom-player::after {
   content: 'NOW ON ALEXA  •  “Alexa, play Northern Dial.”';
   display: block !important;
   margin-top: 22px !important;
@@ -367,22 +367,22 @@ body#top .custom-player::after {
 }
 
 @media (max-width: 768px) {
-  body#top .container {
+  body#top:has(.nd-home-hero-logo) .container {
     padding-top: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
   }
-  body#top .nd-home-hero-logo {
+  body#top:has(.nd-home-hero-logo) .nd-home-hero-logo {
     background-position: 72% center !important;
     background-size: cover !important;
     height: 250px !important;
     margin: 0 calc(50% - 50vw) 18px !important;
     max-width: 100vw !important;
   }
-  body#top .custom-player {
+  body#top:has(.nd-home-hero-logo) .custom-player {
     box-shadow: 0 16px 22px -16px rgba(195, 51, 51, .34) !important;
   }
-  body#top .custom-player::after {
+  body#top:has(.nd-home-hero-logo) .custom-player::after {
     content: 'NOW ON ALEXA\A“Alexa, play Northern Dial.”';
     white-space: pre-line !important;
     font-size: .82rem !important;
