@@ -18,35 +18,72 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Scope homepage visual refresh to homepage hero only
+      - name: Scope homepage styles and repair Discovery footer block
         run: |
           python3 - <<'PY'
           from pathlib import Path
 
-          path = Path('nd-shell.css')
-          css = path.read_text()
+          shell_path = Path('nd-shell.css')
+          shell = shell_path.read_text()
           old = 'body#top'
           new = 'body#top:has(.nd-home-hero-logo)'
+          if new not in shell and old in shell:
+              shell = shell.replace(old, new)
+              shell_path.write_text(shell)
 
-          if new in css:
-              print('Homepage background already scoped.')
-          elif old in css:
-              css = css.replace(old, new)
-              path.write_text(css)
-              print('Scoped homepage-only styles so inner pages no longer inherit the red homepage gradient.')
-          else:
-              raise SystemExit('Expected body#top selectors were not found in nd-shell.css')
+          banner_path = Path('nd-banner.css')
+          banner = banner_path.read_text()
+          marker = '/* Discovery lower information block */'
+          patch = r'''
+
+/* Discovery lower information block */
+body:has(.about-tool) .about-tool {
+  background: #F6F1E7 !important;
+  border: 3px solid #111214 !important;
+  border-radius: 12px !important;
+  gap: 24px !important;
+  margin-top: 36px !important;
+  padding: 24px !important;
+}
+
+body:has(.about-tool) .about-tool h2 {
+  color: #111214 !important;
+}
+
+body:has(.about-tool) .about-tool p {
+  color: #66635F !important;
+  margin-bottom: 0 !important;
+}
+
+body:has(.about-tool) .library-cta {
+  color: #C7443E !important;
+}
+
+body:has(.about-tool) main {
+  padding-bottom: 28px !important;
+}
+
+@media (max-width: 760px) {
+  body:has(.about-tool) .about-tool {
+    gap: 22px !important;
+    margin-top: 30px !important;
+    padding: 20px 18px !important;
+  }
+}
+'''
+          if marker not in banner:
+              banner_path.write_text(banner.rstrip() + patch + '\n')
           PY
 
       - name: Commit fix
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add nd-shell.css
+          git add nd-shell.css nd-banner.css
           if git diff --cached --quiet; then
             echo 'No changes to commit.'
             exit 0
           fi
-          git commit -m 'Fix homepage background leaking onto inner pages'
+          git commit -m 'Fix Discovery page lower section styling'
           git pull --rebase origin main
           git push origin HEAD:main
