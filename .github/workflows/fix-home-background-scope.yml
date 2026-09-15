@@ -1,0 +1,52 @@
+name: Fix homepage background scope
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-home-background-scope.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scope homepage visual refresh to homepage hero only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('nd-shell.css')
+          css = path.read_text()
+          old = 'body#top'
+          new = 'body#top:has(.nd-home-hero-logo)'
+
+          if new in css:
+              print('Homepage background already scoped.')
+          elif old in css:
+              css = css.replace(old, new)
+              path.write_text(css)
+              print('Scoped homepage-only styles so inner pages no longer inherit the red homepage gradient.')
+          else:
+              raise SystemExit('Expected body#top selectors were not found in nd-shell.css')
+          PY
+
+      - name: Commit fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nd-shell.css
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Fix homepage background leaking onto inner pages'
+          git pull --rebase origin main
+          git push origin HEAD:main
