@@ -185,3 +185,38 @@ body:not(#top) .header {
     height: 250px !important;
   }
 }
+
+/* Discovery lower information block */
+body:has(.about-tool) .about-tool {
+  background: #F6F1E7 !important;
+  border: 3px solid #111214 !important;
+  border-radius: 12px !important;
+  gap: 24px !important;
+  margin-top: 36px !important;
+  padding: 24px !important;
+}
+
+body:has(.about-tool) .about-tool h2 {
+  color: #111214 !important;
+}
+
+body:has(.about-tool) .about-tool p {
+  color: #66635F !important;
+  margin-bottom: 0 !important;
+}
+
+body:has(.about-tool) .library-cta {
+  color: #C7443E !important;
+}
+
+body:has(.about-tool) main {
+  padding-bottom: 28px !important;
+}
+
+@media (max-width: 760px) {
+  body:has(.about-tool) .about-tool {
+    gap: 22px !important;
+    margin-top: 30px !important;
+    padding: 20px 18px !important;
+  }
+}
