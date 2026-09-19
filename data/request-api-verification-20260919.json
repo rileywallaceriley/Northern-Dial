@@ -1,0 +1,319 @@
+{
+  "endpoint": "https://a10.asurahosting.com/api/station/northern_dial/requests",
+  "checked": "2026-09-19",
+  "artists": {
+    "Begonia": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Begonia",
+          "title": "Hotter Than the Sun"
+        },
+        {
+          "artist": "Begonia",
+          "title": "Juniper (Radio Edit)"
+        },
+        {
+          "artist": "Royal Canoe, Begonia",
+          "title": "Fussin'"
+        }
+      ],
+      "count": 3
+    },
+    "Beverly Glenn-Copeland": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Beverly Glenn-Copeland",
+          "title": "Ever New"
+        },
+        {
+          "artist": "Beverly Glenn-Copeland",
+          "title": "Ever New (Reworked by Bon Iver & Flock of Dimes Single Version)"
+        },
+        {
+          "artist": "Beverly Glenn-Copeland",
+          "title": "La Vita"
+        }
+      ],
+      "count": 3
+    },
+    "Peaches": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Justin Bieber/ Daniel Caesar/ Giveon",
+          "title": "Peaches"
+        },
+        {
+          "artist": "Peaches",
+          "title": "Boys Wanna Be Her"
+        },
+        {
+          "artist": "Peaches, Idles, Joe Talbot",
+          "title": "You're Alright (Pixel Grip Remix)"
+        }
+      ],
+      "count": 3
+    },
+    "Bodywash": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Bodywash",
+          "title": "Lapsang"
+        },
+        {
+          "artist": "Bodywash",
+          "title": "Reverie"
+        },
+        {
+          "artist": "Bodywash",
+          "title": "Sunspots"
+        },
+        {
+          "artist": "Bodywash",
+          "title": "Twins"
+        }
+      ],
+      "count": 4
+    },
+    "Orville Peck": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Orville Peck",
+          "title": "Already Gone"
+        },
+        {
+          "artist": "Orville Peck",
+          "title": "Dead of Night"
+        },
+        {
+          "artist": "Orville Peck/ Kylie Minogue/ Diplo",
+          "title": "Midnight Ride"
+        }
+      ],
+      "count": 3
+    },
+    "Blonde Diamond": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Blonde Diamond",
+          "title": "Easy Nothing"
+        },
+        {
+          "artist": "Blonde Diamond",
+          "title": "I'm So F*cking Happy"
+        },
+        {
+          "artist": "Blonde Diamond, Dear Rouge",
+          "title": "Love is a Shadow"
+        }
+      ],
+      "count": 3
+    },
+    "Joce Reyome": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "24. Joce Reyome",
+          "title": "Cross My Heart"
+        },
+        {
+          "artist": "Joce Reyome",
+          "title": "Grateful"
+        },
+        {
+          "artist": "Joce Reyome",
+          "title": "MR. RAIN"
+        }
+      ],
+      "count": 3
+    },
+    "Emma Worley": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Emma Worley",
+          "title": "Hardware Store in Heaven"
+        },
+        {
+          "artist": "Emma Worley",
+          "title": "Jigsaw"
+        },
+        {
+          "artist": "Emma Worley",
+          "title": "Weekend Baby"
+        }
+      ],
+      "count": 3
+    },
+    "Weatherell": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Weatherell",
+          "title": "Candy Eyes"
+        },
+        {
+          "artist": "Weatherell",
+          "title": "Something Beautiful"
+        }
+      ],
+      "count": 2
+    },
+    "Loverboy": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Loverboy",
+          "title": "Lovin' Every Minute of It"
+        },
+        {
+          "artist": "Loverboy",
+          "title": "Turn Me Loose (Album version)"
+        },
+        {
+          "artist": "Loverboy",
+          "title": "Working For The Weekend"
+        }
+      ],
+      "count": 3
+    },
+    "Roch Voisine": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Roch Voisine",
+          "title": "Hélène"
+        },
+        {
+          "artist": "Roch Voisine",
+          "title": "I'll Always Be There"
+        },
+        {
+          "artist": "Roch Voisine",
+          "title": "Tant pis"
+        }
+      ],
+      "count": 3
+    },
+    "Lucky Seeder": {
+      "ok": true,
+      "matched": false,
+      "matches": [],
+      "count": 0
+    },
+    "Michael J Foxx": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Michael J Foxx",
+          "title": "Flowers & Respect"
+        },
+        {
+          "artist": "Michael J Foxx",
+          "title": "TAHOE"
+        },
+        {
+          "artist": "Michael J Foxx, One8tea",
+          "title": "ELEVATE"
+        }
+      ],
+      "count": 3
+    },
+    "Chad Rivette": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Chad Rivette",
+          "title": "Dear Alcohol"
+        },
+        {
+          "artist": "Chad Rivette",
+          "title": "Fall Back"
+        }
+      ],
+      "count": 2
+    },
+    "Savia Ashby": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Savia Ashby",
+          "title": "but i might"
+        },
+        {
+          "artist": "Savia Ashby",
+          "title": "juiceboxx"
+        },
+        {
+          "artist": "Savia Ashby",
+          "title": "tunnelvision"
+        }
+      ],
+      "count": 3
+    },
+    "LAHDE": {
+      "ok": true,
+      "matched": true,
+      "matches": [],
+      "count": 0
+    },
+    "DXYRA": {
+      "ok": true,
+      "matched": true,
+      "matches": [],
+      "count": 0
+    },
+    "SNJ Music": {
+      "ok": true,
+      "matched": false,
+      "matches": [],
+      "count": 0
+    },
+    "BigYan Music": {
+      "ok": true,
+      "matched": false,
+      "matches": [],
+      "count": 0
+    },
+    "Lathanzia": {
+      "ok": true,
+      "matched": true,
+      "matches": [],
+      "count": 0
+    },
+    "Gord Taylor": {
+      "ok": true,
+      "matched": true,
+      "matches": [
+        {
+          "artist": "Gord Taylor",
+          "title": "A Canadian Love Letter to England"
+        },
+        {
+          "artist": "Gord Taylor",
+          "title": "Living Now"
+        }
+      ],
+      "count": 2
+    }
+  }
+}
