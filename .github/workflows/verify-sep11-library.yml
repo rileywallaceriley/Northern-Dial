@@ -1,4 +1,4 @@
-name: Verify Sept 11 request API
+name: Verify current request API
 on:
   push:
     paths:
@@ -20,8 +20,13 @@ jobs:
           import json, urllib.parse, urllib.request
           from pathlib import Path
           endpoint='https://a10.asurahosting.com/api/station/northern_dial/requests'
-          artists=['Mattmac','CG Tears','Jon McKiel','Starpainter','Hip Club Groove','LOONY','NorthSideBenji','AR Paisley','FRVRFRIDAY','TOBi']
-          out={'endpoint':endpoint,'checked':'2026-09-11','artists':{}}
+          artists=[
+              'Begonia','Beverly Glenn-Copeland','Peaches','Bodywash','Orville Peck',
+              'Blonde Diamond','Joce Reyome','Emma Worley','Weatherell','Loverboy','Roch Voisine',
+              'Lucky Seeder','Michael J Foxx','Chad Rivette','Savia Ashby','LAHDE','DXYRA',
+              'SNJ Music','BigYan Music','Lathanzia','Gord Taylor'
+          ]
+          out={'endpoint':endpoint,'checked':'2026-09-19','artists':{}}
           for artist in artists:
               url=endpoint+'?'+urllib.parse.urlencode({'searchPhrase':artist,'rowCount':100,'current':1})
               try:
@@ -29,16 +34,29 @@ jobs:
                       raw=r.read().decode('utf-8','replace')
                   try: payload=json.loads(raw)
                   except Exception: payload=raw
+                  rows = payload.get('rows',[]) if isinstance(payload,dict) else []
+                  matches=[]
+                  for item in rows if isinstance(rows,list) else []:
+                      song=item.get('song',item) if isinstance(item,dict) else {}
+                      artist_name=str(song.get('artist',''))
+                      title=str(song.get('title',''))
+                      if artist.casefold() in artist_name.casefold() or artist.casefold() in title.casefold():
+                          matches.append({'artist':artist_name,'title':title})
                   blob=json.dumps(payload,ensure_ascii=False) if not isinstance(payload,str) else payload
-                  out['artists'][artist]={'ok':True,'matched':artist.casefold() in blob.casefold(),'result':payload}
+                  out['artists'][artist]={
+                      'ok':True,
+                      'matched':artist.casefold() in blob.casefold(),
+                      'matches':matches,
+                      'count':len(matches)
+                  }
               except Exception as e:
                   out['artists'][artist]={'ok':False,'matched':False,'error':str(e)}
           Path('data').mkdir(exist_ok=True)
-          Path('data/request-api-verification-20260911.json').write_text(json.dumps(out,indent=2,ensure_ascii=False),encoding='utf-8')
+          Path('data/request-api-verification-20260919.json').write_text(json.dumps(out,indent=2,ensure_ascii=False),encoding='utf-8')
       - name: Commit verification report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/request-api-verification-20260911.json
-          git commit -m "Verify Sept 11 artists in request API" || exit 0
+          git add data/request-api-verification-20260919.json
+          git commit -m "Verify Sept 19 library updates in request API" || exit 0
           git push
