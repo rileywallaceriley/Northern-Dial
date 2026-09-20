@@ -294,9 +294,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   .card-grid > article.card:nth-child(2) .card-date,
   .card-grid > article.card:nth-child(3) .card-date,
   .card-grid > article.card:nth-child(2) .card-accent,
-  .card-grid > article.card:nth-child(3) .card-accent,
-  .card-grid > article.card:nth-child(2) .card-excerpt,
-  .card-grid > article.card:nth-child(3) .card-excerpt {
+  .card-grid > article.card:nth-child(3) .card-accent {
     display: none !important;
   }
 
@@ -315,7 +313,16 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     color: #fff !important;
     font-size: 1.5rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 28px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .card-grid > article.card:nth-child(2) .card-excerpt,
+  .card-grid > article.card:nth-child(3) .card-excerpt {
+    color: #cfcfcf !important;
+    display: block !important;
+    font-size: .98rem !important;
+    line-height: 1.5 !important;
+    margin: 0 0 24px !important;
   }
 
   .card-grid > article.card:nth-child(2) .card-link,
