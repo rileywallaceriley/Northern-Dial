@@ -234,7 +234,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   width: 100% !important;
 }
 
-/* Keep the desktop lead story in the same 16:9 editorial format as Northern Dial artwork. */
+/* Keep the desktop lead story in a square editorial format. */
 .card-grid .nd-featured-story {
   display: flex !important;
   flex-direction: column !important;
@@ -285,22 +285,17 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   .card-grid > article.card.nd-side-story:nth-of-type(2) { grid-row: 1 !important; }
   .card-grid > article.card.nd-side-story:nth-of-type(3) { grid-row: 2 !important; }
 
-  .card-grid > article.card.nd-side-story:hover,
   .card-grid > article.card.nd-side-story:hover {
     box-shadow: 0 10px 28px rgba(0,0,0,.28) !important;
     transform: translateY(-3px) !important;
   }
 
   .card-grid > article.card.nd-side-story > a:first-child,
-  .card-grid > article.card.nd-side-story > a:first-child,
   .card-grid > article.card.nd-side-story .card-date,
-  .card-grid > article.card.nd-side-story .card-date,
-  .card-grid > article.card.nd-side-story .card-accent,
   .card-grid > article.card.nd-side-story .card-accent {
     display: none !important;
   }
 
-  .card-grid > article.card.nd-side-story .card-body,
   .card-grid > article.card.nd-side-story .card-body {
     background: transparent !important;
     display: flex !important;
@@ -310,7 +305,6 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     padding: 28px 26px 26px !important;
   }
 
-  .card-grid > article.card.nd-side-story .card-title,
   .card-grid > article.card.nd-side-story .card-title {
     color: #fff !important;
     font-size: 1.5rem !important;
@@ -318,7 +312,6 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     margin-bottom: 14px !important;
   }
 
-  .card-grid > article.card.nd-side-story .card-excerpt,
   .card-grid > article.card.nd-side-story .card-excerpt {
     color: #cfcfcf !important;
     display: block !important;
@@ -327,7 +320,6 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     margin: 0 0 24px !important;
   }
 
-  .card-grid > article.card.nd-side-story .card-link,
   .card-grid > article.card.nd-side-story .card-link {
     align-self: flex-start !important;
     background: #CC3333 !important;
@@ -336,7 +328,6 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     padding: 9px 12px !important;
   }
 
-  .card-grid > article.card.nd-side-story .card-link:hover,
   .card-grid > article.card.nd-side-story .card-link:hover {
     background: #8B2323 !important;
   }
