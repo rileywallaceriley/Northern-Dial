@@ -114,6 +114,8 @@
     main { max-width:1200px; margin:0 auto; padding:56px 24px 72px; }
     .card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; align-items:stretch; }
     .card { background:#fff; border:1px solid #e0e0e0; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; align-self:stretch; grid-column:auto!important; grid-row:auto!important; min-height:0!important; height:100%!important; transition:box-shadow .25s,transform .25s; }
+    .card > a:first-child { aspect-ratio:16/9!important; display:block!important; flex:0 0 auto!important; overflow:hidden!important; width:100%!important; }
+    .card > a:first-child img { display:block!important; width:100%!important; height:100%!important; object-fit:cover!important; object-position:center!important; }
     .card:hover { box-shadow:0 8px 30px rgba(195,51,51,.4); transform:translateY(-3px); }
     .card-body { background:#fff; padding:28px 24px 24px; flex:1 1 auto; display:flex; flex-direction:column; }
     .card-date { font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#CC3333; margin-bottom:10px; }
@@ -154,7 +156,7 @@
       .mobile-menu-links .submit-link:hover,.mobile-menu-links .submit-link:focus,.mobile-menu-links li .submit-link:hover,.mobile-menu-links li .submit-link:focus { background:#8B2323 !important; color:#fff !important; }
     }
   </style>
-  <link rel="stylesheet" href="/nd-shell.css?v=20260920k">
+  <link rel="stylesheet" href="/nd-shell.css?v=20260920l">
   <link rel="stylesheet" href="/nd-banner.css?v=20260914a">
 </head>
 <body>
