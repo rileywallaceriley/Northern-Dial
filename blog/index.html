@@ -112,18 +112,18 @@
     .page-header h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,5vw,3.2rem); letter-spacing:.06em; color:#1a1a1a; margin-bottom:8px; }
     .page-header .subheading { font-family:'Roboto Condensed',sans-serif; font-size:1.05rem; color:#555; letter-spacing:.04em; }
     main { max-width:1200px; margin:0 auto; padding:56px 24px 72px; }
-    .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:32px; }
-    .card { background:#fff; border:1px solid #e0e0e0; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow .25s,transform .25s; }
-    .card.featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.85fr);border:3px solid #CC3333}.card.featured>a{display:block;min-height:100%}.card.featured>a img{height:100%!important;min-height:320px;object-fit:cover!important}.card.featured .card-body{justify-content:center}.card.featured .card-title{font-size:2rem}@media(max-width:760px){.card.featured{display:flex;grid-column:auto;grid-template-columns:none}.card.featured>a{min-height:0;height:auto;width:100%}.card.featured>a img{height:auto!important;min-height:0;width:100%!important;display:block}.card.featured .card-body{width:100%}}
+    .card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; align-items:start; }
+    .card { background:#fff; border:1px solid #e0e0e0; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; align-self:start; height:auto; transition:box-shadow .25s,transform .25s; }
     .card:hover { box-shadow:0 8px 30px rgba(195,51,51,.4); transform:translateY(-3px); }
-    .card-body { background:#fff; padding:28px 24px 24px; flex:1; display:flex; flex-direction:column; }
+    .card-body { background:#fff; padding:28px 24px 24px; flex:0 0 auto; display:flex; flex-direction:column; }
     .card-date { font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#CC3333; margin-bottom:10px; }
     .card-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:1.4rem; letter-spacing:.02em; color:#1a1a1a; margin-bottom:12px; line-height:1.2; }
-    .card-excerpt { font-size:.97rem; color:#444; line-height:1.65; flex:1; margin-bottom:20px; }
+    .card-excerpt { font-size:.97rem; color:#444; line-height:1.65; flex:0 0 auto; margin-bottom:20px; }
     .card-accent { height:3px; background:#CC3333; margin:0 -24px 20px; }
     .card-link { font-family:'Oswald',sans-serif; font-weight:700; font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; color:#CC3333; display:inline-flex; align-items:center; gap:6px; transition:gap .2s; }
     .card-link:hover { gap:10px; }
     .card-link::after { content:'→'; }
+    @media (max-width:900px) { .card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:640px) { nav ul li a { flex:1 1 33.333%; padding:12px 6px; font-size:.78rem; text-align:center; } .card-grid { grid-template-columns:1fr; } }
     .nd-modal { position:fixed; inset:0; background:rgba(0,0,0,.8); z-index:10001; display:none; align-items:center; justify-content:center; padding:20px; }
     .nd-modal.show { display:flex; }
@@ -153,7 +153,7 @@
       .mobile-menu-links .submit-link:hover,.mobile-menu-links .submit-link:focus,.mobile-menu-links li .submit-link:hover,.mobile-menu-links li .submit-link:focus { background:#8B2323 !important; color:#fff !important; }
     }
   </style>
-  <link rel="stylesheet" href="/nd-shell.css?v=20260920h">
+  <link rel="stylesheet" href="/nd-shell.css?v=20260920i">
   <link rel="stylesheet" href="/nd-banner.css?v=20260914a">
 </head>
 <body>
