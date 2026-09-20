@@ -246,7 +246,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   width: 100% !important;
 }
 .card-grid .nd-featured-story > a:first-child img {
-  aspect-ratio: 16 / 9 !important;
+  aspect-ratio: 1 / 1 !important;
   display: block !important;
   height: auto !important;
   min-height: 0 !important;
