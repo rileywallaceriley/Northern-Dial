@@ -234,6 +234,27 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   width: 100% !important;
 }
 
+/* Keep the desktop lead story in the same 16:9 editorial format as Northern Dial artwork. */
+.card-grid .nd-featured-story {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+.card-grid .nd-featured-story > a:first-child {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+.card-grid .nd-featured-story > a:first-child img {
+  aspect-ratio: 16 / 9 !important;
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+}
+
 /* Desktop blog lead: one large feature with two compact next-story cards beside it. */
 @media (min-width: 901px) {
   .card-grid {
