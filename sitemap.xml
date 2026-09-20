@@ -9404,4 +9404,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/ai-generated-music-canadian-independent-artists.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>
