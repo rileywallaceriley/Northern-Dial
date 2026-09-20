@@ -261,7 +261,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   width: 100% !important;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 769px) {
   .nd-top-stories {
     align-items: start !important;
     display: grid !important;
@@ -337,7 +337,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .nd-top-stories {
     display: block !important;
   }
