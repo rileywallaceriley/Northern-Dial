@@ -241,14 +241,15 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   overflow: hidden !important;
 }
 .card-grid .nd-featured-story > a:first-child {
+  aspect-ratio: 16 / 9 !important;
   display: block !important;
   flex: 0 0 auto !important;
+  overflow: hidden !important;
   width: 100% !important;
 }
 .card-grid .nd-featured-story > a:first-child img {
-  aspect-ratio: 1 / 1 !important;
   display: block !important;
-  height: auto !important;
+  height: 100% !important;
   min-height: 0 !important;
   object-fit: cover !important;
   object-position: center !important;
@@ -269,7 +270,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   }
 
   .card-grid .nd-featured-story .card-body {
-    flex: 1 1 auto !important;
+    flex: 0 0 auto !important;
   }
 
   .card-grid > article.card.nd-side-story {
