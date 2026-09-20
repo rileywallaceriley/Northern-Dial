@@ -1,4 +1,4 @@
-const VERSION = 'v4';
+const VERSION = 'v5';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -19,7 +19,8 @@ const LIVE_HOSTS = new Set([
   'a10.asurahosting.com'
 ]);
 
-const STATIC_EXTENSIONS = /\.(?:css|js|woff2?|ttf|otf)$/i;
+const CSS_EXTENSIONS = /\.css$/i;
+const STATIC_EXTENSIONS = /\.(?:js|woff2?|ttf|otf)$/i;
 const IMAGE_EXTENSIONS = /\.(?:png|jpe?g|gif|webp|avif|svg)$/i;
 
 self.addEventListener('install', event => {
@@ -46,11 +47,11 @@ self.addEventListener('activate', event => {
   );
 });
 
-async function networkFirst(request, cacheName) {
+async function networkFirst(request, cacheName, fetchOptions = {}) {
   const cache = await caches.open(cacheName);
 
   try {
-    const response = await fetch(request);
+    const response = await fetch(request, fetchOptions);
     if (response && response.ok) {
       cache.put(request, response.clone());
     }
@@ -101,8 +102,19 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(
-      networkFirst(request, PAGE_CACHE)
+      networkFirst(request, PAGE_CACHE, { cache: 'no-store' })
+        .catch(() => caches.match(request))
         .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  // CSS changes are frequent while the site is actively developed.
+  // Always check the network first so old layout rules do not reappear.
+  if (CSS_EXTENSIONS.test(url.pathname)) {
+    event.respondWith(
+      networkFirst(request, STATIC_CACHE, { cache: 'no-store' })
+        .catch(() => caches.match(request))
     );
     return;
   }
