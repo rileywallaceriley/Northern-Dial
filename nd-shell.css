@@ -234,7 +234,7 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
   width: 100% !important;
 }
 
-/* Keep the desktop lead story in a square editorial format. */
+/* Keep the desktop lead story in a 16:9 editorial format. */
 .card-grid .nd-featured-story {
   display: flex !important;
   flex-direction: column !important;
@@ -259,12 +259,13 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
 @media (min-width: 901px) {
   .card-grid {
     grid-auto-flow: dense !important;
+    align-items: start !important;
   }
 
   .card-grid .nd-featured-story {
     grid-column: span 2 !important;
-    grid-row: span 2 !important;
-    align-self: stretch !important;
+    grid-row: span 1 !important;
+    align-self: start !important;
   }
 
   .card-grid .nd-featured-story .card-body {
@@ -277,7 +278,9 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     border-top: 5px solid #CC3333 !important;
     box-shadow: 0 7px 22px rgba(0,0,0,.18) !important;
     grid-column: 3 !important;
+    align-self: start !important;
     min-height: 0 !important;
+    height: auto !important;
     position: relative !important;
     transition: transform .22s ease, box-shadow .22s ease !important;
   }
@@ -300,24 +303,25 @@ a[href="/blog/m-is-for-montreal-part-1.html"]:visited .card-title {
     background: transparent !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    min-height: 100% !important;
-    padding: 28px 26px 26px !important;
+    justify-content: flex-start !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 24px 22px 22px !important;
   }
 
   .card-grid > article.card.nd-side-story .card-title {
     color: #fff !important;
-    font-size: 1.5rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
   }
 
   .card-grid > article.card.nd-side-story .card-excerpt {
     color: #cfcfcf !important;
     display: block !important;
-    font-size: .98rem !important;
-    line-height: 1.5 !important;
-    margin: 0 0 24px !important;
+    font-size: .96rem !important;
+    line-height: 1.45 !important;
+    margin: 0 0 16px !important;
   }
 
   .card-grid > article.card.nd-side-story .card-link {
