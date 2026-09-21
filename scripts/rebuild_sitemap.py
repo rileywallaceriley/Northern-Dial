@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Trigger sitemap refresh for recent blog posts (2026-09-21)
 from pathlib import Path
 import re
 from xml.sax.saxutils import escape
