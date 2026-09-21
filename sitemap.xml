@@ -621,6 +621,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/blonde-diamond.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/blooom.html</loc>
     <priority>0.7</priority>
   </url>
@@ -1129,6 +1133,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/deadly-alfano.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/deadmau5.html</loc>
     <priority>0.7</priority>
   </url>
@@ -1386,6 +1394,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/emma-beko.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/emma-worley.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -1993,6 +2005,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/joce-reyome.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/jocelyn-alice.html</loc>
     <priority>0.7</priority>
   </url>
@@ -2570,6 +2586,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/love-inc.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/loverboy.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -3177,6 +3197,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/orville-peck.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/ose.html</loc>
     <priority>0.7</priority>
   </url>
@@ -3486,6 +3510,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/robin-banks.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/roch-voisine.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -4009,6 +4037,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/sunny.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/sunshine-makers.html</loc>
     <priority>0.7</priority>
   </url>
@@ -4517,6 +4549,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/weatherell.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/webster.html</loc>
     <priority>0.7</priority>
   </url>
@@ -4669,11 +4705,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/2026-polaris-music-prize-short-list-guide.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/ai-generated-music-canadian-independent-artists.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/canadian-songwriters-hall-of-fame-2026.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/enola-bedard.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/five-canadian-artists-northern-dial.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/francophone-hip-hop-canada-2026.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -4722,6 +4774,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/mattmac-smoke-signals.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/new-canadian-music-september-18-2026.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -5994,6 +6050,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/fr/artists/econoline-crush.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/edouard-tremblay-grenier.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8957,6 +9017,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/fr/artists/tome.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/fr/artists/tona.html</loc>
     <priority>0.7</priority>
   </url>
@@ -9014,6 +9078,242 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/fr/artists/twotwo.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/tyler-shaw.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/ubad.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/uncle-fester.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/unotopic.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/uss.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vadell-gabriel.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/valaire.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vandalizm.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vbnd.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vermeil.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vibi.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/victoria-duffield.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/victoria-staff.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/victory.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vilaxxs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vince-maria.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vincent-khouni.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/virginia-to-vegas.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vita-chambers.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vlxl.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/vt.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/walk-off-the-earth.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wave-montega.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/webster.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wendy-macisaac.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/western-motel.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/whipped-cream.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/white-b.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/why-g.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wide-mouth-mason.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wild-strawberries.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/william-dinero.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/william-prince.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wintersleep.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wio-k.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/witch-prophet.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wizdome-bunitall.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wolf-castle.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wolfy-lights.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wondagurl.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/wordburglar.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/x2fromtheciv.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/xentury.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/xpress-aka-djxp.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/yanchan-produced.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/yessirxd.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/yoko-gold.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/young-don-million.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/young-smugglaz.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/young-stitch.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/yukon-blonde.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/yves-jarvis.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zach-zoya.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zargo.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zayo.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zeds-dead.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zeina.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zig-mentality.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/zinera.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -9083,355 +9383,5 @@
   <url>
     <loc>https://www.northerndial.ca/survey.html</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/tome.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/tyler-shaw.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/ubad.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/uncle-fester.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/unotopic.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/uss.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vadell-gabriel.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/valaire.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vandalizm.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vbnd.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vermeil.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vibi.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/victoria-duffield.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/victoria-staff.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/victory.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vilaxxs.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vince-maria.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vincent-khouni.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/virginia-to-vegas.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vita-chambers.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vlxl.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/vt.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/walk-off-the-earth.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wave-montega.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/webster.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wendy-macisaac.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/western-motel.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/whipped-cream.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/white-b.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/why-g.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wide-mouth-mason.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wild-strawberries.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/william-dinero.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/william-prince.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wintersleep.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wio-k.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wio-k.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/witch-prophet.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wizdome-bunitall.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wolf-castle.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wolfy-lights.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wondagurl.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/wordburglar.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/x2fromtheciv.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/xentury.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/xpress-aka-djxp.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/yanchan-produced.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/yessirxd.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/yoko-gold.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/young-don-million.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/edouard-tremblay-grenier.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/young-smugglaz.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/young-stitch.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/yukon-blonde.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/yves-jarvis.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zach-zoya.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zargo.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zayo.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zeds-dead.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zeina.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zig-mentality.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/zinera.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/deadly-alfano.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/sunny.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/ai-generated-music-canadian-independent-artists.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/canadian-songwriters-hall-of-fame-2026.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/loverboy.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/roch-voisine.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/francophone-hip-hop-canada-2026.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
   </url>
 </urlset>
