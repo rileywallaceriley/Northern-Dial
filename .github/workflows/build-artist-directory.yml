@@ -171,7 +171,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add artists.html artists/ listening-paths.html listening-paths/ sitemap.xml artist_directory_integrity_audit.json
+          git add artists.html artists/ library_artists.txt listening-paths.html listening-paths/ sitemap.xml artist_directory_integrity_audit.json
           if git diff --cached --quiet; then
             echo 'No artist page or Listening Path changes to commit.'
             exit 0
