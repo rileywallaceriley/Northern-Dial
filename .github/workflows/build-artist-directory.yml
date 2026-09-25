@@ -192,3 +192,5 @@ jobs:
           exit 1
 
 # Scheduled link-batch trigger: 2026-09-08 18:21 ET
+
+# Live catalogue refresh: 2026-09-25
