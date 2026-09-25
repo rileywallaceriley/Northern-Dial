@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'bulk_profile_enricher.py'
+      - 'library_artists.txt'
       - '.github/workflows/bulk-artist-enrichment.yml'
   workflow_dispatch:
 
