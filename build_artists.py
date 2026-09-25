@@ -200,54 +200,48 @@ def render_artist_links(profile):
 
 
 def render_profile(artist, tracks, profile):
-    slug = slugify(artist)
+    """Render one directory accordion in the current artists.html contract.
+
+    Profile/bio UI is reconciled in the next build step by
+    patch_directory_enrichment.py. Keeping this base output deliberately simple
+    lets live catalogue rebuilds add new artists without breaking the profile
+    integrity tooling.
+    """
     title = escape(artist)
     count = len(tracks)
-    reviewed = bool(profile.get("reviewed"))
-    bio = profile.get("bio") if reviewed else None
-    location = profile.get("location") if reviewed else None
-    album_titles = {track.get("album") for track in tracks if track.get("album")}
-
+    search_artist = escape(artist.casefold(), quote=True)
     lines = [
-        f'<article class="artist-card" id="artist-{slug}" data-artist="{escape(artist, quote=True)}">',
-        '  <details class="artist-details">',
-        f'    <summary><span class="artist-name">{title}</span> <span class="track-count">({count} track{"s" if count != 1 else ""})</span></summary>',
-        '    <div class="artist-body">',
+        f'<details data-search="{search_artist}">',
+        f'  <summary>{title} <span class="artist-meta">({count} track{"s" if count != 1 else ""})</span></summary>',
     ]
-    if bio:
-        lines.append(f'      <p class="artist-bio">{render_editorial_text(bio, album_titles)}</p>')
-    if location:
-        lines.append(f'      <p class="artist-location">{escape(str(location))}</p>')
-    links = render_artist_links(profile)
-    if links:
-        lines.append("      " + links)
-    sources = render_source_links(profile.get("sources") or [])
-    if sources:
-        lines.append("      " + sources)
-    if reviewed:
-        profile_url = f"/artists/{slug}.html"
-        lines.append(f'      <p class="artist-profile-link"><a href="{profile_url}">View Full Profile</a></p>')
 
-    lines.append('      <div class="artist-track-list">')
-    for track in sorted(tracks, key=lambda item: item["title"].casefold()):
-        request_id = track.get("request_id")
-        if request_id:
-            request_url = f"/?request_id={quote(str(request_id))}"
-            request = f'<a class="request-track" href="{request_url}">Request this artist</a>'
-        else:
-            request = ""
+    preview_tracks = sorted(tracks, key=lambda item: item["title"].casefold())[:3]
+    for track in preview_tracks:
+        request_url = f'./index.html?request={quote(artist)}'
+        search_text = " ".join(
+            [artist, track.get("title", ""), track.get("album", "")]
+        ).casefold()
         lines.extend(
             [
-                '        <div class="artist-track">',
-                f'          <span class="track-title">{escape(track["title"])}</span>',
-                f'          <span class="track-album">{escape(track["album"])}</span>',
-                (f"          {request}" if request else ""),
-                "        </div>",
+                f'  <div class="track" data-search="{escape(search_text, quote=True)}">',
+                '    <div>',
+                f'      <div class="track-title">{escape(track["title"])}</div>',
+                f'      <div class="track-album">{escape(track["album"])}</div>',
+                '    </div>',
+                f'    <a class="request-link" href="{request_url}">Request this artist</a>',
+                '  </div>',
             ]
         )
-    lines.extend(['      </div>', '    </div>', '  </details>', '</article>'])
-    return "\n".join(line for line in lines if line != "")
 
+    hidden = max(0, count - len(preview_tracks))
+    if hidden:
+        lines.append(
+            f'  <div class="track-overflow-note" aria-label="{hidden} additional tracks in rotation">'
+            f'+{hidden} more track{"s" if hidden != 1 else ""} in rotation</div>'
+        )
+
+    lines.append('</details>')
+    return "\n".join(lines)
 
 def replace_between(text, start_marker, end_marker, replacement):
     start = text.index(start_marker) + len(start_marker)
