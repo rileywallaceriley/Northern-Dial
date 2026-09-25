@@ -1,0 +1,149 @@
+name: Audit recent AzuraCast uploads
+
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-recent-uploads.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch recent media from AzuraCast
+        env:
+          AZURACAST_API_KEY: ${{ secrets.AZURACAST_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import datetime as dt
+          import json
+          import os
+          import urllib.request
+
+          key = os.environ.get('AZURACAST_API_KEY', '').strip()
+          if not key:
+              raise SystemExit('AZURACAST_API_KEY secret is missing')
+
+          url = 'https://a10.asurahosting.com/api/station/491/files'
+          req = urllib.request.Request(
+              url,
+              headers={
+                  'Authorization': f'Bearer {key}',
+                  'Accept': 'application/json',
+                  'User-Agent': 'Northern-Dial-audit/1.0',
+              },
+          )
+          with urllib.request.urlopen(req, timeout=60) as resp:
+              payload = json.load(resp)
+
+          if isinstance(payload, list):
+              rows = payload
+          elif isinstance(payload, dict):
+              rows = payload.get('rows') or payload.get('data') or payload.get('files') or []
+          else:
+              rows = []
+
+          def parse_ts(item):
+              for field in ('mtime', 'modified_at', 'created_at', 'uploaded_at', 'last_modified'):
+                  value = item.get(field)
+                  if value in (None, ''):
+                      continue
+                  if isinstance(value, (int, float)):
+                      x = float(value)
+                      if x > 10_000_000_000:
+                          x /= 1000.0
+                      try:
+                          return dt.datetime.fromtimestamp(x, dt.timezone.utc), field, value
+                      except Exception:
+                          pass
+                  if isinstance(value, str):
+                      s = value.strip().replace('Z', '+00:00')
+                      try:
+                          parsed = dt.datetime.fromisoformat(s)
+                          if parsed.tzinfo is None:
+                              parsed = parsed.replace(tzinfo=dt.timezone.utc)
+                          return parsed.astimezone(dt.timezone.utc), field, value
+                      except Exception:
+                          pass
+              return None, None, None
+
+          now = dt.datetime.now(dt.timezone.utc)
+          cutoff = now - dt.timedelta(hours=48)
+          normalized = []
+          for item in rows:
+              if not isinstance(item, dict):
+                  continue
+              stamp, stamp_field, stamp_raw = parse_ts(item)
+              artist = item.get('artist')
+              title = item.get('title')
+              album = item.get('album')
+              path = item.get('path') or item.get('file') or item.get('filename')
+              # Some AzuraCast versions nest song metadata.
+              song = item.get('song') if isinstance(item.get('song'), dict) else {}
+              artist = artist or song.get('artist')
+              title = title or song.get('title')
+              album = album or song.get('album')
+              normalized.append({
+                  'id': item.get('id'),
+                  'unique_id': item.get('unique_id'),
+                  'path': path,
+                  'artist': artist,
+                  'title': title,
+                  'album': album,
+                  'timestamp_utc': stamp.isoformat() if stamp else None,
+                  'timestamp_field': stamp_field,
+                  'timestamp_raw': stamp_raw,
+              })
+
+          dated = [x for x in normalized if x['timestamp_utc']]
+          recent = [
+              x for x in dated
+              if dt.datetime.fromisoformat(x['timestamp_utc']) >= cutoff
+          ]
+          recent.sort(key=lambda x: x['timestamp_utc'], reverse=True)
+
+          # Fallback / sanity view: highest numeric IDs are usually newest imports.
+          def id_num(x):
+              try:
+                  return int(x['id'])
+              except Exception:
+                  return -1
+          newest_by_id = sorted(normalized, key=id_num, reverse=True)[:250]
+
+          report = {
+              'checked_at_utc': now.isoformat(),
+              'endpoint': url,
+              'total_records_returned': len(rows),
+              'records_with_timestamp': len(dated),
+              'recent_48h_count': len(recent),
+              'recent_48h': recent[:500],
+              'newest_by_id': newest_by_id,
+              'sample_keys': sorted(rows[0].keys()) if rows and isinstance(rows[0], dict) else [],
+          }
+          Path('data').mkdir(exist_ok=True)
+          Path('data/recent-media-uploads-audit.json').write_text(
+              json.dumps(report, indent=2, ensure_ascii=False) + '\n',
+              encoding='utf-8',
+          )
+          print(json.dumps({
+              'total_records_returned': report['total_records_returned'],
+              'records_with_timestamp': report['records_with_timestamp'],
+              'recent_48h_count': report['recent_48h_count'],
+              'sample_keys': report['sample_keys'],
+          }, indent=2))
+          PY
+
+      - name: Commit upload audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/recent-media-uploads-audit.json
+          git commit -m "Audit recent AzuraCast uploads" || exit 0
+          git pull --rebase origin main
+          git push
