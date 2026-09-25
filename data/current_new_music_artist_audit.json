@@ -1,0 +1,2760 @@
+{
+  "checked_at_utc": "2026-09-25T14:59:57.184073+00:00",
+  "live_catalogue_rows": 4398,
+  "live_artist_count": 1224,
+  "baseline_artist_count": 1995,
+  "new_artist_count": 194,
+  "new_artists": [
+    {
+      "artist": "06",
+      "slug": "06",
+      "track_count": 1,
+      "tracks": [
+        "Pour In Out"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "1000joules",
+      "slug": "1000joules",
+      "track_count": 1,
+      "tracks": [
+        "Back In Town"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "11:11",
+      "slug": "11-11",
+      "track_count": 1,
+      "tracks": [
+        "Listen"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "11:30",
+      "slug": "11-30",
+      "track_count": 1,
+      "tracks": [
+        "Olé Olé (Les Déesses Oubliées)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "54*40",
+      "slug": "54-40",
+      "track_count": 3,
+      "tracks": [
+        "Casual Viewin'",
+        "She-La",
+        "Since When"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "6ODEM3",
+      "slug": "6odem3",
+      "track_count": 1,
+      "tracks": [
+        "SEXES"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "80 Empire",
+      "slug": "80-empire",
+      "track_count": 2,
+      "tracks": [
+        "Love Alibi",
+        "Love Alibi (The Extended Love Mi)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "8485",
+      "slug": "8485",
+      "track_count": 1,
+      "tracks": [
+        "Buzzbands"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "86",
+      "slug": "86",
+      "track_count": 1,
+      "tracks": [
+        "Can't Leave Alone (feat. Avenoir & Maz B)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "A Girl Named Sue",
+      "slug": "a-girl-named-sue",
+      "track_count": 1,
+      "tracks": [
+        "Ma Chance"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "A$h Da Hunter",
+      "slug": "a-h-da-hunter",
+      "track_count": 1,
+      "tracks": [
+        "Goonies Never Die"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ada Lea",
+      "slug": "ada-lea",
+      "track_count": 2,
+      "tracks": [
+        "copycat",
+        "the evergreen, the birch"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "AHSIA",
+      "slug": "ahsia",
+      "track_count": 1,
+      "tracks": [
+        "SO NICE"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Amber Days",
+      "slug": "amber-days",
+      "track_count": 1,
+      "tracks": [
+        "Present Tense"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "ambre",
+      "slug": "ambre",
+      "track_count": 1,
+      "tracks": [
+        "The Call (feat. Ambré)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Amel Larrieux",
+      "slug": "amel-larrieux",
+      "track_count": 2,
+      "tracks": [
+        "What's Come Over Me? (Radio Edit aka 'Main Version')",
+        "Where Is the Love (feat. Glenn Lewis & Amel Larrieux)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "angello",
+      "slug": "angello",
+      "track_count": 1,
+      "tracks": [
+        "Leave The World Behind (Radio Edit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ankur Sinha",
+      "slug": "ankur-sinha",
+      "track_count": 1,
+      "tracks": [
+        "Talize"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Aswell",
+      "slug": "aswell",
+      "track_count": 1,
+      "tracks": [
+        "Mon baby"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ava Ro",
+      "slug": "ava-ro",
+      "track_count": 1,
+      "tracks": [
+        "road trip"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Avery Jane",
+      "slug": "avery-jane",
+      "track_count": 1,
+      "tracks": [
+        "Chips"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Axwell",
+      "slug": "axwell",
+      "track_count": 1,
+      "tracks": [
+        "Leave The World Behind (Radio Edit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Batya Belle",
+      "slug": "batya-belle",
+      "track_count": 1,
+      "tracks": [
+        "IT BETTER BE YOU"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Begonia",
+      "slug": "begonia",
+      "track_count": 3,
+      "tracks": [
+        "Fussin'",
+        "Hotter Than the Sun",
+        "Juniper (Radio Edit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Beverly Glenn-Copeland",
+      "slug": "beverly-glenn-copeland",
+      "track_count": 3,
+      "tracks": [
+        "Ever New",
+        "Ever New (Reworked by Bon Iver & Flock of Dimes Single Version)",
+        "La Vita"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Big K.R.I.T.",
+      "slug": "big-k-r-i-t",
+      "track_count": 1,
+      "tracks": [
+        "If I Fall (Album Version Explicit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Bigz",
+      "slug": "bigz",
+      "track_count": 1,
+      "tracks": [
+        "Bad Girl (Remix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Black Ken",
+      "slug": "black-ken",
+      "track_count": 1,
+      "tracks": [
+        "HOSTAGE"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Black Thought",
+      "slug": "black-thought",
+      "track_count": 1,
+      "tracks": [
+        "Send Me A Sign"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Black Violin",
+      "slug": "black-violin",
+      "track_count": 1,
+      "tracks": [
+        "Send Me A Sign"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Blonde Diamond",
+      "slug": "blonde-diamond",
+      "track_count": 3,
+      "tracks": [
+        "Easy Nothing",
+        "I'm So F*cking Happy",
+        "Love is a Shadow"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Bodywash",
+      "slug": "bodywash",
+      "track_count": 4,
+      "tracks": [
+        "Lapsang",
+        "Reverie",
+        "Sunspots",
+        "Twins"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Brady Watt",
+      "slug": "brady-watt",
+      "track_count": 2,
+      "tracks": [
+        "Natural (Bass & Bars Edition)",
+        "Natural (feat. Melanie Fiona)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Buckshot",
+      "slug": "buckshot",
+      "track_count": 1,
+      "tracks": [
+        "Past*Present*Future"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "CG Tears",
+      "slug": "cg-tears",
+      "track_count": 1,
+      "tracks": [
+        "Breezy Cell"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Chad Rivette",
+      "slug": "chad-rivette",
+      "track_count": 2,
+      "tracks": [
+        "Dear Alcohol",
+        "Fall Back"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Cherrykim",
+      "slug": "cherrykim",
+      "track_count": 1,
+      "tracks": [
+        "Breathe"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Chico",
+      "slug": "chico",
+      "track_count": 1,
+      "tracks": [
+        "No Volvere (Teach Him) (feat. Melanie Fiona)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Chris Hadfield",
+      "slug": "chris-hadfield",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "City and Colour",
+      "slug": "city-and-colour",
+      "track_count": 56,
+      "tracks": [
+        "A Little Mercy",
+        "After The Impossible",
+        "Ain't It Kinda Funny (feat. City and Colour)",
+        "Body in a Box",
+        "Casey's Song",
+        "Comin' Home",
+        "Day Old Hate",
+        "Difficult Love",
+        "Empty-Handed (feat. City and Colour)",
+        "Fragile Bird",
+        "Fucked It Up",
+        "Harder Than Stone",
+        "Hello, I'm In Delaware",
+        "If I Should Go Before You",
+        "Like Knives",
+        "Little Hell",
+        "Living in Lightning",
+        "Lover Come Back",
+        "Meant to Be",
+        "Mizzy C",
+        "Mountain of Madness",
+        "NAVIGATE (FEAT. CITY AND COLOUR)",
+        "Northern Blues",
+        "Northern Wind",
+        "Nutshell",
+        "Of Space and Time",
+        "Rain",
+        "Rain When I Die",
+        "Runaway",
+        "Save Your Scissors",
+        "Sleeping Sickness",
+        "Strangers",
+        "The Death of Me",
+        "The Girl",
+        "The Grand Optimist",
+        "The Lonely Life",
+        "The Love Still Held Me Near",
+        "Things We Choose to Care About",
+        "Thirst",
+        "Two Coins",
+        "Un-Thinkable",
+        "Underground",
+        "Vicious Circle (feat. City and Colour)",
+        "Waiting",
+        "Wasted Love",
+        "We Found Each Other in the Dark",
+        "Weightless",
+        "What Makes a Man?",
+        "Young Lovers"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "Cj Cruicks",
+      "slug": "cj-cruicks",
+      "track_count": 1,
+      "tracks": [
+        "Say What U Mean"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Colin Léo",
+      "slug": "colin-leo",
+      "track_count": 1,
+      "tracks": [
+        "Mêmes habitudes"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Common",
+      "slug": "common",
+      "track_count": 1,
+      "tracks": [
+        "Wake up Everybody"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Costy",
+      "slug": "costy",
+      "track_count": 1,
+      "tracks": [
+        "Piss Excellence"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Cris Cab",
+      "slug": "cris-cab",
+      "track_count": 1,
+      "tracks": [
+        "Turn You On"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Cus",
+      "slug": "cus",
+      "track_count": 1,
+      "tracks": [
+        "Bang Bang"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "D.O.",
+      "slug": "d-o",
+      "track_count": 1,
+      "tracks": [
+        "Get Down Right"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Dakota Bear – Dakota Bear",
+      "slug": "dakota-bear-dakota-bear",
+      "track_count": 1,
+      "tracks": [
+        "12-22 Freestyle (Dir-@ByKehiyo)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "DaMasta",
+      "slug": "damasta",
+      "track_count": 1,
+      "tracks": [
+        "Faded"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Dan Hill",
+      "slug": "dan-hill",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Dan Romer",
+      "slug": "dan-romer",
+      "track_count": 1,
+      "tracks": [
+        "Midnight Train to Georgia"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "David Strickland",
+      "slug": "david-strickland",
+      "track_count": 1,
+      "tracks": [
+        "Beastmode"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "De La Soul",
+      "slug": "de-la-soul",
+      "track_count": 1,
+      "tracks": [
+        "Am I Worth You?"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Deadin Dogyears",
+      "slug": "deadin-dogyears",
+      "track_count": 1,
+      "tracks": [
+        "YUL//LGA"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Deadly Alfano",
+      "slug": "deadly-alfano",
+      "track_count": 1,
+      "tracks": [
+        "Shelter"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Diamond X",
+      "slug": "diamond-x",
+      "track_count": 1,
+      "tracks": [
+        "Murda Style (feat. Madlocks, Diamond X & Infinite)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Donny Anderson",
+      "slug": "donny-anderson",
+      "track_count": 1,
+      "tracks": [
+        "Lovin' You"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Eleanor McCain",
+      "slug": "eleanor-mccain",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ellis",
+      "slug": "ellis",
+      "track_count": 1,
+      "tracks": [
+        "all that i've got"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Emma Worley",
+      "slug": "emma-worley",
+      "track_count": 3,
+      "tracks": [
+        "Hardware Store in Heaven",
+        "Jigsaw",
+        "Weekend Baby"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Enola Bedard",
+      "slug": "enola-bedard",
+      "track_count": 1,
+      "tracks": [
+        "Unavez"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Eric Bellinger",
+      "slug": "eric-bellinger",
+      "track_count": 1,
+      "tracks": [
+        "New Oldie (The Global Edition)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Eric Benét",
+      "slug": "eric-benet",
+      "track_count": 1,
+      "tracks": [
+        "Me & Mine"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Eric Roberson",
+      "slug": "eric-roberson",
+      "track_count": 1,
+      "tracks": [
+        "Superman"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Etobicoke School of the Arts Choir",
+      "slug": "etobicoke-school-of-the-arts-choir",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Fabolous",
+      "slug": "fabolous",
+      "track_count": 1,
+      "tracks": [
+        "Into You (feat. Tamia) (Main Mix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "farewell tomorrow",
+      "slug": "farewell-tomorrow",
+      "track_count": 1,
+      "tracks": [
+        "PAYSTUBBBZ (feat. farewell, tomorrow)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Fingazz",
+      "slug": "fingazz",
+      "track_count": 1,
+      "tracks": [
+        "Digital Love"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Foxy Brown",
+      "slug": "foxy-brown",
+      "track_count": 1,
+      "tracks": [
+        "Does He Love Me (feat. Foxy Brown)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "giuliano palma  the bluebeaters",
+      "slug": "giuliano-palma-the-bluebeaters",
+      "track_count": 1,
+      "tracks": [
+        "nuvole rosa"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "gliiico",
+      "slug": "gliiico",
+      "track_count": 1,
+      "tracks": [
+        "Don't Eat Don't Sleep"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Godflow",
+      "slug": "godflow",
+      "track_count": 1,
+      "tracks": [
+        "Pissed"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Gord Taylor",
+      "slug": "gord-taylor",
+      "track_count": 2,
+      "tracks": [
+        "A Canadian Love Letter to England",
+        "Living Now"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Grace of Arc",
+      "slug": "grace-of-arc",
+      "track_count": 1,
+      "tracks": [
+        "La fin"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "Gyptian",
+      "slug": "gyptian",
+      "track_count": 1,
+      "tracks": [
+        "One More Time"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "HALO",
+      "slug": "halo",
+      "track_count": 1,
+      "tracks": [
+        "i'm so lucky"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Hip Club Groove",
+      "slug": "hip-club-groove",
+      "track_count": 1,
+      "tracks": [
+        "Dead Words"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Idles",
+      "slug": "idles",
+      "track_count": 1,
+      "tracks": [
+        "You're Alright (Pixel Grip Remix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Illy",
+      "slug": "illy",
+      "track_count": 1,
+      "tracks": [
+        "Bang Bang"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "ingrosso",
+      "slug": "ingrosso",
+      "track_count": 1,
+      "tracks": [
+        "Leave The World Behind (Radio Edit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ish",
+      "slug": "ish",
+      "track_count": 1,
+      "tracks": [
+        "No Regrets (Remix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "J.Lately",
+      "slug": "j-lately",
+      "track_count": 2,
+      "tracks": [
+        "At Last",
+        "Bad on My Own"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "jackson knox",
+      "slug": "jackson-knox",
+      "track_count": 1,
+      "tracks": [
+        "Be Somebody"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jah Cure",
+      "slug": "jah-cure",
+      "track_count": 1,
+      "tracks": [
+        "Work It Out (feat. Melanie Fiona)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jasmin Castillo",
+      "slug": "jasmin-castillo",
+      "track_count": 2,
+      "tracks": [
+        "keep it to myself",
+        "nice to know ya"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jeff Bradshaw",
+      "slug": "jeff-bradshaw",
+      "track_count": 2,
+      "tracks": [
+        "Beyond the Stars",
+        "Superwoman 1"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jemini The Gifted One",
+      "slug": "jemini-the-gifted-one",
+      "track_count": 1,
+      "tracks": [
+        "All You Need ( Remaster 2024)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jerumi",
+      "slug": "jerumi",
+      "track_count": 1,
+      "tracks": [
+        "bird of mine"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Joanne Perica",
+      "slug": "joanne-perica",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Joce Reyome",
+      "slug": "joce-reyome",
+      "track_count": 3,
+      "tracks": [
+        "Cross My Heart",
+        "Grateful",
+        "MR. RAIN"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Joe Talbot",
+      "slug": "joe-talbot",
+      "track_count": 1,
+      "tracks": [
+        "You're Alright (Pixel Grip Remix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "John Legend",
+      "slug": "john-legend",
+      "track_count": 2,
+      "tracks": [
+        "L.O.V.E.",
+        "Wake up Everybody"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "John McDermott",
+      "slug": "john-mcdermott",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Jon McKiel",
+      "slug": "jon-mckiel",
+      "track_count": 3,
+      "tracks": [
+        "For Shadow",
+        "Guru",
+        "Stinging Reflection"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Karaba",
+      "slug": "karaba",
+      "track_count": 1,
+      "tracks": [
+        "LMHYS"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ken Presse",
+      "slug": "ken-presse",
+      "track_count": 1,
+      "tracks": [
+        "Say Goodbye"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Kennedy",
+      "slug": "kennedy",
+      "track_count": 1,
+      "tracks": [
+        "somethingsdontsitright"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "KMNI",
+      "slug": "kmni",
+      "track_count": 1,
+      "tracks": [
+        "LMHYS"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Knowuh",
+      "slug": "knowuh",
+      "track_count": 1,
+      "tracks": [
+        "Rhythm & Flow"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Kylie Minogue",
+      "slug": "kylie-minogue",
+      "track_count": 1,
+      "tracks": [
+        "Midnight Ride"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Kylo",
+      "slug": "kylo",
+      "track_count": 1,
+      "tracks": [
+        "Nimble"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "laidba",
+      "slug": "laidba",
+      "track_count": 1,
+      "tracks": [
+        "Leave The World Behind (Radio Edit)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Liona Boyd",
+      "slug": "liona-boyd",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Lockimara",
+      "slug": "lockimara",
+      "track_count": 2,
+      "tracks": [
+        "Only Moon",
+        "Tastes Like"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Lola Brooke",
+      "slug": "lola-brooke",
+      "track_count": 2,
+      "tracks": [
+        "Love It Here",
+        "Love It Here (feat. Lola Brooke)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Love Inc.; Simone Denny",
+      "slug": "love-inc-simone-denny",
+      "track_count": 1,
+      "tracks": [
+        "Broken Bones (City Of Love - Radio Mix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Loverboy",
+      "slug": "loverboy",
+      "track_count": 3,
+      "tracks": [
+        "Lovin' Every Minute of It",
+        "Turn Me Loose (Album version)",
+        "Working For The Weekend"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Luvinya",
+      "slug": "luvinya",
+      "track_count": 1,
+      "tracks": [
+        "Breathe"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Lähde",
+      "slug": "lahde",
+      "track_count": 2,
+      "tracks": [
+        "Ilẹ̀ ti yá",
+        "Your Love (Fallin')"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "M-Deezy",
+      "slug": "m-deezy",
+      "track_count": 1,
+      "tracks": [
+        "Bang Bang"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mali",
+      "slug": "mali",
+      "track_count": 1,
+      "tracks": [
+        "On Wid Da Show (Original) ft. Saukrates, Jaden & Mali"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Maliibu Miitch",
+      "slug": "maliibu-miitch",
+      "track_count": 2,
+      "tracks": [
+        "Dangerous",
+        "Dangerous (feat. Maliibu Miitch)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Malko",
+      "slug": "malko",
+      "track_count": 1,
+      "tracks": [
+        "ONE TOUCH"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Maria Aragon",
+      "slug": "maria-aragon",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mark Masri",
+      "slug": "mark-masri",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mattmac",
+      "slug": "mattmac",
+      "track_count": 3,
+      "tracks": [
+        "Faded",
+        "I Remember When",
+        "Right Back Home"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Meggo",
+      "slug": "meggo",
+      "track_count": 1,
+      "tracks": [
+        "the evergreen, the birch"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Michael J Foxx",
+      "slug": "michael-j-foxx",
+      "track_count": 3,
+      "tracks": [
+        "ELEVATE",
+        "Flowers & Respect",
+        "TAHOE"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Michael Savona",
+      "slug": "michael-savona",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Michel Bérurbé",
+      "slug": "michel-berurbe",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mista Bourne",
+      "slug": "mista-bourne",
+      "track_count": 1,
+      "tracks": [
+        "Bang Bang"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Monsune",
+      "slug": "monsune",
+      "track_count": 1,
+      "tracks": [
+        "Sure"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mouna Tahar",
+      "slug": "mouna-tahar",
+      "track_count": 1,
+      "tracks": [
+        "Cameraman"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Mr.Cheeks",
+      "slug": "mr-cheeks",
+      "track_count": 1,
+      "tracks": [
+        "I Apologize"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Naledge",
+      "slug": "naledge",
+      "track_count": 1,
+      "tracks": [
+        "Past*Present*Future"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Naomi",
+      "slug": "naomi",
+      "track_count": 1,
+      "tracks": [
+        "Hershey Kiss"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Nicole Holness Aka X-quisite",
+      "slug": "nicole-holness-aka-x-quisite",
+      "track_count": 2,
+      "tracks": [
+        "Epic",
+        "Pop Yo Bottles"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Odum Abekah",
+      "slug": "odum-abekah",
+      "track_count": 1,
+      "tracks": [
+        "Favourite Type"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Offer Nissim",
+      "slug": "offer-nissim",
+      "track_count": 3,
+      "tracks": [
+        "Everybody Dance (Show Mix)",
+        "My Air",
+        "Summer Of Love"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Olivia Penalva",
+      "slug": "olivia-penalva",
+      "track_count": 1,
+      "tracks": [
+        "Distance Makes a Love Story"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "One8tea",
+      "slug": "one8tea",
+      "track_count": 1,
+      "tracks": [
+        "ELEVATE"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Orville Peck",
+      "slug": "orville-peck",
+      "track_count": 3,
+      "tracks": [
+        "Already Gone",
+        "Dead of Night",
+        "Midnight Ride"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Paradi$e",
+      "slug": "paradi-e",
+      "track_count": 1,
+      "tracks": [
+        "Same Old Games"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Parkside",
+      "slug": "parkside",
+      "track_count": 1,
+      "tracks": [
+        "Summer Knights"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Peaches",
+      "slug": "peaches",
+      "track_count": 2,
+      "tracks": [
+        "Boys Wanna Be Her",
+        "You're Alright (Pixel Grip Remix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "playingwithfire",
+      "slug": "playingwithfire",
+      "track_count": 1,
+      "tracks": [
+        "Erased"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "Pooky G",
+      "slug": "pooky-g",
+      "track_count": 1,
+      "tracks": [
+        "Beastmode"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "QuestionATL",
+      "slug": "questionatl",
+      "track_count": 2,
+      "tracks": [
+        "Faded",
+        "I Remember When"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rain 910",
+      "slug": "rain-910",
+      "track_count": 1,
+      "tracks": [
+        "Kiss It Goodbye (Interlude) [feat. Rain 910]"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rajan",
+      "slug": "rajan",
+      "track_count": 1,
+      "tracks": [
+        "Take Me Under"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Randy Bachman",
+      "slug": "randy-bachman",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Richard Margison",
+      "slug": "richard-margison",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Robert",
+      "slug": "robert",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Roch Voisine",
+      "slug": "roch-voisine",
+      "track_count": 3,
+      "tracks": [
+        "Hélène",
+        "I'll Always Be There",
+        "Tant pis"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Ron Korb",
+      "slug": "ron-korb",
+      "track_count": 1,
+      "tracks": [
+        "Canada My Canada"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rory",
+      "slug": "rory",
+      "track_count": 1,
+      "tracks": [
+        "Not Me (feat. RAAHiiM and Shantel May)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rosabell",
+      "slug": "rosabell",
+      "track_count": 1,
+      "tracks": [
+        "Flowers"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rosie and the Riveters",
+      "slug": "rosie-and-the-riveters",
+      "track_count": 1,
+      "tracks": [
+        "Let 'em Talk"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rowena Fysx",
+      "slug": "rowena-fysx",
+      "track_count": 1,
+      "tracks": [
+        "Alright, alright"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Royal Canoe",
+      "slug": "royal-canoe",
+      "track_count": 1,
+      "tracks": [
+        "Fussin'"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Rubben Studdard",
+      "slug": "rubben-studdard",
+      "track_count": 1,
+      "tracks": [
+        "Magkasuyo Buong Gabi"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Sadat X",
+      "slug": "sadat-x",
+      "track_count": 2,
+      "tracks": [
+        "See You On the Weekend",
+        "Sometimes (feat. DJ Jab, Sadat X, A.G., Reef the Lost Cause, Eternia, Everlast, Immortal Technique, Slug, Sha Stimuli, Grand Puba,"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Saint Kay",
+      "slug": "saint-kay",
+      "track_count": 1,
+      "tracks": [
+        "SCARLETT"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Savia Ashby",
+      "slug": "savia-ashby",
+      "track_count": 3,
+      "tracks": [
+        "but i might",
+        "juiceboxx",
+        "tunnelvision"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Shaggy",
+      "slug": "shaggy",
+      "track_count": 1,
+      "tracks": [
+        "Turn You On"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Sister Ray",
+      "slug": "sister-ray",
+      "track_count": 1,
+      "tracks": [
+        "Planet News"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "skrta",
+      "slug": "skrta",
+      "track_count": 1,
+      "tracks": [
+        "Eye to Eye"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "SLM",
+      "slug": "slm",
+      "track_count": 1,
+      "tracks": [
+        "Hershey Kiss"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Stanley Clarke",
+      "slug": "stanley-clarke",
+      "track_count": 1,
+      "tracks": [
+        "Where Is the Love (feat. Glenn Lewis & Amel Larrieux)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Starpainter",
+      "slug": "starpainter",
+      "track_count": 2,
+      "tracks": [
+        "Cayenne Flowerbed",
+        "I Found a River"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Stephen Marley",
+      "slug": "stephen-marley",
+      "track_count": 1,
+      "tracks": [
+        "No Cigarette Smoking (In My Room)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "SUCKERPUNCH!",
+      "slug": "suckerpunch",
+      "track_count": 1,
+      "tracks": [
+        "RICH!"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "Sunny",
+      "slug": "sunny",
+      "track_count": 1,
+      "tracks": [
+        "Te Quiero"
+      ],
+      "in_directory": false,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Suuncaat",
+      "slug": "suuncaat",
+      "track_count": 1,
+      "tracks": [
+        "work"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Swaine",
+      "slug": "swaine",
+      "track_count": 1,
+      "tracks": [
+        "PAYSTUBBBZ (feat. farewell, tomorrow)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Talib Kweli",
+      "slug": "talib-kweli",
+      "track_count": 1,
+      "tracks": [
+        "Ready Set Go"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tariiiq",
+      "slug": "tariiiq",
+      "track_count": 1,
+      "tracks": [
+        "CELLY"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "TEAL",
+      "slug": "teal",
+      "track_count": 1,
+      "tracks": [
+        "Love Comes Thru"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tegan and Sara",
+      "slug": "tegan-and-sara",
+      "track_count": 57,
+      "tracks": [
+        "Alligator",
+        "Back in Your Head",
+        "Body Work",
+        "Boyfriend",
+        "BWU",
+        "Call It Off",
+        "Closer",
+        "Cloud 9",
+        "Don't Confess",
+        "Don't Find Another Love",
+        "Drove Me Wild",
+        "Dying to Know",
+        "Everything Is AWESOME!!! (feat. The Lonely Island)",
+        "F*****g Up What Matters",
+        "Faint of Heart",
+        "Fix You Up",
+        "Goodbye, Goodbye",
+        "Hard To Hold",
+        "Hell",
+        "Hop a Plane",
+        "How Come You Don't Want Me",
+        "I Can't Grow Up",
+        "I Couldn't Be Your Friend",
+        "I Know I Know I Know",
+        "I Was a Fool",
+        "I Won't Be Left",
+        "I'll Be Back Someday",
+        "I'm Not Your Hero",
+        "Living Room",
+        "Monday Monday Monday",
+        "My Number",
+        "Nineteen",
+        "Northshore",
+        "Not Tonight",
+        "Right On Time",
+        "Smoking Weed Alone",
+        "Soil, Soil",
+        "Stop Desire",
+        "Teenage Tears",
+        "The Con",
+        "The Cure",
+        "The Ocean",
+        "U-turn",
+        "Walking with a Ghost",
+        "Where Does the Good Go",
+        "Whole Lot of Heart",
+        "Yellow",
+        "You Wouldn't like Me"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "The Bankes Brothers",
+      "slug": "the-bankes-brothers",
+      "track_count": 1,
+      "tracks": [
+        "Risk It All"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "The Gypsies",
+      "slug": "the-gypsies",
+      "track_count": 1,
+      "tracks": [
+        "No Volvere (Teach Him) (feat. Melanie Fiona)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "THE WIZ Cast",
+      "slug": "the-wiz-cast",
+      "track_count": 1,
+      "tracks": [
+        "He's The Wizard"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Thelonious",
+      "slug": "thelonious",
+      "track_count": 1,
+      "tracks": [
+        "LiveFromTheBoonies."
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "tinchy stryder",
+      "slug": "tinchy-stryder",
+      "track_count": 1,
+      "tracks": [
+        "let it rain"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tinywiings",
+      "slug": "tinywiings",
+      "track_count": 1,
+      "tracks": [
+        "My Price"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tone Stith",
+      "slug": "tone-stith",
+      "track_count": 2,
+      "tracks": [
+        "5 Minutes"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tony Moran",
+      "slug": "tony-moran",
+      "track_count": 1,
+      "tracks": [
+        "Everybody Dance (Offer Nissim Mix)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Troy Laureta",
+      "slug": "troy-laureta",
+      "track_count": 1,
+      "tracks": [
+        "Magkasuyo Buong Gabi"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Trudy",
+      "slug": "trudy",
+      "track_count": 1,
+      "tracks": [
+        "seen enough"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Tylor Wauneka",
+      "slug": "tylor-wauneka",
+      "track_count": 1,
+      "tracks": [
+        "Goonies Never Die"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Unknown Artist",
+      "slug": "unknown-artist",
+      "track_count": 6,
+      "tracks": [
+        "Champagne Campaign",
+        "DXYRA – Bad Habit",
+        "DXYRA – Bad Idea",
+        "DXYRA – Wherever You Are",
+        "On My Own",
+        "What's Come Over Me? (Radio Edit aka 'Main Version')"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Wave Montega",
+      "slug": "wave-montega",
+      "track_count": 1,
+      "tracks": [
+        "Pissed"
+      ],
+      "in_directory": true,
+      "has_source_bio": true,
+      "has_profile_file": true,
+      "directory_has_profile_link": true
+    },
+    {
+      "artist": "Weatherell",
+      "slug": "weatherell",
+      "track_count": 2,
+      "tracks": [
+        "Candy Eyes",
+        "Something Beautiful"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": true,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Westside Gunn",
+      "slug": "westside-gunn",
+      "track_count": 2,
+      "tracks": [
+        "Until I Say So (feat. Westside Gunn)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Whitney Houston",
+      "slug": "whitney-houston",
+      "track_count": 1,
+      "tracks": [
+        "Same Script, Different Cast"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Who's Lara?",
+      "slug": "who-s-lara",
+      "track_count": 1,
+      "tracks": [
+        "Want You"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Wrekonize",
+      "slug": "wrekonize",
+      "track_count": 1,
+      "tracks": [
+        "At Last"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "X-Quisite",
+      "slug": "x-quisite",
+      "track_count": 18,
+      "tracks": [
+        "Bad Girl",
+        "Bad Girl (Remix)",
+        "Best Friends",
+        "Colors",
+        "Don't Say",
+        "Don't' Say (Slow Jam Remix)",
+        "Ex-Girlfriend",
+        "Foolio",
+        "How We Swing",
+        "No Regrets",
+        "No Regrets (Dance Remix)",
+        "No Regrets (Remix)",
+        "Sassy Thang",
+        "Showing Love",
+        "Through The Week",
+        "Who's The Man",
+        "Why You Do"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "X.E.L.",
+      "slug": "x-e-l",
+      "track_count": 1,
+      "tracks": [
+        "So Alone (feat. X.E.L. & Jugga)"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Yaego",
+      "slug": "yaego",
+      "track_count": 1,
+      "tracks": [
+        "Eye to Eye"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Young Rose",
+      "slug": "young-rose",
+      "track_count": 1,
+      "tracks": [
+        "SCARLETT"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Young Sid",
+      "slug": "young-sid",
+      "track_count": 1,
+      "tracks": [
+        "Here Then Gone"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Zehd",
+      "slug": "zehd",
+      "track_count": 1,
+      "tracks": [
+        "copacabana"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    },
+    {
+      "artist": "Zoë",
+      "slug": "zoe",
+      "track_count": 1,
+      "tracks": [
+        "Best Friends"
+      ],
+      "in_directory": false,
+      "has_source_bio": false,
+      "has_profile_file": false,
+      "directory_has_profile_link": false
+    }
+  ],
+  "new_missing_directory_count": 183,
+  "new_missing_profile_count": 168,
+  "new_missing_bio_count": 174,
+  "global_missing_directory_count": 250,
+  "global_missing_directory": [
+    "$enor$uplex",
+    "06",
+    "1000joules",
+    "11:11",
+    "11:30",
+    "54*40",
+    "5cottay",
+    "6ODEM3",
+    "80 Empire",
+    "86",
+    "A$h Da Hunter",
+    "Ackerly",
+    "AHSIA",
+    "Alex Metcalf",
+    "Amar Chaka Collective",
+    "ambre",
+    "Amel Larrieux",
+    "angello",
+    "Ankur Sinha",
+    "Asect",
+    "Aswell",
+    "Ava Ro",
+    "Avery Jane",
+    "Axwell",
+    "Baby Doll",
+    "Batya Belle",
+    "Begonia",
+    "Beverly Glenn-Copeland",
+    "Big K.R.I.T.",
+    "Bigz",
+    "Black Ken",
+    "Black Thought",
+    "Black Violin",
+    "Blaze",
+    "Blitz Equip",
+    "Blonde Diamond",
+    "Bodywash",
+    "Bone",
+    "Brady Watt",
+    "Buckshot",
+    "Candy Man",
+    "Carpe DM",
+    "Central Park",
+    "CG Tears",
+    "Chad Rivette",
+    "Charlie",
+    "Cherrykim",
+    "Chico",
+    "chorote",
+    "Chris Hadfield",
+    "Cincinnati",
+    "Cj Cruicks",
+    "Clover",
+    "Coeur de pirate",
+    "Colin Léo",
+    "Common",
+    "Costy",
+    "Cris Cab",
+    "CUBE",
+    "Cus",
+    "D.O.",
+    "Dakota Bear – Dakota Bear",
+    "DaMasta",
+    "Dan Hill",
+    "Dan Romer",
+    "Dandy Trix",
+    "David Strickland",
+    "De La Soul",
+    "Deadin Dogyears",
+    "Deadly Alfano",
+    "Desire",
+    "Diamond X",
+    "Dj Precyce",
+    "DJ Sojah",
+    "DnD",
+    "Donny Anderson",
+    "Down",
+    "Eleanor McCain",
+    "Ellis",
+    "Emma Worley",
+    "Enola Bedard",
+    "Eric Bellinger",
+    "Eric Benét",
+    "Eric Roberson",
+    "Ether",
+    "Etobicoke School of the Arts Choir",
+    "Fabolous",
+    "farewell tomorrow",
+    "Fingazz",
+    "Finn",
+    "flo",
+    "Foxy Brown",
+    "Frank",
+    "Freedom Choir",
+    "Gift",
+    "giuliano palma  the bluebeaters",
+    "GL Rari",
+    "gliiico",
+    "Godflow",
+    "Gord Taylor",
+    "Gordon",
+    "Graham",
+    "Gus",
+    "Gyptian",
+    "HALO",
+    "Hip Club Groove",
+    "Idles",
+    "Illy",
+    "Indica",
+    "ingrosso",
+    "Ish",
+    "J.Lately",
+    "jackson knox",
+    "Jah Cure",
+    "Jasmin Castillo",
+    "Jeff Bradshaw",
+    "Jemini The Gifted One",
+    "Jerumi",
+    "Joanne Perica",
+    "Joce Reyome",
+    "Joe Talbot",
+    "John Legend",
+    "John McDermott",
+    "Jon McKiel",
+    "Jugga",
+    "Karaba",
+    "Ken Presse",
+    "Kennedy",
+    "Killa",
+    "KMNI",
+    "Knowledge",
+    "Knowuh",
+    "Kylie Minogue",
+    "Kylo",
+    "laidba",
+    "Latisha Brown",
+    "Leod",
+    "Liona Boyd",
+    "Lockimara",
+    "Lola Brooke",
+    "Love Inc.; Simone Denny",
+    "Loverboy",
+    "Luvinya",
+    "Lähde",
+    "M-Deezy",
+    "Makeda",
+    "Mali",
+    "Maliibu Miitch",
+    "Malko",
+    "Manny",
+    "Maria Aragon",
+    "Mark Masri",
+    "Mattmac",
+    "Meggo",
+    "Michael J Foxx",
+    "Michael Savona",
+    "Michel Bérurbé",
+    "Milk",
+    "Mista Bourne",
+    "Monsune",
+    "Mouna Tahar",
+    "Mr.Cheeks",
+    "Ms. Davis",
+    "Mulan",
+    "Naledge",
+    "Naomi",
+    "Nicole Holness Aka X-quisite",
+    "Nikki",
+    "NITAP",
+    "Nvrth",
+    "Nyce",
+    "OB",
+    "Odum Abekah",
+    "Offer Nissim",
+    "Olivia Penalva",
+    "One Hope",
+    "One8tea",
+    "Orville Peck",
+    "Paradi$e",
+    "Parkside",
+    "Peaches",
+    "Philipe",
+    "Pooky G",
+    "QuestionATL",
+    "Rain 910",
+    "Rajan",
+    "Randy Bachman",
+    "RAYIAN",
+    "Rich",
+    "Richard Margison",
+    "RL",
+    "Robert",
+    "Roch Voisine",
+    "Ron Korb",
+    "Rory",
+    "Rosabell",
+    "Rose Duke",
+    "Rosie and the Riveters",
+    "Rowena Fysx",
+    "Royal Canoe",
+    "Rubben Studdard",
+    "Sabre",
+    "Sadat X",
+    "Saint Kay",
+    "Samantha",
+    "Savia Ashby",
+    "Serenade",
+    "Shaggy",
+    "Singing Diva",
+    "Sister Ray",
+    "skrta",
+    "SLM",
+    "Smokey",
+    "Stanley Clarke",
+    "Starpainter",
+    "Stephen Marley",
+    "Sunny",
+    "Susanna Lopez",
+    "Suuncaat",
+    "Swaine",
+    "taji love.",
+    "Talib Kweli",
+    "TEAL",
+    "The Bankes Brothers",
+    "The Gypsies",
+    "The Heist",
+    "THE WIZ Cast",
+    "Thelonious",
+    "tinchy stryder",
+    "Tinywiings",
+    "Tone Stith",
+    "Tony Moran",
+    "Troy Laureta",
+    "Trudy",
+    "Tylor Wauneka",
+    "Unknown Artist",
+    "Weatherell",
+    "Westside Gunn",
+    "Whitney Houston",
+    "Who's Lara?",
+    "Wrekonize",
+    "X-Quisite",
+    "X.E.L.",
+    "X10Land",
+    "Yaego",
+    "Young Rose",
+    "Young Sid",
+    "Zack",
+    "Zehd",
+    "Zoë"
+  ]
+}
