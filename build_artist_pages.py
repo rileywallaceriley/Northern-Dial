@@ -105,7 +105,30 @@ def render_page(name, profile, enrichment):
     album_titles = enrichment.get("album_titles", [])
     website = profile.get("website") or enrichment.get("website") or ""
     instagram = profile.get("instagram") or enrichment.get("instagram") or ""
-    feature = profile.get("feature") or ""
+    feature_items = []
+    for source in (profile, enrichment):
+        legacy_feature = source.get("feature") or ""
+        if legacy_feature:
+            feature_items.append({"href": legacy_feature, "label": "Northern Dial Feature"})
+        features = source.get("features") or []
+        if isinstance(features, str):
+            features = [features]
+        for item in features:
+            if isinstance(item, str) and item:
+                feature_items.append({"href": item, "label": "Northern Dial Feature"})
+            elif isinstance(item, dict) and item.get("href"):
+                feature_items.append({
+                    "href": item["href"],
+                    "label": item.get("label") or "Northern Dial Feature",
+                })
+    deduped_features = []
+    seen_feature_hrefs = set()
+    for item in feature_items:
+        href = str(item["href"]).strip()
+        if not href or href in seen_feature_hrefs:
+            continue
+        seen_feature_hrefs.add(href)
+        deduped_features.append({"href": href, "label": str(item["label"]).strip() or "Northern Dial Feature"})
     city = enrichment.get("city") or ""
     country = enrichment.get("country") or ""
     sources = [url for url in enrichment.get("sources", []) if url]
@@ -146,8 +169,10 @@ def render_page(name, profile, enrichment):
         links.append(f'<a class="link-chip" href="{escape(website, quote=True)}" target="_blank" rel="noopener">Official Site</a>')
     if instagram:
         links.append(f'<a class="link-chip" href="{escape(instagram, quote=True)}" target="_blank" rel="noopener">Instagram</a>')
-    if feature:
-        links.append(f'<a class="link-chip" href="../{escape(feature.lstrip("./"), quote=True)}">Northern Dial Feature</a>')
+    for feature_item in deduped_features:
+        href = escape(feature_item["href"].lstrip("./"), quote=True)
+        label = escape(feature_item["label"])
+        links.append(f'<a class="link-chip" href="../{href}">{label}</a>')
     if enrichment.get("musicbrainz_artist_id"):
         mbid = escape(enrichment["musicbrainz_artist_id"], quote=True)
         links.append(f'<a class="link-chip" href="https://musicbrainz.org/artist/{mbid}" target="_blank" rel="noopener">MusicBrainz</a>')
