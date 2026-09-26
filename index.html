@@ -420,6 +420,42 @@ body {
     box-shadow: 0 0 30px rgba(195, 51, 51, 0.8);
 }
 
+.artist-profile-btn {
+    align-items: center;
+    background: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    color: #1a1a1a;
+    display: inline-flex;
+    font-size: 0.9rem;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.artist-profile-btn[hidden] {
+    display: none !important;
+}
+
+.artist-profile-btn:hover,
+.artist-profile-btn:focus {
+    background: #C33;
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(195, 51, 51, 0.55);
+}
+
+.artist-profile-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
 .visualizer-btn.playing {
     animation: pulse 2s ease infinite;
 }
@@ -1119,6 +1155,9 @@ body {
                 <span style="margin-right: 8px;">🎵</span>
                 Visualizer
             </button>
+            <a class="artist-profile-btn" id="artistProfileBtn" href="./artists.html" hidden>
+                Meet the Artist →
+            </a>
         </div>
     </div>
     <audio id="radioStream" preload="none">
@@ -1566,6 +1605,73 @@ body {
     const statusText = document.getElementById('statusText');
     const songTitle = document.getElementById('songTitle');
     const artistName = document.getElementById('artistName');
+    const artistProfileBtn = document.getElementById('artistProfileBtn');
+
+    let artistProfileLookupPromise = null;
+    let artistProfileRequestId = 0;
+
+    function normalizeArtistLookupName(value) {
+        return String(value || '')
+            .normalize('NFKD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[’‘]/g, "'")
+            .replace(/\s+/g, ' ')
+            .trim()
+            .toLocaleLowerCase('en-CA');
+    }
+
+    function getPrimaryArtist(value) {
+        const artist = String(value || '').trim();
+        if (!artist) return '';
+        return artist
+            .split(/\s+(?:feat\.?|ft\.?|featuring)\s+|,\s*/i)[0]
+            .trim();
+    }
+
+    async function loadArtistProfileLookup() {
+        if (!artistProfileLookupPromise) {
+            artistProfileLookupPromise = fetch('/artist-profile-index.json', { cache: 'no-cache' })
+                .then(response => {
+                    if (!response.ok) throw new Error('Artist profile index unavailable');
+                    return response.json();
+                })
+                .then(index => {
+                    const lookup = new Map();
+                    Object.entries(index || {}).forEach(([name, url]) => {
+                        lookup.set(normalizeArtistLookupName(name), url);
+                    });
+                    return lookup;
+                })
+                .catch(error => {
+                    console.log('Error loading artist profile index:', error);
+                    return new Map();
+                });
+        }
+        return artistProfileLookupPromise;
+    }
+
+    async function updateArtistProfileLink(artist) {
+        if (!artistProfileBtn) return;
+
+        const requestId = ++artistProfileRequestId;
+        artistProfileBtn.hidden = true;
+        artistProfileBtn.removeAttribute('aria-label');
+
+        const lookup = await loadArtistProfileLookup();
+        if (requestId !== artistProfileRequestId) return;
+
+        const fullArtist = String(artist || '').trim();
+        const primaryArtist = getPrimaryArtist(fullArtist);
+        const profileUrl =
+            lookup.get(normalizeArtistLookupName(fullArtist)) ||
+            lookup.get(normalizeArtistLookupName(primaryArtist));
+
+        if (!profileUrl) return;
+
+        artistProfileBtn.href = profileUrl;
+        artistProfileBtn.setAttribute('aria-label', `Meet ${primaryArtist || fullArtist} on Northern Dial`);
+        artistProfileBtn.hidden = false;
+    }
 
     audio.volume = 0.7;
 
@@ -1608,6 +1714,7 @@ body {
                 const artist = song.artist || 'Unknown Artist';
                 songTitle.textContent = title;
                 artistName.textContent = artist;
+                updateArtistProfileLink(artist);
                 updateMediaSession(title, artist);
             }
         } catch (error) {
