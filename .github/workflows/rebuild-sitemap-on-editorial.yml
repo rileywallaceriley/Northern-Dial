@@ -1,0 +1,40 @@
+name: Rebuild Sitemap on Editorial
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'blog/**.html'
+      - 'scripts/rebuild_sitemap.py'
+      - '.github/workflows/rebuild-sitemap-on-editorial.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Rebuild sitemap
+        run: python scripts/rebuild_sitemap.py
+      - name: Commit sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No sitemap changes to commit"
+          else
+            git commit -m "Rebuild sitemap for editorial"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
