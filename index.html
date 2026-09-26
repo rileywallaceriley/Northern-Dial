@@ -1644,6 +1644,7 @@ body {
                 })
                 .catch(error => {
                     console.log('Error loading artist profile index:', error);
+                    artistProfileLookupPromise = null;
                     return new Map();
                 });
         }
