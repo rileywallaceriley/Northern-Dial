@@ -20,6 +20,7 @@ ENRICHMENT_FILE = Path("artist_enrichment.json")
 ENRICHMENT_BATCH_DIR = Path("artist_enrichment_batches")
 ARTIST_DIR = Path("artists")
 SITEMAP_FILE = Path("sitemap.xml")
+PROFILE_INDEX_FILE = Path("artist-profile-index.json")
 LOGO_URL = "https://i.imgur.com/XIAPd0N.png"
 
 
@@ -296,6 +297,7 @@ def main():
     enrichments = load_enrichments()
     ARTIST_DIR.mkdir(parents=True, exist_ok=True)
     slugs = set()
+    profile_index = {}
 
     names = sorted(set(profiles) | set(enrichments))
     for key in names:
@@ -309,9 +311,14 @@ def main():
         slug = slugify(name)
         (ARTIST_DIR / f"{slug}.html").write_text(render_page(name, profile, enrichment), encoding="utf-8")
         slugs.add(slug)
+        profile_index[name] = f"/artists/{slug}.html"
 
+    PROFILE_INDEX_FILE.write_text(
+        json.dumps(dict(sorted(profile_index.items(), key=lambda item: item[0].casefold())), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     update_sitemap(slugs)
-    print(f"Built {len(slugs)} artist profile pages.")
+    print(f"Built {len(slugs)} artist profile pages and refreshed {PROFILE_INDEX_FILE}.")
 
 
 if __name__ == "__main__":
