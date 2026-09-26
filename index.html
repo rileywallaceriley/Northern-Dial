@@ -1624,7 +1624,7 @@ body {
         const artist = String(value || '').trim();
         if (!artist) return '';
         return artist
-            .split(/\s+(?:feat\.?|ft\.?|featuring)\s+|,\s*/i)[0]
+            .split(/\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
             .trim();
     }
 
@@ -1644,6 +1644,7 @@ body {
                 })
                 .catch(error => {
                     console.log('Error loading artist profile index:', error);
+                    artistProfileLookupPromise = null;
                     return new Map();
                 });
         }
