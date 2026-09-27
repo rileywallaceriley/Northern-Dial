@@ -629,6 +629,387 @@
     document.head.appendChild(script);
   }
 
+
+  /* ND_PERSISTENT_PLAYER_START */
+  function initPersistentPlayer() {
+    // The parent document owns the live stream. Framed pages keep their normal
+    // page scripts and styling, but never create a second persistent player.
+    if (window.self !== window.top) return;
+    if (document.querySelector('[data-nd-persistent-player]')) return;
+
+    const streamUrl = 'https://a10.asurahosting.com:7220/radio.mp3';
+    const nowPlayingUrl = 'https://a10.asurahosting.com/api/nowplaying/northern_dial';
+    const initialUrl = window.location.href;
+    const initialTitle = document.title;
+    const hadHomepagePlayer = Boolean(document.getElementById('radioStream'));
+
+    const player = document.createElement('div');
+    player.className = 'nd-mini-player';
+    player.dataset.ndPersistentPlayer = 'true';
+    player.setAttribute('role', 'region');
+    player.setAttribute('aria-label', isFrench ? 'Lecteur radio Northern Dial' : 'Northern Dial radio player');
+    player.innerHTML = [
+      '<div class="nd-mini-player-inner">',
+        '<button class="nd-mini-play" type="button" aria-label="Play Northern Dial"><span aria-hidden="true">▶</span></button>',
+        '<div class="nd-mini-copy">',
+          '<div class="nd-mini-status"><span class="nd-mini-live-dot" aria-hidden="true"></span><span class="nd-mini-status-text">Northern Dial · Ready</span></div>',
+          '<div class="nd-mini-track">Northern Dial Radio</div>',
+          '<div class="nd-mini-artist">All Killer, All CanCon</div>',
+        '</div>',
+        '<a class="nd-mini-profile" href="/artists.html" hidden>Meet the Artist</a>',
+      '</div>'
+    ].join('');
+
+    let audio = document.getElementById('radioStream');
+    if (!audio) {
+      audio = document.createElement('audio');
+      audio.id = 'ndPersistentAudio';
+      audio.preload = 'none';
+      audio.src = streamUrl;
+      audio.volume = 0.7;
+    }
+    audio.classList.add('nd-persistent-audio');
+    player.appendChild(audio);
+    document.body.appendChild(player);
+
+    const playButton = player.querySelector('.nd-mini-play');
+    const playIcon = playButton.querySelector('span');
+    const statusText = player.querySelector('.nd-mini-status-text');
+    const trackText = player.querySelector('.nd-mini-track');
+    const artistText = player.querySelector('.nd-mini-artist');
+    const profileLink = player.querySelector('.nd-mini-profile');
+
+    let artistLookupPromise = null;
+    let currentArtistKey = '';
+    let initialPage = null;
+    let frame = null;
+    let homeObserver = null;
+    let shellMode = false;
+    let expectedFrameUrl = '';
+
+    function setPlayerHeight() {
+      const height = Math.ceil(player.getBoundingClientRect().height || 76);
+      document.documentElement.style.setProperty('--nd-player-height', height + 'px');
+    }
+    setPlayerHeight();
+    if ('ResizeObserver' in window) {
+      const observer = new ResizeObserver(setPlayerHeight);
+      observer.observe(player);
+    } else {
+      window.addEventListener('resize', setPlayerHeight, { passive: true });
+    }
+
+    function setMiniVisible(visible) {
+      player.classList.toggle('nd-mini-visible', Boolean(visible));
+      if (!isHomepage) document.body.classList.add('nd-has-mini-player');
+    }
+
+    if (isHomepage && hadHomepagePlayer) {
+      const homepagePlayer = document.querySelector('.player-section');
+      if (homepagePlayer && 'IntersectionObserver' in window) {
+        homeObserver = new IntersectionObserver(([entry]) => {
+          if (!shellMode) setMiniVisible(!entry.isIntersecting);
+        }, { threshold: 0 });
+        homeObserver.observe(homepagePlayer);
+      }
+    } else {
+      setMiniVisible(true);
+    }
+
+    function renderPlaybackState() {
+      const playing = !audio.paused && !audio.ended;
+      playButton.classList.toggle('playing', playing);
+      playButton.setAttribute('aria-label', playing ? 'Pause Northern Dial' : 'Play Northern Dial');
+      playIcon.textContent = playing ? '❚❚' : '▶';
+      statusText.textContent = playing ? 'Northern Dial · Live' : 'Northern Dial · Paused';
+      player.classList.toggle('is-playing', playing);
+    }
+
+    async function loadArtistLookup() {
+      if (!artistLookupPromise) {
+        artistLookupPromise = fetch('/artist-profile-index.json', { cache: 'no-cache' })
+          .then((response) => response.ok ? response.json() : {})
+          .catch(() => ({}));
+      }
+      return artistLookupPromise;
+    }
+
+    function normalizeArtist(value) {
+      return String(value || '')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[’‘]/g, "'")
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLocaleLowerCase('en-CA');
+    }
+
+    function primaryArtist(value) {
+      return String(value || '')
+        .split(/\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
+        .trim();
+    }
+
+    async function updateProfileLink(artist) {
+      const key = normalizeArtist(artist);
+      if (!key || key === currentArtistKey) return;
+      currentArtistKey = key;
+      profileLink.hidden = true;
+
+      const lookup = await loadArtistLookup();
+      const primary = primaryArtist(artist);
+      const href = lookup[artist] ||
+        lookup[primary] ||
+        Object.entries(lookup).find(([name]) => normalizeArtist(name) === key)?.[1] ||
+        Object.entries(lookup).find(([name]) => normalizeArtist(name) === normalizeArtist(primary))?.[1];
+
+      if (!href) return;
+      profileLink.href = href;
+      profileLink.textContent = isFrench ? "Voir l'artiste" : 'Meet the Artist';
+      profileLink.setAttribute('aria-label', 'Meet ' + (primary || artist) + ' on Northern Dial');
+      profileLink.hidden = false;
+    }
+
+    function updateMediaSession(title, artist) {
+      if (!('mediaSession' in navigator) || typeof MediaMetadata === 'undefined') return;
+      try {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: title || 'Northern Dial Radio',
+          artist: artist || 'All Killer, All CanCon',
+          album: 'Northern Dial Radio',
+          artwork: [{ src: LOGO, sizes: '512x512', type: 'image/png' }]
+        });
+        navigator.mediaSession.setActionHandler('play', () => audio.play());
+        navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+      } catch (_) {}
+    }
+
+    async function refreshNowPlaying() {
+      try {
+        const response = await fetch(nowPlayingUrl, { cache: 'no-store' });
+        if (!response.ok) return;
+        const data = await response.json();
+        const song = data && data.now_playing && data.now_playing.song;
+        if (!song) return;
+        const title = song.title || 'Unknown Track';
+        const artist = song.artist || 'Unknown Artist';
+        trackText.textContent = title;
+        artistText.textContent = artist;
+        updateProfileLink(artist);
+        updateMediaSession(title, artist);
+      } catch (_) {}
+    }
+
+    playButton.addEventListener('click', async () => {
+      try {
+        if (audio.paused) await audio.play();
+        else audio.pause();
+      } catch (_) {
+        statusText.textContent = 'Northern Dial · Tap again to play';
+      }
+      renderPlaybackState();
+    });
+
+    audio.addEventListener('playing', renderPlaybackState);
+    audio.addEventListener('pause', renderPlaybackState);
+    audio.addEventListener('ended', renderPlaybackState);
+    audio.addEventListener('error', () => {
+      statusText.textContent = 'Northern Dial · Connection error';
+      renderPlaybackState();
+    });
+
+    renderPlaybackState();
+    refreshNowPlaying();
+    window.setInterval(refreshNowPlaying, 10000);
+
+    function isModifiedClick(event) {
+      return event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+    }
+
+    function linkUrl(anchor, baseHref) {
+      if (!anchor || !anchor.getAttribute('href')) return null;
+      if (anchor.hasAttribute('download')) return null;
+      const target = (anchor.getAttribute('target') || '').toLowerCase();
+      if (target && target !== '_self') return null;
+
+      let url;
+      try {
+        url = new URL(anchor.getAttribute('href'), baseHref || window.location.href);
+      } catch (_) {
+        return null;
+      }
+
+      if (url.origin !== window.location.origin) return null;
+      if (!/^https?:$/.test(url.protocol)) return null;
+      if (/\.(?:pdf|zip|mp3|m4a|wav|flac|jpg|jpeg|png|gif|webp|svg|json|xml)$/i.test(url.pathname)) return null;
+      return url;
+    }
+
+    function wrapInitialPage() {
+      if (initialPage) return;
+      initialPage = document.createElement('div');
+      initialPage.id = 'nd-initial-document';
+
+      const nodes = [...document.body.childNodes].filter((node) => node !== player && node !== frame);
+      nodes.forEach((node) => initialPage.appendChild(node));
+      document.body.insertBefore(initialPage, player);
+    }
+
+    function ensureFrame() {
+      if (frame) return frame;
+      frame = document.createElement('iframe');
+      frame.className = 'nd-persistent-frame';
+      frame.title = isFrench ? 'Contenu Northern Dial' : 'Northern Dial page content';
+      frame.hidden = true;
+      frame.setAttribute('loading', 'eager');
+      frame.addEventListener('load', () => {
+        try {
+          const childWindow = frame.contentWindow;
+          const childDocument = frame.contentDocument;
+          if (!childWindow || !childDocument || childWindow.location.origin !== window.location.origin) return;
+
+          const loadedUrl = childWindow.location.href;
+          const loadedTitle = childDocument.title;
+          if (loadedTitle) document.title = loadedTitle;
+
+          // When the homepage is shown inside the listening shell, the parent
+          // player is already handling audio. Hide the duplicate homepage player.
+          if (childWindow.location.pathname === '/' || childWindow.location.pathname === '/index.html') {
+            const style = childDocument.createElement('style');
+            style.dataset.ndFramedHome = 'true';
+            style.textContent = '.player-section{display:none!important}.home-top-grid{display:block!important}.home-top-grid .discovery-banner{margin:0 0 38px!important}';
+            childDocument.head.appendChild(style);
+          }
+
+          childDocument.addEventListener('click', (event) => {
+            if (event.defaultPrevented || isModifiedClick(event)) return;
+            const anchor = event.target.closest && event.target.closest('a');
+            if (!anchor) return;
+
+            const href = anchor.getAttribute('href');
+            if (!href) return;
+
+            let candidate;
+            try {
+              candidate = new URL(href, childWindow.location.href);
+            } catch (_) {
+              return;
+            }
+
+            if (candidate.origin !== window.location.origin) {
+              if (!anchor.getAttribute('target')) {
+                anchor.setAttribute('target', '_blank');
+                anchor.setAttribute('rel', 'noopener');
+              }
+              return;
+            }
+
+            if (candidate.pathname === childWindow.location.pathname &&
+                candidate.search === childWindow.location.search &&
+                candidate.hash) {
+              return;
+            }
+
+            const internal = linkUrl(anchor, childWindow.location.href);
+            if (!internal) return;
+            event.preventDefault();
+            openPersistentPage(internal.href, true);
+          }, true);
+
+          if (expectedFrameUrl && loadedUrl !== expectedFrameUrl) {
+            expectedFrameUrl = loadedUrl;
+            history.replaceState(Object.assign({}, history.state, { ndPersistentUrl: loadedUrl }), '', loadedUrl);
+          }
+
+          updateMediaSession(trackText.textContent, artistText.textContent);
+        } catch (_) {}
+      });
+      document.body.insertBefore(frame, player);
+      return frame;
+    }
+
+    function openPersistentPage(url, pushHistory) {
+      wrapInitialPage();
+      ensureFrame();
+      shellMode = true;
+      document.body.classList.add('nd-persistent-browsing', 'nd-has-mini-player');
+      setMiniVisible(true);
+      initialPage.hidden = true;
+      frame.hidden = false;
+      expectedFrameUrl = url;
+
+      if (pushHistory) {
+        history.pushState(Object.assign({}, history.state, { ndPersistentUrl: url }), '', url);
+      }
+
+      if (frame.src !== url) frame.src = url;
+      window.scrollTo(0, 0);
+    }
+
+    function restoreInitialPage() {
+      if (!initialPage) return;
+      shellMode = false;
+      document.body.classList.remove('nd-persistent-browsing');
+      frame.hidden = true;
+      initialPage.hidden = false;
+      document.title = initialTitle;
+
+      if (isHomepage && hadHomepagePlayer) {
+        const homepagePlayer = initialPage.querySelector('.player-section');
+        if (homepagePlayer) {
+          const rect = homepagePlayer.getBoundingClientRect();
+          setMiniVisible(rect.bottom <= 0 || rect.top >= window.innerHeight);
+        } else {
+          setMiniVisible(false);
+        }
+      } else {
+        setMiniVisible(true);
+      }
+    }
+
+    document.addEventListener('click', (event) => {
+      if (event.defaultPrevented || isModifiedClick(event)) return;
+      if (event.target.closest && event.target.closest('[data-nd-persistent-player]')) return;
+
+      const anchor = event.target.closest && event.target.closest('a');
+      if (!anchor) return;
+      const url = linkUrl(anchor, window.location.href);
+      if (!url) return;
+
+      if (url.pathname === window.location.pathname &&
+          url.search === window.location.search &&
+          url.hash) {
+        return;
+      }
+
+      // Preserve normal navigation until the listener has actively started audio.
+      // Once playing, internal navigation becomes app-like and the stream survives.
+      if (audio.paused || audio.ended) return;
+
+      event.preventDefault();
+      openPersistentPage(url.href, true);
+    }, true);
+
+    window.addEventListener('popstate', () => {
+      if (window.location.href === initialUrl) {
+        restoreInitialPage();
+        return;
+      }
+      if (!audio.paused && !audio.ended) {
+        openPersistentPage(window.location.href, false);
+      }
+    });
+
+    profileLink.addEventListener('click', (event) => {
+      if (audio.paused || audio.ended) return;
+      const url = linkUrl(profileLink, window.location.href);
+      if (!url) return;
+      event.preventDefault();
+      openPersistentPage(url.href, true);
+    });
+  }
+  /* ND_PERSISTENT_PLAYER_END */
+
   function init() {
     sortStoryCards();
     featureNewestBlogStory();
@@ -641,6 +1022,7 @@
     updateHomepageListeningPromos();
     if (!isHomepage) buildShell();
     loadI18n();
+    initPersistentPlayer();
   }
 
   if (document.readyState === 'loading') {
