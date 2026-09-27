@@ -310,3 +310,245 @@ body#top:has(.nd-home-hero-logo) .custom-player::after {
     font-size: .82rem !important;
   }
 }
+
+
+/* ND_PERSISTENT_PLAYER_CSS_START */
+:root {
+  --nd-player-height: 76px;
+}
+
+.nd-persistent-audio {
+  display: none !important;
+}
+
+.nd-mini-player {
+  align-items: center !important;
+  background: #111214 !important;
+  border-top: 3px solid #CC3333 !important;
+  bottom: 0 !important;
+  box-shadow: 0 -8px 28px rgba(0,0,0,.24) !important;
+  color: #fff !important;
+  display: flex !important;
+  left: 0 !important;
+  min-height: 76px !important;
+  opacity: 0 !important;
+  padding: 9px max(14px, env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left)) !important;
+  pointer-events: none !important;
+  position: fixed !important;
+  right: 0 !important;
+  transform: translateY(110%) !important;
+  transition: opacity .2s ease, transform .2s ease !important;
+  z-index: 2147483000 !important;
+}
+
+.nd-mini-player.nd-mini-visible,
+body.nd-persistent-browsing .nd-mini-player {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+.nd-mini-player-inner {
+  align-items: center !important;
+  display: grid !important;
+  gap: 12px !important;
+  grid-template-columns: 48px minmax(0, 1fr) auto !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+}
+
+.nd-mini-play {
+  align-items: center !important;
+  appearance: none !important;
+  background: #CC3333 !important;
+  border: 2px solid #fff !important;
+  border-radius: 50% !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  height: 46px !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 46px !important;
+}
+
+.nd-mini-play:hover,
+.nd-mini-play:focus {
+  background: #8B2323 !important;
+}
+
+.nd-mini-play:focus-visible,
+.nd-mini-profile:focus-visible {
+  outline: 3px solid #F6F1E7 !important;
+  outline-offset: 3px !important;
+}
+
+.nd-mini-copy {
+  min-width: 0 !important;
+}
+
+.nd-mini-status {
+  align-items: center !important;
+  color: #b9b9b9 !important;
+  display: flex !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  gap: 6px !important;
+  letter-spacing: .09em !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+  text-transform: uppercase !important;
+}
+
+.nd-mini-live-dot {
+  background: #66635F !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  height: 7px !important;
+  width: 7px !important;
+}
+
+.nd-mini-player.is-playing .nd-mini-live-dot {
+  background: #CC3333 !important;
+  box-shadow: 0 0 0 4px rgba(204,51,51,.16) !important;
+}
+
+.nd-mini-track,
+.nd-mini-artist {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.nd-mini-track {
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: .98rem !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+}
+
+.nd-mini-artist {
+  color: #cfcfcf !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: .82rem !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
+}
+
+.nd-mini-profile {
+  align-items: center !important;
+  background: transparent !important;
+  border: 2px solid #CC3333 !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  display: inline-flex !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  justify-content: center !important;
+  letter-spacing: .08em !important;
+  min-height: 38px !important;
+  padding: 8px 12px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.nd-mini-profile[hidden] {
+  display: none !important;
+}
+
+.nd-mini-profile:hover,
+.nd-mini-profile:focus {
+  background: #CC3333 !important;
+  color: #fff !important;
+}
+
+body.nd-has-mini-player:not(.nd-persistent-browsing) {
+  padding-bottom: var(--nd-player-height) !important;
+}
+
+.nd-persistent-frame {
+  background: #fff !important;
+  border: 0 !important;
+  bottom: var(--nd-player-height) !important;
+  height: auto !important;
+  left: 0 !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 2147482000 !important;
+}
+
+.nd-persistent-frame[hidden] {
+  display: none !important;
+}
+
+body.nd-persistent-browsing {
+  height: 100% !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+}
+
+body.nd-persistent-browsing #nd-initial-document {
+  display: none !important;
+}
+
+@media (max-width: 620px) {
+  .nd-mini-player {
+    min-height: 72px !important;
+    padding-top: 8px !important;
+  }
+
+  .nd-mini-player-inner {
+    gap: 9px !important;
+    grid-template-columns: 44px minmax(0, 1fr) auto !important;
+  }
+
+  .nd-mini-play {
+    height: 42px !important;
+    width: 42px !important;
+  }
+
+  .nd-mini-track {
+    font-size: .9rem !important;
+  }
+
+  .nd-mini-artist {
+    font-size: .76rem !important;
+  }
+
+  .nd-mini-status {
+    font-size: .62rem !important;
+  }
+
+  .nd-mini-profile {
+    font-size: 0 !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 10px !important;
+    width: 38px !important;
+  }
+
+  .nd-mini-profile::after {
+    content: '→' !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nd-mini-player {
+    transition: none !important;
+  }
+}
+/* ND_PERSISTENT_PLAYER_CSS_END */
