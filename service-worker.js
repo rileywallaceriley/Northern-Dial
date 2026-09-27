@@ -1,4 +1,4 @@
-const VERSION = 'v5';
+const VERSION = 'v6';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -112,6 +112,16 @@ self.addEventListener('fetch', event => {
   // CSS changes are frequent while the site is actively developed.
   // Always check the network first so old layout rules do not reappear.
   if (CSS_EXTENSIONS.test(url.pathname)) {
+    event.respondWith(
+      networkFirst(request, STATIC_CACHE, { cache: 'no-store' })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // Keep the navigation/player shell network-first while the persistent
+  // listening experience is actively evolving. Other JS can remain SWR.
+  if (url.pathname === '/nd-shell.js') {
     event.respondWith(
       networkFirst(request, STATIC_CACHE, { cache: 'no-store' })
         .catch(() => caches.match(request))
