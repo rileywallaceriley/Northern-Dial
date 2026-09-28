@@ -35,6 +35,7 @@ const localAudio = document.getElementById('radioStream');
 
     let artistProfileLookupPromise = null;
     let artistProfileRequestId = 0;
+    let homepagePlayPending = false;
 
     function normalizeArtistLookupName(value) {
         return String(value || '')
@@ -122,15 +123,31 @@ const localAudio = document.getElementById('radioStream');
     }
 
     playPauseBtn.addEventListener('click', async function() {
+        if (homepagePlayPending) return;
+
         try {
-            if (audio.paused) {
+            if (audio.paused || audio.ended) {
+                homepagePlayPending = true;
+
+                // Make the first tap feel immediate while iOS opens the live stream.
+                playPauseBtn.classList.add('playing');
+                playPauseBtn.setAttribute('aria-busy', 'true');
+                statusText.textContent = 'CONNECTING…';
+
                 if (persistentController) await persistentController.play();
                 else await audio.play();
             } else {
                 if (persistentController) persistentController.pause();
                 else audio.pause();
             }
-        } catch (_) {}
+        } catch (_) {
+            statusText.textContent = 'TAP TO RETRY';
+            playPauseBtn.classList.remove('playing');
+        } finally {
+            homepagePlayPending = false;
+            playPauseBtn.removeAttribute('aria-busy');
+            syncPlaybackUi();
+        }
     });
 
     volumeSlider.addEventListener('input', function() {
@@ -199,7 +216,9 @@ const localAudio = document.getElementById('radioStream');
     function syncPlaybackUi() {
         const playing = !audio.paused && !audio.ended;
         playPauseBtn.classList.toggle('playing', playing);
-        statusText.textContent = playing ? 'LIVE NOW' : 'PAUSED';
+        if (!homepagePlayPending) {
+            statusText.textContent = playing ? 'LIVE NOW' : 'PAUSED';
+        }
     }
 
     audio.addEventListener('playing', function() {
