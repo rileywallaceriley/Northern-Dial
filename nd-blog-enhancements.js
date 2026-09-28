@@ -396,4 +396,7 @@
   styleBlogArchiveActions();
   fixKaytranadaVideos();
   enhanceArtistFeatures();
+
+  function updateArchiveGradient(){const h=document.documentElement.scrollHeight-window.innerHeight;const p=h>0?Math.min(Math.max(window.scrollY/h,0),1):0;const r=Math.round(255-(255-204)*p),g=Math.round(255-(255-51)*p),b=Math.round(255-(255-51)*p);document.body.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;}
+      window.addEventListener('scroll',updateArchiveGradient,{passive:true});updateArchiveGradient();
 })();
