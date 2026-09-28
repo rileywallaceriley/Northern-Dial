@@ -1,7 +1,8 @@
-const VERSION = 'v7';
+const VERSION = 'v8';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
+const DATA_CACHE = `northern-dial-data-${VERSION}`;
 
 const APP_SHELL = [
   './',
@@ -22,6 +23,11 @@ const LIVE_HOSTS = new Set([
 const CSS_EXTENSIONS = /\.css$/i;
 const STATIC_EXTENSIONS = /\.(?:js|woff2?|ttf|otf)$/i;
 const IMAGE_EXTENSIONS = /\.(?:png|jpe?g|gif|webp|avif|svg)$/i;
+const DATA_PATHS = new Set([
+  '/artist-profile-index.json',
+  '/library_artist_images.tsv',
+  '/artists.html'
+]);
 
 self.addEventListener('install', event => {
   self.skipWaiting();
@@ -35,7 +41,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  const keep = new Set([STATIC_CACHE, PAGE_CACHE, IMAGE_CACHE]);
+  const keep = new Set([STATIC_CACHE, PAGE_CACHE, IMAGE_CACHE, DATA_CACHE]);
 
   event.waitUntil(
     Promise.all([
@@ -106,6 +112,13 @@ self.addEventListener('fetch', event => {
         .catch(() => caches.match(request))
         .catch(() => caches.match('./index.html'))
     );
+    return;
+  }
+
+  // Curated catalogue data changes much less often than live station state.
+  // Serve it instantly from cache on repeat visits and refresh in the background.
+  if (url.origin === self.location.origin && DATA_PATHS.has(url.pathname)) {
+    event.respondWith(staleWhileRevalidate(request, DATA_CACHE));
     return;
   }
 
