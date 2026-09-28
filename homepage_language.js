@@ -237,23 +237,68 @@
     if (icon) icon.textContent = '☰';
   }
 
-  function installMutationTranslation() {
-    let queued = false;
-    const observer = new MutationObserver(() => {
-      if (queued) return;
-      queued = true;
-      requestAnimationFrame(() => {
-        queued = false;
-        const current = document.documentElement.dataset.ndLanguage || 'en';
-        if (current === 'fr') {
-          translateTextNodes(document.body, EN_TO_FR);
-          translateAttributes(EN_TO_FR);
-          updateInternalLinks('fr');
-        }
-        updateLanguageToggle(current);
-        normalizeProjectCard(current);
+  function translateAttributesWithin(root, dictionary) {
+    if (!root) return;
+    const selector = '[placeholder], [aria-label], [title]';
+    const elements = [];
+
+    if (root.nodeType === Node.ELEMENT_NODE && root.matches?.(selector)) {
+      elements.push(root);
+    }
+    root.querySelectorAll?.(selector).forEach((el) => elements.push(el));
+
+    elements.forEach((el) => {
+      if (el.matches('[data-language-toggle]')) return;
+      ['placeholder', 'aria-label', 'title'].forEach((attr) => {
+        const value = el.getAttribute(attr);
+        if (value && dictionary[value]) el.setAttribute(attr, dictionary[value]);
       });
     });
+  }
+
+  function installMutationTranslation() {
+    // English is the authored DOM, so there is nothing to continuously translate.
+    if ((document.documentElement.dataset.ndLanguage || 'en') !== 'fr') return;
+
+    let queued = false;
+    const pendingRoots = new Set();
+
+    const addRoot = (node) => {
+      if (!node) return;
+      if (node.nodeType === Node.ELEMENT_NODE) pendingRoots.add(node);
+      else if (node.nodeType === Node.TEXT_NODE && node.parentElement) pendingRoots.add(node.parentElement);
+    };
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'characterData') addRoot(mutation.target);
+        mutation.addedNodes?.forEach(addRoot);
+      });
+
+      if (queued) return;
+      queued = true;
+
+      requestAnimationFrame(() => {
+        queued = false;
+        if ((document.documentElement.dataset.ndLanguage || 'en') !== 'fr') {
+          pendingRoots.clear();
+          return;
+        }
+
+        pendingRoots.forEach((root) => {
+          translateTextNodes(root, EN_TO_FR);
+          translateAttributesWithin(root, EN_TO_FR);
+        });
+        pendingRoots.clear();
+
+        // Link rewrites are inexpensive compared with a full text-tree scan and
+        // keep newly inserted homepage links in the selected language.
+        updateInternalLinks('fr');
+        updateLanguageToggle('fr');
+        normalizeProjectCard('fr');
+      });
+    });
+
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   }
 
