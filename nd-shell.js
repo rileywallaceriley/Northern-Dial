@@ -177,6 +177,9 @@
   }
 
   function loadI18n() {
+    // The homepage already ships its purpose-built language engine.
+    // Avoid downloading the general 15 KB translator only to have it exit.
+    if (isHomepage && document.querySelector('script[src*="homepage_language.js"]')) return;
     if (document.querySelector('script[data-nd-i18n]')) return;
     const script = document.createElement('script');
     script.src = '/nd-i18n.js?v=20260911a';
