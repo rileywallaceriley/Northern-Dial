@@ -39,7 +39,7 @@
     let src = '';
 
     if (isHomepage) {
-      src = '/nd-home-enhancements.js?v=20260927a';
+      src = '/nd-home-enhancements.js?v=20260927b';
     } else if (path === '/artists.html') {
       src = '/nd-artists-enhancements.js?v=20260927a';
     } else if (path === '/blog/' || path === '/blog/index.html' || path.startsWith('/blog/')) {
