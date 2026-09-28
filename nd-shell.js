@@ -36,17 +36,20 @@
       ];
 
   function loadPageEnhancements() {
-    const needsEnhancements =
-      isHomepage ||
-      path === '/artists.html' ||
-      path === '/blog/' ||
-      path === '/blog/index.html' ||
-      path.startsWith('/blog/');
+    let src = '';
 
-    if (!needsEnhancements || document.querySelector('script[data-nd-page-enhancements]')) return;
+    if (isHomepage) {
+      src = '/nd-home-enhancements.js?v=20260927a';
+    } else if (path === '/artists.html') {
+      src = '/nd-artists-enhancements.js?v=20260927a';
+    } else if (path === '/blog/' || path === '/blog/index.html' || path.startsWith('/blog/')) {
+      src = '/nd-blog-enhancements.js?v=20260927a';
+    }
+
+    if (!src || document.querySelector('script[data-nd-page-enhancements]')) return;
 
     const script = document.createElement('script');
-    script.src = '/nd-page-enhancements.js?v=20260927a';
+    script.src = src;
     script.defer = true;
     script.dataset.ndPageEnhancements = 'true';
     document.head.appendChild(script);
