@@ -142,10 +142,6 @@
     </footer>
   </main>
 
-  <script>
-    const nav=document.querySelector('.page-nav');const toggle=document.querySelector('.mobile-menu-toggle');const links=document.querySelector('.mobile-menu-links');if(nav&&toggle&&links){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('menu-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');toggle.querySelector('.mobile-menu-icon').textContent=open?'✕':'☰'});links.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('menu-open');toggle.setAttribute('aria-expanded','false');toggle.querySelector('.mobile-menu-icon').textContent='☰'}})}
-  </script>
-
   <script src="/nd-shell.js?v=20260907b" defer></script>
 </body>
 </html>
