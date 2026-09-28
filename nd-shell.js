@@ -229,7 +229,7 @@
       '</div>'
     ].join('');
 
-    let audio = document.getElementById('radioStream');
+    let audio = window.ND_SHARED_AUDIO || document.getElementById('radioStream');
     if (!audio) {
       audio = document.createElement('audio');
       audio.id = 'ndPersistentAudio';
@@ -237,6 +237,7 @@
       audio.src = streamUrl;
       audio.volume = 0.7;
     }
+    window.ND_SHARED_AUDIO = audio;
     audio.classList.add('nd-persistent-audio');
     player.appendChild(audio);
     document.body.appendChild(player);
@@ -267,6 +268,7 @@
       audio,
       play: async () => {
         userWantsPlayback = true;
+        enforceSingleAudio();
         await audio.play();
         renderPlaybackState();
       },
@@ -310,6 +312,28 @@
       setMiniVisible(true);
     }
 
+    function neutralizeDuplicateAudio(rootDocument) {
+      const doc = rootDocument || document;
+      try {
+        doc.querySelectorAll('audio').forEach((candidate) => {
+          if (candidate === audio) return;
+          try {
+            candidate.pause();
+            candidate.removeAttribute('src');
+            candidate.querySelectorAll('source').forEach((source) => source.removeAttribute('src'));
+            candidate.load();
+            candidate.dataset.ndSuppressedAudio = 'true';
+          } catch (_) {}
+        });
+      } catch (_) {}
+    }
+
+    function enforceSingleAudio() {
+      neutralizeDuplicateAudio(document);
+      if (frame?.contentDocument) neutralizeDuplicateAudio(frame.contentDocument);
+      if (pendingFrame?.contentDocument) neutralizeDuplicateAudio(pendingFrame.contentDocument);
+    }
+
     function renderPlaybackState() {
       const playing = !audio.paused && !audio.ended;
       playButton.classList.toggle('playing', playing);
@@ -321,6 +345,7 @@
 
     async function resumeIfWanted() {
       if (!userWantsPlayback || !audio.paused) return;
+      enforceSingleAudio();
       if (resumeTimer) {
         window.clearTimeout(resumeTimer);
         resumeTimer = null;
@@ -398,6 +423,7 @@
         });
         navigator.mediaSession.setActionHandler('play', () => {
           userWantsPlayback = true;
+          enforceSingleAudio();
           audio.play();
         });
         navigator.mediaSession.setActionHandler('pause', () => {
@@ -445,6 +471,7 @@
       try {
         if (audio.paused) {
           userWantsPlayback = true;
+          enforceSingleAudio();
           await audio.play();
         } else {
           userWantsPlayback = false;
@@ -475,6 +502,18 @@
       statusText.textContent = 'Northern Dial · Connection error';
       renderPlaybackState();
     });
+
+    document.addEventListener('play', (event) => {
+      const candidate = event.target;
+      if (candidate instanceof HTMLMediaElement && candidate !== audio) {
+        try {
+          candidate.pause();
+          candidate.removeAttribute('src');
+          candidate.querySelectorAll?.('source').forEach((source) => source.removeAttribute('src'));
+          candidate.load();
+        } catch (_) {}
+      }
+    }, true);
 
     renderPlaybackState();
     refreshNowPlaying();
@@ -563,6 +602,40 @@
         style.dataset.ndFramedHome = 'true';
         style.textContent = '.player-section{display:none!important}.home-top-grid{display:block!important}.home-top-grid .discovery-banner{margin:0 0 38px!important}';
         childDocument.head.appendChild(style);
+
+        neutralizeDuplicateAudio(childDocument);
+
+        // Safari can execute framed Home scripts before they see the parent
+        // controller. Capture the controls here so they always operate the
+        // single parent stream, regardless of child-script timing.
+        childDocument.addEventListener('click', async (event) => {
+          const control = event.target.closest && event.target.closest('#playPauseBtn');
+          if (!control) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+
+          try {
+            if (audio.paused || audio.ended) {
+              userWantsPlayback = true;
+              enforceSingleAudio();
+              await audio.play();
+            } else {
+              userWantsPlayback = false;
+              audio.pause();
+            }
+          } catch (_) {}
+          renderPlaybackState();
+        }, true);
+
+        childDocument.addEventListener('input', (event) => {
+          const control = event.target.closest && event.target.closest('#volumeSlider');
+          if (!control) return;
+          event.stopImmediatePropagation();
+          audio.volume = Math.max(0, Math.min(1, Number(control.value) / 100));
+        }, true);
+
+        const childVolume = childDocument.getElementById('volumeSlider');
+        if (childVolume) childVolume.value = Math.round(audio.volume * 100);
       }
 
       childDocument.addEventListener('click', (event) => {
