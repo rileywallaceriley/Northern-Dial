@@ -12,22 +12,6 @@
       return Number.isNaN(time) ? 0 : time;
     };
 
-    if (path === '/blog/' || path === '/blog/index.html') {
-      const grid = document.querySelector('.card-grid');
-      if (grid) {
-        const cards = [...grid.children].filter((el) => el.matches('article.card'));
-        cards
-          .map((card, index) => ({
-            card,
-            index,
-            featured: card.classList.contains('featured'),
-            date: parseDate(card.querySelector('.card-date')?.textContent)
-          }))
-          .sort((a, b) => (Number(b.featured) - Number(a.featured)) || (b.date - a.date) || (a.index - b.index))
-          .forEach(({ card }) => grid.appendChild(card));
-      }
-    }
-
     if (isHomepage) {
       const stories = document.querySelector('#stories');
       if (!stories) return;
@@ -58,6 +42,10 @@
       const limit = width <= 640 ? 4 : width <= 900 ? 6 : 8;
       const cards = [...grid.children].filter((el) => el.tagName === 'A' && /\/blog\//.test(el.getAttribute('href') || ''));
       cards.forEach((card, index) => {
+        if (index >= 8) {
+          card.remove();
+          return;
+        }
         card.style.display = index < limit ? 'block' : 'none';
       });
     };
