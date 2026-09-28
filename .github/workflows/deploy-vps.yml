@@ -58,7 +58,7 @@ jobs:
           PORT="${VPS_PORT:-22}"
           rsync -az             --exclude='.git/'             --exclude='.github/'             --exclude='.gitignore'             --exclude='tools/'             --exclude='scripts/'             --exclude='data/'             --exclude='archives/'             --exclude='artist_enrichment_batches/'             --exclude='*.py'             --exclude='*.md'             -e "ssh -i ~/.ssh/id_ed25519 -p $PORT"             ./ "$VPS_USER@$VPS_HOST:$VPS_PATH/"
 
-      - name: Verify deployed page
+      - name: Verify deployed files on VPS
         shell: bash
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
@@ -68,4 +68,28 @@ jobs:
         run: |
           set -euo pipefail
           PORT="${VPS_PORT:-22}"
-          ssh -i ~/.ssh/id_ed25519 -p "$PORT" "$VPS_USER@$VPS_HOST"             "test -s '$VPS_PATH/new-releases.html'"
+          ssh -i ~/.ssh/id_ed25519 -p "$PORT" "$VPS_USER@$VPS_HOST" "bash -s" <<EOF
+          set -euo pipefail
+          test -s "$VPS_PATH/index.html"
+          test -s "$VPS_PATH/nd-shell.js"
+          test -s "$VPS_PATH/homepage.js"
+          grep -Fq "homepage.js?v=20260927c" "$VPS_PATH/index.html"
+          grep -Fq "nd-shell.js?v=20260927c" "$VPS_PATH/index.html"
+          grep -Fq "window.NDPlayer" "$VPS_PATH/nd-shell.js"
+          grep -Fq "persistentController" "$VPS_PATH/homepage.js"
+          echo "VPS player files match the unified-audio build."
+          EOF
+
+      - name: Verify public player assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          BUST="${GITHUB_SHA}-${GITHUB_RUN_ID}"
+          INDEX="$(curl -fsSL --retry 3 --retry-delay 2 "https://www.northerndial.ca/?deploy=${BUST}")"
+          SHELL="$(curl -fsSL --retry 3 --retry-delay 2 "https://www.northerndial.ca/nd-shell.js?deploy=${BUST}")"
+          HOME="$(curl -fsSL --retry 3 --retry-delay 2 "https://www.northerndial.ca/homepage.js?deploy=${BUST}")"
+          grep -Fq "homepage.js?v=20260927c" <<<"$INDEX"
+          grep -Fq "nd-shell.js?v=20260927c" <<<"$INDEX"
+          grep -Fq "window.NDPlayer" <<<"$SHELL"
+          grep -Fq "persistentController" <<<"$HOME"
+          echo "Public site is serving the unified-audio build."
