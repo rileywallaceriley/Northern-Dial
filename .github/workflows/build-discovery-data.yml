@@ -1,0 +1,37 @@
+name: Build Discovery Data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - artists.html
+      - library_artist_images.tsv
+      - scripts/build_discovery_data.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build Discovery payload
+        run: python3 scripts/build_discovery_data.py
+
+      - name: Commit refreshed data
+        shell: bash
+        run: |
+          if git diff --quiet -- discovery-data.json; then
+            echo "Discovery data is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add discovery-data.json
+          git commit -m "Refresh Discovery data"
+          git push
