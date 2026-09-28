@@ -1,4 +1,27 @@
-const audio = document.getElementById('radioStream');
+const localAudio = document.getElementById('radioStream');
+
+    let persistentController = null;
+    try {
+        if (window.self !== window.top && window.top.NDPlayer?.audio) {
+            persistentController = window.top.NDPlayer;
+        }
+    } catch (_) {}
+
+    const audio = persistentController?.audio || localAudio;
+
+    // A framed homepage must never own a second live stream. Safari begins
+    // resolving <source> elements before scripts run, so explicitly neutralize
+    // the local audio element as soon as we attach to the parent's player.
+    if (persistentController && localAudio && localAudio !== audio) {
+        try {
+            localAudio.pause();
+            localAudio.removeAttribute('src');
+            localAudio.querySelectorAll('source').forEach(source => source.removeAttribute('src'));
+            localAudio.load();
+            localAudio.dataset.ndSuppressedAudio = 'true';
+        } catch (_) {}
+    }
+
     const playPauseBtn = document.getElementById('playPauseBtn');
     const volumeSlider = document.getElementById('volumeSlider');
     const statusText = document.getElementById('statusText');
@@ -73,9 +96,15 @@ const audio = document.getElementById('radioStream');
         artistProfileBtn.hidden = false;
     }
 
-    audio.volume = 0.7;
+    if (!persistentController) audio.volume = 0.7;
+    if (persistentController && volumeSlider) {
+        volumeSlider.value = Math.round(audio.volume * 100);
+    }
 
     function updateMediaSession(title, artist) {
+        // The parent persistent player owns lock-screen/media-session controls
+        // while Home is displayed inside the listening shell.
+        if (persistentController) return;
         if ('mediaSession' in navigator) {
             navigator.mediaSession.metadata = new MediaMetadata({
                 title: title,
@@ -88,20 +117,22 @@ const audio = document.getElementById('radioStream');
         }
     }
 
-    playPauseBtn.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.play();
-            playPauseBtn.classList.add('playing');
-            statusText.textContent = 'LIVE NOW';
-        } else {
-            audio.pause();
-            playPauseBtn.classList.remove('playing');
-            statusText.textContent = 'PAUSED';
-        }
+    playPauseBtn.addEventListener('click', async function() {
+        try {
+            if (audio.paused) {
+                if (persistentController) await persistentController.play();
+                else await audio.play();
+            } else {
+                if (persistentController) persistentController.pause();
+                else audio.pause();
+            }
+        } catch (_) {}
     });
 
     volumeSlider.addEventListener('input', function() {
-        audio.volume = this.value / 100;
+        const value = this.value / 100;
+        if (persistentController) persistentController.setVolume(value);
+        else audio.volume = value;
     });
 
 
@@ -161,19 +192,27 @@ const audio = document.getElementById('radioStream');
         applySharedStationData(event.detail);
     });
 
+    function syncPlaybackUi() {
+        const playing = !audio.paused && !audio.ended;
+        playPauseBtn.classList.toggle('playing', playing);
+        statusText.textContent = playing ? 'LIVE NOW' : 'PAUSED';
+    }
+
     audio.addEventListener('playing', function() {
-        statusText.textContent = 'LIVE NOW';
+        syncPlaybackUi();
         updateMediaSession(songTitle.textContent, artistName.textContent);
     });
 
     audio.addEventListener('pause', function() {
-        if (!audio.ended) statusText.textContent = 'PAUSED';
+        if (!audio.ended) syncPlaybackUi();
     });
 
     audio.addEventListener('error', function() {
         statusText.textContent = 'CONNECTION ERROR';
         playPauseBtn.classList.remove('playing');
     });
+
+    syncPlaybackUi();
 
     let deferredPrompt;
     const installBanner = document.getElementById('installBanner');

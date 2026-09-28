@@ -261,6 +261,26 @@
     let resumeTimer = null;
     let latestNowPlayingData = null;
 
+    // One stream per top-level Northern Dial session. Framed pages can use
+    // this API instead of creating/controlling their own audio element.
+    window.NDPlayer = {
+      audio,
+      play: async () => {
+        userWantsPlayback = true;
+        await audio.play();
+        renderPlaybackState();
+      },
+      pause: () => {
+        userWantsPlayback = false;
+        audio.pause();
+        renderPlaybackState();
+      },
+      setVolume: (value) => {
+        audio.volume = Math.max(0, Math.min(1, Number(value) || 0));
+      },
+      isPlaying: () => !audio.paused && !audio.ended
+    };
+
     function setPlayerHeight() {
       const height = Math.ceil(player.getBoundingClientRect().height || 76);
       document.documentElement.style.setProperty('--nd-player-height', height + 'px');
