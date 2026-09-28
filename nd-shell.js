@@ -219,7 +219,7 @@
     player.setAttribute('aria-label', isFrench ? 'Lecteur radio Northern Dial' : 'Northern Dial radio player');
     player.innerHTML = [
       '<div class="nd-mini-player-inner">',
-        '<button class="nd-mini-play" type="button" aria-label="Play Northern Dial"><span aria-hidden="true">▶</span></button>',
+        '<button class="nd-mini-play" type="button" aria-label="Play Northern Dial"><span class="nd-mini-play-glyph" aria-hidden="true"></span><span class="nd-mini-pause-glyph" aria-hidden="true"><i></i><i></i></span></button>',
         '<div class="nd-mini-copy">',
           '<div class="nd-mini-status"><span class="nd-mini-live-dot" aria-hidden="true"></span><span class="nd-mini-status-text">Northern Dial · Ready</span></div>',
           '<div class="nd-mini-track">Northern Dial Radio</div>',
@@ -243,7 +243,6 @@
     document.body.appendChild(player);
 
     const playButton = player.querySelector('.nd-mini-play');
-    const playIcon = playButton.querySelector('span');
     const statusText = player.querySelector('.nd-mini-status-text');
     const trackText = player.querySelector('.nd-mini-track');
     const artistText = player.querySelector('.nd-mini-artist');
@@ -261,6 +260,7 @@
     let userWantsPlayback = !audio.paused && !audio.ended;
     let resumeTimer = null;
     let latestNowPlayingData = null;
+    let playRequestPending = false;
 
     // One stream per top-level Northern Dial session. Framed pages can use
     // this API instead of creating/controlling their own audio element.
@@ -338,8 +338,10 @@
       const playing = !audio.paused && !audio.ended;
       playButton.classList.toggle('playing', playing);
       playButton.setAttribute('aria-label', playing ? 'Pause Northern Dial' : 'Play Northern Dial');
-      playIcon.textContent = playing ? '❚❚' : '▶';
-      statusText.textContent = playing ? 'Northern Dial · Live' : 'Northern Dial · Paused';
+      playButton.setAttribute('aria-busy', playRequestPending ? 'true' : 'false');
+      if (!playRequestPending) {
+        statusText.textContent = playing ? 'Northern Dial · Live' : 'Northern Dial · Paused';
+      }
       player.classList.toggle('is-playing', playing);
     }
 
@@ -468,19 +470,31 @@
     }
 
     playButton.addEventListener('click', async () => {
+      if (playRequestPending) return;
+
       try {
-        if (audio.paused) {
+        if (audio.paused || audio.ended) {
+          playRequestPending = true;
           userWantsPlayback = true;
           enforceSingleAudio();
+
+          // Acknowledge the tap immediately so iOS stream startup never feels dead.
+          playButton.classList.add('playing');
+          playButton.setAttribute('aria-busy', 'true');
+          statusText.textContent = 'Northern Dial · Connecting';
+
           await audio.play();
         } else {
           userWantsPlayback = false;
           audio.pause();
         }
       } catch (_) {
-        statusText.textContent = 'Northern Dial · Tap again to play';
+        userWantsPlayback = false;
+        statusText.textContent = 'Northern Dial · Tap to retry';
+      } finally {
+        playRequestPending = false;
+        renderPlaybackState();
       }
-      renderPlaybackState();
     });
 
     audio.addEventListener('playing', () => {
