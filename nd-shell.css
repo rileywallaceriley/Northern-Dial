@@ -352,7 +352,7 @@ body.nd-persistent-browsing .nd-mini-player {
   align-items: center !important;
   display: grid !important;
   gap: 12px !important;
-  grid-template-columns: 48px minmax(0, 1fr) auto !important;
+  grid-template-columns: 60px minmax(0, 1fr) auto !important;
   margin: 0 auto !important;
   max-width: 1200px !important;
   width: 100% !important;
@@ -361,21 +361,58 @@ body.nd-persistent-browsing .nd-mini-player {
 .nd-mini-play {
   align-items: center !important;
   appearance: none !important;
-  background: #CC3333 !important;
-  border: 2px solid #fff !important;
+  background: linear-gradient(135deg, #CC3333, #8B2323) !important;
+  border: 3px solid #fff !important;
   border-radius: 50% !important;
+  box-shadow: none !important;
   color: #fff !important;
   cursor: pointer !important;
   display: inline-flex !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  height: 46px !important;
+  flex-shrink: 0 !important;
+  height: 58px !important;
   justify-content: center !important;
-  line-height: 1 !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 46px !important;
+  position: relative !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+  width: 58px !important;
+}
+
+.nd-mini-play:active {
+  transform: scale(.95) !important;
+}
+
+.nd-mini-play-glyph {
+  border-bottom: 9px solid transparent !important;
+  border-left: 14px solid #fff !important;
+  border-top: 9px solid transparent !important;
+  display: block !important;
+  height: 0 !important;
+  margin-left: 4px !important;
+  width: 0 !important;
+}
+
+.nd-mini-pause-glyph {
+  align-items: center !important;
+  display: none !important;
+  gap: 5px !important;
+  justify-content: center !important;
+}
+
+.nd-mini-pause-glyph i {
+  background: #fff !important;
+  border-radius: 1px !important;
+  display: block !important;
+  height: 20px !important;
+  width: 5px !important;
+}
+
+.nd-mini-play.playing .nd-mini-play-glyph {
+  display: none !important;
+}
+
+.nd-mini-play.playing .nd-mini-pause-glyph {
+  display: inline-flex !important;
 }
 
 .nd-mini-play:hover,
@@ -518,12 +555,12 @@ body.nd-persistent-browsing #nd-initial-document {
 
   .nd-mini-player-inner {
     gap: 9px !important;
-    grid-template-columns: 44px minmax(0, 1fr) auto !important;
+    grid-template-columns: 58px minmax(0, 1fr) auto !important;
   }
 
   .nd-mini-play {
-    height: 42px !important;
-    width: 42px !important;
+    height: 56px !important;
+    width: 56px !important;
   }
 
   .nd-mini-track {
