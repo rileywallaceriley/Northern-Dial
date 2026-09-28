@@ -199,7 +199,11 @@
     document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
     document.documentElement.dataset.ndLanguage = lang;
     saveLanguage(lang);
-    translateTree();
+
+    // English is already authored in the DOM. Avoid walking the entire page
+    // just to replace English strings with identical English strings.
+    if (lang === 'fr') translateTree();
+
     addLanguageControlIfMissing();
     localizeLanguageControls();
     addHreflang();
@@ -207,12 +211,38 @@
   }
 
   let queued = false;
-  const observer = new MutationObserver(() => {
+  const pendingRoots = new Set();
+
+  function queueTranslationRoot(node) {
+    if (lang !== 'fr' || !node) return;
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      pendingRoots.add(node);
+    } else if (node.nodeType === Node.TEXT_NODE && node.parentElement) {
+      pendingRoots.add(node.parentElement);
+    }
+  }
+
+  const observer = new MutationObserver((mutations) => {
+    if (lang === 'fr') {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach(queueTranslationRoot);
+      });
+    }
+
     if (queued) return;
     queued = true;
+
     requestAnimationFrame(() => {
       queued = false;
-      translateTree();
+
+      if (lang === 'fr' && pendingRoots.size) {
+        pendingRoots.forEach((root) => {
+          translateElement(root);
+          root.querySelectorAll?.('*').forEach(translateElement);
+        });
+        pendingRoots.clear();
+      }
+
       addLanguageControlIfMissing();
       localizeLanguageControls();
       enhanceArtistDirectory();
