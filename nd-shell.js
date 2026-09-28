@@ -2,7 +2,7 @@
   const LOGO = 'https://i.imgur.com/XIAPd0N.png';
   const path = window.location.pathname;
   const isHomepage = path === '/' || path === '/index.html';
-  const isFrench = path === '/fr' || path.startsWith('/fr/');
+  const isFrench = path === '/fr' || path.startsWith('/fr/') || new URLSearchParams(window.location.search).get('lang') === 'fr';
 
 
   const root = isFrench ? '/fr/' : '/';
@@ -186,11 +186,13 @@
 
   function loadI18n() {
     // The homepage already ships its purpose-built language engine.
-    // Avoid downloading the general 15 KB translator only to have it exit.
     if (isHomepage && document.querySelector('script[src*="homepage_language.js"]')) return;
     if (document.querySelector('script[data-nd-i18n]')) return;
+
     const script = document.createElement('script');
-    script.src = '/nd-i18n.js?v=20260911a';
+    script.src = isFrench
+      ? '/nd-i18n.js?v=20260927b'
+      : '/nd-language-links.js?v=20260927a';
     script.defer = true;
     script.dataset.ndI18n = 'true';
     document.head.appendChild(script);
