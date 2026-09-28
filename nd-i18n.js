@@ -262,5 +262,7 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply, { once: true });
   else apply();
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+  if (lang === 'fr') {
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  }
 })();
