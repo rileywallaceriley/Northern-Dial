@@ -690,6 +690,7 @@
     let expectedFrameUrl = '';
     let userWantsPlayback = !audio.paused && !audio.ended;
     let resumeTimer = null;
+    let latestNowPlayingData = null;
 
     function setPlayerHeight() {
       const height = Math.ceil(player.getBoundingClientRect().height || 76);
@@ -817,11 +818,29 @@
       } catch (_) {}
     }
 
+
+    function broadcastStationData(data) {
+      latestNowPlayingData = data;
+      try {
+        document.dispatchEvent(new CustomEvent('nd:nowplaying', { detail: data }));
+      } catch (_) {}
+
+      if (frame && frame.contentWindow && frame.contentDocument) {
+        try {
+          frame.contentDocument.dispatchEvent(
+            new frame.contentWindow.CustomEvent('nd:nowplaying', { detail: data })
+          );
+        } catch (_) {}
+      }
+    }
+
     async function refreshNowPlaying() {
+      if (document.hidden && (audio.paused || audio.ended)) return;
       try {
         const response = await fetch(nowPlayingUrl, { cache: 'no-store' });
         if (!response.ok) return;
         const data = await response.json();
+        broadcastStationData(data);
         const song = data && data.now_playing && data.now_playing.song;
         if (!song) return;
         const title = song.title || 'Unknown Track';
@@ -871,6 +890,9 @@
     renderPlaybackState();
     refreshNowPlaying();
     window.setInterval(refreshNowPlaying, 10000);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) refreshNowPlaying();
+    });
 
     function isModifiedClick(event) {
       return event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
@@ -936,6 +958,14 @@
               targetPath !== '/') {
             return false;
           }
+        } catch (_) {}
+      }
+
+      if (latestNowPlayingData) {
+        try {
+          childDocument.dispatchEvent(
+            new childWindow.CustomEvent('nd:nowplaying', { detail: latestNowPlayingData })
+          );
         } catch (_) {}
       }
 
