@@ -179,6 +179,11 @@
     });
   }
 
+  function registerServiceWorker() {
+    if (!('serviceWorker' in navigator) || window.self !== window.top) return;
+    navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+  }
+
   function loadI18n() {
     // The homepage already ships its purpose-built language engine.
     // Avoid downloading the general 15 KB translator only to have it exit.
@@ -737,6 +742,7 @@
   /* ND_PERSISTENT_PLAYER_END */
 
   function init() {
+    registerServiceWorker();
     if (!isHomepage) buildShell();
     loadI18n();
     loadPageEnhancements();
