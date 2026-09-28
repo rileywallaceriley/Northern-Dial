@@ -683,6 +683,8 @@
     let currentArtistKey = '';
     let initialPage = null;
     let frame = null;
+    let pendingFrame = null;
+    let navigationToken = 0;
     let homeObserver = null;
     let shellMode = false;
     let expectedFrameUrl = '';
@@ -903,78 +905,160 @@
       document.body.insertBefore(initialPage, player);
     }
 
-    function ensureFrame() {
-      if (frame) return frame;
-      frame = document.createElement('iframe');
-      frame.className = 'nd-persistent-frame';
-      frame.title = isFrench ? 'Contenu Northern Dial' : 'Northern Dial page content';
-      frame.hidden = true;
-      frame.setAttribute('loading', 'eager');
-      frame.addEventListener('load', () => {
+    function wireFrameDocument(activeFrame, destination) {
+      const childWindow = activeFrame.contentWindow;
+      const childDocument = activeFrame.contentDocument;
+      if (!childWindow || !childDocument || childWindow.location.origin !== window.location.origin) {
+        return false;
+      }
+
+      const loadedUrl = childWindow.location.href;
+      if (!loadedUrl || loadedUrl === 'about:blank') return false;
+
+      const targetUrl = new URL(destination, initialUrl);
+      const actualUrl = new URL(loadedUrl);
+      const targetPath = targetUrl.pathname.replace(/\/index\.html$/, '/');
+      const actualPath = actualUrl.pathname.replace(/\/index\.html$/, '/');
+
+      if (actualUrl.origin !== targetUrl.origin ||
+          actualPath !== targetPath ||
+          actualUrl.search !== targetUrl.search) {
+        return false;
+      }
+
+      const canonical = childDocument.querySelector('link[rel="canonical"]');
+      if (canonical) {
         try {
-          const childWindow = frame.contentWindow;
-          const childDocument = frame.contentDocument;
-          if (!childWindow || !childDocument || childWindow.location.origin !== window.location.origin) return;
-
-          const loadedUrl = childWindow.location.href;
-          const loadedTitle = childDocument.title;
-          if (loadedTitle) document.title = loadedTitle;
-
-          // When the homepage is shown inside the listening shell, the parent
-          // player is already handling audio. Hide the duplicate homepage player.
-          if (childWindow.location.pathname === '/' || childWindow.location.pathname === '/index.html') {
-            const style = childDocument.createElement('style');
-            style.dataset.ndFramedHome = 'true';
-            style.textContent = '.player-section{display:none!important}.home-top-grid{display:block!important}.home-top-grid .discovery-banner{margin:0 0 38px!important}';
-            childDocument.head.appendChild(style);
+          const canonicalUrl = new URL(canonical.href, loadedUrl);
+          const canonicalPath = canonicalUrl.pathname.replace(/\/index\.html$/, '/');
+          if (canonicalUrl.origin === targetUrl.origin &&
+              canonicalPath !== targetPath &&
+              targetPath !== '/') {
+            return false;
           }
-
-          childDocument.addEventListener('click', (event) => {
-            if (event.defaultPrevented || isModifiedClick(event)) return;
-            const anchor = event.target.closest && event.target.closest('a');
-            if (!anchor) return;
-
-            const href = anchor.getAttribute('href');
-            if (!href) return;
-
-            let candidate;
-            try {
-              candidate = new URL(href, childWindow.location.href);
-            } catch (_) {
-              return;
-            }
-
-            if (candidate.origin !== window.location.origin) {
-              if (!anchor.getAttribute('target')) {
-                anchor.setAttribute('target', '_blank');
-                anchor.setAttribute('rel', 'noopener');
-              }
-              return;
-            }
-
-            if (candidate.pathname === childWindow.location.pathname &&
-                candidate.search === childWindow.location.search &&
-                candidate.hash) {
-              return;
-            }
-
-            const internal = linkUrl(anchor, childWindow.location.href);
-            if (!internal) return;
-            event.preventDefault();
-            openPersistentPage(internal.href, true);
-          }, true);
-
-          if (expectedFrameUrl && loadedUrl !== expectedFrameUrl) {
-            expectedFrameUrl = loadedUrl;
-            history.replaceState(Object.assign({}, history.state, { ndPersistentUrl: loadedUrl }), '', loadedUrl);
-          }
-
-          updateMediaSession(trackText.textContent, artistText.textContent);
-          resumeIfWanted();
         } catch (_) {}
+      }
+
+      if (childWindow.location.pathname === '/' || childWindow.location.pathname === '/index.html') {
+        const style = childDocument.createElement('style');
+        style.dataset.ndFramedHome = 'true';
+        style.textContent = '.player-section{display:none!important}.home-top-grid{display:block!important}.home-top-grid .discovery-banner{margin:0 0 38px!important}';
+        childDocument.head.appendChild(style);
+      }
+
+      childDocument.addEventListener('click', (event) => {
+        if (event.defaultPrevented || isModifiedClick(event)) return;
+        const anchor = event.target.closest && event.target.closest('a');
+        if (!anchor) return;
+
+        const href = anchor.getAttribute('href');
+        if (!href) return;
+
+        let candidate;
+        try {
+          candidate = new URL(href, childWindow.location.href);
+        } catch (_) {
+          return;
+        }
+
+        if (candidate.origin !== window.location.origin) {
+          if (!anchor.getAttribute('target')) {
+            anchor.setAttribute('target', '_blank');
+            anchor.setAttribute('rel', 'noopener');
+          }
+          return;
+        }
+
+        if (candidate.pathname === childWindow.location.pathname &&
+            candidate.search === childWindow.location.search &&
+            candidate.hash) {
+          return;
+        }
+
+        const internal = linkUrl(anchor, childWindow.location.href);
+        if (!internal) return;
+        event.preventDefault();
+        openPersistentPage(internal.href, true);
+      }, true);
+
+      return true;
+    }
+
+    function loadDestinationFrame(destination, pushHistory) {
+      const token = ++navigationToken;
+
+      if (pendingFrame) {
+        pendingFrame.remove();
+        pendingFrame = null;
+      }
+
+      const nextFrame = document.createElement('iframe');
+      pendingFrame = nextFrame;
+      nextFrame.className = 'nd-persistent-frame nd-persistent-frame-loading';
+      nextFrame.title = isFrench ? 'Contenu Northern Dial' : 'Northern Dial page content';
+      nextFrame.setAttribute('loading', 'eager');
+      nextFrame.setAttribute('aria-hidden', 'true');
+
+      // Set src before insertion. This matters on iOS Safari: a blank same-origin
+      // frame can inherit/resolve against the changing parent URL and render empty.
+      nextFrame.src = destination;
+
+      let retried = false;
+      nextFrame.addEventListener('load', () => {
+        if (token !== navigationToken) {
+          nextFrame.remove();
+          return;
+        }
+
+        let ready = false;
+        try {
+          ready = wireFrameDocument(nextFrame, destination);
+        } catch (_) {
+          ready = false;
+        }
+
+        if (!ready) {
+          if (!retried) {
+            retried = true;
+            try {
+              const retryUrl = new URL(destination, initialUrl);
+              retryUrl.searchParams.set('_ndnav', String(Date.now()));
+              nextFrame.contentWindow.location.replace(retryUrl.href);
+            } catch (_) {}
+          }
+          return;
+        }
+
+        if (frame && frame !== nextFrame) frame.remove();
+        frame = nextFrame;
+        pendingFrame = null;
+
+        nextFrame.classList.remove('nd-persistent-frame-loading');
+        nextFrame.removeAttribute('aria-hidden');
+
+        document.body.classList.add('nd-persistent-browsing', 'nd-has-mini-player');
+        if (initialPage) initialPage.hidden = true;
+
+        try {
+          const loadedTitle = nextFrame.contentDocument && nextFrame.contentDocument.title;
+          if (loadedTitle) document.title = loadedTitle;
+        } catch (_) {}
+
+        expectedFrameUrl = destination;
+        if (pushHistory) {
+          history.pushState(
+            Object.assign({}, history.state, { ndPersistentUrl: destination }),
+            '',
+            destination
+          );
+        }
+
+        updateMediaSession(trackText.textContent, artistText.textContent);
+        resumeIfWanted();
+        window.scrollTo(0, 0);
       });
-      document.body.insertBefore(frame, player);
-      return frame;
+
+      document.body.insertBefore(nextFrame, player);
     }
 
     function openPersistentPage(url, pushHistory) {
@@ -983,40 +1067,13 @@
 
       const destination = new URL(url, initialUrl).href;
       wrapInitialPage();
-      ensureFrame();
       shellMode = true;
-      document.body.classList.add('nd-persistent-browsing', 'nd-has-mini-player');
       setMiniVisible(true);
 
-      // Safari can resolve an empty iframe src against the parent's newly
-      // changed URL. Navigate the iframe FIRST, then update browser history.
-      // This avoids a false "already loaded" match that leaves the frame at
-      // about:blank while the persistent player continues normally.
-      expectedFrameUrl = destination;
-      frame.hidden = false;
-
-      let loadedUrl = '';
-      try {
-        loadedUrl = frame.contentWindow && frame.contentWindow.location
-          ? frame.contentWindow.location.href
-          : '';
-      } catch (_) {}
-
-      if (loadedUrl !== destination) {
-        frame.setAttribute('src', destination);
-      }
-
-      if (pushHistory) {
-        history.pushState(
-          Object.assign({}, history.state, { ndPersistentUrl: destination }),
-          '',
-          destination
-        );
-      }
-
-      initialPage.hidden = true;
+      // Keep the current page visible until the destination has verifiably
+      // loaded. This prevents Safari from ever exposing a blank content frame.
+      loadDestinationFrame(destination, pushHistory);
       resumeIfWanted();
-      window.scrollTo(0, 0);
     }
 
     function restoreInitialPage() {
