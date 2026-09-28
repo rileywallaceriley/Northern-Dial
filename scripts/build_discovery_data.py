@@ -6,7 +6,6 @@ import json
 import re
 import unicodedata
 from pathlib import Path
-from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTISTS_PATH = ROOT / "artists.html"
@@ -135,10 +134,6 @@ def build() -> dict:
         ][:12]
         track = clean_text(first_match(r'class="track-title"[^>]*>([\s\S]*?)</div>', block))
 
-        request_href = html_lib.unescape(
-            first_match(r'class="request-link"[^>]*href="([^"]+)"', block)
-        ) or f"./index.html?request={quote(name, safe='')}"
-
         profile_href = html_lib.unescape(
             first_match(r'class="artist-page-link"[^>]*href="([^"]+)"', block)
         )
@@ -158,24 +153,33 @@ def build() -> dict:
         if len(short_bio) > 190:
             short_bio = re.sub(r"\s+\S*$", "", short_bio[:190]) + "…"
 
-        artists.append(
-            {
-                "name": name,
-                "key": key,
-                "bio": short_bio,
-                "location": location,
-                "track": track,
-                "requestHref": request_href,
-                "feature": feature,
-                "profileHref": profile_href,
-                "genres": classify_genres(signals),
-                "eras": infer_eras(signals),
-                "image": image_map.get(key, ""),
-            }
-        )
+        item = {"name": name}
+        if short_bio:
+            item["bio"] = short_bio
+        if location:
+            item["location"] = location
+        if track:
+            item["track"] = track
+        if feature:
+            item["feature"] = feature
+        if profile_href:
+            item["profileHref"] = profile_href
+
+        genres = classify_genres(signals)
+        eras = infer_eras(signals)
+        image = image_map.get(key, "")
+
+        if genres:
+            item["genres"] = genres
+        if eras:
+            item["eras"] = eras
+        if image:
+            item["image"] = image
+
+        artists.append(item)
 
     return {
-        "version": 1,
+        "version": 2,
         "count": len(artists),
         "generatedFrom": "artists.html + library_artist_images.tsv",
         "artists": artists,
