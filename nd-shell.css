@@ -559,3 +559,18 @@ body.nd-persistent-browsing #nd-initial-document {
   }
 }
 /* ND_PERSISTENT_PLAYER_CSS_END */
+
+
+/* ND_RENDER_DEFER_START
+   Let modern browsers skip layout/paint work for long below-the-fold catalogues.
+   Unsupported browsers simply ignore these rules. */
+@supports (content-visibility: auto) {
+  details[data-search],
+  .card-grid > article.card,
+  .release-card,
+  .artist-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 220px;
+  }
+}
+/* ND_RENDER_DEFER_END */
