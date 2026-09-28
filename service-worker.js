@@ -1,4 +1,4 @@
-const VERSION = 'v9';
+const VERSION = 'v10';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -24,6 +24,7 @@ const CSS_EXTENSIONS = /\.css$/i;
 const STATIC_EXTENSIONS = /\.(?:js|woff2?|ttf|otf)$/i;
 const IMAGE_EXTENSIONS = /\.(?:png|jpe?g|gif|webp|avif|svg)$/i;
 const DATA_PATHS = new Set([
+  '/discovery-data.json',
   '/artist-profile-index.json',
   '/library_artist_images.tsv',
   '/artists.html'
