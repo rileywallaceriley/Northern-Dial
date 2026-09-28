@@ -1,10 +1,4 @@
-if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker.js')
-            .then(reg => console.log('Service Worker registered'))
-            .catch(err => console.log('Service Worker registration failed'));
-    }
-
-    const audio = document.getElementById('radioStream');
+const audio = document.getElementById('radioStream');
     const playPauseBtn = document.getElementById('playPauseBtn');
     const volumeSlider = document.getElementById('volumeSlider');
     const statusText = document.getElementById('statusText');
