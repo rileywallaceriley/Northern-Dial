@@ -2,7 +2,7 @@
   const LOGO = 'https://i.imgur.com/XIAPd0N.png';
   const path = window.location.pathname;
   const isHomepage = path === '/' || path === '/index.html';
-  const isFrench = path === '/fr' || path.startsWith('/fr/');
+  const isFrench = path === '/fr' || path.startsWith('/fr/') || new URLSearchParams(window.location.search).get('lang') === 'fr';
 
 
   const root = isFrench ? '/fr/' : '/';
