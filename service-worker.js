@@ -1,4 +1,4 @@
-const VERSION = 'v8';
+const VERSION = 'v9';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -48,6 +48,9 @@ self.addEventListener('activate', event => {
       caches.keys().then(names => Promise.all(
         names.filter(name => !keep.has(name)).map(name => caches.delete(name))
       )),
+      self.registration.navigationPreload
+        ? self.registration.navigationPreload.enable()
+        : Promise.resolve(),
       self.clients.claim()
     ])
   );
@@ -92,6 +95,43 @@ async function staleWhileRevalidate(request, cacheName) {
   throw new Error('Network unavailable and no cached response exists.');
 }
 
+async function navigationRace(request, preloadResponse, cacheName, delayMs = 350) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
+
+  const network = (async () => {
+    try {
+      const preloaded = preloadResponse ? await preloadResponse : null;
+      const response = preloaded || await fetch(request, { cache: 'no-store' });
+      if (response && response.ok) {
+        cache.put(request, response.clone());
+      }
+      return response;
+    } catch (_) {
+      return null;
+    }
+  })();
+
+  if (!cached) {
+    const response = await network;
+    if (response) return response;
+    throw new Error('Navigation failed and no cached page exists.');
+  }
+
+  const delayedCache = new Promise(resolve => {
+    setTimeout(() => resolve(cached), delayMs);
+  });
+
+  const response = await Promise.race([
+    network.then(result => result || cached),
+    delayedCache
+  ]);
+
+  // The network promise keeps running after a cached response wins the race,
+  // refreshing PAGE_CACHE for the next navigation.
+  return response;
+}
+
 self.addEventListener('fetch', event => {
   const request = event.request;
 
@@ -108,7 +148,7 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(
-      networkFirst(request, PAGE_CACHE, { cache: 'no-store' })
+      navigationRace(request, event.preloadResponse, PAGE_CACHE, 350)
         .catch(() => caches.match(request))
         .catch(() => caches.match('./index.html'))
     );
