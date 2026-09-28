@@ -9,6 +9,10 @@ const localAudio = document.getElementById('radioStream');
 
     const audio = persistentController?.audio || localAudio;
 
+    if (!persistentController && localAudio) {
+        window.ND_SHARED_AUDIO = localAudio;
+    }
+
     // A framed homepage must never own a second live stream. Safari begins
     // resolving <source> elements before scripts run, so explicitly neutralize
     // the local audio element as soon as we attach to the parent's player.
