@@ -686,6 +686,8 @@
     let homeObserver = null;
     let shellMode = false;
     let expectedFrameUrl = '';
+    let userWantsPlayback = !audio.paused && !audio.ended;
+    let resumeTimer = null;
 
     function setPlayerHeight() {
       const height = Math.ceil(player.getBoundingClientRect().height || 76);
@@ -723,6 +725,29 @@
       playIcon.textContent = playing ? '❚❚' : '▶';
       statusText.textContent = playing ? 'Northern Dial · Live' : 'Northern Dial · Paused';
       player.classList.toggle('is-playing', playing);
+    }
+
+    async function resumeIfWanted() {
+      if (!userWantsPlayback || !audio.paused) return;
+      if (resumeTimer) {
+        window.clearTimeout(resumeTimer);
+        resumeTimer = null;
+      }
+      try {
+        await audio.play();
+        renderPlaybackState();
+      } catch (_) {
+        statusText.textContent = 'Northern Dial · Tap play to resume';
+      }
+    }
+
+    function scheduleResume() {
+      if (!shellMode || !userWantsPlayback) return;
+      if (resumeTimer) window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(() => {
+        resumeTimer = null;
+        resumeIfWanted();
+      }, 80);
     }
 
     async function loadArtistLookup() {
@@ -779,8 +804,14 @@
           album: 'Northern Dial Radio',
           artwork: [{ src: LOGO, sizes: '512x512', type: 'image/png' }]
         });
-        navigator.mediaSession.setActionHandler('play', () => audio.play());
-        navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+        navigator.mediaSession.setActionHandler('play', () => {
+          userWantsPlayback = true;
+          audio.play();
+        });
+        navigator.mediaSession.setActionHandler('pause', () => {
+          userWantsPlayback = false;
+          audio.pause();
+        });
       } catch (_) {}
     }
 
@@ -802,17 +833,34 @@
 
     playButton.addEventListener('click', async () => {
       try {
-        if (audio.paused) await audio.play();
-        else audio.pause();
+        if (audio.paused) {
+          userWantsPlayback = true;
+          await audio.play();
+        } else {
+          userWantsPlayback = false;
+          audio.pause();
+        }
       } catch (_) {
         statusText.textContent = 'Northern Dial · Tap again to play';
       }
       renderPlaybackState();
     });
 
-    audio.addEventListener('playing', renderPlaybackState);
-    audio.addEventListener('pause', renderPlaybackState);
-    audio.addEventListener('ended', renderPlaybackState);
+    audio.addEventListener('playing', () => {
+      userWantsPlayback = true;
+      renderPlaybackState();
+    });
+
+    audio.addEventListener('pause', () => {
+      renderPlaybackState();
+      if (shellMode && userWantsPlayback) scheduleResume();
+      else if (!shellMode) userWantsPlayback = false;
+    });
+
+    audio.addEventListener('ended', () => {
+      renderPlaybackState();
+      if (shellMode && userWantsPlayback) scheduleResume();
+    });
     audio.addEventListener('error', () => {
       statusText.textContent = 'Northern Dial · Connection error';
       renderPlaybackState();
@@ -922,6 +970,7 @@
           }
 
           updateMediaSession(trackText.textContent, artistText.textContent);
+          resumeIfWanted();
         } catch (_) {}
       });
       document.body.insertBefore(frame, player);
@@ -929,6 +978,8 @@
     }
 
     function openPersistentPage(url, pushHistory) {
+      const wasPlaying = !audio.paused && !audio.ended;
+      if (wasPlaying) userWantsPlayback = true;
       wrapInitialPage();
       ensureFrame();
       shellMode = true;
@@ -943,6 +994,7 @@
       }
 
       if (frame.src !== url) frame.src = url;
+      resumeIfWanted();
       window.scrollTo(0, 0);
     }
 
@@ -998,6 +1050,10 @@
       if (!audio.paused && !audio.ended) {
         openPersistentPage(window.location.href, false);
       }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && shellMode && userWantsPlayback) resumeIfWanted();
     });
 
     profileLink.addEventListener('click', (event) => {
