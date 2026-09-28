@@ -980,20 +980,41 @@
     function openPersistentPage(url, pushHistory) {
       const wasPlaying = !audio.paused && !audio.ended;
       if (wasPlaying) userWantsPlayback = true;
+
+      const destination = new URL(url, initialUrl).href;
       wrapInitialPage();
       ensureFrame();
       shellMode = true;
       document.body.classList.add('nd-persistent-browsing', 'nd-has-mini-player');
       setMiniVisible(true);
-      initialPage.hidden = true;
-      frame.hidden = false;
-      expectedFrameUrl = url;
 
-      if (pushHistory) {
-        history.pushState(Object.assign({}, history.state, { ndPersistentUrl: url }), '', url);
+      // Safari can resolve an empty iframe src against the parent's newly
+      // changed URL. Navigate the iframe FIRST, then update browser history.
+      // This avoids a false "already loaded" match that leaves the frame at
+      // about:blank while the persistent player continues normally.
+      expectedFrameUrl = destination;
+      frame.hidden = false;
+
+      let loadedUrl = '';
+      try {
+        loadedUrl = frame.contentWindow && frame.contentWindow.location
+          ? frame.contentWindow.location.href
+          : '';
+      } catch (_) {}
+
+      if (loadedUrl !== destination) {
+        frame.setAttribute('src', destination);
       }
 
-      if (frame.src !== url) frame.src = url;
+      if (pushHistory) {
+        history.pushState(
+          Object.assign({}, history.state, { ndPersistentUrl: destination }),
+          '',
+          destination
+        );
+      }
+
+      initialPage.hidden = true;
       resumeIfWanted();
       window.scrollTo(0, 0);
     }
