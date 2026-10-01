@@ -4809,6 +4809,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/before-drake-canadian-hip-hop-history-part-1.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/canadian-albums-october-2026.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/canadian-artists-like-daniel-caesar.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/canadian-songwriters-hall-of-fame-2026.html</loc>
     <priority>0.7</priority>
   </url>
@@ -4906,6 +4918,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/tauro.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/who-is-angine-de-poitrine-polaris-2026.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -9491,21 +9507,5 @@
   <url>
     <loc>https://www.northerndial.ca/survey.html</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/who-is-angine-de-poitrine-polaris-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/canadian-albums-october-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/before-drake-canadian-hip-hop-history-part-1.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/canadian-artists-like-daniel-caesar.html</loc>
-    <lastmod>2026-10-01</lastmod>
   </url>
 </urlset>
