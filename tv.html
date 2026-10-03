@@ -47,7 +47,7 @@
     .screen-empty strong{display:block;color:var(--red);font-family:"Bebas Neue",sans-serif;font-size:clamp(2.6rem,6vw,5.5rem);font-weight:400;letter-spacing:.06em}
     .screen-empty p{max-width:540px;margin:10px auto 0;color:#c9c4b9;line-height:1.5}
     .screen-empty[hidden]{display:none}
-    .tv-poster{position:absolute;inset:0;z-index:4;display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(22px,5vw,54px);cursor:pointer;border:0;width:100%;text-align:left;color:#fff;background:
+    .tv-poster{position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;padding:clamp(22px,5vw,54px);cursor:pointer;border:0;width:100%;text-align:center;color:#fff;background:
       radial-gradient(circle at 82% 24%,rgba(204,51,51,.34) 0 2px,transparent 3px),
       repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px),
       linear-gradient(118deg,#111214 0%,#191919 58%,#8B2323 100%)}
@@ -120,8 +120,6 @@
             <div id="player" aria-label="Northern Dial TV video player"></div>
             <button class="tv-poster" id="tvPoster" type="button" aria-label="Start Northern Dial TV">
               <span class="tv-poster-copy">
-                <span class="tv-poster-kicker">Northern Dial presents</span>
-                <span class="tv-poster-title">Northern Dial TV</span>
                 <span class="tv-poster-play"><span aria-hidden="true">▶</span> Start Watching</span>
               </span>
             </button>
