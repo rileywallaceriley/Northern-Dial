@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Northern Dial TV: Canadian music videos, curated by Northern Dial.">
+  <title>Northern Dial TV | Canadian Music Videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171717;--paper:#eee5d0;--paper2:#e3d7bd;--red:#c33;--red2:#8b2323;--white:#fff;--muted:#b8b3a8}
+    *{box-sizing:border-box}
+    html{background:var(--ink)}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Roboto Condensed",sans-serif}
+    a{color:inherit}
+    button{font:inherit}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(23,23,23,.97);border-bottom:3px solid var(--red);backdrop-filter:blur(10px)}
+    .topbar-inner{max-width:1500px;margin:auto;min-height:64px;padding:8px 22px;display:flex;align-items:center;gap:20px}
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:#fff;min-width:0}
+    .brand img{width:150px;max-height:46px;object-fit:contain;filter:grayscale(1) brightness(0) invert(1)}
+    .tv-badge{background:var(--red);color:#fff;font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.13em;padding:5px 8px;line-height:1;text-transform:uppercase}
+    .nav{margin-left:auto;display:flex;align-items:center;gap:5px}
+    .nav a{color:#fff;text-decoration:none;font-family:"Oswald",sans-serif;font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;padding:10px 11px}
+    .nav a:hover,.nav a:focus{color:var(--red)}
+    .nav .active{color:var(--red)}
+    .hero{background:var(--ink);color:#fff;border-bottom:8px solid var(--red);overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;inset:0;opacity:.08;background:repeating-linear-gradient(0deg,transparent 0 4px,#fff 5px);pointer-events:none}
+    .hero-inner{max-width:1500px;margin:auto;padding:38px 22px 46px;position:relative}
+    .eyebrow{color:var(--red);font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+    h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(4.6rem,12vw,10rem);letter-spacing:.025em;line-height:.78;margin:0;text-transform:uppercase}
+    h1 span{color:var(--red)}
+    .hero-copy{margin:22px 0 0;max-width:690px;color:#d5d0c5;font-size:1.08rem;line-height:1.55}
+    .broadcast{max-width:1500px;margin:auto;padding:28px 22px 54px}
+    .broadcast-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;align-items:start}
+    .screen-wrap{background:#0b0b0b;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--red);position:relative}
+    .screen-top{display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;padding:10px 12px;font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+    .live-dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(204,51,51,.15);animation:pulse 1.8s infinite}
+    @keyframes pulse{50%{box-shadow:0 0 0 9px rgba(204,51,51,0)}}
+    .screen{aspect-ratio:16/9;background:#050505;position:relative}
+    #player{position:absolute;inset:0;width:100%;height:100%}
+    .screen-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;color:#fff;background:radial-gradient(circle at center,#282828,#050505)}
+    .screen-empty strong{display:block;color:var(--red);font-family:"Bebas Neue",sans-serif;font-size:clamp(2.6rem,6vw,5.5rem);font-weight:400;letter-spacing:.06em}
+    .screen-empty p{max-width:540px;margin:10px auto 0;color:#c9c4b9;line-height:1.5}
+    .screen-empty[hidden]{display:none}
+    .screen-bottom{background:var(--ink);color:#fff;padding:14px 15px;display:flex;align-items:center;gap:12px}
+    .screen-bottom .label{color:var(--red);font-family:"Oswald",sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
+    .ticker{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+    .panel{background:var(--ink);color:#fff;border:4px solid var(--ink);box-shadow:7px 7px 0 var(--red)}
+    .panel-head{border-bottom:3px solid var(--red);padding:15px 17px}
+    .panel-kicker{color:var(--red);font-family:"Oswald",sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .panel h2{font-family:"Bebas Neue",sans-serif;font-size:2.2rem;font-weight:400;letter-spacing:.04em;line-height:1;margin:5px 0 0}
+    .now{padding:17px}
+    .now-title{font-family:"Oswald",sans-serif;font-size:1.25rem;font-weight:700;line-height:1.25}
+    .now-channel{color:#bdb7aa;margin-top:5px;font-size:.92rem}
+    .counter{margin-top:14px;color:var(--red);font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+    .control{appearance:none;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer;font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;padding:11px 8px;text-transform:uppercase}
+    .control:hover,.control:focus{background:var(--red);border-color:var(--red)}
+    .control.primary{grid-column:1/-1;background:var(--red);border-color:var(--red)}
+    .control.primary:hover{background:var(--red2)}
+    .panel-note{border-top:1px solid #3c3c3c;color:#aaa398;font-size:.83rem;line-height:1.45;padding:14px 17px}
+    .manifesto{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px;border-top:5px solid var(--ink);padding-top:25px}
+    .manifesto h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.6rem,6vw,4.8rem);font-weight:400;line-height:.95;margin:0;letter-spacing:.03em}
+    .manifesto h2 span{color:var(--red)}
+    .manifesto p{font-size:1.04rem;line-height:1.65;margin:0;max-width:650px}
+    .mode-switch{margin-top:18px;display:inline-flex;gap:0;border:3px solid var(--ink)}
+    .mode-switch a{padding:11px 16px;text-decoration:none;font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .mode-switch .selected{background:var(--ink);color:#fff}
+    .mode-switch a:not(.selected):hover{background:var(--red);color:#fff}
+    footer{background:var(--ink);color:#aaa398;border-top:4px solid var(--red);padding:24px 22px;text-align:center;font-size:.82rem;letter-spacing:.04em}
+    @media(max-width:900px){
+      .broadcast-grid{grid-template-columns:1fr}.panel{box-shadow:5px 5px 0 var(--red)}
+      .manifesto{grid-template-columns:1fr}.nav a:not(.active){display:none}
+      .brand img{width:128px}.hero-inner{padding-top:30px}h1{font-size:clamp(4.5rem,23vw,7.5rem)}
+    }
+    @media(max-width:520px){
+      .topbar-inner{padding-inline:14px}.hero-inner,.broadcast{padding-left:14px;padding-right:14px}
+      .brand img{width:110px}.tv-badge{font-size:.68rem}.screen-wrap{border-width:4px;box-shadow:6px 6px 0 var(--red)}
+      .screen-bottom{font-size:.86rem}.panel{margin-top:6px}.manifesto{margin-top:34px}
+    }
+    @media(prefers-reduced-motion:reduce){.live-dot{animation:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="Northern Dial home">
+        <img src="northern-dial-logo.png" alt="Northern Dial">
+        <span class="tv-badge">TV</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./">Radio</a>
+        <a href="discover.html">Discover</a>
+        <a href="blog/">Blog</a>
+        <a class="active" href="tv.html" aria-current="page">TV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Northern Dial presents</div>
+        <h1>Northern Dial <span>TV</span></h1>
+        <p class="hero-copy">Canadian music, on screen. Official videos, new discoveries and artists already in the Northern Dial orbit, programmed as one continuous channel.</p>
+      </div>
+    </section>
+
+    <section class="broadcast">
+      <div class="broadcast-grid">
+        <div class="screen-wrap">
+          <div class="screen-top"><span class="live-dot" aria-hidden="true"></span><span>Now screening</span></div>
+          <div class="screen">
+            <div id="player" aria-label="Northern Dial TV video player"></div>
+            <div class="screen-empty" id="screenEmpty">
+              <div>
+                <strong>Signal Incoming</strong>
+                <p>The TV room is built. Add the Northern Dial YouTube playlist ID to the page configuration to start the broadcast.</p>
+              </div>
+            </div>
+          </div>
+          <div class="screen-bottom">
+            <span class="label">On screen</span>
+            <span class="ticker" id="ticker">Northern Dial TV</span>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Northern Dial TV controls">
+          <div class="panel-head">
+            <div class="panel-kicker">Continuous Canadian music</div>
+            <h2>Channel Control</h2>
+          </div>
+          <div class="now">
+            <div class="now-title" id="nowTitle">Northern Dial TV</div>
+            <div class="now-channel" id="nowChannel">Curated by Northern Dial</div>
+            <div class="counter" id="counter">Waiting for signal</div>
+            <div class="controls">
+              <button class="control" id="prevBtn" type="button">← Previous</button>
+              <button class="control" id="nextBtn" type="button">Next →</button>
+              <button class="control primary" id="shuffleBtn" type="button" aria-pressed="false">Shuffle: Off</button>
+            </div>
+          </div>
+          <div class="panel-note">Use the YouTube controls for play, pause, volume, captions and fullscreen. Northern Dial controls the programming around the player, not over it.</div>
+        </aside>
+      </div>
+
+      <div class="manifesto">
+        <h2>Canada,<br><span>Expanded.</span></h2>
+        <div>
+          <p>Northern Dial TV is the visual side of the station: a running feed of Canadian artists without turning discovery into homework. Put it on, let it roll and find something you did not know you needed.</p>
+          <div class="mode-switch" aria-label="Northern Dial listening modes">
+            <a href="./">24/7 Radio</a>
+            <a href="tv.html" class="selected">Northern Dial TV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Northern Dial · All Killer, All CanCon</footer>
+
+  <script>
+    // Paste the playlist ID here when the first Northern Dial TV playlist is locked.
+    // For private testing you can also open tv.html?playlist=YOUR_PLAYLIST_ID.
+    const DEFAULT_PLAYLIST_ID = "";
+    const params = new URLSearchParams(location.search);
+    const PLAYLIST_ID = params.get("playlist") || DEFAULT_PLAYLIST_ID;
+
+    let player;
+    let shuffleOn = false;
+    let titleTimer;
+
+    const empty = document.getElementById("screenEmpty");
+    const ticker = document.getElementById("ticker");
+    const nowTitle = document.getElementById("nowTitle");
+    const nowChannel = document.getElementById("nowChannel");
+    const counter = document.getElementById("counter");
+
+    function updateMetadata(){
+      if(!player || typeof player.getVideoData !== "function") return;
+      const data = player.getVideoData() || {};
+      const title = data.title || "Northern Dial TV";
+      const author = data.author || "Curated by Northern Dial";
+      ticker.textContent = title;
+      nowTitle.textContent = title;
+      nowChannel.textContent = author;
+      const list = player.getPlaylist ? (player.getPlaylist() || []) : [];
+      const index = player.getPlaylistIndex ? player.getPlaylistIndex() : -1;
+      counter.textContent = list.length && index >= 0 ? `Video ${index + 1} of ${list.length}` : "Northern Dial TV";
+    }
+
+    function onYouTubeIframeAPIReady(){
+      if(!PLAYLIST_ID) return;
+      empty.hidden = true;
+      player = new YT.Player("player",{
+        width:"100%",height:"100%",
+        playerVars:{
+          listType:"playlist",
+          list:PLAYLIST_ID,
+          rel:0,
+          modestbranding:1,
+          playsinline:1
+        },
+        events:{
+          onReady:function(){ updateMetadata(); titleTimer=setInterval(updateMetadata,1200); },
+          onStateChange:function(){ updateMetadata(); }
+        }
+      });
+    }
+
+    document.getElementById("prevBtn").addEventListener("click",()=>player && player.previousVideo && player.previousVideo());
+    document.getElementById("nextBtn").addEventListener("click",()=>player && player.nextVideo && player.nextVideo());
+    document.getElementById("shuffleBtn").addEventListener("click",function(){
+      if(!player || !player.setShuffle) return;
+      shuffleOn=!shuffleOn;
+      player.setShuffle(shuffleOn);
+      this.textContent="Shuffle: "+(shuffleOn?"On":"Off");
+      this.setAttribute("aria-pressed",String(shuffleOn));
+    });
+
+    if(PLAYLIST_ID){
+      const tag=document.createElement("script");
+      tag.src="https://www.youtube.com/iframe_api";
+      document.head.appendChild(tag);
+    }
+  </script>
+</body>
+</html>
