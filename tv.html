@@ -70,6 +70,9 @@
     .now{padding:17px}
     .now-title{font-family:"Oswald",sans-serif;font-size:1.25rem;font-weight:700;line-height:1.25}
     .now-channel{color:#bdb7aa;margin-top:5px;font-size:.92rem}
+    .artist-link{display:inline-block;margin-top:14px;padding:10px 14px;border:2px solid var(--red);color:#fff;text-decoration:none;font-family:"Oswald",sans-serif;font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .artist-link:hover,.artist-link:focus-visible{background:var(--red);outline-offset:3px}
+    .artist-link[hidden]{display:none}
     .counter{margin-top:14px;color:var(--red);font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
     .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
     .control{appearance:none;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer;font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;padding:11px 8px;text-transform:uppercase}
@@ -141,6 +144,7 @@
           <div class="now">
             <div class="now-title" id="nowTitle">Northern Dial TV</div>
             <div class="now-channel" id="nowChannel">Curated by Northern Dial</div>
+            <a class="artist-link" id="tvArtistLink" target="_blank" rel="noopener noreferrer" hidden>Meet the artist</a>
             <div class="counter" id="counter">Waiting for signal</div>
             <div class="controls">
               <button class="control" id="playBtn" type="button" disabled>Play</button>
@@ -187,6 +191,49 @@
     const nowChannel = document.getElementById("nowChannel");
     const counter = document.getElementById("counter");
     const poster = document.getElementById("tvPoster");
+    const artistLink = document.getElementById("tvArtistLink");
+    let artistProfiles = [];
+
+    function normalizeArtist(value){
+      return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase()
+        .replace(/œ/g,"oe").replace(/æ/g,"ae").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim();
+    }
+
+    function matchVideoArtist(data){
+      const title = String(data.title || "");
+      // Station idents are not artist videos, even when uploaded by a musician.
+      if(/northern dial/i.test(title)) return null;
+      const leadingArtist = normalizeArtist(title.split(/\s+[-–—|]\s+|\s*:\s*/)[0]);
+      const channelArtist = normalizeArtist(String(data.author || "").replace(/\s*[-–—]?\s*(?:official(?:\s+(?:music|youtube))?(?:\s+channel)?|vevo|topic)\s*$/i,""));
+      const exact = artistProfiles.find(profile => profile.key === leadingArtist)
+        || artistProfiles.find(profile => profile.key === channelArtist);
+      if(exact) return exact;
+      // VEVO channel names often remove spaces; accept only an unambiguous match.
+      const compactMatches = artistProfiles.filter(profile => profile.key.replace(/ /g,"") === channelArtist.replace(/ /g,""));
+      return compactMatches.length === 1 ? compactMatches[0] : null;
+    }
+
+    function updateArtistLink(data){
+      const artist = matchVideoArtist(data);
+      artistLink.hidden = !artist;
+      if(!artist){
+        artistLink.removeAttribute("href");
+        artistLink.removeAttribute("aria-label");
+        return;
+      }
+      artistLink.href = artist.href;
+      artistLink.setAttribute("aria-label",`Meet ${artist.name} on Northern Dial (opens in a new tab)`);
+    }
+
+    fetch("/artist-profile-index.json").then(response => {
+      if(!response.ok) throw new Error("Artist directory unavailable");
+      return response.json();
+    }).then(index => {
+      artistProfiles = Object.entries(index)
+        .filter(([name,href]) => name && typeof href === "string" && /^\/artists\/[a-z0-9-]+\.html$/.test(href))
+        .map(([name,href]) => ({name,href,key:normalizeArtist(name)}));
+      updateMetadata();
+    }).catch(() => { artistProfiles = []; artistLink.hidden = true; });
 
     const playBtn = document.getElementById("playBtn");
     const muteBtn = document.getElementById("muteBtn");
@@ -208,6 +255,7 @@
       ticker.textContent = title;
       nowTitle.textContent = title;
       nowChannel.textContent = author;
+      updateArtistLink(data);
       const list = player.getPlaylist ? (player.getPlaylist() || []) : [];
       const index = player.getPlaylistIndex ? player.getPlaylistIndex() : -1;
       counter.textContent = list.length && index >= 0 ? `Video ${index + 1} of ${list.length}` : "Northern Dial TV";
@@ -264,8 +312,15 @@
       updateControls();
     });
 
-    document.getElementById("prevBtn").addEventListener("click",()=>player && player.previousVideo && player.previousVideo());
-    document.getElementById("nextBtn").addEventListener("click",()=>player && player.nextVideo && player.nextVideo());
+    function changeVideo(direction){
+      if(!playerReady) return;
+      artistLink.hidden = true;
+      artistLink.removeAttribute("href");
+      if(direction === "previous") player.previousVideo();
+      else player.nextVideo();
+    }
+    document.getElementById("prevBtn").addEventListener("click",()=>changeVideo("previous"));
+    document.getElementById("nextBtn").addEventListener("click",()=>changeVideo("next"));
     document.getElementById("shuffleBtn").addEventListener("click",function(){
       if(!player || !player.setShuffle) return;
       shuffleOn=!shuffleOn;
