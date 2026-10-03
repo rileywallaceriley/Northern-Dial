@@ -73,6 +73,7 @@
     .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
     .control{appearance:none;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer;font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;padding:11px 8px;text-transform:uppercase}
     .control:hover,.control:focus{background:var(--red);border-color:var(--red)}
+    .control:disabled{opacity:.5;cursor:wait}
     .control.primary{grid-column:1/-1;background:var(--red);border-color:var(--red)}
     .control.primary:hover{background:var(--red2)}
     .panel-note{border-top:1px solid #3c3c3c;color:#aaa398;font-size:.83rem;line-height:1.45;padding:14px 17px}
@@ -143,12 +144,14 @@
             <div class="now-channel" id="nowChannel">Curated by Northern Dial</div>
             <div class="counter" id="counter">Waiting for signal</div>
             <div class="controls">
+              <button class="control" id="playBtn" type="button" disabled>Play</button>
+              <button class="control" id="muteBtn" type="button" aria-pressed="false" disabled>Mute</button>
               <button class="control" id="prevBtn" type="button">← Previous</button>
               <button class="control" id="nextBtn" type="button">Next →</button>
               <button class="control primary" id="shuffleBtn" type="button" aria-pressed="false">Shuffle: Off</button>
             </div>
           </div>
-          <div class="panel-note">Use the YouTube controls for play, pause, volume, captions and fullscreen. Northern Dial controls the programming around the player, not over it.</div>
+          <div class="panel-note">Use the channel buttons for playback and your device controls for volume.</div>
         </aside>
       </div>
 
@@ -177,6 +180,7 @@
     let player;
     let shuffleOn = false;
     let titleTimer;
+    let playerReady = false;
 
     const empty = document.getElementById("screenEmpty");
     const ticker = document.getElementById("ticker");
@@ -184,6 +188,18 @@
     const nowChannel = document.getElementById("nowChannel");
     const counter = document.getElementById("counter");
     const poster = document.getElementById("tvPoster");
+
+    const playBtn = document.getElementById("playBtn");
+    const muteBtn = document.getElementById("muteBtn");
+
+    function updateControls(){
+      if(!playerReady) return;
+      const active = player.getPlayerState() === YT.PlayerState.PLAYING;
+      const muted = player.isMuted();
+      playBtn.textContent = active ? "Pause" : "Play";
+      muteBtn.textContent = muted ? "Unmute" : "Mute";
+      muteBtn.setAttribute("aria-pressed",String(muted));
+    }
 
     function updateMetadata(){
       if(!player || typeof player.getVideoData !== "function") return;
@@ -207,22 +223,45 @@
           listType:"playlist",
           list:PLAYLIST_ID,
           rel:0,
-          modestbranding:1,
+          controls:0,
+          fs:0,
+          iv_load_policy:3,
           playsinline:1
         },
         events:{
-          onReady:function(){ updateMetadata(); titleTimer=setInterval(updateMetadata,1200); },
+          onReady:function(){
+            playerReady = true;
+            playBtn.disabled = false;
+            muteBtn.disabled = false;
+            updateMetadata();
+            updateControls();
+            titleTimer=setInterval(()=>{ updateMetadata(); updateControls(); },1200);
+          },
           onStateChange:function(event){
             if(event.data === YT.PlayerState.PLAYING && window.NDPlayer && window.NDPlayer.isPlaying()) window.NDPlayer.pause();
             updateMetadata();
+            updateControls();
           }
         }
       });
     }
 
     poster.addEventListener("click",()=>{
+      if(!playerReady) return;
       poster.hidden = true;
-      if(player && player.playVideo) player.playVideo();
+      player.playVideo();
+    });
+
+    playBtn.addEventListener("click",()=>{
+      if(!playerReady) return;
+      if(player.getPlayerState() === YT.PlayerState.PLAYING) player.pauseVideo();
+      else { poster.hidden = true; player.playVideo(); }
+    });
+    muteBtn.addEventListener("click",()=>{
+      if(!playerReady) return;
+      if(player.isMuted()) player.unMute();
+      else player.mute();
+      updateControls();
     });
 
     document.getElementById("prevBtn").addEventListener("click",()=>player && player.previousVideo && player.previousVideo());
