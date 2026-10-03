@@ -1122,6 +1122,19 @@ body {
         color: #CC3333 !important;
     }
 }
+/* ND_HOME_TV_PROMO_CSS_START */
+.home-tv-promo{margin:0 0 38px;background:#171717;border:5px solid #CC3333;border-radius:12px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.2)}
+.home-tv-promo a{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);min-height:230px;color:#fff;text-decoration:none}
+.home-tv-art{min-height:230px;background:linear-gradient(90deg,rgba(23,23,23,.05),rgba(23,23,23,.55)),url('/assets/northern-dial-home-hero.jpg?v=20260914c') 72% center/cover no-repeat;position:relative}
+.home-tv-art:after{content:'TV';position:absolute;left:24px;bottom:18px;background:#CC3333;color:#fff;font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;padding:7px 10px}
+.home-tv-copy{display:flex;flex-direction:column;justify-content:center;padding:28px}
+.home-tv-kicker{color:#CC3333;font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}
+.home-tv-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:400;letter-spacing:.04em;line-height:.9;margin:0 0 12px;text-transform:uppercase}
+.home-tv-copy p{color:#d7d2c7;font-size:1rem;line-height:1.5;margin:0 0 18px}
+.home-tv-cta{align-self:flex-start;background:#CC3333;border:2px solid #fff;color:#fff;font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;padding:10px 14px;text-transform:uppercase}
+.home-tv-promo a:hover .home-tv-cta,.home-tv-promo a:focus .home-tv-cta{background:#8B2323}
+@media(max-width:760px){.home-tv-promo{margin:0 0 30px}.home-tv-promo a{grid-template-columns:1fr}.home-tv-art{min-height:190px}.home-tv-copy{padding:23px 20px 25px}}
+/* ND_HOME_TV_PROMO_CSS_END */
 </style>
 
   <link rel="stylesheet" href="/nd-shell.css?v=20260927e">
@@ -1191,6 +1204,7 @@ body {
         <a href="artists.html">Artists</a>
         <a href="discover.html">Discover</a>
         <a href="new-releases.html">New Releases</a>
+        <a href="tv.html">TV</a>
         <a href="new-canadian-artists.html">New Artists</a>
         <a href="blog/">Blog</a>
         <div class="nd-home-more">
@@ -1203,6 +1217,18 @@ body {
         </div>
     </div>
 </nav>
+
+<section class="home-tv-promo" aria-labelledby="home-tv-title">
+    <a href="tv.html">
+        <div class="home-tv-art" aria-hidden="true"></div>
+        <div class="home-tv-copy">
+            <div class="home-tv-kicker">New on Northern Dial</div>
+            <h2 id="home-tv-title">Northern Dial TV</h2>
+            <p>Canadian music, on screen. Put on the channel and let the next discovery find you.</p>
+            <span class="home-tv-cta">Watch Northern Dial TV →</span>
+        </div>
+    </a>
+</section>
 
 <div id="about" class="content-columns">
     <div class="column">
