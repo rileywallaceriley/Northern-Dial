@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/nd-shell.css?v=20260927e">
   <link rel="stylesheet" href="/nd-banner.css?v=20260914a">
-  <script src="/nd-shell.js?v=20260927e" defer></script>
+  <script src="/nd-shell.js?v=20261002a" defer></script>
   <style>
     :root{--ink:#171717;--paper:#eee5d0;--paper2:#e3d7bd;--red:#c33;--red2:#8b2323;--white:#fff;--muted:#b8b3a8}
     *{box-sizing:border-box}
@@ -47,6 +47,17 @@
     .screen-empty strong{display:block;color:var(--red);font-family:"Bebas Neue",sans-serif;font-size:clamp(2.6rem,6vw,5.5rem);font-weight:400;letter-spacing:.06em}
     .screen-empty p{max-width:540px;margin:10px auto 0;color:#c9c4b9;line-height:1.5}
     .screen-empty[hidden]{display:none}
+    .tv-poster{position:absolute;inset:0;z-index:4;display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(22px,5vw,54px);cursor:pointer;border:0;width:100%;text-align:left;color:#fff;background:
+      linear-gradient(90deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.48) 48%,rgba(10,10,10,.08) 75%),
+      linear-gradient(0deg,rgba(10,10,10,.72),rgba(10,10,10,.02) 65%),
+      url('/assets/northern-dial-home-hero.jpg?v=20260914c') 72% center/cover no-repeat}
+    .tv-poster:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 70px rgba(0,0,0,.28);pointer-events:none}
+    .tv-poster-copy{position:relative;z-index:1;max-width:620px}
+    .tv-poster-kicker{color:var(--red);font-family:"Oswald",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .tv-poster-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.3rem,8vw,7rem);font-weight:400;letter-spacing:.035em;line-height:.82;margin:8px 0 15px;text-transform:uppercase;text-shadow:0 3px 18px rgba(0,0,0,.45)}
+    .tv-poster-play{display:inline-flex;align-items:center;gap:10px;background:var(--red);border:2px solid #fff;padding:11px 16px;font-family:"Oswald",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:5px 5px 0 rgba(0,0,0,.55)}
+    .tv-poster:hover .tv-poster-play,.tv-poster:focus .tv-poster-play{background:var(--red2)}
+    .tv-poster:focus-visible{outline:4px solid #fff;outline-offset:-7px}
     .screen-bottom{background:var(--ink);color:#fff;padding:14px 15px;display:flex;align-items:center;gap:12px}
     .screen-bottom .label{color:var(--red);font-family:"Oswald",sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
     .ticker{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
@@ -104,11 +115,15 @@
           <div class="screen-top"><span class="live-dot" aria-hidden="true"></span><span>Now screening</span></div>
           <div class="screen">
             <div id="player" aria-label="Northern Dial TV video player"></div>
-            <div class="screen-empty" id="screenEmpty">
-              <div>
-                <strong>Signal Incoming</strong>
-                <p>The TV room is built. Add the Northern Dial YouTube playlist ID to the page configuration to start the broadcast.</p>
-              </div>
+            <button class="tv-poster" id="tvPoster" type="button" aria-label="Start Northern Dial TV">
+              <span class="tv-poster-copy">
+                <span class="tv-poster-kicker">Northern Dial presents</span>
+                <span class="tv-poster-title">Northern Dial TV</span>
+                <span class="tv-poster-play"><span aria-hidden="true">▶</span> Start Watching</span>
+              </span>
+            </button>
+            <div class="screen-empty" id="screenEmpty" hidden>
+              <div><strong>Signal Incoming</strong><p>Northern Dial TV is getting the next video ready.</p></div>
             </div>
           </div>
           <div class="screen-bottom">
@@ -167,6 +182,7 @@
     const nowTitle = document.getElementById("nowTitle");
     const nowChannel = document.getElementById("nowChannel");
     const counter = document.getElementById("counter");
+    const poster = document.getElementById("tvPoster");
 
     function updateMetadata(){
       if(!player || typeof player.getVideoData !== "function") return;
@@ -202,6 +218,11 @@
         }
       });
     }
+
+    poster.addEventListener("click",()=>{
+      poster.hidden = true;
+      if(player && player.playVideo) player.playVideo();
+    });
 
     document.getElementById("prevBtn").addEventListener("click",()=>player && player.previousVideo && player.previousVideo());
     document.getElementById("nextBtn").addEventListener("click",()=>player && player.nextVideo && player.nextVideo());
