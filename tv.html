@@ -148,7 +148,7 @@
               <button class="control" id="muteBtn" type="button" aria-pressed="false" disabled>Mute</button>
               <button class="control" id="prevBtn" type="button">← Previous</button>
               <button class="control" id="nextBtn" type="button">Next →</button>
-              <button class="control primary" id="shuffleBtn" type="button" aria-pressed="false">Shuffle: Off</button>
+              <button class="control primary" id="shuffleBtn" type="button" aria-pressed="true">Shuffle: On</button>
             </div>
           </div>
           <div class="panel-note">Use the channel buttons for playback and your device controls for volume.</div>
@@ -178,7 +178,7 @@
     const PLAYLIST_ID = params.get("playlist") || DEFAULT_PLAYLIST_ID;
 
     let player;
-    let shuffleOn = false;
+    let shuffleOn = true;
     let titleTimer;
     let playerReady = false;
 
@@ -231,6 +231,7 @@
         events:{
           onReady:function(){
             playerReady = true;
+            player.setShuffle(shuffleOn);
             playBtn.disabled = false;
             muteBtn.disabled = false;
             updateMetadata();
