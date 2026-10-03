@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/nd-shell.css?v=20260927e">
+  <script src="/nd-shell.js?v=20260927e" defer></script>
   <style>
     :root{--ink:#171717;--paper:#eee5d0;--paper2:#e3d7bd;--red:#c33;--red2:#8b2323;--white:#fff;--muted:#b8b3a8}
     *{box-sizing:border-box}
@@ -84,20 +86,7 @@
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="./" aria-label="Northern Dial home">
-        <img src="northern-dial-logo.png" alt="Northern Dial">
-        <span class="tv-badge">TV</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="./">Radio</a>
-        <a href="discover.html">Discover</a>
-        <a href="blog/">Blog</a>
-        <a class="active" href="tv.html" aria-current="page">TV</a>
-      </nav>
-    </div>
-  </header>
+  
 
   <main>
     <section class="hero">
@@ -205,7 +194,10 @@
         },
         events:{
           onReady:function(){ updateMetadata(); titleTimer=setInterval(updateMetadata,1200); },
-          onStateChange:function(){ updateMetadata(); }
+          onStateChange:function(event){
+            if(event.data === YT.PlayerState.PLAYING && window.NDPlayer && window.NDPlayer.isPlaying()) window.NDPlayer.pause();
+            updateMetadata();
+          }
         }
       });
     }
