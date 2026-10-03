@@ -20,6 +20,7 @@
         ['Artists', '/artists.html'],
         ['Discover', '/discover.html'],
         ['New Releases', '/new-releases.html'],
+        ['TV', '/tv.html'],
         ['Blog', '/blog/']
       ];
 
