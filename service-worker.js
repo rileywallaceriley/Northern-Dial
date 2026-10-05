@@ -1,4 +1,4 @@
-const VERSION = 'v10';
+const VERSION = 'v11';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -96,7 +96,7 @@ async function staleWhileRevalidate(request, cacheName) {
   throw new Error('Network unavailable and no cached response exists.');
 }
 
-async function navigationRace(request, preloadResponse, cacheName, delayMs = 350) {
+async function navigationRace(request, preloadResponse, cacheName, delayMs = 350, event) {
   const cache = await caches.open(cacheName);
   const cached = await cache.match(request);
 
@@ -105,13 +105,16 @@ async function navigationRace(request, preloadResponse, cacheName, delayMs = 350
       const preloaded = preloadResponse ? await preloadResponse : null;
       const response = preloaded || await fetch(request, { cache: 'no-store' });
       if (response && response.ok) {
-        cache.put(request, response.clone());
+        await cache.put(request, response.clone());
       }
       return response;
     } catch (_) {
       return null;
     }
   })();
+
+  // Keep the refresh alive even when the cached page wins the race.
+  if (event) event.waitUntil(network.then(() => undefined));
 
   if (!cached) {
     const response = await network;
@@ -149,7 +152,7 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(
-      navigationRace(request, event.preloadResponse, PAGE_CACHE, 350)
+      navigationRace(request, event.preloadResponse, PAGE_CACHE, 350, event)
         .catch(() => caches.match(request))
         .catch(() => caches.match('./index.html'))
     );
