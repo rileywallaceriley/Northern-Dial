@@ -137,7 +137,7 @@
       control.setAttribute('href', targetHref);
       control.setAttribute('hreflang', targetLang === 'fr' ? 'fr-CA' : 'en-CA');
       control.setAttribute('lang', targetLang);
-      control.textContent = targetLang === 'fr' ? 'English' : 'Français';
+      control.textContent = targetLang === 'fr' ? 'Français' : 'English';
       control.onclick = () => saveLanguage(targetLang);
     });
   }
