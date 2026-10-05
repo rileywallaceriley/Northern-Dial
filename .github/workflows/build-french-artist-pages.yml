@@ -5,6 +5,7 @@ on:
     paths:
       - 'artist_translation_batches/**'
       - 'build_french_artist_pages.py'
+      - 'build_french_artist_directory.py'
       - 'nd-i18n.js'
       - '.github/workflows/build-french-artist-pages.yml'
   workflow_dispatch:
@@ -28,6 +29,9 @@ jobs:
       - name: Build French artist pages
         run: python3 build_french_artist_pages.py
 
+      - name: Build crawlable French artist directory
+        run: python3 build_french_artist_directory.py
+
       - name: Validate 50-profile batch ceiling
         run: |
           python3 - <<'PY'
@@ -47,7 +51,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add fr/artists/ artists/ sitemap.xml artist_translation_audit.json
+          git add fr/artists.html fr/artists/ artists/ sitemap.xml artist_translation_audit.json
           if git diff --cached --quiet; then
             echo 'No French artist page changes to commit.'
             exit 0
