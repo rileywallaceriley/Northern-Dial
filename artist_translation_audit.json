@@ -2,6 +2,10 @@
   "batch_limit": 50,
   "batches": [
     {
+      "file": "artist_translation_batches/20261005-peaches-reviewed.json",
+      "count": 1
+    },
+    {
       "file": "artist_translation_batches/batch-001.json",
       "count": 50
     },
@@ -98,8 +102,8 @@
       "count": 12
     }
   ],
-  "translation_records": 1132,
-  "generated_pages": 1132,
+  "translation_records": 1133,
+  "generated_pages": 1133,
   "english_hreflang_updates": 0,
   "missing_source_count": 0,
   "missing_sources": []
