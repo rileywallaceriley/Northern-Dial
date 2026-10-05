@@ -1,3 +1,17 @@
+/* Google Analytics 4 - site-wide tag (G-G24PFXRPMW) */
+(function () {
+  if (window.__ndGaInstalled) return;
+  window.__ndGaInstalled = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G24PFXRPMW';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-G24PFXRPMW');
+})();
 (() => {
   const LOGO = 'https://i.imgur.com/XIAPd0N.png';
   const path = window.location.pathname;
