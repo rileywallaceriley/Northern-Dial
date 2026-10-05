@@ -6,6 +6,7 @@ on:
       - 'artist_translation_batches/**'
       - 'build_french_artist_pages.py'
       - 'build_french_artist_directory.py'
+      - 'artists.html'
       - 'nd-i18n.js'
       - '.github/workflows/build-french-artist-pages.yml'
   workflow_dispatch:
