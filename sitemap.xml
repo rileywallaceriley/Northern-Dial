@@ -9516,4 +9516,14 @@
     <loc>https://www.northerndial.ca/fr/artists.html</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/peaches.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists/peaches.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
 </urlset>
