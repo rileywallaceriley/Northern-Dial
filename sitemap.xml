@@ -3341,6 +3341,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/peaches.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/pengz.html</loc>
     <priority>0.7</priority>
   </url>
@@ -4825,11 +4829,23 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/canadian-trip-hop-classics.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/elisapie-dreams-inuktitut.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/enola-bedard.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/five-canadian-artists-northern-dial.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/five-canadian-soul-singers.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -4854,6 +4870,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/if-you-like-kaytranada-canadian-artists.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/jessie-reyez-second-catalogue.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -4942,6 +4962,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/fr/archives.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/fr/artists.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8029,6 +8053,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/fr/artists/peaches.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/fr/artists/pengz.html</loc>
     <priority>0.7</priority>
   </url>
@@ -9512,22 +9540,4 @@
     <loc>https://www.northerndial.ca/tv.html</loc>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/peaches.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/fr/artists/peaches.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-<url><loc>https://www.northerndial.ca/blog/jessie-reyez-second-catalogue.html</loc><lastmod>2026-10-07</lastmod></url>
-<url><loc>https://www.northerndial.ca/blog/elisapie-dreams-inuktitut.html</loc><lastmod>2026-10-07</lastmod></url>
-<url><loc>https://www.northerndial.ca/blog/canadian-trip-hop-classics.html</loc><lastmod>2026-10-07</lastmod></url>
-<url><loc>https://www.northerndial.ca/blog/five-canadian-soul-singers.html</loc><lastmod>2026-10-07</lastmod></url>
 </urlset>
