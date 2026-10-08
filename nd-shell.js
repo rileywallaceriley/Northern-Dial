@@ -276,7 +276,7 @@
     document.addEventListener('nd:mixchange',updateMiniAdd);
     const discoverButton = player.querySelector('.nd-mini-discover');
     function discoverArtist(artist) {
-      const name = primaryArtist(artist).trim();
+      const name = String(artist || "").trim();
       if (!name || name === 'Unknown Artist' || name === 'All Killer, All CanCon') return;
       openPersistentPage('/discover.html?artist=' + encodeURIComponent(name), true);
     }

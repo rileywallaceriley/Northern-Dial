@@ -38,6 +38,7 @@ for(const name of ['jacksoul','Lia Pappas-Kemps','Alvvays','Peaches','Charlotte 
 }
 assert.equal(engine.resolve(library,'Choc-Clair').name,'Choclair');
 assert.equal(engine.resolve(library,'DillanPonders/ BVB').name,'DillanPonders');
+assert.equal(engine.resolve(library,'Not in catalogue/ Jazz Cartier').name,'Jazz Cartier');
 assert(engine.rank(library,{taste:engine.resolve(library,'Lia Pappas-Kemps'),genre:'pop'}).length>=3);
 const cdw=engine.resolve(library,'Charlotte Day Wilson');
 assert(engine.connection(library.find(a=>a.name==='Daniel Caesar'),cdw).evidence.includes('collaborations'));

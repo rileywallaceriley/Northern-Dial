@@ -24,7 +24,7 @@
     const compact = key.replace(/([a-z])[-\s]\1/g,'$1').replace(/[^a-z0-9]/g,'');
     const aliases = compact.length>=4 ? library.filter(a=>a.key.replace(/[^a-z0-9]/g,'')===compact) : [];
     const credits = key.split(/\s*(?:,|\/|&|\bfeat\.?|\bft\.?)\s*/);
-    const credited = credits.length>1 ? library.find(a=>a.key===credits[0]) : null;
+    const credited = credits.length>1 ? credits.map(c=>library.find(a=>a.key===c || a.key.replace(/[^a-z0-9]/g,'')===c.replace(/[^a-z0-9]/g,''))).find(Boolean) : null;
     const prefix = key.length >= 4 ? library.filter(a => a.key.startsWith(key)) : [];
     const artist = exact || (aliases.length===1?aliases[0]:null) || credited || (prefix.length === 1 ? prefix[0] : null);
     if (artist) return {...artist, matched:true, excludedKey:artist.key, source:artist.name};
