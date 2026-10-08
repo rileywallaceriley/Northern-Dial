@@ -190,7 +190,7 @@ def build() -> dict:
         if len(short_bio) > 190:
             short_bio = re.sub(r"\s+\S*$", "", short_bio[:190]) + "…"
 
-        item = {"name": name}
+        item = {"name": name, "album": albums[0] if albums else ""}
         if short_bio:
             item["bio"] = short_bio
         if location:
@@ -231,6 +231,27 @@ def build() -> dict:
             item["connections"] = related
         artists.append(item)
 
+    # A profile is the stable identity; punctuation variants are library credits.
+    canonical = {}
+    for artist in artists:
+        identity = artist.get("profileHref") or normalize(artist["name"])
+        if identity in canonical:
+            target = canonical[identity]
+            target.setdefault("aliases", []).append(artist["name"])
+            target.setdefault("connections", []).extend(artist.get("connections", []))
+        else:
+            canonical[identity] = artist
+    artists = list(canonical.values())
+    for artist in artists:
+        artist["bio"] = artist.get("fullBio", "")
+    name_map = {normalize(n): a["name"] for a in artists for n in [a["name"], *a.get("aliases", [])]}
+    for artist in artists:
+        links = {}
+        for link in artist.get("connections", []):
+            other = name_map.get(normalize(link["artist"]), link["artist"])
+            if other != artist["name"]:
+                links.setdefault(other, {**link, "artist": other})
+        artist["connections"] = list(links.values())
     automatic = extract_relationships(artists)
     for artist in artists:
         links = artist.setdefault("connections", [])
@@ -250,7 +271,7 @@ def build() -> dict:
         "needsEnrichment":[a["name"] for a in artists if not a["signals"] and not a["connections"]]}
     (ROOT / "data/discovery-quality.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
     return {
-        "version": 5,
+        "version": 6,
         "count": len(artists),
         "generatedFrom": "artists.html + library_artist_images.tsv",
         "artists": artists,

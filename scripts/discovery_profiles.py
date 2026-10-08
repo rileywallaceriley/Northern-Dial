@@ -86,7 +86,8 @@ def extract_relationships(records):
         # Very short/common names cannot safely be resolved from free text.
         if len(name) < 4 or name.lower() in {'promise','work','stars','live','baby','love','future','cube'}:
             continue
-        patterns.append((record, re.compile(r'(?<!\w)'+re.escape(name)+r'(?!\w)')))
+        names = [name, *record.get('aliases', [])]
+        patterns.append((record, re.compile(r'(?<!\w)(?:'+ '|'.join(re.escape(n) for n in names) +r')(?!\w)')))
     edges = {}
     for record in records:
         for sentence in re.split(r'(?<=[.!?])\s+', record.get('fullBio','')):

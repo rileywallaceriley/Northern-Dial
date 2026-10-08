@@ -20,7 +20,7 @@
   function resolve(library, input, references = {}) {
     const key = normalize(input);
     if (!key) return {matched:false, genres:[], traits:[], excludedKey:'', source:''};
-    const exact = library.find(a => a.key === key);
+    const exact = library.find(a => a.key === key || (a.aliases||[]).some(n=>normalize(n)===key));
     const compact = key.replace(/([a-z])[-\s]\1/g,'$1').replace(/[^a-z0-9]/g,'');
     const aliases = compact.length>=4 ? library.filter(a=>a.key.replace(/[^a-z0-9]/g,'')===compact) : [];
     const credits = key.split(/\s*(?:,|\/|&|\bfeat\.?|\bft\.?)\s*/);
@@ -53,7 +53,10 @@
     return {link,styles,specificStyles,scenes,eras,genres,sharedTrait,supported};
   }
   function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
-    const candidates = library.filter(a => a.key !== taste.excludedKey && a.track &&
+    const identity = a => a.profileHref || a.key;
+    const seedIdentity = taste.profileHref || taste.excludedKey;
+    const seen = new Set();
+    const candidates = library.filter(a => identity(a) !== seedIdentity && a.key !== taste.excludedKey && a.track &&
       (!genre || a.genres.includes(genre)) && (!era || a.eras.includes(era)));
     return candidates.map(artist => {
       const match=evidence(artist,taste);
@@ -64,6 +67,7 @@
       const tier=match.link?3:match.specificStyles.length || match.sharedTrait.some(t=>!['underground-rap'].includes(t))?2:1;
       return {artist, score, tier, supported:match.supported, random:surprise ? Math.random() : 0};
     }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.tier-a.tier || b.score-a.score || a.artist.name.localeCompare(b.artist.name))
+      .filter(x => {const key=identity(x.artist);if(seen.has(key))return false;seen.add(key);return true;})
       .slice(0,5).map(x => x.artist);
   }
   const api = {normalize, prepare, resolve, rank, evidence, connection, sharedTraits, traitLabels:traits};

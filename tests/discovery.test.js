@@ -50,7 +50,7 @@ const elements = {};
 function element(id) {
   return elements[id] ||= {value:'', textContent:'', innerHTML:'', disabled:false,
     classList:{add(){},remove(){}}, handlers:{},
-    addEventListener(type,fn){this.handlers[type]=fn;}, scrollIntoView(){}};
+    addEventListener(type,fn){this.handlers[type]=fn;}, scrollIntoView(options){this.scrollOptions=options;}};
 }
 let saved=[];
 const document = {getElementById:element,querySelectorAll:()=>[],addEventListener(){},
@@ -63,6 +63,10 @@ setImmediate(()=>{
   element('tasteInput').value='Wordburglar';
   element('discoverBtn').handlers.click();
   assert(element('resultsGrid').innerHTML.includes('Add song to mix'));
+  assert(element('resultsSummary').textContent.includes('starting from Wordburglar'));
+  assert(element('resultsSummary').textContent.includes('Each card explains its link'));
+  assert.equal(element('resultsSection').scrollOptions.block,'start');
+  assert.equal(element('resultsSection').scrollOptions.behavior,'auto');
   assert(element('resultsGrid').innerHTML.includes('Backburner collective'));
   assert(!element('resultsGrid').innerHTML.includes('shares a hip-hop lane'));
   element('resultsGrid').handlers.click({target:{closest:()=>({dataset:{discoveryIndex:'0'}})}});
@@ -82,3 +86,18 @@ const styleCandidates=[
 const stylePicks=engine.rank(styleCandidates,{taste:{...styleSeed,matched:true,excludedKey:styleSeed.key}});
 assert.deepEqual(stylePicks.map(a=>a.name),['Collaborator','Style neighbour']);
 assert.equal(engine.rank(styleCandidates,{genre:'pop',taste:{...styleSeed,matched:true,excludedKey:styleSeed.key}}).length,1);
+
+// Canonical artist profiles prevent alias duplicates and recommending the seed itself.
+const identities=library.map(a=>a.profileHref||a.key);
+assert.equal(new Set(identities).size,library.length);
+assert.equal(engine.resolve(library,'P. Reign').name,'P Reign');
+const legacy=engine.prepare({...library.find(a=>a.name==='P Reign'),name:'P. Reign'});
+const drake=engine.resolve(library,'Drake');
+const aliasPicks=engine.rank([...library,legacy],{taste:drake});
+assert.equal(aliasPicks.filter(a=>a.profileHref==='./artists/p-reign.html').length,1);
+assert(!engine.rank([...library,legacy],{taste:engine.resolve(library,'P Reign')}).some(a=>a.profileHref===legacy.profileHref));
+for(const artist of library){
+ assert(!(artist.connections||[]).some(c=>c.artist===artist.name));
+ const results=engine.rank(library,{taste:engine.resolve(library,artist.name)});
+ assert.equal(new Set(results.map(a=>a.profileHref||a.key)).size,results.length);
+}

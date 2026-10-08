@@ -1,8 +1,8 @@
 {
-  "artists": 1481,
-  "automaticRelationships": 370,
-  "withSignals": 1079,
-  "withConnections": 393,
+  "artists": 1476,
+  "automaticRelationships": 364,
+  "withSignals": 1075,
+  "withConnections": 390,
   "needsEnrichment": [
     {
       "name": "$enor$uplex",
@@ -1406,7 +1406,7 @@
     },
     {
       "name": "Junia T",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Junk",
@@ -2054,11 +2054,7 @@
     },
     {
       "name": "P Reign",
-      "matches": 2
-    },
-    {
-      "name": "P. Reign",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Parkside",
@@ -2842,10 +2838,6 @@
     },
     {
       "name": "Wio K",
-      "matches": 0
-    },
-    {
-      "name": "WIO-K",
       "matches": 1
     },
     {
@@ -2997,7 +2989,7 @@
       "matches": 0
     }
   ],
-  "profilesWithMatches": 913,
-  "profilesWithFiveMatches": 733,
-  "profilesWithoutMatches": 568
+  "profilesWithMatches": 909,
+  "profilesWithFiveMatches": 730,
+  "profilesWithoutMatches": 567
 }

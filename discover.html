@@ -46,7 +46,10 @@
     .status { background:#f5f5f5; border-left:4px solid #C33; color:#444; display:none; line-height:1.45; margin-top:16px; padding:11px 13px; }
     .status.show { display:block; }
     .data-note { color:#777; font-size:.83rem; line-height:1.45; margin:14px 0 0; }
-    .results-section { display:none; margin-top:44px; }
+    .results-section { display:none; margin-top:44px; scroll-margin-top:100px; }
+    #resultsSummary { max-width:65ch; }
+    .artwork-label { display:block; font-size:12px; color:#666; margin-top:4px; }
+    .track-release { color:#666; }
     .results-section.show { display:block; }
     .results-heading { display:flex; gap:18px; justify-content:space-between; margin-bottom:18px; }
     .results-heading p { color:#666; margin:0; max-width:520px; }
@@ -244,7 +247,7 @@
 /* ND_MOBILE_MENU_CSS_END */
 
 </style>
-  <link rel="stylesheet" href="/nd-shell.css?v=20261008g">
+  <link rel="stylesheet" href="/nd-shell.css?v=20261008h">
   <link rel="stylesheet" href="/nd-banner.css?v=20260914a">
 </head>
 <body>
@@ -284,8 +287,8 @@
     <section class="results-section" id="resultsSection" aria-live="polite"><div class="results-heading"><div><div class="eyebrow">Your discoveries</div><h2>Artists to check out</h2></div><p id="resultsSummary"></p></div><div class="results-grid" id="resultsGrid"></div></section>
     <section class="about-tool"><div><h2>Built from the Northern Dial library</h2><p>Discovery only recommends artists retained in Northern Dial’s Canadian artist catalogue. For guided journeys through scenes, eras and influences, <a class="library-cta" href="./listening-paths.html">explore Listening Paths</a>.</p></div><div><h2>Hear something you like?</h2><p>Use Add song to mix to keep the featured song. Your mix stays saved as you browse, and you can email it to yourself. Request an artist for radio play, or <a class="library-cta" href="./artists.html">browse the full artist library</a>.</p></div></section>
   </main>
-  <script src="/discover-engine.js?v=20261008g"></script>
-  <script src="/discover.js?v=20261008g"></script>
+  <script src="/discover-engine.js?v=20261008h"></script>
+  <script src="/discover.js?v=20261008h"></script>
 
 <!-- ND_PROJECT_LINKS_START -->
 <footer class="nd-project-links" aria-label="Northern Dial project links" style="margin-top:48px;background:#1a1a1a;border-top:4px solid #CC3333;color:#fff;padding:24px 18px;">
@@ -301,7 +304,7 @@
 </footer>
 <!-- ND_PROJECT_LINKS_END -->
 
-  <script src="/nd-shell.js?v=20261008g" defer></script>
+  <script src="/nd-shell.js?v=20261008h" defer></script>
 </body>
 </html>
 
