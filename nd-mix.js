@@ -13,7 +13,7 @@
     const stored = JSON.parse(localStorage.getItem(KEY) || '[]');
     if (Array.isArray(stored)) tracks = stored.filter(valid).filter((t, i, a) => a.findIndex(x => identity(x) === identity(t)) === i).slice(0, LIMIT).map(t => ({title:t.title.slice(0,300),artist:t.artist.slice(0,300)}));
   } catch (_) { /* Storage is optional. */ }
-  let tab, dialog, list, status, actions, opener, messageTimer, playerAdd;
+  let tab, dialog, list, status, actions, opener, messageTimer, playerAdd, playerDiscover;
   const button = (text, fn) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = text; b.addEventListener('click', fn); return b; };
   function persist() {
     try { localStorage.setItem(KEY, JSON.stringify(tracks)); }
@@ -76,9 +76,29 @@
         artist === 'Unknown Artist') return null;
     return { title, artist };
   }
+  function discoverArtist(artist) {
+    let controller = window.NDPlayer;
+    try { controller ||= window.parent.NDPlayer; } catch (_) {}
+    if (controller?.discoverArtist) controller.discoverArtist(artist);
+    else location.assign('/discover.html?artist=' + encodeURIComponent(artist));
+  }
+  function attachDiscover(container, track) {
+    if (!valid(track) || container.querySelector('.nd-discover-add')) return;
+    const b = button('🧠', event => { event.stopPropagation(); discoverArtist(track.artist); });
+    b.className = 'nd-discover-add';
+    b.title = label('Find similar artists', 'Trouver des artistes similaires');
+    b.setAttribute('aria-label', b.title + ': ' + track.artist);
+    container.append(b);
+  }
   function updatePlayerAdd() {
     if (!playerAdd) return;
     const track = currentPlayerTrack();
+    if (playerDiscover) {
+      playerDiscover.disabled = !track;
+      const description = label('Find similar artists', 'Trouver des artistes similaires');
+      playerDiscover.title = description;
+      playerDiscover.setAttribute('aria-label', description + (track ? ': ' + track.artist : ''));
+    }
     const saved = track && tracks.some(t => identity(t) === identity(track));
     playerAdd.textContent = saved ? '✓' : '+';
     playerAdd.disabled = !track || Boolean(saved);
@@ -100,6 +120,15 @@
     playerAdd.id = 'nd-player-mix-add';
     playerAdd.className = 'nd-mix-add nd-player-mix-add';
     info.insertAdjacentElement('afterend', playerAdd);
+    playerDiscover = button('🧠', event => {
+      event.stopPropagation();
+      const track = currentPlayerTrack();
+      if (!track) return;
+      discoverArtist(track.artist);
+    });
+    playerDiscover.id = 'nd-player-discover';
+    playerDiscover.className = 'nd-discover-add nd-player-mix-add nd-player-discover';
+    playerAdd.insertAdjacentElement('afterend', playerDiscover);
     const observer = new MutationObserver(updatePlayerAdd);
     ['songTitle', 'artistName'].forEach(id => {
       const el = document.getElementById(id);
@@ -111,7 +140,11 @@
     document.querySelectorAll('#catalogGrid .album-card').forEach(card => attach(card, { title:card.querySelector('.album-title')?.textContent || '', artist:card.querySelector('.album-artist')?.textContent || '' }));
     document.querySelectorAll('#recentlyPlayed > div').forEach(row => {
       const info = Array.from(row.children).find(el => el.style.flex === '1 1 0%' || el.style.flex === '1' || (el.style.minWidth === '0px' && el.children.length >= 2));
-      if (info) attach(row, {title:info.children[0]?.textContent || '', artist:info.children[1]?.textContent || ''});
+      if (info) {
+        const track = {title:info.children[0]?.textContent || '', artist:info.children[1]?.textContent || ''};
+        attach(row, track);
+        attachDiscover(row, track);
+      }
     });
     sync();
   }
@@ -119,9 +152,9 @@
     const style = document.createElement('style');
     style.textContent = `
       #nd-mix-tab{position:fixed;right:14px;bottom:calc(96px + env(safe-area-inset-bottom));z-index:1100;border:2px solid #C33;border-radius:22px;background:#1a1a1a;color:white;padding:10px 15px;font:700 14px "Roboto Condensed",sans-serif;cursor:pointer;box-shadow:0 3px 14px #0003}
-      .nd-mix-add{flex-shrink:0!important;min-width:36px;min-height:36px;width:36px;border:1px solid #C33;border-radius:50%;background:white;color:#8b2323;font:700 23px Arial;cursor:pointer;margin:8px 0 0 8px;vertical-align:middle}
+      .nd-mix-add,.nd-discover-add{flex-shrink:0!important;min-width:36px;min-height:36px;width:36px;border:1px solid #C33;border-radius:50%;background:white;color:#8b2323;font:700 23px Arial;cursor:pointer;margin:8px 0 0 8px;vertical-align:middle}
       .player-controls .nd-player-mix-add{width:40px;min-width:40px;min-height:40px;height:40px;margin:0;align-self:center;background:transparent;color:#fff;border-color:#fff8;line-height:1;padding:0}.player-controls .nd-player-mix-add:hover:not(:disabled){background:#C33;border-color:#C33}.player-controls .nd-player-mix-add:disabled{color:#bbb;border-color:#777}
-      #recentlyPlayed .nd-mix-add{margin:0}.nd-mix-add:disabled{color:#555;border-color:#777;cursor:default}
+      #recentlyPlayed .nd-mix-add,#recentlyPlayed .nd-discover-add{margin:0}.nd-discover-add{font-size:20px;padding:0}.nd-discover-add:focus-visible{outline:3px solid #C33;outline-offset:3px}.nd-mix-add:disabled{color:#555;border-color:#777;cursor:default}
       #nd-mix-dialog{box-sizing:border-box;position:fixed;inset:0 0 0 auto;margin:0;width:min(420px,100vw);height:100dvh;max-height:100dvh;max-width:100vw;border:0;border-left:4px solid #C33;background:#F6F1E7;color:#1a1a1a;padding:24px;overflow:auto;font:16px/1.5 "Roboto Condensed",sans-serif}
       #nd-mix-dialog::backdrop{background:#0006}#nd-mix-dialog h2{margin:0;color:#8b2323;font-size:28px}#nd-mix-dialog .nd-mix-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
       #nd-mix-dialog button{cursor:pointer;font:inherit;border:1px solid #1a1a1a;border-radius:6px;background:white;color:#1a1a1a;padding:8px 12px}#nd-mix-dialog button:disabled{opacity:.5;cursor:default}
@@ -151,7 +184,7 @@
     dialog.addEventListener('close',()=>{tab.setAttribute('aria-expanded','false');if(opener?.isConnected)opener.focus();else tab.focus();});
     dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))dialog.close();});
     let scheduled = false;
-    const observer = new MutationObserver(records => { if (!records.some(r=>r.addedNodes.length && Array.from(r.addedNodes).some(n=>n.nodeType===1 && !n.classList?.contains('nd-mix-add')))) return; if(!scheduled){scheduled=true;queueMicrotask(()=>{scheduled=false;scan();});} });
+    const observer = new MutationObserver(records => { if (!records.some(r=>r.addedNodes.length && Array.from(r.addedNodes).some(n=>n.nodeType===1 && !n.classList?.contains('nd-mix-add') && !n.classList?.contains('nd-discover-add')))) return; if(!scheduled){scheduled=true;queueMicrotask(()=>{scheduled=false;scan();});} });
     ['recentlyPlayed','catalogGrid'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
     window.addEventListener('storage',e=>{if(e.key!==KEY)return;try{const value=JSON.parse(e.newValue||'[]');tracks=Array.isArray(value)?value.filter(valid).slice(0,LIMIT):[];sync();}catch(_){}});
     initPlayerAdd();
@@ -171,3 +204,4 @@
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+

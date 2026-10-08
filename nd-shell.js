@@ -241,6 +241,7 @@
           '<div class="nd-mini-artist">All Killer, All CanCon</div>',
         '</div>',
         '<a class="nd-mini-profile" href="/artists.html" hidden>Meet the Artist</a>',
+        '<button class="nd-mini-discover" type="button" disabled aria-label="Find similar artists" title="Find similar artists" style="flex-shrink:0;width:40px;height:40px;padding:0;border:1px solid #fff8;border-radius:50%;background:transparent;color:white;font-size:20px;cursor:pointer">🧠</button>',
       '</div>'
     ].join('');
 
@@ -262,6 +263,13 @@
     const trackText = player.querySelector('.nd-mini-track');
     const artistText = player.querySelector('.nd-mini-artist');
     const profileLink = player.querySelector('.nd-mini-profile');
+    const discoverButton = player.querySelector('.nd-mini-discover');
+    function discoverArtist(artist) {
+      const name = primaryArtist(artist).trim();
+      if (!name || name === 'Unknown Artist' || name === 'All Killer, All CanCon') return;
+      openPersistentPage('/discover.html?artist=' + encodeURIComponent(name), true);
+    }
+    discoverButton.addEventListener('click', () => discoverArtist(artistText.textContent));
 
     let artistLookupPromise = null;
     let currentArtistKey = '';
@@ -281,6 +289,7 @@
     // this API instead of creating/controlling their own audio element.
     window.NDPlayer = {
       audio,
+      discoverArtist,
       play: async () => {
         userWantsPlayback = true;
         enforceSingleAudio();
@@ -479,6 +488,8 @@
         const artist = song.artist || 'Unknown Artist';
         trackText.textContent = title;
         artistText.textContent = artist;
+        discoverButton.disabled = !artist || artist === 'Unknown Artist';
+        discoverButton.setAttribute('aria-label', (isFrench ? 'Trouver des artistes similaires à ' : 'Find similar artists to ') + artist);
         updateProfileLink(artist);
         updateMediaSession(title, artist);
       } catch (_) {}
@@ -954,7 +965,8 @@
   if (document.getElementById('nd-mix-script')) return;
   const script = document.createElement('script');
   script.id = 'nd-mix-script';
-  script.src = '/nd-mix.js?v=20261008c';
+  script.src = '/nd-mix.js?v=20261008e';
   script.defer = true;
   document.head.appendChild(script);
 })();
+

@@ -74,4 +74,9 @@ const $=id=>document.getElementById(id);
     $("discoverBtn").addEventListener("click",()=>makeRecommendations());
     $("surpriseBtn").addEventListener("click",()=>makeRecommendations({surprise:true}));
     $("tasteInput").addEventListener("keydown",event=>{if(event.key==="Enter"&&ready)makeRecommendations();});
-    loadDiscoveryData();
+    const playerArtist = new URLSearchParams(window.location.search).get('artist');
+    if (playerArtist) $("tasteInput").value = playerArtist.slice(0,300);
+    loadDiscoveryData().then(() => {
+      if (ready && playerArtist) makeRecommendations();
+    });
+
