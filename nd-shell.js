@@ -949,3 +949,12 @@
     init();
   }
 })();
+// Load the browser-local discovery mix on every page.
+(() => {
+  if (document.getElementById('nd-mix-script')) return;
+  const script = document.createElement('script');
+  script.id = 'nd-mix-script';
+  script.src = '/nd-mix.js?v=20261008a';
+  script.defer = true;
+  document.head.appendChild(script);
+})();
