@@ -39,6 +39,7 @@ const $=id=>document.getElementById(id);
       const link=window.NDDiscoveryEngine.connection(artist,taste);
       if(link)return link.evidence ? link.evidence : link.reason;
       const match=window.NDDiscoveryEngine.evidence(artist,taste);
+      if(match.specificStyles.length) return `Also makes ${match.specificStyles.slice(0,3).map(s=>s.label).join(", ")} music. Recommended for the documented style shared with ${taste.source}.`;
       if(match.styles.length) return `Shares ${match.styles.slice(0,3).map(s=>s.label).join(", ")} with ${taste.source}.`;
       if(match.genres.length>0 && match.scenes.length && match.eras.length) return `Shares ${match.scenes[0].label} and ${match.eras[0].label} music references, plus ${match.genres.map(g=>GENRES[g]?.label).join(" / ")} with ${taste.source}.`;
       const shared=window.NDDiscoveryEngine.sharedTraits(artist,taste);

@@ -9,7 +9,11 @@ def normalize(value):
 
 # These describe music, not demographic attributes. Every extraction keeps its sentence.
 STYLES = {
-    'boom-bap': r'boom[ -]bap', 'trap': r'\btrap\b', 'drill': r'\bdrill\b',
+    'cloud-pop': r'\bcloud[ -]pop\b', 'cloud-rap': r'\bcloud[ -]rap\b',
+    'hyperpop': r'\bhyper[ -]?pop\b', 'bedroom-pop': r'\bbedroom[ -]pop\b',
+    'lo-fi': r'\blo[ -]?fi\b', 'chillwave': r'\bchillwave\b',
+    'alternative-pop': r'\b(?:alternative|alt)[ -]pop\b',
+    'emo-rap': r'\bemo[ -]rap\b', 'boom-bap': r'boom[ -]bap', 'trap': r'\btrap\b', 'drill': r'\bdrill\b',
     'conscious-rap': r'conscious (?:rap|hip[ -]hop)',
     'alternative-rap': r'alternative hip[ -]hop|alternative rap',
     'abstract-rap': r'abstract rap|experimental hip[ -]hop',

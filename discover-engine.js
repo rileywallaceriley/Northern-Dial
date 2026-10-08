@@ -46,10 +46,11 @@
     const specificStyles=styles.filter(s=>!['singer-songwriter','soul-pop'].includes(s.key));
     const soulPop=styles.some(s=>s.key==='soul-pop') && artist.primaryGenre===taste.primaryGenre;
     const seedSpecific=(taste.signals||[]).some(s=>s.kind==='style' && !['singer-songwriter','soul-pop','adult-rnb'].includes(s.key));
-    const supported=Boolean(link) || (genres.length>0 && (specificStyles.length>0 || soulPop || sharedTrait.some(t=>t!=='underground-rap')))
+    // A documented specific style is enough, even across broad genre buckets.
+    const supported=Boolean(link) || specificStyles.length>0 || (genres.length>0 && (soulPop || sharedTrait.some(t=>t!=='underground-rap')))
       || (!seedSpecific && artist.primaryGenre===taste.primaryGenre && genres.length>0 && scenes.length>0 && eras.length>0)
       || (taste.genres?.length===2 && genres.length===2 && artist.primaryGenre===taste.primaryGenre);
-    return {link,styles,scenes,eras,genres,sharedTrait,supported};
+    return {link,styles,specificStyles,scenes,eras,genres,sharedTrait,supported};
   }
   function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
     const candidates = library.filter(a => a.key !== taste.excludedKey && a.track &&
@@ -60,8 +61,9 @@
       const score=(match.link?(production?1350:match.link.kind==='profile'?1050:1200):0)+match.styles.reduce((n,s)=>n+(s.key==='singer-songwriter'?5:s.key==='soul-pop'?8:25),0)
         +match.scenes.length*3+match.eras.length*20+match.genres.length*3
         +match.sharedTrait.reduce((n,t)=>n+(t==='backburner'?100:t==='underground-rap'?1:20),0);
-      return {artist, score, supported:match.supported, random:surprise ? Math.random() : 0};
-    }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.score-a.score || a.artist.name.localeCompare(b.artist.name))
+      const tier=match.link?3:match.specificStyles.length || match.sharedTrait.some(t=>!['underground-rap'].includes(t))?2:1;
+      return {artist, score, tier, supported:match.supported, random:surprise ? Math.random() : 0};
+    }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.tier-a.tier || b.score-a.score || a.artist.name.localeCompare(b.artist.name))
       .slice(0,5).map(x => x.artist);
   }
   const api = {normalize, prepare, resolve, rank, evidence, connection, sharedTraits, traitLabels:traits};

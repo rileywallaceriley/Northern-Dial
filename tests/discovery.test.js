@@ -70,3 +70,15 @@ setImmediate(()=>{
   assert.equal(saved[0].title,picks[0].track);
   console.log('Ranking, filtering, explanation and Discover-to-mix checks passed.');
 });
+
+// Specific styles work across broad genres; stronger connections stay first.
+const styleSignal={kind:'style',key:'cloud-pop',label:'cloud pop',evidence:'Makes cloud pop music.'};
+const styleSeed=engine.prepare({name:'Seed',genres:['pop'],signals:[styleSignal],connections:[{artist:'Collaborator',kind:'profile'}],track:'Seed song'});
+const styleCandidates=[
+ engine.prepare({name:'Style neighbour',genres:['electronic-dance'],signals:[styleSignal],track:'Cloud song'}),
+ engine.prepare({name:'Collaborator',genres:['pop'],track:'Collab song'}),
+ engine.prepare({name:'Unrelated pop',genres:['pop'],track:'Other song'})
+];
+const stylePicks=engine.rank(styleCandidates,{taste:{...styleSeed,matched:true,excludedKey:styleSeed.key}});
+assert.deepEqual(stylePicks.map(a=>a.name),['Collaborator','Style neighbour']);
+assert.equal(engine.rank(styleCandidates,{genre:'pop',taste:{...styleSeed,matched:true,excludedKey:styleSeed.key}}).length,1);

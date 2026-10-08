@@ -1,7 +1,7 @@
 {
   "artists": 1481,
   "automaticRelationships": 370,
-  "withSignals": 1077,
+  "withSignals": 1079,
   "withConnections": 393,
   "needsEnrichment": [
     {
@@ -173,10 +173,6 @@
       "matches": 0
     },
     {
-      "name": "Anna Sofia",
-      "matches": 0
-    },
-    {
       "name": "Anodajay",
       "matches": 0
     },
@@ -285,10 +281,6 @@
       "matches": 0
     },
     {
-      "name": "Bad Child",
-      "matches": 0
-    },
-    {
       "name": "Bally",
       "matches": 0
     },
@@ -393,10 +385,6 @@
       "matches": 0
     },
     {
-      "name": "blesse",
-      "matches": 0
-    },
-    {
       "name": "Blitz Equip",
       "matches": 0
     },
@@ -443,10 +431,6 @@
     {
       "name": "Brady Watt",
       "matches": 0
-    },
-    {
-      "name": "Brigitte M",
-      "matches": 3
     },
     {
       "name": "BriskInTheHouse",
@@ -757,10 +741,6 @@
       "matches": 0
     },
     {
-      "name": "Dear Rouge",
-      "matches": 0
-    },
-    {
       "name": "Delirious",
       "matches": 0
     },
@@ -933,10 +913,6 @@
       "matches": 0
     },
     {
-      "name": "Esthero",
-      "matches": 3
-    },
-    {
       "name": "Eternia",
       "matches": 3
     },
@@ -991,10 +967,6 @@
     {
       "name": "flo",
       "matches": 0
-    },
-    {
-      "name": "Flore Laurentienne",
-      "matches": 1
     },
     {
       "name": "FM",
@@ -1541,10 +1513,6 @@
       "matches": 0
     },
     {
-      "name": "Koko Love",
-      "matches": 3
-    },
-    {
       "name": "KOLA",
       "matches": 0
     },
@@ -1605,10 +1573,6 @@
       "matches": 0
     },
     {
-      "name": "Leif Vollebekk",
-      "matches": 1
-    },
-    {
       "name": "Leland Whitty",
       "matches": 1
     },
@@ -1618,10 +1582,6 @@
     },
     {
       "name": "Leod",
-      "matches": 0
-    },
-    {
-      "name": "Les Louanges",
       "matches": 0
     },
     {
@@ -1646,10 +1606,6 @@
     },
     {
       "name": "Lincoln",
-      "matches": 3
-    },
-    {
-      "name": "Linda Carvery",
       "matches": 3
     },
     {
@@ -1685,10 +1641,6 @@
       "matches": 0
     },
     {
-      "name": "loser supreme",
-      "matches": 0
-    },
-    {
       "name": "Lost",
       "matches": 2
     },
@@ -1706,10 +1658,6 @@
     },
     {
       "name": "Louis-Jean Cormier",
-      "matches": 0
-    },
-    {
-      "name": "Louke Man",
       "matches": 0
     },
     {
@@ -1849,10 +1797,6 @@
       "matches": 1
     },
     {
-      "name": "Measha Brueggergosman-Lee",
-      "matches": 3
-    },
-    {
       "name": "Meeno Giinchy",
       "matches": 0
     },
@@ -1985,16 +1929,8 @@
       "matches": 0
     },
     {
-      "name": "Nawfal",
-      "matches": 2
-    },
-    {
       "name": "Nelly Furtado",
       "matches": 3
-    },
-    {
-      "name": "Neon Dreams",
-      "matches": 0
     },
     {
       "name": "NH$ Jay Jay",
@@ -2055,10 +1991,6 @@
     {
       "name": "NorthSideBaby",
       "matches": 1
-    },
-    {
-      "name": "Norwill Simmonds",
-      "matches": 0
     },
     {
       "name": "Notifi",
@@ -2139,10 +2071,6 @@
     {
       "name": "Patrick Watson",
       "matches": 0
-    },
-    {
-      "name": "Patsy Gallant",
-      "matches": 3
     },
     {
       "name": "Pay$o",
@@ -2401,10 +2329,6 @@
       "matches": 0
     },
     {
-      "name": "Saya Gray",
-      "matches": 0
-    },
-    {
       "name": "Scotty IV",
       "matches": 1
     },
@@ -2547,10 +2471,6 @@
     {
       "name": "Sonny Hendrixx",
       "matches": 0
-    },
-    {
-      "name": "Sophia Stel",
-      "matches": 3
     },
     {
       "name": "soulDecision",
@@ -3073,15 +2993,11 @@
       "matches": 0
     },
     {
-      "name": "Édouard Tremblay-Grenier",
-      "matches": 0
-    },
-    {
       "name": "ТоНа",
       "matches": 0
     }
   ],
-  "profilesWithMatches": 902,
-  "profilesWithFiveMatches": 712,
-  "profilesWithoutMatches": 579
+  "profilesWithMatches": 913,
+  "profilesWithFiveMatches": 733,
+  "profilesWithoutMatches": 568
 }
