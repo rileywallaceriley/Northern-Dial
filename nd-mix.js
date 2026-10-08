@@ -113,7 +113,18 @@
     ['recentlyPlayed','catalogGrid'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
     window.addEventListener('storage',e=>{if(e.key!==KEY)return;try{const value=JSON.parse(e.newValue||'[]');tracks=Array.isArray(value)?value.filter(valid).slice(0,LIMIT):[];sync();}catch(_){}});
     scan();
+    const deliveryScript = document.createElement('script');
+    deliveryScript.src = '/nd-mix-email.js?v=20261008a';
+    document.head.append(deliveryScript);
   }
-  window.NorthernDialMix = {add};
+  window.NorthernDialMix = {
+    add,
+    snapshot: () => tracks.map(t => ({...t})),
+    complete: sent => {
+      const keys = new Set(sent.map(identity));
+      tracks = tracks.filter(t => !keys.has(identity(t)));
+      persist(); sync();
+    }
+  };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
