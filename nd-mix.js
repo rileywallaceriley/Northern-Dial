@@ -53,6 +53,7 @@
       b.title = saved ? label('Saved to your mix', 'Enregistré dans votre mix') : label('Add to your mix', 'Ajouter à votre mix');
     });
     updatePlayerAdd();
+    document.dispatchEvent(new CustomEvent('nd:mixchange'));
   }
   function add(track) {
     if (!valid(track)) return;

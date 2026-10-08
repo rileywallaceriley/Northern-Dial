@@ -45,12 +45,43 @@ def first_match(pattern: str, value: str) -> str:
 
 
 def classify_genres(value: str) -> list[str]:
-    haystack = f" {normalize(value)} "
+    # Match complete musical terms, never fragments such as 'rap' in
+    # 'Pornographers'. Pop-culture references describe lyrics, not pop music.
+    haystack = re.sub(r"\bpop[ -]culture\b", "", normalize(value))
     return [
         key
         for key, terms in GENRES.items()
-        if any(normalize(term) in haystack for term in terms)
+        if any(re.search(r"(?<!\w)" + re.escape(normalize(term)) + r"(?!\w)", haystack) for term in terms)
     ]
+
+
+TRAITS = {
+    "backburner": r"\bbackburner\b",
+    "wordplay": r"\b(wordplay|witty lyricism|playful lyricism|intricate lyricism)\b",
+    "humour": r"\b(humou?r|comedic|comedy)\b",
+    "underground-rap": r"\bunderground (?:hip[ -]hop|rap)\b",
+    "boom-bap": r"\bboom[ -]bap\b",
+    "storytelling": r"\b(storytelling|autobiographical|personal writing)\b",
+    "turntablism": r"\b(turntablism|turntablist|scratching)\b",
+    "abstract-rap": r"\b(abstract rap|experimental hip[ -]hop)\b",
+    "neo-soul": r"\bneo[ -]soul\b",
+    "trip-hop": r"\btrip[ -]hop\b",
+    "downtempo": r"\bdowntempo\b",
+    "shoegaze": r"\bshoegaze\b",
+    "dream-pop": r"\bdream[ -]pop\b",
+    "power-pop": r"\bpower[ -]pop\b",
+    "post-punk": r"\bpost[ -]punk\b",
+    "synth-pop": r"\b(synth[ -]?pop|electropop)\b",
+    "house": r"\bhouse (?:music|producer|production)|\b(?:deep|soulful|dancehall and) house\b",
+    "techno": r"\btechno\b",
+    "pop-punk": r"\bpop[ -]punk\b",
+    "post-hardcore": r"\bpost[ -]hardcore\b",
+    "folk-rock": r"\bfolk[ -]rock\b",
+}
+
+
+def classify_traits(value: str) -> list[str]:
+    return [key for key, pattern in TRAITS.items() if re.search(pattern, normalize(value))]
 
 
 def infer_eras(value: str) -> list[str]:
@@ -165,12 +196,17 @@ def build() -> dict:
         if profile_href:
             item["profileHref"] = profile_href
 
-        genres = classify_genres(signals)
+        # Album titles and featured artist names are not genre evidence.
+        genres = classify_genres(bio)
         eras = infer_eras(signals)
         image = image_map.get(key, "")
 
         if genres:
             item["genres"] = genres
+            item["primaryGenre"] = genres[0]
+        traits = classify_traits(bio)
+        if traits:
+            item["traits"] = traits
         if eras:
             item["eras"] = eras
         if image:
@@ -179,7 +215,7 @@ def build() -> dict:
         artists.append(item)
 
     return {
-        "version": 2,
+        "version": 3,
         "count": len(artists),
         "generatedFrom": "artists.html + library_artist_images.tsv",
         "artists": artists,
