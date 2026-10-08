@@ -141,6 +141,8 @@ def build() -> dict:
         flags=re.I,
     )
 
+    removed = {normalize(line) for line in (ROOT / "artist_removals.txt").read_text().splitlines() if line.strip()}
+    connections = json.loads((ROOT / "discovery-connections.json").read_text())["connections"]
     artists = []
     seen: set[str] = set()
 
@@ -153,7 +155,7 @@ def build() -> dict:
         name = re.sub(r"\(\s*\d+\s+tracks?\s*\)\s*$", "", name, flags=re.I).strip()
         key = normalize(name)
 
-        if not name or key in seen or key == "ari lennox":
+        if not name or key in seen or key in removed or key == "ari lennox":
             continue
         seen.add(key)
 
@@ -212,10 +214,18 @@ def build() -> dict:
         if image:
             item["image"] = image
 
+        related = []
+        for connection in connections:
+            names = connection["artists"]
+            if key in [normalize(n) for n in names]:
+                other = next(n for n in names if normalize(n) != key)
+                related.append({"artist": other, "reason": connection["reason"], "source": connection["source"]})
+        if related:
+            item["connections"] = related
         artists.append(item)
 
     return {
-        "version": 3,
+        "version": 4,
         "count": len(artists),
         "generatedFrom": "artists.html + library_artist_images.tsv",
         "artists": artists,

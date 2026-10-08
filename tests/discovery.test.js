@@ -16,6 +16,15 @@ assert(constrained.every(a => a.genres.includes('metal') && a.primaryGenre === '
 assert.equal(engine.rank(library.filter(a=>a.primaryGenre==='rock'), {taste}).length, 0, 'Do not backfill unrelated genres');
 assert(!library.find(a => a.name === 'The New Pornographers').genres.includes('hip-hop'));
 assert(!library.find(a => a.name === 'Wordburglar').genres.includes('pop'));
+const choclair = engine.rank(library, {taste:engine.resolve(library,'Choclair')});
+const daneo = engine.rank(library, {taste:engine.resolve(library,'Dan-e-o')});
+assert.deepEqual(choclair.map(a=>a.name), ['Checkmate','Kardinal Offishall','Rascalz','Saukrates','Thrust']);
+assert.deepEqual(daneo.map(a=>a.name), ['Grimace Love','Maestro Fresh Wes','Moka Only','Promise','Rich Kidd']);
+assert(choclair.concat(daneo).every(a=>a.track));
+assert(!library.some(a=>['Alice Ivy','6ix'].includes(a.name)));
+assert.equal(engine.rank(library,{taste:{matched:true,primaryGenre:'hip-hop',genres:['hip-hop'],traits:[]}}).length,0);
+assert.equal(engine.rank(library,{genre:'hip-hop'}).length,5,'Genre browsing remains available');
+assert(choclair.every(a=>engine.connection(a,engine.resolve(library,'Choclair'))?.source));
 console.log('Wordburglar picks:', picks.map(a => a.name).join(', '));
 
 // Exercise the actual Discover renderer and click handler with a small DOM stub.

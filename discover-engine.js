@@ -30,20 +30,23 @@
   function sharedTraits(artist, taste) {
     return artist.traits.filter(t => taste.traits?.includes(t));
   }
-  function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
+  function connection(artist,taste){return (taste.connections||[]).find(c=>normalize(c.artist)===artist.key);}
+ function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
     const anchor = taste.matched ? taste.primaryGenre : '';
     const candidates = library.filter(a => a.key !== taste.excludedKey && a.track &&
       (!genre || a.genres.includes(genre)) && (!era || a.eras.includes(era)) &&
-      (!anchor || a.primaryGenre === anchor));
+      (!anchor || connection(a,taste) || a.genres.some(g => taste.genres.includes(g))));
     return candidates.map(artist => {
       const shared = sharedTraits(artist, taste);
-      const score = shared.reduce((sum, t) => sum + (t === 'backburner' ? 40 : t === 'underground-rap' ? 4 : 12), 0)
+      const link = connection(artist,taste);
+      const supported = Boolean(link) || shared.some(t => t !== 'underground-rap');
+      const score = (link ? 1000 : 0) + shared.reduce((sum, t) => sum + (t === 'backburner' ? 40 : t === 'underground-rap' ? 4 : 12), 0)
         + (artist.bio ? 1 : 0);
-      return {artist, score, random:surprise ? Math.random() : 0};
-    }).sort((a,b) => surprise ? b.random-a.random : b.score-a.score || a.artist.name.localeCompare(b.artist.name))
+      return {artist, score, supported, random:surprise ? Math.random() : 0};
+    }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.score-a.score || a.artist.name.localeCompare(b.artist.name))
       .slice(0,5).map(x => x.artist);
   }
-  const api = {normalize, prepare, resolve, rank, sharedTraits, traitLabels:traits};
+  const api = {normalize, prepare, resolve, rank, connection, sharedTraits, traitLabels:traits};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window !== 'undefined') window.NDDiscoveryEngine = api;
 })();
