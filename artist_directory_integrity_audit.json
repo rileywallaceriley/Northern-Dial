@@ -1,8 +1,16 @@
 {
-  "directory_accordions": 1516,
-  "profile_backed_accordions": 1186,
+  "directory_accordions": 1515,
+  "profile_backed_accordions": 1185,
   "standalone_profile_files": 1195,
-  "issue_count": 0,
-  "issue_types": {},
-  "issues": []
+  "issue_count": 1,
+  "issue_types": {
+    "missing_back_link": 1
+  },
+  "issues": [
+    {
+      "type": "missing_back_link",
+      "artist": "alice-ivy",
+      "detail": "artists/alice-ivy.html"
+    }
+  ]
 }
