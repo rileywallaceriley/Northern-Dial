@@ -1,4 +1,4 @@
 {
-  "enabled": false,
-  "endpoint": ""
+  "enabled": true,
+  "endpoint": "https://www.northerndial.ca/send-mix"
 }
