@@ -9,6 +9,8 @@ on:
       - library_artist_images.tsv
       - scripts/build_discovery_data.py
       - scripts/discovery_profiles.py
+      - scripts/audit_discovery.js
+      - discover-engine.js
       - discovery-connections.json
       - artist_removals.txt
   workflow_dispatch:
@@ -24,7 +26,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Discovery payload
-        run: python3 scripts/build_discovery_data.py
+        run: |
+          python3 scripts/build_discovery_data.py
+          node scripts/audit_discovery.js
+          node tests/discovery.test.js
 
       - name: Commit refreshed data
         shell: bash

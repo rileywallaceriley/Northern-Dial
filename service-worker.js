@@ -1,4 +1,4 @@
-const VERSION = 'v11';
+const VERSION = 'v12';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -149,6 +149,11 @@ self.addEventListener('fetch', event => {
 
   // Range requests are commonly used by audio/video. Leave them untouched.
   if (request.headers.has('range')) return;
+
+  if (request.mode === 'navigate' && url.pathname.endsWith('/discover.html')) {
+    event.respondWith(networkFirst(request, PAGE_CACHE, {cache:'no-store'}));
+    return;
+  }
 
   if (request.mode === 'navigate') {
     event.respondWith(
