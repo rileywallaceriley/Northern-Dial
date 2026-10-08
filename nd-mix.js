@@ -13,7 +13,7 @@
     const stored = JSON.parse(localStorage.getItem(KEY) || '[]');
     if (Array.isArray(stored)) tracks = stored.filter(valid).filter((t, i, a) => a.findIndex(x => identity(x) === identity(t)) === i).slice(0, LIMIT).map(t => ({title:t.title.slice(0,300),artist:t.artist.slice(0,300)}));
   } catch (_) { /* Storage is optional. */ }
-  let tab, dialog, list, status, actions, opener, messageTimer;
+  let tab, dialog, list, status, actions, opener, messageTimer, playerAdd;
   const button = (text, fn) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = text; b.addEventListener('click', fn); return b; };
   function persist() {
     try { localStorage.setItem(KEY, JSON.stringify(tracks)); }
@@ -52,6 +52,7 @@
       b.setAttribute('aria-label', `${saved ? label('Saved to mix', 'Enregistré dans le mix') : label('Add to mix', 'Ajouter au mix')}: ${b.dataset.mixTitle}`);
       b.title = saved ? label('Saved to your mix', 'Enregistré dans votre mix') : label('Add to your mix', 'Ajouter à votre mix');
     });
+    updatePlayerAdd();
   }
   function add(track) {
     if (!valid(track)) return;
@@ -66,6 +67,45 @@
     const b = button('+', () => add(track)); b.className = 'nd-mix-add'; b.dataset.mixKey = identity(track); b.dataset.mixTitle = track.title;
     container.append(b);
   }
+  function currentPlayerTrack() {
+    const title = document.getElementById('songTitle')?.textContent.trim() || '';
+    const artist = document.getElementById('artistName')?.textContent.trim() || '';
+    if (!title || !artist || title === 'Northern Dial Radio' ||
+        title === 'Unknown Track' || artist === 'All Killer, All CanCon' ||
+        artist === 'Unknown Artist') return null;
+    return { title, artist };
+  }
+  function updatePlayerAdd() {
+    if (!playerAdd) return;
+    const track = currentPlayerTrack();
+    const saved = track && tracks.some(t => identity(t) === identity(track));
+    playerAdd.textContent = saved ? '✓' : '+';
+    playerAdd.disabled = !track || Boolean(saved);
+    const description = !track
+      ? label('Waiting for the current song', 'En attente de la chanson en cours')
+      : saved
+        ? label('Saved to your mix', 'Enregistré dans votre mix')
+        : label('Add current song to your mix', 'Ajouter la chanson en cours à votre mix');
+    playerAdd.title = description;
+    playerAdd.setAttribute('aria-label', description + (track ? ': ' + track.artist + ' - ' + track.title : ''));
+  }
+  function initPlayerAdd() {
+    const info = document.querySelector('.player-section .player-info');
+    if (!info || document.getElementById('nd-player-mix-add')) return;
+    playerAdd = button('+', () => {
+      const track = currentPlayerTrack();
+      if (track) add(track);
+    });
+    playerAdd.id = 'nd-player-mix-add';
+    playerAdd.className = 'nd-mix-add nd-player-mix-add';
+    info.insertAdjacentElement('afterend', playerAdd);
+    const observer = new MutationObserver(updatePlayerAdd);
+    ['songTitle', 'artistName'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el, { childList: true, characterData: true, subtree: true });
+    });
+    updatePlayerAdd();
+  }
   function scan() {
     document.querySelectorAll('#catalogGrid .album-card').forEach(card => attach(card, { title:card.querySelector('.album-title')?.textContent || '', artist:card.querySelector('.album-artist')?.textContent || '' }));
     document.querySelectorAll('#recentlyPlayed > div').forEach(row => {
@@ -79,6 +119,7 @@
     style.textContent = `
       #nd-mix-tab{position:fixed;right:14px;bottom:calc(96px + env(safe-area-inset-bottom));z-index:1100;border:2px solid #C33;border-radius:22px;background:#1a1a1a;color:white;padding:10px 15px;font:700 14px "Roboto Condensed",sans-serif;cursor:pointer;box-shadow:0 3px 14px #0003}
       .nd-mix-add{flex-shrink:0!important;min-width:36px;min-height:36px;width:36px;border:1px solid #C33;border-radius:50%;background:white;color:#8b2323;font:700 23px Arial;cursor:pointer;margin:8px 0 0 8px;vertical-align:middle}
+      .player-controls .nd-player-mix-add{width:40px;min-width:40px;min-height:40px;height:40px;margin:0;align-self:center;background:transparent;color:#fff;border-color:#fff8;line-height:1;padding:0}.player-controls .nd-player-mix-add:hover:not(:disabled){background:#C33;border-color:#C33}.player-controls .nd-player-mix-add:disabled{color:#bbb;border-color:#777}
       #recentlyPlayed .nd-mix-add{margin:0}.nd-mix-add:disabled{color:#555;border-color:#777;cursor:default}
       #nd-mix-dialog{box-sizing:border-box;position:fixed;inset:0 0 0 auto;margin:0;width:min(420px,100vw);height:100dvh;max-height:100dvh;max-width:100vw;border:0;border-left:4px solid #C33;background:#F6F1E7;color:#1a1a1a;padding:24px;overflow:auto;font:16px/1.5 "Roboto Condensed",sans-serif}
       #nd-mix-dialog::backdrop{background:#0006}#nd-mix-dialog h2{margin:0;color:#8b2323;font-size:28px}#nd-mix-dialog .nd-mix-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -112,6 +153,7 @@
     const observer = new MutationObserver(records => { if (!records.some(r=>r.addedNodes.length && Array.from(r.addedNodes).some(n=>n.nodeType===1 && !n.classList?.contains('nd-mix-add')))) return; if(!scheduled){scheduled=true;queueMicrotask(()=>{scheduled=false;scan();});} });
     ['recentlyPlayed','catalogGrid'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
     window.addEventListener('storage',e=>{if(e.key!==KEY)return;try{const value=JSON.parse(e.newValue||'[]');tracks=Array.isArray(value)?value.filter(valid).slice(0,LIMIT):[];sync();}catch(_){}});
+    initPlayerAdd();
     scan();
     const deliveryScript = document.createElement('script');
     deliveryScript.src = '/nd-mix-email.js?v=20261008a';
