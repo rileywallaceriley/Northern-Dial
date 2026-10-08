@@ -159,6 +159,12 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  // Discovery evidence and its ranking code must refresh together.
+  if (url.origin === self.location.origin && url.pathname === '/discovery-data.json') {
+    event.respondWith(networkFirst(request, DATA_CACHE, {cache:'no-store'}));
+    return;
+  }
+
   // Curated catalogue data changes much less often than live station state.
   // Serve it instantly from cache on repeat visits and refresh in the background.
   if (url.origin === self.location.origin && DATA_PATHS.has(url.pathname)) {
@@ -178,7 +184,7 @@ self.addEventListener('fetch', event => {
 
   // Keep the navigation/player shell network-first while the persistent
   // listening experience is actively evolving. Other JS can remain SWR.
-  if (url.pathname === '/nd-shell.js') {
+  if (['/nd-shell.js','/discover.js','/discover-engine.js'].includes(url.pathname)) {
     event.respondWith(
       networkFirst(request, STATIC_CACHE, { cache: 'no-store' })
         .catch(() => caches.match(request))
