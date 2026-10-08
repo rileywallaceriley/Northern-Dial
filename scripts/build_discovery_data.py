@@ -232,14 +232,28 @@ def build() -> dict:
         artists.append(item)
 
     # A profile is the stable identity; punctuation variants are library credits.
+    # These alternate credits are explicitly identified by the existing profile biographies.
+    aliases = {"nish": "Nish Raawks", "nish rawks": "Nish Raawks", "nish rawwks": "Nish Raawks",
+               "charisma aka skizz": "Charisma", "mayhem moreaty": "Mayhem Morearty"}
     canonical = {}
+    profile_identities = {}
     for artist in artists:
-        identity = artist.get("profileHref") or normalize(artist["name"])
+        preferred = aliases.get(normalize(artist["name"]), artist["name"])
+        identity = re.sub(r"[^a-z0-9]", "", normalize(preferred))
+        profile = artist.get("profileHref")
+        identity = profile_identities.get(profile, identity) if profile else identity
+        if profile:
+            profile_identities[profile] = identity
+        artist["artistId"] = identity
         if identity in canonical:
             target = canonical[identity]
             target.setdefault("aliases", []).append(artist["name"])
+            target.setdefault("profileAliases", []).append(artist.get("profileHref", ""))
             target.setdefault("connections", []).extend(artist.get("connections", []))
         else:
+            if preferred != artist["name"]:
+                artist.setdefault("aliases", []).append(artist["name"])
+                artist["name"] = preferred
             canonical[identity] = artist
     artists = list(canonical.values())
     for artist in artists:

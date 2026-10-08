@@ -1,8 +1,8 @@
 {
-  "artists": 1476,
-  "automaticRelationships": 364,
-  "withSignals": 1075,
-  "withConnections": 390,
+  "artists": 1466,
+  "automaticRelationships": 355,
+  "withSignals": 1066,
+  "withConnections": 382,
   "needsEnrichment": [
     {
       "name": "$enor$uplex",
@@ -125,10 +125,6 @@
       "matches": 0
     },
     {
-      "name": "Allie",
-      "matches": 1
-    },
-    {
       "name": "Alysha Brilla",
       "matches": 0
     },
@@ -202,7 +198,7 @@
     },
     {
       "name": "Arcee",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "Archee",
@@ -522,11 +518,7 @@
     },
     {
       "name": "Charisma",
-      "matches": 2
-    },
-    {
-      "name": "Charisma aka Skizz",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Charlie",
@@ -1161,10 +1153,6 @@
       "matches": 0
     },
     {
-      "name": "I.r.s.",
-      "matches": 0
-    },
-    {
       "name": "Ice tha One",
       "matches": 0
     },
@@ -1422,7 +1410,7 @@
     },
     {
       "name": "Justice Der",
-      "matches": 3
+      "matches": 2
     },
     {
       "name": "K Fresh The Knemesis",
@@ -1518,7 +1506,7 @@
     },
     {
       "name": "Korey Deez",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "Koriass",
@@ -1659,10 +1647,6 @@
     {
       "name": "Louis-Jean Cormier",
       "matches": 0
-    },
-    {
-      "name": "Loukeman",
-      "matches": 3
     },
     {
       "name": "Love Inc.; Simone Denny",
@@ -1866,7 +1850,7 @@
     },
     {
       "name": "Monolith: IRS",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Monsune",
@@ -1961,20 +1945,8 @@
       "matches": 0
     },
     {
-      "name": "Nish",
-      "matches": 4
-    },
-    {
       "name": "Nish Raawks",
-      "matches": 4
-    },
-    {
-      "name": "Nish Rawks",
-      "matches": 3
-    },
-    {
-      "name": "Nish Rawwks",
-      "matches": 3
+      "matches": 1
     },
     {
       "name": "NITAP",
@@ -2486,7 +2458,7 @@
     },
     {
       "name": "Spidah Man",
-      "matches": 4
+      "matches": 3
     },
     {
       "name": "Spitty",
@@ -2586,10 +2558,6 @@
     },
     {
       "name": "TallupTwin2X",
-      "matches": 0
-    },
-    {
-      "name": "TallupTwinz",
       "matches": 0
     },
     {
@@ -2782,7 +2750,7 @@
     },
     {
       "name": "Vilaxxs",
-      "matches": 3
+      "matches": 2
     },
     {
       "name": "Vince Maria",
@@ -2989,7 +2957,7 @@
       "matches": 0
     }
   ],
-  "profilesWithMatches": 909,
-  "profilesWithFiveMatches": 730,
-  "profilesWithoutMatches": 567
+  "profilesWithMatches": 901,
+  "profilesWithFiveMatches": 728,
+  "profilesWithoutMatches": 565
 }

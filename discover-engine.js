@@ -12,8 +12,18 @@
     techno: 'techno', 'pop-punk': 'pop-punk', 'post-hardcore': 'post-hardcore',
     'folk-rock': 'folk rock'
   };
+  const nameIdentity = name => normalize(name).replace(/[^a-z0-9]/g,'');
+  const profileIdentity = href => String(href||'').replace(/^https?:\/\/[^/]+/,'').replace(/^\.\//,'/').split(/[?#]/)[0].replace(/\/$/,'');
+  function sameArtist(a,b) {
+    if(a.artistId && b.artistId && a.artistId===b.artistId)return true;
+    const names = x => x._identityNames || [x.name,x.key,x.excludedKey,...(x.aliases||[])].filter(Boolean).map(nameIdentity);
+    const profiles = x => x._identityProfiles || [x.profileHref,...(x.profileAliases||[])].filter(Boolean).map(profileIdentity);
+    return names(a).some(n=>names(b).includes(n)) || profiles(a).some(p=>profiles(b).includes(p));
+  }
   function prepare(artist) {
-    return {...artist, key: normalize(artist.name), genres: artist.genres || [],
+    return {...artist, _identityNames:[artist.name,...(artist.aliases||[])].filter(Boolean).map(nameIdentity),
+      _identityProfiles:[artist.profileHref,...(artist.profileAliases||[])].filter(Boolean).map(profileIdentity),
+      key: normalize(artist.name), genres: artist.genres || [],
       eras: artist.eras || [], traits: artist.traits || [],
       primaryGenre: artist.primaryGenre || artist.genres?.[0] || ''};
   }
@@ -34,7 +44,7 @@
   function sharedTraits(artist, taste) {
     return artist.traits.filter(t => taste.traits?.includes(t));
   }
-  function connection(artist,taste){return (taste.connections||[]).find(c=>normalize(c.artist)===artist.key);}
+  function connection(artist,taste){if(sameArtist(artist,taste))return undefined;return (taste.connections||[]).find(c=>normalize(c.artist)===artist.key);}
   function evidence(artist,taste) {
     const shared=(artist.signals||[]).filter(a=>(taste.signals||[]).some(t=>a.kind===t.kind && a.key===t.key));
     const styles=shared.filter(s=>s.kind==='style');
@@ -53,10 +63,8 @@
     return {link,styles,specificStyles,scenes,eras,genres,sharedTrait,supported};
   }
   function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
-    const identity = a => a.profileHref || a.key;
-    const seedIdentity = taste.profileHref || taste.excludedKey;
-    const seen = new Set();
-    const candidates = library.filter(a => identity(a) !== seedIdentity && a.key !== taste.excludedKey && a.track &&
+    const seen = [];
+    const candidates = library.filter(a => !sameArtist(a,taste) && a.track &&
       (!genre || a.genres.includes(genre)) && (!era || a.eras.includes(era)));
     return candidates.map(artist => {
       const match=evidence(artist,taste);
@@ -67,10 +75,10 @@
       const tier=match.link?3:match.specificStyles.length || match.sharedTrait.some(t=>!['underground-rap'].includes(t))?2:1;
       return {artist, score, tier, supported:match.supported, random:surprise ? Math.random() : 0};
     }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.tier-a.tier || b.score-a.score || a.artist.name.localeCompare(b.artist.name))
-      .filter(x => {const key=identity(x.artist);if(seen.has(key))return false;seen.add(key);return true;})
+      .filter(x => {if(seen.some(a=>sameArtist(a,x.artist)))return false;seen.push(x.artist);return true;})
       .slice(0,5).map(x => x.artist);
   }
-  const api = {normalize, prepare, resolve, rank, evidence, connection, sharedTraits, traitLabels:traits};
+  const api = {normalize, sameArtist, prepare, resolve, rank, evidence, connection, sharedTraits, traitLabels:traits};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window !== 'undefined') window.NDDiscoveryEngine = api;
 })();

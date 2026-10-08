@@ -101,3 +101,18 @@ for(const artist of library){
  const results=engine.rank(library,{taste:engine.resolve(library,artist.name)});
  assert.equal(new Set(results.map(a=>a.profileHref||a.key)).size,results.length);
 }
+
+// Different profile paths, alternate credits and URL formats still identify the same artist.
+for(const alias of ['Nish','Nish Rawks','Nish Rawwks'])assert.equal(engine.resolve(library,alias).name,'Nish Raawks');
+assert.equal(engine.resolve(library,'Mayhem Moreaty').name,'Mayhem Morearty');
+const nish=engine.resolve(library,'Nish');
+const alternate=engine.prepare({...nish,name:'Nish Rawwks',profileHref:'/artists/nish-rawwks.html',aliases:[],connections:[]});
+assert(engine.sameArtist(nish,alternate));
+assert.equal(engine.connection(alternate,{...nish,connections:[{artist:alternate.name}]}),undefined);
+assert(!engine.rank([...library,alternate],{taste:nish}).some(a=>engine.sameArtist(a,nish)));
+assert(engine.sameArtist({name:'A',profileHref:'./artists/test.html'},{name:'B',profileHref:'https://www.northerndial.ca/artists/test.html?x=1'}));
+for(const artist of library){
+ const results=engine.rank(library,{taste:engine.resolve(library,artist.name)});
+ assert(!results.some(a=>engine.sameArtist(a,artist)),`Self recommendation: ${artist.name}`);
+ for(let i=0;i<results.length;i++)assert(!results.slice(i+1).some(a=>engine.sameArtist(a,results[i])));
+}
