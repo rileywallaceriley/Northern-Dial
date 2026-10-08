@@ -5,6 +5,10 @@ import html as html_lib
 import json
 import re
 import unicodedata
+try:
+    from .discovery_profiles import extract_profile, extract_relationships
+except ImportError:
+    from discovery_profiles import extract_profile, extract_relationships
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -205,7 +209,8 @@ def build() -> dict:
 
         if genres:
             item["genres"] = genres
-            item["primaryGenre"] = genres[0]
+            intro_genres = classify_genres(re.split(r"(?<=[.!?])\s+", bio)[0])
+            item["primaryGenre"] = intro_genres[0] if intro_genres else genres[0]
         traits = classify_traits(bio)
         if traits:
             item["traits"] = traits
@@ -214,6 +219,8 @@ def build() -> dict:
         if image:
             item["image"] = image
 
+        item["fullBio"] = bio
+        item["signals"] = extract_profile(bio, location)
         related = []
         for connection in connections:
             names = connection["artists"]
@@ -224,8 +231,26 @@ def build() -> dict:
             item["connections"] = related
         artists.append(item)
 
+    automatic = extract_relationships(artists)
+    for artist in artists:
+        links = artist.setdefault("connections", [])
+        known = {normalize(c["artist"]) for c in links}
+        for connection in automatic:
+            if artist["name"] in connection["artists"]:
+                other = next(n for n in connection["artists"] if n != artist["name"])
+                if normalize(other) not in known:
+                    links.append({"artist":other, **{k:v for k,v in connection.items() if k != "artists"}})
+                    known.add(normalize(other))
+        artist.pop("fullBio", None)
+        for signal in artist["signals"]:
+            signal["source"] = artist.get("profileHref") or "/artists.html"
+    report = {"artists": len(artists), "automaticRelationships":len(automatic),
+        "withSignals":sum(bool(a["signals"]) for a in artists),
+        "withConnections":sum(bool(a["connections"]) for a in artists),
+        "needsEnrichment":[a["name"] for a in artists if not a["signals"] and not a["connections"]]}
+    (ROOT / "data/discovery-quality.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
     return {
-        "version": 4,
+        "version": 5,
         "count": len(artists),
         "generatedFrom": "artists.html + library_artist_images.tsv",
         "artists": artists,

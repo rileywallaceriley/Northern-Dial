@@ -8,6 +8,9 @@ on:
       - artists.html
       - library_artist_images.tsv
       - scripts/build_discovery_data.py
+      - scripts/discovery_profiles.py
+      - discovery-connections.json
+      - artist_removals.txt
   workflow_dispatch:
 
 permissions:
@@ -26,12 +29,12 @@ jobs:
       - name: Commit refreshed data
         shell: bash
         run: |
-          if git diff --quiet -- discovery-data.json; then
+          if git diff --quiet -- discovery-data.json data/discovery-quality.json; then
             echo "Discovery data is already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add discovery-data.json
+          git add discovery-data.json data/discovery-quality.json
           git commit -m "Refresh Discovery data"
           git push

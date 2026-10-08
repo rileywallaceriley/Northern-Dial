@@ -612,3 +612,27 @@ body.nd-persistent-browsing #nd-initial-document {
   }
 }
 /* ND_RENDER_DEFER_END */
+
+/* Keep flexible cards and history controls within the viewport. */
+.content-columns { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.content-columns > .column { min-width:0; max-width:100%; box-sizing:border-box; overflow-wrap:anywhere; }
+.nd-mini-actions { display:flex; align-items:center; gap:8px; }
+.nd-mini-add,.nd-mini-discover { flex:0 0 36px; width:36px; height:36px; min-height:36px; padding:0; border:1px solid #fff8; border-radius:50%; background:transparent; color:white; font:700 22px Arial; cursor:pointer; }
+.nd-mini-discover { font-size:18px; }
+.nd-mini-actions button:disabled { opacity:.5; cursor:default; }
+@media(max-width:768px) {
+  .content-columns { grid-template-columns:minmax(0,1fr); }
+  .content-columns > .column { padding:22px 18px; }
+  #recentlyPlayed > div { display:grid!important; grid-template-columns:40px minmax(0,1fr) 36px 36px; grid-template-areas:"art info add discover" "art time add discover"; gap:4px 8px!important; padding:12px 0!important; }
+  #recentlyPlayed > div > :first-child { grid-area:art; width:40px!important; height:40px!important; }
+  #recentlyPlayed > div > :nth-child(2) { grid-area:info; overflow-wrap:anywhere; }
+  #recentlyPlayed > div > :nth-child(3) { grid-area:time; font-size:.65rem!important; }
+  #recentlyPlayed .nd-mix-add { grid-area:add; }
+  #recentlyPlayed .nd-discover-add { grid-area:discover; }
+}
+@media(max-width:620px) {
+  .nd-mini-player-inner { grid-template-columns:56px minmax(0,1fr) auto!important; gap:8px!important; }
+  .nd-mini-actions { gap:5px; }
+  .nd-mini-actions .nd-mini-profile { width:30px!important; height:34px!important; min-height:34px!important; padding:0!important; }
+  .nd-mini-actions button { width:32px!important; height:34px!important; min-height:34px!important; flex-basis:32px; }
+}

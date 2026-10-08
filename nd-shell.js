@@ -240,8 +240,9 @@
           '<div class="nd-mini-track">Northern Dial Radio</div>',
           '<div class="nd-mini-artist">All Killer, All CanCon</div>',
         '</div>',
+        '<div class="nd-mini-actions"><button class="nd-mini-add" type="button" disabled aria-label="Add current song to your mix" title="Add current song to your mix">+</button>',
         '<a class="nd-mini-profile" href="/artists.html" hidden>Meet the Artist</a>',
-        '<button class="nd-mini-discover" type="button" disabled aria-label="Find similar artists" title="Find similar artists" style="flex-shrink:0;width:40px;height:40px;padding:0;border:1px solid #fff8;border-radius:50%;background:transparent;color:white;font-size:20px;cursor:pointer">🧠</button>',
+        '<button class="nd-mini-discover" type="button" disabled aria-label="Find similar artists" title="Find similar artists" >🧠</button></div>',
       '</div>'
     ].join('');
 
@@ -263,6 +264,16 @@
     const trackText = player.querySelector('.nd-mini-track');
     const artistText = player.querySelector('.nd-mini-artist');
     const profileLink = player.querySelector('.nd-mini-profile');
+    const addButton = player.querySelector('.nd-mini-add');
+    const updateMiniAdd = () => {
+      const artist=artistText.textContent, title=trackText.textContent;
+      const saved=window.NorthernDialMix?.snapshot().some(t=>t.artist===artist && t.title===title);
+      addButton.disabled=!window.NorthernDialMix || !artist || artist==='Unknown Artist' || artist==='All Killer, All CanCon' || saved;
+      addButton.textContent=saved?'✓':'+';
+      addButton.setAttribute('aria-label',(saved?'Saved to mix: ':'Add to mix: ')+artist+' - '+title);
+    };
+    addButton.addEventListener('click',()=>window.NorthernDialMix?.add({artist:artistText.textContent,title:trackText.textContent}));
+    document.addEventListener('nd:mixchange',updateMiniAdd);
     const discoverButton = player.querySelector('.nd-mini-discover');
     function discoverArtist(artist) {
       const name = primaryArtist(artist).trim();
@@ -488,6 +499,7 @@
         const artist = song.artist || 'Unknown Artist';
         trackText.textContent = title;
         artistText.textContent = artist;
+        updateMiniAdd();
         discoverButton.disabled = !artist || artist === 'Unknown Artist';
         discoverButton.setAttribute('aria-label', (isFrench ? 'Trouver des artistes similaires à ' : 'Find similar artists to ') + artist);
         updateProfileLink(artist);
@@ -965,7 +977,7 @@
   if (document.getElementById('nd-mix-script')) return;
   const script = document.createElement('script');
   script.id = 'nd-mix-script';
-  script.src = '/nd-mix.js?v=20261008e';
+  script.src = '/nd-mix.js?v=20261008f';
   script.defer = true;
   document.head.appendChild(script);
 })();

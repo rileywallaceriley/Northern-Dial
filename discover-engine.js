@@ -21,9 +21,13 @@
     const key = normalize(input);
     if (!key) return {matched:false, genres:[], traits:[], excludedKey:'', source:''};
     const exact = library.find(a => a.key === key);
+    const compact = key.replace(/([a-z])[-\s]\1/g,'$1').replace(/[^a-z0-9]/g,'');
+    const aliases = compact.length>=4 ? library.filter(a=>a.key.replace(/[^a-z0-9]/g,'')===compact) : [];
+    const credits = key.split(/\s*(?:,|\/|&|\bfeat\.?|\bft\.?)\s*/);
+    const credited = credits.length>1 ? library.find(a=>a.key===credits[0]) : null;
     const prefix = key.length >= 4 ? library.filter(a => a.key.startsWith(key)) : [];
-    const artist = exact || (prefix.length === 1 ? prefix[0] : null);
-    if (artist?.genres.length) return {...artist, matched:true, excludedKey:artist.key, source:artist.name};
+    const artist = exact || (aliases.length===1?aliases[0]:null) || credited || (prefix.length === 1 ? prefix[0] : null);
+    if (artist) return {...artist, matched:true, excludedKey:artist.key, source:artist.name};
     if (references[key]) return {matched:true, genres:references[key], primaryGenre:references[key][0], traits:[], excludedKey:key, source:input.trim()};
     return {matched:false, genres:[], traits:[], excludedKey:key, source:''};
   }
@@ -31,22 +35,36 @@
     return artist.traits.filter(t => taste.traits?.includes(t));
   }
   function connection(artist,taste){return (taste.connections||[]).find(c=>normalize(c.artist)===artist.key);}
- function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
-    const anchor = taste.matched ? taste.primaryGenre : '';
+  function evidence(artist,taste) {
+    const shared=(artist.signals||[]).filter(a=>(taste.signals||[]).some(t=>a.kind===t.kind && a.key===t.key));
+    const styles=shared.filter(s=>s.kind==='style');
+    const scenes=shared.filter(s=>s.kind==='scene');
+    const eras=shared.filter(s=>s.kind==='era');
+    const genres=artist.genres.filter(g=>taste.genres?.includes(g));
+    const sharedTrait=sharedTraits(artist,taste);
+    const link=connection(artist,taste);
+    const specificStyles=styles.filter(s=>!['singer-songwriter','soul-pop'].includes(s.key));
+    const soulPop=styles.some(s=>s.key==='soul-pop') && artist.primaryGenre===taste.primaryGenre;
+    const seedSpecific=(taste.signals||[]).some(s=>s.kind==='style' && !['singer-songwriter','soul-pop','adult-rnb'].includes(s.key));
+    const supported=Boolean(link) || (genres.length>0 && (specificStyles.length>0 || soulPop || sharedTrait.some(t=>t!=='underground-rap')))
+      || (!seedSpecific && artist.primaryGenre===taste.primaryGenre && genres.length>0 && scenes.length>0 && eras.length>0)
+      || (taste.genres?.length===2 && genres.length===2 && artist.primaryGenre===taste.primaryGenre);
+    return {link,styles,scenes,eras,genres,sharedTrait,supported};
+  }
+  function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
     const candidates = library.filter(a => a.key !== taste.excludedKey && a.track &&
-      (!genre || a.genres.includes(genre)) && (!era || a.eras.includes(era)) &&
-      (!anchor || connection(a,taste) || a.genres.some(g => taste.genres.includes(g))));
+      (!genre || a.genres.includes(genre)) && (!era || a.eras.includes(era)));
     return candidates.map(artist => {
-      const shared = sharedTraits(artist, taste);
-      const link = connection(artist,taste);
-      const supported = Boolean(link) || shared.some(t => t !== 'underground-rap');
-      const score = (link ? 1000 : 0) + shared.reduce((sum, t) => sum + (t === 'backburner' ? 40 : t === 'underground-rap' ? 4 : 12), 0)
-        + (artist.bio ? 1 : 0);
-      return {artist, score, supported, random:surprise ? Math.random() : 0};
+      const match=evidence(artist,taste);
+      const production = match.link && /produced|producer.*records by|records by/.test((match.link.reason||'')+' '+(match.link.evidence||''));
+      const score=(match.link?(production?1350:match.link.kind==='profile'?1050:1200):0)+match.styles.reduce((n,s)=>n+(s.key==='singer-songwriter'?5:s.key==='soul-pop'?8:25),0)
+        +match.scenes.length*3+match.eras.length*20+match.genres.length*3
+        +match.sharedTrait.reduce((n,t)=>n+(t==='backburner'?100:t==='underground-rap'?1:20),0);
+      return {artist, score, supported:match.supported, random:surprise ? Math.random() : 0};
     }).filter(x => !taste.matched || x.supported).sort((a,b) => surprise ? b.random-a.random : b.score-a.score || a.artist.name.localeCompare(b.artist.name))
       .slice(0,5).map(x => x.artist);
   }
-  const api = {normalize, prepare, resolve, rank, connection, sharedTraits, traitLabels:traits};
+  const api = {normalize, prepare, resolve, rank, evidence, connection, sharedTraits, traitLabels:traits};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window !== 'undefined') window.NDDiscoveryEngine = api;
 })();
