@@ -1,3 +1,8 @@
+// Editorial removal: exclude this artist from selectable songs.
+function isRetainedCatalogArtist(credit) {
+    return !String(credit || '').split(/\s*(?:,|\/|&|\+|×|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*/i)
+        .some(name => name.trim().toLowerCase() === 'alice ivy');
+}
 let allTracks = [];
     let filteredTracks = [];
 
@@ -56,7 +61,7 @@ let allTracks = [];
                 const song = item.song || {};
                 const songId = song.song_id || song.id || song.unique_id;
                 
-                if (!seenIds.has(songId) && song.title) {
+                if (!seenIds.has(songId) && song.title && isRetainedCatalogArtist(song.artist)) {
                     seenIds.add(songId);
                     uniqueTracks.push({
                         id: songId,
@@ -170,7 +175,7 @@ let allTracks = [];
                     const song = item.song || item;
                     const songId = song.song_id || song.id;
                     
-                    if (!seenIds.has(songId)) {
+                    if (!seenIds.has(songId) && isRetainedCatalogArtist(song.artist)) {
                         seenIds.add(songId);
                         searchResults.push({
                             id: songId,

@@ -1,3 +1,8 @@
+// Editorial removal: exclude this artist from selectable songs.
+function isRetainedCatalogArtist(credit) {
+    return !String(credit || '').split(/\s*(?:,|\/|&|\+|×|\bfeat(?:uring)?\.?|\bft\.?|\bwith\b)\s*/i)
+        .some(name => name.trim().toLowerCase() === 'alice ivy');
+}
 const localAudio = document.getElementById('radioStream');
 
     let persistentController = null;
@@ -185,7 +190,7 @@ const localAudio = document.getElementById('radioStream');
         if (!recentlyPlayed) return;
 
         if (Array.isArray(data.song_history)) {
-            recentlyPlayed.innerHTML = data.song_history.map(item => {
+            recentlyPlayed.innerHTML = data.song_history.filter(item => isRetainedCatalogArtist(item.song?.artist)).map(item => {
                 const song = item.song || {};
                 const title = song.title || 'Unknown Track';
                 const artist = song.artist || 'Unknown Artist';
@@ -418,7 +423,8 @@ const localAudio = document.getElementById('radioStream');
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
             const data = await response.json();
-            const songs = data.rows || data.result || data.results || (Array.isArray(data) ? data : []);
+            const rawSongs = data.rows || data.result || data.results || (Array.isArray(data) ? data : []);
+            const songs = Array.isArray(rawSongs) ? rawSongs.filter(item => isRetainedCatalogArtist((item.song || item).artist)) : [];
 
             if (!Array.isArray(songs) || songs.length === 0) {
                 results.innerHTML = '<div style="color:#ccc; text-align:center; padding:20px;">No results found. Try a different search.</div>';
