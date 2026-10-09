@@ -2,6 +2,10 @@
 """Prepare the next eligible Northern Dial artist profiles for French translation."""
 from pathlib import Path
 import json
+import hashlib
+import re
+from html import unescape
+from build_french_artist_pages import load_translations
 
 BATCH_LIMIT = 50
 ENRICHMENT_FILE = Path("artist_enrichment.json")
@@ -44,13 +48,24 @@ def merge_enrichment():
     return merged, display_names
 
 
-def translated_keys():
-    keys = set()
-    for path in sorted(TRANSLATION_BATCH_DIR.glob("batch-*.json")):
-        data = load_json(path, {})
-        if isinstance(data, dict):
-            keys.update(str(key).casefold() for key in data)
-    return keys
+def source_bio_sha(bio):
+    plain = unescape(re.sub(r"<[^>]+>", "", str(bio or "")))
+    return hashlib.sha256(" ".join(plain.split()).encode("utf-8")).hexdigest()
+
+
+def translation_reason(record, translation):
+    if not translation:
+        return "missing_translation"
+    expected = translation.get("source_bio_sha256")
+    if expected and expected != source_bio_sha(record.get("bio")):
+        return "english_bio_changed"
+    english_words = len(str(record.get("bio") or "").split())
+    french_words = len(str(translation.get("bio_fr") or "").split())
+    # A screening heuristic, not a linguistic equivalence test. It catches the
+    # old one-sentence summaries and sends them for editorial review.
+    if english_words and french_words < 0.75 * english_words:
+        return "short_translation_review"
+    return None
 
 
 def is_eligible(key, record):
@@ -64,16 +79,19 @@ def is_eligible(key, record):
 
 def main():
     merged, display_names = merge_enrichment()
-    done = translated_keys()
+    translations, _ = load_translations()
     queue = []
     for key in sorted(merged):
-        if key in done:
-            continue
         record = merged[key]
         if not is_eligible(key, record):
             continue
+        reason = translation_reason(record, translations.get(key))
+        if not reason:
+            continue
         queue.append({
             "key": key,
+            "reason": reason,
+            "source_bio_sha256": source_bio_sha(record.get("bio")),
             "display_name": display_names.get(key, key),
             "bio": record.get("bio", ""),
             "city": record.get("city", ""),
