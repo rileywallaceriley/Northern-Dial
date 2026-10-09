@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
   workflow_run:
-    workflows: ['Build French artist pages']
+    workflows: ['Build French artist pages', 'Build artist directory']
     types: [completed]
 
 concurrency:
