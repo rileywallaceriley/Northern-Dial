@@ -100,11 +100,28 @@
     {
       "file": "artist_translation_batches/batch-024.json",
       "count": 12
+    },
+    {
+      "file": "artist_translation_batches/zz-20261009-full-profile-parity-01.json",
+      "count": 50
+    },
+    {
+      "file": "artist_translation_batches/zz-20261009-full-profile-parity-02.json",
+      "count": 50
+    },
+    {
+      "file": "artist_translation_batches/zz-20261009-full-profile-parity-03.json",
+      "count": 6
     }
   ],
   "translation_records": 1133,
   "generated_pages": 1133,
-  "english_hreflang_updates": 0,
+  "english_hreflang_updates": 1125,
   "missing_source_count": 0,
-  "missing_sources": []
+  "missing_sources": [],
+  "paired_pages": 1125,
+  "short_bio_review_count": 0,
+  "short_bios_for_review": [],
+  "paragraph_gap_count": 0,
+  "paragraph_gaps": []
 }
