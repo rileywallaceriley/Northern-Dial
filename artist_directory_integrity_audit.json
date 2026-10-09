@@ -1,12 +1,48 @@
 {
   "directory_accordions": 1515,
-  "profile_backed_accordions": 1185,
+  "profile_backed_accordions": 1186,
   "standalone_profile_files": 1195,
-  "issue_count": 1,
+  "issue_count": 7,
   "issue_types": {
-    "missing_back_link": 1
+    "bad_profile_anchor": 1,
+    "bad_profile_cta": 1,
+    "bad_profile_name_link": 1,
+    "duplicate_or_missing_profile_block": 1,
+    "missing_back_link": 1,
+    "missing_dropdown_bio": 1,
+    "missing_profile_file": 1
   },
   "issues": [
+    {
+      "type": "missing_dropdown_bio",
+      "artist": "SUUNCAAT",
+      "detail": "Profile-backed accordion has no non-empty profile-bio"
+    },
+    {
+      "type": "bad_profile_name_link",
+      "artist": "SUUNCAAT",
+      "detail": "Expected one ./artists/suuncaat.html; found []"
+    },
+    {
+      "type": "bad_profile_cta",
+      "artist": "SUUNCAAT",
+      "detail": "Expected one View Full Profile link to ./artists/suuncaat.html; found []"
+    },
+    {
+      "type": "bad_profile_anchor",
+      "artist": "SUUNCAAT",
+      "detail": "Expected id=artist-suuncaat; found (none)"
+    },
+    {
+      "type": "missing_profile_file",
+      "artist": "SUUNCAAT",
+      "detail": "artists/suuncaat.html"
+    },
+    {
+      "type": "duplicate_or_missing_profile_block",
+      "artist": "SUUNCAAT",
+      "detail": "Expected 1 artist-profile block; found 0"
+    },
     {
       "type": "missing_back_link",
       "artist": "alice-ivy",
