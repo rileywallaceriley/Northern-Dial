@@ -6,10 +6,15 @@ on:
       - 'artist_translation_batches/**'
       - 'build_french_artist_pages.py'
       - 'build_french_artist_directory.py'
+      - 'listening_paths.json'
+      - 'build_listening_paths.py'
       - 'artists.html'
       - 'nd-i18n.js'
       - '.github/workflows/build-french-artist-pages.yml'
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Build artist directory']
+    types: [completed]
 
 permissions:
   contents: write
@@ -20,12 +25,14 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Build French artist pages
         run: python3 build_french_artist_pages.py
