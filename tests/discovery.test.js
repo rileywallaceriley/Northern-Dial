@@ -42,7 +42,7 @@ assert.equal(engine.resolve(library,'Not in catalogue/ Jazz Cartier').name,'Jazz
 assert(engine.rank(library,{taste:engine.resolve(library,'Lia Pappas-Kemps'),genre:'pop'}).length>=3);
 const cdw=engine.resolve(library,'Charlotte Day Wilson');
 assert(engine.connection(library.find(a=>a.name==='Daniel Caesar'),cdw).evidence.includes('collaborations'));
-assert.equal(engine.rank(library,{taste:{...cdw,signals:[],connections:[],traits:[]}}).length,0,'No generic genre fallback');
+assert.equal(engine.rank(library,{taste:{...cdw,genres:[cdw.primaryGenre],signals:[],connections:[],traits:[]}}).length,0,'No generic genre fallback');
 console.log('Wordburglar picks:', picks.map(a => a.name).join(', '));
 
 // Exercise the actual Discover renderer and click handler with a small DOM stub.
@@ -72,7 +72,14 @@ setImmediate(()=>{
   element('resultsGrid').handlers.click({target:{closest:()=>({dataset:{discoveryIndex:'0'}})}});
   assert.equal(saved[0].artist,picks[0].name);
   assert.equal(saved[0].title,picks[0].track);
-  console.log('Ranking, filtering, explanation and Discover-to-mix checks passed.');
+  context.fallbackLibrary=['Sparse seed','Other one','Other two','Other three','Other four','Other five'].map(name=>engine.prepare({name,genres:['hip-hop'],track:'Song'}));
+  vm.runInContext('library=fallbackLibrary',context);
+  element('tasteInput').value='Sparse seed';
+  element('discoverBtn').handlers.click();
+  assert(element('resultsSummary').textContent.includes('Broader catalogue listening'));
+  assert(element('resultsGrid').innerHTML.includes('No documented connection to Sparse seed yet'));
+  assert(!element('resultsGrid').innerHTML.includes('Request Sparse seed'));
+  console.log('Ranking, filtering, explanation, fallback and Discover-to-mix checks passed.');
 });
 
 // Specific styles work across broad genres; stronger connections stay first.
@@ -116,3 +123,10 @@ for(const artist of library){
  assert(!results.some(a=>engine.sameArtist(a,artist)),`Self recommendation: ${artist.name}`);
  for(let i=0;i<results.length;i++)assert(!results.slice(i+1).some(a=>engine.sameArtist(a,results[i])));
 }
+
+const cadence=engine.resolve(library,'Cadence Weapon');
+const cadencePicks=engine.rank(library,{taste:cadence});
+assert.equal(cadencePicks.length,5);
+assert(cadencePicks.some(a=>a.name==='Buck 65'));
+assert.equal(engine.connection(library.find(a=>a.name==='Buck 65'),cadence).kind,'track-credit');
+assert(!cadencePicks.some(a=>engine.sameArtist(a,cadence)));

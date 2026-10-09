@@ -6,9 +6,9 @@ import json
 import re
 import unicodedata
 try:
-    from .discovery_profiles import extract_profile, extract_relationships
+    from .discovery_profiles import extract_profile, extract_relationships, extract_track_relationships
 except ImportError:
-    from discovery_profiles import extract_profile, extract_relationships
+    from discovery_profiles import extract_profile, extract_relationships, extract_track_relationships
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -190,7 +190,7 @@ def build() -> dict:
         if len(short_bio) > 190:
             short_bio = re.sub(r"\s+\S*$", "", short_bio[:190]) + "…"
 
-        item = {"name": name, "album": albums[0] if albums else ""}
+        item = {"_trackTitles": [clean_text(t) for t in re.findall(r'class="track-title"[^>]*>([\s\S]*?)</div>', block)], "name": name, "album": albums[0] if albums else ""}
         if short_bio:
             item["bio"] = short_bio
         if location:
@@ -250,6 +250,7 @@ def build() -> dict:
             target.setdefault("aliases", []).append(artist["name"])
             target.setdefault("profileAliases", []).append(artist.get("profileHref", ""))
             target.setdefault("connections", []).extend(artist.get("connections", []))
+            target["_trackTitles"].extend(artist.get("_trackTitles", []))
         else:
             if preferred != artist["name"]:
                 artist.setdefault("aliases", []).append(artist["name"])
@@ -266,7 +267,7 @@ def build() -> dict:
             if other != artist["name"]:
                 links.setdefault(other, {**link, "artist": other})
         artist["connections"] = list(links.values())
-    automatic = extract_relationships(artists)
+    automatic = extract_relationships(artists) + extract_track_relationships(artists)
     for artist in artists:
         links = artist.setdefault("connections", [])
         known = {normalize(c["artist"]) for c in links}
@@ -277,6 +278,7 @@ def build() -> dict:
                     links.append({"artist":other, **{k:v for k,v in connection.items() if k != "artists"}})
                     known.add(normalize(other))
         artist.pop("fullBio", None)
+        artist.pop("_trackTitles", None)
         for signal in artist["signals"]:
             signal["source"] = artist.get("profileHref") or "/artists.html"
     report = {"artists": len(artists), "automaticRelationships":len(automatic),

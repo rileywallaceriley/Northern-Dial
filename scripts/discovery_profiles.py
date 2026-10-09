@@ -9,6 +9,7 @@ def normalize(value):
 
 # These describe music, not demographic attributes. Every extraction keeps its sentence.
 STYLES = {
+    'experimental-electronic': r'experimental electronic(?: music)?',
     'cloud-pop': r'\bcloud[ -]pop\b', 'cloud-rap': r'\bcloud[ -]rap\b',
     'hyperpop': r'\bhyper[ -]?pop\b', 'bedroom-pop': r'\bbedroom[ -]pop\b',
     'lo-fi': r'\blo[ -]?fi\b', 'chillwave': r'\bchillwave\b',
@@ -99,4 +100,23 @@ def extract_relationships(records):
                 pair=tuple(sorted([record['name'],other['name']]))
                 edges.setdefault(pair, {'artists':list(pair),'reason':f'Connected in {record["name"]}’s artist profile.',
                     'evidence':sentence,'source':record.get('profileHref') or '/artists.html','kind':'profile'})
+    return list(edges.values())
+
+
+def extract_track_relationships(records):
+    """Use explicit featured-artist credits, never names elsewhere in a song title."""
+    patterns = [(a, re.compile(r'(?<!\w)(?:'+ '|'.join(re.escape(n) for n in [a['name'], *a.get('aliases', [])]) +r')(?!\w)', re.I)) for a in records]
+    edges = {}
+    for artist in records:
+        for title in artist.get('_trackTitles', []):
+            match = re.search(r'\b(?:feat\.?|ft\.?|featuring)\s+(.+)', title, re.I)
+            if not match:
+                continue
+            for other, pattern in patterns:
+                if other['name'] == artist['name'] or not pattern.search(match[1]):
+                    continue
+                pair = tuple(sorted([artist['name'], other['name']]))
+                edges.setdefault(pair, {'artists': list(pair), 'kind':'track-credit',
+                    'reason': f'{artist["name"]} and {other["name"]} are credited together on “{title}” in Northern Dial’s library.',
+                    'source': '/artists.html', 'evidence': title})
     return list(edges.values())

@@ -59,7 +59,7 @@
     // A documented specific style is enough, even across broad genre buckets.
     const supported=Boolean(link) || specificStyles.length>0 || (genres.length>0 && (soulPop || sharedTrait.some(t=>t!=='underground-rap')))
       || (!seedSpecific && artist.primaryGenre===taste.primaryGenre && genres.length>0 && scenes.length>0 && eras.length>0)
-      || (taste.genres?.length===2 && genres.length===2 && artist.primaryGenre===taste.primaryGenre);
+      || (taste.genres?.length>=2 && genres.length>=2 && artist.primaryGenre===taste.primaryGenre);
     return {link,styles,specificStyles,scenes,eras,genres,sharedTrait,supported};
   }
   function rank(library, {genre='', era='', taste={}, surprise=false} = {}) {
@@ -69,7 +69,7 @@
     return candidates.map(artist => {
       const match=evidence(artist,taste);
       const production = match.link && /produced|producer.*records by|records by/.test((match.link.reason||'')+' '+(match.link.evidence||''));
-      const score=(match.link?(production?1350:match.link.kind==='profile'?1050:1200):0)+match.styles.reduce((n,s)=>n+(s.key==='singer-songwriter'?5:s.key==='soul-pop'?8:25),0)
+      const score=(match.link?(production?1350:match.link.kind==='track-credit'?950:match.link.kind==='profile'?1050:1200):0)+match.styles.reduce((n,s)=>n+(s.key==='singer-songwriter'?5:s.key==='soul-pop'?8:25),0)
         +match.scenes.length*3+match.eras.length*20+match.genres.length*3
         +match.sharedTrait.reduce((n,t)=>n+(t==='backburner'?100:t==='underground-rap'?1:20),0);
       const tier=match.link?3:match.specificStyles.length || match.sharedTrait.some(t=>!['underground-rap'].includes(t))?2:1;
