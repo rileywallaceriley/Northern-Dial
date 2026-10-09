@@ -1,9 +1,11 @@
 {
   "batch_limit": 50,
-  "candidate_count": 47,
+  "candidate_count": 46,
   "candidates": [
     {
       "key": "$anteria",
+      "reason": "missing_translation",
+      "source_bio_sha256": "d3958f2380c0bfd568686453c89b03cea9ed0850d58586f657cd75728e21152b",
       "display_name": "$anteria",
       "bio": "$anteria is a Canadian recording artist whose releases include “BAD FOR YOU,” “PRETTY THINGS,” “VIOLET” and “F4U.” Hear “F4U” on Northern Dial.",
       "city": "",
@@ -14,6 +16,8 @@
     },
     {
       "key": "6odem3",
+      "reason": "missing_translation",
+      "source_bio_sha256": "ab617cfb964502909e7bdd2700fb3d0698c50228bb4aa54c32be3f0f1d74ac6a",
       "display_name": "6ODEM3",
       "bio": "6ODEM3 is a francophone recording project built around Nolan Babin, Ulysse Leclerc and Carl-Aubert Langelier. The trio of writers and producers released W.I.P. and SEXES in 2026, with the latter issued in August through Disques Passeport under licence from 6ODEM3 Production.",
       "city": "",
@@ -27,6 +31,8 @@
     },
     {
       "key": "ahsia",
+      "reason": "missing_translation",
+      "source_bio_sha256": "9b0ba63514547c8f8ebfdf6cbb8ea05da0aedf89be2ff4a5e389138efe63797a",
       "display_name": "AHSIA",
       "bio": "AHSIA is a Philadelphia-born, Vancouver-raised singer, songwriter, producer, poet and educator. Her music blends R&B, soul, hip-hop and jazz while using sharp lyricism and humour to explore healing, identity and self-reclamation; her 2026 releases include RUNNIN and SO NICE.",
       "city": "Vancouver, British Columbia",
@@ -40,6 +46,8 @@
     },
     {
       "key": "andre waithe",
+      "reason": "missing_translation",
+      "source_bio_sha256": "202fb91e9e489b6b3403509d528a9b62985f3fa1da9e18cf552ce0ecfd9d0ab7",
       "display_name": "Andre Waithe",
       "bio": "Andre Waithe is a Montreal rapper and producer whose releases include Some Soul Shit Vol. 2. His production credits include music by FIX, SONABOII and Khayden. Hear his collaboration with ROME, “Not The Usual,” on Northern Dial.",
       "city": "Montreal, Quebec",
@@ -50,6 +58,8 @@
     },
     {
       "key": "aviv",
+      "reason": "missing_translation",
+      "source_bio_sha256": "80b213ec259fa92c784828b59d6b932760cd4aa90a867cf83d5332d1c3d9d99f",
       "display_name": "AVIV",
       "bio": "AVIV is a Toronto artist whose independent catalogue moves through alternative pop and singer-songwriter territory. In 2026, she surfaced new material including Mind Candy alongside demos and works in progress shared through her official SoundCloud.",
       "city": "Toronto, Ontario",
@@ -63,6 +73,8 @@
     },
     {
       "key": "brody myles",
+      "reason": "missing_translation",
+      "source_bio_sha256": "f6317591cc2cdf7b78a63bae673fa34ab9a60f4bfd1de284636d6d280dacd2f7",
       "display_name": "Brody Myles",
       "bio": "Brody Myles is a Canadian recording artist whose EP GONER includes “Did you wrong,” “Toe the line” and “All in.” Hear “Did you wrong” on Northern Dial.",
       "city": "",
@@ -73,6 +85,8 @@
     },
     {
       "key": "cherrykim",
+      "reason": "missing_translation",
+      "source_bio_sha256": "43f50b81f19d74ef04e9b6e682ca4544068f6728eb32015a5befea111deeaa4c",
       "display_name": "Cherrykim",
       "bio": "Cherrykim is a Montréal-based recording artist born in South Korea. His recent catalogue includes Can You Feel It?, everynight, Reach Out and the 2026 collaboration Breathe with Vancouver artist Luvinya.",
       "city": "Montréal, Québec",
@@ -86,6 +100,8 @@
     },
     {
       "key": "chikoruss",
+      "reason": "missing_translation",
+      "source_bio_sha256": "bc950f85e031cf8df2e14efc3c8203c321226f303fefa0cac605245f29841c11",
       "display_name": "Chikoruss",
       "bio": "Chikoruss is a Montreal R&B artist whose music draws on the melodies and dance energy of early-2000s R&B. His catalog includes “Body Language,” “In 2 Deep” and “Can't Stop (Loving You),” the latter appearing on R&Bounce Vol. 1.",
       "city": "Montreal, Quebec",
@@ -96,6 +112,8 @@
     },
     {
       "key": "colin léo",
+      "reason": "missing_translation",
+      "source_bio_sha256": "b6fed3b7b857ad5b4bffb37128613d5a27440692711d82c2c5fca15dec4a046b",
       "display_name": "Colin Léo",
       "bio": "Colin Léo is a Montréal singer-songwriter who combines hip-hop, pop and R&B with elements of Québec folk and alternative music. A 2026 Francouvertes participant, he released Mêmes habitudes in August, a song built around the repeating-cycle idea of a failing relationship.",
       "city": "Montréal, Québec",
@@ -109,6 +127,8 @@
     },
     {
       "key": "concepcion",
+      "reason": "missing_translation",
+      "source_bio_sha256": "6edab41000fdb2f365c08090846dc5345fe85fb70db8809868f89983538c1c14",
       "display_name": "Concepcion",
       "bio": "Concepcion is the project of Filipino-Canadian R&B singer and songwriter John Concepcion, from Winnipeg. His catalog includes “HITMYLINE,” “Space in Between” and the EP It's Just Luv. Hear “bee's in a garden” on Northern Dial.",
       "city": "Winnipeg, Manitoba",
@@ -119,6 +139,8 @@
     },
     {
       "key": "deadly alfano",
+      "reason": "missing_translation",
+      "source_bio_sha256": "9e5eeb0bd750bf440c6b454f6ca5512e141d032270e11a81a9aeae903d7d4d00",
       "display_name": "deadly alfano",
       "bio": "Deadly Alfano is a Toronto singer-songwriter who writes and performs original material.",
       "city": "Toronto, Ontario",
@@ -132,6 +154,8 @@
     },
     {
       "key": "dee end",
+      "reason": "missing_translation",
+      "source_bio_sha256": "2165b07dc3f1232826fdabeaa86c1ff6f18bd8ea132569de1636cae068522e28",
       "display_name": "Dee End",
       "bio": "Dee End is a French-language rap artist from Montreal. His releases include Amour Et Trahison and ALTER EGO, alongside tracks “Occupation Hood,” “Mood Gouyad” and “Star 2 Quoi.”",
       "city": "Montreal, Quebec",
@@ -142,6 +166,8 @@
     },
     {
       "key": "etienne dufresne",
+      "reason": "missing_translation",
+      "source_bio_sha256": "1297433fc803b1930244856cedb633716a19d298865e766e472464b2d4a4b15f",
       "display_name": "Etienne Dufresne",
       "bio": "Etienne Dufresne is a French-language singer and songwriter recording for Duprince Records. His single “pauvre pomme” was written and produced with Benoit Parent, with additional vocals from Lysandre Menard. Hear it on Northern Dial.",
       "city": "",
@@ -152,6 +178,8 @@
     },
     {
       "key": "frank",
+      "reason": "missing_translation",
+      "source_bio_sha256": "59181aea17af85c018d52f880f74a2dd1b596175f854ba22528edba5bcd67f62",
       "display_name": "frank",
       "bio": "frank is a Canadian independent artist whose 2026 releases include bike song, flynn rider, dirt and onions and your biggest fan. The latter was featured by CKMS-FM's Northern Lights program in a September 2026 episode dedicated to new Canadian music.",
       "city": "",
@@ -165,6 +193,8 @@
     },
     {
       "key": "house mouse",
+      "reason": "missing_translation",
+      "source_bio_sha256": "c94deef0f7b70c7116f1b40767ed9db881e5721d429619b8a2ef6ace902b37ec",
       "display_name": "House Mouse",
       "bio": "House Mouse is a Canadian recording artist with “benny and joon” in Northern Dial's rotation.",
       "city": "",
@@ -175,6 +205,8 @@
     },
     {
       "key": "jon rivera",
+      "reason": "missing_translation",
+      "source_bio_sha256": "12e1a6af655bffc35987fc3e19dd738df62557229fe18415261dac1b4ec22b73",
       "display_name": "Jon Rivera",
       "bio": "Jon Rivera is a Canadian recording artist with “Genesis 3:12” in Northern Dial's rotation.",
       "city": "",
@@ -185,6 +217,8 @@
     },
     {
       "key": "k!ra oji",
+      "reason": "missing_translation",
+      "source_bio_sha256": "35e6a049802c3667c1b02873592be5eb67b6bfabcede9609b93be765dcec0ba2",
       "display_name": "K!RA OJI",
       "bio": "K!RA OJI is a rapper and songwriter who moved from Angoulême, France, to Montreal's South Shore as a teenager. He released the EP Protagoniste with producer DJ Kleancut in 2022, followed by Chercheur de lumières in 2023. Hear his collaboration with Nicky Savage, “BITCHBOYJCONNAISLECODE,” on Northern Dial.",
       "city": "",
@@ -195,6 +229,8 @@
     },
     {
       "key": "karaba",
+      "reason": "missing_translation",
+      "source_bio_sha256": "003b15be8d3064565d39b4e98cc24f4cea62ff0a28e4b7114c409289d6172a44",
       "display_name": "KARABA",
       "bio": "KARABA is a DJ, producer and former professional dancer born in Grenoble, France and raised in Montréal. Her music sits at the intersection of Afro house and underground club music, and her recent work includes the Tides remixes and 2026 singles such as Iya Yemoja, FOCUS, BIG DRIP and LMHYS.",
       "city": "Montréal, Québec",
@@ -208,6 +244,8 @@
     },
     {
       "key": "kayam",
+      "reason": "missing_translation",
+      "source_bio_sha256": "a4e5cbec01cdf27feb0263dbf514714f6a745bb590bc76c113db0ac56cc405da",
       "display_name": "KAYAM",
       "bio": "KAYAM is a Canadian-born singer-songwriter from Calgary whose Tanzanian, Kenyan, Indian and British family background feeds a sound spanning pop, hip-hop, R&B and Afrobeats. His catalogue includes Paralyzed, Ride For Me and Your Soniya, while the 2026 single Singing In The Rain extends his contemporary R&B direction.",
       "city": "Calgary, Alberta",
@@ -221,6 +259,8 @@
     },
     {
       "key": "kerrington gillespie",
+      "reason": "missing_translation",
+      "source_bio_sha256": "011f397b98faf044092fa47aa7919acfdbb2e17666f918339c4ee90f6f9e146e",
       "display_name": "Kerrington Gillespie",
       "bio": "Kerrington Gillespie is a country-pop singer and songwriter from Vancouver Island. Her releases include “New Boyfriend” and “Three Missed Calls,” with live performances at venues and festivals across British Columbia.",
       "city": "Vancouver Island, British Columbia",
@@ -231,6 +271,8 @@
     },
     {
       "key": "laroie",
+      "reason": "missing_translation",
+      "source_bio_sha256": "cee74a5108e27854369632cfaf59e8aa75100863dc167675c515e85d8bc4fcb7",
       "display_name": "Laroie",
       "bio": "Laroie is the project of Montreal singer and songwriter Gab Godon, formerly of Heartstreets. The music brings R&B and downtempo production into dancefloor grooves. Releases include the EP Tragedy and “More Than Friends,” now playing on Northern Dial.",
       "city": "Montreal, Quebec",
@@ -241,6 +283,8 @@
     },
     {
       "key": "lydia képinski",
+      "reason": "missing_translation",
+      "source_bio_sha256": "4adfed9362179ee4dcba4854f5ec20145a0835d195e51c692e087385719ffd28",
       "display_name": "Lydia Képinski",
       "bio": "Lydia Képinski is a Montreal singer and songwriter recording for Chivi Chivi. She won the Francouvertes in 2017, and her albums Premier juin and Depuis both reached the Polaris Music Prize long list. Her catalog also includes C'est parti!, with the track of the same name now playing on Northern Dial.",
       "city": "Montreal, Quebec",
@@ -251,6 +295,8 @@
     },
     {
       "key": "michaela slinger",
+      "reason": "missing_translation",
+      "source_bio_sha256": "f823d5909a90877d13ccfab24faedf2e5ae77a596fee2e9c38fe675ec85b0ac5",
       "display_name": "Michaela Slinger",
       "bio": "Michaela Slinger is a Vancouver singer and songwriter whose catalog spans indie pop and folk. Her albums include Panorama, This Can't Last Forever and Green and Trying. The latter, released in September 2026, was recorded with David Vertesi and Jonathan Anderson. Start with its title track.",
       "city": "Vancouver, British Columbia",
@@ -261,6 +307,8 @@
     },
     {
       "key": "monsune",
+      "reason": "missing_translation",
+      "source_bio_sha256": "243a56177ac6a51ee5171b5976a2b31addce3ee2c688afda81db7d3384e15568",
       "display_name": "Monsune",
       "bio": "Monsune is the project of Toronto singer and producer Scott Zhang. Known for the 2019 EP Tradition and songs including OUTTA MY MIND and Mountain, he returned in August 2026 with Sure after a long stretch focused largely on production work.",
       "city": "Toronto, Ontario",
@@ -274,6 +322,8 @@
     },
     {
       "key": "mulan",
+      "reason": "missing_translation",
+      "source_bio_sha256": "d452d70b2ecc9075ec206619c21e8a12737d37cfdc8259eccd5d376be80f6ce5",
       "display_name": "Mulan",
       "bio": "Mulan is a Montréal R&B singer-songwriter. Her five-track debut project Angelic Crashout arrived in September 2026, moving between R&B and pop on songs including What Am I, Supermodel Boy, Butterfly and the title track.",
       "city": "Montréal, Québec",
@@ -286,6 +336,8 @@
     },
     {
       "key": "natek",
+      "reason": "missing_translation",
+      "source_bio_sha256": "11ab769d33f931f903bfb35c33ff725bae0ef27ed7d21513c9d789afcdd5a8f0",
       "display_name": "Natek",
       "bio": "Natek is a Canadian recording artist whose releases include Hate me for better, Love me for worse., (you)phoria and the summer's cooler chapter. Start with “San Antonio,” now playing on Northern Dial.",
       "city": "",
@@ -296,6 +348,8 @@
     },
     {
       "key": "neddy",
+      "reason": "missing_translation",
+      "source_bio_sha256": "d17f223c930f159966214799f6d65664add473dac88b8fc28525e9b51e19cc95",
       "display_name": "Neddy",
       "bio": "Neddy is a recording artist from Mississauga, Ontario. The catalog includes the 2025 album Crush Season and singles “Thinkin' About You,” “Wish You Well” and “I tried to let go.”",
       "city": "Mississauga, Ontario",
@@ -306,6 +360,8 @@
     },
     {
       "key": "nicky savage",
+      "reason": "missing_translation",
+      "source_bio_sha256": "f202ca0df7ebac37fd3f10388cf051bfb83fce636197968392bf04e6d5aea07c",
       "display_name": "Nicky Savage",
       "bio": "Nicky Savage is a Canadian recording artist and producer whose collaborations with K!RA OJI include “SHAWTYFREAKABELLADANGER” and “BITCHBOYJCONNAISLECODE.” Credits on the former also list Nicky Savage for mixing and mastering.",
       "city": "",
@@ -316,6 +372,8 @@
     },
     {
       "key": "ok mickey",
+      "reason": "missing_translation",
+      "source_bio_sha256": "dfe53c2db7e38ce43a0ca618f9444bb75cb2ef5d3d1c766ce5ad284aa91729c9",
       "display_name": "OK MICKEY",
       "bio": "OK MICKEY is a Canadian recording project with the single “gay allegations ft. my girlfriend.” Released in October 2026, the track credits Mickey Brandolino on vocals, songwriting and production, with Eliana Arian as co-writer.",
       "city": "",
@@ -326,6 +384,8 @@
     },
     {
       "key": "olivia penalva",
+      "reason": "missing_translation",
+      "source_bio_sha256": "a609cf48f94f0a108b7561e96cd80cea24b13f410956d8b8301199fcfe787cc7",
       "display_name": "Olivia Penalva",
       "bio": "Olivia Penalva is a Canadian pop singer-songwriter from Vernon, British Columbia, who began writing and releasing music at a young age. Her catalogue has produced multiple Canadian radio hits, and in 2026 she continued that run with Distance Makes a Love Story and Code Blue.",
       "city": "Vernon, British Columbia",
@@ -339,6 +399,8 @@
     },
     {
       "key": "p'tit belliveau",
+      "reason": "missing_translation",
+      "source_bio_sha256": "049777d4cd012e1ac807b4b392c4f171b3827d7e72e6a22cfd5ec6e48bdc9545",
       "display_name": "P'tit Belliveau",
       "bio": "P'tit Belliveau is the project of Acadian musician Jonah Guimond, from Baie Sainte-Marie, Nova Scotia. His songs include “Income Tax” and “J’aimerais d’avoir un John Deere,” while his albums Greatest Hits Vol. 1 and Un homme et son piano both reached the Polaris Music Prize long list. Hear “C'est fine” on Northern Dial.",
       "city": "Baie Sainte-Marie, Nova Scotia",
@@ -349,6 +411,8 @@
     },
     {
       "key": "paradi$e",
+      "reason": "missing_translation",
+      "source_bio_sha256": "4d7dd2f27bd77885c988adffec5ae7fdbc9814f524614e4f60bd790bcfcb1d8e",
       "display_name": "Paradi$e",
       "bio": "Paradi$e is a Toronto R&B duo made up of producer Paul Tonks and vocalist Humberto Santos. After building an audience with R&B reinterpretations and original releases, the duo continued its run in 2026 with songs including SMS Love, Turn The Lights Down and Same Old Games.",
       "city": "Toronto, Ontario",
@@ -361,22 +425,9 @@
       ]
     },
     {
-      "key": "peaches",
-      "display_name": "Peaches",
-      "bio": "Peaches is the Toronto-born musician, producer and performance artist Merrill Nisker. Her work brings electronic beats, punk attitude and theatrical performance together, using humour and explicit lyrics to challenge expectations around gender, sexuality and the body. She has lived and worked in Berlin since 2000, while her career remains rooted in Canadian music.\n\nThe Teaches of Peaches introduced her international audience to that approach in 2000. Her catalogue also includes Fatherfucker, Impeach My Bush, I Feel Cream and Rub. Beyond records, she has developed installations, directed music videos and created the electro-rock opera Peaches Does Herself. Collaborations with artists including Iggy Pop, Kim Gordon and Yoko Ono reflect a practice that crosses music and performance art.\n\nReleased through Kill Rock Stars in February 2026, No Lube So Rude extends her exploration of identity and bodily autonomy through electronic, dance, punk and industrial sounds.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "https://www.teachesofpeaches.com/",
-      "instagram": "",
-      "sources": [
-        "https://ago.ca/events/inspiration-monster-peaches",
-        "https://www.southbankcentre.co.uk/bio/peaches/",
-        "https://killrockstars.com/products/no-lube-so-rude",
-        "https://www.teachesofpeaches.com/"
-      ]
-    },
-    {
       "key": "quincy isaiah",
+      "reason": "missing_translation",
+      "source_bio_sha256": "af922e23c454affa053a4c132a46586fa4d76db953d8e8f4feb916116dc9e30a",
       "display_name": "Quincy Isaiah",
       "bio": "Quincy Isaiah is a Canadian recording artist whose catalog includes “System,” “Too Much,” “Let Me Love You” and “Act Single.” Hear “Moving Different” on Northern Dial.",
       "city": "",
@@ -387,6 +438,8 @@
     },
     {
       "key": "raccoon",
+      "reason": "missing_translation",
+      "source_bio_sha256": "6f487adf963eb8fee9a6364a4924697e70b163229f21a82d921891c47264cbf6",
       "display_name": "Raccoon",
       "bio": "Raccoon is a Montréal rapper whose catalogue includes the albums Gentil pour un noir, Le set up and C00N: la prophétie. In 2026 he joined ANJXLXE on Rêve un peu, a pop and R&B-leaning single produced by Da-P that pairs her melodic lead with Raccoon's verse.",
       "city": "Montréal, Québec",
@@ -400,6 +453,8 @@
     },
     {
       "key": "rome",
+      "reason": "missing_translation",
+      "source_bio_sha256": "cdb7c1f748c9d580b6d649533cc3e7cb3fe83b9790f7a2c64a9d34f2302b9f28",
       "display_name": "ROME",
       "bio": "ROME is a Canadian recording artist credited alongside Andre Waithe on “Not The Usual,” now playing on Northern Dial.",
       "city": "",
@@ -410,6 +465,8 @@
     },
     {
       "key": "rosabell",
+      "reason": "missing_translation",
+      "source_bio_sha256": "63c7b36d6ef39eca4980f9fd7fd5ae1fc39fba9737ac326c8f6cdcd2c36ca4eb",
       "display_name": "Rosabell",
       "bio": "Rosabell is a Toronto-based Nigerian-Canadian singer-songwriter making pop and R&B centred on identity, self-discovery and emotional storytelling. Her three-song debut EP In Bloom includes Flowers, a bright, dance-leaning title track built around self-worth and learning to recognize your own growth.",
       "city": "Toronto, Ontario",
@@ -423,6 +480,8 @@
     },
     {
       "key": "ross nkunga",
+      "reason": "missing_translation",
+      "source_bio_sha256": "a693390c53a373faa9162496b75dbf7a12a1a2d47bdd897756cc8af67ac4a25d",
       "display_name": "Ross Nkunga",
       "bio": "Ross Nkunga is an Ontario-based gospel musician and producer originally from Kinshasa, Democratic Republic of the Congo. He releases music through his RossLab records imprint. Hear his single “Crois” on Northern Dial.",
       "city": "Ontario",
@@ -433,6 +492,8 @@
     },
     {
       "key": "sheldon sabastian",
+      "reason": "missing_translation",
+      "source_bio_sha256": "868425478413142ae70dce97e7902aaeaf60c0bcce5bfdfffe7c83b70db29e92",
       "display_name": "Sheldon Sabastian",
       "bio": "Sheldon Sabastian is a rapper from Brampton, Ontario, whose catalog includes “Blue Acura,” Mocha Pack and The Empty Seven 2. He also co-hosts the Random Order podcast. Hear “Double Up - Miami Bass Remix,” credited alongside Tamir and Ya Fave Auntie, on Northern Dial.",
       "city": "Brampton, Ontario",
@@ -443,6 +504,8 @@
     },
     {
       "key": "shyla gray",
+      "reason": "missing_translation",
+      "source_bio_sha256": "0c967f75501f916d531073a32a198e1f07e031f835b6e8dedb2e2f4ddf42e3dc",
       "display_name": "Shyla Gray",
       "bio": "Shyla Gray is a Toronto singer and songwriter making R&B. She names Adele and Amy Winehouse among her influences and also teaches voice and songwriting. Hear “First Time,” produced by Jay808, on Northern Dial.",
       "city": "Toronto, Ontario",
@@ -453,6 +516,8 @@
     },
     {
       "key": "sunniva",
+      "reason": "missing_translation",
+      "source_bio_sha256": "50f27dab0b97c7a483a57346f4c35892deba588f2b87016e2751222a239ff46e",
       "display_name": "sunniva",
       "bio": "sunniva is the recording project of singer-songwriter Sunniva Snieckus. Releases include “Surface Tension,” “Exit” and “It's Obvious,” a collaboration with link3. Start with “The Shallow End,” now playing on Northern Dial.",
       "city": "",
@@ -463,6 +528,8 @@
     },
     {
       "key": "sunny",
+      "reason": "missing_translation",
+      "source_bio_sha256": "2e146703bd70ab9f798ce789dc254a9cb9ece202f8622a43ea71ef2272564b3b",
       "display_name": "sunny",
       "bio": "Sunny St-Hillien Boisvert is a Montréal-based multidisciplinary artist whose path into music grew out of a professional dance career that began at a young age. He has appeared on Québec stages and television in productions including En direct de l’univers, Star Académie, La Voix and Révolution, where he reached the Season 4 grand finale and later returned for the all-star season.\n\nHis performance work also includes musical theatre productions of Mary Poppins, Footloose and Mamma Mia, along with appearances alongside artists including Tory Lanez, Sarahmée, FouKi and CeeLo Green.\n\nAfter establishing himself as a dancer, choreographer and television personality, Sunny is putting a greater focus on recording. His earlier musical work includes the Dernière Danse project, while ‘Te Quiero’ begins a new chapter with GoodLife Entertainment Inc. Blending contemporary R&B and pop with French, English and Spanish elements, the single brings his music, dance and performance backgrounds together and is set for official release on September 25, 2026.",
       "city": "Montréal, Québec",
@@ -476,6 +543,8 @@
     },
     {
       "key": "suuncaat",
+      "reason": "missing_translation",
+      "source_bio_sha256": "8ec38ecc555c9a8ef3fe108da3f18199495907fddfc4de0af8f480bd9a4dbaca",
       "display_name": "SUUNCAAT",
       "bio": "SUUNCAAT is a Montreal experimental pop artist and producer working with electronic and hyperpop sounds. Releases include “bite,” “work,” “Signs” and “the wash,” a song built around the repetition of doing laundry.",
       "city": "Montreal, Quebec",
@@ -486,6 +555,8 @@
     },
     {
       "key": "virgo rising",
+      "reason": "missing_translation",
+      "source_bio_sha256": "634f63f26baa038b5b07b7756c94f3248de1b1bbe3256b77249dc43729cd230b",
       "display_name": "Virgo Rising",
       "bio": "Virgo Rising is a Winnipeg indie rock band made up of Emily Sinclair, Jenna Wittmann, Lauren Wittmann and Isaac Tate. After the EPs Sixteenth Sapphire and Vampyre Year, the band released its debut album, Wishbone, in October 2026. “Cut My Knee” appears on the record.",
       "city": "Winnipeg, Manitoba",
@@ -496,6 +567,8 @@
     },
     {
       "key": "who's lara?",
+      "reason": "missing_translation",
+      "source_bio_sha256": "226907a3b693b707282d5a006be24ca60b74c074fa1e88e1bf25ebce608d9e76",
       "display_name": "who's lara?",
       "bio": "who's lara? is a Montréal-based artist and producer working in the overlap between R&B and hip-hop. His catalogue includes the 2025 album Blur? and 2026 singles including Withdrawals, Want You and srx, with production playing a central role in his own recordings.",
       "city": "Montréal, Québec",
@@ -509,6 +582,8 @@
     },
     {
       "key": "ya fave auntie",
+      "reason": "missing_translation",
+      "source_bio_sha256": "814d2841f2ece6b3cd85cd9fb539be312bf7e7787064a698bf790f8e93264934",
       "display_name": "Ya Fave Auntie",
       "bio": "Ya Fave Auntie is a Canadian recording artist credited alongside Sheldon Sabastian and Tamir on “Double Up - Miami Bass Remix,” now playing on Northern Dial.",
       "city": "",
@@ -519,6 +594,8 @@
     },
     {
       "key": "zoey",
+      "reason": "missing_translation",
+      "source_bio_sha256": "988513a2679cd6d127a146afdf9688b4ed88bfae9965d6ba6a205b32f0dd86a1",
       "display_name": "ZOEY",
       "bio": "ZOEY is a Canadian recording artist whose catalog includes “STP” and its radio version. ZOEY is also credited on Shah Frank's “L'Année des Roses,” alongside Naomi and Nicole Musoni.",
       "city": "",
