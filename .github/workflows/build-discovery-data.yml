@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - artists.html
+      - artists/**
+      - discovery-enrichment.json
       - library_artist_images.tsv
       - scripts/build_discovery_data.py
       - scripts/discovery_profiles.py

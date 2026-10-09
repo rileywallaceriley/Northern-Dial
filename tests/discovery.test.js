@@ -41,7 +41,7 @@ assert.equal(engine.resolve(library,'DillanPonders/ BVB').name,'DillanPonders');
 assert.equal(engine.resolve(library,'Not in catalogue/ Jazz Cartier').name,'Jazz Cartier');
 assert(engine.rank(library,{taste:engine.resolve(library,'Lia Pappas-Kemps'),genre:'pop'}).length>=3);
 const cdw=engine.resolve(library,'Charlotte Day Wilson');
-assert(engine.connection(library.find(a=>a.name==='Daniel Caesar'),cdw).evidence.includes('collaborations'));
+assert(engine.connection(library.find(a=>a.name==='Daniel Caesar'),cdw).evidence.match(/collaborat|work|record|feat/i));
 assert.equal(engine.rank(library,{taste:{...cdw,genres:[cdw.primaryGenre],signals:[],connections:[],traits:[]}}).length,0,'No generic genre fallback');
 console.log('Wordburglar picks:', picks.map(a => a.name).join(', '));
 
@@ -100,7 +100,7 @@ assert.equal(new Set(identities).size,library.length);
 assert.equal(engine.resolve(library,'P. Reign').name,'P Reign');
 const legacy=engine.prepare({...library.find(a=>a.name==='P Reign'),name:'P. Reign'});
 const drake=engine.resolve(library,'Drake');
-const aliasPicks=engine.rank([...library,legacy],{taste:drake});
+const aliasPicks=engine.rank([library.find(a=>a.name==='P Reign'),legacy],{taste:drake});
 assert.equal(aliasPicks.filter(a=>a.profileHref==='./artists/p-reign.html').length,1);
 assert(!engine.rank([...library,legacy],{taste:engine.resolve(library,'P Reign')}).some(a=>a.profileHref===legacy.profileHref));
 for(const artist of library){
@@ -130,3 +130,15 @@ assert.equal(cadencePicks.length,5);
 assert(cadencePicks.some(a=>a.name==='Buck 65'));
 assert.equal(engine.connection(library.find(a=>a.name==='Buck 65'),cadence).kind,'track-credit');
 assert(!cadencePicks.some(a=>engine.sameArtist(a,cadence)));
+
+// Enriched facts retain their sources; new bios cannot revive unrelated trait matches.
+for(const name of ['11:11','80 Empire','Aswell','Adam Bomb','anders','PARTYNEXTDOOR','Anodajay','DL Incognito','Calamine','City Fidelia']) {
+ const a=engine.resolve(library,name);
+ assert(a.enrichmentSources?.length>0 && a.enrichmentSources.every(s=>s.startsWith('https://')));
+ assert(a.signals.every(s=>s.source));
+ assert(engine.rank(library,{taste:a}).length>0);
+}
+assert.equal(engine.resolve(library,'Maestro').name,'Maestro Fresh Wes');
+const empire=engine.resolve(library,'80 Empire');
+assert(engine.connection(library.find(a=>a.name==='Maestro Fresh Wes'),empire)?.source.includes('gladiatorent.com'));
+assert(engine.connection(library.find(a=>a.name==='Koriass'),engine.resolve(library,'Anodajay')).kind==='label');

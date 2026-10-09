@@ -10,12 +10,14 @@ def normalize(value):
 # These describe music, not demographic attributes. Every extraction keeps its sentence.
 STYLES = {
     'experimental-electronic': r'experimental electronic(?: music)?',
+    'sample-based-rap': r'sample[ -](?:based|driven).{0,45}(?:rap|hip[ -]hop)|(?:rap|hip[ -]hop).{0,45}sample[ -](?:based|driven)',
+    'trap-rnb': r'r&b.{0,45}\btrap\b|\btrap\b.{0,45}r&b',
     'cloud-pop': r'\bcloud[ -]pop\b', 'cloud-rap': r'\bcloud[ -]rap\b',
     'hyperpop': r'\bhyper[ -]?pop\b', 'bedroom-pop': r'\bbedroom[ -]pop\b',
     'lo-fi': r'\blo[ -]?fi\b', 'chillwave': r'\bchillwave\b',
     'alternative-pop': r'\b(?:alternative|alt)[ -]pop\b',
     'emo-rap': r'\bemo[ -]rap\b', 'boom-bap': r'boom[ -]bap', 'trap': r'\btrap\b', 'drill': r'\bdrill\b',
-    'conscious-rap': r'conscious (?:rap|hip[ -]hop)',
+    'conscious-rap': r'(?:conscious|political) (?:rap|hip[ -]hop)',
     'alternative-rap': r'alternative hip[ -]hop|alternative rap',
     'abstract-rap': r'abstract rap|experimental hip[ -]hop',
     'jazz-rap': r'jazz[ -](?:rap|inflected hip[ -]hop)',
@@ -52,7 +54,7 @@ STYLES = {
 SCENES = ['Toronto','Scarborough','Brampton','Mississauga','Hamilton','Montreal','Vancouver',
           'Halifax','Ottawa','Winnipeg','Edmonton','Calgary','Victoria','Quebec City',
           'Saskatoon','Regina','London, Ontario','Newfoundland','Cape Breton']
-RELATION = re.compile(r'collaborat|produc(?:ed|tion) (?:by|for)|records by|work(?:ed|ing)? with|'
+RELATION = re.compile(r'collaborat|produc(?:ed|tion)(?: [\w-]+){0,2} (?:by|for)|records by|work(?:ed|ing)? with|'
                       r'featur(?:es|ed|ing)\b|member(?:s)? of|part of|formed|co-founded|'
                       r'fronted by|alongside|mentorship|mentored|collective|duo', re.I)
 
@@ -99,7 +101,7 @@ def extract_relationships(records):
                     continue
                 pair=tuple(sorted([record['name'],other['name']]))
                 edges.setdefault(pair, {'artists':list(pair),'reason':f'Connected in {record["name"]}’s artist profile.',
-                    'evidence':sentence,'source':record.get('profileHref') or '/artists.html','kind':'profile'})
+                    'evidence':sentence,'source':next((f['source'] for f in record.get('_evidenceSources',[]) if sentence in f['text']), record.get('profileHref') or '/artists.html'),'kind':'profile'})
     return list(edges.values())
 
 

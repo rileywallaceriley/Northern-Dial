@@ -57,7 +57,7 @@
     const soulPop=styles.some(s=>s.key==='soul-pop') && artist.primaryGenre===taste.primaryGenre;
     const seedSpecific=(taste.signals||[]).some(s=>s.kind==='style' && !['singer-songwriter','soul-pop','adult-rnb'].includes(s.key));
     // A documented specific style is enough, even across broad genre buckets.
-    const supported=Boolean(link) || specificStyles.length>0 || (genres.length>0 && (soulPop || sharedTrait.some(t=>t!=='underground-rap')))
+    const supported=Boolean(link) || specificStyles.length>0 || (genres.length>0 && (soulPop || (artist.primaryGenre===taste.primaryGenre && sharedTrait.some(t=>t!=='underground-rap'))))
       || (!seedSpecific && artist.primaryGenre===taste.primaryGenre && genres.length>0 && scenes.length>0 && eras.length>0)
       || (taste.genres?.length>=2 && genres.length>=2 && artist.primaryGenre===taste.primaryGenre);
     return {link,styles,specificStyles,scenes,eras,genres,sharedTrait,supported};

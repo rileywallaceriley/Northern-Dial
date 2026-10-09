@@ -147,6 +147,13 @@ def build() -> dict:
 
     removed = {normalize(line) for line in (ROOT / "artist_removals.txt").read_text().splitlines() if line.strip()}
     connections = json.loads((ROOT / "discovery-connections.json").read_text())["connections"]
+    enrichment_path = ROOT / "discovery-enrichment.json"
+    enrichment = {normalize(a["name"]):a for a in json.loads(enrichment_path.read_text())["artists"]} if enrichment_path.exists() else {}
+    for entry in enrichment.values():
+        assert entry.get("facts") and all(f.get("text") and f.get("source", "").startswith("https://") for f in entry["facts"]), "Enrichment needs sourced facts"
+        entry["bio"] = " ".join(f["text"] for f in entry["facts"])
+        entry["sources"] = list(dict.fromkeys(f["source"] for f in entry["facts"]))
+    expanded_profiles = 0
     artists = []
     seen: set[str] = set()
 
@@ -174,6 +181,22 @@ def build() -> dict:
         profile_href = html_lib.unescape(
             first_match(r'class="artist-page-link"[^>]*href="([^"]+)"', block)
         )
+
+        # Detailed bios carry styles and collaborators absent from directory summaries.
+        summary_bio = bio
+        profile_path = (ROOT / profile_href.split("#")[0]).resolve() if profile_href else None
+        if profile_path and profile_path.is_relative_to(ROOT) and profile_path.is_file():
+            detail = profile_path.read_text(encoding="utf-8")
+            paragraphs = [clean_text(p) for p in re.findall(r'<p\b[^>]*class="bio"[^>]*>([\s\S]*?)</p>', detail)]
+            detailed_bio = " ".join(paragraphs)
+            if len(detailed_bio) > len(bio):
+                bio = detailed_bio
+                expanded_profiles += 1
+        extra = enrichment.get(key, {})
+        if extra.get("bio"):
+            bio = " ".join([bio, extra["bio"]]).strip()
+        if extra.get("location") and not location:
+            location = extra["location"]
 
         feature = ""
         for href, label in re.findall(
@@ -203,14 +226,14 @@ def build() -> dict:
             item["profileHref"] = profile_href
 
         # Album titles and featured artist names are not genre evidence.
-        genres = classify_genres(bio)
+        genres = classify_genres(" ".join([summary_bio, extra.get("bio", "")]))
         eras = infer_eras(signals)
         image = image_map.get(key, "")
 
         if genres:
             item["genres"] = genres
-            intro_genres = classify_genres(re.split(r"(?<=[.!?])\s+", bio)[0])
-            item["primaryGenre"] = intro_genres[0] if intro_genres else genres[0]
+            intro_genres = classify_genres(re.split(r"(?<=[.!?])\s+", summary_bio or extra.get("bio", ""))[0])
+            item["primaryGenre"] = extra.get("primaryGenre") or (intro_genres[0] if intro_genres else genres[0])
         traits = classify_traits(bio)
         if traits:
             item["traits"] = traits
@@ -221,12 +244,18 @@ def build() -> dict:
 
         item["fullBio"] = bio
         item["signals"] = extract_profile(bio, location)
+        if extra:
+            item["enrichmentSources"] = extra["sources"]
+            item["_evidenceSources"] = extra["facts"]
+            for signal in item["signals"]:
+                if signal["evidence"] in extra.get("bio", ""):
+                    signal["source"] = next(f["source"] for f in extra["facts"] if signal["evidence"] in f["text"])
         related = []
         for connection in connections:
             names = connection["artists"]
             if key in [normalize(n) for n in names]:
                 other = next(n for n in names if normalize(n) != key)
-                related.append({"artist": other, "reason": connection["reason"], "source": connection["source"]})
+                related.append({"artist": other, "reason": connection["reason"], "source": connection["source"], **({"kind":connection["kind"]} if connection.get("kind") else {})})
         if related:
             item["connections"] = related
         artists.append(item)
@@ -234,7 +263,7 @@ def build() -> dict:
     # A profile is the stable identity; punctuation variants are library credits.
     # These alternate credits are explicitly identified by the existing profile biographies.
     aliases = {"nish": "Nish Raawks", "nish rawks": "Nish Raawks", "nish rawwks": "Nish Raawks",
-               "charisma aka skizz": "Charisma", "mayhem moreaty": "Mayhem Morearty"}
+               "charisma aka skizz": "Charisma", "mayhem moreaty": "Mayhem Morearty", "maestro": "Maestro Fresh Wes"}
     canonical = {}
     profile_identities = {}
     for artist in artists:
@@ -251,6 +280,10 @@ def build() -> dict:
             target.setdefault("profileAliases", []).append(artist.get("profileHref", ""))
             target.setdefault("connections", []).extend(artist.get("connections", []))
             target["_trackTitles"].extend(artist.get("_trackTitles", []))
+            if len(artist.get("fullBio", "")) > len(target.get("fullBio", "")):
+                for field in ["bio", "fullBio", "signals", "traits", "genres", "primaryGenre", "eras"]:
+                    if field in artist:
+                        target[field] = artist[field]
         else:
             if preferred != artist["name"]:
                 artist.setdefault("aliases", []).append(artist["name"])
@@ -279,9 +312,10 @@ def build() -> dict:
                     known.add(normalize(other))
         artist.pop("fullBio", None)
         artist.pop("_trackTitles", None)
+        artist.pop("_evidenceSources", None)
         for signal in artist["signals"]:
-            signal["source"] = artist.get("profileHref") or "/artists.html"
-    report = {"artists": len(artists), "automaticRelationships":len(automatic),
+            signal.setdefault("source", artist.get("profileHref") or "/artists.html")
+    report = {"artists": len(artists), "expandedProfiles":expanded_profiles, "researchedProfiles":len(enrichment), "automaticRelationships":len(automatic),
         "withSignals":sum(bool(a["signals"]) for a in artists),
         "withConnections":sum(bool(a["connections"]) for a in artists),
         "needsEnrichment":[a["name"] for a in artists if not a["signals"] and not a["connections"]]}

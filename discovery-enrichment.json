@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "artists": [
+    {
+      "name": "11:11",
+      "primaryGenre": "rnb-soul",
+      "location": "Toronto, Ontario",
+      "facts": [
+        {
+          "text": "Toronto singer, songwriter and producer 11:11 blends R&B and trap in his melodic recordings.",
+          "source": "https://soundcloud.com/1111music"
+        }
+      ]
+    },
+    {
+      "name": "80 Empire",
+      "primaryGenre": "hip-hop",
+      "location": "Niagara-on-the-Lake, Ontario",
+      "facts": [
+        {
+          "text": "80 Empire is the Canadian songwriting and production duo of Adrian and Lucas Rezza. Their music combines hip-hop with soul, funk and soulful house music.",
+          "source": "https://www.gladiatorent.com/80-empire"
+        },
+        {
+          "text": "80 Empire has produced music for Maestro Fresh Wes, Divine Brown and Reema Major.",
+          "source": "https://www.gladiatorent.com/who-is-gladiator"
+        }
+      ]
+    },
+    {
+      "name": "Aswell",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Québec artist Aswell blends emo rap, pop and folk music with melodic flows and introspective writing. His projects include the 2021 EP Solo and the 2024 album Banlieue.",
+          "source": "https://taniere.ca/artiste/aswell/"
+        }
+      ]
+    },
+    {
+      "name": "Adam Bomb",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Toronto rapper Adam Bomb developed through freestyling and battle rap. He is a member of Freedom Writers and Naturally Born Strangers, and his solo writing includes personal storytelling.",
+          "source": "https://www.adambomb.ca/bio"
+        },
+        {
+          "text": "Adam Bomb has collaborated with Maestro Fresh Wes and D-Sisive.",
+          "source": "https://www.adambomb.ca/"
+        }
+      ]
+    },
+    {
+      "name": "anders",
+      "primaryGenre": "rnb-soul",
+      "facts": [
+        {
+          "text": "Toronto R&B singer anders uses trap-adjacent production on Free Myself from his 2021 project Honest. The record explores self-reflection and relationships.",
+          "source": "https://music.apple.com/us/album/honest/1575864196"
+        }
+      ]
+    },
+    {
+      "name": "PARTYNEXTDOOR",
+      "primaryGenre": "rnb-soul",
+      "facts": [
+        {
+          "text": "PARTYNEXTDOOR blends R&B songwriting with trap production on his 2013 self-titled debut, which features Drake on Over Here.",
+          "source": "https://music.apple.com/us/album/partynextdoor/1662160908"
+        }
+      ]
+    },
+    {
+      "name": "Anodajay",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Rouyn-Noranda rapper Anodajay founded Disques 7ième Ciel in 2003 to release Premier VII. The label subsequently released the debut albums of Samian, Koriass and Dramatik.",
+          "source": "https://7iemeciel.ca/a-propos/"
+        }
+      ]
+    },
+    {
+      "name": "DL Incognito",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Ottawa rapper DL Incognito described Organic Music for a Digital World in 2006 as sample-driven hip-hop production built from record breaks rather than keyboard compositions.",
+          "source": "https://exclaim.ca/music/article/dl_incognito-organic_music_for_digital"
+        }
+      ]
+    },
+    {
+      "name": "Calamine",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Montréal rapper and beatmaker Calamine writes political rap about social justice, housing and ecological issues. Her live collaborators include co-producer Kèthe Magané and saxophonist Valérie Lachance-Guillemette.",
+          "source": "https://www.bravomusique.com/en/artists/calamine/"
+        }
+      ]
+    },
+    {
+      "name": "City Fidelia",
+      "primaryGenre": "hip-hop",
+      "facts": [
+        {
+          "text": "Ottawa rapper City Fidelia released Freedumb in 2016, City of Lost Angels in 2017 and Painkiller in 2022.",
+          "source": "https://www.cityfidelia.com/"
+        }
+      ]
+    }
+  ]
+}
