@@ -2,13 +2,12 @@
   "directory_accordions": 1515,
   "profile_backed_accordions": 1186,
   "standalone_profile_files": 1195,
-  "issue_count": 7,
+  "issue_count": 6,
   "issue_types": {
     "bad_profile_anchor": 1,
     "bad_profile_cta": 1,
     "bad_profile_name_link": 1,
     "duplicate_or_missing_profile_block": 1,
-    "missing_back_link": 1,
     "missing_dropdown_bio": 1,
     "missing_profile_file": 1
   },
@@ -42,11 +41,6 @@
       "type": "duplicate_or_missing_profile_block",
       "artist": "SUUNCAAT",
       "detail": "Expected 1 artist-profile block; found 0"
-    },
-    {
-      "type": "missing_back_link",
-      "artist": "alice-ivy",
-      "detail": "artists/alice-ivy.html"
     }
   ]
 }
