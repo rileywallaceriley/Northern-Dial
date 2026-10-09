@@ -1,0 +1,5497 @@
+{
+  "version": 1,
+  "source": "https://a10.asurahosting.com/api/station/northern_dial/requests?limit=1000",
+  "verifiedOn": "2026-10-09",
+  "tracks": [
+    {
+      "requestId": "339b08fc4d78358e0d8dd2d9",
+      "artistCredit": "2 Versatile, Scifo of the Micn Gz Crew",
+      "title": "Guiding Light",
+      "album": "Guiding Light"
+    },
+    {
+      "requestId": "63f0aec51e6e2781ce7b459d",
+      "artistCredit": "2nd Son, A l l i e",
+      "title": "All for You (feat. a l l i e)",
+      "album": "First Light"
+    },
+    {
+      "requestId": "6c2b3b98c21b6bffe99b1c27",
+      "artistCredit": "2nd Son, A l l i e",
+      "title": "Private Island (feat. a l l i e)",
+      "album": "First Light"
+    },
+    {
+      "requestId": "b119dd4455583e1f00183abd",
+      "artistCredit": "2nd Son, Casey MQ, A l l i e",
+      "title": "Only Underground (feat. Casey MQ & a l l i e)",
+      "album": "Cosmic Blue"
+    },
+    {
+      "requestId": "5969bf9530f43b34d1141d4e",
+      "artistCredit": "2nd Son, Sunclef, A l l i e",
+      "title": "Cluster Flux (feat. Sunclef & a l l i e)",
+      "album": "Cosmic Blue"
+    },
+    {
+      "requestId": "2e55581ce436421d49b33c06",
+      "artistCredit": "2Rude, K-4ce",
+      "title": "2much ( Remaster 2024)",
+      "album": "2rude Rudimental 2k (Remastered 2024)"
+    },
+    {
+      "requestId": "7d27973a75574d44133aec9c",
+      "artistCredit": "2Rude, Saukrates, Pharoahe Monch",
+      "title": "Innovations ( Remaster 2024)",
+      "album": "2rude Rudimental 2k (Remastered 2024)"
+    },
+    {
+      "requestId": "028ed3fa01b04a288dc08336",
+      "artistCredit": "401 WST, 4Korners, Ashton Adams, EverythingOShauN",
+      "title": "Ogwula Detour (feat. EverythingOShauN)",
+      "album": "Ogwula Detour (feat. EverythingOShauN)"
+    },
+    {
+      "requestId": "2e7328be759e34b874173b8a",
+      "artistCredit": "4Korners, EverythingOShauN",
+      "title": "Ogwula",
+      "album": "Ogwula"
+    },
+    {
+      "requestId": "4ec4d4ae7e75792c79adb990",
+      "artistCredit": "646yf4t, Rowena Fysx",
+      "title": "Alright, alright",
+      "album": "Alright, alright"
+    },
+    {
+      "requestId": "dccf0cb743f0dd272294efe5",
+      "artistCredit": "6ix, Jazz Cartier, TOBi",
+      "title": "Messi",
+      "album": "Homebody"
+    },
+    {
+      "requestId": "6246e5e0fc64f0666fcdd2bb",
+      "artistCredit": "6ixbuzz, Bvlly, AR Paisley, 6ixbuzz, Bvlly, AR Paisley, 3MFrench",
+      "title": "Price Gone Up (feat. 3MFrench)",
+      "album": "Price Gone Up (feat. 3MFrench)"
+    },
+    {
+      "requestId": "5461b981f13f0edf7b1a4ad7",
+      "artistCredit": "88GLAM, NAV",
+      "title": "Snow Globe (Remix)",
+      "album": "88GLAM2.5"
+    },
+    {
+      "requestId": "de5bf42d545767c23725ae7d",
+      "artistCredit": "88GLAM/ 6ixbuzz",
+      "title": "Urgent Messages",
+      "album": "Urgent Messages"
+    },
+    {
+      "requestId": "16d62b6a8965e6ebf1b4ac92",
+      "artistCredit": "88GLAM/ NAV",
+      "title": "Bali",
+      "album": "88GLAM RELOADED"
+    },
+    {
+      "requestId": "5e7bc4b6fda0ed66f3d1fc53",
+      "artistCredit": "88GLAM/6ixbuzz",
+      "title": "East to West",
+      "album": "East to West"
+    },
+    {
+      "requestId": "0830d4243bec50882aba01ab",
+      "artistCredit": "88GLAM/NAV",
+      "title": "It's A Flex",
+      "album": "88GLAM2"
+    },
+    {
+      "requestId": "aff33d2428aa8bea606cdcd6",
+      "artistCredit": "88GLAM/WondaGurl",
+      "title": "Far From God",
+      "album": "Close To Heaven Far From God"
+    },
+    {
+      "requestId": "42c53be8231737663ec00c6a",
+      "artistCredit": "88GLAM/WondaGurl",
+      "title": "Far From God",
+      "album": "Close To Heaven Far From God"
+    },
+    {
+      "requestId": "5fe882d7765353267d64e731",
+      "artistCredit": "8OND, EverythingOShauN",
+      "title": "Dance Alone",
+      "album": "Dance Alone"
+    },
+    {
+      "requestId": "00b57efd50405ba2b69c6049",
+      "artistCredit": "9th Wonder/Eternia/Torae/Ms. Davis",
+      "title": "Nowhere No More ft. Ms. Davis",
+      "album": "The Setup"
+    },
+    {
+      "requestId": "1083564f65cdfbc5a37af8fe",
+      "artistCredit": "A l l i e, Birthday Boy",
+      "title": "Coop",
+      "album": "Coop"
+    },
+    {
+      "requestId": "4008b740fd3e71a53056f11f",
+      "artistCredit": "A l l i e/Birthday Boy/Leland Whitty",
+      "title": "Violet Nights",
+      "album": "Violet Nights"
+    },
+    {
+      "requestId": "f51bea58558ab28a07c12b5a",
+      "artistCredit": "A l l i e/Casey MQ",
+      "title": "Clean Sight",
+      "album": "Clean Sight"
+    },
+    {
+      "requestId": "181052cfd6b13ffbdf509ee4",
+      "artistCredit": "A l l i e/Da-P",
+      "title": "River Song",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "73c473e43f2f8ba99c3d166f",
+      "artistCredit": "A l l i e/Dan Only/Gray Rowan",
+      "title": "Alchemy",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "f04d3591d7ad7e9d53b2faf6",
+      "artistCredit": "A l l i e/Daniela Andrade",
+      "title": "DNA",
+      "album": "DNA"
+    },
+    {
+      "requestId": "844c9eaaeabee878cfbad526",
+      "artistCredit": "A l l i e/Matthew Progress/River Tiber",
+      "title": "Hybrid",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "956bc60b2c38d47045a90fef",
+      "artistCredit": "A l l i e/The Kount",
+      "title": "Sapphire",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "d3de08a438f09a418a2c74d9",
+      "artistCredit": "A l l i e/The Kount",
+      "title": "Soundbath",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "5ada3ba10a5f60fa386fc228",
+      "artistCredit": "A l l i e/The Kount",
+      "title": "Soundbath",
+      "album": "Tabula Rasa"
+    },
+    {
+      "requestId": "f1a22012ea0b0620d1dd65f9",
+      "artistCredit": "A Tribe Called Red, Yasiin Bey, Narcy, Black Bear",
+      "title": "R.E.D.",
+      "album": "We Are the Halluci Nation"
+    },
+    {
+      "requestId": "0bb9ea903451c66b36e03bfc",
+      "artistCredit": "A$h Da Hunter, Tylor Wauneka",
+      "title": "Goonies Never Die",
+      "album": "Goonies Never Die"
+    },
+    {
+      "requestId": "14b901330dc7fbc861f48bf9",
+      "artistCredit": "A-Game",
+      "title": "Money Made Me Do It (feat. Luu Breeze)",
+      "album": "Money Made Me Do It (feat. Luu Breeze)"
+    },
+    {
+      "requestId": "edb3c6d25479049aba4a3736",
+      "artistCredit": "A-Game",
+      "title": "Money Made Me Do It (feat. Luu Breeze)",
+      "album": "Money Made Me Do It (feat. Luu Breeze)"
+    },
+    {
+      "requestId": "499ec8a968d8c10f9fd5aa14",
+      "artistCredit": "Ada Lea, Meggo",
+      "title": "the evergreen, the birch",
+      "album": "the end is a wave"
+    },
+    {
+      "requestId": "e69306319f0ca609309f5158",
+      "artistCredit": "Aliocha Schneider, Charlotte Cardin",
+      "title": "Ensemble",
+      "album": "Aliocha Schneider (Deluxe)"
+    },
+    {
+      "requestId": "85c47b31f824410bbfb475b6",
+      "artistCredit": "Allan Rayman, Jessie Reyez",
+      "title": "Repeat",
+      "album": "Roadhouse 01"
+    },
+    {
+      "requestId": "d2ec801725dcdaeaa109a7dd",
+      "artistCredit": "Allan Rayman/Jessie Reyez",
+      "title": "Verona The Hellcat",
+      "album": "Hotel Allan"
+    },
+    {
+      "requestId": "d6abbfa8075b31db66b4c493",
+      "artistCredit": "Alsham, Black U Sun",
+      "title": "Mega Garden",
+      "album": "Invading the Mega City"
+    },
+    {
+      "requestId": "3ef598eec654f0cc90a1a586",
+      "artistCredit": "Alyssa Reid, P Reign",
+      "title": "Alone Again",
+      "album": "The Game"
+    },
+    {
+      "requestId": "98f30072ebe1dc86dceb33e7",
+      "artistCredit": "Alyssa Reid/ The Heist",
+      "title": "Dangerous",
+      "album": "Phoenix"
+    },
+    {
+      "requestId": "86594ee70d19519a7acd08f7",
+      "artistCredit": "Amine/KAYTRANADA/Pharrell Williams/KAYTRAMINÉ",
+      "title": "4EVA (feat. Pharrell Williams)",
+      "album": "4EVA (feat. Pharrell Williams)"
+    },
+    {
+      "requestId": "ada7cde93aa697c7524c0b46",
+      "artistCredit": "Anodajay, Muzion",
+      "title": "Tous nés pour mourir",
+      "album": "Septentrion"
+    },
+    {
+      "requestId": "b31338f28bf8449c267dcd2c",
+      "artistCredit": "Anthony Bezel, GL Rari, Seth Dyer",
+      "title": "Fantasy (feat. GL Rari & Seth Dyer)",
+      "album": "Fantasy (feat. GL Rari & Seth Dyer)"
+    },
+    {
+      "requestId": "5fd8e96cf268845c91a59ccb",
+      "artistCredit": "Anthony Bezel, Seth Dyer",
+      "title": "Lights Camera Action (feat. Seth Dyer)",
+      "album": "RANSOM"
+    },
+    {
+      "requestId": "1e9631891d861ff7a37cff8e",
+      "artistCredit": "Anthony Bezel, Seth Dyer, Zargo",
+      "title": "Shake That (feat. Seth Dyer & Zargo)",
+      "album": "Shake That (feat. Seth Dyer & Zargo)"
+    },
+    {
+      "requestId": "86d51978572e95b1334d8200",
+      "artistCredit": "Anthony Valadez, Maylee Todd",
+      "title": "Hurt",
+      "album": "Prelude to the Fade"
+    },
+    {
+      "requestId": "8598001023c785182f313fb9",
+      "artistCredit": "AP Dhillon/ Gurinder Gill/ Money Musik/ AR Paisley",
+      "title": "Takeover (feat. AR Paisley)",
+      "album": "Not by Chance"
+    },
+    {
+      "requestId": "f217531beda1673debee89db",
+      "artistCredit": "Aquakultre, Chudi Harris",
+      "title": "Like Whoa (feat. Chudi Harris)",
+      "album": "Silk Robington"
+    },
+    {
+      "requestId": "cdd9ed69818cc597e7c32ac8",
+      "artistCredit": "Aquakultre, Chudi Harris",
+      "title": "OVT Love (feat. Chudi Harris)",
+      "album": "Water Temple"
+    },
+    {
+      "requestId": "754f8517934dae5978abac94",
+      "artistCredit": "Aquakultre, Cyrus Robertson-Orkish",
+      "title": "I Gotchu (feat. Cyrus Robertson-Orkish)",
+      "album": "Water Temple"
+    },
+    {
+      "requestId": "4aa6b445030df46ab0a2eb77",
+      "artistCredit": "Aquakultre, DJ Chidow and Myūjikku, Vadell Gabriel",
+      "title": "Karamel",
+      "album": "Don't Trip"
+    },
+    {
+      "requestId": "1e9f9871658f6566a1dc0d06",
+      "artistCredit": "Aquakultre, Gary Beals, Haliey Smith",
+      "title": "Scotia Born",
+      "album": "1783"
+    },
+    {
+      "requestId": "d5dedb7e2b63bba95046c033",
+      "artistCredit": "Aquakultre, Gary Beals, Haliey Smith",
+      "title": "Scotia Born",
+      "album": "Scotia Born"
+    },
+    {
+      "requestId": "7b0d21c66b99d95970df6ad2",
+      "artistCredit": "Aquakultre, Joolsannie",
+      "title": "Lunch",
+      "album": "Don't Trip"
+    },
+    {
+      "requestId": "cd83e995cbfaf56e3673e01d",
+      "artistCredit": "Aquakultre, Linda Carvery",
+      "title": "Matriarchs",
+      "album": "1783"
+    },
+    {
+      "requestId": "fb513d3ecdf46698d7098cbc",
+      "artistCredit": "Aquakultre, Measha Brueggergosman-Lee",
+      "title": "Make That Change",
+      "album": "1783"
+    },
+    {
+      "requestId": "da76f765ab2efdeefc8015b4",
+      "artistCredit": "Aquakultre, Measha Brueggergosman-Lee",
+      "title": "Make That Change",
+      "album": "1783"
+    },
+    {
+      "requestId": "ff5f295bc0d2374a784b621a",
+      "artistCredit": "Aquakultre, Uncle Fester",
+      "title": "Lemongrass",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "1b586b50e6abc35e82098629",
+      "artistCredit": "Aquakultre, Uncle Fester",
+      "title": "Still Good",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "f380ca157d3eb3aa7791040f",
+      "artistCredit": "Aquakultre, Uncle Fester",
+      "title": "The Difference",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "98a3654fbeec22e1ed480b22",
+      "artistCredit": "Aquakultre, Uncle Fester, Ambition, Nilla",
+      "title": "Hard Reset (feat. Ambition & Nilla)",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "994d8f46b6f2e1c0a301195b",
+      "artistCredit": "Aquakultre, Uncle Fester, Corey Writez",
+      "title": "Autographs (feat. Corey Writez)",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "47a0d1692707a56fba0fac4c",
+      "artistCredit": "Aquakultre, Uncle Fester, Tachichi",
+      "title": "Couldn't Be (feat. Tachichi)",
+      "album": "Bleeding Gums Murphy"
+    },
+    {
+      "requestId": "6fa2e2b8dd5a93778c61589e",
+      "artistCredit": "Aquakultre/loser supreme",
+      "title": "Hitwoman",
+      "album": "Don't Trip"
+    },
+    {
+      "requestId": "04910af70a37546e89a59476",
+      "artistCredit": "Aquakultre/Tafari Anthony/Amarafleur/Markus Aurelyus",
+      "title": "Milk & Honey",
+      "album": "Don't Trip"
+    },
+    {
+      "requestId": "246595bf67d6614a3381f4cf",
+      "artistCredit": "Aquakultre/TROBIZ",
+      "title": "Africvillean Funk",
+      "album": "Africvillean Funk"
+    },
+    {
+      "requestId": "b4db77e99b7c80fdc31fa1a2",
+      "artistCredit": "AR Paisley, Bvlly",
+      "title": "My Life (feat. Bvlly)",
+      "album": "AR Paisley Vs AR Money"
+    },
+    {
+      "requestId": "d32cb0664609884b145e5c17",
+      "artistCredit": "AR Paisley, Bvlly",
+      "title": "Sink or Swim (S.O.S)",
+      "album": "Timeless"
+    },
+    {
+      "requestId": "c7a6aecb5106dcc9b92a1649",
+      "artistCredit": "AR Paisley, Chani Nattan, Inderpal Moga",
+      "title": "Block Boys",
+      "album": "East to West"
+    },
+    {
+      "requestId": "d101021051623bbb6426eb7f",
+      "artistCredit": "AR Paisley, Chani Nattan, Inderpal Moga",
+      "title": "Dancer",
+      "album": "East to West"
+    },
+    {
+      "requestId": "1fd9a3bf5203d3654117f235",
+      "artistCredit": "AR Paisley, Chani Nattan, Inderpal Moga",
+      "title": "Seasons",
+      "album": "East to West"
+    },
+    {
+      "requestId": "8034fd6e873a080acc16ce5a",
+      "artistCredit": "AR Paisley, Jay Trak, Sunayna Sharma",
+      "title": "One Way Flight",
+      "album": "One Way Flight"
+    },
+    {
+      "requestId": "c012e3ae506e052fac51dee9",
+      "artistCredit": "AR Paisley, Lazyeye",
+      "title": "G-Shock",
+      "album": "G-Shock"
+    },
+    {
+      "requestId": "8cca934bf5e070fbde8cc124",
+      "artistCredit": "AR Paisley, Lazyeye",
+      "title": "Plan A",
+      "album": "Unfinished Business"
+    },
+    {
+      "requestId": "6d5fa02026ff371171854edb",
+      "artistCredit": "AR Paisley, NojokeJigsaw",
+      "title": "Been in My Bag",
+      "album": "Timeless"
+    },
+    {
+      "requestId": "71487323987b33991435038e",
+      "artistCredit": "AR Paisley/ Ali Gatie/ Jay Trak",
+      "title": "M.I.A",
+      "album": "M.I.A"
+    },
+    {
+      "requestId": "085dd39bdfa611a48ba03867",
+      "artistCredit": "AR Paisley/ Chani Nattan/ Jay Trak/ Inderpal Moga",
+      "title": "What's Beef (feat. Inderpal Moga)",
+      "album": "What's Beef (feat. Inderpal Moga)"
+    },
+    {
+      "requestId": "492fc33531c2c5fd4b55c248",
+      "artistCredit": "AR Paisley/NojokeJigsaw",
+      "title": "Cost Ya",
+      "album": "Timeless"
+    },
+    {
+      "requestId": "4ad38531f5cbc9a447311ebb",
+      "artistCredit": "ARDN, FRVRFRIDAY",
+      "title": "STACEY DASH",
+      "album": "KEEP YOUR EYE ON THE SPARROW"
+    },
+    {
+      "requestId": "d5ee2629d7077ae311264fc1",
+      "artistCredit": "Ariel Posen, City and Colour",
+      "title": "Empty-Handed (feat. City and Colour)",
+      "album": "Empty-Handed (feat. City and Colour)"
+    },
+    {
+      "requestId": "46cd15821d8707e7c21a4c6c",
+      "artistCredit": "Ariel Posen, City and Colour",
+      "title": "Empty-Handed (feat. City and Colour)",
+      "album": "Empty-Handed (feat. City and Colour)"
+    },
+    {
+      "requestId": "7cecb015d4dd5f3b63d2d508",
+      "artistCredit": "Arkells/Tegan and Sara",
+      "title": "Teenage Tears",
+      "album": "Teenage Tears"
+    },
+    {
+      "requestId": "5d171cdf7ae33f1aa4922b39",
+      "artistCredit": "Asun Eastwood, Lord Juco, Jesse Green Beats",
+      "title": "Shake & Bake",
+      "album": "Two Birds"
+    },
+    {
+      "requestId": "9bf20f3dae63f270e2a582ac",
+      "artistCredit": "Asun Eastwood, Lord Juco, Jesse Green Beats",
+      "title": "Solar Power",
+      "album": "Two Birds"
+    },
+    {
+      "requestId": "a0d4787e28968e5ca717d3c3",
+      "artistCredit": "Asun Eastwood, Lord Juco, Jesse Green Beats",
+      "title": "Time & Place",
+      "album": "Two Birds"
+    },
+    {
+      "requestId": "c4b2d232304de89e54caf41b",
+      "artistCredit": "Asun Eastwood, Wizdome Bunitall, JD ERA",
+      "title": "Toro 4's (feat. JD Era)",
+      "album": "Let Me Talk My Sh*t Too"
+    },
+    {
+      "requestId": "74b90c2d73c57e7cb154ae0f",
+      "artistCredit": "AYOO BIGZ, JD ERA",
+      "title": "Who Is You",
+      "album": "Psychotic Features"
+    },
+    {
+      "requestId": "e3bd883b3f85615fbbe6a9fe",
+      "artistCredit": "B00sted/EverythingOShauN",
+      "title": "Mind on Money (feat. Everythingoshaun)",
+      "album": "Mind on Money (feat. Everythingoshaun)"
+    },
+    {
+      "requestId": "429053b94cc7db126388daf2",
+      "artistCredit": "Bdice/ Snotty Nose Rez Kids/ Junk/ Lilo Key/ Teon Gibbs",
+      "title": "Casting Call (feat. Lilo Key & Teon Gibbs)",
+      "album": "Casting Call (feat. Lilo Key & Teon Gibbs)"
+    },
+    {
+      "requestId": "8173b73a2bf782a493f0777c",
+      "artistCredit": "Beatchild/Melanie Durrant",
+      "title": "The Answer",
+      "album": "Soul Movement Vol. 1"
+    },
+    {
+      "requestId": "7c4b5860d3b4eacb74fcf1da",
+      "artistCredit": "Beatchild/The Slakadeliqs/Justin Nozuka",
+      "title": "The Only Difference",
+      "album": "Heavy Rockin' Steady"
+    },
+    {
+      "requestId": "6d87dd0407d193cd815a7359",
+      "artistCredit": "Bedouin Soundclash/Cœur De Pirate",
+      "title": "Brutal Hearts (feat. Coeur De Pirate)",
+      "album": "Light The Horizon"
+    },
+    {
+      "requestId": "707de37ee5fa68314c182bb0",
+      "artistCredit": "Belly, NAV",
+      "title": "Maintain",
+      "album": "IMMIGRANT"
+    },
+    {
+      "requestId": "a5489c860627e555cea86a43",
+      "artistCredit": "Belly, NAV",
+      "title": "Re Up",
+      "album": "Inzombia"
+    },
+    {
+      "requestId": "e8b91e41a694fffebb285efe",
+      "artistCredit": "Belly, NAV",
+      "title": "Re Up",
+      "album": "Inzombia"
+    },
+    {
+      "requestId": "91154ade183dec82df4fe824",
+      "artistCredit": "Belly, The Weeknd",
+      "title": "Might Not",
+      "album": "Up For Days"
+    },
+    {
+      "requestId": "7fbf2d2082673185f133bf02",
+      "artistCredit": "Belly, The Weeknd",
+      "title": "Might Not",
+      "album": "Up For Days"
+    },
+    {
+      "requestId": "73c185a6948a05e7c8768854",
+      "artistCredit": "Belly, The Weeknd",
+      "title": "Might Not",
+      "album": "Up For Days"
+    },
+    {
+      "requestId": "d7a6b2c5ccf967cc490cdb5a",
+      "artistCredit": "Belly, The Weeknd",
+      "title": "What You Want",
+      "album": "IMMIGRANT"
+    },
+    {
+      "requestId": "cbf58343c605369f480b5472",
+      "artistCredit": "Belly, Young Thug, Zack",
+      "title": "Consuela",
+      "album": "Inzombia"
+    },
+    {
+      "requestId": "1ccb90761de6118edb010912",
+      "artistCredit": "Belly, Young Thug, Zack",
+      "title": "Consuela",
+      "album": "Inzombia"
+    },
+    {
+      "requestId": "b31a461740e626c3cdad269e",
+      "artistCredit": "Belly, Zack",
+      "title": "Another Note",
+      "album": "IMMIGRANT"
+    },
+    {
+      "requestId": "43c2b43b0f458ca516e91b4d",
+      "artistCredit": "Belly/ NAV",
+      "title": "Maintain",
+      "album": "Maintain"
+    },
+    {
+      "requestId": "e1278815c436fb9eec5f36f9",
+      "artistCredit": "Belly/ The Weeknd",
+      "title": "What You Want",
+      "album": "What You Want"
+    },
+    {
+      "requestId": "277a335fae64dbeb5a9a2a5b",
+      "artistCredit": "Belly/ The Weeknd/ Nas",
+      "title": "Die For It",
+      "album": "See You Next Wednesday"
+    },
+    {
+      "requestId": "01ae526b1311f7a516064a64",
+      "artistCredit": "Belly/ The Weeknd/ Young Thug",
+      "title": "Better Believe",
+      "album": "Better Believe"
+    },
+    {
+      "requestId": "656a7741c469ffcddfe21d2b",
+      "artistCredit": "Belly/NAV",
+      "title": "Requiem",
+      "album": "See You Next Wednesday"
+    },
+    {
+      "requestId": "a6c240704f2cbe79cdac5fd4",
+      "artistCredit": "Big Jacks, Angela Apigo",
+      "title": "Higher",
+      "album": "Higher"
+    },
+    {
+      "requestId": "994f5549c2acd928867598cd",
+      "artistCredit": "Big Jacks, Angela Apigo",
+      "title": "Say It Again",
+      "album": "Say It Again"
+    },
+    {
+      "requestId": "d14de3e1d87e61c9c21850fc",
+      "artistCredit": "Big Lysh, Karma Sutra",
+      "title": "Bums Graduation",
+      "album": "Bums Graduation"
+    },
+    {
+      "requestId": "a6151f03752125c9476c0535",
+      "artistCredit": "Big Lysh, Karma Sutra",
+      "title": "Bums Graduation",
+      "album": "Bums Graduation"
+    },
+    {
+      "requestId": "05044a7e8d217d2ff9c279ad",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "Cobra Kai",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "8f81641f0fd388810f53537b",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "FEMA",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "f9dae54153854ff3cba1ff8f",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "Laundromat",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "8749f4eb55e558d9398a5e60",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "No Mercy",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "b0e448c71c7d69cf0dcce496",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "Redlife",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "a7eb54beeff1f468cbaf5957",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "Rey Mysterio",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "2e98c6d2497392160c40c03d",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa",
+      "title": "Sewer Cap",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "66b0d70a74b7e83da355a8eb",
+      "artistCredit": "Big Sproxx, Sayzee, Richie Sosa, Tona, DJ Grouch",
+      "title": "Tina Fey (feat. Tona & Dj Grouch)",
+      "album": "No Mercy"
+    },
+    {
+      "requestId": "05a35c0196b8b5813e8d83f0",
+      "artistCredit": "Bijaan, Junia-T",
+      "title": "Jungle",
+      "album": "Jungle"
+    },
+    {
+      "requestId": "c9661f713e06b6f04484088d",
+      "artistCredit": "Bijaan, Junia-T",
+      "title": "Jungle",
+      "album": "Jungle"
+    },
+    {
+      "requestId": "76a0c224ff83b42d5e1283fd",
+      "artistCredit": "Black Atlass/ Jessie Reyez",
+      "title": "Sacrifice",
+      "album": "Fifty Shades Freed (Original Motion Picture Soundtrack)"
+    },
+    {
+      "requestId": "40e7db9d78d346938da96c8a",
+      "artistCredit": "Black Ken, K. Forest",
+      "title": "HOSTAGE",
+      "album": "BROKEN CLOCKS"
+    },
+    {
+      "requestId": "508fc2ba75c9b9ca0c3bc7fa",
+      "artistCredit": "Blonde Diamond, Dear Rouge",
+      "title": "Love is a Shadow",
+      "album": "Love is a Shadow"
+    },
+    {
+      "requestId": "5fe960014841e8012efffa05",
+      "artistCredit": "Blooom, Wolfy Lights",
+      "title": "Born Again",
+      "album": "Born Again"
+    },
+    {
+      "requestId": "7774e01a8a93fc6253c19a81",
+      "artistCredit": "Bocafloja/Eternia",
+      "title": "Love 2 U",
+      "album": "Unreleased, Colaboraciones y Raridades"
+    },
+    {
+      "requestId": "fcce308b36d315242f4dd6c0",
+      "artistCredit": "Book, Haviah Mighty",
+      "title": "Champion",
+      "album": "Champion"
+    },
+    {
+      "requestId": "a0424fa3f065f235d153c1eb",
+      "artistCredit": "Book/Haviah Mighty",
+      "title": "Vamonos",
+      "album": "Vamonos"
+    },
+    {
+      "requestId": "59505a791c2b69b9643172ea",
+      "artistCredit": "Book/Rochester",
+      "title": "On the Move",
+      "album": "On the Move"
+    },
+    {
+      "requestId": "678a6e91493a54587a3016a5",
+      "artistCredit": "Boslen, Rascalz",
+      "title": "NOTE TO THE CITY (INTERLUDE)",
+      "album": "DUSK to DAWN"
+    },
+    {
+      "requestId": "7a69a52c70fa3d420af0b89f",
+      "artistCredit": "Bran Van 3000, FABjustfab, LiquidLtd",
+      "title": "Kings Of Las Vegas (feat. FABjustfab & LiquidLtd)",
+      "album": "Kings Of Las Vegas (feat. FABjustfab & LiquidLtd)"
+    },
+    {
+      "requestId": "6de20202cf3789d65fb26610",
+      "artistCredit": "Broken Social Scene/Sebastien Grainger",
+      "title": "Curse Your Fail",
+      "album": "Curse Your Fail"
+    },
+    {
+      "requestId": "0eb030d5b6ab1bd61f910c89",
+      "artistCredit": "Buck 65",
+      "title": "Who by Fire (feat. Jenn Grant)",
+      "album": "20 Odd Years: Volume 1 - Avant"
+    },
+    {
+      "requestId": "f389cee8e6444e4b4e988340",
+      "artistCredit": "Busty and The Bass/Cadence Weapon",
+      "title": "Airplanes",
+      "album": "Airplanes / Caribou"
+    },
+    {
+      "requestId": "d2e5eda8a7a49d144e23d5e4",
+      "artistCredit": "Cadence Weapon, Backxwash",
+      "title": "Ghost",
+      "album": "Parallel World"
+    },
+    {
+      "requestId": "c303ae183be0e0c3e7fdcf0c",
+      "artistCredit": "Cadence Weapon, Buck 65",
+      "title": "(You Can't Stop) The Machine (feat. Buck 65)",
+      "album": "Hope in Dirt City"
+    },
+    {
+      "requestId": "f99980aad436e4f6bcc94602",
+      "artistCredit": "Cadence Weapon, Dan Only",
+      "title": "Ungirthed",
+      "album": "Ungirthed"
+    },
+    {
+      "requestId": "b2a1a421e0cf8a0ef3ab2e60",
+      "artistCredit": "Cadence Weapon, Junia-T, DijahSB",
+      "title": "Step Out",
+      "album": "Step Out"
+    },
+    {
+      "requestId": "7198a7f6c10630ef253be772",
+      "artistCredit": "Cadence Weapon, Junia-T, DijahSB",
+      "title": "Step Out",
+      "album": "Step Out"
+    },
+    {
+      "requestId": "bd105b4a3b7738cb8cbb462f",
+      "artistCredit": "Cadence Weapon, Shub",
+      "title": "Superhero",
+      "album": "Superhero"
+    },
+    {
+      "requestId": "d4c8418ac65a3f5d027632f6",
+      "artistCredit": "Cadence Weapon, Super Duty Tough Work, Junia-T",
+      "title": "Nice Try",
+      "album": "Nice Try"
+    },
+    {
+      "requestId": "d1e080e14c72b67266c6219a",
+      "artistCredit": "Cadence Weapon, Super Duty Tough Work, Junia-T",
+      "title": "Nice Try",
+      "album": "Nice Try"
+    },
+    {
+      "requestId": "1fb528344bb030992c845a84",
+      "artistCredit": "Cadence Weapon/ Grandtheft",
+      "title": "Press Eject",
+      "album": "Press Eject"
+    },
+    {
+      "requestId": "3a263d9235ea13736a61d97f",
+      "artistCredit": "Cadence Weapon/ Harrison",
+      "title": "tl; dr",
+      "album": "ROLLERCOASTER"
+    },
+    {
+      "requestId": "592cfaf5f2251e8fad81d8e8",
+      "artistCredit": "Cadence Weapon/Harrison",
+      "title": "Play No Games (Harrison Remix)",
+      "album": "Parallel World (Deluxe Edition)"
+    },
+    {
+      "requestId": "8cca2b51d4ad1c6df52281b1",
+      "artistCredit": "Cadence Weapon/Jacques Greene",
+      "title": "SENNA",
+      "album": "SENNA"
+    },
+    {
+      "requestId": "99d302da630ffbed34fa550f",
+      "artistCredit": "Calibur, Alsham",
+      "title": "Invasion",
+      "album": "Invading the Mega City"
+    },
+    {
+      "requestId": "05f7dea592ada39b4956e9cc",
+      "artistCredit": "Calibur, Sugar Prince",
+      "title": "Fall to Rise",
+      "album": "Invading the Mega City"
+    },
+    {
+      "requestId": "12743c8dd10fa77e8a66ac04",
+      "artistCredit": "Capital Vision, Punchinrd, PHB Hollis, Froboii, JayTrillz",
+      "title": "Soul Complete (feat. JayTrillz)",
+      "album": "Soul Complete (feat. JayTrillz)"
+    },
+    {
+      "requestId": "af58b56f2db4d13ebcace420",
+      "artistCredit": "Capital Vision, Punchinrd, PHB Hollis, Froboii, JayTrillz",
+      "title": "Soul Complete (feat. JayTrillz)",
+      "album": "Soul Complete (feat. JayTrillz)"
+    },
+    {
+      "requestId": "22eeb0e1095e42c965d2da62",
+      "artistCredit": "Carmen & Camille",
+      "title": "Shine 4U",
+      "album": "Shine 4U"
+    },
+    {
+      "requestId": "ce16993b22bc7159f8ad3ced",
+      "artistCredit": "Central Park/Maylee Todd",
+      "title": "Touch The Ground",
+      "album": "Radio Rebel (Original Soundtrack)"
+    },
+    {
+      "requestId": "a09cd975e2fca7640940d21c",
+      "artistCredit": "ChanHays, Ghettosocks, Aquakultre",
+      "title": "Get Ahead",
+      "album": "The Creepy"
+    },
+    {
+      "requestId": "da064ed95e6afbcea7271d70",
+      "artistCredit": "Chani Nattan, AR Paisley, Inderpal Moga",
+      "title": "All Eyez on You",
+      "album": "East to West"
+    },
+    {
+      "requestId": "80673e73bfa93638540dabe5",
+      "artistCredit": "Chani Nattan, AR Paisley, Inderpal Moga",
+      "title": "Mehndi",
+      "album": "East to West"
+    },
+    {
+      "requestId": "08d46cbe77a0bcb68e59c9bf",
+      "artistCredit": "Chani Nattan/ AR Paisley/ Inderpal Moga",
+      "title": "Heater",
+      "album": "Heater"
+    },
+    {
+      "requestId": "c1e37b7a052e3b5eb638b2de",
+      "artistCredit": "Charlie Noiir, EverythingOShauN",
+      "title": "KILL $HIT (WIN LIST)",
+      "album": "KILL $HIT (WIN LIST)"
+    },
+    {
+      "requestId": "558699dc38b7340d2e17067d",
+      "artistCredit": "Charlotte Cardin, Nate Husser",
+      "title": "Like It Doesn't Hurt",
+      "album": "Big Boy"
+    },
+    {
+      "requestId": "832ea2eb5c0af3e363a16660",
+      "artistCredit": "Charlotte Cardin/ CRi",
+      "title": "Fous n'importe où",
+      "album": "Fous n'importe où"
+    },
+    {
+      "requestId": "f95ab10daccdce55b0c9b163",
+      "artistCredit": "Charlotte Day Wilson, Saya Gray",
+      "title": "Lean",
+      "album": "Lean"
+    },
+    {
+      "requestId": "42c67198e968697d79d8c38d",
+      "artistCredit": "Charlotte Day Wilson, Saya Gray",
+      "title": "Lean",
+      "album": "Lean"
+    },
+    {
+      "requestId": "389eb00c64c9b573cb079bc5",
+      "artistCredit": "Charlotte Day Wilson, Saya Gray",
+      "title": "Lean",
+      "album": "Lean"
+    },
+    {
+      "requestId": "19f3dd9c9c7266ad0d62f2eb",
+      "artistCredit": "Charmaine, Haviah Mighty",
+      "title": "WE DON'T CARE (feat. Haviah Mighty)",
+      "album": "HOOD AVANT-GARDE (Deluxe)"
+    },
+    {
+      "requestId": "063ff0da49b2abccff3eef47",
+      "artistCredit": "Chastity/ City and Colour",
+      "title": "Vicious Circle (feat. City and Colour)",
+      "album": "Vicious Circle (feat. City and Colour)"
+    },
+    {
+      "requestId": "d51565f4fd5daa8a7b90d1d9",
+      "artistCredit": "CheckMate, JD ERA",
+      "title": "Autumn Hustlers (feat. JD Era)",
+      "album": "Pro Game 2"
+    },
+    {
+      "requestId": "605617a6aa73110776c19050",
+      "artistCredit": "Cherrykim, Luvinya",
+      "title": "Breathe",
+      "album": "Breathe"
+    },
+    {
+      "requestId": "65a470d67d920e74de684005",
+      "artistCredit": "Chiiild/ Charlotte Cardin",
+      "title": "I Hope I Packed A Parachute",
+      "album": "Better Luck In The Next Life"
+    },
+    {
+      "requestId": "cc9b2af9b371f08c27082012",
+      "artistCredit": "CHINO WAWA, YessirXD",
+      "title": "FLAWS",
+      "album": "Glue ll"
+    },
+    {
+      "requestId": "4acda876aa9d1433f3ca2d3b",
+      "artistCredit": "CHINO WAWA, YessirXD",
+      "title": "FLAWS",
+      "album": "Glue ll"
+    },
+    {
+      "requestId": "faecfcf665ec3ae7596fb851",
+      "artistCredit": "Choclair, Afrolistic, K.C. Thomas",
+      "title": "What It Takes",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "59cb6c122bd4bbd566af464d",
+      "artistCredit": "Choclair, Bishop Brigante, Darryl Riley",
+      "title": "End of the Road",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "aa5d8cb978ccf65c68d2ff01",
+      "artistCredit": "Choclair, Frankenstein",
+      "title": "So I",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "a6ececba95b41d1e0710a18d",
+      "artistCredit": "Choclair, Jully Black",
+      "title": "What It Takes",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "946dcb14252aff3125f39d4f",
+      "artistCredit": "Choclair, Kardinal Offishall",
+      "title": "Fresh",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "3d646638d80dbbe61c261840",
+      "artistCredit": "Choclair, Kardinal Offishall",
+      "title": "Runnin' Wid Us",
+      "album": "Ice Cold"
+    },
+    {
+      "requestId": "62ac8889ad8a0153a703700d",
+      "artistCredit": "Choclair, Kardinal Offishall, Solitair",
+      "title": "S.O.T.",
+      "album": "Ice Cold"
+    },
+    {
+      "requestId": "cfa5d4ac738b31f87523680d",
+      "artistCredit": "Choclair, KXNG Crooked, KIM DAVIS",
+      "title": "All Night",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "d3a42b3f88fbaf698161b733",
+      "artistCredit": "Choclair, Marvel",
+      "title": "Brainwaves",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "10f4f93ac5c27ca37414cb45",
+      "artistCredit": "Choclair, Marvel, Frankenstein, Kardinal Offishall",
+      "title": "Internal Affairs",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "746ce2e7c06fc46eea09cec2",
+      "artistCredit": "Choclair, Ol' Dirty Bastard, Saukrates",
+      "title": "Sauve Dirt Dawgs",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "704a998719486da9bf483e2f",
+      "artistCredit": "Choclair, Private Name Private Number",
+      "title": "Feel",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "9523fb3d344b43a399efe269",
+      "artistCredit": "Choclair, Rochester",
+      "title": "March XXVII",
+      "album": "March XXVII"
+    },
+    {
+      "requestId": "a84384e45c511e18a8dc6ae1",
+      "artistCredit": "Choclair, Rochester",
+      "title": "March XXVII",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "9472426f0f82185c50a3c3d5",
+      "artistCredit": "Choclair, Saukrates",
+      "title": "Body Language",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "5585a6f7f60c375218659780",
+      "artistCredit": "Choclair, Saukrates",
+      "title": "Rubbin'",
+      "album": "Ice Cold"
+    },
+    {
+      "requestId": "351097bff5596c9cfd5b38f6",
+      "artistCredit": "Choclair, Solitair",
+      "title": "Circle Connection",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "af85ff58ab1fcdbd4d3a35de",
+      "artistCredit": "Choclair, Solitair",
+      "title": "Fresh",
+      "album": "Ice Cold"
+    },
+    {
+      "requestId": "318e8d868f36bda028c17f34",
+      "artistCredit": "Choclair, Solitair",
+      "title": "My People Say",
+      "album": "Transit Music"
+    },
+    {
+      "requestId": "8ad6c9619fec9ab02883da60",
+      "artistCredit": "Choclair, Solitair, Marvel",
+      "title": "Conversations",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "50621db8686109e9be3aca15",
+      "artistCredit": "Choclair, Tara Chase",
+      "title": "Just A Second",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "f3cf9521d2536053079dc438",
+      "artistCredit": "Choclair, Tara Chase",
+      "title": "Just A Second",
+      "album": "My Demo"
+    },
+    {
+      "requestId": "b1b510ceee33565c8a078525",
+      "artistCredit": "City Fidelia, Carpe DM",
+      "title": "Self Conscious",
+      "album": "FreeDumb"
+    },
+    {
+      "requestId": "41893240a9d87782fd05d368",
+      "artistCredit": "City Fidelia, Freedom Choir",
+      "title": "Freedom",
+      "album": "FreeDumb"
+    },
+    {
+      "requestId": "7987b7e94fc395393bd8fcc5",
+      "artistCredit": "Clairmont The Second, Cola H.",
+      "title": "Clockout (feat. Cola H.)",
+      "album": "It's Not How It Sounds"
+    },
+    {
+      "requestId": "ba021d769fa1e1c3e2c76159",
+      "artistCredit": "Classified, Maestro, Eternia, DL Incognito",
+      "title": "Just The Way It Is",
+      "album": "Trial & Error"
+    },
+    {
+      "requestId": "e70583c2c8000342e178187a",
+      "artistCredit": "Classified, Maestro, Eternia, DL Incognito",
+      "title": "Just The Way It Is",
+      "album": "Trial & Error"
+    },
+    {
+      "requestId": "c7e07f44eae063f09329ac9f",
+      "artistCredit": "Classified/ Haviah Mighty",
+      "title": "Up All Night",
+      "album": "Retrospected (Acoustic)"
+    },
+    {
+      "requestId": "70afaafee95ea61de42cf791",
+      "artistCredit": "Connor Price, Haviah Mighty",
+      "title": "Hand Sanitize",
+      "album": "About Time"
+    },
+    {
+      "requestId": "61ed155dd22e17e97babbd1a",
+      "artistCredit": "Connor Price, Killa",
+      "title": "AMG",
+      "album": "AMG"
+    },
+    {
+      "requestId": "742162484513ec834f011d09",
+      "artistCredit": "Connor Price, Maverick City Music, Taylor Hill, Nick Day",
+      "title": "I Need Help",
+      "album": "I Need Help"
+    },
+    {
+      "requestId": "7c549e6c835cdb8645236ad3",
+      "artistCredit": "Connor Price, Nic D, Graham",
+      "title": "Diploma (Remix)",
+      "album": "ICONIC"
+    },
+    {
+      "requestId": "69063121c6610234cdd8f7a3",
+      "artistCredit": "Connor Price/ Haviah Mighty",
+      "title": "Trendsetter",
+      "album": "Trendsetter"
+    },
+    {
+      "requestId": "558b71572bce068bdc53ceb3",
+      "artistCredit": "Connor Price/ Haviah Mighty",
+      "title": "Trendsetter",
+      "album": "Trendsetter"
+    },
+    {
+      "requestId": "8ff160d08730c1d62282e5dc",
+      "artistCredit": "Connor Price/ Nic D/ Graham",
+      "title": "HOV (Remix)",
+      "album": "HOV (Remix)"
+    },
+    {
+      "requestId": "4aecbf4029752a599cf34ba1",
+      "artistCredit": "Connor Price/4korners",
+      "title": "Marathon",
+      "album": "Marathon"
+    },
+    {
+      "requestId": "ba9bbdfb791d035ede2e1902",
+      "artistCredit": "Connor Price/Bbno$",
+      "title": "Not A Beanie",
+      "album": "Not A Beanie"
+    },
+    {
+      "requestId": "29417481a08436df4d0be31e",
+      "artistCredit": "Connor Price/Killa",
+      "title": "Violet (feat. Killa)",
+      "album": "Violet (feat. Killa)"
+    },
+    {
+      "requestId": "140e266f9eacfd67bf2f1117",
+      "artistCredit": "Connor Price/Nic D/4korners",
+      "title": "Swing",
+      "album": "Swing"
+    },
+    {
+      "requestId": "dc0238b52798b7b0cf4323a9",
+      "artistCredit": "Cookin Soul, Kid Frankie, Raz Fresco",
+      "title": "Big Mac",
+      "album": "SHOWTIME"
+    },
+    {
+      "requestId": "f3af08b5bbe023176d8c48d3",
+      "artistCredit": "Cookin Soul/ The Musalini/ Raz Fresco/ Skratch Bastid",
+      "title": "Fresh Air (feat. Raz Fresco & Skratch Bastid)",
+      "album": "MACKARONI"
+    },
+    {
+      "requestId": "79cbf8b0184da9940500064c",
+      "artistCredit": "Cut The Lights/ Rochester",
+      "title": "Run",
+      "album": "Run"
+    },
+    {
+      "requestId": "a7ec41db180255d6914b91e7",
+      "artistCredit": "D-Sisive",
+      "title": "The Unknown (feat. Birdapres & Cadence Weapon)",
+      "album": "Run With The Creeps (TheD-LuxeEdition)"
+    },
+    {
+      "requestId": "68cb257841de9f1dc9aadb05",
+      "artistCredit": "D.O. Gibson, Rochester",
+      "title": "Shut It Down",
+      "album": "Heavy in the Game"
+    },
+    {
+      "requestId": "66dba2d3db56a5e019a1e039",
+      "artistCredit": "D.O. Gibson/ Rochester/ Dru/ Keysha Freshh/ Terell Safadi",
+      "title": "Black 365",
+      "album": "Black 365"
+    },
+    {
+      "requestId": "62ab1a241ed2ea0505c824f2",
+      "artistCredit": "D.O.V, Admiral Naughtz",
+      "title": "Back From The Dead (feat. Admiral Naughtz)",
+      "album": "D.O.V is GOD"
+    },
+    {
+      "requestId": "e568fa80f17c4354bb2de311",
+      "artistCredit": "D.O.V, Ruste Juxx, Don Sazón, DJ Grouch",
+      "title": "Fallen Angels (feat. Ruste Juxx, Don Sazón & DJ Grouch)",
+      "album": "D.O.V is GOD"
+    },
+    {
+      "requestId": "5cfef377b0609d6b27afadfc",
+      "artistCredit": "Da Grassroots",
+      "title": "Body Language Feat. Saukrates, Choclair",
+      "album": "Passage Through Time"
+    },
+    {
+      "requestId": "bd92886793900f57fbc9df31",
+      "artistCredit": "Da Grassroots",
+      "title": "Eternal Feat. K-Os, Thrust",
+      "album": "Passage Through Time"
+    },
+    {
+      "requestId": "e99a02000a31334f442479e6",
+      "artistCredit": "Dan-e-o, Blitz Equip",
+      "title": "4evah (feat. Blitz Equip)",
+      "album": "The Book of Daniel"
+    },
+    {
+      "requestId": "b3e9a349afb918f230a3bcfd",
+      "artistCredit": "Dan-e-o, D-Sisive, Quake Matthews, J Shiltz",
+      "title": "Barsmen",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "7acbf63048bbf25e63d6efb5",
+      "artistCredit": "Dan-e-o, Hart",
+      "title": "Psychokinetic",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "22014defabab107877b8bee4",
+      "artistCredit": "Dan-e-o, Korry Deez",
+      "title": "Overrun",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "627f184fb431369972316ef9",
+      "artistCredit": "Dan-e-o, Lotus James, Sonny Hendrixx, D-Sisive, Eternia, Keysha Freshh, Phoenix Pagliacci, Quake Matthews, Grimace Love, J Shiltz",
+      "title": "Barsmen X Barswomen",
+      "album": "Barsmen X Barswomen"
+    },
+    {
+      "requestId": "d0628a3b65b46ef515a7378e",
+      "artistCredit": "Dan-e-o, Masta Ace, Xentury",
+      "title": "Cleanse My Soul",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "1833d6d381f7e96a5647d7cd",
+      "artistCredit": "Dan-e-o, Nish",
+      "title": "Supreme",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "2e9d9c9af65b205a09f11e3e",
+      "artistCredit": "Dan-e-o, Nish Raawks, Rishaard a.k.a. Shamon Harage",
+      "title": "Peanut Butter Danish (feat. Nish Raawks & Rishaard a.k.a. Shamon Harage)",
+      "album": "The Book of Daniel"
+    },
+    {
+      "requestId": "13cc86ec8bb821457ac61bf6",
+      "artistCredit": "Dan-e-o, Rich Kidd, Septo",
+      "title": "Get Up On It",
+      "album": "Inevitable"
+    },
+    {
+      "requestId": "e72671d36c893c26236d094b",
+      "artistCredit": "Dan-e-o, Xentury",
+      "title": "Turn It Around",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "c6562309e717f74a6156a839",
+      "artistCredit": "Dan-e-o/ Saukrates",
+      "title": "Sober Sunday",
+      "album": "Vigilante"
+    },
+    {
+      "requestId": "554afc2be4fd588637b665f3",
+      "artistCredit": "Daniel Caesar, 646yf4t",
+      "title": "No More Loving (On Women I Don't Love)",
+      "album": "Son Of Spergy"
+    },
+    {
+      "requestId": "67a714c25fde4ab6109a98ce",
+      "artistCredit": "Daniel Caesar, Norwill Simmonds",
+      "title": "Baby Blue",
+      "album": "Son Of Spergy"
+    },
+    {
+      "requestId": "73cb54bf4a4a78fc703f120b",
+      "artistCredit": "Daniel Caesar/BADBADNOTGOOD",
+      "title": "Please Do Not Lean",
+      "album": "Please Do Not Lean"
+    },
+    {
+      "requestId": "c12b45353a9781c83f3f957b",
+      "artistCredit": "Danny Fernandes, Belly",
+      "title": "Automatic",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "59caa287ea6fbb721bc958a4",
+      "artistCredit": "Danny Fernandes, Josh Ramsay, Belly",
+      "title": "Hit Me Up",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "e658b79f9e885fb87c2fd458",
+      "artistCredit": "Danny Fernandes, Josh Ramsay, Belly",
+      "title": "Hit Me Up",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "e71c7bb2765d6347805d0d41",
+      "artistCredit": "Danny Fernandes, Josh Ramsay, Belly",
+      "title": "Hit Me Up",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "6da22ec1e00b6770b1f3e03b",
+      "artistCredit": "Danny Fernandes, Shawn Desman",
+      "title": "Feel It",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "e70c5355d35c715356350d8c",
+      "artistCredit": "Danny Fernandes, Shawn Desman",
+      "title": "Feel It",
+      "album": "AutomaticLUV"
+    },
+    {
+      "requestId": "df4d500b2944f17a12ac3dd4",
+      "artistCredit": "David Guetta, Tegan & Sara",
+      "title": "Every Chance We Get We Run (feat. Tegan & Sara)",
+      "album": "Nothing but the Beat (Ultimate Edition)"
+    },
+    {
+      "requestId": "f722e37fcfb2e66713c530fe",
+      "artistCredit": "Delirious & Alex K/IAmChino/SNoW/Fito Blanko",
+      "title": "Make Moves",
+      "album": "Make Moves"
+    },
+    {
+      "requestId": "9041988cdf5c081e8f86b9b2",
+      "artistCredit": "DILIP, WondaGurl, Berg",
+      "title": "cold blooded (feat. Wondagurl & Berg)",
+      "album": "cold blooded (feat. Wondagurl & Berg)"
+    },
+    {
+      "requestId": "392e9e7b0db19c01ca2dbfee",
+      "artistCredit": "Divine Lightbody, savvan",
+      "title": "nightlife",
+      "album": "split in 2"
+    },
+    {
+      "requestId": "98cc533640d62d79dfa00d94",
+      "artistCredit": "Divo, Bishop Brigante, Knowledge, Gift",
+      "title": "Under Pressure",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "52b6e91051822137f4e82a68",
+      "artistCredit": "Divo, D-Sisive, N.I.F.T.Y.",
+      "title": "Only One",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "f6d37bdd5996ef4a4979df35",
+      "artistCredit": "Divo, DL Incognito",
+      "title": "Wreck the Mic",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "d15a427d9a9a1f1a725f4e26",
+      "artistCredit": "Divo, DL Incognito",
+      "title": "Wreck the Mic",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "5ae7f4c28e61e6b5d11ed44a",
+      "artistCredit": "Divo, DL Incognito, Dj Mercilless",
+      "title": "Wreck the Mic Remix",
+      "album": "Wreck the Mic Remix"
+    },
+    {
+      "requestId": "f615e96e085ca48ff613ecac",
+      "artistCredit": "Divo, Eternia, Tara Chase",
+      "title": "Crash",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "f58f2333fb53b9dfbe4271ca",
+      "artistCredit": "Divo, Morbid Concepts, Mayone9",
+      "title": "Move (Remix)",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "cfbdfa20430e9ba77fc4b524",
+      "artistCredit": "Divo, Poizunus",
+      "title": "Poizun",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "a9f36104134b64e75d52961f",
+      "artistCredit": "Divo, SKITZ, Sumeet, Strik-9, Gift",
+      "title": "Tragedy",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "bef0350a7220f18233251e27",
+      "artistCredit": "Divo, Sumeet",
+      "title": "Love of the Block",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "80ab99aa654a5f583e44fd1d",
+      "artistCredit": "Divo, Sumeet, Andrew Ranxx",
+      "title": "Take Me Home",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "5cf00a536340c28601844f3f",
+      "artistCredit": "Divo, Trishannah",
+      "title": "Feel the Rain",
+      "album": "This Iz Bizness"
+    },
+    {
+      "requestId": "3c4b36a4f35d059b8a4a3539",
+      "artistCredit": "DJ Cee/Rochester/JRDN",
+      "title": "Perfect Timing",
+      "album": "Perfect Timing"
+    },
+    {
+      "requestId": "63bd94bfdf0e0cd61a0f67b1",
+      "artistCredit": "DJ Charlie B, Yanchan Produced, Rochester",
+      "title": "Big Dreams (feat. Rochester)",
+      "album": "Ajay's Dreams"
+    },
+    {
+      "requestId": "d7ba2e157a9b874ed1b80bae",
+      "artistCredit": "Dj Mitsu The Beats, Mathematik, Saukrates",
+      "title": "Hard Candy feat. Mathematik & Saukrates",
+      "album": "A WORD TO THE WISE"
+    },
+    {
+      "requestId": "c81e621a86673b7a43bc4afe",
+      "artistCredit": "DJ R Dub L, Bishop Brigante, JD ERA",
+      "title": "Exorcist",
+      "album": "Do. Karma"
+    },
+    {
+      "requestId": "23296eed9e54d3142a69b158",
+      "artistCredit": "Dj Ritz, Rochester, Sunny Diamonds",
+      "title": "Caribana Friday",
+      "album": "Caribana Friday"
+    },
+    {
+      "requestId": "11d88cf6667fd74a6fa3d7c2",
+      "artistCredit": "Dj Sanj, RAYIAN",
+      "title": "Life Di Queen",
+      "album": "Life Di Queen"
+    },
+    {
+      "requestId": "a1be47114a3cb68878cd6fd6",
+      "artistCredit": "Dj Sanj, RAYIAN",
+      "title": "Life Di Queen",
+      "album": "Life Di Queen"
+    },
+    {
+      "requestId": "b98acbefc31942462da0bc79",
+      "artistCredit": "DJ Shub, Snotty Nose Rez Kids",
+      "title": "War Club (feat. Snotty Nose Rez Kids)",
+      "album": "War Club"
+    },
+    {
+      "requestId": "ac2f7581768de3deeda4bbf0",
+      "artistCredit": "DK, Aquakultre, Timbuktu, Ghettosocks",
+      "title": "Coltranes of the Movement",
+      "album": "Soul Expressions"
+    },
+    {
+      "requestId": "dee46d7b42cbdb9052bc7ada",
+      "artistCredit": "DK, Ghettosocks",
+      "title": "Baggage",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "049b37e29e1a1da3ccabe30a",
+      "artistCredit": "DK, Ghettosocks",
+      "title": "Industry Shkit",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "e02515c1722bf4ce3dd7d778",
+      "artistCredit": "DK, Ghettosocks",
+      "title": "Reflections",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "dff30dd52b283217b4d686c5",
+      "artistCredit": "DK, Ghettosocks",
+      "title": "Reflections (Remix)",
+      "album": "Soul Expressions"
+    },
+    {
+      "requestId": "ba533f7b5a62acef08f26f63",
+      "artistCredit": "DK, Ghettosocks, Ambeez, Justo the MC",
+      "title": "Smoove Regardless",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "e38a777320882916ab2fcd10",
+      "artistCredit": "DK, Ghettosocks, C.L. Smooth, El da Sensei",
+      "title": "The Masters",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "1031d4f564114a017728567f",
+      "artistCredit": "DK, Ghettosocks, Kxng Wooz, Timbuktu",
+      "title": "John McEnroe",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "f137fbdf189e253253995541",
+      "artistCredit": "DK, Ghettosocks, O.C., Moka Only",
+      "title": "All In",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "be78ee68b15d45a54ed2bae9",
+      "artistCredit": "DK, Ghettosocks, Phoenix Pagliacci, Lxvndr",
+      "title": "Be a Mango",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "f3897542f0632c33b41e9fbe",
+      "artistCredit": "DK, Ghettosocks, Skyzoo, Rome Streetz",
+      "title": "What It Seems",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "7cf50473331c082565fdd84f",
+      "artistCredit": "DK, Ghettosocks, Ufo Fev, Tachichi",
+      "title": "CHKN CHOP",
+      "album": "Listen to the Masters"
+    },
+    {
+      "requestId": "0dd816d1288d5a768d89e096",
+      "artistCredit": "DK, Touch",
+      "title": "Make Your Moves",
+      "album": "Soul Expressions"
+    },
+    {
+      "requestId": "747ad70914e7da3a5e4ff92f",
+      "artistCredit": "DK/ Aida/ Ufo Fev/ Wais P/ Mic Picasso/ Ras Kass",
+      "title": "Intuition",
+      "album": "Atlantic Rap Vol. 1"
+    },
+    {
+      "requestId": "1cf76e3ed0f399fda7044d59",
+      "artistCredit": "DK/ Carlitta Durand/ Saukrates/ Ghettosocks/ Cesar Comanche",
+      "title": "Something Real",
+      "album": "Atlantic Rap Vol. 1"
+    },
+    {
+      "requestId": "424847cba6bb9cfc05daa294",
+      "artistCredit": "DK/ Chuuwee/ Eddie Kaine/ MOMONEYMATTEO",
+      "title": "Gold Tooth",
+      "album": "Atlantic Rap Vol. 1"
+    },
+    {
+      "requestId": "206c946f3279500cefd46a14",
+      "artistCredit": "DK/ Hatfield/ Ambeez/ Monark",
+      "title": "Cycles",
+      "album": "Atlantic Rap Vol. 1"
+    },
+    {
+      "requestId": "813bce3c063b261aee158f4a",
+      "artistCredit": "DK/ king bliss",
+      "title": "Oprah",
+      "album": "Atlantic Rap Vol. 1"
+    },
+    {
+      "requestId": "47ad6c654f322dab74942f37",
+      "artistCredit": "DL Incognito, D-Shade",
+      "title": "Universal Love (feat. D-Shade)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "0065d9f090c7c7f9b3a48d24",
+      "artistCredit": "DL Incognito, D-Shade",
+      "title": "Universal Love (feat. D-Shade)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "80773b1d9c7cba8c0882e811",
+      "artistCredit": "DL Incognito, D-Sisive",
+      "title": "Days Gone",
+      "album": "Someday Is Less Than a Second Away"
+    },
+    {
+      "requestId": "6ebc334bf28d182c6fa15de1",
+      "artistCredit": "DL Incognito, DJ Grouch",
+      "title": "Rugged Raw (feat. DJ Grouch)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "287a6734075a96adbedea92c",
+      "artistCredit": "DL Incognito, DJ Grouch",
+      "title": "Rugged Raw (feat. DJ Grouch)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "20561399a189376e9e0819b7",
+      "artistCredit": "DL Incognito, Mic Check",
+      "title": "Savoir Faire (feat. Mic Check)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "c47cc68a5c936e9cecabe66f",
+      "artistCredit": "DL Incognito, Tara Chase",
+      "title": "Spit Forever 2 (feat. Tara Chase)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "fec4d3b4bbf8eb848420cc8d",
+      "artistCredit": "DL Incognito, Tara Chase",
+      "title": "Spit Forever 2 (feat. Tara Chase)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "6c38fa3d10f46ac341f09d23",
+      "artistCredit": "DL Incognito, Tara Chase",
+      "title": "What Dreams Are Made of (feat. Tara Chase)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "ca5d058fbe0850eb038cafad",
+      "artistCredit": "DL Incognito, Tara Chase",
+      "title": "What Dreams Are Made of (feat. Tara Chase)",
+      "album": "A Sample and a Drum Machine"
+    },
+    {
+      "requestId": "79bcd0d67503e5f23de6d8f3",
+      "artistCredit": "DL Incognito, Theology 3",
+      "title": "Atmosphere (feat. Theology 3)",
+      "album": "A Captured Moment in Time"
+    },
+    {
+      "requestId": "94517060e084d96948bed384",
+      "artistCredit": "DNMO/ Wolfy Lights/ Blooom",
+      "title": "Bombalaya",
+      "album": "Bombalaya (Blooom Remix)"
+    },
+    {
+      "requestId": "9a9bcc516d3d1dc605c9d40b",
+      "artistCredit": "Doman & Gooding, Dru & Lincoln",
+      "title": "Runnin'",
+      "album": "Runnin'"
+    },
+    {
+      "requestId": "49580d54a7ee8485f98d1285",
+      "artistCredit": "Drake/ Majid Jordan",
+      "title": "Hold On, We're Going Home",
+      "album": "Nothing Was The Same"
+    },
+    {
+      "requestId": "b84adad39ea532727e38de3f",
+      "artistCredit": "Drake/ Majid Jordan",
+      "title": "Hold On, We're Going Home",
+      "album": "Nothing Was The Same"
+    },
+    {
+      "requestId": "4a62f93ab3202bcc06406414",
+      "artistCredit": "Drake/ Majid Jordan",
+      "title": "Hold On, We're Going Home",
+      "album": "Nothing Was The Same"
+    },
+    {
+      "requestId": "9b81b5ae33d2e35e74497334",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Members Only",
+      "album": "For All The Dogs"
+    },
+    {
+      "requestId": "54eecdd18eb26d45f34cd5ff",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Members Only",
+      "album": "For All The Dogs"
+    },
+    {
+      "requestId": "a5ce8be7d0f9660f2d69d74e",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Preach",
+      "album": "If You're Reading This It's Too Late"
+    },
+    {
+      "requestId": "4ad592797d55e977385eeff6",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Since Way Back",
+      "album": "More Life"
+    },
+    {
+      "requestId": "7fb9d52e1936c9e39beb6938",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Wednesday Night Interlude",
+      "album": "If You're Reading This It's Too Late"
+    },
+    {
+      "requestId": "6682b05c9fa1dfeea91cc22a",
+      "artistCredit": "Drake/ PARTYNEXTDOOR",
+      "title": "Wednesday Night Interlude",
+      "album": "If You're Reading This It's Too Late"
+    },
+    {
+      "requestId": "1511c1a3dad4e7c042f3b46a",
+      "artistCredit": "Drake/Majid Jordan",
+      "title": "Hold on, We're Going Home",
+      "album": "101 Greatest Housework Songs"
+    },
+    {
+      "requestId": "c2ab2dcae5b90e4640db69a2",
+      "artistCredit": "DraMatik, Muzion",
+      "title": "Shadow",
+      "album": "Le phénix, il était plusieurs fois"
+    },
+    {
+      "requestId": "27969b3a5b877c021c73fada",
+      "artistCredit": "Drezus/ Dakota Bear/ NorthSideBaby",
+      "title": "Just Landed",
+      "album": "Just Landed"
+    },
+    {
+      "requestId": "16567f8f4aad685cb5c1a374",
+      "artistCredit": "Dub J, JD ERA",
+      "title": "Drop Top",
+      "album": "Blame Me"
+    },
+    {
+      "requestId": "ca45fb857c9ad219426d573b",
+      "artistCredit": "Dub J, JD ERA, Peter Jackson, O'SOUND",
+      "title": "Gone (feat. O'Sound)",
+      "album": "Gone (feat. O'Sound)"
+    },
+    {
+      "requestId": "fbd272bf8d6071023cb23400",
+      "artistCredit": "Dub J, JRDN, Jelleestone, Roney, TURK, Bizz loc, JD ERA, Maestro",
+      "title": "Wish I Could (feat. JRDN, Maestro Fresh Wes, JD Era, Bizz Loc, Turk, Roney & Jelleestone)",
+      "album": "Wish I Could (feat. JRDN, Maestro Fresh Wes, JD Era, Bizz Loc, Turk, Roney & Jelleestone)"
+    },
+    {
+      "requestId": "b2928ceacf78d35a64bdc570",
+      "artistCredit": "Dub J, Young Stitch, JD ERA",
+      "title": "Big Things",
+      "album": "Blame Me"
+    },
+    {
+      "requestId": "4f4244bb9384442d61907aa6",
+      "artistCredit": "Dubmatique/Ashley MacIsaac",
+      "title": "La vie est si fragile",
+      "album": "Dubmatique"
+    },
+    {
+      "requestId": "36b5335fe40468243ac37f49",
+      "artistCredit": "Duck Sauce, A-Trak, Armand Van Helden",
+      "title": "aNYway",
+      "album": "Quack"
+    },
+    {
+      "requestId": "9025d81fe54d83eb45f9f188",
+      "artistCredit": "DVSN/ Shantel May",
+      "title": "... Again (feat. Shantel May)",
+      "album": "Amusing Her Feelings"
+    },
+    {
+      "requestId": "b0817bdec1bc4767860c9daa",
+      "artistCredit": "El Micha/Snow/Candy Man/Cola Loca/chorote",
+      "title": "Andamos Iré",
+      "album": "Pa Mi Gente"
+    },
+    {
+      "requestId": "ed2cd08a566cd0ea55c7d23e",
+      "artistCredit": "Elaquent, A l l i e",
+      "title": "Maharaja",
+      "album": "Worst Case Scenario"
+    },
+    {
+      "requestId": "b42a8d4700c2f1f2d2f029c4",
+      "artistCredit": "Elaquent, Es, Mathematik, Solar-C",
+      "title": "Carnival",
+      "album": "Rediscovery"
+    },
+    {
+      "requestId": "a5234ec54cf3cb80b958d115",
+      "artistCredit": "Emmanuel Jal, STORRY",
+      "title": "CHOOSE LOVE feat. STORRY",
+      "album": "CHOOSE LOVE"
+    },
+    {
+      "requestId": "a39b5a3329628ba29684e9c2",
+      "artistCredit": "Enima, Bundog",
+      "title": "CHROME HEARTS",
+      "album": "CHROME HEARTS"
+    },
+    {
+      "requestId": "5f9c0729f1950810db06bf46",
+      "artistCredit": "Estee Nack/ Futurewave/ Raz Fresco",
+      "title": "CORNCHOWDER (feat. Raz Fresco)",
+      "album": "STONE TEMPLE PYREX"
+    },
+    {
+      "requestId": "31d5a5a6c6ab4e1014f481da",
+      "artistCredit": "Esthero/Jelleestone/Jemeni",
+      "title": "Fastlane (feat. Jemeni & Jelleestone)",
+      "album": "Wikked Lil' Grrrls (U.S. Release)"
+    },
+    {
+      "requestId": "50bcfe7c00e0828fc91c7dfc",
+      "artistCredit": "Esthero/Shakari Nyte",
+      "title": "If tha Mood (feat. Shakari Nyte)",
+      "album": "Wikked Lil' Grrrls (U.S. Release)"
+    },
+    {
+      "requestId": "f262d1195c8343cf295f646c",
+      "artistCredit": "Eternia, Maestro Fresh Wes, Tona",
+      "title": "Day in the Life (feat. Tona & Maestro Fresh Wes)",
+      "album": "At Last Instrumentals"
+    },
+    {
+      "requestId": "4ee8d1fd7ceafcd18006d9da",
+      "artistCredit": "Eternia, Ness Lee, Cincinnati, Poodie the Byz",
+      "title": "Do This Like Me ft. Ness Lee & Poodie the Byz",
+      "album": "The Setup"
+    },
+    {
+      "requestId": "6c9085b5cab2f2104facec4c",
+      "artistCredit": "Eternia, Phoenix Pagliacci",
+      "title": "For This Life",
+      "album": "Bassments of Badmen 3"
+    },
+    {
+      "requestId": "648b0404cc5721cdda0df10c",
+      "artistCredit": "Eternia, Rel McCoy",
+      "title": "Cycles",
+      "album": "FREE"
+    },
+    {
+      "requestId": "b4e0a7e1d35d479489297506",
+      "artistCredit": "Eternia, Rel McCoy",
+      "title": "Let No Dream Fall",
+      "album": "FREE"
+    },
+    {
+      "requestId": "9b19de531ba2e509abd43818",
+      "artistCredit": "Eternia, Rel McCoy",
+      "title": "Most PPL",
+      "album": "Most PPL"
+    },
+    {
+      "requestId": "fce7c79ada5c3d1869344c4d",
+      "artistCredit": "Eternia, Rel McCoy",
+      "title": "Praise",
+      "album": "Praise"
+    },
+    {
+      "requestId": "ee7ad6ae2db920dea665abac",
+      "artistCredit": "Eternia, Rel McCoy",
+      "title": "Wonderful World",
+      "album": "FREE"
+    },
+    {
+      "requestId": "511bd1b8faa83c4c008faee8",
+      "artistCredit": "Eternia, Rel McCoy, Mr. Lif, Eliki Sol",
+      "title": "The Story Of Us",
+      "album": "The Story Of Us"
+    },
+    {
+      "requestId": "6990af0f66a29541819b51e2",
+      "artistCredit": "Eternia, Rel McCoy, Shad, SHEAL",
+      "title": "Home",
+      "album": "FREE"
+    },
+    {
+      "requestId": "d00ba351ecb86ed6d7432fe7",
+      "artistCredit": "Eternia/Rel McCoy/Wordsworth/Manny",
+      "title": "From99",
+      "album": "FREE"
+    },
+    {
+      "requestId": "b1bc81bd2fdbb85d51397a5c",
+      "artistCredit": "Eva Shaw, Jazz Cartier, Kris the $pirit",
+      "title": "OUTSIDE",
+      "album": "OUTSIDE"
+    },
+    {
+      "requestId": "15c9112240da167cde8141e4",
+      "artistCredit": "Eva Shaw/ Haviah Mighty/ Friyie",
+      "title": "please.",
+      "album": "please."
+    },
+    {
+      "requestId": "360c7b9f9c9851c4e7053395",
+      "artistCredit": "EverythingOShauN, Aiza, Frank Delour",
+      "title": "BIGGER BADA BOOM (Frank Delour Remix)",
+      "album": "BIGGER BADA BOOM (Frank Delour Remix)"
+    },
+    {
+      "requestId": "e9607ef99d9349b762e93007",
+      "artistCredit": "EverythingOShauN, Charmaine",
+      "title": "EVERYTHING IS FINE",
+      "album": "ENERGY IS EVERYTHING"
+    },
+    {
+      "requestId": "ae63b13c4cf4d1e0e3414040",
+      "artistCredit": "EverythingOShauN, Chris IDH, Bolu Ajibade",
+      "title": "BASMATI",
+      "album": "BASMATI (Chris IDH Remix)"
+    },
+    {
+      "requestId": "0e03ad1db43e5acb4c1df2fb",
+      "artistCredit": "EverythingOShauN, Jed Harper",
+      "title": "BIKO 3X",
+      "album": "BIKO 3X"
+    },
+    {
+      "requestId": "ff57aad3c446ebcee803249f",
+      "artistCredit": "EverythingOShauN, The BLK LT$, Paulina Singer",
+      "title": "intro - ENERGY IS EVERYTHING",
+      "album": "ENERGY IS EVERYTHING"
+    },
+    {
+      "requestId": "25f469fd051f3ffbe9ba43a1",
+      "artistCredit": "EverythingOShauN, Xpress Aka Djxp",
+      "title": "Poet (feat. Xpress Aka Djxp)",
+      "album": "Until Now"
+    },
+    {
+      "requestId": "166cb61147a882d100927c62",
+      "artistCredit": "EverythingOShauN/ Aiza",
+      "title": "BIG BADA BOOM",
+      "album": "BIG BADA BOOM"
+    },
+    {
+      "requestId": "ead2fc47a5de07cd4109a2af",
+      "artistCredit": "EverythingOShauN/Private Name Private Number",
+      "title": "LEMON AND LIME",
+      "album": "LEMON AND LIME"
+    },
+    {
+      "requestId": "b261c1467d417ce25fd9cd90",
+      "artistCredit": "Evil Ebenezer/Cadence Weapon",
+      "title": "Set Fire",
+      "album": "Howl"
+    },
+    {
+      "requestId": "773fd770e48e44620a7ff384",
+      "artistCredit": "Falcons/ TESSA./ GoldLink/ Jazz Cartier",
+      "title": "Waterworld",
+      "album": "DAYDRIFT"
+    },
+    {
+      "requestId": "13b5c046f70644cb37f47475",
+      "artistCredit": "Fame Holiday, Haviah Mighty",
+      "title": "Made Me",
+      "album": "Show Time"
+    },
+    {
+      "requestId": "2afe6c4fd58931f073e3a330",
+      "artistCredit": "Famous, Melanie Durrant",
+      "title": "This Chick Is Crazy",
+      "album": "Road to Center Stage, Pt. 1"
+    },
+    {
+      "requestId": "4f1195f9ae260e44ed822eba",
+      "artistCredit": "Famous, Rich Kidd",
+      "title": "Slow Down",
+      "album": "Road to Center Stage, Pt. 1"
+    },
+    {
+      "requestId": "f69c3ff56feee7baa02e19ad",
+      "artistCredit": "Felix Cartal, Tegan and Sara",
+      "title": "Right On Time",
+      "album": "Right On Time"
+    },
+    {
+      "requestId": "8457d7b255fa6cb8a173c30d",
+      "artistCredit": "Finn, Rich Kidd",
+      "title": "Tom & Jerry (feat. Rich Kidd)",
+      "album": "Live From The Shark Bar (Season 1)"
+    },
+    {
+      "requestId": "b7d0ba9a28cf7cb5f14aea2c",
+      "artistCredit": "Fito Blanko, Snow, Delirious, Alex K, I AM CHINO",
+      "title": "Make Moves",
+      "album": "Party People: En Español"
+    },
+    {
+      "requestId": "9adaa7075ac02a378dfa4745",
+      "artistCredit": "FouKi/Alicia Moffet",
+      "title": "Ciel",
+      "album": "Ciel"
+    },
+    {
+      "requestId": "ae89d2ecc25ba53c3f3eaab9",
+      "artistCredit": "Frankenstein, Afrolistic",
+      "title": "Agony To Ecstasy (feat. Afrolistic)",
+      "album": "The Science Of Sound"
+    },
+    {
+      "requestId": "26a03843780e8f1033307da4",
+      "artistCredit": "Frankenstein, Afrolistic",
+      "title": "Agony To Ecstasy (feat. Afrolistic)",
+      "album": "The Science Of Sound"
+    },
+    {
+      "requestId": "b8e7f6963cb29a4ce7ae7386",
+      "artistCredit": "Frankenstein, Luminous",
+      "title": "Rocksumshit (feat. Luminous)",
+      "album": "The Science Of Sound"
+    },
+    {
+      "requestId": "1539c099e29be616843a65be",
+      "artistCredit": "Frankenstein/ Meesah",
+      "title": "UV (feat. Meesah)",
+      "album": "The Science Of Sound"
+    },
+    {
+      "requestId": "abd2d0ea6d65fae691f9e6ec",
+      "artistCredit": "Freak Heat Waves/Cindy Lee",
+      "title": "In a Moment Divine",
+      "album": "Mondo Tempo"
+    },
+    {
+      "requestId": "23e0c158c1d8e80d46497ee2",
+      "artistCredit": "Freakey/wondaGURL",
+      "title": "EUPHORIA",
+      "album": "Désolé Pour L'Attente"
+    },
+    {
+      "requestId": "0e4b56b609745c2cfdf71809",
+      "artistCredit": "Fredy V, Mel Pacifico, The Foundation",
+      "title": "DIDN'T CHA KNOW",
+      "album": "NO TRIBE NO I"
+    },
+    {
+      "requestId": "7729eba2b7f7e7351aea2506",
+      "artistCredit": "Fredy V, Mel Pacifico, The Foundation",
+      "title": "NO TRIBE NO I",
+      "album": "NO TRIBE NO I"
+    },
+    {
+      "requestId": "830dd4ab83b32cfefe549e3e",
+      "artistCredit": "Fredy V, Mel Pacifico, The Foundation, Oddisee",
+      "title": "PHO THE VIBE",
+      "album": "NO TRIBE NO I"
+    },
+    {
+      "requestId": "e5f4bb8fe94e73c5a9ee55fe",
+      "artistCredit": "Freq Motif, EverythingOShauN",
+      "title": "Wild Side",
+      "album": "Wild Side"
+    },
+    {
+      "requestId": "29da7d404dbc773c1a435380",
+      "artistCredit": "Gangis Khan",
+      "title": "Gangsta Cazals (feat. Jd Era, Raekwon & Styles P)",
+      "album": "The Story of Camoflauge"
+    },
+    {
+      "requestId": "c316c932e82bf458982d66d5",
+      "artistCredit": "Gangis Khan",
+      "title": "You're Not My Wife (feat. Peter Jackson)",
+      "album": "The Story of Camoflauge"
+    },
+    {
+      "requestId": "39e5d951545532b4702067f7",
+      "artistCredit": "Gangis Khan, JRDN",
+      "title": "The One (feat. JRDN)",
+      "album": "Scardogg Millionaire"
+    },
+    {
+      "requestId": "7ca1a48a249f98a013e4cb10",
+      "artistCredit": "Gangis Khan, King Dapz",
+      "title": "Shook ones",
+      "album": "Shook ones"
+    },
+    {
+      "requestId": "1f549860aca5af19c126c548",
+      "artistCredit": "Garou/ Charlotte Cardin",
+      "title": "Du Vent Des Mots",
+      "album": "Au Milieu De Ma Vie"
+    },
+    {
+      "requestId": "001e2ab153df63326d057872",
+      "artistCredit": "Ghetto Concept",
+      "title": "7 Days Feat. Samantha",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "08fe747800e0f3f9a2f2f69f",
+      "artistCredit": "Ghetto Concept",
+      "title": "Blades Of Ice Feat. Angel Duss, Civilizer, The, Exodus , Ill Phenom, Kryptonite, Ray Smoove",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "ebf005d12295bf833f8a1b68",
+      "artistCredit": "Ghetto Concept",
+      "title": "Death Touch Feat. Cli-N-Tel, K-4ce, Skyjuice",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "d32b0c7657df49578a0a69de",
+      "artistCredit": "Ghetto Concept",
+      "title": "Die 4 Me Feat. In Essence",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "94a289367406cfc1530e537c",
+      "artistCredit": "Ghetto Concept",
+      "title": "Heat Of The Night Feat. Naomi, Ray Smoove",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "a047a3a3e8ce99e4749cb8cf",
+      "artistCredit": "Ghetto Concept",
+      "title": "Krazy Mixed Up World Feat. Angel Duss",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "cfc3645fbb8ee65b5d702e72",
+      "artistCredit": "Ghetto Concept",
+      "title": "N.E.W.S. Feat. Angel Duss",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "425fd92d3d1567c7327ec660",
+      "artistCredit": "Ghetto Concept",
+      "title": "Soak Da Set Feat. Blaze, Do Dirty, Whosane",
+      "album": "Ghetto Concept"
+    },
+    {
+      "requestId": "a447b9630bb88d1a117bfdc1",
+      "artistCredit": "Ghetto Concept, Angel Duss",
+      "title": "Crazy Mixed Up World (feat. Angel Duss)",
+      "album": "Crazy Mixed Up World (feat. Angel Duss)"
+    },
+    {
+      "requestId": "d64b85c04b221222ac6c362f",
+      "artistCredit": "Ghetto Concept, Angel Duss, In Essense, Ray Smoove",
+      "title": "Rest in Peace (feat. Angel Duss, In Essense & Ray Smoove)",
+      "album": "Rest in Peace (feat. Angel Duss, In Essense & Ray Smoove)"
+    },
+    {
+      "requestId": "07152db031d377ad1484d2d6",
+      "artistCredit": "Ghetto Concept, Angel Duss, In Essense, Ray Smoove",
+      "title": "Rest in Peace (feat. Angel Duss, In Essense & Ray Smoove)",
+      "album": "Rest in Peace (feat. Angel Duss, In Essense & Ray Smoove)"
+    },
+    {
+      "requestId": "8963c432ef9e90e3ec387b7e",
+      "artistCredit": "Ghetto Concept, Angel Duss, Ray Smoove",
+      "title": "Run Up",
+      "album": "Legendary"
+    },
+    {
+      "requestId": "ca18812ac2209b9603a373a3",
+      "artistCredit": "Ghetto Concept, Baby Doll",
+      "title": "Living It Up (feat. Baby Doll)",
+      "album": "Living It Up (feat. Baby Doll)"
+    },
+    {
+      "requestId": "7190fb239f4091429aa912b9",
+      "artistCredit": "Ghetto Concept, Glenn Lewis",
+      "title": "So Fine",
+      "album": "So Fine"
+    },
+    {
+      "requestId": "a742ac78c864639b50837049",
+      "artistCredit": "Ghetto Concept, INFINITE",
+      "title": "Process of Elimination (feat. Infinite)",
+      "album": "Process of Elimination (feat. Infinite)"
+    },
+    {
+      "requestId": "b3fe20de86c509f05817fab7",
+      "artistCredit": "Ghetto Concept, INFINITE",
+      "title": "Visionz (feat. Infinite)",
+      "album": "Visionz (feat. Infinite)"
+    },
+    {
+      "requestId": "b9f1169975b8b000aa8dbb67",
+      "artistCredit": "Ghetto Concept, J-Wyze, Manchi, Ray Smoove, Madlocks, DJ G-Starr, Black-I",
+      "title": "Westend Story (feat. J-Wyze, Manchi, Ray Smoove, Madlocks, DJ G-Starr & Black-I)",
+      "album": "Westend Story (feat. J-Wyze, Manchi, Ray Smoove, Madlocks, DJ G-Starr & Black-I)"
+    },
+    {
+      "requestId": "9be120b2fef40b8ad4a159e9",
+      "artistCredit": "Ghetto Concept, Kastro from Outlawz, Blaze",
+      "title": "Joy Iz Pain (feat. Kastro from Outlawz & Blaze)",
+      "album": "Joy Iz Pain (feat. Kastro from Outlawz & Blaze)"
+    },
+    {
+      "requestId": "bd47771dbf80d87e5fda724b",
+      "artistCredit": "Ghetto Concept, Madlocks, INFINITE, Jelleestone",
+      "title": "U.L. Style (feat. Madlocks, Infinite & Jelleestone)",
+      "album": "U.L. Style (feat. Madlocks, Infinite & Jelleestone)"
+    },
+    {
+      "requestId": "4470d76838072b8bf699fe59",
+      "artistCredit": "Ghetto Concept, Ray Smoove, Madlocks, Richie Payso",
+      "title": "No Love in the Streets (feat. Ray Smoove, Madlocks & Richie Payso)",
+      "album": "No Love in the Streets (feat. Ray Smoove, Madlocks & Richie Payso)"
+    },
+    {
+      "requestId": "d8e1d261c8345ebe88da6f6d",
+      "artistCredit": "Ghetto Concept, Samantha",
+      "title": "7 Dayz (feat. Samantha)",
+      "album": "7 Dayz (feat. Samantha)"
+    },
+    {
+      "requestId": "651db8f24a73d6bd57749597",
+      "artistCredit": "Ghetto Concept, Singing Diva",
+      "title": "Ghetto Boy (feat. Singing Diva)",
+      "album": "Ghetto Boy (feat. Singing Diva)"
+    },
+    {
+      "requestId": "690141a36d9657f5a4d5f5fa",
+      "artistCredit": "Ghetto Concept, Whosane, Begetz, Blaze",
+      "title": "Soak the Set (feat. Whosane, Begetz & Blaze)",
+      "album": "Soak the Set (feat. Whosane, Begetz & Blaze)"
+    },
+    {
+      "requestId": "45d3d3ddcd77b065682e26a4",
+      "artistCredit": "Ghetto Concept/ Maestro/ Kardinal Offishall/ Red-1 of Rascalz/ Ironside/ Snow",
+      "title": "Still Too Much",
+      "album": "Still Too Much"
+    },
+    {
+      "requestId": "94c27f543a6f46c9d4b38c0d",
+      "artistCredit": "Ghetto Concept/ Maestro/ Kardinal Offishall/ Red-1 of Rascalz/ Ironside/ Snow",
+      "title": "Still Too Much",
+      "album": "Still Too Much"
+    },
+    {
+      "requestId": "bc0f0b44fc8c5870b795e4c0",
+      "artistCredit": "Ghetto Concept/INFINITE",
+      "title": "Much Luv (feat. Infinite)",
+      "album": "Much Luv (feat. Infinite)"
+    },
+    {
+      "requestId": "fc4560c5932237b8c20de3a3",
+      "artistCredit": "Ghetto Concept/Madlocks/Diamond X/INFINITE",
+      "title": "Murda Style (feat. Madlocks, Diamond X & Infinite)",
+      "album": "Murda Style (feat. Madlocks, Diamond X & Infinite)"
+    },
+    {
+      "requestId": "cac7ad7fdd801142fbbe2bd7",
+      "artistCredit": "Ghettosocks, Muneshine, D-Sisive, Rich Kidd",
+      "title": "U Ain't This (feat. D-Sisive, Rich Kidd & Muneshine)",
+      "album": "Treat of the Day"
+    },
+    {
+      "requestId": "e86c81c9a76b6b8243c629ec",
+      "artistCredit": "Glamboy, 88GLAM",
+      "title": "Freak Hoe",
+      "album": "Freak Hoe"
+    },
+    {
+      "requestId": "7e5fc38e38e5547a02872324",
+      "artistCredit": "Glenn Morrison/Islove",
+      "title": "Goodbye",
+      "album": "Goodbye (feat. Islove)"
+    },
+    {
+      "requestId": "5cbbf493194d09d5f5750c52",
+      "artistCredit": "GlomanOnThaBeat/wondaGURL/LIL Darklord",
+      "title": "Slump City (feat. Wondagurl & Lil Darklord)",
+      "album": "Yesterday"
+    },
+    {
+      "requestId": "d4138b711bc985c92c751619",
+      "artistCredit": "Golde London, Haviah Mighty, Charmaine, TAAYLEE G, DvblM",
+      "title": "Think They Know Me (Remix) [feat. Haviah Mighty, Charmaine, TAAYLEE G & DvblM]",
+      "album": "Think They Know Me (Remix) [feat. Haviah Mighty, Charmaine, TAAYLEE G & DvblM]"
+    },
+    {
+      "requestId": "1266ecadc402c0d3baf20b47",
+      "artistCredit": "Grand Eugene, Freak Heat Waves",
+      "title": "What It Feels Like",
+      "album": "What It Feels Like"
+    },
+    {
+      "requestId": "41a4dcc22140fdd842b0cbcc",
+      "artistCredit": "grandson/ Jessie Reyez",
+      "title": "Rain (from The Suicide Squad)",
+      "album": "Rain (from The Suicide Squad)"
+    },
+    {
+      "requestId": "ebe84c36e08360215c2241c4",
+      "artistCredit": "Grandtheft/ Cadence Weapon",
+      "title": "Jackson Pollock",
+      "album": "Jackson Pollock"
+    },
+    {
+      "requestId": "5a1c361e0e2c6be007512129",
+      "artistCredit": "Gutta192, VT",
+      "title": "Paw Paw (feat. VT)",
+      "album": "Paw Paw (feat. VT)"
+    },
+    {
+      "requestId": "c8ef3c1a15470d2af6249b12",
+      "artistCredit": "Harley G/ Snow/ Young Stitch",
+      "title": "I Wont Change",
+      "album": "I Wont Change"
+    },
+    {
+      "requestId": "aa0f9479ae838c5a8082e23c",
+      "artistCredit": "Harrison, A l l i e",
+      "title": "Vertigo",
+      "album": "Checkpoint Titanium"
+    },
+    {
+      "requestId": "84a115c5b64345ca6749b05b",
+      "artistCredit": "Harrison/ToBi",
+      "title": "Outta This World",
+      "album": "Outta This World"
+    },
+    {
+      "requestId": "b7dd11dab46cbe2eba16b202",
+      "artistCredit": "Harvey Stripes",
+      "title": "#TTYN (feat. Lokz)",
+      "album": "A Dollar and a Dream"
+    },
+    {
+      "requestId": "0600d6c2ea8e4c9c25dc8126",
+      "artistCredit": "Harvey Stripes",
+      "title": "A Rock & A Hard Place (feat. JRDN)",
+      "album": "A Dollar and a Dream"
+    },
+    {
+      "requestId": "55d5b9eca538896270045804",
+      "artistCredit": "Harvey Stripes",
+      "title": "Ghost (feat. Dru)",
+      "album": "A Penny and a Nightmare"
+    },
+    {
+      "requestId": "61342905e95069c904d20fbb",
+      "artistCredit": "Harvey Stripes",
+      "title": "Hallelujah (feat. Tory Lanez)",
+      "album": "A Penny and a Nightmare"
+    },
+    {
+      "requestId": "51a9bd3c3dacc364a655e87f",
+      "artistCredit": "Harvey Stripes",
+      "title": "Me and You (feat. Tory Lanez)",
+      "album": "In God We Trust"
+    },
+    {
+      "requestId": "1dd095d73b2c3ef5b25be11a",
+      "artistCredit": "Harvey Stripes",
+      "title": "Penny x Nightmare (feat. Shi Wisdom)",
+      "album": "A Penny and a Nightmare"
+    },
+    {
+      "requestId": "39a4b7ffba49e954a80ca5a2",
+      "artistCredit": "Harvey Stripes",
+      "title": "Rockstar Lifestyle (feat. A-Game)",
+      "album": "A Dollar and a Dream"
+    },
+    {
+      "requestId": "421a402f6cc69b7b8ff9ac1a",
+      "artistCredit": "Haviah Mighty, Astrokidjay",
+      "title": "Coulda Been U (feat. Astrokidjay)",
+      "album": "Coulda Been U (feat. Astrokidjay)"
+    },
+    {
+      "requestId": "fa0c99c84a853d53de1b6740",
+      "artistCredit": "Haviah Mighty, Clairmont The Second",
+      "title": "Smoke (feat. Clairmont The Second)",
+      "album": "13th Floor"
+    },
+    {
+      "requestId": "a808d3d6b9205f00c46ad047",
+      "artistCredit": "Haviah Mighty, Grandtheft",
+      "title": "Avocado",
+      "album": "Avocado"
+    },
+    {
+      "requestId": "4d87613c92b2252a7af8b225",
+      "artistCredit": "Haviah Mighty, Lex Leosis, Phoenix Pagliacci, Keysha Freshh",
+      "title": "Double The Fun (SRTY Remix)",
+      "album": "Double The Fun (Remix Pack)"
+    },
+    {
+      "requestId": "b5f7cf4e3e1fbf2e66e9cd7d",
+      "artistCredit": "Haviah Mighty, Omega Mighty",
+      "title": "Wishy Washy (feat. Omega Mighty)",
+      "album": "Wishy Washy (feat. Omega Mighty)"
+    },
+    {
+      "requestId": "1a7bda15bdc4930cb8a15eaf",
+      "artistCredit": "Haviah Mighty, Shantel May",
+      "title": "Lucky",
+      "album": "Lucky"
+    },
+    {
+      "requestId": "fedba1b29722d8d4831ed0ea",
+      "artistCredit": "Haviah Mighty, Tobi",
+      "title": "Good On My Own Tonight (feat. TOBi)",
+      "album": "Good On My Own Tonight (feat. TOBi)"
+    },
+    {
+      "requestId": "99f934d4cd6467963fd612de",
+      "artistCredit": "Haviah Mighty/ Eva Shaw",
+      "title": "BIG DRIP",
+      "album": "BIG DRIP"
+    },
+    {
+      "requestId": "6281ec0a5ddbe6dcee293955",
+      "artistCredit": "Haviah Mighty/ Omega Mighty",
+      "title": "Zoom Zoom (feat. Omega Mighty)",
+      "album": "Zoom Zoom (feat. Omega Mighty)"
+    },
+    {
+      "requestId": "cd4bca37eade0bd7b337d45a",
+      "artistCredit": "Haviah Mighty/ Zach Zoya",
+      "title": "Lil Baby (feat. Zach Zoya)",
+      "album": "Crying Crystals"
+    },
+    {
+      "requestId": "3bc82e96485e8c32afb785e0",
+      "artistCredit": "Haviah Mighty/ Zach Zoya",
+      "title": "Snowfall (feat. Zach Zoya)",
+      "album": "Crying Crystals"
+    },
+    {
+      "requestId": "aa6f8677de9e8bd004ae314e",
+      "artistCredit": "Headstones, City and Colour",
+      "title": "NAVIGATE (FEAT. CITY AND COLOUR)",
+      "album": "NAVIGATE (FEAT. CITY AND COLOUR)"
+    },
+    {
+      "requestId": "6d255818a01051cc83de98ea",
+      "artistCredit": "Hedley, P. Reign",
+      "title": "Invincible (Rap Version)",
+      "album": "Invincible"
+    },
+    {
+      "requestId": "d618bab9be8a3746b53a3082",
+      "artistCredit": "Hellbent, Vince Maria",
+      "title": "Fast Car (Ryder Remix)",
+      "album": "Fast Car (Ryder Remix)"
+    },
+    {
+      "requestId": "93d9668884823f3371922782",
+      "artistCredit": "ibxrhm, Jon Kabongo",
+      "title": "LADY",
+      "album": "LADY"
+    },
+    {
+      "requestId": "e300379db6d5b18636042d37",
+      "artistCredit": "Ice tha One/ HeyBombay/ Truss/ Junia-T",
+      "title": "Dance Like Me",
+      "album": "Monstar (Deluxe)"
+    },
+    {
+      "requestId": "cf27932550d0a6de42b9bd0d",
+      "artistCredit": "Illa J/Allie/Potatohead People",
+      "title": "Sunflower",
+      "album": "Bastard Jazz Presents Year of the Monkey"
+    },
+    {
+      "requestId": "a9257565dc450b38dbbf00fc",
+      "artistCredit": "Infinite/ Jully Black",
+      "title": "360 Degrees [feat. Jully Black] (Extended Mix)",
+      "album": "360 Degrees [feat. Jully Black]"
+    },
+    {
+      "requestId": "266a6f8f05ab5d66a6623adc",
+      "artistCredit": "IRS, Grimace Love",
+      "title": "Controlled Anger",
+      "album": "Welcome To Planet Irs (Deluxe)"
+    },
+    {
+      "requestId": "c72d444221e0da1aa40e561f",
+      "artistCredit": "IRS, Nish Rawks, Dan-e-o, WIO-K",
+      "title": "Lift Off",
+      "album": "Welcome To Planet Irs (Deluxe)"
+    },
+    {
+      "requestId": "34b5f1e802e90b428ec6257a",
+      "artistCredit": "IRS, Spidah Man, Shamon Harage, Charisma aka Skizz, Grimace Love",
+      "title": "M.W.O.",
+      "album": "Welcome To Planet Irs (Deluxe)"
+    },
+    {
+      "requestId": "44d8331a10764053be513d0f",
+      "artistCredit": "IRS, T.R.A.C.K.S.",
+      "title": "T.R.A.C.K.S.' Lament 1.5",
+      "album": "Welcome To Planet Irs (Deluxe)"
+    },
+    {
+      "requestId": "3c5017205342ff06f9cf18da",
+      "artistCredit": "J Shiltz, Nish Raawks, WIO-K, Junia-T",
+      "title": "Gimme That Flow, Pt. 2",
+      "album": "What I Stand For"
+    },
+    {
+      "requestId": "b84c2416b1b6dce33b4d7ae2",
+      "artistCredit": "J Shiltz, Rich Kidd",
+      "title": "Still Standing",
+      "album": "Still Standing"
+    },
+    {
+      "requestId": "2f4b7ac4fbef11364cca86d1",
+      "artistCredit": "J.Lately, Wrekonize",
+      "title": "At Last",
+      "album": "At Last"
+    },
+    {
+      "requestId": "f21fbf7ebc034bd4b91170b3",
+      "artistCredit": "Jaclyn Gee, Eternia",
+      "title": "You Want It (feat. Eternia)",
+      "album": "Gypsy Rose"
+    },
+    {
+      "requestId": "dd95264d4d9afc10deda5a7c",
+      "artistCredit": "Jacob Vallen, Tory Lanez",
+      "title": "Wish I Never Met You",
+      "album": "Wish I Never Met You"
+    },
+    {
+      "requestId": "e5f5d1c495b5e9c9d09ab9a2",
+      "artistCredit": "Jacques Greene, Cadence Weapon",
+      "title": "Silencio",
+      "album": "Night Service"
+    },
+    {
+      "requestId": "0e951c78d42914bbf99c783a",
+      "artistCredit": "Jacques Greene/Cadence Weapon/Justin Strauss",
+      "title": "Night Service (Whatever/Whatever Day Version)",
+      "album": "Night Service (The Remixes)"
+    },
+    {
+      "requestId": "54f9c8ac74c530526f362f4b",
+      "artistCredit": "Jah'Mila, Aquakultre, Wolf Castle, Wendy MacIsaac",
+      "title": "East Coast Family",
+      "album": "Woman of the Sun"
+    },
+    {
+      "requestId": "11dde8d8d912d1b61a446e5f",
+      "artistCredit": "Jarvis Church, C4",
+      "title": "Love Song",
+      "album": "The Long Way Home"
+    },
+    {
+      "requestId": "5aaa2f33937ca28b2b3b70e8",
+      "artistCredit": "Jaye Woods, Cj Cruicks",
+      "title": "Say What U Mean",
+      "album": "HEAL"
+    },
+    {
+      "requestId": "8cc1580ae3b943630f041c5d",
+      "artistCredit": "Jazz Cartier/KTOE",
+      "title": "• RIGHT NOW",
+      "album": "Right Now"
+    },
+    {
+      "requestId": "fc8b27597299f1cb24f4c55e",
+      "artistCredit": "Jazz Cartier/River Tiber",
+      "title": "• Tell Me",
+      "album": "Hotel Paranoia"
+    },
+    {
+      "requestId": "6c8fa4b327bd3a1592fd5a87",
+      "artistCredit": "JB, Dru",
+      "title": "Eh Yo",
+      "album": "My Environment"
+    },
+    {
+      "requestId": "8b961ea9e7eaa53e238e6a8a",
+      "artistCredit": "JB, Gillateen, K Fresh The Knemesis, Mayhem Moreaty, Don Milly",
+      "title": "Get It Right",
+      "album": "My Environment"
+    },
+    {
+      "requestId": "9777edf8a3bcd0900af00025",
+      "artistCredit": "JB, Maestro, Michie Mee",
+      "title": "Hood Life (G.I.T.H. Remix)",
+      "album": "My Environment"
+    },
+    {
+      "requestId": "08441659fc30069b3841f41e",
+      "artistCredit": "JB, Sean Jones",
+      "title": "Ready or Not",
+      "album": "My Environment"
+    },
+    {
+      "requestId": "7fedbd5b58510dafd34cf5d2",
+      "artistCredit": "JD ERA, Fredro Starr, Ricky Bats, Jonny Vulgar, Asun Eastwood, Harrd Luck",
+      "title": "Dracula's Piano",
+      "album": "Yellow Goose"
+    },
+    {
+      "requestId": "14f53601601c182ec6904fd2",
+      "artistCredit": "JD ERA, Fredro Starr, Shi Wisdom",
+      "title": "Let's Get High",
+      "album": "Yellow Goose"
+    },
+    {
+      "requestId": "7ffbe8002b296cbe39d5f530",
+      "artistCredit": "JD ERA, Lokkz",
+      "title": "No Handouts (feat. Lokkz)",
+      "album": "No Handouts (Deluxe Edition)"
+    },
+    {
+      "requestId": "5492df5af59a759f997fb0c5",
+      "artistCredit": "Jelleestone, Nelly Furtado",
+      "title": "Friendamine (Remix) [feat. Nelly Furtado]",
+      "album": "The Hood Is Here"
+    },
+    {
+      "requestId": "df0ea6be9ce8cac5be4770a9",
+      "artistCredit": "Jelleestone, Saukrates",
+      "title": "My Peoples (feat. Saukrates)",
+      "album": "The Hood Is Here"
+    },
+    {
+      "requestId": "fb350fe1d4076e0a96420499",
+      "artistCredit": "Jenn Grant, Buck 65",
+      "title": "Spades (feat. Buck 65)",
+      "album": "Compostela"
+    },
+    {
+      "requestId": "115c67dbbb4529c5bc8d2e9c",
+      "artistCredit": "Jenn Grant/Aquakultre",
+      "title": "Nobody's Fool",
+      "album": "Champagne Problems"
+    },
+    {
+      "requestId": "9c0cb1218f56974c2a2286e8",
+      "artistCredit": "Jeremy Fisher, Serena Ryder",
+      "title": "Uh-Oh",
+      "album": "The Lemon Squeeze"
+    },
+    {
+      "requestId": "74f6e882b8cbcfa1cd44abf9",
+      "artistCredit": "Jessa Sky, Junia-T",
+      "title": "Timelapse",
+      "album": "Timelapse"
+    },
+    {
+      "requestId": "f8491faf89b866a401b91591",
+      "artistCredit": "Jessa Sky, Junia-T",
+      "title": "Timelapse",
+      "album": "Timelapse"
+    },
+    {
+      "requestId": "723d5e3d130a1be9c173283f",
+      "artistCredit": "Jesse Gold, Katie Tupper",
+      "title": "Something Over Nothing",
+      "album": "Something Over Nothing"
+    },
+    {
+      "requestId": "1cee9c3b2af511db2b128935",
+      "artistCredit": "Jesse Labelle/Alyssa Reid",
+      "title": "Heartbreak Coverup",
+      "album": "Two"
+    },
+    {
+      "requestId": "a79f6125a00f2fb3fd94f05d",
+      "artistCredit": "Jessie Reyez, Daniel Caesar",
+      "title": "Figures, a Reprise",
+      "album": "Figures, a Reprise"
+    },
+    {
+      "requestId": "6a60ff384705ec3f85178dc9",
+      "artistCredit": "Jessie Simmons, City Fidelia",
+      "title": "Dream",
+      "album": "Dream"
+    },
+    {
+      "requestId": "a2d85e7b7f139520bd0b6b58",
+      "artistCredit": "Jimmie D, Nicholas Craven, Raz Fresco",
+      "title": "2 Sides",
+      "album": "Good Music Hypnotizes"
+    },
+    {
+      "requestId": "14877c32065c9363325f24b7",
+      "artistCredit": "Jimmie D, Raz Fresco, Pay$o",
+      "title": "Rudimentary",
+      "album": "Rudimentary"
+    },
+    {
+      "requestId": "18bf1cf5e56d3833bc61abf4",
+      "artistCredit": "JMB Drippy, RACH",
+      "title": "Palmarès",
+      "album": "Palmarès"
+    },
+    {
+      "requestId": "d410248b725325bbd6e6c190",
+      "artistCredit": "Joel Plaskett Emergency, Joel Plaskett",
+      "title": "Fashionable People",
+      "album": "Ashtray Rock"
+    },
+    {
+      "requestId": "5ecc8540d20301a653d250a0",
+      "artistCredit": "Joel Plaskett Emergency, Joel Plaskett",
+      "title": "Fashionable People",
+      "album": "Ashtray Rock"
+    },
+    {
+      "requestId": "9569d7d39859981e71eb23fe",
+      "artistCredit": "Joel Plaskett Emergency, Joel Plaskett",
+      "title": "Nowhere With You",
+      "album": "Make A Little Noise"
+    },
+    {
+      "requestId": "d4af51a0002d422300679c0d",
+      "artistCredit": "Johnny Reid, Serena Ryder",
+      "title": "Walking On Water",
+      "album": "Fire It Up"
+    },
+    {
+      "requestId": "ec5936243f3501bff5d1bab0",
+      "artistCredit": "Josh Martinez, Buck 65",
+      "title": "Leopold the Apostle",
+      "album": "A Trash Up"
+    },
+    {
+      "requestId": "9228f04faf335b92ca4868c7",
+      "artistCredit": "Josh Ramsay, Serena Ryder",
+      "title": "Beat The Devil (feat. Serena Ryder)",
+      "album": "The Josh Ramsay Show (Clean)"
+    },
+    {
+      "requestId": "5a1e17ed63b117a18b2a13c8",
+      "artistCredit": "JRDN, Lane Hall",
+      "title": "Top Of The Charts",
+      "album": "Top Of The Charts"
+    },
+    {
+      "requestId": "20f990560427b45afa67c90f",
+      "artistCredit": "JRDN, Rich Kidd",
+      "title": "Lawrence Town (feat. Rich Kidd)",
+      "album": "Supply & Demand"
+    },
+    {
+      "requestId": "9275c8abc2aa4b39e6babda6",
+      "artistCredit": "Junia-T, Adam Bomb",
+      "title": "Complicated",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "f1a9a93a7242e37fa5da3bc6",
+      "artistCredit": "Junia-T, Ice tha One",
+      "title": "EstSde (Do What You Please)",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "53f1da1dc6f90ea6de3e5357",
+      "artistCredit": "Junia-T, Jessie Reyez",
+      "title": "Sad Face Emojis",
+      "album": "Sad Face Emojis"
+    },
+    {
+      "requestId": "c7e50d22dcdec6fc820a611d",
+      "artistCredit": "Junia-T, Miloh Smith, Sean Leon, Julian Thomas",
+      "title": "Know Better",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "7e4c53c5bb73e6485b1eeda9",
+      "artistCredit": "Junia-T, Miloh Smith, Sean Leon, Julian Thomas",
+      "title": "Know Better",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "49a8ab4c21d4606c284242bb",
+      "artistCredit": "Junia-T, Nate Husser",
+      "title": "Jelly (Remix)",
+      "album": "Jelly (Remix)"
+    },
+    {
+      "requestId": "1ba8818b22dce58d2403abf2",
+      "artistCredit": "Junia-T, Nate Husser, STORRY",
+      "title": "Try Me",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "e602c50212ddf99959d12322",
+      "artistCredit": "Junia-T, Nate Husser, STORRY",
+      "title": "Try Me",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "ee6bc23e7a168ca2428e480e",
+      "artistCredit": "Junia-T, River Tiber, Sean Leon",
+      "title": "Tommy's Intro",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "8848aff8d7597694917a2789",
+      "artistCredit": "Junia-T, River Tiber, Sean Leon",
+      "title": "Tommy's Intro",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "55e79133bcbc70b20054c636",
+      "artistCredit": "Junia-T, Sabre",
+      "title": "Finally",
+      "album": "Finally"
+    },
+    {
+      "requestId": "eb895e987320446e5a621812",
+      "artistCredit": "Junia-T, STORRY, Only1KNG",
+      "title": "WYAT?",
+      "album": "Studio Monk (Deluxe Edition)"
+    },
+    {
+      "requestId": "15e94ee5d39f7cf6c2ad7903",
+      "artistCredit": "Junia-T, taji love., Nana",
+      "title": "So Amazing (Remix)",
+      "album": "So Amazing (Remix)"
+    },
+    {
+      "requestId": "3da85ddd2931b4311d786c2e",
+      "artistCredit": "Justin Bieber/ Daniel Caesar/ Giveon",
+      "title": "Peaches",
+      "album": "Justice"
+    },
+    {
+      "requestId": "2f33e068e0b43ac97634c9e4",
+      "artistCredit": "Jxggi, AR Paisley, Sickboi",
+      "title": "Why Me?",
+      "album": "4 Real"
+    },
+    {
+      "requestId": "247f9e5a96e4d0e5ebdd3c94",
+      "artistCredit": "K'NAAN/ Nelly Furtado",
+      "title": "Is Anybody Out There?",
+      "album": "Is Anybody Out There?"
+    },
+    {
+      "requestId": "ad3d9ecf89270c9f1513f1fd",
+      "artistCredit": "K'NAAN/ Nelly Furtado",
+      "title": "Is Anybody Out There?",
+      "album": "Is Anybody Out There?"
+    },
+    {
+      "requestId": "718a9038e23ce3a575118b69",
+      "artistCredit": "k-os, Sam Roberts",
+      "title": "Don't Touch",
+      "album": "BLack On BLonde+"
+    },
+    {
+      "requestId": "4e377ea40bad2044be543841",
+      "artistCredit": "k-os, Saukrates, Shad",
+      "title": "Spraying My Pen",
+      "album": "BLack On BLonde+"
+    },
+    {
+      "requestId": "14660d1205284eb3ccff2db5",
+      "artistCredit": "k-os/Drake",
+      "title": "Faith Part 2",
+      "album": "MuchMusic Presents: k-os (Live)"
+    },
+    {
+      "requestId": "504c3832164d1b7f1d33e3e3",
+      "artistCredit": "Kaelin Ellis, TOBi, Anomalie",
+      "title": "Celebration",
+      "album": "Celebration"
+    },
+    {
+      "requestId": "265e14bd58c3199e37c8e93f",
+      "artistCredit": "Kai Banks, La Reezy, Mileena",
+      "title": "Too Deep For The Outro",
+      "album": "The Kaible"
+    },
+    {
+      "requestId": "6a027f973a4849f50a25b052",
+      "artistCredit": "Karaba, KMNI",
+      "title": "LMHYS",
+      "album": "LMHYS"
+    },
+    {
+      "requestId": "8e4f7dbcb7c387ba4b0ec456",
+      "artistCredit": "Kardinal Offishall ft. Saukrates, Jaden & Mali",
+      "title": "On Wid Da Show (Original) ft. Saukrates, Jaden & Mali",
+      "album": ""
+    },
+    {
+      "requestId": "0df7efaa6c84d09a679d72e3",
+      "artistCredit": "Kardinal Offishall, Black Thought, Stove God Cooks",
+      "title": "40 Acres And A Ferrari",
+      "album": "Firestarter Vol 2: Everyday, Sometimes…"
+    },
+    {
+      "requestId": "172de29e1418495a9684d63e",
+      "artistCredit": "Kardinal Offishall, Glenn Lewis",
+      "title": "Kiss Me When I",
+      "album": "Kiss Me When I"
+    },
+    {
+      "requestId": "f437777d504d9babde5fe38d",
+      "artistCredit": "Kardinal Offishall, Jully Black, IRS",
+      "title": "Ol' Time Killin'",
+      "album": "Quest For Fire: Firestarter Vol. 1"
+    },
+    {
+      "requestId": "18ac0f99efd5163d60c03254",
+      "artistCredit": "Kardinal Offishall, Ray Robinson",
+      "title": "Everyday (Rudebwoy)",
+      "album": "Fire & Glory"
+    },
+    {
+      "requestId": "688ebf869f6ae76aa241e2d0",
+      "artistCredit": "Kardinal Offishall, Tona, Scotty IV, Eternia, Tamir, Quake Matthews, Promise",
+      "title": "One For All (feat. Tona, Scotty IV, Eternia, Tamir, Quake Matthews & Promise) (Remix)",
+      "album": "One For All (feat. Tona, Scotty IV, Eternia, Tamir, Quake Matthews & Promise) [Remix]"
+    },
+    {
+      "requestId": "a6e439810db29e4f9629fc52",
+      "artistCredit": "Karl Wolf/ Kardinal Offishall",
+      "title": "Ghetto Love",
+      "album": "Best Of Karl Wolf"
+    },
+    {
+      "requestId": "9b2b72c3aae3da99663410ca",
+      "artistCredit": "Karl Wolf/Culture",
+      "title": "Africa",
+      "album": "Bite the Bullet"
+    },
+    {
+      "requestId": "a39dc404e260ac4e788c4c67",
+      "artistCredit": "KAYTRAMINÉ, Aminé, KAYTRANADA",
+      "title": "Rebuke",
+      "album": "KAYTRAMINÉ"
+    },
+    {
+      "requestId": "55725706cba576141d117e09",
+      "artistCredit": "KAYTRAMINÉ, Aminé, KAYTRANADA",
+      "title": "Who He Iz",
+      "album": "KAYTRAMINÉ"
+    },
+    {
+      "requestId": "c4f5ac8cf51b5b819ce89b71",
+      "artistCredit": "KAYTRAMINÉ, Aminé, KAYTRANADA, amaarae",
+      "title": "Sossaup",
+      "album": "KAYTRAMINÉ"
+    },
+    {
+      "requestId": "d59fe1a77eb617ca96a77ead",
+      "artistCredit": "KAYTRAMINÉ, Aminé, KAYTRANADA, Freddie Gibbs",
+      "title": "letstalkaboutit",
+      "album": "KAYTRAMINÉ"
+    },
+    {
+      "requestId": "dfba7d341abe376ca12cb226",
+      "artistCredit": "KAYTRAMINÉ, Aminé, KAYTRANADA, Snoop Dogg",
+      "title": "EYE",
+      "album": "KAYTRAMINÉ"
+    },
+    {
+      "requestId": "b738a0960872506a080b74c0",
+      "artistCredit": "KAYTRANADA, Badbadnotgood",
+      "title": "WEIGHT OFF",
+      "album": "99.9%"
+    },
+    {
+      "requestId": "67b10ef1bb2d56e88b023569",
+      "artistCredit": "KAYTRANADA, River Tiber",
+      "title": "VIVID DREAMS",
+      "album": "99.9%"
+    },
+    {
+      "requestId": "9270faee95a1d86ed6378278",
+      "artistCredit": "KAYTRANADA/ Charlotte Day Wilson",
+      "title": "What You Need (feat. Charlotte Day Wilson)",
+      "album": "BUBBA"
+    },
+    {
+      "requestId": "da81c2a00828c1a8b7b23911",
+      "artistCredit": "KAYTRANADA/ Eight9FLY/ GoldLink/ Ari PenSmith",
+      "title": "Vex Oh (feat. GoldLink & Ari PenSmith)",
+      "album": "BUBBA"
+    },
+    {
+      "requestId": "8ba4e808493b4d48ddc19b4d",
+      "artistCredit": "KAYTRANADA/ Rochelle Jordan",
+      "title": "Lover/Friend",
+      "album": "Lover/Friend"
+    },
+    {
+      "requestId": "3a37906e39d173ad302195aa",
+      "artistCredit": "KAYTRANADA/ Rochelle Jordan",
+      "title": "Spit It Out (feat. Rochelle Jordan)",
+      "album": "TIMELESS"
+    },
+    {
+      "requestId": "e0a15d4cde5122e96c6aec0d",
+      "artistCredit": "KAYTRANADA/ Shay Lia",
+      "title": "CHANCES",
+      "album": "NOTHIN LIKE U / CHANCES"
+    },
+    {
+      "requestId": "37b474b8a9c8ef304fc36a44",
+      "artistCredit": "Keys N Krates/Haviah Mighty",
+      "title": "Pull Up",
+      "album": "Pull Up"
+    },
+    {
+      "requestId": "7f503192053f9f361b0c2420",
+      "artistCredit": "Kiesza, Haviah Mighty, Sugar Jesus",
+      "title": "Heaven After Dark",
+      "album": "Heaven After Dark"
+    },
+    {
+      "requestId": "7e7662b2bd76fa8f17e8ece9",
+      "artistCredit": "King Reign, Leila Dey",
+      "title": "Pretty Girl Lost",
+      "album": "Sincere"
+    },
+    {
+      "requestId": "c516143a8dc74d4192d11b98",
+      "artistCredit": "King Reign, Shi Wisdom",
+      "title": "Already Over",
+      "album": "Sincere"
+    },
+    {
+      "requestId": "e3c5aeff0652f7abc73cc88f",
+      "artistCredit": "Knowuh ft. Clairmont The Second",
+      "title": "Rhythm & Flow",
+      "album": ""
+    },
+    {
+      "requestId": "22c20d333d46c11c2a7de304",
+      "artistCredit": "Koriass, St-Prince",
+      "title": "Détour",
+      "album": "Détour"
+    },
+    {
+      "requestId": "0a9031cfee16cc288c22dd23",
+      "artistCredit": "KOTO?, Soft Eyez, chai sully",
+      "title": "DerekFisher",
+      "album": "DerekFisher"
+    },
+    {
+      "requestId": "04826c5056a913b0aec87450",
+      "artistCredit": "Krys Kofi, Hen's",
+      "title": "You got",
+      "album": "You got"
+    },
+    {
+      "requestId": "d92e3e0452620915b3febedf",
+      "artistCredit": "Ksoulrsa, Dandy Trix, Rich Kidd",
+      "title": "CALL ME",
+      "album": "Pta Alternative Rnb"
+    },
+    {
+      "requestId": "5bb91c6bec383fc2b3763b3d",
+      "artistCredit": "Ksoulrsa, Dandy Trix, Rich Kidd",
+      "title": "L & A (Live)",
+      "album": "Pta Alternative Rnb"
+    },
+    {
+      "requestId": "1bf60cee96daeec38e2c83de",
+      "artistCredit": "Ksoulrsa, Nvrth, Dandy Trix, Rich Kidd",
+      "title": "Summer 21",
+      "album": "Summer 21"
+    },
+    {
+      "requestId": "e91b9aa920335ad15842b548",
+      "artistCredit": "KTOE/ Jazz Cartier",
+      "title": "Touring",
+      "album": "Touring"
+    },
+    {
+      "requestId": "89ab50d29c321b8157cbdac0",
+      "artistCredit": "Lightman Jarvis Ecstatic Band/Yves Jarvis/Romy Lightman",
+      "title": "Becoming",
+      "album": "Banned"
+    },
+    {
+      "requestId": "edaae5df9fbf58273a7bf117",
+      "artistCredit": "Lightman Jarvis Ecstatic Band/Yves Jarvis/Romy Lightman",
+      "title": "Bone of a Hound",
+      "album": "Banned"
+    },
+    {
+      "requestId": "abdc576a924905e05e45937e",
+      "artistCredit": "Lightman Jarvis Ecstatic Band/Yves Jarvis/Romy Lightman",
+      "title": "Elastic Band",
+      "album": "Banned"
+    },
+    {
+      "requestId": "ba1c5793285aef8c489a9bd0",
+      "artistCredit": "Lightman Jarvis Ecstatic Band/Yves Jarvis/Romy Lightman",
+      "title": "Nymphea",
+      "album": "Banned"
+    },
+    {
+      "requestId": "cc92b7c0a55444072f3dac8c",
+      "artistCredit": "Lil Supa/Raz Fresco/Drama Theme",
+      "title": "$ick!",
+      "album": "$ick!"
+    },
+    {
+      "requestId": "1137240075fbd8790b273e89",
+      "artistCredit": "Liza, TOBi",
+      "title": "Back For More",
+      "album": "The Alternate Ending"
+    },
+    {
+      "requestId": "50f9cdf2cb4f7c630f2c1368",
+      "artistCredit": "Liza/ TOBi",
+      "title": "Back For More",
+      "album": "Back For More"
+    },
+    {
+      "requestId": "f36e5554e09ddf8be19fdc87",
+      "artistCredit": "Lost, Manu Militari",
+      "title": "Chez moi",
+      "album": "Bonhomme Pendu 4 (Chapitre Perdu)"
+    },
+    {
+      "requestId": "4637159e5182b6059c75c91b",
+      "artistCredit": "LOST, White-B",
+      "title": "Sentencé",
+      "album": "Sentencé"
+    },
+    {
+      "requestId": "b45cccd118896fb17d2657e0",
+      "artistCredit": "Lou Phelps & Kaytranada",
+      "title": "Come Inside (Kaytranada Edit)",
+      "album": "002 / LOVE ME"
+    },
+    {
+      "requestId": "879fef6b0d4dbf51c11dae4f",
+      "artistCredit": "Lou Val, Loukeman",
+      "title": "Penthouse Dreams",
+      "album": "Pivot//"
+    },
+    {
+      "requestId": "f960dabeec671696aadf23c4",
+      "artistCredit": "Loud/Charlotte Cardin",
+      "title": "Sometimes, All the Time",
+      "album": "Tout ça pour ça"
+    },
+    {
+      "requestId": "a4c3979528596126e5ea38ad",
+      "artistCredit": "Luu Breeze featuring Cus, Mista Bourne, M-Deezy, Illy & Mayhem Morearty",
+      "title": "Bang Bang",
+      "album": "Topic Of Discussion (Clean)"
+    },
+    {
+      "requestId": "b4c73e49b3913c6763f12cfa",
+      "artistCredit": "Lxvndr, Uncle Fester, Aquakultre",
+      "title": "Home Improvement (feat. Aquakultre)",
+      "album": "Splash"
+    },
+    {
+      "requestId": "5cb080e0547ee0dc12576aae",
+      "artistCredit": "Madchild, Bishop Lamont, JD ERA",
+      "title": "Kill Kill Kill",
+      "album": "Lawn Mower Man"
+    },
+    {
+      "requestId": "8f2098c69e81b60912e22271",
+      "artistCredit": "Madchild, JD ERA",
+      "title": "Lose My Mind",
+      "album": "Silver Tongue Devil"
+    },
+    {
+      "requestId": "5494b47c0c65ef0bdb003195",
+      "artistCredit": "Madchild, JD ERA, Rich Kidd",
+      "title": "Hurt That Man",
+      "album": "Hurt That Man"
+    },
+    {
+      "requestId": "9bd552c5278287caa1fc955f",
+      "artistCredit": "Madchild, JD ERA, Rich Kidd",
+      "title": "Hurt That Man",
+      "album": "Hurt That Man"
+    },
+    {
+      "requestId": "6094cd402ceb1e4797dfe486",
+      "artistCredit": "Maestro, Black-I, Choclair, In Essence",
+      "title": "Quintessential",
+      "album": "Built to Last"
+    },
+    {
+      "requestId": "990ef23edeb390f793957f62",
+      "artistCredit": "Maestro, Ghetto Concept, Infinite",
+      "title": "Toronto Icons",
+      "album": "Coach Fresh"
+    },
+    {
+      "requestId": "3f894f73ea77f6bc54886192",
+      "artistCredit": "Maestro, Latoya, Miranda",
+      "title": "416/905 (T.O. Party Anthem)",
+      "album": "Built to Last"
+    },
+    {
+      "requestId": "6b49c2b2aa74e48da6dfc718",
+      "artistCredit": "Maestro, Michie Mee",
+      "title": "Foundation (Intro)",
+      "album": "Built to Last"
+    },
+    {
+      "requestId": "8b5d019606c856eebe428e8f",
+      "artistCredit": "Maestro, Rich Kidd",
+      "title": "Born In Toronto",
+      "album": "Compositions Volume 1"
+    },
+    {
+      "requestId": "9bfa6764df4d1847334116ae",
+      "artistCredit": "Maestro, Rich Kidd",
+      "title": "Gladiator",
+      "album": "Orchestrated Noise"
+    },
+    {
+      "requestId": "90db67690abb5756f73555f8",
+      "artistCredit": "Maestro, Rich Kidd",
+      "title": "Jurassic Park",
+      "album": "Jurassic Park"
+    },
+    {
+      "requestId": "ffa6b522c752d93dbcf72fde",
+      "artistCredit": "Maestro, Rich Kidd",
+      "title": "Put Ya Guard Up",
+      "album": "Coach Fresh"
+    },
+    {
+      "requestId": "150b8ace6a08fb7f08b554aa",
+      "artistCredit": "Maestro, Rich Kidd, Sadat X",
+      "title": "Champagne Campaign",
+      "album": "Champagne Campaign"
+    },
+    {
+      "requestId": "dc148ad42b0865c4a31105c0",
+      "artistCredit": "Maestro, Snow",
+      "title": "Still in da Game",
+      "album": "Built to Last"
+    },
+    {
+      "requestId": "bf67004f9e95a8e2722f6026",
+      "artistCredit": "Maestro, Stone Pöet",
+      "title": "Clap Ya Handz, Turn It Out, Pt. 2",
+      "album": "Built to Last"
+    },
+    {
+      "requestId": "306fa718dbe95a0a02eccc9c",
+      "artistCredit": "Maestro/ JD ERA/ JRDN",
+      "title": "Underestimated",
+      "album": "Compositions Volume 1"
+    },
+    {
+      "requestId": "759d1e792c90850743cea0c3",
+      "artistCredit": "Majid Jordan, Drake",
+      "title": "Stars Align (feat. Drake)",
+      "album": "Hip Hop 20s"
+    },
+    {
+      "requestId": "2660cc73df65e5dcc1f994f5",
+      "artistCredit": "Marco Ema, Orlanda",
+      "title": "Comme un refrain",
+      "album": "Soleil mâché"
+    },
+    {
+      "requestId": "ce916de8916e2baf80c68d85",
+      "artistCredit": "Marco Ema, Orlanda",
+      "title": "Comme un refrain",
+      "album": "Soleil mâché"
+    },
+    {
+      "requestId": "56a82face2d9ad645045234f",
+      "artistCredit": "Marco Ema, Orlanda",
+      "title": "Comme un refrain",
+      "album": "Soleil mâché"
+    },
+    {
+      "requestId": "109c0e973ff5ab8347c17309",
+      "artistCredit": "Marianas Trench/Anami Vice",
+      "title": "POP 101",
+      "album": "POP 101"
+    },
+    {
+      "requestId": "75e61a4f8e3ec7d58236ed63",
+      "artistCredit": "MARIE-JOSEE LORD, Martine St-Clair, Judith Bérard, Luce Dufault, Patsy Gallant, Jean-pierre Ferland, Luck Mervil, Sylvain Cossette, Maxime Landry, Bruno Pelletier, Mapouginen, Nicola Ciccone, Marie-Ève Janvier, Jean François Breau, Brigitte M, Stéphanie L",
+      "title": "Stand By Me/Lean On Me",
+      "album": "Ensemble pour Haïti"
+    },
+    {
+      "requestId": "f19d4c3d72bb3a315738b225",
+      "artistCredit": "Martin Solveig & Dragonette/Dragonette/アイドリング!!!",
+      "title": "Big In Japan",
+      "album": "Big In Japan"
+    },
+    {
+      "requestId": "e699b295f720d9fed24aadf5",
+      "artistCredit": "Mary & Adelaide",
+      "title": "Hoodie zipper",
+      "album": "Celebrate Another Day of Living"
+    },
+    {
+      "requestId": "46e31e816ead2126f1df9612",
+      "artistCredit": "Mary & Adelaide",
+      "title": "You pulled up",
+      "album": "Celebrate Another Day of Living"
+    },
+    {
+      "requestId": "77a448b4bf9e421e9f4c0270",
+      "artistCredit": "Massari/ Belly",
+      "title": "Rush The Floor",
+      "album": "Massari"
+    },
+    {
+      "requestId": "7d1339d15469d4a2e161e706",
+      "artistCredit": "Massari/ Belly",
+      "title": "Rush The Floor",
+      "album": "Massari"
+    },
+    {
+      "requestId": "309584bc16e06597bb797750",
+      "artistCredit": "Mastermind, Arcee",
+      "title": "Arcee Interlude (feat. Arcee)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "aa3e31e9625ac1e12447a406",
+      "artistCredit": "Mastermind, CheckMate, concise",
+      "title": "Street Legal Outro (feat. Checkmate & Concise)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "007b913827024d4cc34231d2",
+      "artistCredit": "Mastermind, Choclair, Mr. Roam",
+      "title": "Bump! (feat. Choclair & Mr. Roam)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "3c95a42d19a34beaaf139fd4",
+      "artistCredit": "Mastermind, Choclair, Mr. Roam",
+      "title": "Bump! (feat. Choclair & Mr. Roam) (Radio Edit)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "18762e590100f4e93d244903",
+      "artistCredit": "Mastermind, Citizen Kane",
+      "title": "Let's Make A Record Deal Episode 3 (feat. Citizen Kane)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "9b224de01b1e45a8cb55951a",
+      "artistCredit": "Mastermind, D-Sisive",
+      "title": "Let's Make A Record Deal Episode 1 (feat. D-Sisive)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "957ef6f1b4a2c443dab8a861",
+      "artistCredit": "Mastermind, Kardinal Offishall, Rah Digga",
+      "title": "Lights Out (feat. Kardinal Offishall & Rah Digga)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "fcd73ace1be52e3a63eaa75c",
+      "artistCredit": "Mastermind, Kardinal Offishall, Rah Digga",
+      "title": "Lights Out (feat. Kardinal Offishall & Rah Digga) (Radio Edit)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "0d5c049380c84d6afbea38f9",
+      "artistCredit": "Mastermind, Marvel",
+      "title": "Marvel Interlude (feat. Marvel)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "cb490cdc46ede3e23a974494",
+      "artistCredit": "Mastermind, Monolith, Dan-e-o, Korey Deez, Grimace Love, Black Cat, Karisma",
+      "title": "Let's Make A Record Deal Episode 2 (feat. Monolith, Dan-E-O, Korey Deez, Grimace Love, Black Cat & Karisma)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "322415d5b6270b288f18432f",
+      "artistCredit": "Mastermind, Nefarius, Phife Dawg",
+      "title": "Hold Ya Karna (feat. Nefarius & Phife Dawg)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "77304d2454c95fad6d711384",
+      "artistCredit": "Mastermind, Nefarius, Phife Dawg",
+      "title": "Hold Ya Karna (feat. Nefarius & Phife Dawg) (Radio Edit)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "d1dd13269dc9682638770f5b",
+      "artistCredit": "Mastermind, Russell Peters, Citizen Kane",
+      "title": "Let's Make A Record Deal Episode 3 (Interlude) (feat. Russell Peters & Citizen Kane)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "1ac11eb3d7cef3b28fb1ae34",
+      "artistCredit": "Mastermind, Russell Peters, D-Sisive",
+      "title": "Let's Make A Record Deal Episode 1 (Interlude) (feat. Russell Peters & D-Sisive)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "114caf12ed2243f84a3d2346",
+      "artistCredit": "Mastermind, Russell Peters, Monolith (Dan-E-O/Korey Deez/Grimace Love/Black Cat/Karisma)",
+      "title": "Let's Make A Record Deal Episode 2 (Interlude) (feat. Russell Peters & Monolith (Dan-E-O/Korey Deez/Grimace Love/Black Cat/Karisma",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "38f19ed0179b12dbcc989d4d",
+      "artistCredit": "Mastermind, Saukrates, Brassmunk",
+      "title": "It Ain't Nuttin' (feat. Saukrates & Brassmunk)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "f60173ddee1cd02489ed788a",
+      "artistCredit": "Mastermind, Saukrates, Brassmunk",
+      "title": "It Ain't Nuttin' (feat. Saukrates & Brassmunk) (Radio Edit)",
+      "album": "Mastermind Presents Volume 50: Street Legal"
+    },
+    {
+      "requestId": "64e75d2e72004c53ff219e77",
+      "artistCredit": "Mathematik, Saukrates",
+      "title": "Last of an Ancient Breed",
+      "album": "ReAL/iS-HiM"
+    },
+    {
+      "requestId": "a6ea9202c7251fd855a70e53",
+      "artistCredit": "Mathematik/ Sic Sense/ Spade",
+      "title": "Space and Time",
+      "album": "Ecology"
+    },
+    {
+      "requestId": "b44b34b3d895d0da6f6d6161",
+      "artistCredit": "Matt Epp, Serena Ryder",
+      "title": "When You Know",
+      "album": "When You Know"
+    },
+    {
+      "requestId": "bf5d3bf1c02cc0ff9800deee",
+      "artistCredit": "Matt Mays, Buck 65",
+      "title": "When the Angels Make Contact",
+      "album": "When the Angels Make Contact"
+    },
+    {
+      "requestId": "d8126f681dffa08c31c17a84",
+      "artistCredit": "Mattmac, QuestionATL",
+      "title": "I Remember When",
+      "album": "I Remember When"
+    },
+    {
+      "requestId": "e9d3f1aa1107346eddaafdf4",
+      "artistCredit": "Mattmac, QuestionATL, DaMasta",
+      "title": "Faded",
+      "album": "Smoke Signals"
+    },
+    {
+      "requestId": "8016e55b36547f4a6c69882c",
+      "artistCredit": "Mayhem Morearty, JRDN",
+      "title": "Thug U",
+      "album": "Thug U Single"
+    },
+    {
+      "requestId": "02b2c5df1fcea63f1183f961",
+      "artistCredit": "McMaster & James",
+      "title": "Thank You",
+      "album": "McMaster & James"
+    },
+    {
+      "requestId": "f5b6002188095d38c98a34c2",
+      "artistCredit": "McMaster & James",
+      "title": "Thank You",
+      "album": "McMaster & James"
+    },
+    {
+      "requestId": "7f5f3024c1cfd6087ec61af8",
+      "artistCredit": "Memblem, NIA NADURATA",
+      "title": "Out Like This",
+      "album": "Out Like This"
+    },
+    {
+      "requestId": "4a84e9be443b14533ffbe8cb",
+      "artistCredit": "Mia Martina",
+      "title": "Turn it up (feat. Belly & Danny Fernandes)",
+      "album": "Devotion"
+    },
+    {
+      "requestId": "f8aae9f2ad1c0783ac905fd6",
+      "artistCredit": "Michael Bublé/ Nelly Furtado",
+      "title": "Quando, Quando, Quando (with Nelly Furtado)",
+      "album": "It's Time"
+    },
+    {
+      "requestId": "a3e68de937b24978a2611a08",
+      "artistCredit": "Michael J Foxx, One8tea",
+      "title": "ELEVATE",
+      "album": "By Any Equation"
+    },
+    {
+      "requestId": "0daea4a082a38d1160d4311b",
+      "artistCredit": "Michie Mee & LA Luv",
+      "title": "Jamaican Funk",
+      "album": ""
+    },
+    {
+      "requestId": "e6564de17654b3effef44eaa",
+      "artistCredit": "Milk & Bone, Chromeo",
+      "title": "Bloodshot",
+      "album": "Bloodshot"
+    },
+    {
+      "requestId": "c9304f751719d55d93a62089",
+      "artistCredit": "Milk & Bone, Chromeo",
+      "title": "Blossom Tree",
+      "album": "A Little Lucky"
+    },
+    {
+      "requestId": "b66d231ca3ad0bf91a7d1abb",
+      "artistCredit": "Milk & Bone, Chromeo",
+      "title": "Halfmoon",
+      "album": "A Little Lucky"
+    },
+    {
+      "requestId": "6fe5065e067753a00ef99482",
+      "artistCredit": "Milk & Bone, Chromeo",
+      "title": "Hoops",
+      "album": "Hoops"
+    },
+    {
+      "requestId": "5dbe0aac5135fafcf7820ef3",
+      "artistCredit": "Molemen/ Buck 65/ Aesop Rock/ Sage Francis/ MF Doom/ Rhymefest/ Qwel/ Rasco/ E.C. Illa/ Louis Logic/ Percee P/ Molemen/ Vakill/ Rubberoom/ C Rayz Walz/ Grand Daddy Iu/ Sebutones/ Slug from Atmosphere/ Mr Metaphor/ Dj Precyce/ Juice/ Mass Hysteria",
+      "title": "Dime Ahora Mismo",
+      "album": "Ritual Of The...Revisited & Remastered"
+    },
+    {
+      "requestId": "d595c9ebbad20f4e9b62e2e5",
+      "artistCredit": "Molemen/Buck 65/Aesop Rock/Sage Francis/MF Doom/Rhymefest/Qwel/Rasco/E.C. Illa/Louis Logic/Percee P/Vakill/Rubberoom/C Rayz Walz/Grand Daddy Iu/Sebutones/Slug from Atmosphere/Mr Metaphor/Dj Precyce/Juice/Mass Hysteria",
+      "title": "NHB",
+      "album": "Ritual Of The...Revisited & Remastered"
+    },
+    {
+      "requestId": "384268aa412b11f3a6186db7",
+      "artistCredit": "Molemen/Buck 65/Aesop Rock/Sage Francis/MF Doom/Rhymefest/Qwel/Rasco/E.C. Illa/Louis Logic/Percee P/Vakill/Rubberoom/C Rayz Walz/Grand Daddy Iu/Sebutones/Slug from Atmosphere/Mr Metaphor/Dj Precyce/Juice/Mass Hysteria",
+      "title": "Triste",
+      "album": "Ritual Of The...Revisited & Remastered"
+    },
+    {
+      "requestId": "82c622e1c9b601cda726b2ba",
+      "artistCredit": "Monolith, Grimace Love",
+      "title": "Bloody Murder (96)",
+      "album": "The Long Awaited (10 Year Anniversary Limited Edition Advanced Copy)"
+    },
+    {
+      "requestId": "6e7bed79b86b409d1573d304",
+      "artistCredit": "Mr. Green/ Rich Kidd/ The Mission/ DÉVAH QUARTET/ Khari Wendell McLelland",
+      "title": "Toronto",
+      "album": "Live From The Streets"
+    },
+    {
+      "requestId": "63f6b1e6a0ca13cedef9b628",
+      "artistCredit": "Muzion, Les Colocs",
+      "title": "La vie Ti-Neg",
+      "album": "Ensemble pour Haïti"
+    },
+    {
+      "requestId": "8cc07e9969f8bfae3600ea8f",
+      "artistCredit": "Muzion, Les Colocs",
+      "title": "La vie Ti-Neg",
+      "album": "Ensemble pour Haïti"
+    },
+    {
+      "requestId": "7dbba6fe41daabe90c7eb6d2",
+      "artistCredit": "Muzion/ Face-T",
+      "title": "J'rêvolutionne (feat. Face-T)",
+      "album": "J'Rêvolutionne"
+    },
+    {
+      "requestId": "36f8f978d9549d20ca50652c",
+      "artistCredit": "Muzion/ La Dynastie des Morniers",
+      "title": "La Classe DispaRUE (Hell) (feat. La Dynastie des Morniers)",
+      "album": "J'Rêvolutionne"
+    },
+    {
+      "requestId": "86072c19d8aa049ad5f4360b",
+      "artistCredit": "Mystic Revealers/Chronixx/Kabaka Pyramid/DJ Sojah/Diana Rutherford/Jah9/Fred Locks/Triga Finga/Suzanne Couch/Bobby Hustle/Jesse Royal/Kelissa/Cidade Verde/SNoW",
+      "title": "Herb Must Legalize Now (feat. Chronixx, Kabaka Pyramid, DJ Sojah, Diana Rutherford, Jah9, Fred Locks, Triga Finga, Suzanne Couch, (420 High-Grade Remix)",
+      "album": "Herb Must Legalize Now (feat. Chronixx, Kabaka Pyramid, DJ Sojah, Diana Rutherford, Jah9, Fred Locks, Triga Finga, Suzanne Couch,  (420 High-Grade Remix)"
+    },
+    {
+      "requestId": "f1519b0f1e1de87635f30ece",
+      "artistCredit": "Naomi, SLM",
+      "title": "Hershey Kiss",
+      "album": "Hershey Kiss"
+    },
+    {
+      "requestId": "d4a2cd2969b8923438add89e",
+      "artistCredit": "Narcy/Junia-T",
+      "title": "Groundhog Day (feat. Junia-T)",
+      "album": "SPACETIME ULTRA REDUX"
+    },
+    {
+      "requestId": "ae5f85f28ee1c53ba3687a17",
+      "artistCredit": "NAV/ Metro Boomin/ Belly",
+      "title": "You Know",
+      "album": "Perfect Timing"
+    },
+    {
+      "requestId": "6fe7a3f400b2c4e06663464a",
+      "artistCredit": "NAV/88GLAM",
+      "title": "Rack In My Sleep",
+      "album": "Bad Habits (Deluxe)"
+    },
+    {
+      "requestId": "44c95a6a032eb674a2f38552",
+      "artistCredit": "Nawfal, Kheir",
+      "title": "archive 2001",
+      "album": "archive 2001"
+    },
+    {
+      "requestId": "b76138d38f8a0fc72583f0cc",
+      "artistCredit": "Nelly Furtado, Charlotte Day Wilson",
+      "title": "All Comes Back",
+      "album": "7"
+    },
+    {
+      "requestId": "7073f7a4ebaa942a9b0f5107",
+      "artistCredit": "Neon Dreams/Kardinal Offishall",
+      "title": "Marching Bands",
+      "album": "Marching Bands"
+    },
+    {
+      "requestId": "f0b3b91883c25c87cf39bba5",
+      "artistCredit": "Nicholas Craven/ Raz Fresco/ Estee Nack",
+      "title": "Roll up the Rim",
+      "album": "Gia... À La Carte"
+    },
+    {
+      "requestId": "02885c03e38b4d658a250013",
+      "artistCredit": "Nicole Holness & Nicole Holness Aka X-quisite",
+      "title": "Pop Yo Bottles",
+      "album": "Unreleased"
+    },
+    {
+      "requestId": "1a574310e689f56816bd6309",
+      "artistCredit": "Nicole Holness Aka X-quisite & Nicole Holness",
+      "title": "Epic",
+      "album": "Unreleased"
+    },
+    {
+      "requestId": "10ba9694a4894425031fa999",
+      "artistCredit": "Nikki & Rich",
+      "title": "Dreaming",
+      "album": "Dreaming"
+    },
+    {
+      "requestId": "8f9bcc2509f6da28f08dfbd1",
+      "artistCredit": "NojokeJigsaw, AR Paisley",
+      "title": "Yosemite Sam",
+      "album": "Late Nights Early Mornings, Vol. 1"
+    },
+    {
+      "requestId": "e32f57b2caee8a2eaaa2006e",
+      "artistCredit": "Northside Archives, Young Smugglaz, Young Don Million",
+      "title": "Sam Taylor (feat. Young Smugglaz & Young Don Million)",
+      "album": "Jane & Finch Most Wanted, Vol. 1"
+    },
+    {
+      "requestId": "c7e3968a6f0c627400feb02c",
+      "artistCredit": "NorthSideBaby, Drezus",
+      "title": "LOWLOW (feat. Drezus)",
+      "album": "LOWLOW (feat. Drezus)"
+    },
+    {
+      "requestId": "dec1acf88da450f4ab3a5c40",
+      "artistCredit": "NorthSideBaby, Jr. Rhodes",
+      "title": "Not For Insta (feat. Jr. Rhodes)",
+      "album": "Not For Insta (feat. Jr. Rhodes)"
+    },
+    {
+      "requestId": "cc66b1ee6531611230fe4ac4",
+      "artistCredit": "NorthSideBaby, Jr. Rhodes, Sekawnee",
+      "title": "Run It Back (feat. Jr. Rhodes & SEKAWNEE)",
+      "album": "Run It Back (feat. Jr. Rhodes & SEKAWNEE)"
+    },
+    {
+      "requestId": "a43d1a44bd8bc33a0c7b1be1",
+      "artistCredit": "NXSTY, Indica",
+      "title": "NEED YOU HERE",
+      "album": "NEED YOU HERE"
+    },
+    {
+      "requestId": "e7c47214b2a4af3d47480a8e",
+      "artistCredit": "NXSTY, Seb C, Kid Sharif",
+      "title": "Guala",
+      "album": "Guala"
+    },
+    {
+      "requestId": "2fd056dc65433d5a2160d763",
+      "artistCredit": "OB OBrien/Drake/P. Reign",
+      "title": "Schemin Up (feat. Drake and P. Reign)",
+      "album": "Schemin Up (feat. Drake and P. Reign)"
+    },
+    {
+      "requestId": "97a17dc1997b4d1e18854511",
+      "artistCredit": "OB, Seth Dyer",
+      "title": "When You Do That (feat. Seth Dyer)",
+      "album": "OB Season 3"
+    },
+    {
+      "requestId": "86f470592ee52ed1b11b3fb0",
+      "artistCredit": "OLIVER, Chromeo",
+      "title": "Go With It",
+      "album": "Full Circle"
+    },
+    {
+      "requestId": "ca600fd84e31d77c13b9439d",
+      "artistCredit": "Omega Mighty, EverythingOShauN",
+      "title": "AYO (Color Your Love) (feat. EverythingOShauN)",
+      "album": "Me & Youforia"
+    },
+    {
+      "requestId": "296cdef4e05ccf2b6daf1eb0",
+      "artistCredit": "Omega Mighty/ Haviah Mighty/ 4Korners",
+      "title": "Rush Dem (feat. Haviah Mighty & 4Korners)",
+      "album": "Rush Dem (feat. Haviah Mighty & 4Korners)"
+    },
+    {
+      "requestId": "015b760f2a74a8846caac298",
+      "artistCredit": "Orville Peck/ Kylie Minogue/ Diplo",
+      "title": "Midnight Ride",
+      "album": "Stampede"
+    },
+    {
+      "requestId": "fd2b9d3e9c8f74ba16c83bf7",
+      "artistCredit": "Papi AQ, EverythingOShauN, Fresco Rhodes",
+      "title": "BODMON",
+      "album": "BODMON"
+    },
+    {
+      "requestId": "fb8a51892e28bee0565ccd2c",
+      "artistCredit": "Paris Richards, Dub J, JD ERA",
+      "title": "Don't Touch Me (feat. JD Era)",
+      "album": "Queen of the 6ix"
+    },
+    {
+      "requestId": "dbfdf20a1a92be5889cbe45e",
+      "artistCredit": "PARTYNEXTDOOR, Drake",
+      "title": "CELIBACY",
+      "album": "$ome $exy $ongs 4 U"
+    },
+    {
+      "requestId": "89d497ba8640685caed2b729",
+      "artistCredit": "PARTYNEXTDOOR, Drake",
+      "title": "LASERS",
+      "album": "$ome $exy $ongs 4 U"
+    },
+    {
+      "requestId": "bff3df2558eef6bb4b4733ad",
+      "artistCredit": "PARTYNEXTDOOR, Drake",
+      "title": "SOMEBODY LOVES ME",
+      "album": "$ome $exy $ongs 4 U"
+    },
+    {
+      "requestId": "a99e4386f2662272b5e5b83e",
+      "artistCredit": "PARTYNEXTDOOR, Drake",
+      "title": "SOMETHING ABOUT YOU",
+      "album": "$ome $exy $ongs 4 U"
+    },
+    {
+      "requestId": "09de1524e49ecc0348b2d3cb",
+      "artistCredit": "PARTYNEXTDOOR, Drake, Cash Cobain",
+      "title": "SOMEBODY LOVES ME PT. 2",
+      "album": "SOMEBODY LOVES ME PT. 2"
+    },
+    {
+      "requestId": "fa1a788f64476c929e7e88e3",
+      "artistCredit": "PARTYNEXTDOOR, Drake, Yebba",
+      "title": "DIE TRYING",
+      "album": "$ome $exy $ongs 4 U"
+    },
+    {
+      "requestId": "0a78bbff7c08c14fc2883ca3",
+      "artistCredit": "PARTYNEXTDOOR/ Drake",
+      "title": "Come and See Me (feat. Drake)",
+      "album": "Come and See Me (feat. Drake)"
+    },
+    {
+      "requestId": "9144a80f73d6c83ea5570214",
+      "artistCredit": "PARTYNEXTDOOR/ Drake",
+      "title": "Come and See Me (feat. Drake)",
+      "album": "Come and See Me (feat. Drake)"
+    },
+    {
+      "requestId": "90e44b53676f3eb7671a8834",
+      "artistCredit": "PARTYNEXTDOOR/ Drake",
+      "title": "LOYAL (feat. Drake)",
+      "album": "LOYAL (feat. Drake)"
+    },
+    {
+      "requestId": "e2c7324ae41995ed376b1fe9",
+      "artistCredit": "PARTYNEXTDOOR/ Drake",
+      "title": "Over Here (feat. Drake)",
+      "album": "PARTYNEXTDOOR"
+    },
+    {
+      "requestId": "80a671a962aeda36e7781555",
+      "artistCredit": "PARTYNEXTDOOR/ Drake",
+      "title": "Recognize (feat. Drake)",
+      "album": "PARTYNEXTDOOR TWO"
+    },
+    {
+      "requestId": "41e7ee103531debf04718283",
+      "artistCredit": "Passion Mango, EKKSTACY",
+      "title": "Bloody Eyes",
+      "album": "Bloody Eyes"
+    },
+    {
+      "requestId": "acd521a57981279d33e5f0fe",
+      "artistCredit": "Patrick Watson, Charlotte Cardin",
+      "title": "Gordon in the Willows",
+      "album": "Gordon in the Willows"
+    },
+    {
+      "requestId": "50d2ae7534f47a057042c826",
+      "artistCredit": "Peaches, Idles, Joe Talbot",
+      "title": "You're Alright (Pixel Grip Remix)",
+      "album": "You're Alright (Pixel Grip Remix)"
+    },
+    {
+      "requestId": "5971741cb39171ae85e5cfd6",
+      "artistCredit": "Phoenix Pagliacci, Khadijah Lopez",
+      "title": "Over, Again",
+      "album": "R&B Diaries"
+    },
+    {
+      "requestId": "083265ba726e96eac38354ca",
+      "artistCredit": "Pimpton, JD ERA, Madchild",
+      "title": "The Roaches Vs The Chosen",
+      "album": "KCMKV2"
+    },
+    {
+      "requestId": "9f134e139de0402e231a8650",
+      "artistCredit": "PinkPantheress, Loukeman, Leod",
+      "title": "Nice to Know You + Loukeman + Leod",
+      "album": "Fancy Some More?"
+    },
+    {
+      "requestId": "699644e2474492967de448f0",
+      "artistCredit": "Pino, AveNoir, Maz B, 86",
+      "title": "Can't Leave Alone (feat. Avenoir & Maz B)",
+      "album": "'02"
+    },
+    {
+      "requestId": "1961715463d19b53ac5f0663",
+      "artistCredit": "Popcaan/ Drake/ PARTYNEXTDOOR",
+      "title": "TWIST & TURN (feat. Drake & PARTYNEXTDOOR)",
+      "album": "TWIST & TURN (feat. Drake & PARTYNEXTDOOR)"
+    },
+    {
+      "requestId": "30987db278c2ac929d3e5cf6",
+      "artistCredit": "Punkrockerz/ Carmen/ Camille",
+      "title": "Shine 4U 2.0 : Shine 4U 2.0",
+      "album": "Shine 4U 2.0"
+    },
+    {
+      "requestId": "a2aff5ba77fa9f381ef5a7ec",
+      "artistCredit": "Qualité Motel, Muzion",
+      "title": "On n'oublie pas",
+      "album": "On n'oublie pas"
+    },
+    {
+      "requestId": "8f6b4778ec2391523053d21d",
+      "artistCredit": "Raccoon, ANJXLXE",
+      "title": "Rêve un peu",
+      "album": "Rêve un peu"
+    },
+    {
+      "requestId": "26030f8f30b3e4dd70942fe4",
+      "artistCredit": "RASCALZ  feat SHAWN DESMAN",
+      "title": "Movie Star pt 2",
+      "album": ""
+    },
+    {
+      "requestId": "7eba2e4c13cb913d485b66ca",
+      "artistCredit": "Rascalz/Barrington Levy/k-os",
+      "title": "Top Of The World (feat. Barrington Levy & k-os)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "66b366ebf4afd1a9ea8ccf7b",
+      "artistCredit": "Rascalz/Barrington Levy/k-os",
+      "title": "Top Of The World (feat. Barrington Levy & k-os)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "573557c80c2869bf1436f064",
+      "artistCredit": "Rascalz/Choclair",
+      "title": "As It Is (feat. Choclair)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "491e50d2c8d142d7f12d37c6",
+      "artistCredit": "Rascalz/k-os",
+      "title": "Fallen (feat. k-os)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "083f8cde0ef51a525feaa8e9",
+      "artistCredit": "Rascalz/k-os",
+      "title": "Fallen (feat. k-os)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "e07d082e1fa43fb7a7582e0f",
+      "artistCredit": "Rascalz/Kardinal Offishall",
+      "title": "Gunnfinga (feat. Kardinal Offishall)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "b3a267a1becb86c4d50a2fc0",
+      "artistCredit": "Rascalz/Kardinal Offishall/Thrust/Choclair/Checkmate",
+      "title": "Northern Touch",
+      "album": "Cash Crop + Bonus Track"
+    },
+    {
+      "requestId": "aabc29616d6c9f3330abb155",
+      "artistCredit": "Rascalz/Kardinal Offishall/Thrust/Choclair/Checkmate",
+      "title": "Northern Touch",
+      "album": "Cash Crop + Bonus Track"
+    },
+    {
+      "requestId": "a863d52d18fc5b0a2d8fa125",
+      "artistCredit": "Rascalz/Kardinal Offishall/Thrust/Choclair/Checkmate",
+      "title": "Northern Touch",
+      "album": "Cash Crop + Bonus Track"
+    },
+    {
+      "requestId": "a88684d145ecd80efc22e9c9",
+      "artistCredit": "Rascalz/Muzion",
+      "title": "Témoin (feat. Muzion)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "83da0d4faa3b82812b4e474a",
+      "artistCredit": "Rascalz/Muzion",
+      "title": "Témoin (feat. Muzion)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "c68f2e5462b73407b5b47639",
+      "artistCredit": "Rascalz/Sazon Diamante/concise",
+      "title": "Bordaline (feat. Concise)",
+      "album": "Global Warning"
+    },
+    {
+      "requestId": "0d302f2876f4202136327352",
+      "artistCredit": "Rascalz/Sazon Diamante/Notch",
+      "title": "Crazy World (feat. Notch) (Radio version)",
+      "album": "Reloaded"
+    },
+    {
+      "requestId": "1be74fb40c343aa9b65ac97b",
+      "artistCredit": "Raz Fresco, Elsandro",
+      "title": "COPERNICUS!",
+      "album": "SOLRAP!"
+    },
+    {
+      "requestId": "246da1bdefb0bcf81cd91e44",
+      "artistCredit": "Raz Fresco, Elsandro",
+      "title": "Thing Is",
+      "album": "ALKMY"
+    },
+    {
+      "requestId": "47785d76383ecfef564d4324",
+      "artistCredit": "Raz Fresco, Eric Right",
+      "title": "im SORRY MOMMA",
+      "album": "ARM LEG LEG ARM HEAD lp"
+    },
+    {
+      "requestId": "8e1c942d315fd1dc7153a90c",
+      "artistCredit": "Raz Fresco, Futurewave",
+      "title": "Mind Light",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "67a3a4ae4f159d9501d022db",
+      "artistCredit": "Raz Fresco, Futurewave",
+      "title": "Ok Let's Go",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "9dff36eaa4b3f5f5a1879c8e",
+      "artistCredit": "Raz Fresco, Futurewave",
+      "title": "Olympic Flame",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "973508494c216d9f55b268ad",
+      "artistCredit": "Raz Fresco, Futurewave",
+      "title": "Tesla Tower Power",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "0394d745c15953fbeb0a00e4",
+      "artistCredit": "Raz Fresco, Futurewave, Daniel Son",
+      "title": "Steve Austin",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "b5354a5ffe4eb055c633a807",
+      "artistCredit": "Raz Fresco, Futurewave, Estee Nack, Al.Divino",
+      "title": "Alpaca",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "9464111e8b811f17083f80e6",
+      "artistCredit": "Raz Fresco, Futurewave, SonnyJim, Gritfall",
+      "title": "Earth Spin",
+      "album": "Stadium Lo Champions"
+    },
+    {
+      "requestId": "99b972c09cfa98bc7423061e",
+      "artistCredit": "Raz Fresco, Pete Rock, The 6th Letter, BriskInTheHouse",
+      "title": "Signs Of The Times",
+      "album": "Signs Of The Times"
+    },
+    {
+      "requestId": "21fd4e71ccd67aa8d66cdeaa",
+      "artistCredit": "Raz Fresco, The 6th Letter, Jimmie D",
+      "title": "Bad Reflection",
+      "album": "Boulangerie"
+    },
+    {
+      "requestId": "f64430f87d85274defbaa327",
+      "artistCredit": "Raz Fresco/ Daniel Son",
+      "title": "W C H M F",
+      "album": "Northside"
+    },
+    {
+      "requestId": "54112ef5af268f488c865ea2",
+      "artistCredit": "Raz Fresco/Figub Brazlevic/Gawd 5",
+      "title": "Do You Love You Or Do You Love Money",
+      "album": "777"
+    },
+    {
+      "requestId": "e9d7b98da6845b1522ca58df",
+      "artistCredit": "Raz Fresco/Figub Brazlevic/The 6th Letter",
+      "title": "Black For Green",
+      "album": "777"
+    },
+    {
+      "requestId": "340c43fdcf15a4694fbfe7a2",
+      "artistCredit": "Rel McCoy, Eternia",
+      "title": "Adaptation",
+      "album": "The Tiger the Sparrow the Koi & the Chameleon"
+    },
+    {
+      "requestId": "9c4fcac67d2d889237a2b3f5",
+      "artistCredit": "Rel McCoy, Eternia",
+      "title": "Peace",
+      "album": "Illect Recordings: Mind the Rap Vol. 5"
+    },
+    {
+      "requestId": "d2c363b04ded809d5a948c0a",
+      "artistCredit": "Ric Wilson/Chromeo/A-Trak",
+      "title": "Gimmi A Minnit",
+      "album": "CLUSTERFUNK"
+    },
+    {
+      "requestId": "40f83fdec0c0b070c17d7020",
+      "artistCredit": "Ric Wilson/Chromeo/A-Trak/Felicia Douglass",
+      "title": "Everyone Moves To LA",
+      "album": "CLUSTERFUNK"
+    },
+    {
+      "requestId": "e13424b5395016ef6228bd80",
+      "artistCredit": "Ro Dolla, Kardinal Offishall, Solitair",
+      "title": "Show Me Your Friends (feat. Solitair & Kardinal Offishall)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "68a8c557ea7701ac4acade20",
+      "artistCredit": "Ro Dolla, Kardinal Offishall, T.R.A.C.K.S",
+      "title": "Find a Way (feat. Kardinal Offishall & T.R.A.C.K.S)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "e06b5be321e0e6e81c418968",
+      "artistCredit": "Ro Dolla, Lindo P",
+      "title": "Solid As a Rock (feat. Lindo P)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "edc299642d61a930ed610d04",
+      "artistCredit": "Ro Dolla, Saukrates",
+      "title": "North Hollywood (feat. Saukrates)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "3364c45664a77098e0a4f4c6",
+      "artistCredit": "Ro Dolla, Saukrates",
+      "title": "You've Changed (feat. Saukrates)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "b54b44c98e5626e7b80855b3",
+      "artistCredit": "Ro Dolla, Saukrates",
+      "title": "You've Changed (feat. Saukrates) (Instrumental)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "2b6857f0dd7b978a6e93573e",
+      "artistCredit": "Ro Dolla, Saukrates, Andreena Mill",
+      "title": "It's a Good Day (feat. Saukrates & Andreena Mill)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "faeca98d80aa3b72c728e325",
+      "artistCredit": "Ro Dolla, Solitair, Marvel",
+      "title": "Rock 'N' Roll Life (feat. Solitair & Marvel)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "065f41eca0bcf391a6d043ed",
+      "artistCredit": "Ro Dolla, Solitair, Smokey",
+      "title": "Militant (feat. Solitair & Smokey)",
+      "album": "North Hollywood (Deluxe Edition)"
+    },
+    {
+      "requestId": "dd39f8ab909138d1aea9a831",
+      "artistCredit": "Robin Banks, FB",
+      "title": "Priceless",
+      "album": "Priceless"
+    },
+    {
+      "requestId": "e53e4bb234a17f41b7035181",
+      "artistCredit": "Rochelle Jordan, KAYTRANADA",
+      "title": "TTW (Kaytranada Remix)",
+      "album": "TTW (Kaytranada Remix)"
+    },
+    {
+      "requestId": "a7fd2e2930eb662033ca7216",
+      "artistCredit": "Rochester",
+      "title": "Pull up (Remix) [feat. Kardinal Offishall, Trinity Chris, Lindo P, Untitled, Shawn Desman, Shanti & Fito Blanko]",
+      "album": "Pull Up"
+    },
+    {
+      "requestId": "b9dbc669e6dbf768807adce9",
+      "artistCredit": "Rochester",
+      "title": "Pull up (Remix) [feat. Kardinal Offishall, Trinity Chris, Lindo P, Untitled, Shawn Desman, Shanti & Fito Blanko]",
+      "album": "Pull Up"
+    },
+    {
+      "requestId": "5da0a80bba9fea6cf769424b",
+      "artistCredit": "Rochester, Choclair",
+      "title": "March XXVII (feat. Choclair) (Remix)",
+      "album": "March XXVII (feat. Choclair) [Remix]"
+    },
+    {
+      "requestId": "2cc65a2d524812775c573e94",
+      "artistCredit": "Rochester, Cut The Lights",
+      "title": "Back It Up",
+      "album": "Back It Up"
+    },
+    {
+      "requestId": "c3e7c3a1d80cc94707f6d70e",
+      "artistCredit": "Rochester, Cut The Lights",
+      "title": "Too Bright",
+      "album": "Too Bright"
+    },
+    {
+      "requestId": "90daf20e9769ae6ae68f89ce",
+      "artistCredit": "Rochester, EverythingOShauN",
+      "title": "Personal Trainer (Move)",
+      "album": "ACTIVATED"
+    },
+    {
+      "requestId": "8ed1ec2536db5157be27a4bc",
+      "artistCredit": "Rochester, EverythingOShauN",
+      "title": "Personal Trainer (Move)",
+      "album": "ACTIVATED"
+    },
+    {
+      "requestId": "b53b6f6b8d31121464621878",
+      "artistCredit": "Rochester, EverythingOShauN",
+      "title": "Personal Trainers",
+      "album": "Personal Trainers"
+    },
+    {
+      "requestId": "c6ce93b4e631404b5529441d",
+      "artistCredit": "Rochester, EverythingOShauN",
+      "title": "Personal Trainers",
+      "album": "Personal Trainers"
+    },
+    {
+      "requestId": "d16376c370e2bf637ba0a1a1",
+      "artistCredit": "Rochester, Fame Holiday",
+      "title": "Hold Up, Wait (feat. Fame Holiday)",
+      "album": "Hold Up, Wait (feat. Fame Holiday)"
+    },
+    {
+      "requestId": "53d31656bacf7526d0e1671b",
+      "artistCredit": "Rochester, Private Name Private Number",
+      "title": "BET",
+      "album": "TERMINAL 3"
+    },
+    {
+      "requestId": "544d4364ed39fead82d7676d",
+      "artistCredit": "Rochester, Private Name Private Number",
+      "title": "LAST LAUGH",
+      "album": "TERMINAL 3"
+    },
+    {
+      "requestId": "5c5cb808fbe8f359c7d04e10",
+      "artistCredit": "Rochester, Private Name Private Number",
+      "title": "SELENA",
+      "album": "TERMINAL 3"
+    },
+    {
+      "requestId": "134d183be1b77a0ae7f8e43d",
+      "artistCredit": "Rochester, Private Name Private Number",
+      "title": "TAKE OFF",
+      "album": "TERMINAL 3"
+    },
+    {
+      "requestId": "85aac14f5af93b87e1518036",
+      "artistCredit": "Rossy/Jazz Cartier",
+      "title": "KARMA (With Jazz Cartier)",
+      "album": "KARMA (With Jazz Cartier)"
+    },
+    {
+      "requestId": "3afa15cec09f92ecb8ebd2b1",
+      "artistCredit": "Royal Canoe, Begonia",
+      "title": "Fussin'",
+      "album": "Fussin'"
+    },
+    {
+      "requestId": "e56ec0a6164c73ddfc8c2f55",
+      "artistCredit": "Runway the Catwalker, Chris LaRocca",
+      "title": "FULL OF IT",
+      "album": "FULL OF IT"
+    },
+    {
+      "requestId": "c1e94c96a43f055fe9fab491",
+      "artistCredit": "Runway the Catwalker, Chris LaRocca",
+      "title": "FULL OF IT",
+      "album": "FULL OF IT"
+    },
+    {
+      "requestId": "ddd10bfd8b98ce6f6df51e59",
+      "artistCredit": "Sage Harris, Vandalizm",
+      "title": "Poseidon",
+      "album": "Poseidon"
+    },
+    {
+      "requestId": "cad82705d8a677c5931b138c",
+      "artistCredit": "Sage Harris, Vandalizm",
+      "title": "Raw",
+      "album": "Raw"
+    },
+    {
+      "requestId": "b7c4e60f4261eca0d29d297f",
+      "artistCredit": "Sage Harris, Vandalizm",
+      "title": "Raw",
+      "album": "Raw"
+    },
+    {
+      "requestId": "e96037f8ca0a8404e7690d3a",
+      "artistCredit": "Sajaa., Ntwali",
+      "title": "Velvetblues.",
+      "album": "Vivid Dreams & Intuitions."
+    },
+    {
+      "requestId": "92bdb97ad943217195b2a5b7",
+      "artistCredit": "Sam-r, Dario Dvon",
+      "title": "Leap",
+      "album": "The Cook-Up Sessions Vol. 1"
+    },
+    {
+      "requestId": "bbc7746764c5f77ae85f49ac",
+      "artistCredit": "Sam-r, Kash Phat",
+      "title": "Aura",
+      "album": "Aura"
+    },
+    {
+      "requestId": "01770226369d0eed8d521a3f",
+      "artistCredit": "Sam-r, Sim, X2FromTheCIV, Hugo",
+      "title": "Entourage (feat. X2FromTheciv, Hugo & Sim)",
+      "album": "Death of a Saint"
+    },
+    {
+      "requestId": "88f634afd2fb6ff2d3e0adbf",
+      "artistCredit": "Sam-r, tadiie",
+      "title": "Dope (feat. Tadiie)",
+      "album": "Death of a Saint"
+    },
+    {
+      "requestId": "13e441865f6350626b26e08a",
+      "artistCredit": "Sam-r, tadiie",
+      "title": "Got U",
+      "album": "Got U"
+    },
+    {
+      "requestId": "c0db97a96402b4b1a417b620",
+      "artistCredit": "Sam-r, X2FromTheCIV",
+      "title": "oBsEssions",
+      "album": "oBsEssions"
+    },
+    {
+      "requestId": "f4ad653025aeead4c5a82734",
+      "artistCredit": "Sam-r, X2FromTheCIV, Erin B",
+      "title": "W",
+      "album": "W"
+    },
+    {
+      "requestId": "4cb4dc185347c4c211e71e7c",
+      "artistCredit": "Saukrates, Dankery Harv, Robb Klarke",
+      "title": "My Luv",
+      "album": "Amani (The Deluxe EP)"
+    },
+    {
+      "requestId": "4484bc9f1168f14a29d4e1fc",
+      "artistCredit": "Sean Jones/ STORRY",
+      "title": "All Fall Down (feat. Storry)",
+      "album": "Weekend Lover"
+    },
+    {
+      "requestId": "090e55e573b4361ae19a9232",
+      "artistCredit": "Sean Leon, Jessie Reyez",
+      "title": "DISHONORED",
+      "album": "IN LOVING MEMORY"
+    },
+    {
+      "requestId": "05762febaa1b04c0c838415f",
+      "artistCredit": "Sean Leon, Jordan Fall",
+      "title": "SERVER$",
+      "album": "HALF CRAZY"
+    },
+    {
+      "requestId": "79d8fa6df340d9b4f072b2f0",
+      "artistCredit": "Sean Leon, Rhyan Douglas",
+      "title": "RHYAN'S HYMN",
+      "album": "IN LOVING MEMORY+"
+    },
+    {
+      "requestId": "4c3b5ca0c2c58ed1218b4c94",
+      "artistCredit": "Sekawnee, Chasé Scanz, EfrainYB",
+      "title": "Nations",
+      "album": "Nations"
+    },
+    {
+      "requestId": "2da716b74739eb77ddcc5607",
+      "artistCredit": "Sekawnee, Chasé Scanz, EfrainYB",
+      "title": "Relatives",
+      "album": "Relatives"
+    },
+    {
+      "requestId": "625bd5a23b56b2d35f854fbd",
+      "artistCredit": "Serena Ryder/Shawn Hook",
+      "title": "Used to You",
+      "album": "The Art of Falling Apart (Collaborations)"
+    },
+    {
+      "requestId": "b1b79878f9f50dba101cb1c4",
+      "artistCredit": "Serena Ryder/William Prince",
+      "title": "River of Tears",
+      "album": "River of Tears"
+    },
+    {
+      "requestId": "865863bbbcc07a00d6e1d1a6",
+      "artistCredit": "Set2, Rich Kidd",
+      "title": "Tings Bless",
+      "album": "10,000 Hours"
+    },
+    {
+      "requestId": "9fe80184c02bcd9468524ff9",
+      "artistCredit": "Seth Dyer, Anthony Bezel",
+      "title": "Busy Signal (feat. Anthony Bezel)",
+      "album": "Busy Signal (feat. Anthony Bezel)"
+    },
+    {
+      "requestId": "a3c50eeaea618ff776326b74",
+      "artistCredit": "Seth Dyer, Meeno Giinchy",
+      "title": "Criminals (feat. Meeno Giinchy)",
+      "album": "Criminals (feat. Meeno Giinchy)"
+    },
+    {
+      "requestId": "5b8ba7bb0669db0958bd8560",
+      "artistCredit": "Shad, Phoenix Pagliacci",
+      "title": "Look Pt 2",
+      "album": "Start Anew"
+    },
+    {
+      "requestId": "c10ca2c5dd02783a95773d75",
+      "artistCredit": "Shad, Raz Fresco",
+      "title": "Look Pt 1",
+      "album": "Start Anew"
+    },
+    {
+      "requestId": "0f93dbda6cc0f7bc7f7b0cbe",
+      "artistCredit": "Shad, Raz Fresco",
+      "title": "Look Pt 1",
+      "album": "Start Anew"
+    },
+    {
+      "requestId": "08c09cd0f50850bde1bba0ab",
+      "artistCredit": "Shad, TLO",
+      "title": "Islands",
+      "album": "Start Anew"
+    },
+    {
+      "requestId": "9804b0c3d6e0549b65241b15",
+      "artistCredit": "Shad/Eternia",
+      "title": "Love Means",
+      "album": "Flying Colours"
+    },
+    {
+      "requestId": "6690a0debf980e52cb965ba0",
+      "artistCredit": "Shad/Ian Kamau/Eternia",
+      "title": "Another Year",
+      "album": "A Short Story About A War"
+    },
+    {
+      "requestId": "73fd1e53d6c317a86ecdda4d",
+      "artistCredit": "Shad/Skratch Bastid/Cadence Weapon",
+      "title": "Homie",
+      "album": "The Spring Up"
+    },
+    {
+      "requestId": "9255dcba9cd71422be86f09f",
+      "artistCredit": "Shaun Boothe ft Kardinal Offishall",
+      "title": "Poor Boy Remix",
+      "album": ""
+    },
+    {
+      "requestId": "a2e50e1c276c936f224f1aa4",
+      "artistCredit": "Shawn Desman",
+      "title": "Get Ready (Remix) [feat. Ghetto Concept]",
+      "album": "Shawn Desman"
+    },
+    {
+      "requestId": "d991e2b691c6dc850db61508",
+      "artistCredit": "Shawn Desman",
+      "title": "Get Ready (Remix) [feat. Ghetto Concept]",
+      "album": "Shawn Desman"
+    },
+    {
+      "requestId": "852d3909cc1d82f7c5635cce",
+      "artistCredit": "Shawn Desman",
+      "title": "Get Ready (Remix) [feat. Ghetto Concept]",
+      "album": "Shawn Desman"
+    },
+    {
+      "requestId": "6de3c3e6c0e49272d8e346a0",
+      "artistCredit": "Shawn Desman, Dallas Smith",
+      "title": "One Good Life",
+      "album": "One Good Life"
+    },
+    {
+      "requestId": "c33da4f6f36006d2c8c0d441",
+      "artistCredit": "Shawn Desman, Fito Blanko, Aiona Santana",
+      "title": "Miami",
+      "album": "Miami"
+    },
+    {
+      "requestId": "dcb3756dd5bd2476ff551b31",
+      "artistCredit": "Shawn Desman, Jamie Fine",
+      "title": "BODY",
+      "album": "BODY"
+    },
+    {
+      "requestId": "f0b79034a452d5d8c3498d2e",
+      "artistCredit": "Shawn Desman, Jamie Fine",
+      "title": "BODY",
+      "album": "BODY"
+    },
+    {
+      "requestId": "7fd90329e10411eddfee3d75",
+      "artistCredit": "Shawn Desman, Jamie Fine",
+      "title": "BODY",
+      "album": "BODY"
+    },
+    {
+      "requestId": "76428c346741c857877a87f4",
+      "artistCredit": "Shawn Mendes/ Justin Bieber",
+      "title": "Monster",
+      "album": "Monster"
+    },
+    {
+      "requestId": "4b486125886bee9cb4693aca",
+      "artistCredit": "Shog Stan, Jahmar Carter, WondaGurl",
+      "title": "Girlfriend Pioneer Prodigy Veteran",
+      "album": "Girlfriend Pioneer Prodigy Veteran"
+    },
+    {
+      "requestId": "799fcd30d4bda3fa787e6f8b",
+      "artistCredit": "Simar, Manna Music",
+      "title": "Drive By",
+      "album": "Drive By"
+    },
+    {
+      "requestId": "990c9ae0c647d78862d2d096",
+      "artistCredit": "Sit Still, Nolan Hubbard",
+      "title": "Pollen",
+      "album": "Pollen"
+    },
+    {
+      "requestId": "97af99b4439eb4f23ebb1d1e",
+      "artistCredit": "Sit Still, Nolan Hubbard",
+      "title": "Pollen",
+      "album": "Pollen"
+    },
+    {
+      "requestId": "2a8718cabfe81852668b7c73",
+      "artistCredit": "Skip Waiters, Kalisway",
+      "title": "just busiNESS (feat. Kalisway)",
+      "album": "INSECURE"
+    },
+    {
+      "requestId": "00fcd8b44f50208f7c8494dc",
+      "artistCredit": "Sleepy Tom, Cadence Weapon",
+      "title": "Golden",
+      "album": "Golden"
+    },
+    {
+      "requestId": "305e1d4d6ce2db38419c9834",
+      "artistCredit": "Smiley, Drake",
+      "title": "2 Mazza (feat. Drake)",
+      "album": "Don't Box Me In"
+    },
+    {
+      "requestId": "3fc66fae427620d2459c9373",
+      "artistCredit": "Snotty Nose Rez Kids, Boslen",
+      "title": "Creator Made an Animal",
+      "album": "Creator Made an Animal"
+    },
+    {
+      "requestId": "55798dc923a3673a39fd1e78",
+      "artistCredit": "Snotty Nose Rez Kids, Boslen",
+      "title": "Creator Made an Animal",
+      "album": "Creator Made an Animal"
+    },
+    {
+      "requestId": "7c726fd0966044845fa87a91",
+      "artistCredit": "Snotty Nose Rez Kids, DillanPonders",
+      "title": "TRENDSETTER",
+      "album": "TRENDSETTER"
+    },
+    {
+      "requestId": "3914a3d7f39a60dce5a4a0a7",
+      "artistCredit": "Snotty Nose Rez Kids, Drezus",
+      "title": "LET YA HAIR DOWN (feat. Drezus)",
+      "album": "LET YA HAIR DOWN (feat. Drezus)"
+    },
+    {
+      "requestId": "93f3e23181d1774ba015d6f5",
+      "artistCredit": "Snotty Nose Rez Kids, Drezus",
+      "title": "LET YA HAIR DOWN (feat. Drezus)",
+      "album": "LET YA HAIR DOWN (feat. Drezus)"
+    },
+    {
+      "requestId": "e90d5779bfcd6d9f414c7f34",
+      "artistCredit": "Snotty Nose Rez Kids, Polo Brian",
+      "title": "Wild Boy",
+      "album": "Wild Boy"
+    },
+    {
+      "requestId": "d87fa7d6843e5fc7e5d55a95",
+      "artistCredit": "Snotty Nose Rez Kids/ Drezus",
+      "title": "'96 Bulls (feat. Drezus)",
+      "album": "'96 Bulls (feat. Drezus)"
+    },
+    {
+      "requestId": "53eeaf8c8d7ebb2dd1e9e515",
+      "artistCredit": "Snotty Nose Rez Kids/ Drezus",
+      "title": "Skoden Remix (Bonus) [feat. Drezus]",
+      "album": "The Average Savage"
+    },
+    {
+      "requestId": "e618c10b6be65166cbf1ecae",
+      "artistCredit": "Snotty Nose Rez Kids/ Drezus",
+      "title": "The Resistance",
+      "album": "Snotty Nose Rez Kids"
+    },
+    {
+      "requestId": "3c147c26f67b9cefaaa59f50",
+      "artistCredit": "Snotty Nose Rez Kids/ Drezus",
+      "title": "Where They At",
+      "album": "Where They At"
+    },
+    {
+      "requestId": "79a46c017de146aab6996baf",
+      "artistCredit": "Snotty Nose Rez Kids/ Just John",
+      "title": "Sink or Swim",
+      "album": "Life After"
+    },
+    {
+      "requestId": "6be574bae25dd2dd581797d6",
+      "artistCredit": "Snotty Nose Rez Kids/Beau Dick",
+      "title": "Skoden",
+      "album": "Snotty Nose Rez Kids"
+    },
+    {
+      "requestId": "db9ce4b619c95ede74142301",
+      "artistCredit": "Snotty Nose Rez Kids/Drezus",
+      "title": "Savages (feat. Drezus)",
+      "album": "The Average Savage"
+    },
+    {
+      "requestId": "818f9ab8c6a84deb7e2cca1d",
+      "artistCredit": "Snotty Nose Rez Kids/Kimmortal",
+      "title": "Lost Tribe",
+      "album": "TRAPLINE"
+    },
+    {
+      "requestId": "8f6a67b8798f264f4da64204",
+      "artistCredit": "Snotty Nose Rez Kids/Mob Bounce",
+      "title": "Northern Lights (feat. Mob Bounce)",
+      "album": "The Average Savage"
+    },
+    {
+      "requestId": "a2ab122ad0e3f5ff7d964a73",
+      "artistCredit": "Snotty Nose Rez Kids/Polo Brian",
+      "title": "KIDS COME UP, IT'S SUPPERTIME!",
+      "album": "I'M GOOD, HBU?"
+    },
+    {
+      "requestId": "1aa256928332f75550a7f09f",
+      "artistCredit": "Snotty Nose Rez Kids/Salia Joseph",
+      "title": "Broke Boy Ambitions (feat. Salia Joseph)",
+      "album": "The Average Savage"
+    },
+    {
+      "requestId": "ff715540078e56f71af1d5bf",
+      "artistCredit": "Snotty Nose Rez Kids/Salia Joseph",
+      "title": "M.I.n.a.Y. (feat. Salia Joseph)",
+      "album": "The Average Savage"
+    },
+    {
+      "requestId": "4a9ca759906581b872aa28a9",
+      "artistCredit": "Snotty Nose Rez Kids/Shanks Sioux",
+      "title": "I Can't Remember My Name",
+      "album": "I Can't Remember My Name"
+    },
+    {
+      "requestId": "cc4929bd719734b2a4ddf394",
+      "artistCredit": "Snotty Nose Rez Kids/The Sorority",
+      "title": "Son of a Matriarch",
+      "album": "TRAPLINE"
+    },
+    {
+      "requestId": "66c300e20b770ccda5e1f67b",
+      "artistCredit": "Snow/ Jelleestone",
+      "title": "That's My Life",
+      "album": "Two Hands Clapping"
+    },
+    {
+      "requestId": "7229a946c0c943e88418a70c",
+      "artistCredit": "Snow/Alex Metcalf",
+      "title": "Legal (feat. Alex Metcalf; Explicit)",
+      "album": "Two Hands Clapping"
+    },
+    {
+      "requestId": "eca435a41cf7c328e605ae9f",
+      "artistCredit": "Snow/BALAM KIEL/DJKEMO",
+      "title": "Reason to Love",
+      "album": "Reason to Love"
+    },
+    {
+      "requestId": "f6e8a7078202fdd17986a5c5",
+      "artistCredit": "SNoW/BALAM KIEL/Francesco Antonio/William Dinero",
+      "title": "Together (feat. Francesco Antonio, William Dinero, & Balam Kiel)",
+      "album": "Together (feat. Francesco Antonio, William Dinero, & Balam Kiel)"
+    },
+    {
+      "requestId": "15ca58571ca313d2b2012bb0",
+      "artistCredit": "SNoW/Chris Black",
+      "title": "Black N' Snow (feat. Chris Black)",
+      "album": "Two Hands Clapping"
+    },
+    {
+      "requestId": "6369b98a244a3236ad5aa208",
+      "artistCredit": "sobhhï/ Rich Kidd/ Bénita",
+      "title": "not sorry",
+      "album": "ON ROAD"
+    },
+    {
+      "requestId": "6a02586ba9d8e4c0d2a3cbdd",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Best Belive",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "0cf939ef232a665d9386811d",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Don't Stop",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "ef2d4cf2965b93e8d1121f23",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Fuck Yeah",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "e36df72c890d717bb33eb106",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Hometown",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "8c054b77df2df4d59072e1bc",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Mind All Day",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "2346cd21f50ea2bb7ef8ecb6",
+      "artistCredit": "SonReal & Rich Kidd",
+      "title": "Money Money",
+      "album": "The Closers"
+    },
+    {
+      "requestId": "07d310e59c735db3e47ef411",
+      "artistCredit": "SonReal, Snotty Nose Rez Kids",
+      "title": "DUMB",
+      "album": "DUMB"
+    },
+    {
+      "requestId": "c810c9e9c2bbedd983432e0b",
+      "artistCredit": "Spesh K, Divo, D-Sisive, Boy-IiLL",
+      "title": "Bring It Back (feat. D-Sisive, Boy-IiLL, Divo)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "484b28ec1ca94526b6a96592",
+      "artistCredit": "Spesh K, DL Incognito, Jordan Croucher aka JRDN",
+      "title": "Start a New Day (feat. DL Incognito & Jordan Croucher aka JRDN)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "db9145bc294358ebc328fc2f",
+      "artistCredit": "Spesh K, DL Incognito, Jordan Croucher aka JRDN",
+      "title": "Start a New Day (feat. DL Incognito & Jordan Croucher aka JRDN)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "1288030aabea40497c09f1f3",
+      "artistCredit": "Spesh K, Fax4",
+      "title": "Mean Ol Limp (feat. Fax4)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "01df10eb2d96e1fd5fc4392a",
+      "artistCredit": "Spesh K, Markit",
+      "title": "The French One (feat. Markit)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "46027baffe2facb0c2aa3436",
+      "artistCredit": "Spesh K, Tassja",
+      "title": "Retirement Days (feat. Tassja)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "d9d992139b782f595d2c6291",
+      "artistCredit": "Spesh K, X.E.L., Jugga",
+      "title": "So Alone (feat. X.E.L. & Jugga)",
+      "album": "Media Coverage"
+    },
+    {
+      "requestId": "66b0fe9d00602fd9b6c95d0a",
+      "artistCredit": "Spirit Josh",
+      "title": "Pickup Truck (feat. Mary & Adelaide)",
+      "album": "Paint A Lucky Picture"
+    },
+    {
+      "requestId": "d76e9335257534ea40788153",
+      "artistCredit": "Spitty/EverythingOShauN",
+      "title": "Up Now",
+      "album": "Up Now"
+    },
+    {
+      "requestId": "a430986e32425b6c77ba4eaf",
+      "artistCredit": "Sre, EverythingOShauN",
+      "title": "Bounce (feat. EverythingOShauN)",
+      "album": "Bounce (feat. EverythingOShauN)"
+    },
+    {
+      "requestId": "5037f3f0e9403e755e9535b3",
+      "artistCredit": "Stephen Hero, Uncle Fester, Aquakultre",
+      "title": "Can't Stop (Working) (feat. Aquakultre)",
+      "album": "The Squeeze"
+    },
+    {
+      "requestId": "556922a6c424f2727cd62536",
+      "artistCredit": "Stereos/Jhevon Paris",
+      "title": "Throw Ya Hands Up - Feat. Jhevon Paris (Album Version)",
+      "album": "Class Of '09"
+    },
+    {
+      "requestId": "17d6ede9ea978bbc0613102c",
+      "artistCredit": "STORRY, Junia-T",
+      "title": "I Don't Wanna Get High (Junia-T Remix)",
+      "album": "CH III: The Come Up (Deluxe)"
+    },
+    {
+      "requestId": "68f4fb464419ad481e994e63",
+      "artistCredit": "Sukha/AR Paisley/Prodgk",
+      "title": "Go To Sleep",
+      "album": "Go To Sleep"
+    },
+    {
+      "requestId": "8614a15500a4144be75af251",
+      "artistCredit": "Sunny Malton/AR Paisley/Lazyeye",
+      "title": "Moose World",
+      "album": "Moose World"
+    },
+    {
+      "requestId": "b4079d79053a5ef23b186d6b",
+      "artistCredit": "Sunshine Makers, Aquakultre",
+      "title": "Got to be Good",
+      "album": "Sunshine Makers"
+    },
+    {
+      "requestId": "dfd9cc82675aab333a061dc3",
+      "artistCredit": "Swaine, farewell tomorrow",
+      "title": "PAYSTUBBBZ (feat. farewell, tomorrow)",
+      "album": "PAYSTUBBBZ (feat. farewell, tomorrow)"
+    },
+    {
+      "requestId": "951d2f549835602397027521",
+      "artistCredit": "Swamp Thing, Ollie Teeba, Aquakultre",
+      "title": "Starman",
+      "album": "Salty Gator"
+    },
+    {
+      "requestId": "15b1e8bb20736c1c81684d19",
+      "artistCredit": "Swollen Members",
+      "title": "Bring It Home (feat. Moka Only)",
+      "album": "Bad Dreams"
+    },
+    {
+      "requestId": "c905f1069bc17b2248c85b57",
+      "artistCredit": "Swollen Members, Nelly Furtado",
+      "title": "Breath",
+      "album": "Monsters in the Closet"
+    },
+    {
+      "requestId": "69daef458d0aca5fd94cebd2",
+      "artistCredit": "Taktika, Muzion",
+      "title": "C'est pour ça qu'on vit",
+      "album": "L'affaire Taktika"
+    },
+    {
+      "requestId": "a79d1fffba83c199ceebd611",
+      "artistCredit": "Teck Zilla/ JD ERA/ President Zik/ RoQy TyRaiD",
+      "title": "A Whole Lot",
+      "album": "A Whole Lot (feat. JD Era, President Zik & Roqy Tyraid)"
+    },
+    {
+      "requestId": "f856c142820793916bd01562",
+      "artistCredit": "The 45 Portland Street Band, Eric Stephen Martin, Alexander Gallant, Sarah Swire, Aquakultre",
+      "title": "Drunk Teenagers (feat. Eric Stephen Martin, Alexander Gallant, Aquakultre, Sarah Swire)",
+      "album": "Songs From The Gang - A Celebration Of Joel Plaskett"
+    },
+    {
+      "requestId": "04497bfd8e4ac16d0cf1db9c",
+      "artistCredit": "The 6th Letter, Billie Essco, Raz Fresco",
+      "title": "GETTING BAKED IN THE BAKERY",
+      "album": "The Cream Tape"
+    },
+    {
+      "requestId": "5a5571444f20a87883ed2ed8",
+      "artistCredit": "The Boomtang Boys/ Kim Esty",
+      "title": "Squeeze Toy",
+      "album": "Greatest Hits Volume One"
+    },
+    {
+      "requestId": "fcee84b957924a2c6fde5ce0",
+      "artistCredit": "the della kit, Kapok, Junia-T",
+      "title": "keep your head high",
+      "album": "keep your head high"
+    },
+    {
+      "requestId": "866adb1765012b97ff3cf267",
+      "artistCredit": "The Halluci Nation, Odario, Haviah Mighty, Chippewa Travellers",
+      "title": "Ba Na Na",
+      "album": "Ba Na Na"
+    },
+    {
+      "requestId": "046702a7fcf5f13c54f7717c",
+      "artistCredit": "The Halluci Nation/Tanya Tagaq",
+      "title": "Sila",
+      "album": "We Are the Halluci Nation"
+    },
+    {
+      "requestId": "779b18a3034040087ddb6dd6",
+      "artistCredit": "The Kount, Noam",
+      "title": "Amber",
+      "album": "Amber"
+    },
+    {
+      "requestId": "685e7f5e366a42a2e4e40c21",
+      "artistCredit": "The Weeknd/KAYTRANADA",
+      "title": "Out of Time (KAYTRANADA Remix)",
+      "album": "Out Of Time (Remix Bundle)"
+    },
+    {
+      "requestId": "9bb7885b049b18da4836b519",
+      "artistCredit": "The Zolas, Cadence Weapon",
+      "title": "Another Dimension (feat. Cadence Weapon)",
+      "album": "Another Dimension (feat. Cadence Weapon)"
+    },
+    {
+      "requestId": "3037a49205a576f20a6997f0",
+      "artistCredit": "Theo Day, Olivia Ridgely",
+      "title": "Make Believe",
+      "album": "Make Believe"
+    },
+    {
+      "requestId": "7a2317d77289ea8c346af311",
+      "artistCredit": "Theology 3 Feat. Andreena Mill & TONA",
+      "title": "How I Flow Part 2",
+      "album": ""
+    },
+    {
+      "requestId": "a64b9d1a23f5c7ae58724340",
+      "artistCredit": "TheRa11n, Shub",
+      "title": "IYKYK",
+      "album": "IYKYK"
+    },
+    {
+      "requestId": "e0f7487a52fd3a433fc54ef3",
+      "artistCredit": "Tiësto, Tegan & Sara",
+      "title": "Feel It In My Bones (feat. Tegan & Sara)",
+      "album": "Kaleidoscope"
+    },
+    {
+      "requestId": "64f28a559342e628f824c2f8",
+      "artistCredit": "Tiësto, Tegan & Sara",
+      "title": "Feel It In My Bones (feat. Tegan & Sara)",
+      "album": "Kaleidoscope"
+    },
+    {
+      "requestId": "fe23da009d8e122cc551427c",
+      "artistCredit": "Timbuktu, Savilion, Aquakultre, Chokeules, More or Les, Nilla, Wordburglar, Ambition",
+      "title": "Bonus Level",
+      "album": "It's Alright In The Daylight"
+    },
+    {
+      "requestId": "161b73fbdcef7ff81376ed7f",
+      "artistCredit": "TOBi, Jazz Cartier, Haviah Mighty, Shad, Ejji Smith",
+      "title": "24 (Toronto Remix) (feat. Haviah Mighty, Shad, Jazz Cartier & Ejji Smith)",
+      "album": "STILL+"
+    },
+    {
+      "requestId": "424e1fefe149c26184dfbe11",
+      "artistCredit": "TOBi/ Harrison",
+      "title": "Beige",
+      "album": "Beige"
+    },
+    {
+      "requestId": "49fb781a8252c58b2af440bf",
+      "artistCredit": "TOBi/Jazz Cartier",
+      "title": "Woah",
+      "album": "Woah"
+    },
+    {
+      "requestId": "e5f700b892a8411a764166b0",
+      "artistCredit": "TOBi/Jazz Cartier",
+      "title": "Woah",
+      "album": "Woah"
+    },
+    {
+      "requestId": "d1536a6cc1477dd3eef92ae1",
+      "artistCredit": "Tona, EverythingOShauN",
+      "title": "Surf Club",
+      "album": "H.O.T.C. 2"
+    },
+    {
+      "requestId": "3985723e4fea9dbca7eead16",
+      "artistCredit": "Tone Mason, Kennedy Rd.",
+      "title": "Day N Nite (feat. Kennedy Rd.)",
+      "album": "The Speed Of Sound"
+    },
+    {
+      "requestId": "d68853798cb6bde8b6c04c38",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "90FOUR",
+      "album": "90FOUR"
+    },
+    {
+      "requestId": "277a90aa67a1fa600c2c5a3f",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "9FOUR (Instrumental)",
+      "album": "SayzorTone: Beats"
+    },
+    {
+      "requestId": "afbff4e92fc8fda1e65e33a5",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "As The World Burns",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "c6e3d6dce3556456a6ec3aea",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "LEMONS Outro",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "557844352f2d3f5454c36b81",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "NOTA (Not On The Album)",
+      "album": "NOTA (Not On The Album)"
+    },
+    {
+      "requestId": "97c1d490fca0764a2a86b7a2",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "Oakwood",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "ecf7e302da5355de74c2df77",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "Philly Rap",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "9f60f2e50f8e5fccc9cfbbfc",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "Rainy Days",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "35128618e3c425e8fc660e46",
+      "artistCredit": "Tone Mason, Sayzee",
+      "title": "Trespass",
+      "album": "SayzorTone"
+    },
+    {
+      "requestId": "901c3a68314904edc93c8dd9",
+      "artistCredit": "Top5/Bundog/Why G",
+      "title": "Movie (feat. Why G, Bundog)",
+      "album": "Movie (feat. Why G, Bundog)"
+    },
+    {
+      "requestId": "ba6438b9756d847a03f99223",
+      "artistCredit": "Tory Lanez, Nyce",
+      "title": "Traphouse",
+      "album": "Traphouse"
+    },
+    {
+      "requestId": "b75650fac8866ecba053cb84",
+      "artistCredit": "Tory Lanez, Nyce",
+      "title": "Traphouse",
+      "album": "Traphouse"
+    },
+    {
+      "requestId": "93e8a318af0ea002c2d31b72",
+      "artistCredit": "Tory Lanez, Nyce",
+      "title": "What's Luv",
+      "album": "Chixtapes (Trilogy)"
+    },
+    {
+      "requestId": "93007e3916ca193eacffff88",
+      "artistCredit": "Tory Lanez/ Nyce",
+      "title": "Shooby Doowoop//One Last Heartbreak (feat. Nyce)",
+      "album": "PLAYBOY"
+    },
+    {
+      "requestId": "5328bd9f8d12b91612335b76",
+      "artistCredit": "Tory Lanez/ Trippie Redd/ Yoko Gold",
+      "title": "Hurts Me",
+      "album": "Hurts Me"
+    },
+    {
+      "requestId": "0b0e063d9557b957dea34db7",
+      "artistCredit": "Tory Lanez/Tee",
+      "title": "Pink Dolphin Sunset (feat. Tee)",
+      "album": "Alone At Prom"
+    },
+    {
+      "requestId": "357cbe9c28c0e2bec0c2715b",
+      "artistCredit": "TRAPMAT SAVIOR, Nicholas Craven",
+      "title": "Pillz",
+      "album": "Pillz"
+    },
+    {
+      "requestId": "8e1d3e052bf462ac06b77069",
+      "artistCredit": "TRAPMAT SAVIOR, Nicholas Craven",
+      "title": "Pillz",
+      "album": "Pillz"
+    },
+    {
+      "requestId": "7f24eec13a1d92c099e5c4b6",
+      "artistCredit": "Tre Mission, Raz Fresco",
+      "title": "Allegedly",
+      "album": "Allegedly"
+    },
+    {
+      "requestId": "a98e82acd26984c6c39f0473",
+      "artistCredit": "TRINITY, A.G., Audible Doctor, D-Stroy, DJ Jab, Eternia, Everlast, Grand Puba, ILL BILL, Immortal Technique, Reef The Lost Cauze, Roc Marciano, Roxane Shante, Sadat X, Sha Stimuli, Slug",
+      "title": "Sometimes (feat. DJ Jab, Sadat X, A.G., Reef the Lost Cause, Eternia, Everlast, Immortal Technique, Slug, Sha Stimuli, Grand Puba,",
+      "album": "20 In"
+    },
+    {
+      "requestId": "ef4bc26a3ad0115848d6c2ca",
+      "artistCredit": "Tyler Shaw, Fefe Dobson, Bad Child, Command Sisters, Dan Kanter, Desiire, Donovan Woods, Johnny Orlando, Josh Ramsay, Jules Halpern, Marie-Mai, Olivia Lunny, Ryland James, Scott Helman, Serena Ryder, Shawn Hook, The Tenors, Tika, Walk Off the Earth, Avril",
+      "title": "Lean on Me - ArtistsCAN",
+      "album": "Lean on Me - ArtistsCAN"
+    },
+    {
+      "requestId": "668e3987006d147a1038cf3b",
+      "artistCredit": "Uncle Fester, Ambeez, Aquakultre",
+      "title": "Searching 22' (feat. Aquakultre)",
+      "album": "Enjoy"
+    },
+    {
+      "requestId": "8b22d6722daa4a79a262624d",
+      "artistCredit": "Uncle Fester, Ambeez, Aquakultre",
+      "title": "Solidarity (feat. Aquakultre)",
+      "album": "Enjoy"
+    },
+    {
+      "requestId": "b6ee6ceb588c577ddf5469d6",
+      "artistCredit": "Valaire, Bran Van 3000",
+      "title": "Ave Mucho",
+      "album": "Golden Bombay"
+    },
+    {
+      "requestId": "b45f75cecd341fa36aa4af06",
+      "artistCredit": "Various Artists, Adam Bomb, Ayah",
+      "title": "I Don't Care (feat. Ayah)",
+      "album": "The New North"
+    },
+    {
+      "requestId": "fd226e251527d4fb2c86d208",
+      "artistCredit": "Various Artists, Frankie Payne, Kardinal Offishall, Kim Davis",
+      "title": "No Regrets (feat. Kim Davis)",
+      "album": "The New North"
+    },
+    {
+      "requestId": "2670d022acc65051950e1867",
+      "artistCredit": "Various Artists, Frankie Payne, Mayhem Morearty, Luu Breeze, Andreena Mill",
+      "title": "No Love (feat. Andreena Mill)",
+      "album": "The New North"
+    },
+    {
+      "requestId": "0c8812687e174d0e1e928790",
+      "artistCredit": "Various Artists, JD ERA, Lokz",
+      "title": "Change (feat. Lokz)",
+      "album": "The New North"
+    },
+    {
+      "requestId": "51f6e17d3e85eda0ee562b2f",
+      "artistCredit": "Various Artists, King Reign, Richie Sosa, Shaun Boothe, Rich Kidd",
+      "title": "Represent",
+      "album": "The New North"
+    },
+    {
+      "requestId": "17f6e8ca1f532de96440e892",
+      "artistCredit": "Various Artists, King Reign, Richie Sosa, Shaun Boothe, Rich Kidd",
+      "title": "Represent",
+      "album": "The New North"
+    },
+    {
+      "requestId": "5aa5f81e2e8ca4ccfcc5b288",
+      "artistCredit": "Various Artists, Promise, I.r.s.",
+      "title": "Rock For You",
+      "album": "The New North"
+    },
+    {
+      "requestId": "a528ec058fbbf0d160802a29",
+      "artistCredit": "Various Artists, Theology 3, Mathematik",
+      "title": "Watch Out",
+      "album": "The New North"
+    },
+    {
+      "requestId": "77b74c9f6c52a9da1f196e56",
+      "artistCredit": "vbnd, Katie Tupper, Justice Der",
+      "title": "Daughter of the Sun",
+      "album": "Daughter of the Sun"
+    },
+    {
+      "requestId": "0d9eea710b440a02cbd230d3",
+      "artistCredit": "vbnd, Katie Tupper, The Soulmate Collective",
+      "title": "Fallin' For",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "492a1b75a935a194aef04539",
+      "artistCredit": "vbnd, Katie Tupper, The Soulmate Collective",
+      "title": "Skin to Skin",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "537e370e7676c43a9da4d2a3",
+      "artistCredit": "vbnd, Katie Tupper, The Soulmate Collective",
+      "title": "Slowly Starting to Take Form",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "337c7f1e0c9e39e33ad0b261",
+      "artistCredit": "vbnd, Katie Tupper, The Soulmate Collective",
+      "title": "Stop Your Crying",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "d538145a46f377793075aa78",
+      "artistCredit": "vbnd/ Katie Tupper",
+      "title": "Smoke",
+      "album": "Daughter of the Sun"
+    },
+    {
+      "requestId": "aa3103b1d565dadfccd0e978",
+      "artistCredit": "vbnd/ Katie Tupper/ The Soulmate Collective",
+      "title": "Gold Chain",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "95ee33eb4c3403f0ea0d1660",
+      "artistCredit": "vbnd/Connor Newton/Katie Tupper",
+      "title": "Name (On My Tongue)",
+      "album": "Daughter of the Sun"
+    },
+    {
+      "requestId": "e797f7ce43fa88ec6160fd6c",
+      "artistCredit": "vbnd/Katie Tupper/Connor Newton/Jesse McMillan",
+      "title": "No Other Feeling",
+      "album": "No Other Feeling"
+    },
+    {
+      "requestId": "726330c29a12262f52dee25f",
+      "artistCredit": "vbnd/Katie Tupper/The Soulmate Collective",
+      "title": "Breathe Me In (A Little Longer)",
+      "album": "Scum Funk"
+    },
+    {
+      "requestId": "d338533600074ba405ad5e95",
+      "artistCredit": "Vilaxxs, Philipe",
+      "title": "MANDEM",
+      "album": "MANDEM"
+    },
+    {
+      "requestId": "c50e9b639ff0ca04ed82dec8",
+      "artistCredit": "Vilaxxs, Philipe",
+      "title": "MANDEM",
+      "album": "MANDEM"
+    },
+    {
+      "requestId": "d21a3b6770c88ea92c9d0518",
+      "artistCredit": "Virginia To Vegas/Alyssa Reid",
+      "title": "We Are Stars (Featuring Alyssa Reid)",
+      "album": "Volume I"
+    },
+    {
+      "requestId": "438d2e744f2301bff47acec8",
+      "artistCredit": "Vlxl, Junia-T",
+      "title": "Show Luv (feat. Junia T.)",
+      "album": "Trains, Automobiles & Flights"
+    },
+    {
+      "requestId": "18b4468b4e009ad9374006d8",
+      "artistCredit": "Vt, Lil Berete",
+      "title": "Club (feat. Lil Berete)",
+      "album": "L'indomptable"
+    },
+    {
+      "requestId": "f6d88688930de2e09d3d6f87",
+      "artistCredit": "Wave Montega, Godflow",
+      "title": "Pissed",
+      "album": "Pissed"
+    },
+    {
+      "requestId": "886bc42c3f84cb591956aaba",
+      "artistCredit": "Who's Lara?, RL",
+      "title": "Want You",
+      "album": "Want You"
+    },
+    {
+      "requestId": "2d95bc7bcbefe2e59fee1c65",
+      "artistCredit": "William Prince/Serena Ryder",
+      "title": "Sing Me a Song",
+      "album": "Sing Me a Song"
+    },
+    {
+      "requestId": "25828fce03559d6a235a6b29",
+      "artistCredit": "WIO-K, Frank N Dank, Grimace Love",
+      "title": "Can't Done (feat. Frank N Dank & Grimace Love)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "2bf161da894b2da9894364fe",
+      "artistCredit": "WIO-K, Latisha Brown",
+      "title": "Motivate (feat. Latisha Brown)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "f3cdc2b054478df4b7cf39b9",
+      "artistCredit": "WIO-K, Monolith: IRS, Spidahman, Nish Raawks, Charisma, Dan-e-o, Rishaard a.k.a. Shamon Harage, Grimace Love, Black Cat, Korry Deez, Parker",
+      "title": "Ten (feat. Monolith: IRS, Spidahman, Nish Raawks, Charisma, Dan-E-O, Rishaard A.K.A. Shamon Harage & Grimace Love)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "893d5ff0f6daebe1bdb8d2d1",
+      "artistCredit": "WIO-K, Nish Rawwks",
+      "title": "We Nuh Easy (feat. Nish Raawks)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "f6aa567e79d03d9c5fdf3b9e",
+      "artistCredit": "WIO-K, Renny Holladae, T.R.A.C.K.S.",
+      "title": "Love or Lust (feat. Renny Holladae & T.R.A.C.K.S.)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "2c57c4d696738159fecd976f",
+      "artistCredit": "WIO-K, Tasha Rozez",
+      "title": "Foot Loose (feat. Tasha Rozez)",
+      "album": "In Real Life"
+    },
+    {
+      "requestId": "79ae05844fad6ac037b2d2f7",
+      "artistCredit": "X10Land, Patrik Kabongo, Private Name Private Number, Junia-T, Victory, Lan'do",
+      "title": "Walking With Wolves (feat. Junia-T, Lan'do, Private Name Private Number, Victory & Patrik Kabongo)",
+      "album": "Walking With Wolves (feat. Junia-T, Lan'do, Private Name Private Number, Victory & Patrik Kabongo)"
+    },
+    {
+      "requestId": "db91b926aaf3457fdf9fb44f",
+      "artistCredit": "X2FromTheCIV, HXGO, Sam-r",
+      "title": "Hidden Hills",
+      "album": "Heavily Humbled"
+    },
+    {
+      "requestId": "b847ad1043c16d095238f22a",
+      "artistCredit": "X2FromTheCIV, tadiie",
+      "title": "Yours Truly",
+      "album": "Heavily Humbled"
+    },
+    {
+      "requestId": "7ea959e13d1930ae46fb462d",
+      "artistCredit": "Yaego, skrta",
+      "title": "Eye to Eye",
+      "album": "Eye to Eye"
+    },
+    {
+      "requestId": "39f6ef4ef56944413e38c96d",
+      "artistCredit": "Young Rose, Saint Kay",
+      "title": "SCARLETT",
+      "album": "SCARLETT"
+    },
+    {
+      "requestId": "23107a49bdd481baa126e4d8",
+      "artistCredit": "Zach Zoya, High Klassified",
+      "title": "Keep Tryin",
+      "album": "Keep Tryin"
+    },
+    {
+      "requestId": "0e12ffe67e5c262ffbdd9915",
+      "artistCredit": "Zach Zoya, High Klassified",
+      "title": "Keep Tryin",
+      "album": "Keep Tryin"
+    },
+    {
+      "requestId": "cb504e1d5fb2e5dbfe4cd2dd",
+      "artistCredit": "Zach Zoya, High Klassified, Gaëlle",
+      "title": "Precious",
+      "album": "Precious"
+    },
+    {
+      "requestId": "1d6d2d0ad937159d2079a190",
+      "artistCredit": "ZIG MENTALITY, cleopatrick",
+      "title": "WEIGHT OF TRUTH",
+      "album": "LEAD US NOT ASTRAY"
+    }
+  ]
+}

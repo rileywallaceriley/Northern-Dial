@@ -21,7 +21,10 @@ STYLES = {
     'alternative-rap': r'alternative hip[ -]hop|alternative rap',
     'abstract-rap': r'abstract rap|experimental hip[ -]hop',
     'jazz-rap': r'jazz[ -](?:rap|inflected hip[ -]hop)',
-    'melodic-rap': r'melodic (?:rap|hip[ -]hop)',
+    'melodic-rap': r'melodic(?: [\w-]+){0,3} (?:rap|hip[ -]hop)|(?:rap|hip[ -]hop).{0,45}melodic',
+    'grime': r'\bgrime\b', 'beatboxing': r'beatbox', 'bhangra': r'\bbhangra\b',
+    'country-pop': r'country[ -]pop', 'classic-rock': r'classic[ -]rock',
+    'old-school-rap': r'old[ -]school hip[ -]hop|old[ -]school rap',
     'wordplay': r'wordplay|witty lyricism|intricate lyricism',
     'neo-soul': r'neo[ -]soul', 'alternative-rnb': r'alternative[ -]r&b|alt[ -]r&b',
     'adult-rnb': r'adult r&b', 'soul-pop': r'soul[ -]pop|soul, pop',
@@ -32,7 +35,7 @@ STYLES = {
     'power-pop': r'power[ -]pop', 'dream-pop': r'dream[ -]pop',
     'shoegaze': r'shoegaz', 'post-punk': r'post[ -]punk',
     'post-rock': r'post[ -]rock', 'garage-rock': r'garage[ -]rock',
-    'hard-rock': r'hard[ -]rock', 'psychedelic': r'psychedelic',
+    'hard-rock': r'hard[ -]rock', 'psychedelic': r'psychedeli(?:c|a)',
     'synth-pop': r'synth[ -]?pop|electropop', 'dance-pop': r'dance[ -]pop',
     'art-pop': r'art[ -]pop', 'electro-punk': r'electro[ -]punk|electroclash|electronic.{0,40}\bpunk|\bpunk.{0,40}electronic',
     'pop-punk': r'pop[ -]punk', 'post-hardcore': r'post[ -]hardcore',
@@ -56,7 +59,8 @@ SCENES = ['Toronto','Scarborough','Brampton','Mississauga','Hamilton','Montreal'
           'Saskatoon','Regina','London, Ontario','Newfoundland','Cape Breton']
 RELATION = re.compile(r'collaborat|produc(?:ed|tion)(?: [\w-]+){0,2} (?:by|for)|records by|work(?:ed|ing)? with|'
                       r'featur(?:es|ed|ing)\b|member(?:s)? of|part of|formed|co-founded|'
-                      r'fronted by|alongside|mentorship|mentored|collective|duo', re.I)
+                      r'fronted by|frontman|co-founder|membership|contributed vocals|co-writing|appeared on|appears on|'
+                      r'alongside|mentorship|mentored|collective|duo', re.I)
 
 
 def extract_profile(bio, location=''):
@@ -121,4 +125,37 @@ def extract_track_relationships(records):
                 edges.setdefault(pair, {'artists': list(pair), 'kind':'track-credit',
                     'reason': f'{artist["name"]} and {other["name"]} are credited together on “{title}” in Northern Dial’s library.',
                     'source': '/artists.html', 'evidence': title})
+    return list(edges.values())
+
+
+def resolve_credit_names(value, names):
+    """Resolve complete artist-credit tokens, including short names, never substrings."""
+    def identity(text):
+        return re.sub(r"[^a-z0-9]", "", normalize(text))
+    if identity(value) in names:
+        return [names[identity(value)]]
+    parts = re.split(r"\s*(?:,|/|;|&|\bfeat\.?|\bft\.?|\bfeaturing\b)\s*", value, flags=re.I)
+    return list(dict.fromkeys(names[identity(p.strip(" ()"))] for p in parts if identity(p.strip(" ()")) in names))
+
+
+def extract_verified_credit_relationships(records, snapshot):
+    """Use complete co-artist fields and explicit featured credits from the station API."""
+    names = {re.sub(r"[^a-z0-9]", "", normalize(n)):a['name']
+             for a in records for n in [a['name'], *a.get('aliases', [])]}
+    edges = {}
+    for track in snapshot.get('tracks', []):
+        people = resolve_credit_names(track['artistCredit'], names)
+        # A featured name without an identified host is not a collaboration edge.
+        if not people:
+            continue
+        feature = re.search(r"\b(?:feat\.?|ft\.?|featuring)\s+([^)]*)", track['title'], re.I)
+        if feature:
+            people = list(dict.fromkeys([*people, *resolve_credit_names(feature[1], names)]))
+        for i, left in enumerate(people):
+            for right in people[i+1:]:
+                pair = tuple(sorted([left, right]))
+                edges.setdefault(pair, {'artists':list(pair), 'kind':'track-credit',
+                    'reason':f'{left} and {right} are credited together on “{track["title"]}” in Northern Dial’s station library.',
+                    'evidence':track['artistCredit']+' — '+track['title'],
+                    'source':snapshot['source'], 'requestId':track['requestId']})
     return list(edges.values())

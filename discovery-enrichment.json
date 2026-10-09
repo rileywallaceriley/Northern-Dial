@@ -110,6 +110,120 @@
           "source": "https://www.cityfidelia.com/"
         }
       ]
+    },
+    {
+      "name": "Begonia",
+      "primaryGenre": "pop",
+      "location": "Winnipeg, Manitoba",
+      "facts": [
+        {
+          "text": "Begonia combines synth-pop and soul in autobiographical songwriting. Her debut album Fear was co-produced with Matt Schellenberg and Matt Peters of Royal Canoe.",
+          "source": "https://www.killbeatmusic.com/media-releases/2019/6/21/begonia-announces-debut-lp-shares-hanging-on-a-line"
+        }
+      ]
+    },
+    {
+      "name": "Royal Canoe",
+      "primaryGenre": "pop",
+      "location": "Winnipeg, Manitoba",
+      "facts": [
+        {
+          "text": "Royal Canoe makes pop with keyboards, sample pads, guitars, drums and effects pedals.",
+          "source": "https://www.arts-crafts.ca/files/pdf/royalcanoebio.pdf"
+        },
+        {
+          "text": "Royal Canoe recorded Sidelining in 2021 by developing ideas together in the studio.",
+          "source": "https://paperbagrecords.com/royal-canoe"
+        }
+      ]
+    },
+    {
+      "name": "Bodywash",
+      "primaryGenre": "indie-alternative",
+      "location": "Montréal, Québec",
+      "facts": [
+        {
+          "text": "Bodywash is the Montréal duo of Chris Steward and Rosie Long Decter. Their musical references include dream pop and shoegaze, with Steward drawing on British guitar music and Long Decter on folk and Canadiana.",
+          "source": "https://www.killbeatmusic.com/media-releases/2023/1/26/bodywash-announces-new-album-i-held-the-shape-while-i-could-shares-new-single"
+        }
+      ]
+    },
+    {
+      "name": "Blonde Diamond",
+      "primaryGenre": "indie-alternative",
+      "location": "Vancouver, British Columbia",
+      "facts": [
+        {
+          "text": "Blonde Diamond explores dream pop, indie pop and indie rock on Magnetic Strangers.",
+          "source": "https://blondediamond.bandcamp.com/album/magnetic-strangers"
+        }
+      ]
+    },
+    {
+      "name": "Ellis",
+      "primaryGenre": "indie-alternative",
+      "location": "Hamilton, Ontario",
+      "facts": [
+        {
+          "text": "Ellis is Hamilton songwriter Linnea Siggelkow. Her project began in 2017, and the dream-pop EP The Fuzz preceded her confessional full-length album Born Again.",
+          "source": "https://fatpossum.com/collections/ellis"
+        }
+      ]
+    },
+    {
+      "name": "Sister Ray",
+      "primaryGenre": "folk-songwriter",
+      "location": "Edmonton, Alberta",
+      "facts": [
+        {
+          "text": "Sister Ray is the songwriting project of Ella Coyes, whose musical background includes gospel, bluegrass and traditional Métis music. Their songs explore trauma, obligations and freedom through personal storytelling.",
+          "source": "https://sisterray780.bandcamp.com/album/communion"
+        }
+      ]
+    },
+    {
+      "name": "Beverly Glenn-Copeland",
+      "primaryGenre": "electronic-dance",
+      "location": "Huntsville, Ontario",
+      "facts": [
+        {
+          "text": "Beverly Glenn-Copeland recorded Keyboard Fantasies in 1986 using a DX-7 synthesizer and TR-707 drum machine. Its electronic sound connects new-age music with early techno experiments.",
+          "source": "https://beverlyglenn-copeland.bandcamp.com/album/keyboard-fantasies"
+        }
+      ]
+    },
+    {
+      "name": "Monsune",
+      "primaryGenre": "rnb-soul",
+      "location": "Toronto, Ontario",
+      "facts": [
+        {
+          "text": "Monsune identifies the musical references for Nothing in Return as electronic music, R&B, soul, neo-psychedelia and plunderphonics.",
+          "source": "https://monsune.bandcamp.com/track/nothing-in-return"
+        }
+      ]
+    },
+    {
+      "name": "Night Lovell",
+      "primaryGenre": "hip-hop",
+      "location": "Ottawa, Ontario",
+      "facts": [
+        {
+          "text": "Canadian rapper and producer Night Lovell emerged during the mid-2010s cloud-rap movement with brooding production and inventive music.",
+          "source": "https://music.apple.com/bz/artist/night-lovell/954917315"
+        }
+      ]
+    },
+    {
+      "name": "Busty and The Bass",
+      "primaryGenre": "rnb-soul",
+      "location": "Montréal, Québec",
+      "facts": [
+        {
+          "text": "Busty and the Bass explores soul, funk, jazz and dance music. The group collaborated with Magi Merlin on Far From Here.",
+          "source": "https://killbeatmusic.squarespace.com/media-releases/2023/2/15/busty-and-the-bass-share-far-from-here-ft-magi-merlin"
+        }
+      ]
     }
   ]
 }

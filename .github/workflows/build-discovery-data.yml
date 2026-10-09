@@ -8,6 +8,7 @@ on:
       - artists.html
       - artists/**
       - discovery-enrichment.json
+      - discovery-track-credits.json
       - library_artist_images.tsv
       - scripts/build_discovery_data.py
       - scripts/discovery_profiles.py
@@ -32,6 +33,7 @@ jobs:
           python3 scripts/build_discovery_data.py
           node scripts/audit_discovery.js
           node tests/discovery.test.js
+          python3 tests/discovery_profiles.test.py
 
       - name: Commit refreshed data
         shell: bash

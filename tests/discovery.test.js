@@ -142,3 +142,12 @@ assert.equal(engine.resolve(library,'Maestro').name,'Maestro Fresh Wes');
 const empire=engine.resolve(library,'80 Empire');
 assert(engine.connection(library.find(a=>a.name==='Maestro Fresh Wes'),empire)?.source.includes('gladiatorent.com'));
 assert(engine.connection(library.find(a=>a.name==='Koriass'),engine.resolve(library,'Anodajay')).kind==='label');
+
+// Station credits connect guest artists back to the identified host.
+for(const [guest,host] of [['Black Thought','Kardinal Offishall'],['Joolsannie','Aquakultre'],['Alex Metcalf','Snow'],['Busty and The Bass','Cadence Weapon']]) {
+ const seed=engine.resolve(library,guest), target=engine.resolve(library,host);
+ const link=engine.connection(target,seed);
+ assert(link && /credited|collaborat|Connected/.test(link.reason));
+ assert(engine.rank(library,{taste:seed}).length>0);
+ assert(!engine.rank(library,{taste:seed}).some(a=>engine.sameArtist(a,seed)));
+}

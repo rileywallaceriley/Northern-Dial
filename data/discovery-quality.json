@@ -1,10 +1,11 @@
 {
   "artists": 1465,
   "expandedProfiles": 203,
-  "researchedProfiles": 10,
-  "automaticRelationships": 786,
-  "withSignals": 1075,
-  "withConnections": 575,
+  "researchedProfiles": 20,
+  "automaticRelationships": 2351,
+  "verifiedCreditRelationships": 1539,
+  "withSignals": 1086,
+  "withConnections": 938,
   "needsEnrichment": [
     {
       "name": "$enor$uplex",
@@ -31,10 +32,6 @@
       "matches": 0
     },
     {
-      "name": "3MFrench",
-      "matches": 1
-    },
-    {
       "name": "4Steppa",
       "matches": 0
     },
@@ -43,20 +40,12 @@
       "matches": 0
     },
     {
-      "name": "6ixbuzz",
-      "matches": 2
-    },
-    {
       "name": "6ODEM3",
       "matches": 0
     },
     {
       "name": "86",
-      "matches": 2
-    },
-    {
-      "name": "8OND",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Acerrr",
@@ -76,15 +65,15 @@
     },
     {
       "name": "Alex K",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Alex Metcalf",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Alyssa Reid",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Amar Chaka Collective",
@@ -104,7 +93,7 @@
     },
     {
       "name": "Angel Duss",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "angello",
@@ -116,7 +105,7 @@
     },
     {
       "name": "Anthony Valadez",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Arcee",
@@ -155,16 +144,12 @@
       "matches": 0
     },
     {
-      "name": "Avril",
-      "matches": 3
-    },
-    {
       "name": "Axwell",
       "matches": 0
     },
     {
       "name": "AYOO BIGZ",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "B4-4",
@@ -172,7 +157,7 @@
     },
     {
       "name": "Baby Doll",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Baby Fifty",
@@ -188,18 +173,10 @@
     },
     {
       "name": "Bdice",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Beau Dick",
-      "matches": 0
-    },
-    {
-      "name": "Begonia",
-      "matches": 0
-    },
-    {
-      "name": "Belly",
       "matches": 1
     },
     {
@@ -212,7 +189,7 @@
     },
     {
       "name": "Beverly Glenn-Copeland",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Big K.R.I.T.",
@@ -220,11 +197,11 @@
     },
     {
       "name": "Big Lysh",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Big Sproxx",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Big XD",
@@ -235,20 +212,16 @@
       "matches": 0
     },
     {
-      "name": "Bijaan",
-      "matches": 0
-    },
-    {
       "name": "Black Bear",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "BLACK KEN",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Black Thought",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Black Violin",
@@ -256,7 +229,7 @@
     },
     {
       "name": "Blaze",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Bless",
@@ -265,10 +238,6 @@
     {
       "name": "Blitz Equip",
       "matches": 1
-    },
-    {
-      "name": "Blonde Diamond",
-      "matches": 0
     },
     {
       "name": "Blooom",
@@ -280,19 +249,15 @@
     },
     {
       "name": "Bocafloja",
-      "matches": 0
-    },
-    {
-      "name": "Bodywash",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Bone",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Book",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Boy Wonder",
@@ -304,11 +269,7 @@
     },
     {
       "name": "BriskInTheHouse",
-      "matches": 0
-    },
-    {
-      "name": "Bruno Pelletier",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Buckshot",
@@ -316,19 +277,15 @@
     },
     {
       "name": "Bundog",
-      "matches": 2
+      "matches": 4
     },
     {
       "name": "Burna Bandz",
       "matches": 1
     },
     {
-      "name": "Busty and The Bass",
-      "matches": 0
-    },
-    {
       "name": "C4",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Calamine",
@@ -336,15 +293,15 @@
     },
     {
       "name": "Calibur",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Candy Man",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Carpe DM",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Carver",
@@ -356,7 +313,7 @@
     },
     {
       "name": "Central Park",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Chad Kroeger",
@@ -368,7 +325,7 @@
     },
     {
       "name": "Chani Nattan",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Charlie",
@@ -376,7 +333,7 @@
     },
     {
       "name": "Charlie Noiir",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Cherrykim",
@@ -392,11 +349,11 @@
     },
     {
       "name": "Chippewa Travellers",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "chorote",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Chris Black",
@@ -408,11 +365,7 @@
     },
     {
       "name": "Cincinnati",
-      "matches": 0
-    },
-    {
-      "name": "City Fidelia",
-      "matches": 4
+      "matches": 1
     },
     {
       "name": "City Natives",
@@ -420,14 +373,10 @@
     },
     {
       "name": "Cj Cruicks",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Clover",
-      "matches": 0
-    },
-    {
-      "name": "Command Sisters",
       "matches": 0
     },
     {
@@ -435,16 +384,8 @@
       "matches": 0
     },
     {
-      "name": "concise",
-      "matches": 4
-    },
-    {
-      "name": "Connor Price",
-      "matches": 0
-    },
-    {
       "name": "Corey Writez",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Costy",
@@ -468,7 +409,7 @@
     },
     {
       "name": "Cut The Lights",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Céline Dion",
@@ -484,7 +425,7 @@
     },
     {
       "name": "D.O. Gibson",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Dakota Bear – Dakota Bear",
@@ -492,15 +433,11 @@
     },
     {
       "name": "DaMasta",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Dan Hill",
       "matches": 0
-    },
-    {
-      "name": "Dan Kanter",
-      "matches": 1
     },
     {
       "name": "Dan Romer",
@@ -508,15 +445,15 @@
     },
     {
       "name": "Dandy Trix",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Daniel Son",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Daphni",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "David Strickland",
@@ -544,7 +481,7 @@
     },
     {
       "name": "Delirious",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Desire",
@@ -552,7 +489,7 @@
     },
     {
       "name": "Diamond X",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "Dirty J",
@@ -560,27 +497,27 @@
     },
     {
       "name": "DJ Charlie B",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "DJ Chidow and Myūjikku",
-      "matches": 0
-    },
-    {
-      "name": "Dj Precyce",
-      "matches": 0
-    },
-    {
-      "name": "DJ R Dub L",
       "matches": 2
     },
     {
+      "name": "Dj Precyce",
+      "matches": 3
+    },
+    {
+      "name": "DJ R Dub L",
+      "matches": 4
+    },
+    {
       "name": "Dj Ritz",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Dj Sanj",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "DJ Shub",
@@ -588,35 +525,27 @@
     },
     {
       "name": "DJ Sojah",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "DJKEMO",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "DnD",
       "matches": 0
     },
     {
-      "name": "Doman",
-      "matches": 4
-    },
-    {
       "name": "Don Milly",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Donny Anderson",
       "matches": 0
     },
     {
-      "name": "Down",
-      "matches": 4
-    },
-    {
       "name": "Drama Theme",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Duski",
@@ -632,7 +561,7 @@
     },
     {
       "name": "DÉVAH QUARTET",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "E.O Chapo",
@@ -640,7 +569,7 @@
     },
     {
       "name": "EfrainYB",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "El'Plaga",
@@ -651,24 +580,16 @@
       "matches": 0
     },
     {
-      "name": "Ellis",
-      "matches": 0
-    },
-    {
       "name": "Elsandro",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Emma Worley",
       "matches": 0
     },
     {
-      "name": "Endangered Species",
-      "matches": 1
-    },
-    {
       "name": "Enima",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Enola Bedard",
@@ -684,7 +605,7 @@
     },
     {
       "name": "Eric Right",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Eric Roberson",
@@ -708,11 +629,11 @@
     },
     {
       "name": "Famous",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "farewell tomorrow",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Fingazz",
@@ -743,20 +664,12 @@
       "matches": 3
     },
     {
-      "name": "Frankie Payne",
-      "matches": 2
-    },
-    {
       "name": "Fredo",
       "matches": 1
     },
     {
       "name": "Freedom Choir",
-      "matches": 0
-    },
-    {
-      "name": "Froboii",
-      "matches": 3
+      "matches": 1
     },
     {
       "name": "G Metro",
@@ -772,15 +685,15 @@
     },
     {
       "name": "Gangis Khan",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "Garou",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Gawd 5",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "GD",
@@ -789,10 +702,6 @@
     {
       "name": "GeeFaizel",
       "matches": 1
-    },
-    {
-      "name": "Gift",
-      "matches": 0
     },
     {
       "name": "Giggs",
@@ -812,7 +721,7 @@
     },
     {
       "name": "Glenn Morrison",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "GlomanOnThaBeat",
@@ -824,7 +733,7 @@
     },
     {
       "name": "Godflow",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Gord Taylor",
@@ -836,7 +745,7 @@
     },
     {
       "name": "Graham",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Grimeygang",
@@ -844,7 +753,7 @@
     },
     {
       "name": "Gritfall",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Gus",
@@ -868,15 +777,11 @@
     },
     {
       "name": "Harley G",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Hart",
-      "matches": 0
-    },
-    {
-      "name": "Harvey Stripes",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Hellbent",
@@ -884,15 +789,15 @@
     },
     {
       "name": "Hen's",
-      "matches": 0
-    },
-    {
-      "name": "Houdini",
       "matches": 1
     },
     {
+      "name": "Houdini",
+      "matches": 2
+    },
+    {
       "name": "Idles",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Illgod",
@@ -900,7 +805,7 @@
     },
     {
       "name": "Illy",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Inderpal Moga",
@@ -908,7 +813,7 @@
     },
     {
       "name": "Indica",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "ingrosso",
@@ -920,7 +825,7 @@
     },
     {
       "name": "Islove",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "J Neat",
@@ -928,7 +833,7 @@
     },
     {
       "name": "J.Lately",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Jackboy",
@@ -940,7 +845,7 @@
     },
     {
       "name": "Jacob Vallen",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Jah Cure",
@@ -948,7 +853,7 @@
     },
     {
       "name": "Jahmar Carter",
-      "matches": 2
+      "matches": 4
     },
     {
       "name": "Jasmin Castillo",
@@ -957,10 +862,6 @@
     {
       "name": "Jay Critch",
       "matches": 1
-    },
-    {
-      "name": "Jay Trak",
-      "matches": 3
     },
     {
       "name": "Jay Whiss",
@@ -975,14 +876,6 @@
       "matches": 0
     },
     {
-      "name": "Jean François Breau",
-      "matches": 0
-    },
-    {
-      "name": "Jean-pierre Ferland",
-      "matches": 0
-    },
-    {
       "name": "Jeff Bradshaw",
       "matches": 0
     },
@@ -992,7 +885,7 @@
     },
     {
       "name": "Jemeni",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Jemini The Gifted One",
@@ -1008,7 +901,7 @@
     },
     {
       "name": "Jimmie D",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Joanne Perica",
@@ -1020,7 +913,7 @@
     },
     {
       "name": "Joe Talbot",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Joee",
@@ -1028,7 +921,7 @@
     },
     {
       "name": "Joel Plaskett Emergency",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "John Legend",
@@ -1040,7 +933,7 @@
     },
     {
       "name": "John Shambles",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Jon McKiel",
@@ -1048,10 +941,6 @@
     },
     {
       "name": "Joolsannie",
-      "matches": 0
-    },
-    {
-      "name": "Josh Ramsay",
       "matches": 1
     },
     {
@@ -1060,27 +949,27 @@
     },
     {
       "name": "Jugga",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Juice",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Julian Thomas",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Junk",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Just John",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "K Fresh The Knemesis",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "K Money",
@@ -1088,19 +977,19 @@
     },
     {
       "name": "K-4ce",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "Kai Banks",
-      "matches": 0
-    },
-    {
-      "name": "KARABA",
       "matches": 1
     },
     {
-      "name": "Kash Phat",
+      "name": "KARABA",
       "matches": 2
+    },
+    {
+      "name": "Kash Phat",
+      "matches": 3
     },
     {
       "name": "Ken Presse",
@@ -1112,23 +1001,15 @@
     },
     {
       "name": "Keys N Krates",
-      "matches": 0
-    },
-    {
-      "name": "Keysha Freshh",
       "matches": 1
     },
     {
       "name": "Kid Frankie",
-      "matches": 0
-    },
-    {
-      "name": "Kid Sharif",
-      "matches": 4
+      "matches": 1
     },
     {
       "name": "Killa",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Kim Esty",
@@ -1136,7 +1017,7 @@
     },
     {
       "name": "king bliss",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "King Dapz",
@@ -1144,15 +1025,11 @@
     },
     {
       "name": "KMNI",
-      "matches": 0
-    },
-    {
-      "name": "Knowledge",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Knowuh",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "KOLA",
@@ -1160,19 +1037,11 @@
     },
     {
       "name": "Kris the $pirit",
-      "matches": 0
-    },
-    {
-      "name": "KTOE",
-      "matches": 0
-    },
-    {
-      "name": "Kxng Wooz",
-      "matches": 4
+      "matches": 2
     },
     {
       "name": "Kylie Minogue",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Kylo",
@@ -1180,7 +1049,7 @@
     },
     {
       "name": "LA Luv",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "laidba",
@@ -1192,11 +1061,11 @@
     },
     {
       "name": "Latisha Brown",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Lazyeye",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "LeMind",
@@ -1204,11 +1073,7 @@
     },
     {
       "name": "Leod",
-      "matches": 0
-    },
-    {
-      "name": "Lil Berete",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Lil J",
@@ -1223,10 +1088,6 @@
       "matches": 4
     },
     {
-      "name": "Lincoln",
-      "matches": 4
-    },
-    {
       "name": "Lindasson",
       "matches": 0
     },
@@ -1236,7 +1097,7 @@
     },
     {
       "name": "LiquidLtd",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Lito",
@@ -1259,14 +1120,6 @@
       "matches": 0
     },
     {
-      "name": "Lost",
-      "matches": 4
-    },
-    {
-      "name": "Lotus James",
-      "matches": 1
-    },
-    {
       "name": "Lou Phelps",
       "matches": 1
     },
@@ -1283,19 +1136,7 @@
       "matches": 0
     },
     {
-      "name": "Luce Dufault",
-      "matches": 0
-    },
-    {
-      "name": "Luck Mervil",
-      "matches": 0
-    },
-    {
       "name": "Luvinya",
-      "matches": 1
-    },
-    {
-      "name": "Lxvndr",
       "matches": 1
     },
     {
@@ -1304,11 +1145,11 @@
     },
     {
       "name": "M-Deezy",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "Mali",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Maliibu Miitch",
@@ -1320,46 +1161,18 @@
     },
     {
       "name": "Manny",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Manu Militari",
-      "matches": 1
-    },
-    {
-      "name": "Mapouginen",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Maria Aragon",
       "matches": 0
     },
     {
-      "name": "MARIE-JOSEE LORD",
-      "matches": 0
-    },
-    {
-      "name": "Marie-Ève Janvier",
-      "matches": 0
-    },
-    {
       "name": "Mark Masri",
-      "matches": 0
-    },
-    {
-      "name": "Markit",
-      "matches": 4
-    },
-    {
-      "name": "Martine St-Clair",
-      "matches": 0
-    },
-    {
-      "name": "Marvel",
-      "matches": 1
-    },
-    {
-      "name": "Maxime Landry",
       "matches": 0
     },
     {
@@ -1368,15 +1181,15 @@
     },
     {
       "name": "Meeno Giinchy",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Meggo",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Memblem",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Mic Check",
@@ -1384,7 +1197,7 @@
     },
     {
       "name": "Michael J Foxx",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Michael Savona",
@@ -1400,23 +1213,19 @@
     },
     {
       "name": "Milk",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Mista Bourne",
-      "matches": 0
+      "matches": 4
     },
     {
       "name": "MOMONEYMATTEO",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Monark",
-      "matches": 0
-    },
-    {
-      "name": "Monsune",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Monument",
@@ -1424,7 +1233,7 @@
     },
     {
       "name": "Morbid Concepts",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Motion",
@@ -1444,15 +1253,11 @@
     },
     {
       "name": "Ms. Davis",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Msav",
       "matches": 0
-    },
-    {
-      "name": "Muneshine",
-      "matches": 4
     },
     {
       "name": "Naledge",
@@ -1460,11 +1265,11 @@
     },
     {
       "name": "Naomi",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Narcy",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "NH$ Jay Jay",
@@ -1472,11 +1277,11 @@
     },
     {
       "name": "Nicole Holness",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Nicole Holness Aka X-quisite",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Night Lovell",
@@ -1484,11 +1289,7 @@
     },
     {
       "name": "Nikki",
-      "matches": 1
-    },
-    {
-      "name": "Nilla",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "NITAP",
@@ -1496,23 +1297,23 @@
     },
     {
       "name": "Noam",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "NorthSideBaby",
-      "matches": 2
+      "matches": 4
     },
     {
       "name": "Ntwali",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Nvrth",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Nyce",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "OB",
@@ -1540,19 +1341,19 @@
     },
     {
       "name": "One8tea",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Orlanda",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Orville Peck",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "P Reign",
-      "matches": 2
+      "matches": 4
     },
     {
       "name": "Parkside",
@@ -1560,7 +1361,7 @@
     },
     {
       "name": "Pay$o",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Pengz",
@@ -1568,11 +1369,11 @@
     },
     {
       "name": "Peter Jackson",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Philipe",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Pilla B",
@@ -1580,11 +1381,11 @@
     },
     {
       "name": "Pimpton",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Poizunus",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Pooky G",
@@ -1592,7 +1393,7 @@
     },
     {
       "name": "President Zik",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Psychic Armour",
@@ -1604,23 +1405,19 @@
     },
     {
       "name": "Punchinrd",
-      "matches": 1
+      "matches": 4
     },
     {
       "name": "Pvrx",
       "matches": 1
     },
     {
-      "name": "Quantacious",
-      "matches": 0
-    },
-    {
       "name": "QuestionATL",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "RACH",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Rain 910",
@@ -1640,19 +1437,11 @@
     },
     {
       "name": "RAYIAN",
-      "matches": 0
-    },
-    {
-      "name": "Red-1 of Rascalz",
-      "matches": 2
-    },
-    {
-      "name": "Rel McCoy",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Renny Holladae",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Richard Margison",
@@ -1668,7 +1457,7 @@
     },
     {
       "name": "RL",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Robb Klarke",
@@ -1683,16 +1472,8 @@
       "matches": 0
     },
     {
-      "name": "Rochester",
-      "matches": 3
-    },
-    {
       "name": "Ron Korb",
       "matches": 0
-    },
-    {
-      "name": "Roney",
-      "matches": 1
     },
     {
       "name": "Rory",
@@ -1708,11 +1489,11 @@
     },
     {
       "name": "Rowena Fysx",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Royal Canoe",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Rubben Studdard",
@@ -1724,19 +1505,15 @@
     },
     {
       "name": "Sabre",
-      "matches": 0
-    },
-    {
-      "name": "Sadat X",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "Saint Kay",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Sajaa.",
-      "matches": 3
+      "matches": 4
     },
     {
       "name": "Salia Joseph",
@@ -1759,16 +1536,8 @@
       "matches": 0
     },
     {
-      "name": "Savilion",
-      "matches": 0
-    },
-    {
-      "name": "Seb C",
-      "matches": 3
-    },
-    {
       "name": "Sebastien Grainger",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "See Spot Run",
@@ -1777,10 +1546,6 @@
     {
       "name": "Serenade",
       "matches": 0
-    },
-    {
-      "name": "Seth Dyer",
-      "matches": 4
     },
     {
       "name": "Shadough",
@@ -1792,11 +1557,11 @@
     },
     {
       "name": "Shania Twain",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Shanks Sioux",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "ShaqIsDope",
@@ -1808,11 +1573,11 @@
     },
     {
       "name": "Shog Stan",
-      "matches": 2
+      "matches": 4
     },
     {
       "name": "Shub",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Sick Ppl",
@@ -1820,7 +1585,7 @@
     },
     {
       "name": "Sim",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Simone Denny",
@@ -1828,23 +1593,19 @@
     },
     {
       "name": "Singing Diva",
-      "matches": 0
-    },
-    {
-      "name": "Sister Ray",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "skrta",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Sleepy Tom",
-      "matches": 2
+      "matches": 3
     },
     {
       "name": "SLM",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Smiley",
@@ -1856,31 +1617,23 @@
     },
     {
       "name": "Smokey",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Soft Eyez",
-      "matches": 1
-    },
-    {
-      "name": "Sonny Hendrixx",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Spade",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Spek",
       "matches": 1
     },
     {
-      "name": "Spesh K",
-      "matches": 4
-    },
-    {
       "name": "Spitty",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Stanley Clarke",
@@ -1892,15 +1645,15 @@
     },
     {
       "name": "Strik-9",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Sunny Diamonds",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Sunny Malton",
-      "matches": 1
+      "matches": 3
     },
     {
       "name": "Supawassi",
@@ -1916,7 +1669,7 @@
     },
     {
       "name": "Swaine",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "T-jin",
@@ -1924,15 +1677,15 @@
     },
     {
       "name": "tadiie",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "taji love.",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Taktika",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Talib Kweli",
@@ -1964,11 +1717,7 @@
     },
     {
       "name": "Tee",
-      "matches": 0
-    },
-    {
-      "name": "Terell Safadi",
-      "matches": 2
+      "matches": 1
     },
     {
       "name": "The Bankes Brothers",
@@ -1976,7 +1725,7 @@
     },
     {
       "name": "The Glorious Sons",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "The Gypsies",
@@ -1988,15 +1737,11 @@
     },
     {
       "name": "The Heist",
-      "matches": 0
-    },
-    {
-      "name": "The Slakadeliqs",
       "matches": 1
     },
     {
-      "name": "The Sorority",
-      "matches": 3
+      "name": "The Slakadeliqs",
+      "matches": 2
     },
     {
       "name": "The Tragically Hip",
@@ -2015,16 +1760,12 @@
       "matches": 0
     },
     {
-      "name": "Theology 3",
-      "matches": 2
-    },
-    {
       "name": "TheQ.",
       "matches": 0
     },
     {
       "name": "TheRa11n",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "tinchy stryder",
@@ -2055,16 +1796,12 @@
       "matches": 0
     },
     {
-      "name": "Top5",
-      "matches": 4
-    },
-    {
       "name": "Tre Mission",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Trishannah",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Troy Laureta",
@@ -2080,7 +1817,7 @@
     },
     {
       "name": "Tylor Wauneka",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Unknown Artist",
@@ -2091,20 +1828,12 @@
       "matches": 0
     },
     {
-      "name": "Vilaxxs",
-      "matches": 4
-    },
-    {
       "name": "Vince Maria",
       "matches": 1
     },
     {
       "name": "VT",
-      "matches": 1
-    },
-    {
-      "name": "Walk Off the Earth",
-      "matches": 0
+      "matches": 2
     },
     {
       "name": "Wassa",
@@ -2120,14 +1849,10 @@
     },
     {
       "name": "Wendy MacIsaac",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Westside Gunn",
-      "matches": 0
-    },
-    {
-      "name": "White-B",
       "matches": 0
     },
     {
@@ -2136,15 +1861,11 @@
     },
     {
       "name": "Why G",
-      "matches": 1
+      "matches": 2
     },
     {
       "name": "Why S",
       "matches": 0
-    },
-    {
-      "name": "Wio K",
-      "matches": 3
     },
     {
       "name": "WIZZY",
@@ -2152,19 +1873,15 @@
     },
     {
       "name": "Wolf Castle",
-      "matches": 0
+      "matches": 3
     },
     {
       "name": "Wolfy Lights",
       "matches": 4
     },
     {
-      "name": "WondaGurl",
-      "matches": 4
-    },
-    {
       "name": "Wrekonize",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "X-Quisite",
@@ -2172,11 +1889,7 @@
     },
     {
       "name": "X.E.L.",
-      "matches": 1
-    },
-    {
-      "name": "X2FromTheCIV",
-      "matches": 3
+      "matches": 2
     },
     {
       "name": "Xheffie",
@@ -2188,7 +1901,7 @@
     },
     {
       "name": "Yaego",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "YGrio",
@@ -2208,7 +1921,7 @@
     },
     {
       "name": "Young Rose",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Young Sid",
@@ -2217,10 +1930,6 @@
     {
       "name": "Young Smoke",
       "matches": 1
-    },
-    {
-      "name": "Young Stitch",
-      "matches": 2
     },
     {
       "name": "YSL Reggie",
@@ -2240,14 +1949,10 @@
     },
     {
       "name": "Zack",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Zammy",
-      "matches": 0
-    },
-    {
-      "name": "Zayo",
       "matches": 0
     },
     {
@@ -2256,7 +1961,7 @@
     },
     {
       "name": "ZIG MENTALITY",
-      "matches": 0
+      "matches": 1
     },
     {
       "name": "Zinera",
@@ -2265,13 +1970,9 @@
     {
       "name": "Zoë",
       "matches": 0
-    },
-    {
-      "name": "ТоНа",
-      "matches": 0
     }
   ],
-  "profilesWithMatches": 1095,
-  "profilesWithFiveMatches": 899,
-  "profilesWithoutMatches": 370
+  "profilesWithMatches": 1257,
+  "profilesWithFiveMatches": 974,
+  "profilesWithoutMatches": 208
 }

@@ -6,9 +6,9 @@ import json
 import re
 import unicodedata
 try:
-    from .discovery_profiles import extract_profile, extract_relationships, extract_track_relationships
+    from .discovery_profiles import extract_profile, extract_relationships, extract_track_relationships, extract_verified_credit_relationships
 except ImportError:
-    from discovery_profiles import extract_profile, extract_relationships, extract_track_relationships
+    from discovery_profiles import extract_profile, extract_relationships, extract_track_relationships, extract_verified_credit_relationships
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -156,6 +156,7 @@ def build() -> dict:
     expanded_profiles = 0
     artists = []
     seen: set[str] = set()
+    directory_records = {}
 
     for block in blocks:
         summary_html = first_match(r"<summary\b[^>]*>([\s\S]*?)</summary>", block)
@@ -166,7 +167,10 @@ def build() -> dict:
         name = re.sub(r"\(\s*\d+\s+tracks?\s*\)\s*$", "", name, flags=re.I).strip()
         key = normalize(name)
 
-        if not name or key in seen or key in removed or key == "ari lennox":
+        if key in seen:
+            directory_records[key]["_trackTitles"].extend(clean_text(t) for t in re.findall(r'class="track-title"[^>]*>([\s\S]*?)</div>', block))
+            continue
+        if not name or key in removed or key == "ari lennox":
             continue
         seen.add(key)
 
@@ -259,6 +263,7 @@ def build() -> dict:
         if related:
             item["connections"] = related
         artists.append(item)
+        directory_records[key] = item
 
     # A profile is the stable identity; punctuation variants are library credits.
     # These alternate credits are explicitly identified by the existing profile biographies.
@@ -300,7 +305,9 @@ def build() -> dict:
             if other != artist["name"]:
                 links.setdefault(other, {**link, "artist": other})
         artist["connections"] = list(links.values())
-    automatic = extract_relationships(artists) + extract_track_relationships(artists)
+    credit_path = ROOT / "discovery-track-credits.json"
+    verified_credits = extract_verified_credit_relationships(artists, json.loads(credit_path.read_text())) if credit_path.exists() else []
+    automatic = extract_relationships(artists) + extract_track_relationships(artists) + verified_credits
     for artist in artists:
         links = artist.setdefault("connections", [])
         known = {normalize(c["artist"]) for c in links}
@@ -315,7 +322,7 @@ def build() -> dict:
         artist.pop("_evidenceSources", None)
         for signal in artist["signals"]:
             signal.setdefault("source", artist.get("profileHref") or "/artists.html")
-    report = {"artists": len(artists), "expandedProfiles":expanded_profiles, "researchedProfiles":len(enrichment), "automaticRelationships":len(automatic),
+    report = {"artists": len(artists), "expandedProfiles":expanded_profiles, "researchedProfiles":len(enrichment), "automaticRelationships":len(automatic), "verifiedCreditRelationships":len(verified_credits),
         "withSignals":sum(bool(a["signals"]) for a in artists),
         "withConnections":sum(bool(a["connections"]) for a in artists),
         "needsEnrichment":[a["name"] for a in artists if not a["signals"] and not a["connections"]]}
