@@ -75,7 +75,6 @@
     .panel h2{font-family:"Bebas Neue",sans-serif;font-size:2.2rem;font-weight:400;letter-spacing:.04em;line-height:1;margin:5px 0 0}
     .now{padding:17px}
     .now-title{font-family:"Oswald",sans-serif;font-size:1.25rem;font-weight:700;line-height:1.25}
-    .now-channel{color:#bdb7aa;margin-top:5px;font-size:.92rem}
     .artist-link{display:inline-block;margin-top:14px;padding:10px 14px;border:2px solid var(--red);color:#fff;text-decoration:none;font-family:"Oswald",sans-serif;font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
     .artist-link:hover,.artist-link:focus-visible{background:var(--red);outline-offset:3px}
     .artist-link[hidden]{display:none}
@@ -149,7 +148,6 @@
           </div>
           <div class="now">
             <div class="now-title" id="nowTitle">Northern Dial TV</div>
-            <div class="now-channel" id="nowChannel">Curated by Northern Dial</div>
             <a class="artist-link" id="tvArtistLink" target="_blank" rel="noopener noreferrer" hidden>Meet the artist</a>
             <div class="counter" id="counter">Waiting for signal</div>
             <div class="controls">
@@ -194,7 +192,6 @@
     const empty = document.getElementById("screenEmpty");
     const ticker = document.getElementById("ticker");
     const nowTitle = document.getElementById("nowTitle");
-    const nowChannel = document.getElementById("nowChannel");
     const counter = document.getElementById("counter");
     const poster = document.getElementById("tvPoster");
     const artistLink = document.getElementById("tvArtistLink");
@@ -257,14 +254,24 @@
       if(!player || typeof player.getVideoData !== "function") return;
       const data = player.getVideoData() || {};
       const title = data.title || "Northern Dial TV";
-      const author = data.author || "Curated by Northern Dial";
       ticker.textContent = title;
       nowTitle.textContent = title;
-      nowChannel.textContent = author;
       updateArtistLink(data);
       const list = player.getPlaylist ? (player.getPlaylist() || []) : [];
       const index = player.getPlaylistIndex ? player.getPlaylistIndex() : -1;
       counter.textContent = list.length && index >= 0 ? `Video ${index + 1} of ${list.length}` : "Northern Dial TV";
+    }
+
+    function disableCaptions(){
+      if(!player) return;
+      // YouTube may restore viewer preferences when a new video loads.
+      // These optional APIs are not guaranteed across all embed versions.
+      try {
+        if(typeof player.setOption === "function") player.setOption("captions","track",{});
+        if(typeof player.unloadModule === "function") player.unloadModule("captions");
+      } catch(error) {
+        // Caption settings must never interrupt playback.
+      }
     }
 
     function onYouTubeIframeAPIReady(){
@@ -277,6 +284,7 @@
           list:PLAYLIST_ID,
           rel:0,
           controls:0,
+          cc_load_policy:0,
           fs:0,
           iv_load_policy:3,
           playsinline:1
@@ -284,6 +292,7 @@
         events:{
           onReady:function(){
             playerReady = true;
+            disableCaptions();
             player.setShuffle(shuffleOn);
             playBtn.disabled = false;
             muteBtn.disabled = false;
@@ -291,7 +300,9 @@
             updateControls();
             titleTimer=setInterval(()=>{ updateMetadata(); updateControls(); },1200);
           },
+          onApiChange:disableCaptions,
           onStateChange:function(event){
+            if(event.data === YT.PlayerState.PLAYING) disableCaptions();
             if(event.data === YT.PlayerState.PLAYING && window.NDPlayer && window.NDPlayer.isPlaying()) window.NDPlayer.pause();
             updateMetadata();
             updateControls();
