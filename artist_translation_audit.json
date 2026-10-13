@@ -116,12 +116,203 @@
   ],
   "translation_records": 1133,
   "generated_pages": 1133,
-  "english_hreflang_updates": 0,
+  "english_hreflang_updates": 1125,
   "missing_source_count": 0,
   "missing_sources": [],
   "paired_pages": 1125,
-  "short_bio_review_count": 0,
-  "short_bios_for_review": [],
+  "short_bio_review_count": 38,
+  "short_bios_for_review": [
+    {
+      "slug": "aiza",
+      "english_words": 83,
+      "french_words": 32
+    },
+    {
+      "slug": "alicia-moffet",
+      "english_words": 100,
+      "french_words": 23
+    },
+    {
+      "slug": "aliocha-schneider",
+      "english_words": 97,
+      "french_words": 25
+    },
+    {
+      "slug": "allan-rayman",
+      "english_words": 95,
+      "french_words": 27
+    },
+    {
+      "slug": "anais-cardot",
+      "english_words": 74,
+      "french_words": 22
+    },
+    {
+      "slug": "andy-shauf",
+      "english_words": 100,
+      "french_words": 21
+    },
+    {
+      "slug": "anna-katarina",
+      "english_words": 79,
+      "french_words": 30
+    },
+    {
+      "slug": "anna-sofia",
+      "english_words": 109,
+      "french_words": 27
+    },
+    {
+      "slug": "anomalie",
+      "english_words": 102,
+      "french_words": 25
+    },
+    {
+      "slug": "aqyila",
+      "english_words": 87,
+      "french_words": 22
+    },
+    {
+      "slug": "ardn",
+      "english_words": 95,
+      "french_words": 24
+    },
+    {
+      "slug": "arman-ayva",
+      "english_words": 52,
+      "french_words": 23
+    },
+    {
+      "slug": "arpin-lepine",
+      "english_words": 55,
+      "french_words": 20
+    },
+    {
+      "slug": "asun-eastwood",
+      "english_words": 81,
+      "french_words": 31
+    },
+    {
+      "slug": "boslen",
+      "english_words": 97,
+      "french_words": 25
+    },
+    {
+      "slug": "charmaine",
+      "english_words": 81,
+      "french_words": 27
+    },
+    {
+      "slug": "connor-price",
+      "english_words": 121,
+      "french_words": 25
+    },
+    {
+      "slug": "cri",
+      "english_words": 132,
+      "french_words": 28
+    },
+    {
+      "slug": "dear-rouge",
+      "english_words": 112,
+      "french_words": 27
+    },
+    {
+      "slug": "desiire",
+      "english_words": 69,
+      "french_words": 25
+    },
+    {
+      "slug": "dirty-radio",
+      "english_words": 84,
+      "french_words": 19
+    },
+    {
+      "slug": "dvsn",
+      "english_words": 103,
+      "french_words": 27
+    },
+    {
+      "slug": "frvrfriday",
+      "english_words": 93,
+      "french_words": 22
+    },
+    {
+      "slug": "grandtheft",
+      "english_words": 99,
+      "french_words": 29
+    },
+    {
+      "slug": "justin-nozuka",
+      "english_words": 105,
+      "french_words": 24
+    },
+    {
+      "slug": "karim-ouellet",
+      "english_words": 98,
+      "french_words": 24
+    },
+    {
+      "slug": "kellylee-evans",
+      "english_words": 114,
+      "french_words": 29
+    },
+    {
+      "slug": "kimmortal",
+      "english_words": 103,
+      "french_words": 27
+    },
+    {
+      "slug": "kiwi-jr",
+      "english_words": 102,
+      "french_words": 25
+    },
+    {
+      "slug": "la-securite",
+      "english_words": 88,
+      "french_words": 23
+    },
+    {
+      "slug": "magi-merlin",
+      "english_words": 112,
+      "french_words": 29
+    },
+    {
+      "slug": "olivia-lunny",
+      "english_words": 129,
+      "french_words": 26
+    },
+    {
+      "slug": "plaza",
+      "english_words": 97,
+      "french_words": 26
+    },
+    {
+      "slug": "raahiim",
+      "english_words": 88,
+      "french_words": 23
+    },
+    {
+      "slug": "shawnee-kish",
+      "english_words": 115,
+      "french_words": 22
+    },
+    {
+      "slug": "shay-lia",
+      "english_words": 87,
+      "french_words": 20
+    },
+    {
+      "slug": "sofia-camara",
+      "english_words": 116,
+      "french_words": 21
+    },
+    {
+      "slug": "sophie-powers",
+      "english_words": 90,
+      "french_words": 25
+    }
+  ],
   "paragraph_gap_count": 0,
   "paragraph_gaps": []
 }
