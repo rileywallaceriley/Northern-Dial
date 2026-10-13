@@ -1,6 +1,6 @@
 {
   "batch_limit": 50,
-  "candidate_count": 46,
+  "candidate_count": 50,
   "candidates": [
     {
       "key": "$anteria",
@@ -45,6 +45,71 @@
       ]
     },
     {
+      "key": "aiza",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "d323e7e8d10dc16fa4e0042f1d6b6af1a515630110e038b06f5acc18280d6890",
+      "display_name": "Aiza",
+      "bio": "Aiza Ntibarikure, known as Aiza, is a Toronto-based singer-songwriter and actress born in Montreal to Burundian parents. Blending R&B and Afro-pop in both English and French, she released her debut album Sovereignty on September 29, 2023. Alongside music she has built an acting career: she plays superhero Sierra Ectoplex in Netflix's Jupiter's Legacy and Maya Bronté on CBC's Workin' Moms, voices Jazzy in the children's series Jeremy and Jazzy, and has had songs placed in series including Tuca & Bertie and Kim's Convenience.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://aizamusic.com/",
+      "instagram": "",
+      "sources": [
+        "https://aizamusic.com/",
+        "https://aiza.bandcamp.com/album/sovereignty",
+        "https://harthouse.ca/profile/aiza",
+        "https://filmfreeway.com/REALBLACKITYTALK"
+      ]
+    },
+    {
+      "key": "alicia moffet",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "c87aaddb100aeeacb0ed6bd93e7da894701ac3f6fa62282734419d6a1a0ff818",
+      "display_name": "Alicia Moffet",
+      "bio": "Québec City-born pop singer-songwriter Alicia Moffet broke through by winning the 2013 season of YTV's The Next Star at 15, earning a chance to record a single licensed by Sony Music Canada. She released \"Why Do Boys Lie\" in 2014 and appeared on La Voix in 2015. After a string of independent singles in 2019, she released her debut album Billie Ave. in June 2020, named after her daughter, followed by Intertwine (2022) and No, I'm Not Crying (2025). Her bilingual catalogue moves between pop, R&B and folk-tinged ballads. In 2023 and 2024 she co-hosted the reality series Occupation Double.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://www.aliciamoffet.com/",
+      "instagram": "https://www.instagram.com/aliciamoffet/",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alicia_Moffet"
+      ]
+    },
+    {
+      "key": "aliocha schneider",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "12f0519a6995e67c3b6cef743aec37fbf63542075da499d60969dba38f4d44f0",
+      "display_name": "Aliocha Schneider",
+      "bio": "Paris-born, Québec-raised singer-songwriter and actor Aliocha Schneider works in both French and English. His screen debut came in Bon Cop, Bad Cop (2006), followed by roles in Maman est chez le coiffeur (2008), Le Journal d'Aurélie Laflamme (2010) and Closet Monster (2015). Jean Leloup invited him to record with The Last Assassins before Schneider launched his solo music career with the Sorry Eyes EP in 2016, nominated for Best Folk EP at the 2017 GAMIQ Awards. His albums include Eleven Songs (2017), featuring the single \"Flash in the Pan,\" Naked (2020), and the self-titled Aliocha Schneider (2023).",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://aliocha-schneider.com/",
+      "instagram": "https://www.instagram.com/aliocha.s/",
+      "sources": [
+        "https://www.azimutfilms.com/app/uploads/2023/10/Ville-Marie_Dossier_de_presse_Francais.pdf",
+        "https://www.socanmagazine.ca/features/aliochas-lucky-stars/",
+        "https://www.audiogram.com/artistes/aliocha-schneider/",
+        "https://voir.ca/nouvelles/actualite-musicale/2017/10/10/gamiq-2017-alaclair-ensemble-et-chocolat-en-tete-des-nominations/"
+      ]
+    },
+    {
+      "key": "allan rayman",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "6708ef91ae68ca6fd39704fb2c70faf4225c43b499a67c48ce838f304fa0b067",
+      "display_name": "Allan Rayman",
+      "bio": "Toronto-based singer-songwriter Allan Rayman pairs a gravelly voice with shadowy alternative R&B, folding in hip-hop, grunge and alternative rock. He broke through with Hotel Allan, self-released in 2015 and issued through Communion Music in 2016, the label co-founded by Mumford & Sons' Ben Lovett. Its follow-up, Roadhouse 01 (2017), built a narrative record around his \"Mr. Roadhouse\" alter ego. He earned a 2018 JUNO nomination for Breakthrough Artist of the Year. Further albums Harry Hard-on (2018), Christian (2020), Roadhouse 02 (2022) and The All Allan Hour (2024) followed, matched by a deliberately cryptic visual world.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://www.allanrayman.com/",
+      "instagram": "https://www.instagram.com/allanrayman/",
+      "sources": [
+        "https://www.allmusic.com/artist/allan-rayman-mn0003441280",
+        "https://www.allmusic.com/album/hotel-allan-mw0002885852",
+        "https://livemixtapes.com/mixtape/allan-rayman-hotel-allan",
+        "https://junoawards.ca/wp-content/uploads/2018/02/2018-JUNO-AWARD-NOMINEES.pdf"
+      ]
+    },
+    {
       "key": "andre waithe",
       "reason": "missing_translation",
       "source_bio_sha256": "202fb91e9e489b6b3403509d528a9b62985f3fa1da9e18cf552ce0ecfd9d0ab7",
@@ -55,6 +120,158 @@
       "website": "",
       "instagram": "",
       "sources": []
+    },
+    {
+      "key": "andy shauf",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "ef6daf7286f383e3b3d8c69ab9068b686ad235be5767b5404f558418f590c96e",
+      "display_name": "Andy Shauf",
+      "bio": "Andy Shauf is a Saskatchewan-born singer-songwriter and multi-instrumentalist known for detailed narrative songs. Born in Estevan and raised in Bienfait before settling in Regina, Shauf played drums in the Christian pop-punk band Captain before going solo, self-releasing early records and signing to Arts & Crafts in Canada and ANTI- internationally in 2015. His breakthrough came with the 2016 concept album The Party, a Polaris Music Prize shortlist finalist on which he played nearly every instrument himself. He followed it with The Neon Skyline (2020), earned multiple Juno nominations, and records with the band Foxwarren. He moved to Toronto in 2016.",
+      "city": "Regina, Saskatchewan",
+      "country": "Canada",
+      "website": "https://andyshauf.com/",
+      "instagram": "https://www.instagram.com/andyshauf/",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Andy_Shauf",
+        "https://nowtoronto.com/music/features/andy-shauf-moves-to-toronto/",
+        "https://polarismusicprize.ca/2016-nominees/"
+      ]
+    },
+    {
+      "key": "anna katarina",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "b86567b7aeeaf372ec9751f469cad4c7394d9b057465121d389b6ede22304f03",
+      "display_name": "Anna Katarina",
+      "bio": "Anna Katarina is a Vancouver-based Canadian-American singer-songwriter, multi-instrumentalist and producer. Trained in classical music from childhood, she studied at Selkirk College and Berklee College of Music, and performs on vocals, keys and guitar. Her solo work blends indie pop and rock with folk and soul; her debut solo album arrived in October 2022. She is also one half of the indie-folk duo Rumour Mill, whose work has received US college-radio play and screen placements in American film and TV.",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "https://annakatarinamusic.com/",
+      "instagram": "",
+      "sources": [
+        "https://concertsincare.ca/bc-artists/anna-katarina/",
+        "https://annakatarina.bandcamp.com/album/daisychain",
+        "https://www.factor.ca/success-stories/rumour-mill/"
+      ]
+    },
+    {
+      "key": "anna sofia",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "ba33776f4cecaff3a5e6f6c481a855d5cdab1acc78b21c30e813f0d7436a8ef3",
+      "display_name": "Anna Sofia",
+      "bio": "Toronto-area singer, songwriter and multi-instrumentalist Anna Sofia emerged as a teenager writing candid songs about high-school life. She debuted with the single \"Meaner Girl\" in 2019 at 15, followed by \"I Try\" and \"No Fun\" and her debut EP Self Aware Bitch (2020) on Republic Records. Signed to Universal Music Canada, she released the Broken Perfection EP later that year, working with producers Jeff Hazin and Frank Dukes, and earning notice from Wonderland, Complex, American Songwriter and IDOLATOR. Drawing on '70s and '80s radio pop alongside electronica, hip-hop and lo-fi indie rock, she continued with the 2022 EP LET ME OUT I'M FREE! and later singles on Ultra Records.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://www.universalmusic.ca/2019/11/15/anna-sofia-doesnt-care-if-you-call-her-boring-on-new-single-no-fun/",
+        "https://www.universalmusic.ca/2020/07/31/anna-sofia-reveals-stunning-new-ep-broken-perfection-out-today/",
+        "https://www.complex.com/music/a/james-keith/premiere-anna-sofia-meaner-girl",
+        "https://music.apple.com/us/album/let-me-out-im-free-ep/1622115171",
+        "https://music.apple.com/us/album/do-what-i-want-single/1841499214"
+      ]
+    },
+    {
+      "key": "anomalie",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "f11f73a08ef5e5be0f441d719086b80b4665a38a4bd3113ad88c7b48e96e8a00",
+      "display_name": "Anomalie",
+      "bio": "Anomalie is the project of Montréal keyboardist, composer and producer Nicolas Dupuis, a classically trained pianist with a background in classical and jazz. His EPs Métropole (2017) and Métropole Part II (2018), inspired by his hometown, established his fusion of jazz-funk musicianship with groove-driven electronic production. He followed them with the Bend the Rules EP with Chromeo (2020), Galerie (2022) and Holidays (2023). Performing as Anomalie Live with a four-piece band, he has toured across North America, Europe and Asia and played Red Rocks, the Montreal Jazz Festival and Electric Forest. His early releases were self-released; he signed with Nettwerk in 2022.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://anomaliebeats.com/",
+      "instagram": "",
+      "sources": [
+        "https://www.musicconnection.com/signing-story-anomalie/",
+        "https://www.goldengateagency.com/artists/project-three-gdcnr",
+        "https://www.soundtoys.com/artist/anomalie/",
+        "https://anomaliebeats.bandcamp.com/album/holidays",
+        "https://anomaliebeats.bandcamp.com/album/m-tropole-part-ii",
+        "https://www.julietrecords.com/releases/icarus-2/"
+      ]
+    },
+    {
+      "key": "aqyila",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "e1429eb1ee29d0ab8755a84a80bddbdcb95e207b74bba4f583b72afc3876b159",
+      "display_name": "Aqyila",
+      "bio": "Aqyila is a Toronto R&B singer-songwriter born Taahira Aquiyla Duff, an artist of Jamaican descent. Raised on gospel, reggae and R&B, she began uploading covers and originals online before \"Vibe for Me (Bob for Me)\" took off on TikTok in 2021. She signed with Sony Music Canada. Her debut EP For the Better (2023) featured \"Hello,\" which won the 2024 JUNO Award for Traditional R&B/Soul Recording of the Year. The viral single \"Bloom\" followed in 2024, and her debut full-length Falling into Place arrived in March 2025.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://www.aqyilamusic.com/",
+      "instagram": "",
+      "sources": [
+        "https://www.sonymusic.ca/en/artists/aqyila",
+        "https://www.sonymusic.ca/press_release/canadian-rb-artist-aqyila-releases-official-video-for-viral-tiktok-hit-vibe-for-me",
+        "https://www.sonymusic.ca/press_release/aqyila-releases-wolf-announces-album",
+        "https://junoawards.ca/caras-reveals-more-performers-for-the-2025-juno-awards-broadcast-live-on-cbc/"
+      ]
+    },
+    {
+      "key": "ardn",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "5101fbced7abea2279b2acf2dc2623c1d7c0b7929be135b3d24159ebfa851556",
+      "display_name": "ARDN",
+      "bio": "ARDN is a Burundian-Canadian rapper based in Edmonton, Alberta. He released his debut EP Goodwill in 2018 and followed it with ALIEN in 2020, building a name on introspective, melodic hip-hop. A snippet of \"Til The Morning\" went viral on TikTok in 2022. He signed to Capitol Records in 2023, releasing his major-label debut single \"Plain Jane\" that March. He toured across Canada and Europe opening for Isaiah Rashad. His 2025 album Keep Your Eye on the Sparrow earned a Juno Award nomination for Rap Album/EP of the Year at the Juno Awards of 2026.",
+      "city": "Edmonton, Alberta",
+      "country": "Canada",
+      "website": "",
+      "instagram": "https://www.instagram.com/ardnstuff/",
+      "sources": [
+        "https://www.broadwayworld.com/bwwmusic/article/ardn-releases-new-single-bullseye-20240202",
+        "https://www.udiscovermusic.com/news/ardn-plain-jane/",
+        "https://music.apple.com/us/album/plain-jane-single/1672482961",
+        "https://junoawards.ca/nominees/"
+      ]
+    },
+    {
+      "key": "arman ayva",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "5448139b2e0ca3a72e251948035ca72749d5cbb84b5defd961257f808a7d860d",
+      "display_name": "Arman Ayva",
+      "bio": "Arman Ayva is a Montreal-based composer and producer working in jazz-fusion, jazz-funk, ambient and electronic music. Of Armenian heritage, he has been experimenting with music since 2011, blending jazz-funk grooves with electronic textures and folk undertones. His influences include Marcus Miller and Dave Brubeck, and he releases independently through his own channels.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://armanayva.com/",
+      "instagram": "",
+      "sources": [
+        "https://armanayva.com/en",
+        "https://help.artistpr.com/press-release/an-exhilarating-fusion-of-alternative-ambient-and-electronic-rhythms-arman-ayva-unveils-playful-comebacks/"
+      ]
+    },
+    {
+      "key": "arpin lépine",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "a056cf2bca00a508e256d763903483e95bdebdcfe320852a1adc1c9231fc8e40",
+      "display_name": "Arpin Lépine",
+      "bio": "Québec singer-songwriter Arpin Lépine grew up in Saint-Félix-de-Valois, in the Lanaudière region. Blending country, rap and bluegrass with banjo, slide guitar and hip-hop-informed rhythms, he pairs rural storytelling with an unvarnished vocal style. He released the EPs DANS NOTRE COIN and Chance in 2025, followed by his debut solo album Lune Brune in January 2026.",
+      "city": "Saint-Félix-de-Valois, Québec",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://arpinlepine.ca/a-propos",
+        "https://music.apple.com/us/album/chance-ep/1861206208",
+        "https://music.apple.com/ca/song/1819342284",
+        "https://music.apple.com/us/artist/arpin-l%C3%A9pine/1804446381"
+      ]
+    },
+    {
+      "key": "asun eastwood",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "c2dff2917f6144470999961e84054fa6533453a7e832bae4c8d98ab8411a483e",
+      "display_name": "Asun Eastwood",
+      "bio": "Belize-born, Toronto-raised rapper Asun Eastwood is part of Canada's underground hip-hop scene and a member of the Brown Bag Money collective. Raised on Wu-Tang, he makes sample-driven boom-bap built on vivid storytelling and dense lyricism. His catalogue runs from the 2017 debut mixtape Hollywood Briggs through the Finn-produced With All Due Respect (2019) to collaborations with Futurewave and Daniel Son (Physics of Filth, Bite The Bullet), the Vago-produced Sewer Science (2020), and joint projects with Rochester's MAV and Toronto's Sibbs Roc.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://asuneastwood.com/",
+      "instagram": "",
+      "sources": [
+        "https://undergroundhiphopblog.com/albums/asun-eastwood-thetwinning-prophecy-is-my-present-album-review/",
+        "https://hotmc.com/2020/10/17/asun-eastwood-lintervista",
+        "https://deeplyrootedhiphop.com/2021/04/05/98-miles-asun-eastwood-x-mav-x-sibbs-roc/",
+        "https://www.throwup.it/en/music/reviews/migliori-album-hip-hop-2021/"
+      ]
     },
     {
       "key": "aviv",
@@ -72,6 +289,23 @@
       ]
     },
     {
+      "key": "boslen",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "8df02730abb138ac6e7dc66c88c16ac92d345332e183ebf30a02450914ac45f8",
+      "display_name": "Boslen",
+      "bio": "Vancouver rapper Boslen, born Corben Bowen, grew up in Chilliwack, British Columbia, and turned to music full-time after rugby injuries ended his University of Victoria scholarship, dropping out in 2018. That year he released the Motionless and Motionless II mixtapes, finding his sound on 2019's Black Lotus EP. He signed to Capitol Records and issued his debut album DUSK to DAWN in 2021, a cinematic alt-rap record mixing trap rhythms with rock, pop and punk energy and featuring Charmaine, Dro Kenji, Rascalz, Vory and Tyla Yaweh. He followed it with the GONZO EP on June 24, 2022.",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "https://www.boslenmusic.com/",
+      "instagram": "",
+      "sources": [
+        "https://www.paquinentertainment.com/artist/boslen",
+        "https://www.universalmusic.ca/2022/06/24/boslen-unleashes-boundary-pushing-ep-gonzo/",
+        "https://www.hotnewhiphop.com/350472-boslen-releases-ambitious-debut-album-dusk-to-dawn-new-mixtape",
+        "https://www.socanmagazine.ca/news/discover-next-generation-of-great-canadian-songwriters-with-2023-socan-songwriting-prize/"
+      ]
+    },
+    {
       "key": "brody myles",
       "reason": "missing_translation",
       "source_bio_sha256": "f6317591cc2cdf7b78a63bae673fa34ab9a60f4bfd1de284636d6d280dacd2f7",
@@ -82,6 +316,23 @@
       "website": "",
       "instagram": "",
       "sources": []
+    },
+    {
+      "key": "charmaine",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "f016250e1087766aed3e4e91257ecd3195531ae02233e2f9c7a7e3f5a61c58c9",
+      "display_name": "Charmaine",
+      "bio": "Charmaine Willie, known as Charmaine, is a Zimbabwean-Canadian rapper based in Toronto. Her Warner Music Canada debut single, \"Bold\" (2020), won the Juno Award for Rap Single of the Year in 2022, the first year the category was presented as a standalone award. She followed it with her debut EP, Hood Avant Garde (2021), featuring \"Bold\" and \"WOO!\". Named a Spotify Canada RADAR artist and Amazon Music Canada's Breakthrough artist, Charmaine pairs assertive, high-energy flows with a strong R&B singing voice.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://earmilk.com/2020/10/15/charmaine-makes-major-label-debut-with-bold-video/",
+        "https://junoawards.ca/blog/women-take-the-stage-historic-wins-at-the-2022-juno-awards/",
+        "https://notion.online/double-dutch-by-charmaine/",
+        "https://en.wikipedia.org/wiki/Charmaine_(rapper)"
+      ]
     },
     {
       "key": "cherrykim",
@@ -138,18 +389,72 @@
       "sources": []
     },
     {
+      "key": "connor price",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "6b5b6d246b845b77af7cbad94bfdd353a39194d686f946b9edd3d30dcd390697",
+      "display_name": "Connor Price",
+      "bio": "Connor Price is a Canadian rapper, actor, and internet personality from Markham, Ontario. He began performing at six and built a long acting career first, appearing as Jay Braddock in the film Cinderella Man (2005), as Kenny on Syfy's Being Human, and as Harry James on CBC's X Company. He turned to hip-hop in the late 2010s, releasing the debut project 4 of Clubs in 2018. In 2022 he released the singles \"Spinnin,\" \"Bankroll,\" and \"Buddy,\" followed by the viral Spin the Globe series, in which he collaborates with an artist from whichever country his finger lands on, released as the Spin the Globe project (2023) and Spin the Globe 2 (2024). His debut studio album About Time arrived in 2025.",
+      "city": "",
+      "country": "Canada",
+      "website": "https://www.connorprice.com/",
+      "instagram": "https://www.instagram.com/connorprice/",
+      "sources": [
+        "https://ca.rollingstone.com/connor-price-future-of-music-2026/",
+        "https://en.wikipedia.org/wiki/Connor_Price",
+        "https://music.apple.com/us/album/spin-the-globe/1666453562",
+        "https://music.apple.com/us/song/1652245013"
+      ]
+    },
+    {
+      "key": "cri",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "a26168c8daff39494027f5390a712027a44fb6a2fc2bb0015d2bf2c0ef1a216b",
+      "display_name": "CRi",
+      "bio": "CRi is the stage name of Christophe Dubé, a Québec electronic musician and producer. He began as a beatboxer in the electro-hip-hop group Feuilles et Racines before launching his solo electronic project with a self-released EP in 2013. He signed to the UK label Anjunadeep in 2019. His 2020 debut album Juvenile, featuring the Daniel Bélanger collaboration \"Signal,\" blended warm house grooves with French-language songwriting; it earned an Electronic Album of the Year nomination at the 2021 Juno Awards. In 2021 he was named Révélation de l'année (Breakthrough Artist) at ADISQ, and he followed up with the album Miracles (2023), featuring Half Moon Run and Klô Pelgag. His earlier EPs include Tell Her (2016) and Initial (2019); Someone Else (2017) earned a Juno nomination for Electronic Album of the Year in 2018.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/CRi",
+        "https://anjunadeep.com/products/393525-i-can-make-it",
+        "https://anjunadeep.com/us/features/cri-announces-new-album-miracles",
+        "https://www.adisq.com/2021/11/07/devoilement-des-gagnants-gala-de-ladisq-2021/",
+        "https://junoawards.ca/awards/past-winners-nominees/page/199/?sort=ASC&sortby=year"
+      ]
+    },
+    {
       "key": "deadly alfano",
       "reason": "missing_translation",
-      "source_bio_sha256": "9e5eeb0bd750bf440c6b454f6ca5512e141d032270e11a81a9aeae903d7d4d00",
-      "display_name": "deadly alfano",
-      "bio": "Deadly Alfano is a Toronto singer-songwriter who writes and performs original material.",
+      "source_bio_sha256": "6c528f5db3926e4c1a70ebdc1c6b5bebaa197b9008c1e4927ee83606b064fb5a",
+      "display_name": "Deadly Alfano",
+      "bio": "Deadly Alfano is the solo project of Toronto singer-songwriter Francesco Alfano, launched after years fronting the Toronto band Lucid Movement. His single \"Shelter,\" released October 2, 2026, was produced by J.C. Sandoval of St. Doval, mixed by Andrew Lauzon at Hamilton's Grant Avenue Studio and mastered by Noah Mintz at Lacquer Channel. Alfano leads the live band on vocals and guitar, joined by Sandoval on bass, Trison Boyes on guitar and Adam Houle on drums.",
       "city": "Toronto, Ontario",
       "country": "Canada",
       "website": "",
       "instagram": "https://www.instagram.com/deadlyalfano",
       "sources": [
-        "https://www.instagram.com/deadlyalfano",
-        "https://drive.google.com/drive/folders/1ymPTrAWusDd2uqqaYF66Nhy3EZ79_3Sv"
+        "https://tinnitist.com/2026/10/07/deadly-alfano-offers-you-shelter/",
+        "https://spillmagazine.com/spill-new-music-deadly-alfano-shelter/",
+        "https://www.recordworldinternational.com/2026/10/07/toronto-folk-rocker-deadly-alfano-carves-out-a-sanctuary-of-red-clay-and-renaissance-spirit-on-new-single-shelter/"
+      ]
+    },
+    {
+      "key": "dear rouge",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "364d9e7ac9212b60ee3d201496a0435f477d3cb97215a52d5ea98a6f66424957",
+      "display_name": "Dear Rouge",
+      "bio": "Dear Rouge are a Vancouver-based husband-and-wife alternative rock duo formed in 2012 by Danielle and Drew McTaggart. Both were touring musicians in other projects (Danielle in the duo Gaetz Ave, Drew in the band Maclean) when they met, married, and started the band, taking its name from Danielle's hometown of Red Deer, Alberta. After winning Vancouver's Peak Performance Project in 2012, their self-released single \"I Heard I Had\" became a Canadian radio hit and won the SOCAN Songwriting Prize. Following their major-label debut Black to Gold (2015), they won the Juno Award for Breakthrough Group of the Year in 2016. They followed it with PHASES (2018), Spirit (2022) and Lonesome High (2024).",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "https://dearrouge.com/",
+      "instagram": "https://www.instagram.com/dearrouge/",
+      "sources": [
+        "https://www.allmusic.com/artist/dear-rouge-mn0003345641",
+        "https://www.socan.com/dear-rouge-wins-10000-socan-songwriting-prize/",
+        "https://www.universalmusic.ca/2014/10/16/universal-music-canada-signs-vancouver-synth-rock-duo-dear-rouge/",
+        "https://junoawards.ca/awards/past-winners-nominees/page/343/?sort=DESC&sortby=name",
+        "https://en.wikipedia.org/wiki/Dear_Rouge"
       ]
     },
     {
@@ -163,6 +468,56 @@
       "website": "",
       "instagram": "",
       "sources": []
+    },
+    {
+      "key": "desiire",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "c29667a448dbf782f721661a0187a9c5856a4dd362edd15228a6758d77868c48",
+      "display_name": "Desiire",
+      "bio": "Desiire is a Toronto-based singer-songwriter born in Kinshasa, in the Democratic Republic of the Congo, who moved to Scarborough at 12. He began singing in his mid-teens, blending '90s R&B vocals with synth-pop and electronic production. His releases include the Starlight EP (2021). In 2020 he sang on ArtistsCAN's all-star rendition of \"Lean on Me\" for COVID-19 relief in Canada, alongside Justin Bieber, Bryan Adams, Avril Lavigne and others.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://ago.ca/agoinsider/burning-desiire",
+        "https://www.wavelengthmusic.ca/artist/desiire/",
+        "https://torontoguardian.com/2018/09/toronto-rb-hiphop-soul-desiire/",
+        "https://harthousedemo.wordpress.com/2017/08/10/bilingual-songwriting-and-adapting-to-torontos-shrinking-live-music-scene-an-interview-with-desiire/",
+        "https://music.amazon.com/artists/B06XB2J93J/desiire"
+      ]
+    },
+    {
+      "key": "dirty radio",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "bc7550aa07ac4df98e7ce32ff92a4e1b934701a3c82b2ae9227b9b6d08d01e88",
+      "display_name": "DiRTY RADiO",
+      "bio": "DiRTY RADiO are a Vancouver dance-R&B band formed in 2010 by Farshad \"Shadi\" Edalat (lead vocals, percussion), Zachary \"Waspy\" Forbes (DJ, production) and Anthony \"Tonez\" Dolhai (mixing, production). Fusing progressive pop, R&B and electronic music, their albums include Debut, Cassette and Pleasures, alongside the Lick 1.0 EP and singles including \"Numbers,\" \"True Love\" and \"My Life.\" Their music has appeared on international labels including Spinnin' Records, Fool's Gold and Mad Decent, and they have shared stages with acts including Dragonette, Funk Hunters and Lights.",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "http://www.dirtyradio.ca/",
+      "instagram": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dirty_Radio",
+        "https://www.musicmusingsandsuch.com/musicmusingsandsuch/2018/8/30/interview-dirtyradio",
+        "https://themusicessentials.com/music/dirty-radio-jafunk-pleasures-listen/"
+      ]
+    },
+    {
+      "key": "dvsn",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "74ca89a733673eb418183da9d45c7d63f653ef1f2da6a9f4aa97e933a959a602",
+      "display_name": "dvsn",
+      "bio": "dvsn (pronounced \"division\") are a Toronto R&B duo pairing vocalist Daniel Daley with producer Nineteen85 (Paul Jefferies). After releasing their first songs in 2015, they signed to Drake's OVO Sound label in 2016 and released the debut album Sept. 5th the same year, appearing on Drake's \"Faithful\" from Views. Their atmospheric slow jams continued on Morning After (2017) and A Muse in Her Feelings (2020), which featured collaborations with PARTYNEXTDOOR, Ty Dolla $ign, Summer Walker, and Jessie Reyez. They teamed with Ty Dolla $ign again for the joint album Cheers to the Best Memories (2021) and released Working on My Karma in 2022.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://www.allmusic.com/artist/dvsn-mn0003488294/biography",
+        "https://www.ovosound.com/artist/dvsn",
+        "https://en.wikipedia.org/wiki/Dvsn"
+      ]
     },
     {
       "key": "etienne dufresne",
@@ -192,6 +547,38 @@
       ]
     },
     {
+      "key": "frvrfriday",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "406bfcf66e921ca60e056a0cbfa9943eee8a487be53a5f53d8be56c0c2ccef33",
+      "display_name": "FRVRFRIDAY",
+      "bio": "FRVRFRIDAY is the stage name of Tommy Ruhingubugi, a Rwandan-born Canadian singer, rapper and producer. Born in Rwanda and raised in Montreal from the age of two, he made his first beat on the family computer at 14 and released his debut single \"Got It\" in 2017, followed by the EPs More Than You Know and Offline and the six-track WHOISFRIDAY. His 2020 single \"Window Shopping\" featured Lil Baby, and his collaboration with fellow Canadian Anders, \"What I Like,\" earned a nomination for Rap Single of the Year at the 2022 Juno Awards.",
+      "city": "",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Frvrfriday",
+        "https://www.complex.com/music/a/alex-nino-gheciu/frvrfriday-time-for-you",
+        "https://junoawards.ca/awards/past-winners-nominees/page/403/?sort=ASC&sortby=year"
+      ]
+    },
+    {
+      "key": "grandtheft",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "a50d8e112179f86609c7fdaf0e432abdcf57741b18fc8913faf2ae0eaa86094e",
+      "display_name": "Grandtheft",
+      "bio": "Toronto producer and DJ Grandtheft is the recording alias of Aaron Waisglass, whose club-focused electronic music ranges from trap and moombahton to future house, informed by hip-hop, dancehall and bass music. By the early 2010s his career accelerated with releases on Mad Decent, Top Billin and Spinnin' Records, plus a Diplo collaboration remixing Calvin Harris's \"Sweet Nothing.\" His Quit This City EP arrived in 2015 on Mad Decent. His 2014 Keys N Krates collaboration \"Keep It 100\" won a MuchMusic Video Award and appeared in the Minions movie trailer, and his 2016 single \"Easy Go\" with Delaney Jane followed.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://www.allmusic.com/artist/grandtheft-mn0002925603",
+        "https://www.insomniac.com/music/artists/grandtheft/",
+        "https://foolsgoldrecs.com/artists/grandtheft/"
+      ]
+    },
+    {
       "key": "house mouse",
       "reason": "missing_translation",
       "source_bio_sha256": "c94deef0f7b70c7116f1b40767ed9db881e5721d429619b8a2ef6ace902b37ec",
@@ -214,6 +601,21 @@
       "website": "",
       "instagram": "",
       "sources": []
+    },
+    {
+      "key": "justin nozuka",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "179a87f05e6e30d98785f8ec5f80a6ae0ad21e32ebd93125bfab9fb642ea3415",
+      "display_name": "Justin Nozuka",
+      "bio": "American-born, Toronto-raised singer-songwriter Justin Nozuka built his name on intimate acoustic songwriting, releasing his debut Holly in 2007 after writing its songs as a teenager; Glassnote Records picked it up for its 2008 reissue, and Holly earned him a 2008 JUNO nomination for New Artist of the Year. Follow-up You I Wind Land and Sea (2010) topped Billboard's Heatseekers chart and earned a JUNO nomination for Adult Alternative Album of the Year, while Ulysses (2014) stretched his folk-soul palette further. Later releases, including 2023's Daydreams & Endless Nights, moved him toward lush alternative R&B, and he has performed on The Late Show with David Letterman.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://www.justinnozuka.com/",
+      "instagram": "",
+      "sources": [
+        "https://www.allmusic.com/artist/justin-nozuka-mn0000989540",
+        "https://junoawards.ca/awards/past-winners-nominees/page/146/?sort=DESC&sortby=name"
+      ]
     },
     {
       "key": "k!ra oji",
@@ -243,6 +645,21 @@
       ]
     },
     {
+      "key": "karim ouellet",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "76b62e9fd37a12e4a357ac8817924d8e10cc607dba5e4cc76c24fa1226e100e6",
+      "display_name": "Karim Ouellet",
+      "bio": "Karim Ouellet (1984–2021) was a Senegalese-born Canadian pop singer-songwriter based in Quebec City. Born in Dakar on December 8, 1984 and adopted by Canadian diplomats, he lived in France, Rwanda and Tunisia before his family settled in Quebec City when he was 15. He released his debut album Plume in 2011, then broke through with Fox (2012) and its hit \"L'amour\"; Fox won the Juno Award for Francophone Album of the Year in 2014. His third album, Trente, arrived in 2016, the same year as the Aïkido EP. His French-language pop blended folk, soul, reggae and electronic influences.",
+      "city": "Québec City, Québec",
+      "country": "Canada",
+      "website": "https://karimouellet.ca/",
+      "instagram": "",
+      "sources": [
+        "https://toronto.citynews.ca/2022/06/22/juno-award-winning-artist-karim-ouellet-died-of-diabetes-complication-coroner/",
+        "https://en.wikipedia.org/wiki/Karim_Ouellet"
+      ]
+    },
+    {
       "key": "kayam",
       "reason": "missing_translation",
       "source_bio_sha256": "a4e5cbec01cdf27feb0263dbf514714f6a745bb590bc76c113db0ac56cc405da",
@@ -258,6 +675,23 @@
       ]
     },
     {
+      "key": "kellylee evans",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "aac82bc90eaccf22122b51eaf5cd5d51505a79853b8b863f6d566bd39b04f64d",
+      "display_name": "Kellylee Evans",
+      "bio": "Scarborough-born singer-songwriter Kellylee Evans is a Juno Award-winning jazz and soul vocalist. Educated at Carleton University, where she earned degrees in law and English before turning to music full-time, she took second place at the 2004 Thelonious Monk International Jazz Vocals Competition. Her debut album Fight or Flight? (2006) earned a Juno nomination; her Nina Simone tribute Nina (2010) won the 2011 Juno for Vocal Jazz Album of the Year. Come On was released in France in 2015 and earned a 2018 JUNO nomination. After a lightning strike in 2013 and subsequent health setbacks sidelined her for several years, she returned to performing. She has opened for John Legend, Tony Bennett and Erykah Badu.",
+      "city": "",
+      "country": "Canada",
+      "website": "https://kellyleeevans.com/",
+      "instagram": "",
+      "sources": [
+        "https://carleton.ca/fass/2017/meet-carletons-artist-residence-kellylee-evans/",
+        "https://convocation.carleton.ca/ceremony/honorary-degree-recipients/",
+        "https://junoawards.ca/awards/past-winners-nominees/page/205/?sort=ASC&sortby=category",
+        "https://en.wikipedia.org/wiki/Kellylee_Evans"
+      ]
+    },
+    {
       "key": "kerrington gillespie",
       "reason": "missing_translation",
       "source_bio_sha256": "011f397b98faf044092fa47aa7919acfdbb2e17666f918339c4ee90f6f9e146e",
@@ -270,6 +704,56 @@
       "sources": []
     },
     {
+      "key": "kimmortal",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "86c7208b55e23b6389984e21a769fc52572adc1617aab677900966b1a44bbfda",
+      "display_name": "Kimmortal",
+      "bio": "Kimmortal is the professional name of Kim Villagante, a queer Filipino-Canadian musician, singer-songwriter and visual artist based in Vancouver. Raised in Surrey, British Columbia, Kim released a debut album Sincerity in 2014 and broke through with X Marks the Swirl (2019), which was longlisted for the Polaris Music Prize. Their music moves between rap, hip-hop, R&B, soul and experimental sounds, addressing race, gender, identity and community. Their original song \"Made Up My Mind\" for the series Sort Of won Best Original Song at the Canadian Screen Awards. They have opened for Thundercat, Saul Williams and Ruby Ibarra, and performed at SXSW and Junofest.",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "https://kimmortalportal.com/",
+      "instagram": "",
+      "sources": [
+        "https://kimmortalportal.com/aboutkimmortal",
+        "https://nac-cna.ca/en/event/41358",
+        "https://polarismusicprize.ca/blog/2019-polaris-music-prize-long-list-is-here/",
+        "https://www.socanmagazine.ca/news/eleven-of-our-composerswhoscore-win-in-2024-canadian-screen-awards/"
+      ]
+    },
+    {
+      "key": "kiwi jr.",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "8013adfba32df58314bb1f80714b1d44174d15097900a58127e6ff4ec7632ced",
+      "display_name": "Kiwi Jr.",
+      "bio": "Toronto band Kiwi Jr. plays jangly, literate guitar pop drawing on the slacker-pop lineage of the 1980s and 1990s. Formed in 2015, the band is built around Charlottetown, Prince Edward Island transplants Jeremy Gaudet (vocals, guitar), Brian Murphy (guitar), Mike Walker (bass) and Brohan Moore (drums), who moved to Toronto and began playing together. Their debut album Football Money (2019) on Mint Records introduced their wiry, hook-laden sound. They signed to Sub Pop for Cooler Returns (2021) and Chopper (2022), the latter produced by Dan Boeckner of Wolf Parade and Handsome Furs. They released their fourth album, Blowin' Up, in August 2026.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://www.kiwijr.com/",
+      "instagram": "",
+      "sources": [
+        "https://www.allmusic.com/artist/kiwi-jr-mn0003808952",
+        "https://kiwijr.bandcamp.com/album/blowin-up",
+        "https://exclaim.ca/music/article/kiwi-jr-schedule-north-american-tour"
+      ]
+    },
+    {
+      "key": "la sécurité",
+      "reason": "short_translation_review",
+      "source_bio_sha256": "8a340f6762732b992e8899e94f4cc32c5583775716608ee3179afa00463d2409",
+      "display_name": "La Sécurité",
+      "bio": "La Sécurité are a Montreal dance-punk group bringing together musicians from the city's indie scene: vocalist Éliane Viens-Synnott, guitarists Melissa Di Menna and Laurence-Anne Charest-Gagné, bassist Félix Bélisle (Choses Sauvages) and drummer Kenny Smith. Their debut album Stay Safe! arrived in 2023 on Mothland and was longlisted for the 2024 Polaris Music Prize. They toured the United States in 2024 supporting The Go! Team, and released the remix EP Stay Safe! REMIXED the same year. Their second album, Bingo!, followed in June 2026 via Bella Union and Mothland.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://lasecurite.bandcamp.com/",
+      "instagram": "https://www.instagram.com/la_securite_avant_tout/",
+      "sources": [
+        "https://www.mothland.com/la-securite",
+        "https://www.mothland.com/shop/la-securite-bingo",
+        "https://polarismusicprize.ca/album/stay-safe/",
+        "https://cultmtl.com/2026/06/montreal-art-punk-band-la-securite-made-their-new-album-bingo-amid-higher-stakes-and-spicier-sauce/"
+      ]
+    },
+    {
       "key": "laroie",
       "reason": "missing_translation",
       "source_bio_sha256": "cee74a5108e27854369632cfaf59e8aa75100863dc167675c515e85d8bc4fcb7",
@@ -278,329 +762,6 @@
       "city": "Montreal, Quebec",
       "country": "Canada",
       "website": "https://laroie.com/",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "lydia képinski",
-      "reason": "missing_translation",
-      "source_bio_sha256": "4adfed9362179ee4dcba4854f5ec20145a0835d195e51c692e087385719ffd28",
-      "display_name": "Lydia Képinski",
-      "bio": "Lydia Képinski is a Montreal singer and songwriter recording for Chivi Chivi. She won the Francouvertes in 2017, and her albums Premier juin and Depuis both reached the Polaris Music Prize long list. Her catalog also includes C'est parti!, with the track of the same name now playing on Northern Dial.",
-      "city": "Montreal, Quebec",
-      "country": "Canada",
-      "website": "https://lydiakepinski.com/",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "michaela slinger",
-      "reason": "missing_translation",
-      "source_bio_sha256": "f823d5909a90877d13ccfab24faedf2e5ae77a596fee2e9c38fe675ec85b0ac5",
-      "display_name": "Michaela Slinger",
-      "bio": "Michaela Slinger is a Vancouver singer and songwriter whose catalog spans indie pop and folk. Her albums include Panorama, This Can't Last Forever and Green and Trying. The latter, released in September 2026, was recorded with David Vertesi and Jonathan Anderson. Start with its title track.",
-      "city": "Vancouver, British Columbia",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "monsune",
-      "reason": "missing_translation",
-      "source_bio_sha256": "243a56177ac6a51ee5171b5976a2b31addce3ee2c688afda81db7d3384e15568",
-      "display_name": "Monsune",
-      "bio": "Monsune is the project of Toronto singer and producer Scott Zhang. Known for the 2019 EP Tradition and songs including OUTTA MY MIND and Mountain, he returned in August 2026 with Sure after a long stretch focused largely on production work.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://musicwayatx.com/2026/08/25/monsune%E2%96%BAsure/",
-        "https://www.last.fm/music/Monsune"
-      ]
-    },
-    {
-      "key": "mulan",
-      "reason": "missing_translation",
-      "source_bio_sha256": "d452d70b2ecc9075ec206619c21e8a12737d37cfdc8259eccd5d376be80f6ce5",
-      "display_name": "Mulan",
-      "bio": "Mulan is a Montréal R&B singer-songwriter. Her five-track debut project Angelic Crashout arrived in September 2026, moving between R&B and pop on songs including What Am I, Supermodel Boy, Butterfly and the title track.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://www.hotnewhiphop.com/1010174-angelic-crashout-mulan"
-      ]
-    },
-    {
-      "key": "natek",
-      "reason": "missing_translation",
-      "source_bio_sha256": "11ab769d33f931f903bfb35c33ff725bae0ef27ed7d21513c9d789afcdd5a8f0",
-      "display_name": "Natek",
-      "bio": "Natek is a Canadian recording artist whose releases include Hate me for better, Love me for worse., (you)phoria and the summer's cooler chapter. Start with “San Antonio,” now playing on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "neddy",
-      "reason": "missing_translation",
-      "source_bio_sha256": "d17f223c930f159966214799f6d65664add473dac88b8fc28525e9b51e19cc95",
-      "display_name": "Neddy",
-      "bio": "Neddy is a recording artist from Mississauga, Ontario. The catalog includes the 2025 album Crush Season and singles “Thinkin' About You,” “Wish You Well” and “I tried to let go.”",
-      "city": "Mississauga, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "nicky savage",
-      "reason": "missing_translation",
-      "source_bio_sha256": "f202ca0df7ebac37fd3f10388cf051bfb83fce636197968392bf04e6d5aea07c",
-      "display_name": "Nicky Savage",
-      "bio": "Nicky Savage is a Canadian recording artist and producer whose collaborations with K!RA OJI include “SHAWTYFREAKABELLADANGER” and “BITCHBOYJCONNAISLECODE.” Credits on the former also list Nicky Savage for mixing and mastering.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "ok mickey",
-      "reason": "missing_translation",
-      "source_bio_sha256": "dfe53c2db7e38ce43a0ca618f9444bb75cb2ef5d3d1c766ce5ad284aa91729c9",
-      "display_name": "OK MICKEY",
-      "bio": "OK MICKEY is a Canadian recording project with the single “gay allegations ft. my girlfriend.” Released in October 2026, the track credits Mickey Brandolino on vocals, songwriting and production, with Eliana Arian as co-writer.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "olivia penalva",
-      "reason": "missing_translation",
-      "source_bio_sha256": "a609cf48f94f0a108b7561e96cd80cea24b13f410956d8b8301199fcfe787cc7",
-      "display_name": "Olivia Penalva",
-      "bio": "Olivia Penalva is a Canadian pop singer-songwriter from Vernon, British Columbia, who began writing and releasing music at a young age. Her catalogue has produced multiple Canadian radio hits, and in 2026 she continued that run with Distance Makes a Love Story and Code Blue.",
-      "city": "Vernon, British Columbia",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://www.oliviapenalva.com/about",
-        "https://www.socanmagazine.ca/features/olivia-penalva-bcs-latest-young-pop-talent/"
-      ]
-    },
-    {
-      "key": "p'tit belliveau",
-      "reason": "missing_translation",
-      "source_bio_sha256": "049777d4cd012e1ac807b4b392c4f171b3827d7e72e6a22cfd5ec6e48bdc9545",
-      "display_name": "P'tit Belliveau",
-      "bio": "P'tit Belliveau is the project of Acadian musician Jonah Guimond, from Baie Sainte-Marie, Nova Scotia. His songs include “Income Tax” and “J’aimerais d’avoir un John Deere,” while his albums Greatest Hits Vol. 1 and Un homme et son piano both reached the Polaris Music Prize long list. Hear “C'est fine” on Northern Dial.",
-      "city": "Baie Sainte-Marie, Nova Scotia",
-      "country": "Canada",
-      "website": "https://www.ptitbelliveau.com/",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "paradi$e",
-      "reason": "missing_translation",
-      "source_bio_sha256": "4d7dd2f27bd77885c988adffec5ae7fdbc9814f524614e4f60bd790bcfcb1d8e",
-      "display_name": "Paradi$e",
-      "bio": "Paradi$e is a Toronto R&B duo made up of producer Paul Tonks and vocalist Humberto Santos. After building an audience with R&B reinterpretations and original releases, the duo continued its run in 2026 with songs including SMS Love, Turn The Lights Down and Same Old Games.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://open.spotify.com/artist/2tm8nTANMwZuGECwgumqc5",
-        "https://sync.unitedmasters.com/track/MjU1ODUxNjQ0LWQ0NTVhZA"
-      ]
-    },
-    {
-      "key": "quincy isaiah",
-      "reason": "missing_translation",
-      "source_bio_sha256": "af922e23c454affa053a4c132a46586fa4d76db953d8e8f4feb916116dc9e30a",
-      "display_name": "Quincy Isaiah",
-      "bio": "Quincy Isaiah is a Canadian recording artist whose catalog includes “System,” “Too Much,” “Let Me Love You” and “Act Single.” Hear “Moving Different” on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "raccoon",
-      "reason": "missing_translation",
-      "source_bio_sha256": "6f487adf963eb8fee9a6364a4924697e70b163229f21a82d921891c47264cbf6",
-      "display_name": "Raccoon",
-      "bio": "Raccoon is a Montréal rapper whose catalogue includes the albums Gentil pour un noir, Le set up and C00N: la prophétie. In 2026 he joined ANJXLXE on Rêve un peu, a pop and R&B-leaning single produced by Da-P that pairs her melodic lead with Raccoon's verse.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://qfq.com/spip.php?article114511=&debut_dossier_10DerniersArticles=72",
-        "https://music.apple.com/us/artist/raccoon/1525586970"
-      ]
-    },
-    {
-      "key": "rome",
-      "reason": "missing_translation",
-      "source_bio_sha256": "cdb7c1f748c9d580b6d649533cc3e7cb3fe83b9790f7a2c64a9d34f2302b9f28",
-      "display_name": "ROME",
-      "bio": "ROME is a Canadian recording artist credited alongside Andre Waithe on “Not The Usual,” now playing on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "rosabell",
-      "reason": "missing_translation",
-      "source_bio_sha256": "63c7b36d6ef39eca4980f9fd7fd5ae1fc39fba9737ac326c8f6cdcd2c36ca4eb",
-      "display_name": "Rosabell",
-      "bio": "Rosabell is a Toronto-based Nigerian-Canadian singer-songwriter making pop and R&B centred on identity, self-discovery and emotional storytelling. Her three-song debut EP In Bloom includes Flowers, a bright, dance-leaning title track built around self-worth and learning to recognize your own growth.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://rotatemagazine.com/rosabell-finds-her-power-in-self-love-on-flowers/",
-        "https://voxwavemag.com/2026/08/10/rosabell-blossoms-in-the-vibrant-colors-of-pop-music/"
-      ]
-    },
-    {
-      "key": "ross nkunga",
-      "reason": "missing_translation",
-      "source_bio_sha256": "a693390c53a373faa9162496b75dbf7a12a1a2d47bdd897756cc8af67ac4a25d",
-      "display_name": "Ross Nkunga",
-      "bio": "Ross Nkunga is an Ontario-based gospel musician and producer originally from Kinshasa, Democratic Republic of the Congo. He releases music through his RossLab records imprint. Hear his single “Crois” on Northern Dial.",
-      "city": "Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "sheldon sabastian",
-      "reason": "missing_translation",
-      "source_bio_sha256": "868425478413142ae70dce97e7902aaeaf60c0bcce5bfdfffe7c83b70db29e92",
-      "display_name": "Sheldon Sabastian",
-      "bio": "Sheldon Sabastian is a rapper from Brampton, Ontario, whose catalog includes “Blue Acura,” Mocha Pack and The Empty Seven 2. He also co-hosts the Random Order podcast. Hear “Double Up - Miami Bass Remix,” credited alongside Tamir and Ya Fave Auntie, on Northern Dial.",
-      "city": "Brampton, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "shyla gray",
-      "reason": "missing_translation",
-      "source_bio_sha256": "0c967f75501f916d531073a32a198e1f07e031f835b6e8dedb2e2f4ddf42e3dc",
-      "display_name": "Shyla Gray",
-      "bio": "Shyla Gray is a Toronto singer and songwriter making R&B. She names Adele and Amy Winehouse among her influences and also teaches voice and songwriting. Hear “First Time,” produced by Jay808, on Northern Dial.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "sunniva",
-      "reason": "missing_translation",
-      "source_bio_sha256": "50f27dab0b97c7a483a57346f4c35892deba588f2b87016e2751222a239ff46e",
-      "display_name": "sunniva",
-      "bio": "sunniva is the recording project of singer-songwriter Sunniva Snieckus. Releases include “Surface Tension,” “Exit” and “It's Obvious,” a collaboration with link3. Start with “The Shallow End,” now playing on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "sunny",
-      "reason": "missing_translation",
-      "source_bio_sha256": "2e146703bd70ab9f798ce789dc254a9cb9ece202f8622a43ea71ef2272564b3b",
-      "display_name": "sunny",
-      "bio": "Sunny St-Hillien Boisvert is a Montréal-based multidisciplinary artist whose path into music grew out of a professional dance career that began at a young age. He has appeared on Québec stages and television in productions including En direct de l’univers, Star Académie, La Voix and Révolution, where he reached the Season 4 grand finale and later returned for the all-star season.\n\nHis performance work also includes musical theatre productions of Mary Poppins, Footloose and Mamma Mia, along with appearances alongside artists including Tory Lanez, Sarahmée, FouKi and CeeLo Green.\n\nAfter establishing himself as a dancer, choreographer and television personality, Sunny is putting a greater focus on recording. His earlier musical work includes the Dernière Danse project, while ‘Te Quiero’ begins a new chapter with GoodLife Entertainment Inc. Blending contemporary R&B and pop with French, English and Spanish elements, the single brings his music, dance and performance backgrounds together and is set for official release on September 25, 2026.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "https://www.instagram.com/sunny_boisvert",
-      "sources": [
-        "https://www.instagram.com/sunny_boisvert",
-        "https://www.dropbox.com/scl/fi/o47n5iouwa6xgoroathy4/Sunny-Te-Quiero-Radio-Edit.wav?rlkey=4evvc0iebiyiavpifz77vtlow&st=r7wuipba&dl=0"
-      ]
-    },
-    {
-      "key": "suuncaat",
-      "reason": "missing_translation",
-      "source_bio_sha256": "8ec38ecc555c9a8ef3fe108da3f18199495907fddfc4de0af8f480bd9a4dbaca",
-      "display_name": "SUUNCAAT",
-      "bio": "SUUNCAAT is a Montreal experimental pop artist and producer working with electronic and hyperpop sounds. Releases include “bite,” “work,” “Signs” and “the wash,” a song built around the repetition of doing laundry.",
-      "city": "Montreal, Quebec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "virgo rising",
-      "reason": "missing_translation",
-      "source_bio_sha256": "634f63f26baa038b5b07b7756c94f3248de1b1bbe3256b77249dc43729cd230b",
-      "display_name": "Virgo Rising",
-      "bio": "Virgo Rising is a Winnipeg indie rock band made up of Emily Sinclair, Jenna Wittmann, Lauren Wittmann and Isaac Tate. After the EPs Sixteenth Sapphire and Vampyre Year, the band released its debut album, Wishbone, in October 2026. “Cut My Knee” appears on the record.",
-      "city": "Winnipeg, Manitoba",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "who's lara?",
-      "reason": "missing_translation",
-      "source_bio_sha256": "226907a3b693b707282d5a006be24ca60b74c074fa1e88e1bf25ebce608d9e76",
-      "display_name": "who's lara?",
-      "bio": "who's lara? is a Montréal-based artist and producer working in the overlap between R&B and hip-hop. His catalogue includes the 2025 album Blur? and 2026 singles including Withdrawals, Want You and srx, with production playing a central role in his own recordings.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://open.spotify.com/artist/0coM5ZXKtWld0nP8nIifbq",
-        "https://soundcloud.com/whoslara"
-      ]
-    },
-    {
-      "key": "ya fave auntie",
-      "reason": "missing_translation",
-      "source_bio_sha256": "814d2841f2ece6b3cd85cd9fb539be312bf7e7787064a698bf790f8e93264934",
-      "display_name": "Ya Fave Auntie",
-      "bio": "Ya Fave Auntie is a Canadian recording artist credited alongside Sheldon Sabastian and Tamir on “Double Up - Miami Bass Remix,” now playing on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "zoey",
-      "reason": "missing_translation",
-      "source_bio_sha256": "988513a2679cd6d127a146afdf9688b4ed88bfae9965d6ba6a205b32f0dd86a1",
-      "display_name": "ZOEY",
-      "bio": "ZOEY is a Canadian recording artist whose catalog includes “STP” and its radio version. ZOEY is also credited on Shah Frank's “L'Année des Roses,” alongside Naomi and Nicole Musoni.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
       "instagram": "",
       "sources": []
     }
