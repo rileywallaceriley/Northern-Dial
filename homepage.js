@@ -56,7 +56,7 @@ const localAudio = document.getElementById('radioStream');
         const artist = String(value || '').trim();
         if (!artist) return '';
         return artist
-            .split(/\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
+            .split(/\s*\/\s*|\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
             .trim();
     }
 
