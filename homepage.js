@@ -94,15 +94,14 @@ const localAudio = document.getElementById('radioStream');
         if (requestId !== artistProfileRequestId) return;
 
         const fullArtist = String(artist || '').trim();
-        const primaryArtist = getPrimaryArtist(fullArtist);
-        const profileUrl =
-            lookup.get(normalizeArtistLookupName(fullArtist)) ||
-            lookup.get(normalizeArtistLookupName(primaryArtist));
+        // Resolve an exact act first, then each credited artist. Slash-separated
+        // AzuraCast collaborations can list a Canadian artist in either position.
+        const credits = [fullArtist, ...fullArtist.split(/\s*\/\s*|\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i).map(name => name.trim()).filter(Boolean)];
+        const matchedArtist = credits.find(name => lookup.has(normalizeArtistLookupName(name)));
+        if (!matchedArtist) return;
 
-        if (!profileUrl) return;
-
-        artistProfileBtn.href = profileUrl;
-        artistProfileBtn.setAttribute('aria-label', `Meet ${primaryArtist || fullArtist} on Northern Dial`);
+        artistProfileBtn.href = lookup.get(normalizeArtistLookupName(matchedArtist));
+        artistProfileBtn.setAttribute('aria-label', `Meet ${matchedArtist} on Northern Dial`);
         artistProfileBtn.hidden = false;
     }
 
