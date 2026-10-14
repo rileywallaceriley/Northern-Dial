@@ -425,7 +425,7 @@
 
     function primaryArtist(value) {
       return String(value || '')
-        .split(/\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
+        .split(/\s*\/\s*|\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i)[0]
         .trim();
     }
 
