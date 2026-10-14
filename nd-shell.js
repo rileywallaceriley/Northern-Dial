@@ -436,16 +436,24 @@
       profileLink.hidden = true;
 
       const lookup = await loadArtistLookup();
-      const primary = primaryArtist(artist);
-      const href = lookup[artist] ||
-        lookup[primary] ||
-        Object.entries(lookup).find(([name]) => normalizeArtist(name) === key)?.[1] ||
-        Object.entries(lookup).find(([name]) => normalizeArtist(name) === normalizeArtist(primary))?.[1];
+      // Prefer an exact act, then any credited collaborator who has a profile.
+      const credits = [artist, ...String(artist || '').split(/\s*\/\s*|\s+(?:feat\.?|ft\.?|featuring|with|x)\s+|,\s*|\s+&\s+/i).map(name => name.trim()).filter(Boolean)];
+      const entries = Object.entries(lookup);
+      let matchedArtist = '';
+      let href = '';
+      for (const candidate of credits) {
+        href = lookup[candidate] ||
+          entries.find(([name]) => normalizeArtist(name) === normalizeArtist(candidate))?.[1];
+        if (href) {
+          matchedArtist = candidate;
+          break;
+        }
+      }
 
       if (!href) return;
       profileLink.href = href;
       profileLink.textContent = isFrench ? "Voir l'artiste" : 'Meet the Artist';
-      profileLink.setAttribute('aria-label', 'Meet ' + (primary || artist) + ' on Northern Dial');
+      profileLink.setAttribute('aria-label', 'Meet ' + matchedArtist + ' on Northern Dial');
       profileLink.hidden = false;
     }
 
