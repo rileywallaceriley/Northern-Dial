@@ -4997,6 +4997,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/k-os-breaking-the-rules-canadian-hip-hop.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/kardinal-offishall-firestarter-vol-2.html</loc>
     <priority>0.7</priority>
   </url>
@@ -9672,5 +9676,4 @@
     <loc>https://www.northerndial.ca/tv.html</loc>
     <priority>0.6</priority>
   </url>
-  <url><loc>https://www.northerndial.ca/blog/k-os-breaking-the-rules-canadian-hip-hop.html</loc><lastmod>2026-10-18</lastmod></url>
 </urlset>
