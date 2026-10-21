@@ -5073,6 +5073,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/the-night-the-rascalz-said-no.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/virgo-rising-wishbone-winnipeg.html</loc>
     <priority>0.7</priority>
   </url>
@@ -9675,9 +9679,5 @@
   <url>
     <loc>https://www.northerndial.ca/tv.html</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/the-night-the-rascalz-said-no.html</loc>
-    <priority>0.8</priority>
   </url>
 </urlset>
