@@ -350,6 +350,22 @@
       ]
     },
     {
+      "key": "chiara savasta",
+      "reason": "missing_translation",
+      "source_bio_sha256": "8584d661baa199c258d7012ae2d1dbf770d318db25efcc7876340ed3e5b95748",
+      "display_name": "Chiara Savasta",
+      "bio": "Chiara Savasta is a Montréal singer-songwriter whose music blends alternative pop, indie rock and electronic production. She began releasing music with Summerhood in 2022 and followed with the 2024 EP brand new girl, brand new machine, a project built around the instability and emotional intensity of early adulthood.\n\nHer 2025 and 2026 singles include “Cross Control Patrol,” “Playlist,” “Necktie,” “Nosebleeds” and “Hi, hello.” Released September 11, 2026 through Cult Nation, “Hi, hello” is now playing on Northern Dial.",
+      "city": "Montréal, Québec",
+      "country": "Canada",
+      "website": "https://chiarasavasta.bandcamp.com/",
+      "instagram": "",
+      "sources": [
+        "https://chiarasavasta.bandcamp.com/",
+        "https://music.apple.com/us/album/hi-hello-single/6803676723",
+        "https://www.last.fm/music/Chiara%2BSavasta"
+      ]
+    },
+    {
       "key": "chikoruss",
       "reason": "missing_translation",
       "source_bio_sha256": "bc950f85e031cf8df2e14efc3c8203c321226f303fefa0cac605245f29841c11",
@@ -403,6 +419,22 @@
         "https://en.wikipedia.org/wiki/Connor_Price",
         "https://music.apple.com/us/album/spin-the-globe/1666453562",
         "https://music.apple.com/us/song/1652245013"
+      ]
+    },
+    {
+      "key": "creach",
+      "reason": "missing_translation",
+      "source_bio_sha256": "c4c122bc4079c506aa51b470a5932c74993e8b159c25d29ec2ec8b2e046e8f5e",
+      "display_name": "Creach",
+      "bio": "Creach is an electronic and dance-music artist connected to Vancouver’s independent club scene. Releases spanning “Machine Love,” “Room Full of Cellphones,” “Make It To Monday,” “Adderall” and “Maybe” chart a run of singles and short projects built around dance production and electronic textures.\n\nCreach released “Baby you're a mess” on October 9, 2026. The track is now playing on Northern Dial. The artist also has documented live appearances in Vancouver, including at Platform9.",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "website": "https://soundcloud.com/creachmusic",
+      "instagram": "",
+      "sources": [
+        "https://music.apple.com/us/album/baby-youre-a-mess-single/6811206391",
+        "https://www.bandsintown.com/a/15596773-creach",
+        "https://soundcloud.com/creachmusic"
       ]
     },
     {
@@ -532,6 +564,22 @@
       "sources": []
     },
     {
+      "key": "featurette",
+      "reason": "missing_translation",
+      "source_bio_sha256": "f4f0b8ff717d2661bf490526177234a79a70d773d82e92ea5b95682fb20aa2d0",
+      "display_name": "FEATURETTE",
+      "bio": "FEATURETTE is a Toronto alternative electronic-pop group led by vocalist Lexie Jay with keyboardist, guitarist and producer Marc Koecher and drummer Jon Fedorsen. The project began as a duo and grew into a trio. Its songs bring heavy synths, pop hooks and forceful live percussion together, and the band has built a distinct visual world through performance and music videos.\n\nThe group released Crave in 2016, Dream Riot in 2020 and Panic Pills in January 2025. Its October 16, 2026 single “TABLE42,” issued through Division Eleven Music, is now playing on Northern Dial.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://featurettemusic.com/",
+      "instagram": "",
+      "sources": [
+        "https://music-ontario.ca/news/spotlight/read%2Carticle/18231/musicontario-member-spotlight-featurette",
+        "https://torontoguardian.com/2025/03/toronto-music-featurette/",
+        "https://music.apple.com/us/album/table42-single/6815429925"
+      ]
+    },
+    {
       "key": "frank",
       "reason": "missing_translation",
       "source_bio_sha256": "59181aea17af85c018d52f880f74a2dd1b596175f854ba22528edba5bcd67f62",
@@ -576,6 +624,22 @@
         "https://www.allmusic.com/artist/grandtheft-mn0002925603",
         "https://www.insomniac.com/music/artists/grandtheft/",
         "https://foolsgoldrecs.com/artists/grandtheft/"
+      ]
+    },
+    {
+      "key": "gus",
+      "reason": "missing_translation",
+      "source_bio_sha256": "b3400bf4e1dd0e3ca275a22e2380f6ac43d6470776f818edef5a2c9de759b0aa",
+      "display_name": "GUS",
+      "bio": "GUS is a Toronto-born singer-songwriter whose guitar-led indie-pop songs focus on growing up, relationships, friendship and leaving home. After university, he moved to Los Angeles to write and perform, while remaining connected to Toronto. His live work includes tours with Johnny Orlando and LØLØ.\n\nHis releases include “Vivian” and the October 2, 2026 single “Boys of Summer,” now playing on Northern Dial. This profile concerns the contemporary Toronto-born solo artist, not the unrelated Vancouver punk band or other performers who have recorded as Gus.",
+      "city": "Toronto, Ontario (born); Los Angeles, California (based)",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://first-avenue.com/performer/gus/",
+        "https://music.amazon.fr/albums/B0HHQYW8V9",
+        "https://www.last.fm/music/Gus/Boys%2Bof%2BSummer%2B-%2BSingle"
       ]
     },
     {
@@ -700,68 +764,6 @@
       "city": "Vancouver Island, British Columbia",
       "country": "Canada",
       "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "kimmortal",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "86c7208b55e23b6389984e21a769fc52572adc1617aab677900966b1a44bbfda",
-      "display_name": "Kimmortal",
-      "bio": "Kimmortal is the professional name of Kim Villagante, a queer Filipino-Canadian musician, singer-songwriter and visual artist based in Vancouver. Raised in Surrey, British Columbia, Kim released a debut album Sincerity in 2014 and broke through with X Marks the Swirl (2019), which was longlisted for the Polaris Music Prize. Their music moves between rap, hip-hop, R&B, soul and experimental sounds, addressing race, gender, identity and community. Their original song \"Made Up My Mind\" for the series Sort Of won Best Original Song at the Canadian Screen Awards. They have opened for Thundercat, Saul Williams and Ruby Ibarra, and performed at SXSW and Junofest.",
-      "city": "Vancouver, British Columbia",
-      "country": "Canada",
-      "website": "https://kimmortalportal.com/",
-      "instagram": "",
-      "sources": [
-        "https://kimmortalportal.com/aboutkimmortal",
-        "https://nac-cna.ca/en/event/41358",
-        "https://polarismusicprize.ca/blog/2019-polaris-music-prize-long-list-is-here/",
-        "https://www.socanmagazine.ca/news/eleven-of-our-composerswhoscore-win-in-2024-canadian-screen-awards/"
-      ]
-    },
-    {
-      "key": "kiwi jr.",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "8013adfba32df58314bb1f80714b1d44174d15097900a58127e6ff4ec7632ced",
-      "display_name": "Kiwi Jr.",
-      "bio": "Toronto band Kiwi Jr. plays jangly, literate guitar pop drawing on the slacker-pop lineage of the 1980s and 1990s. Formed in 2015, the band is built around Charlottetown, Prince Edward Island transplants Jeremy Gaudet (vocals, guitar), Brian Murphy (guitar), Mike Walker (bass) and Brohan Moore (drums), who moved to Toronto and began playing together. Their debut album Football Money (2019) on Mint Records introduced their wiry, hook-laden sound. They signed to Sub Pop for Cooler Returns (2021) and Chopper (2022), the latter produced by Dan Boeckner of Wolf Parade and Handsome Furs. They released their fourth album, Blowin' Up, in August 2026.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "https://www.kiwijr.com/",
-      "instagram": "",
-      "sources": [
-        "https://www.allmusic.com/artist/kiwi-jr-mn0003808952",
-        "https://kiwijr.bandcamp.com/album/blowin-up",
-        "https://exclaim.ca/music/article/kiwi-jr-schedule-north-american-tour"
-      ]
-    },
-    {
-      "key": "la sécurité",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "8a340f6762732b992e8899e94f4cc32c5583775716608ee3179afa00463d2409",
-      "display_name": "La Sécurité",
-      "bio": "La Sécurité are a Montreal dance-punk group bringing together musicians from the city's indie scene: vocalist Éliane Viens-Synnott, guitarists Melissa Di Menna and Laurence-Anne Charest-Gagné, bassist Félix Bélisle (Choses Sauvages) and drummer Kenny Smith. Their debut album Stay Safe! arrived in 2023 on Mothland and was longlisted for the 2024 Polaris Music Prize. They toured the United States in 2024 supporting The Go! Team, and released the remix EP Stay Safe! REMIXED the same year. Their second album, Bingo!, followed in June 2026 via Bella Union and Mothland.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "https://lasecurite.bandcamp.com/",
-      "instagram": "https://www.instagram.com/la_securite_avant_tout/",
-      "sources": [
-        "https://www.mothland.com/la-securite",
-        "https://www.mothland.com/shop/la-securite-bingo",
-        "https://polarismusicprize.ca/album/stay-safe/",
-        "https://cultmtl.com/2026/06/montreal-art-punk-band-la-securite-made-their-new-album-bingo-amid-higher-stakes-and-spicier-sauce/"
-      ]
-    },
-    {
-      "key": "laroie",
-      "reason": "missing_translation",
-      "source_bio_sha256": "cee74a5108e27854369632cfaf59e8aa75100863dc167675c515e85d8bc4fcb7",
-      "display_name": "Laroie",
-      "bio": "Laroie is the project of Montreal singer and songwriter Gab Godon, formerly of Heartstreets. The music brings R&B and downtempo production into dancefloor grooves. Releases include the EP Tragedy and “More Than Friends,” now playing on Northern Dial.",
-      "city": "Montreal, Quebec",
-      "country": "Canada",
-      "website": "https://laroie.com/",
       "instagram": "",
       "sources": []
     }
