@@ -1,0 +1,37 @@
+name: AzuraCast Inventory
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - azuracast-control-plane
+    paths:
+      - 'azuracast/request-inventory.txt'
+      - '.github/workflows/azuracast-inventory.yml'
+      - 'scripts/azuracast_inventory.py'
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fetch AzuraCast media inventory
+        env:
+          AZURACAST_BASE_URL: https://a10.asurahosting.com
+          AZURACAST_API_KEY: ${{ secrets.AZURACAST_API_KEY }}
+          AZURACAST_STATION: ${{ vars.AZURACAST_STATION || 'northern_dial' }}
+          AZURACAST_OUTPUT: azuracast-inventory.json
+        run: python3 scripts/azuracast_inventory.py
+
+      - name: Upload inventory artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: azuracast-inventory
+          path: azuracast-inventory.json
+          if-no-files-found: error
+          retention-days: 7
