@@ -10,7 +10,6 @@ $enor$uplex
 3MFrench
 401 WST
 4Korners
-4korners
 54*40
 5cottay
 646yf4t
@@ -32,7 +31,6 @@ Ackerly
 Ada Lea
 Adam Bomb
 Adam Klobi
-Adelaide
 Admiral Naughtz
 Adriiana
 Afrolistic
@@ -65,7 +63,6 @@ Anachnid
 Anami Vice
 Anaïs Cardot
 anders
-Anders
 Andre Waithe
 Andreena Mill
 Andrew Ranxx
@@ -125,7 +122,6 @@ Backburner
 Backxwash
 Bad Child
 BADBADNOTGOOD
-Badbadnotgood
 Bahamas
 BALAM KIEL
 Barenaked Ladies
@@ -134,7 +130,6 @@ Basics
 Bass Is Base
 Batya Belle
 bbno$
-Bbno$
 Bdice
 Beatchild
 Beau Dick
@@ -247,7 +242,6 @@ Chase the Bear
 Chastity
 Chasé Scanz
 CheckMate
-Checkmate
 Cherrykim
 Chiiild
 Chikoruss
@@ -334,7 +328,6 @@ DawaMafia
 Deadin Dogyears
 Deadly Alfano
 Deadmau5
-deadmau5
 Dear Rouge
 Death From Above 1979
 Deborah Cox
@@ -386,7 +379,6 @@ DraMatik
 Dream Warriors
 Drezus
 dru
-Dru
 Dual Core
 Dub J
 Dubmatique
@@ -395,7 +387,6 @@ Dumb Crush
 Duski
 DvblM
 DVSN
-dvsn
 Dylan Sinclair
 DÉVAH QUARTET
 EARTH TO EMILY
@@ -533,7 +524,6 @@ House Mouse
 Hubert Lenoir
 HXGO
 i mother earth
-I Mother Earth
 I.r.s.
 Ian Kamau
 ibxrhm
@@ -546,7 +536,6 @@ In Essense
 Inderpal Moga
 Indica
 INFINITE
-Infinite
 int eighty
 Ironside
 IRS
@@ -643,10 +632,8 @@ Jxggi
 K Fresh The Knemesis
 K!RA OJI
 K'NAAN
-K'naan
 K-4ce
 k-os
-K-OS
 K-Rec
 K. Forest
 K.C. Thomas
@@ -665,7 +652,6 @@ Kash Phat
 Katie Tupper
 KAYTRAMINÉ
 KAYTRANADA
-Kaytranada
 Kazmega
 Kellylee Evans
 Kelsi Mayne
@@ -683,7 +669,6 @@ Kid Sharif
 Kiesza
 Killa
 KIM DAVIS
-Kim Davis
 Kim Esty
 Kim Stockwood
 Kimmortal
@@ -691,7 +676,6 @@ king bliss
 King Dapz
 King Reign
 kinnie starr
-Kinnie Starr
 Kiwi jr.
 kkanji
 KMNI
@@ -741,7 +725,6 @@ Lia Pappas-Kemps
 Libby Ember
 Lightman Jarvis Ecstatic Band
 Lights
-LIGHTS
 Liinks
 Lil Berete
 LIL Darklord
@@ -760,7 +743,6 @@ Lord Juco
 Loreena McKennitt
 loser supreme
 Lost
-LOST
 Lotus James
 Lou Phelps
 Lou Val
@@ -799,7 +781,6 @@ Maestro
 Maestro Fresh Wes
 Magi Merlin
 Magic!
-MAGIC!
 Majical Cloudz
 Majid Jordan
 Makeda
@@ -824,7 +805,7 @@ Markit
 Markus Aurelyus
 Martine St-Clair
 Marvel
-Mary
+Mary & Adelaide
 Massari
 Mastermind
 Mathematik
@@ -898,7 +879,6 @@ Ms. Davis
 Mulan
 Muneshine
 muzion
-Muzion
 Myer Clarity
 Myles Lloyd
 N.I.F.T.Y.
@@ -929,7 +909,6 @@ Nicole Holness Aka X-quisite
 Nikki
 Nikki Yanofsky
 Nilla
-NILLA
 Nish
 Nish Raawks
 Nish Rawks
@@ -1038,7 +1017,6 @@ Rainmen
 Rajan
 Ralph
 Rascalz
-RASCALZ
 raw levy
 Ray Robinson
 Ray Smoove
@@ -1144,7 +1122,6 @@ Shantel May
 ShaqIsDope
 Shaun Boothe
 Shawn Desman
-SHAWN DESMAN
 Shawn Hook
 Shawn Mendes
 Shawnee Kish
@@ -1170,7 +1147,6 @@ Skip Waiters
 Skratch Bastid
 skrta
 Sky
-sky
 Skydiggers
 skye sweetnam
 Sleepy Tom
@@ -1180,7 +1156,6 @@ Smiley
 Smokey
 Snotty Nose Rez Kids
 SNoW
-Snow
 Sofia Camara
 Sofia Ly
 Soft Eyez
@@ -1277,7 +1252,6 @@ The Age Of Electric
 The Bankes Brothers
 The Barr Brothers
 The Beaches
-the Beaches
 The BLK LT$
 The Boomtang Boys
 the della kit
@@ -1329,11 +1303,8 @@ Timbuktu
 Tinywiings
 TLO
 TOBi
-ToBi
-Tobi
 Tom Cochrane
 Tona
-TONA
 Tone Mason
 Top5
 Tory Lanez
@@ -1375,9 +1346,7 @@ Virgo Rising
 Vita Chambers
 Vlxl
 VT
-Vt
 Walk Off the Earth
-Walk Off The Earth
 Wave Montega
 Weatherell
 Webster
@@ -1388,7 +1357,6 @@ White-B
 Who's Lara?
 Why G
 wide mouth mason
-Wide Mouth Mason
 Wild Strawberries
 William Dinero
 William Prince
@@ -1400,7 +1368,6 @@ Wizdome Bunitall
 Wolf Castle
 Wolfy Lights
 WondaGurl
-wondaGURL
 Wordburglar
 Wrekonize
 X.E.L.
