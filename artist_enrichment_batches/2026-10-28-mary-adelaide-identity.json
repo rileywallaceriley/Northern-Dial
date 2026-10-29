@@ -1,0 +1,16 @@
+{
+  "Mary & Adelaide": {
+    "display_name": "Mary & Adelaide",
+    "bio": "Mary & Adelaide are an Oshawa, Ontario indie-rock band formed in 2017. The group performed at the Robert McLaughlin Gallery's RMG Fridays in 2022 and released the album Celebrate Another Day of Living in January 2026.",
+    "directory_summary": "Mary & Adelaide are an Oshawa indie-rock band formed in 2017. Their album Celebrate Another Day of Living arrived in January 2026.",
+    "city": "Oshawa, Ontario",
+    "country": "Canada",
+    "sources": [
+      "https://rmg.on.ca/events/rmg-fridays-presents-chastity-and-mary-adelaide/",
+      "https://maryandadelaide.bandcamp.com/",
+      "https://start-track.com/album-mary-adelaide-celebrate-another-day-of-living/"
+    ],
+    "reviewed": true,
+    "reviewed_at": "2026-10-28"
+  }
+}

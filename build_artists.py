@@ -31,6 +31,10 @@ CREDIT_SEPARATOR = re.compile(
     re.IGNORECASE,
 )
 
+# Verified act names containing '&' must not be split into separate artists.
+# Keep additions editorially reviewed; most '&' credits still denote collaborations.
+UNSPLIT_ARTIST_CREDITS = {"mary & adelaide"}
+
 
 def fetch_page(page):
     url = f"{API}?searchPhrase=&rowCount={PAGE_SIZE}&current={page}&page=1"
@@ -111,6 +115,8 @@ def render_editorial_text(value, album_titles=()):
 
 def split_artists(value):
     credit = clean_artist(value)
+    if credit.casefold() in UNSPLIT_ARTIST_CREDITS:
+        return [credit]
     parts = [clean_artist(part) for part in CREDIT_SEPARATOR.split(credit)]
     return list(dict.fromkeys(part for part in parts if part))
 
@@ -141,16 +147,21 @@ def normalize_track(row):
 
 def build_catalogue(rows):
     removals = hidden_artists()
-    by_artist = {}
+    # Station metadata can use different casing for the same artist (4Korners
+    # versus 4korners). Group by casefolded identity while preserving the
+    # first observed display credit until editorial enrichment canonicalizes it.
+    by_artist_key = {}
     for row in rows:
         artist_credit, title, album, request_id = normalize_track(row)
         for artist in split_artists(artist_credit):
-            if artist.casefold() in removals:
+            key = artist.casefold()
+            if key in removals:
                 continue
-            by_artist.setdefault(artist, []).append(
+            entry = by_artist_key.setdefault(key, {"name": artist, "tracks": []})
+            entry["tracks"].append(
                 {"title": title, "album": album, "request_id": request_id}
             )
-    return by_artist
+    return {entry["name"]: entry["tracks"] for entry in by_artist_key.values()}
 
 
 def profile_for(artist, enrichments, profiles):
