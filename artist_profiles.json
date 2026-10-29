@@ -86,5 +86,21 @@
   },
   "kardinal offishall": {
     "feature": "./blog/kardinal-offishall-firestarter-vol-2.html"
+  },
+  "kaytranada": {
+    "features": [
+      {
+        "href": "blog/if-you-like-kaytranada-canadian-artists.html",
+        "label": "Discover 5 Canadian Artists for Kaytranada Fans"
+      }
+    ]
+  },
+  "drake": {
+    "features": [
+      {
+        "href": "blog/if-you-like-drake-canadian-artists.html",
+        "label": "Discover 5 Canadian Artists for Drake Fans"
+      }
+    ]
   }
 }
