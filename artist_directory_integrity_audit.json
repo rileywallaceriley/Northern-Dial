@@ -1,76 +1,8 @@
 {
-  "directory_accordions": 1582,
-  "profile_backed_accordions": 1216,
-  "standalone_profile_files": 1224,
-  "issue_count": 12,
-  "issue_types": {
-    "bad_profile_anchor": 2,
-    "bad_profile_cta": 2,
-    "bad_profile_name_link": 2,
-    "duplicate_or_missing_profile_block": 2,
-    "missing_dropdown_bio": 2,
-    "missing_profile_file": 2
-  },
-  "issues": [
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "GUS",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "GUS",
-      "detail": "Expected one ./artists/gus.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "GUS",
-      "detail": "Expected one View Full Profile link to ./artists/gus.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "GUS",
-      "detail": "Expected id=artist-gus; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "GUS",
-      "detail": "artists/gus.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "GUS",
-      "detail": "Expected 1 artist-profile block; found 0"
-    },
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "Trudy",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "Trudy",
-      "detail": "Expected one ./artists/trudy.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "Trudy",
-      "detail": "Expected one View Full Profile link to ./artists/trudy.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "Trudy",
-      "detail": "Expected id=artist-trudy; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "Trudy",
-      "detail": "artists/trudy.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "Trudy",
-      "detail": "Expected 1 artist-profile block; found 0"
-    }
-  ]
+  "directory_accordions": 1433,
+  "profile_backed_accordions": 1226,
+  "standalone_profile_files": 1233,
+  "issue_count": 0,
+  "issue_types": {},
+  "issues": []
 }
