@@ -990,3 +990,14 @@
   document.head.appendChild(script);
 })();
 
+
+/* Compact author badges on Northern Dial editorial stories. */
+(() => {
+  if (!/^\/blog\/[^/]+\.html$/.test(window.location.pathname) || window.location.pathname === '/blog/index.html') return;
+  if (document.getElementById('nd-authors-script')) return;
+  const s = document.createElement('script');
+  s.id = 'nd-authors-script';
+  s.src = '/nd-authors.js?v=20261031a';
+  s.defer = true;
+  document.head.appendChild(s);
+})();
