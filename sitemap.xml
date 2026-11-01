@@ -905,6 +905,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/chiara-savasta.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/chiiild.html</loc>
     <priority>0.7</priority>
   </url>
@@ -1046,6 +1050,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/crash-test-dummies.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/creach.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -1553,6 +1561,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/featurette.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/fefe-dobson.html</loc>
     <priority>0.7</priority>
   </url>
@@ -1753,6 +1765,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/gus.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/gutta192.html</loc>
     <priority>0.7</priority>
   </url>
@@ -1794,6 +1810,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/hawksley-workman.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/hayku-kyah.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -2817,6 +2837,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/marianne-beaulieu.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/marie-celeste.html</loc>
     <priority>0.7</priority>
   </url>
@@ -2857,6 +2881,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/mary-adelaide.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/mary.html</loc>
     <priority>0.7</priority>
   </url>
@@ -2874,6 +2902,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/matt-epp.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/matt-holubowski.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -3278,6 +3310,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/artists/o-sound.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/artists/oakk.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -4637,6 +4673,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/artists/trudy.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/artists/truss.html</loc>
     <priority>0.7</priority>
   </url>
@@ -4913,6 +4953,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/authors/northern-dial-staff.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/authors/riley-wallace.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/</loc>
     <priority>0.8</priority>
   </url>
@@ -4993,6 +5041,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/jessie-reyez-more-music-time-away.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/jessie-reyez-second-catalogue.html</loc>
     <priority>0.7</priority>
   </url>
@@ -5045,6 +5097,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.northerndial.ca/blog/new-canadian-music-week-october-30-2026.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.northerndial.ca/blog/new-canadian-releases-september-11-2026.html</loc>
     <priority>0.7</priority>
   </url>
@@ -5066,6 +5122,10 @@
   </url>
   <url>
     <loc>https://www.northerndial.ca/blog/rochelle-jordan-disc-2-remix-series.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/seven-canadian-records-missed-october-2026.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -9679,73 +9739,5 @@
   <url>
     <loc>https://www.northerndial.ca/tv.html</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/chiara-savasta.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/creach.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/featurette.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/gus.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/hayku-kyah.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/marianne-beaulieu.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/matt-holubowski.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/oakk.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/trudy.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/artists/mary-adelaide.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/jessie-reyez-more-music-time-away.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/new-canadian-music-week-october-30-2026.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.northerndial.ca/blog/seven-canadian-records-missed-october-2026.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
