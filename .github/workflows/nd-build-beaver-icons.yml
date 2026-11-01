@@ -1,0 +1,44 @@
+name: Build Northern Dial beaver app icons
+on:
+  push:
+    branches:
+      - brand/flat-beaver-icon-sitewide
+    paths:
+      - .nd-beaver-render-trigger
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Render matching PNGs from source SVG
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "cairosvg==2.8.2"
+          python3 - <<'PY'
+          from pathlib import Path
+          import cairosvg
+          src = 'images/nd-beaver-headphones.svg'
+          for pixels in (180,192,512):
+              target=Path(f'images/nd-beaver-{pixels}.png')
+              cairosvg.svg2png(url=src, write_to=str(target), output_width=pixels, output_height=pixels)
+              b=target.read_bytes()
+              assert b[:8]==bytes.fromhex('89504e470d0a1a0a')
+              assert len(b)>2000
+              print(str(target),len(b))
+          PY
+      - name: Commit icons to brand branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Northern Dial Brand Automation'
+          git config user.email 'actions@users.noreply.github.com'
+          git add images/nd-beaver-180.png images/nd-beaver-192.png images/nd-beaver-512.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Add beaver favicon and homescreen PNG assets"
+            git push origin HEAD
+          fi
