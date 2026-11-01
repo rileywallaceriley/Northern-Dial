@@ -1,0 +1,12 @@
+LIVE PUBLICATION CHECK — 2026-11-01
+RESULT: PASS
+Checked using GitHub-hosted runner, bypassing old search crawl caches
+
+/blog/jessie-reyez-more-music-time-away.html: PASS HTTP=200 bytes=12752 expected_text='Jessie Reyez Has More Music Coming.' final=https://www.northerndial.ca/blog/jessie-reyez-more-music-time-away.html?nd_verify=20261101
+/blog/new-canadian-music-week-october-30-2026.html: PASS HTTP=200 bytes=13537 expected_text='New Canadian Music This Week' final=https://www.northerndial.ca/blog/new-canadian-music-week-october-30-2026.html?nd_verify=20261101
+/blog/seven-canadian-records-missed-october-2026.html: PASS HTTP=200 bytes=14101 expected_text='7 Canadian Records You Might Have Missed' final=https://www.northerndial.ca/blog/seven-canadian-records-missed-october-2026.html?nd_verify=20261101
+/blog/: PASS HTTP=200 bytes=53767 expected_text='jessie-reyez-more-music-time-away.html' final=https://www.northerndial.ca/blog/?nd_verify=20261101
+/sitemap.xml: PASS HTTP=200 bytes=279967 expected_text='seven-canadian-records-missed-october-2026.html' final=https://www.northerndial.ca/sitemap.xml?nd_verify=20261101
+/images/jessie-reyez-time-away-collage.png: PASS HTTP=200 bytes=3771215 sha256=852a22b31ccdc9a75602e8964add9dfbcfae0e64744f52e59d92572865d0b02d expected=852a22b31ccdc9a75602e8964add9dfbcfae0e64744f52e59d92572865d0b02d
+/images/new-canadian-music-october-30-collage.jpg: PASS HTTP=200 bytes=777600 sha256=ff078d580ef558e14e3e7dc27f283050868a43b5728c12ce3fe9b3b856c85853 expected=ff078d580ef558e14e3e7dc27f283050868a43b5728c12ce3fe9b3b856c85853
+/images/october-records-collage-original.jpg: PASS HTTP=200 bytes=836206 sha256=ae4d7572325a78a959329eb8d9640f51c149e318f66cddebd2cc6f8a940f64ee expected=ae4d7572325a78a959329eb8d9640f51c149e318f66cddebd2cc6f8a940f64ee
