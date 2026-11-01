@@ -20,7 +20,7 @@
     } : {
       name: 'Northern Dial Staff',
       role: 'Editorial team',
-      image: '/images/nd-staff-avatar.svg',
+      image: '/images/nd-beaver-headphones.svg?v=20261101',
       url: '/authors/northern-dial-staff.html',
       bio: 'Canadian music discoveries, new releases and listening guides curated by the Northern Dial team.',
       type: 'Organization'

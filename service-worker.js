@@ -1,4 +1,4 @@
-const VERSION = 'v14';
+const VERSION = 'v15';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -8,6 +8,10 @@ const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
+  './images/nd-beaver-headphones.svg',
+  './images/nd-beaver-180.png',
+  './images/nd-beaver-192.png',
+  './images/nd-beaver-512.png',
   './nd-shell.css',
   './nd-shell.js',
   './nd-banner.css',
