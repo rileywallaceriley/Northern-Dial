@@ -1,0 +1,56 @@
+name: Verify sitewide beaver icon live
+on:
+  push:
+    branches: [ops/verify-flat-beaver-icon-20261101]
+    paths: [.nd-beaver-verify-trigger]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public icon assets and page metadata
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request,json,time
+          from pathlib import Path
+          base='https://www.northerndial.ca'
+          expected={
+            '/images/nd-beaver-headphones.svg':'Northern Dial beaver with headphones',
+            '/images/nd-beaver-180.png':'PNG',
+            '/images/nd-beaver-192.png':'PNG',
+            '/images/nd-beaver-512.png':'PNG',
+            '/images/nd-staff-avatar.svg':'Northern Dial beaver with headphones',
+            '/manifest.json':'nd-beaver-512.png',
+            '/nd-shell.js':'nd-beaver-headphones.svg',
+            '/authors/northern-dial-staff.html':'nd-beaver-headphones.svg',
+          }
+          rows={}
+          for attempt in range(1,13):
+            rows={}
+            for path,needle in expected.items():
+              try:
+                request=urllib.request.Request(base+path+'?brandcheck=20261101',headers={'Cache-Control':'no-cache','User-Agent':'NorthernDialBrandQA/1.0'})
+                with urllib.request.urlopen(request,timeout=22) as resp:
+                  payload=resp.read()
+                  ok=resp.status==200 and (payload[:8]==bytes.fromhex('89504e470d0a1a0a') if needle=='PNG' else needle.encode() in payload)
+                  rows[path]=f'{"PASS" if ok else "FAIL"} HTTP={resp.status} bytes={len(payload)}'
+              except Exception as e:
+                rows[path]=f'FAIL {type(e).__name__}: {str(e)[:160]}'
+            if all(v.startswith('PASS') for v in rows.values()): break
+            if attempt<12: time.sleep(18)
+          lines=['Northern Dial sitewide flat beaver publication check','OVERALL: '+('PASS' if all(v.startswith('PASS') for v in rows.values()) else 'NOT VERIFIED'),'']+[f'{p}: {s}' for p,s in rows.items()]
+          Path('nd-beaver-verification.txt').write_text('\n'.join(lines)+'\n')
+          print('\n'.join(lines),flush=True)
+          PY
+      - name: Record verification in ops branch
+        shell: bash
+        run: |
+          git config user.name "Northern Dial QA"
+          git config user.email "actions@users.noreply.github.com"
+          git add nd-beaver-verification.txt
+          git commit -m "Record live beaver icon verification" || exit 0
+          git push origin HEAD
