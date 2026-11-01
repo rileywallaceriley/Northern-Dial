@@ -1,0 +1,11 @@
+Northern Dial sitewide flat beaver publication check
+OVERALL: PASS
+
+/images/nd-beaver-headphones.svg: PASS HTTP=200 bytes=1850
+/images/nd-beaver-180.png: PASS HTTP=200 bytes=13025
+/images/nd-beaver-192.png: PASS HTTP=200 bytes=13418
+/images/nd-beaver-512.png: PASS HTTP=200 bytes=36668
+/images/nd-staff-avatar.svg: PASS HTTP=200 bytes=1850
+/manifest.json: PASS HTTP=200 bytes=681
+/nd-shell.js: PASS HTTP=200 bytes=37782
+/authors/northern-dial-staff.html: PASS HTTP=200 bytes=3402
