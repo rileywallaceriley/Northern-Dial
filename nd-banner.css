@@ -130,15 +130,40 @@ body#top main select {
   display: none !important;
 }
 
-/* Use the exact voice command that reliably opens the station on Alexa. */
-body#top .custom-player::after {
-  content: 'NOW ON ALEXA  •  “Alexa, play Northern Dial Radio.”' !important;
+/* Alexa status and command are real text, styled independently for clearer contrast. */
+body#top:has(.nd-home-hero-logo) .custom-player::after {
+  content: none !important;
+  display: none !important;
+}
+
+body#top .custom-player .nd-alexa-listening {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255,255,255,.16);
+  font-family: 'Oswald', sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.45;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body#top .custom-player .nd-alexa-listening-label {
+  color: #CC3333;
+}
+
+body#top .custom-player .nd-alexa-listening-command {
+  color: #f3eee3;
 }
 
 @media (max-width: 768px) {
-  body#top .custom-player::after {
-    content: 'NOW ON ALEXA\A“Alexa, play Northern Dial Radio.”' !important;
-    white-space: pre-line !important;
+  body#top .custom-player .nd-alexa-listening {
+    font-size: .82rem;
   }
 }
 
