@@ -12,14 +12,14 @@
   gtag('js', new Date());
   gtag('config', 'G-G24PFXRPMW');
 })();
-// Sitewide utility icon. Keep the original full Northern Dial wordmark/logo in navigation.
+// Use the original Northern Dial logo for the sitewide favicon and touch icon.
 (() => {
-  const faviconUrl = '/images/nd-beaver-headphones.svg?v=20261101';
+  const faviconUrl = 'https://i.imgur.com/XIAPd0N.png';
   const touchUrl = 'https://i.imgur.com/XIAPd0N.png';
   document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]').forEach(link => link.remove());
   const favicon = document.createElement('link');
   favicon.rel = 'icon';
-  favicon.type = 'image/svg+xml';
+  favicon.type = 'image/png';
   favicon.href = faviconUrl;
   document.head.appendChild(favicon);
   let appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
