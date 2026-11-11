@@ -9740,4 +9740,8 @@
     <loc>https://www.northerndial.ca/tv.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.northerndial.ca/blog/if-you-like-olivia-rodrigo-canadian-artists.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
