@@ -46,7 +46,10 @@
       '<div class="nd-author-copy"><p class="nd-author-label">About the author · ' + author.role + '</p>' +
       '<p class="nd-author-name"><a href="' + author.url + '" rel="author">' + author.name + '</a></p>' +
       '<p class="nd-author-bio">' + author.bio + '</p></div>';
-    host.appendChild(card);
+    // Signed features place the author credit before the back-to-blog link.
+    const articleActions = isRiley ? host.querySelector('.article-body .article-actions') : null;
+    if (articleActions) articleActions.parentNode.insertBefore(card, articleActions);
+    else host.appendChild(card);
     if (!document.querySelector('meta[name="author"]')) {
       const meta = document.createElement('meta'); meta.name='author';meta.content=author.name;document.head.appendChild(meta);
     }
