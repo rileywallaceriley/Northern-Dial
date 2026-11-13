@@ -13,7 +13,7 @@
     const author = isRiley ? {
       name: 'Riley Wallace',
       role: 'Music journalist & editor',
-      image: '/images/riley-wallace-avatar.svg',
+      image: '/images/riley-wallace-avatar.svg?v=20261113b',
       url: '/authors/riley-wallace.html',
       bio: 'Veteran Canadian music journalist published in XXL, Exclaim!, HipHopDX and Okayplayer. Current FACTOR juror with more than 15 years covering Canadian music and hip-hop.',
       type: 'Person'
