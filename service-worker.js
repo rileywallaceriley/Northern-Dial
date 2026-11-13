@@ -1,4 +1,4 @@
-const VERSION = 'v16';
+const VERSION = 'v17';
 const STATIC_CACHE = `northern-dial-static-${VERSION}`;
 const PAGE_CACHE = `northern-dial-pages-${VERSION}`;
 const IMAGE_CACHE = `northern-dial-images-${VERSION}`;
@@ -156,6 +156,15 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate' && url.pathname.endsWith('/discover.html')) {
     event.respondWith(networkFirst(request, PAGE_CACHE, {cache:'no-store'}));
+    return;
+  }
+
+  // The blog archive changes with every publication. Never serve a stale
+  // listing just because the network takes more than the 350ms navigation race.
+  // Keep the last successful version for offline reading only.
+  if (request.mode === 'navigate' && url.origin === self.location.origin &&
+      ['/blog', '/blog/', '/blog/index.html'].includes(url.pathname)) {
+    event.respondWith(networkFirst(request, PAGE_CACHE, {cache: 'no-store'}));
     return;
   }
 
