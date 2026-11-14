@@ -59,6 +59,7 @@ Amar Chaka Collective
 Ambeez
 Amber Days
 Ambition
+Amy Jean
 Anachnid
 Anami Vice
 Anaïs Cardot
@@ -171,6 +172,7 @@ Blonde Diamond
 Blooom
 Blue Rodeo
 Blynk
+Bobbi Redd
 bobby bazini
 Bocafloja
 Bodywash
@@ -191,6 +193,7 @@ Brigitte M
 BriskInTheHouse
 Brody Myles
 Broken Social Scene
+Brother Tom Sos
 Bruno Pelletier
 Bryan Adams
 Buck 65
@@ -210,6 +213,7 @@ Calibur
 Calling All Captains
 Cam Kahin
 Camille
+Camoflauge Monk
 Candy Coated Killahz
 Candy Man
 Capital Vision
@@ -243,6 +247,7 @@ Chastity
 Chasé Scanz
 CheckMate
 Cherrykim
+chiara savasta
 Chiiild
 Chikoruss
 CHINO WAWA
@@ -441,6 +446,7 @@ Finger Eleven
 Finn
 Fionn
 Fito Blanko
+Fli Fetti
 flo
 Flore Laurentienne
 FouKi
@@ -493,8 +499,9 @@ Grimace Love
 Grimes
 Gritfall
 Gurinder Gill
-Gus
+GUS
 Gutta192
+GØHN
 Haley Smalls
 Half Moon Run
 Haliey Smith
@@ -531,6 +538,7 @@ Ice tha One
 Idles
 Idris Elba
 Illy
+Imperetiv
 In Essence
 In Essense
 Inderpal Moga
@@ -544,6 +552,7 @@ J Shiltz
 J-Soul
 J-Wyze
 J.Lately
+JackBoi
 jackson knox
 jacksoul
 Jaclyn Gee
@@ -552,6 +561,7 @@ Jacques Greene
 Jah'Mila
 Jahkoy
 Jahmar Carter
+Jahson Paynter
 James
 Jamie Fine
 Jann Arden
@@ -609,8 +619,10 @@ Jordan Fall
 Josh Martinez
 Josh Ramsay
 Josh Sahunta
+Joshua Alxndr
 Jr. Rhodes
 JRDN
+JRoberts
 Judith Bérard
 Jugga
 Juice
@@ -630,6 +642,7 @@ Justin Bieber
 Justin Nozuka
 Jxggi
 K Fresh The Knemesis
+K Money
 K!RA OJI
 K'NAAN
 K-4ce
@@ -674,6 +687,7 @@ Kim Stockwood
 Kimmortal
 king bliss
 King Dapz
+King Jus
 King Reign
 kinnie starr
 Kiwi jr.
@@ -683,6 +697,7 @@ Knowledge
 Knowuh
 Koko Love
 KOLA
+Konstantin Kourko
 Korey Deez
 Koriass
 Korry Deez
@@ -690,11 +705,14 @@ KOTO?
 Kreesha Turner
 Kris the $pirit
 Kristina Maria
+Kromatix_
+KRONiS
 Krys Kofi
 KTOE
 Kubla
 Kwncy
 Kxng Wooz
+Kyle Wildfern
 Kylie Minogue
 Kylo
 La Dynastie des Morniers
@@ -785,7 +803,9 @@ Majical Cloudz
 Majid Jordan
 Makeda
 Mali
+Malik Yusef
 Malko
+Malory
 Manchi
 Manna Music
 Manny
@@ -817,6 +837,7 @@ Matthew Good Band
 Matthew Progress
 Mattmac
 Maxime Landry
+Maya Killtron
 Mayhem Morearty
 Mayhem Moreaty
 Maylee Todd
@@ -834,6 +855,7 @@ Mel Pacifico
 Melanie Doane
 Melanie Durrant
 Melanie Fiona
+Melissa Endean
 Memblem
 Merna
 Metric
@@ -929,6 +951,7 @@ Nvrth
 NXSTY
 Nyce
 O'SOUND
+OAKK
 OB
 OB OBrien
 OCDC
@@ -1059,6 +1082,7 @@ Rossy
 Rowena Fysx
 Roy Woods
 Royal Canoe
+Rubber Room Report
 Ruben Young
 Ruby Waters
 Rufus Wainwright
@@ -1078,6 +1102,7 @@ Saint Kay
 Sajaa.
 Salia Joseph
 Sam Roberts
+Sam Vasudeva
 Sam-r
 Samantha
 Samara Cyn
@@ -1189,6 +1214,7 @@ Stereos
 Stone Pöet
 STORRY
 Stove God Cooks
+Streameum
 Strik-9
 SUCKERPUNCH!
 Sugar Jones
@@ -1213,6 +1239,7 @@ Swaine
 Swamp Thing
 Swollen Members
 Sylvain Cossette
+Syryn
 T.O. Huxtable
 T.R.A.C.K.S
 T.R.A.C.K.S.
@@ -1240,6 +1267,7 @@ Tedy
 Tee
 Tegan
 Tegan and Sara
+TempoMental
 Tenille Arts
 Tenille Townes
 Teon Gibbs
@@ -1261,6 +1289,7 @@ The Glorious Sons
 The Halfsizegiants
 The Halluci Nation
 The Heist
+The Indiana Drones
 The Killjoys
 The Kount
 The Mighty Rhino
@@ -1317,16 +1346,19 @@ Trishannah
 TROBIZ
 TRP.P
 Trudy
+TruJon
 Truss
 Ty Kane
 Tyler Shaw
 Tylor Wauneka
+Tyra Whitson
 TÖME
 UBAD
 Ultra Magnus
 Uncle Fester
 Unknown Artist
 Unotopic
+urette
 Uss
 Vadell Gabriel
 Valaire
@@ -1335,6 +1367,7 @@ vbnd
 Vektrx
 Vermeil
 Vibi
+Vic Mensa
 Victoria Duffield
 Victoria Staff
 Victory
@@ -1345,6 +1378,7 @@ Virginia To Vegas
 Virgo Rising
 Vita Chambers
 Vlxl
+Void Souls
 VT
 Walk Off the Earth
 Wave Montega
@@ -1388,6 +1422,7 @@ Yukon Blonde
 Yves Jarvis
 Zach Zoya
 Zack
+Zameer Rizvi
 Zargo
 Zayo
 Zeds Dead
@@ -1396,5 +1431,6 @@ Zeina
 ZIG MENTALITY
 Zinera
 ZOEY
+Zorza
 Édouard Tremblay-Grenier
 ТоНа
