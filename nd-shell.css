@@ -661,3 +661,27 @@ body.nd-persistent-browsing #nd-initial-document {
     width: 100% !important;
   }
 }
+
+/* Instagram profile link in the site nav (added 2026-11-13) */
+.nd-instagram-link {
+  align-items: center !important;
+  color: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 16px !important;
+}
+.nd-instagram-link:hover,
+.nd-instagram-link:focus {
+  background: #262626 !important;
+  color: #E1306C !important;
+}
+.nd-instagram-link svg { display: block !important; }
+@media (max-width: 768px) {
+  .nd-primary-links > .nd-instagram-link {
+    border-bottom: 1px solid #343434 !important;
+    justify-content: flex-start !important;
+    min-height: 46px !important;
+    padding: 14px 18px !important;
+    width: 100% !important;
+  }
+}
