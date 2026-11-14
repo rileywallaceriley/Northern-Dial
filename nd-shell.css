@@ -636,3 +636,28 @@ body.nd-persistent-browsing #nd-initial-document {
   .nd-mini-actions .nd-mini-profile { width:30px!important; height:34px!important; min-height:34px!important; padding:0!important; }
   .nd-mini-actions button { width:32px!important; height:34px!important; min-height:34px!important; flex-basis:32px; }
 }
+
+
+/* Spotify profile link in the site nav (added 2026-11-13) */
+.nd-spotify-link {
+  align-items: center !important;
+  color: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 16px !important;
+}
+.nd-spotify-link:hover,
+.nd-spotify-link:focus {
+  background: #262626 !important;
+  color: #1DB954 !important;
+}
+.nd-spotify-link svg { display: block !important; }
+@media (max-width: 768px) {
+  .nd-primary-links > .nd-spotify-link {
+    border-bottom: 1px solid #343434 !important;
+    justify-content: flex-start !important;
+    min-height: 46px !important;
+    padding: 14px 18px !important;
+    width: 100% !important;
+  }
+}
