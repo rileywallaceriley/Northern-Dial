@@ -289,6 +289,22 @@
       ]
     },
     {
+      "key": "benjamin russell",
+      "reason": "missing_translation",
+      "source_bio_sha256": "7f6d2a2a2f9cc0d3dc117065a5d34c3bd01ac3378cb09c7161fd059bc7e6a746",
+      "display_name": "Benjamin Russell",
+      "bio": "Benjamin Russell is a singer-songwriter and painter from Saskatoon who has lived in Montreal for decades, first known for his 1980s single \"Miracle,\" which earned him a Most Promising Male Vocalist nomination. He has released more than 20 albums, writing and recording with his partner Elyce, and he wrote and recorded his newest work during his diagnosis and treatment for pancreatic cancer. His latest album, Elemental, arrived on Bandcamp on November 4, 2026.",
+      "city": "Montreal, Quebec",
+      "country": "Canada",
+      "website": "https://benjamin-russell.com",
+      "instagram": "",
+      "sources": [
+        "https://benjamin-russell.com",
+        "https://www.side-line.com/benjamin-russell-elemental-album/",
+        "https://open.spotify.com/artist/2yw3ijBg4Tenp3Ul1zuoPg"
+      ]
+    },
+    {
       "key": "boslen",
       "reason": "short_translation_review",
       "source_bio_sha256": "8df02730abb138ac6e7dc66c88c16ac92d345332e183ebf30a02450914ac45f8",
@@ -303,6 +319,22 @@
         "https://www.universalmusic.ca/2022/06/24/boslen-unleashes-boundary-pushing-ep-gonzo/",
         "https://www.hotnewhiphop.com/350472-boslen-releases-ambitious-debut-album-dusk-to-dawn-new-mixtape",
         "https://www.socanmagazine.ca/news/discover-next-generation-of-great-canadian-songwriters-with-2023-socan-songwriting-prize/"
+      ]
+    },
+    {
+      "key": "brianna lizotte",
+      "reason": "missing_translation",
+      "source_bio_sha256": "5e5cbfd7e8397c0485e8334e08ff57b7d46b8ef8a93e4d18536a4c13def51877",
+      "display_name": "Brianna Lizotte",
+      "bio": "Brianna Lizotte is a Métis fiddle player from Edmonton, Alberta, who picked up the fiddle at age ten and later studied music at MacEwan University. Her album Winston & I (2024) earned her a 2025 JUNO nomination for Traditional Indigenous Artist or Group of the Year, and she performs and teaches Métis history through music and dance across Alberta. Her third album, Blood Memory, was released on November 4, 2026.",
+      "city": "Edmonton, Alberta",
+      "country": "Canada",
+      "website": "https://www.briannalizotte.com",
+      "instagram": "https://www.instagram.com/briannalizottemusic/",
+      "sources": [
+        "https://www.briannalizotte.com/about",
+        "https://www.macewan.ca/campus-life/news/2025/01/news-shoutouts-january-25/",
+        "https://open.spotify.com/artist/3iM7lgMJ6zvTZko7DvNbun"
       ]
     },
     {
@@ -378,6 +410,21 @@
       "sources": []
     },
     {
+      "key": "clay pigeon",
+      "reason": "missing_translation",
+      "source_bio_sha256": "ee3243b19082bf6489411895bfde619c466b91bb3ce75fb719385953e18c778c",
+      "display_name": "clay pigeon",
+      "bio": "clay pigeon is the songwriting vehicle of James Clayton, who was born in Peterborough, Ontario and now lives in Montreal, where he cut his debut at the city's storied Hotel2Tango studio. His alt-country songs favour tape warmth and plainspoken storytelling. His sophomore album, Cash Out in Kid Gloves, was released independently on November 6, 2026.",
+      "city": "Montreal, Quebec",
+      "country": "Canada",
+      "website": "",
+      "instagram": "https://www.instagram.com/james__clayton",
+      "sources": [
+        "https://claypigeonmusic.bandcamp.com/album/the-aching-taste-of-blue",
+        "https://open.spotify.com/artist/7BHNqeFLFZUbD5VS0VtoyL"
+      ]
+    },
+    {
       "key": "colin léo",
       "reason": "missing_translation",
       "source_bio_sha256": "b6fed3b7b857ad5b4bffb37128613d5a27440692711d82c2c5fca15dec4a046b",
@@ -390,6 +437,22 @@
       "sources": [
         "https://45tours.ca/single/memes-habitudes",
         "https://www.qobuz.com/ca-fr/album/memes-habitudes-colin-leo/kbhc86iqg7dxy"
+      ]
+    },
+    {
+      "key": "comeback kid",
+      "reason": "missing_translation",
+      "source_bio_sha256": "0b4de594393789769695e027a08ccda50536a6633abb6b87882aaa3285eeb978",
+      "display_name": "Comeback Kid",
+      "bio": "Comeback Kid are a hardcore punk band from Winnipeg, Manitoba, formed in the early 2000s and fronted by vocalist Andrew Neufeld. Since their 2003 debut Turn It Around, Neufeld, guitarists Jeremy Hiebert and Stu Ross, bassist Chase Brenneman and drummer Terrance Pettitt have carried Winnipeg hardcore to stages around the world. Their eighth studio album, Chosen Hell, was released on November 6, 2026, via Dine Alone Records.",
+      "city": "Winnipeg, Manitoba",
+      "country": "Canada",
+      "website": "https://comeback-kid.com/",
+      "instagram": "https://www.instagram.com/comebackkid_hc/",
+      "sources": [
+        "https://exclaim.ca/music/article/comeback-kid-detail-new-album-chosen-hell",
+        "https://comebackkid-hc.bandcamp.com/music",
+        "https://open.spotify.com/artist/67f7GZXNMGRn98lqrtIdrN"
       ]
     },
     {
@@ -580,6 +643,21 @@
       ]
     },
     {
+      "key": "fog lake",
+      "reason": "missing_translation",
+      "source_bio_sha256": "89a95261b1fba25e7ad0eb8f300ffac5bc53f1607a550242f4e6c5829afc59c8",
+      "display_name": "Fog Lake",
+      "bio": "Fog Lake is the lo-fi recording project of Aaron Powell, from Glovertown, Newfoundland and Labrador, who has built a devoted following on hushed, home-recorded albums including Dragonchaser (2017) and Captain (2018). Hollowbody, his seventh Fog Lake album and first since 2023's Midnight Society, was written over three weeks back home in Newfoundland and co-produced with longtime collaborator Warren Hildebrand. It was released on November 13, 2026.",
+      "city": "Glovertown, Newfoundland and Labrador",
+      "country": "Canada",
+      "website": "",
+      "instagram": "https://www.instagram.com/foglake_/",
+      "sources": [
+        "https://foglake.bandcamp.com",
+        "https://open.spotify.com/artist/04GCjO1r1hPelibCUq9S8H"
+      ]
+    },
+    {
       "key": "frank",
       "reason": "missing_translation",
       "source_bio_sha256": "59181aea17af85c018d52f880f74a2dd1b596175f854ba22528edba5bcd67f62",
@@ -608,6 +686,22 @@
         "https://en.wikipedia.org/wiki/Frvrfriday",
         "https://www.complex.com/music/a/alex-nino-gheciu/frvrfriday-time-for-you",
         "https://junoawards.ca/awards/past-winners-nominees/page/403/?sort=ASC&sortby=year"
+      ]
+    },
+    {
+      "key": "fucked up",
+      "reason": "missing_translation",
+      "source_bio_sha256": "eb06ea71ec29b244840d8d02c64eefa805491f7730857a37c066e6e5e71a49ba",
+      "display_name": "Fucked Up",
+      "bio": "Fucked Up are a Toronto hardcore punk band formed in 2001, fronted by Damian Abraham, whose second album The Chemistry of Common Life won the 2009 Polaris Music Prize. Alongside their regular albums, the band has spent twenty years on a parallel Zodiac series of concept records that began with Year of the Dog in 2006. Grass Can Move Stones Part 3: Year of the Rooster, the final instalment of the Zodiac series, was released on Bandcamp on November 13, 2026.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://fuckedup.cc",
+      "instagram": "https://www.instagram.com/fuckedup",
+      "sources": [
+        "https://www.earsplitcompound.com/fucked-up-year-of-the-rooster-2xlp-out-today-on-tankcrimes/",
+        "https://en.wikipedia.org/wiki/Fucked_Up",
+        "https://open.spotify.com/artist/05C3EDw4Rf0qMhrdjFKncL"
       ]
     },
     {
@@ -643,6 +737,22 @@
       ]
     },
     {
+      "key": "hayden",
+      "reason": "missing_translation",
+      "source_bio_sha256": "e3af5667f9943a88329a1c19d64ddeb64849f14dba6e20c4b71b7d8d8613f25e",
+      "display_name": "Hayden",
+      "bio": "Hayden is the stage name of Toronto singer-songwriter Paul Hayden Desser, who emerged in the mid-1990s with Everything I Long For (1995), released on Hardwood Records, the label he founded in 1994. A three-time JUNO nominee, he has spent three decades making intimate, largely self-produced records, most of them recorded at home. His tenth studio album, The Recent Past, was released on November 6, 2026.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "https://wasteyourdaysaway.com",
+      "instagram": "https://www.instagram.com/haydendesser/",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hayden_(musician)",
+        "https://wasteyourdaysaway.com",
+        "https://open.spotify.com/artist/2EJpeCmBlwSNpb1GcTj1xp"
+      ]
+    },
+    {
       "key": "house mouse",
       "reason": "missing_translation",
       "source_bio_sha256": "c94deef0f7b70c7116f1b40767ed9db881e5721d429619b8a2ef6ace902b37ec",
@@ -655,117 +765,20 @@
       "sources": []
     },
     {
-      "key": "jon rivera",
+      "key": "jacob do",
       "reason": "missing_translation",
-      "source_bio_sha256": "12e1a6af655bffc35987fc3e19dd738df62557229fe18415261dac1b4ec22b73",
-      "display_name": "Jon Rivera",
-      "bio": "Jon Rivera is a Canadian recording artist with “Genesis 3:12” in Northern Dial's rotation.",
-      "city": "",
+      "source_bio_sha256": "e3efc6b3381ff740b6c902db33c48f87edcca236a77bd5a8cd4c57a413692a3d",
+      "display_name": "Jacob Do",
+      "bio": "Jacob Do is an Edmonton-based tenor saxophonist working in the bebop tradition, a McGill University graduate who studied with Rémi Bolduc and leads bands built from mentors and longtime collaborators. His earlier live EP Maybe was recorded at the Yardbird Suite, the Edmonton room where he also launched his first full-length. That debut album, First Chorus, featuring a guest spot from Order of Canada recipient PJ Perry, was released November 6, 2026, on Bent River Records.",
+      "city": "Edmonton, Alberta",
       "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "justin nozuka",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "179a87f05e6e30d98785f8ec5f80a6ae0ad21e32ebd93125bfab9fb642ea3415",
-      "display_name": "Justin Nozuka",
-      "bio": "American-born, Toronto-raised singer-songwriter Justin Nozuka built his name on intimate acoustic songwriting, releasing his debut Holly in 2007 after writing its songs as a teenager; Glassnote Records picked it up for its 2008 reissue, and Holly earned him a 2008 JUNO nomination for New Artist of the Year. Follow-up You I Wind Land and Sea (2010) topped Billboard's Heatseekers chart and earned a JUNO nomination for Adult Alternative Album of the Year, while Ulysses (2014) stretched his folk-soul palette further. Later releases, including 2023's Daydreams & Endless Nights, moved him toward lush alternative R&B, and he has performed on The Late Show with David Letterman.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "https://www.justinnozuka.com/",
-      "instagram": "",
+      "website": "https://www.jacobdomusic.com",
+      "instagram": "https://www.instagram.com/jacobdomusic",
       "sources": [
-        "https://www.allmusic.com/artist/justin-nozuka-mn0000989540",
-        "https://junoawards.ca/awards/past-winners-nominees/page/146/?sort=DESC&sortby=name"
+        "https://bentriverrecords.macewan.ca/index.php/artists/jacob-do/",
+        "https://www.rhythmchanges.ca/favourite-albums-and-eps-from-the-fall-so-far/",
+        "https://open.spotify.com/artist/7ggXSscWojly8vFbsviEZU"
       ]
-    },
-    {
-      "key": "k!ra oji",
-      "reason": "missing_translation",
-      "source_bio_sha256": "35e6a049802c3667c1b02873592be5eb67b6bfabcede9609b93be765dcec0ba2",
-      "display_name": "K!RA OJI",
-      "bio": "K!RA OJI is a rapper and songwriter who moved from Angoulême, France, to Montreal's South Shore as a teenager. He released the EP Protagoniste with producer DJ Kleancut in 2022, followed by Chercheur de lumières in 2023. Hear his collaboration with Nicky Savage, “BITCHBOYJCONNAISLECODE,” on Northern Dial.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "karaba",
-      "reason": "missing_translation",
-      "source_bio_sha256": "003b15be8d3064565d39b4e98cc24f4cea62ff0a28e4b7114c409289d6172a44",
-      "display_name": "KARABA",
-      "bio": "KARABA is a DJ, producer and former professional dancer born in Grenoble, France and raised in Montréal. Her music sits at the intersection of Afro house and underground club music, and her recent work includes the Tides remixes and 2026 singles such as Iya Yemoja, FOCUS, BIG DRIP and LMHYS.",
-      "city": "Montréal, Québec",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://www.djkaraba.com/",
-        "https://open.spotify.com/artist/1Pc6cL3vajo5Vx0XhguGWy"
-      ]
-    },
-    {
-      "key": "karim ouellet",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "76b62e9fd37a12e4a357ac8817924d8e10cc607dba5e4cc76c24fa1226e100e6",
-      "display_name": "Karim Ouellet",
-      "bio": "Karim Ouellet (1984–2021) was a Senegalese-born Canadian pop singer-songwriter based in Quebec City. Born in Dakar on December 8, 1984 and adopted by Canadian diplomats, he lived in France, Rwanda and Tunisia before his family settled in Quebec City when he was 15. He released his debut album Plume in 2011, then broke through with Fox (2012) and its hit \"L'amour\"; Fox won the Juno Award for Francophone Album of the Year in 2014. His third album, Trente, arrived in 2016, the same year as the Aïkido EP. His French-language pop blended folk, soul, reggae and electronic influences.",
-      "city": "Québec City, Québec",
-      "country": "Canada",
-      "website": "https://karimouellet.ca/",
-      "instagram": "",
-      "sources": [
-        "https://toronto.citynews.ca/2022/06/22/juno-award-winning-artist-karim-ouellet-died-of-diabetes-complication-coroner/",
-        "https://en.wikipedia.org/wiki/Karim_Ouellet"
-      ]
-    },
-    {
-      "key": "kayam",
-      "reason": "missing_translation",
-      "source_bio_sha256": "a4e5cbec01cdf27feb0263dbf514714f6a745bb590bc76c113db0ac56cc405da",
-      "display_name": "KAYAM",
-      "bio": "KAYAM is a Canadian-born singer-songwriter from Calgary whose Tanzanian, Kenyan, Indian and British family background feeds a sound spanning pop, hip-hop, R&B and Afrobeats. His catalogue includes Paralyzed, Ride For Me and Your Soniya, while the 2026 single Singing In The Rain extends his contemporary R&B direction.",
-      "city": "Calgary, Alberta",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://www.albertamusic.org/directory-profile/kayam/",
-        "https://agakhanmuseum.org/bio/kayam/"
-      ]
-    },
-    {
-      "key": "kellylee evans",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "aac82bc90eaccf22122b51eaf5cd5d51505a79853b8b863f6d566bd39b04f64d",
-      "display_name": "Kellylee Evans",
-      "bio": "Scarborough-born singer-songwriter Kellylee Evans is a Juno Award-winning jazz and soul vocalist. Educated at Carleton University, where she earned degrees in law and English before turning to music full-time, she took second place at the 2004 Thelonious Monk International Jazz Vocals Competition. Her debut album Fight or Flight? (2006) earned a Juno nomination; her Nina Simone tribute Nina (2010) won the 2011 Juno for Vocal Jazz Album of the Year. Come On was released in France in 2015 and earned a 2018 JUNO nomination. After a lightning strike in 2013 and subsequent health setbacks sidelined her for several years, she returned to performing. She has opened for John Legend, Tony Bennett and Erykah Badu.",
-      "city": "",
-      "country": "Canada",
-      "website": "https://kellyleeevans.com/",
-      "instagram": "",
-      "sources": [
-        "https://carleton.ca/fass/2017/meet-carletons-artist-residence-kellylee-evans/",
-        "https://convocation.carleton.ca/ceremony/honorary-degree-recipients/",
-        "https://junoawards.ca/awards/past-winners-nominees/page/205/?sort=ASC&sortby=category",
-        "https://en.wikipedia.org/wiki/Kellylee_Evans"
-      ]
-    },
-    {
-      "key": "kerrington gillespie",
-      "reason": "missing_translation",
-      "source_bio_sha256": "011f397b98faf044092fa47aa7919acfdbb2e17666f918339c4ee90f6f9e146e",
-      "display_name": "Kerrington Gillespie",
-      "bio": "Kerrington Gillespie is a country-pop singer and songwriter from Vancouver Island. Her releases include “New Boyfriend” and “Three Missed Calls,” with live performances at venues and festivals across British Columbia.",
-      "city": "Vancouver Island, British Columbia",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
     }
   ]
 }
