@@ -350,6 +350,32 @@
       "sources": []
     },
     {
+      "key": "cali snipes",
+      "reason": "missing_translation",
+      "source_bio_sha256": "8417131c59c2f6f63f7b075cad65fcd13639298598a2d8070b5d49831f36de17",
+      "display_name": "Cali Snipes",
+      "bio": "Cali Snipes is a Toronto MC and member of Team Offense, the crew that took on Drake and the Wise Guys in 2006. His signature record is the Rich Kidd-produced single \"Money 2 Burn,\" released with a video directed by The Sharpshooter; its remix brought in Famous, Mayhem Morearty, Luu Breeze, Tona and Richie Sosa. He also recorded \"The Streets\" with Aristo and Ceaza Leon, appeared on Littles The General's \"Streets Is War,\" guested on Sese's first YFRWN tape in 2010, and followed with his own U.M.C.S. (Unauthorized Music of Cali Snipes) project in 2011.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://hiphopcanada.com/back-outside-bishop-fundraiser/"
+      ]
+    },
+    {
+      "key": "ceaza leon",
+      "reason": "missing_translation",
+      "source_bio_sha256": "23d96e8623ade7bc9a7068caea40dca3dcce073677b84283b1711d3516f93dd8",
+      "display_name": "Ceaza Leon",
+      "bio": "Ceaza Leon is a Toronto rapper and producer, born October 17, 1984, and a member of Team Offense. Behind the boards he produced for St. Laz, Aristo, Hustlemann, The Corps and The Offense itself, and he was a founding member of Battleground Entertainment. In 2010 he teamed with Scorsese — the name Sese recorded under before Sayzee — as The Write Brothers; their mixtape of the same name was hosted by DJ Vlad and DJ 2Nice, presented by Team Offense, and launched with the single \"Bang.\" He is also a member of The Commitee, alongside El Niño, Choice and Rev.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": []
+    },
+    {
       "key": "charmaine",
       "reason": "short_translation_review",
       "source_bio_sha256": "f016250e1087766aed3e4e91257ecd3195531ae02233e2f9c7a7e3f5a61c58c9",
@@ -408,6 +434,20 @@
       "website": "",
       "instagram": "",
       "sources": []
+    },
+    {
+      "key": "choice",
+      "reason": "missing_translation",
+      "source_bio_sha256": "ee8ce837d1fc29d63c404b44d78893c7b4e1e5f44107d269ff82d5a1f4484dae",
+      "display_name": "Choice",
+      "bio": "Choice is a Toronto MC documented as a member of Team Offense, the eight-man crew behind the 2006 \"Publicity Stunt\" diss that opened Drake's first official rap beef. He is also named as a member of The Commitee, the group he shared with fellow Team Offense members Ceaza Leon and El Niño, and Rev. Beyond those crew records, very little of his catalogue or biography survives in the sources available.\n\nThis profile is currently under research — check back later as we piece together the blog-era record.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://hiphopcanada.com/back-outside-bishop-fundraiser/"
+      ]
     },
     {
       "key": "clay pigeon",
@@ -615,6 +655,21 @@
       ]
     },
     {
+      "key": "el niño",
+      "reason": "missing_translation",
+      "source_bio_sha256": "ad736fb774683ae377469f629124ad6e181bf70fa4d6f19ef7918ce91026613f",
+      "display_name": "El Niño",
+      "bio": "El Niño is a Toronto MC documented as a member of Team Offense, the crew that fired the first shot in Drake's first official rap beef in 2006. He is also named as a member of The Commitee, alongside Ceaza Leon, Choice and Rev, and he appears with Cali Snipes on \"The Future,\" preserved in Mega City Hip Hop's audio archive. Little else from his catalogue has survived the blog era in the sources available.\n\nThis profile is currently under research — check back later as we piece together the blog-era record.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://hiphopcanada.com/back-outside-bishop-fundraiser/",
+        "https://megacityhiphop.com/music/"
+      ]
+    },
+    {
       "key": "etienne dufresne",
       "reason": "missing_translation",
       "source_bio_sha256": "1297433fc803b1930244856cedb633716a19d298865e766e472464b2d4a4b15f",
@@ -718,66 +773,6 @@
         "https://www.allmusic.com/artist/grandtheft-mn0002925603",
         "https://www.insomniac.com/music/artists/grandtheft/",
         "https://foolsgoldrecs.com/artists/grandtheft/"
-      ]
-    },
-    {
-      "key": "gus",
-      "reason": "missing_translation",
-      "source_bio_sha256": "b3400bf4e1dd0e3ca275a22e2380f6ac43d6470776f818edef5a2c9de759b0aa",
-      "display_name": "GUS",
-      "bio": "GUS is a Toronto-born singer-songwriter whose guitar-led indie-pop songs focus on growing up, relationships, friendship and leaving home. After university, he moved to Los Angeles to write and perform, while remaining connected to Toronto. His live work includes tours with Johnny Orlando and LØLØ.\n\nHis releases include “Vivian” and the October 2, 2026 single “Boys of Summer,” now playing on Northern Dial. This profile concerns the contemporary Toronto-born solo artist, not the unrelated Vancouver punk band or other performers who have recorded as Gus.",
-      "city": "Toronto, Ontario (born); Los Angeles, California (based)",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://first-avenue.com/performer/gus/",
-        "https://music.amazon.fr/albums/B0HHQYW8V9",
-        "https://www.last.fm/music/Gus/Boys%2Bof%2BSummer%2B-%2BSingle"
-      ]
-    },
-    {
-      "key": "hayden",
-      "reason": "missing_translation",
-      "source_bio_sha256": "e3af5667f9943a88329a1c19d64ddeb64849f14dba6e20c4b71b7d8d8613f25e",
-      "display_name": "Hayden",
-      "bio": "Hayden is the stage name of Toronto singer-songwriter Paul Hayden Desser, who emerged in the mid-1990s with Everything I Long For (1995), released on Hardwood Records, the label he founded in 1994. A three-time JUNO nominee, he has spent three decades making intimate, largely self-produced records, most of them recorded at home. His tenth studio album, The Recent Past, was released on November 6, 2026.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "https://wasteyourdaysaway.com",
-      "instagram": "https://www.instagram.com/haydendesser/",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Hayden_(musician)",
-        "https://wasteyourdaysaway.com",
-        "https://open.spotify.com/artist/2EJpeCmBlwSNpb1GcTj1xp"
-      ]
-    },
-    {
-      "key": "house mouse",
-      "reason": "missing_translation",
-      "source_bio_sha256": "c94deef0f7b70c7116f1b40767ed9db881e5721d429619b8a2ef6ace902b37ec",
-      "display_name": "House Mouse",
-      "bio": "House Mouse is a Canadian recording artist with “benny and joon” in Northern Dial's rotation.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": []
-    },
-    {
-      "key": "jacob do",
-      "reason": "missing_translation",
-      "source_bio_sha256": "e3efc6b3381ff740b6c902db33c48f87edcca236a77bd5a8cd4c57a413692a3d",
-      "display_name": "Jacob Do",
-      "bio": "Jacob Do is an Edmonton-based tenor saxophonist working in the bebop tradition, a McGill University graduate who studied with Rémi Bolduc and leads bands built from mentors and longtime collaborators. His earlier live EP Maybe was recorded at the Yardbird Suite, the Edmonton room where he also launched his first full-length. That debut album, First Chorus, featuring a guest spot from Order of Canada recipient PJ Perry, was released November 6, 2026, on Bent River Records.",
-      "city": "Edmonton, Alberta",
-      "country": "Canada",
-      "website": "https://www.jacobdomusic.com",
-      "instagram": "https://www.instagram.com/jacobdomusic",
-      "sources": [
-        "https://bentriverrecords.macewan.ca/index.php/artists/jacob-do/",
-        "https://www.rhythmchanges.ca/favourite-albums-and-eps-from-the-fall-so-far/",
-        "https://open.spotify.com/artist/7ggXSscWojly8vFbsviEZU"
       ]
     }
   ]
