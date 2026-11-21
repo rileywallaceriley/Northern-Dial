@@ -15,6 +15,20 @@
       "sources": []
     },
     {
+      "key": "4th pyramid",
+      "reason": "missing_translation",
+      "source_bio_sha256": "56564044b3f54291d564754dfde06d491830457ff885a9ba12c4a266df4cf3a0",
+      "display_name": "4th Pyramid",
+      "bio": "4th Pyramid is the stage name of Adam Farag, a Toronto rapper, producer, songwriter and DJ of Egyptian descent. He first made noise as a beatmaker, signing with New York's Definitive Jux label and appearing on \"Definitive Jux Presents III\". As a producer and engineer he has credits with the Black Eyed Peas, Pete Rock, MF Doom and members of Wu-Tang Clan. His debut solo rap album, \"The Pyramid Scheme\", arrived in 2012 on his own Silk Ivory imprint through Universal Music Canada, followed by \"The Sky Belongs to the Stars\" EP in 2013. He also tours as Jazz Cartier's official DJ. His track \"Let The Drummer Play\" joined Northern Dial's library in November 2026.",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://open.spotify.com/artist/1EdfzHRvcsJA9Etr5y5e5i"
+      ]
+    },
+    {
       "key": "6odem3",
       "reason": "missing_translation",
       "source_bio_sha256": "ab617cfb964502909e7bdd2700fb3d0698c50228bb4aa54c32be3f0f1d74ac6a",
@@ -135,6 +149,20 @@
         "https://en.wikipedia.org/wiki/Andy_Shauf",
         "https://nowtoronto.com/music/features/andy-shauf-moves-to-toronto/",
         "https://polarismusicprize.ca/2016-nominees/"
+      ]
+    },
+    {
+      "key": "angerville",
+      "reason": "missing_translation",
+      "source_bio_sha256": "3b360f2c03593b72e0b4ca50206b6ba6a0c0abf182df2bef99d2242769f040fe",
+      "display_name": "Angerville",
+      "bio": "Angerville are a hip hop duo from Aurora, Ontario, made up of MCs Conscious Thought and Fortunato. The group formed in 1998 as a trio with Ill da Shystee (Luke Marson), travelling across Ontario for freestyle battles and open mics. Marson was murdered in 2002 at 22, and the remaining two carried the name forward. Based in Aurora, where they ran Angerville Entertainment, the duo built a deep catalogue of hardcore, traditional hip hop: \"Rebellion\" and the Royce Birth collaboration \"Blood, Sweat & Tears\" in 2008, \"Uprising\" in 2010 and \"Warfare\" in 2011. Angerville's music joined Northern Dial's library in November 2026.",
+      "city": "Aurora, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://open.spotify.com/artist/1946mPe23998oC1n7j2nOm"
       ]
     },
     {
@@ -623,6 +651,20 @@
       ]
     },
     {
+      "key": "devon tracy",
+      "reason": "missing_translation",
+      "source_bio_sha256": "05c2964d1a112a60635cf4550df554dea09474fee8f065d595600b3a7e2d1aed",
+      "display_name": "Devon Tracy",
+      "bio": "Devon Tracy is a rapper and dancer from Mississauga, Ontario, who began releasing music as a teenager. His debut single, \"Green Goblin\", arrived in September 2010, and his freestyle over Pac Div's \"Anti-Freeze\" built an early buzz the following year. His \"Dream Chase\" mixtape followed in December 2011, with production from Jazz Feezy, Boi-1da's camp and others, and he kept working on both sides of the border, later basing himself in Atlanta for a stretch. In 2018 he released \"Choosin\", a collaboration with Atlanta's Gunna tied to his \"4AM\" project. Northern Dial's library carries \"Choosin (feat. Gunna)\", \"Turn You Up\", \"Ambition\" and \"Crew Love\", which joined the library in November 2026.",
+      "city": "Mississauga, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://open.spotify.com/artist/1RJEaGb6EmkD2YkehfRVeC"
+      ]
+    },
+    {
       "key": "dirty radio",
       "reason": "short_translation_review",
       "source_bio_sha256": "bc7550aa07ac4df98e7ce32ff92a4e1b934701a3c82b2ae9227b9b6d08d01e88",
@@ -725,54 +767,6 @@
       "sources": [
         "https://radiowaterloo.ca/category/new-music/",
         "https://music.amazon.com/artists/B0GHRTCSC8/frank"
-      ]
-    },
-    {
-      "key": "frvrfriday",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "406bfcf66e921ca60e056a0cbfa9943eee8a487be53a5f53d8be56c0c2ccef33",
-      "display_name": "FRVRFRIDAY",
-      "bio": "FRVRFRIDAY is the stage name of Tommy Ruhingubugi, a Rwandan-born Canadian singer, rapper and producer. Born in Rwanda and raised in Montreal from the age of two, he made his first beat on the family computer at 14 and released his debut single \"Got It\" in 2017, followed by the EPs More Than You Know and Offline and the six-track WHOISFRIDAY. His 2020 single \"Window Shopping\" featured Lil Baby, and his collaboration with fellow Canadian Anders, \"What I Like,\" earned a nomination for Rap Single of the Year at the 2022 Juno Awards.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Frvrfriday",
-        "https://www.complex.com/music/a/alex-nino-gheciu/frvrfriday-time-for-you",
-        "https://junoawards.ca/awards/past-winners-nominees/page/403/?sort=ASC&sortby=year"
-      ]
-    },
-    {
-      "key": "fucked up",
-      "reason": "missing_translation",
-      "source_bio_sha256": "eb06ea71ec29b244840d8d02c64eefa805491f7730857a37c066e6e5e71a49ba",
-      "display_name": "Fucked Up",
-      "bio": "Fucked Up are a Toronto hardcore punk band formed in 2001, fronted by Damian Abraham, whose second album The Chemistry of Common Life won the 2009 Polaris Music Prize. Alongside their regular albums, the band has spent twenty years on a parallel Zodiac series of concept records that began with Year of the Dog in 2006. Grass Can Move Stones Part 3: Year of the Rooster, the final instalment of the Zodiac series, was released on Bandcamp on November 13, 2026.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "https://fuckedup.cc",
-      "instagram": "https://www.instagram.com/fuckedup",
-      "sources": [
-        "https://www.earsplitcompound.com/fucked-up-year-of-the-rooster-2xlp-out-today-on-tankcrimes/",
-        "https://en.wikipedia.org/wiki/Fucked_Up",
-        "https://open.spotify.com/artist/05C3EDw4Rf0qMhrdjFKncL"
-      ]
-    },
-    {
-      "key": "grandtheft",
-      "reason": "short_translation_review",
-      "source_bio_sha256": "a50d8e112179f86609c7fdaf0e432abdcf57741b18fc8913faf2ae0eaa86094e",
-      "display_name": "Grandtheft",
-      "bio": "Toronto producer and DJ Grandtheft is the recording alias of Aaron Waisglass, whose club-focused electronic music ranges from trap and moombahton to future house, informed by hip-hop, dancehall and bass music. By the early 2010s his career accelerated with releases on Mad Decent, Top Billin and Spinnin' Records, plus a Diplo collaboration remixing Calvin Harris's \"Sweet Nothing.\" His Quit This City EP arrived in 2015 on Mad Decent. His 2014 Keys N Krates collaboration \"Keep It 100\" won a MuchMusic Video Award and appeared in the Minions movie trailer, and his 2016 single \"Easy Go\" with Delaney Jane followed.",
-      "city": "Toronto, Ontario",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://www.allmusic.com/artist/grandtheft-mn0002925603",
-        "https://www.insomniac.com/music/artists/grandtheft/",
-        "https://foolsgoldrecs.com/artists/grandtheft/"
       ]
     }
   ]
