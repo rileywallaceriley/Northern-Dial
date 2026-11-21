@@ -651,6 +651,21 @@
       ]
     },
     {
+      "key": "deuce-deuce",
+      "reason": "missing_translation",
+      "source_bio_sha256": "cd11cc6b8673136d476a77b63a92b4eac0f5bd4391661a15e2f54b0ab22e51df",
+      "display_name": "Deuce-Deuce",
+      "bio": "Deuce-Deuce (styled deuce-DEUCE) is a hip-hop duo from Ottawa, Ontario, consisting of Harvey Stripes and Twellve. Their debut street release, Paperboys - The EP, earned them HipHopCanada's featured artist of the month recognition in December 2002. Its first single, \"Paperboys,\" received airplay on university and college radio. In 2006, the duo released Ballerz Presents: The Best of deuce DEUCE, a greatest-hits mixtape hosted by Ottawa DJ Dice. Harvey Stripes later moved to Toronto and founded D&D Music Group, which released the duo's Double or Nothing mixtape, hosted by DJ Absolut, in August 2008. Northern Dial's library includes \"Paperboys\" and \"Where Do We Go\" from the EP, added November 21, 2026.",
+      "city": "Ottawa, Ontario",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://archive.org/details/iuma-deucedeuce",
+        "https://www.discogs.com/release/26460770"
+      ]
+    },
+    {
       "key": "devon tracy",
       "reason": "missing_translation",
       "source_bio_sha256": "05c2964d1a112a60635cf4550df554dea09474fee8f065d595600b3a7e2d1aed",
@@ -752,21 +767,6 @@
       "sources": [
         "https://foglake.bandcamp.com",
         "https://open.spotify.com/artist/04GCjO1r1hPelibCUq9S8H"
-      ]
-    },
-    {
-      "key": "frank",
-      "reason": "missing_translation",
-      "source_bio_sha256": "59181aea17af85c018d52f880f74a2dd1b596175f854ba22528edba5bcd67f62",
-      "display_name": "frank",
-      "bio": "frank is a Canadian independent artist whose 2026 releases include bike song, flynn rider, dirt and onions and your biggest fan. The latter was featured by CKMS-FM's Northern Lights program in a September 2026 episode dedicated to new Canadian music.",
-      "city": "",
-      "country": "Canada",
-      "website": "",
-      "instagram": "",
-      "sources": [
-        "https://radiowaterloo.ca/category/new-music/",
-        "https://music.amazon.com/artists/B0GHRTCSC8/frank"
       ]
     }
   ]
