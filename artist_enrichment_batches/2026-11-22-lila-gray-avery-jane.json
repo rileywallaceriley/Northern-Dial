@@ -1,0 +1,36 @@
+{
+  "lila gray": {
+    "display_name": "Lila Gray",
+    "bio": "Lila Gray is a Vancouver-based alt-pop artist and producer, raised in the mountains of British Columbia. Classically trained on cello from age five, she later studied audio engineering at Recording Arts Canada in Montreal and is an alum of Music Publishers Canada's Women in the Studio program. She placed in the Top 100 of CBC Searchlight in 2021 and received the 2025 Olivia Quan Award for Audio Excellence. Her albums run from Not What I Was Promised (2021) through Wild Tension and Scared of the Dark (You Should Be Too). Her fourth album, Soft Animal, arrived on November 20, 2026, produced by Gray with Maïa Davies as co-executive producer and led by the singles \"Bite Back,\" \"Ask Her\" and \"Every Woman.\"",
+    "city": "Vancouver, British Columbia",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://www.11blooms.ca/lila-gray",
+      "https://www.nxne.com/2026-artists/lila-gray",
+      "https://exclaim.ca/music/article/new-album-releases-masterlist"
+    ],
+    "album_titles": [
+      "Not What I Was Promised",
+      "Wild Tension",
+      "Scared of the Dark (You Should Be Too)",
+      "Soft Animal"
+    ]
+  },
+  "avery jane": {
+    "display_name": "Avery Jane",
+    "bio": "Avery Jane is a folk-soul pop singer-songwriter based in Montreal, originally from Victoria, British Columbia. She grew up in a music-loving household in Victoria, moved to Montreal in 2018 and started gigging in 2019. Her first single, \"April,\" arrived in September 2020, followed by the acoustic EP Honey Lemon Ginger (2022) and the full-production EP Hey You (2023). Her 2026 singles include \"I Took Off My Heels,\" \"Chips\" (released July 17, 2026) and \"Snowbird,\" released November 20, 2026 and produced by Rodolphe Bouille. An Amazon Music Canada billboard for \"Snowbird\" went up at Sankofa Square in Toronto in November 2026.",
+    "city": "Montreal, Quebec",
+    "country": "Canada",
+    "reviewed": true,
+    "sources": [
+      "https://festapp.io/artists/avery-jane",
+      "https://open.spotify.com/album/5vtftVsDSsN7vyuK4hICyq",
+      "https://www.countrymusic.co.uk/performer/avery-jane/"
+    ],
+    "album_titles": [
+      "Honey Lemon Ginger",
+      "Hey You"
+    ]
+  }
+}
