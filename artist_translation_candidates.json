@@ -302,6 +302,22 @@
       ]
     },
     {
+      "key": "avery jane",
+      "reason": "missing_translation",
+      "source_bio_sha256": "beb2427bff81d472a2fcf46d6715b3138b988a59af2bc7441022b7f2d44fb872",
+      "display_name": "Avery Jane",
+      "bio": "Avery Jane is a folk-soul pop singer-songwriter based in Montreal, originally from Victoria, British Columbia. She grew up in a music-loving household in Victoria, moved to Montreal in 2018 and started gigging in 2019. Her first single, \"April,\" arrived in September 2020, followed by the acoustic EP Honey Lemon Ginger (2022) and the full-production EP Hey You (2023). Her 2026 singles include \"I Took Off My Heels,\" \"Chips\" (released July 17, 2026) and \"Snowbird,\" released November 20, 2026 and produced by Rodolphe Bouille. An Amazon Music Canada billboard for \"Snowbird\" went up at Sankofa Square in Toronto in November 2026.",
+      "city": "Montreal, Quebec",
+      "country": "Canada",
+      "website": "",
+      "instagram": "",
+      "sources": [
+        "https://festapp.io/artists/avery-jane",
+        "https://open.spotify.com/album/5vtftVsDSsN7vyuK4hICyq",
+        "https://www.countrymusic.co.uk/performer/avery-jane/"
+      ]
+    },
+    {
       "key": "aviv",
       "reason": "missing_translation",
       "source_bio_sha256": "80b213ec259fa92c784828b59d6b932760cd4aa90a867cf83d5332d1c3d9d99f",
@@ -752,21 +768,6 @@
         "https://music-ontario.ca/news/spotlight/read%2Carticle/18231/musicontario-member-spotlight-featurette",
         "https://torontoguardian.com/2025/03/toronto-music-featurette/",
         "https://music.apple.com/us/album/table42-single/6815429925"
-      ]
-    },
-    {
-      "key": "fog lake",
-      "reason": "missing_translation",
-      "source_bio_sha256": "89a95261b1fba25e7ad0eb8f300ffac5bc53f1607a550242f4e6c5829afc59c8",
-      "display_name": "Fog Lake",
-      "bio": "Fog Lake is the lo-fi recording project of Aaron Powell, from Glovertown, Newfoundland and Labrador, who has built a devoted following on hushed, home-recorded albums including Dragonchaser (2017) and Captain (2018). Hollowbody, his seventh Fog Lake album and first since 2023's Midnight Society, was written over three weeks back home in Newfoundland and co-produced with longtime collaborator Warren Hildebrand. It was released on November 13, 2026.",
-      "city": "Glovertown, Newfoundland and Labrador",
-      "country": "Canada",
-      "website": "",
-      "instagram": "https://www.instagram.com/foglake_/",
-      "sources": [
-        "https://foglake.bandcamp.com",
-        "https://open.spotify.com/artist/04GCjO1r1hPelibCUq9S8H"
       ]
     }
   ]
