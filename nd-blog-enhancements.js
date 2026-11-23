@@ -137,6 +137,13 @@
     const totalPages = Math.max(1, Math.ceil(cards.length / pageSize));
     if (totalPages <= 1) return;
 
+    if (!document.getElementById('nd-blog-pagination-style')) {
+      const style = document.createElement('style');
+      style.id = 'nd-blog-pagination-style';
+      style.textContent = '@media (max-width: 600px) { .nd-blog-pagination { flex-wrap: nowrap !important; gap: 5px !important; } .nd-blog-pagination button { min-width: 34px !important; height: 38px !important; padding: 0 7px !important; font-size: .82rem !important; flex: 1 1 0; max-width: 44px; } }';
+      document.head.appendChild(style);
+    }
+
     const controls = document.createElement('nav');
     controls.className = 'nd-blog-pagination';
     controls.setAttribute('aria-label', 'Blog pagination');

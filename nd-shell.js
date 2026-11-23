@@ -77,7 +77,7 @@
     } else if (path === '/artists.html') {
       src = '/nd-artists-enhancements.js?v=20260927a';
     } else if (path === '/blog/' || path === '/blog/index.html' || path.startsWith('/blog/')) {
-      src = '/nd-blog-enhancements.js?v=20260927a';
+      src = '/nd-blog-enhancements.js?v=20261122a';
     }
 
     if (!src || document.querySelector('script[data-nd-page-enhancements]')) return;
