@@ -1,46 +1,8 @@
 {
-  "directory_accordions": 1546,
-  "profile_backed_accordions": 1060,
-  "standalone_profile_files": 1281,
-  "issue_count": 6,
-  "issue_types": {
-    "bad_profile_anchor": 1,
-    "bad_profile_cta": 1,
-    "bad_profile_name_link": 1,
-    "duplicate_or_missing_profile_block": 1,
-    "missing_dropdown_bio": 1,
-    "missing_profile_file": 1
-  },
-  "issues": [
-    {
-      "type": "missing_dropdown_bio",
-      "artist": "Avery Jane",
-      "detail": "Profile-backed accordion has no non-empty profile-bio"
-    },
-    {
-      "type": "bad_profile_name_link",
-      "artist": "Avery Jane",
-      "detail": "Expected one ./artists/avery-jane.html; found []"
-    },
-    {
-      "type": "bad_profile_cta",
-      "artist": "Avery Jane",
-      "detail": "Expected one View Full Profile link to ./artists/avery-jane.html; found []"
-    },
-    {
-      "type": "bad_profile_anchor",
-      "artist": "Avery Jane",
-      "detail": "Expected id=artist-avery-jane; found (none)"
-    },
-    {
-      "type": "missing_profile_file",
-      "artist": "Avery Jane",
-      "detail": "artists/avery-jane.html"
-    },
-    {
-      "type": "duplicate_or_missing_profile_block",
-      "artist": "Avery Jane",
-      "detail": "Expected 1 artist-profile block; found 0"
-    }
-  ]
+  "directory_accordions": 1791,
+  "profile_backed_accordions": 1207,
+  "standalone_profile_files": 1283,
+  "issue_count": 0,
+  "issue_types": {},
+  "issues": []
 }
